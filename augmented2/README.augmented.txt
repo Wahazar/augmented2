@@ -6,7 +6,7 @@ Augmented2 Ruleset for Freeciv v2.6
 OBJECTIVES:
 -----------
 
-- Better balanced and more sophisticated technology tree.
+- Better balanced and more sophisticated technology tree, 62 new techs.
 
 - Clearly distinctive tiers of military unit classes: 
   defensive infantry, assault infantry, fast assault units, reconnaissance, 
@@ -260,6 +260,71 @@ size doubled free u. gold					8	8			4				8
 
 TECHS:
 ------
+Improved tech tree.
+New techs:
+
+* absolutism 
+* agricultural_farming 
+* alchemy 
+* animal_husbandry 
+* antimatter_propulsion 
+* artificial_intelligence 
+* astronomy 
+* biology 
+* biotechnology 
+* buddhism 
+* carpentry 
+* chemical_synthesis 
+* christianity 
+* concrete 
+* confucianism 
+* craft_guilds 
+* creative_art 
+* desert_code 
+* direct_democracy 
+* egalitarianism 
+* electromagnetism 
+* exploration 
+* federation 
+* fire_making 
+* first_republic 
+* forestry 
+* fundamentalism 
+* glass_working 
+* great_unification_theory 
+* hinduism 
+* imperialism 
+* insei 
+* islam 
+* jet_propulsion 
+* legalism 
+* machinery 
+* modern_warfare 
+* nanotechnology 
+* offshore_exploration 
+* paper_making 
+* pastoralism 
+* printing_press 
+* quantum_theory 
+* radar 
+* radioactivity 
+* saddle_stirrup 
+* satellite_system 
+* screw_propeller 
+* shinto 
+* shogunate 
+* sikhism 
+* simple_machines 
+* slave_trade 
+* socialism 
+* stone_knapping 
+* super_soldiers 
+* taoism 
+* thalassocracy 
+* theory_of_relativity 
+* turbine 
+* vedism 
+* zaibatsu 
 
 
 BUILDINGS:
