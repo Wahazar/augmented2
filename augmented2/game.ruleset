@@ -27,6 +27,10 @@ name = _("Augmented ruleset")
 ; There`s no separate versioning in rulesets part of main freeciv distribution
 ;version = ""
 
+;[tileset]
+ preferred="augmented2"
+
+
 ; Summary of the ruleset
 ; /* TRANS: In the client, this is displayed alongside the contents of
 ;    README.augmented.txt, which are not localized. */

@@ -693,7 +693,47 @@ _("\
 Engineers have worse mobility than workers, but can be also used as a landing aid for other land units.\
 ")
 
-;todo slaves
+[unit_slave]
+name          = _("Slave")
+class         = "Small Land"
+tech_req      = "Slave Trade"
+impr_req      = "Yasir"
+obsolete_by   = "Engineers"
+graphic       = "u.slave"
+graphic_alt   = "u.worker"
+sound_move    = "m_worker"
+sound_move_alt = "m_generic"
+sound_fight   = "f_worker"
+sound_fight_alt = "f_generic"
+build_cost    = 10
+pop_cost      = 1
+attack        = 0
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 0
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "Capturable"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = "Settlers"
+helptext      = _("\
+Slaves can perform some of the same \
+terrain alterations as Workers (but cannot build airstrips, \
+airbases, or buoys). Slaves have no veteran levels.\n\
+They can be also used to transfer population to other cities, but \
+may not found new cities.\
+")
 
 [unit_warriors]
 name          = _("Warriors")
@@ -1197,6 +1237,36 @@ Swordsmen are heavily armed and well disciplined infantry\
  units with an excellent offensive value.\
 ")
 
+[unit_samurai]
+name          = _("Samurai")
+class         = "Land"
+tech_req      = "Shogunate"
+obsolete_by   = "Grenadier"
+graphic       = "u.samurai"
+graphic_alt   = "u.legion"
+sound_move    = "m_legion"
+sound_move_alt = "m_generic"
+sound_fight   = "f_legion"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 5
+defense       = 3
+hitpoints     = 15
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Only_Native_Attack"
+roles         = "DefendOkStartUnit"
+helptext      = _("\
+Samurai are excellent trained medieval Japan warriors.\
+")
 
 [unit_arquebusiers]
 name          = _("Arquebusiers")
@@ -1578,7 +1648,6 @@ Partisans are recruited from civilian, thus their cost is a city size.\
 Only shield upkeep is needed, food and gold upkeep is supported by citiziens.
 ")
 
-
 [unit_fanatics]
 name          = _("Fanatics")
 class         = "Land"
@@ -1615,6 +1684,39 @@ Fanatics are warriors extremely devoted to a higher cause.\
 Fundamentalist nations can maintain Fanatic units without\
  having to pay gold upkeep nor causing military unhappiness. \
  Instead, each unit reduces the population by 1.\
+")
+
+
+[unit_janissaries]
+name          = _("Janissaries")
+class         = "Land"
+tech_req      = "Gunpowder"
+gov_req       = "Fundamentalism"
+obsolete_by   = "Fanatics"
+graphic       = "u.jannisaries"
+graphic_alt   = "u.musketeers"
+sound_move    = "m_fanatics"
+sound_move_alt = "m_generic"
+sound_fight   = "f_fanatics"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 4
+defense       = 4
+hitpoints     = 10
+firepower     = 2
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Light Shells"
+roles         = "AttackFastStartUnit", "BarbarianTech"
+helptext      = _("\
+Janissaries are elite infantry, well disciplined and loyal only for Fundamentalistic government.\
 ")
 
 [unit_technical]
@@ -1656,7 +1758,7 @@ These units have no veterancy levels though.
 ")
 
 
-;todo: dromaderi, janissary
+;todo: samurai, sikh
 
 [unit_horsemen]
 name          = _("Horsemen")
@@ -1791,6 +1893,38 @@ Elephants are towering animals trained for war that are often used as\
 They mobility is restricted and it is not possible to train them in barracks.
 ")
 
+[unit_dromedari]
+name          = _("Dromedari")
+class         = "Land"
+tech_req      = "Desert Code"
+obsolete_by   = "Dragoons"
+graphic       = "u.dromedari"
+graphic_alt   = "u.horsemen"
+sound_move    = "m_horsemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_horsemen"
+sound_fight_alt = "f_generic"
+build_cost    = 25
+pop_cost      = 0
+attack        = 4
+defense       = 2
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
+roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
+helptext      = _("\
+Dromedari are desert brave wariors, mounted on camels.\
+")
+
+
 [unit_crusaders]
 name          = _("Crusaders")
 class         = "Land"
@@ -1854,6 +1988,38 @@ roles         = "DefendOkStartUnit", "AttackFastStartUnit",
                 "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Knights are mounted and heavily armored warriors.\
+")
+
+[unit_mounted_samurai]
+name          = _("Mounted Samurai")
+class         = "Land"
+tech_req      = "Bushido"
+obsolete_by   = "Dragoons"
+graphic       = "u.knights"
+graphic_alt   = "-"
+sound_move    = "m_knights"
+sound_move_alt = "m_generic"
+sound_fight   = "f_knights"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 5
+defense       = 2
+hitpoints     = 15
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 2
+uk_gold       = 1
+flags         = "Capturer", "Horse", "Only_Native_Attack"
+roles         = "DefendOkStartUnit", "AttackFastStartUnit",
+                "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
+helptext      = _("\
+Samurai horsemen, thanks to the Bushido code and supreme martial art, where very effective medieval heavy cavalry.\
 ")
 
 [unit_dragoons]
@@ -2486,6 +2652,8 @@ very strong attacker but equally weak defender and will need an escort \
 to be effective, and has limited mobility.\
 ")
 
+;todo: AT-gun
+
 [unit_self_propelled_gun]
 name          = _("Self-propelled Gun")
 class         = "Big Land"
@@ -2516,6 +2684,7 @@ roles         = "AttackStrongStartUnit"
 bonuses       =
    { "flag", "type", "value"
      "Armor", "DefenseMultiplier", 1
+     "Armor", "DefenseDivider", 1
    }
 helptext      = _("\
 The self-propelled gun is an upgraded artillery. As with its predecessors, it is a \
@@ -2523,7 +2692,7 @@ very strong attacker but equally weak defender and will need an escort \
 to be effective, and has limited mobility.\
 "),
 _("\
-Self-propelled Guns (so called Tank Destroyers) have increased defence against armors and mechanised infantry. \
+Self-propelled Guns (so called Tank Destroyers) have increased defence and attack against armors and mechanised infantry. \
 ")
 
 [unit_airplane]
@@ -2998,7 +3167,7 @@ uk_shield     = 0
 uk_food       = 0
 uk_gold       = 1
 flags         = "NonMil", "NoVeteran", "HasNoZOC"
-roles         = "FerryStartUnit"
+roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 Raft is a rudimentary form of transport, limited to the rivers, lakes and fortresses only,\
 however because it can be used to relatively fast transport of any land units, including these, which cannot move without roads.
@@ -3034,7 +3203,7 @@ uk_food       = 2
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant"
 flags         = "BadCityDefender", "HasNoZOC"
-roles         = "FerryStartUnit"
+roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0
@@ -3074,7 +3243,7 @@ uk_food       = 2
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant"
 flags         = "BadCityDefender", "NonMil";, "Capturable"
-roles         = "FerryStartUnit"
+roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0
@@ -3114,7 +3283,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
 flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC"
-roles         = "FerryStartUnit"
+roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 2, 1, 1, 0, 0
@@ -3155,7 +3324,7 @@ uk_food       = 1
 uk_gold       = 2
 cargo         = "Land", "Small Land", "Merchant", "Big Land", "Suicidal", "Wheeled Unit"
 flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC"
-roles         = "FerryStartUnit"
+roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 2, 1, 1, 0, 0
@@ -3350,7 +3519,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant"
 flags         = "BadCityDefender", "NonMil", "HasNoZOC";, "Capturable"
-roles         = "FerryStartUnit", "BarbarianBoat"
+roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0
@@ -3392,7 +3561,7 @@ uk_food       = 2
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Wheeled Unit", "Merchant"
 flags         = "BadCityDefender", "HasNoZOC"
-roles         = "FerryStartUnit", "BarbarianBoat"
+roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0
@@ -3434,7 +3603,7 @@ uk_food       = 1
 uk_gold       = 2
 cargo         = "Land", "Small Land", "Big Land", "Merchant", "Suicidal", "Wheeled Unit"
 flags         = "BadCityDefender", "NonMil", "HasNoZOC";, "Capturable"
-roles         = "FerryStartUnit"
+roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0
@@ -3478,7 +3647,7 @@ veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 1, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
-roles         = "FerryStartUnit"
+roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 The Transport cannot attack on its own but\
  may defend itself when under attack.\

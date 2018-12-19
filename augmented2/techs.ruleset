@@ -255,6 +255,16 @@ graphic     = "a.buddhism"
 graphic_alt = "a.the_wheel"
 cost     = 80
 
+[advance_bushido]
+name     = _("Bushido")
+req1     = "Shogunate"
+req2     = "Confucianism"
+root_req = "Shogunate"
+flags    = ""
+graphic     = "bushido"
+graphic_alt = "-"
+cost     = 190
+
 [advance_carpentry]
 name     = _("Carpentry")
 req1     = "Forestry"
@@ -710,15 +720,6 @@ req2     = "The Republic"
 graphic     = "a.industrialization"
 graphic_alt = "-"
 cost     = 380
-
-[advance_insei]
-name     = _("Insei")
-req1     = "Shinto"
-req2     = "Buddhism"
-flags    = ""
-graphic     = "insei"
-graphic_alt = "-"
-cost     = 110
 
 [advance_invention]
 name     = _("Invention")
@@ -1241,13 +1242,12 @@ cost     = 80
 
 [advance_shogunate]
 name     = _("Shogunate")
-req1     = "Insei"
+req1     = "Shinto"
 req2     = "Feudalism"
-root_req = "Insei"
 flags    = ""
-graphic     = "shogunate"
+graphic     = "a.shogunate"
 graphic_alt = "-"
-cost     = 170
+cost     = 110
 
 [advance_sikhism]
 name     = _("Sikhism")

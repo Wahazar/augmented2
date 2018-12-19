@@ -2693,3 +2693,30 @@ but at the expence of Tribe Hut bonuses.
 Village Hut cannot be build, if City Hall already exists.\
 ")
 
+[building_yasir]
+name		= _("Yasir")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Slave Trade", "Player"
+      "Building", "Marketplace", "City", TRUE
+      "Tech", "Democracy", "Player", FALSE
+    }
+graphic	= "b.yasir"
+graphic_alt	= "b.marketplace"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Slavery Abolition", "Player"
+      "Building", "United Nations", "World"
+    }
+build_cost	= 100
+upkeep		= 1
+sabotage	= 20
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Yasir was a name of a place, where slaves were bought or sold.\n\
+With this building, cheap slave labor can be obtained and used as workers or migrants.\n\
+Slavery Abolition wonder builded by owner, or United Nation wonder builded by any player, will obsolete this building.\
+")
+
