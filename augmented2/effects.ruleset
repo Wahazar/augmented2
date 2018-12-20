@@ -2780,6 +2780,17 @@ reqs    =
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
+[effect_barracks_iii_sl_DARPA]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks III", "City", TRUE
+      "Building", "DARPA", "Player", TRUE
+      "UnitClass", "Small Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
 
 [effect_barracks_iii_wu]
 type    = "Veteran_Build"
@@ -3245,7 +3256,7 @@ reqs    =
 
 [effect_library_culture]
 type    = "History"
-value	= 1
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Library", "City"
@@ -3440,7 +3451,7 @@ reqs    =
 
 [effect_palace_culture]
 type    = "History"
-value	= 1
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Palace", "City"
@@ -3508,7 +3519,7 @@ reqs    =
 
 [effect_ecclesiastical_palace_culture]
 type    = "History"
-value	= 1
+value	= 3
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Ecclesiastical Palace", "City", TRUE
@@ -3943,7 +3954,7 @@ reqs    =
 
 [effect_temple]
 type    = "Make_Content"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range"
       "Building", "Temple", "City"
@@ -3978,7 +3989,7 @@ reqs    =
 
 [effect_university_culture]
 type    = "History"
-value	= 2
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "University", "City"
@@ -4002,7 +4013,7 @@ reqs    =
 
 [effect_apollo_program_culture]
 type    = "History"
-value	= 8
+value	= 10
 reqs	=
     { "type", "name", "range"
       "Building", "Apollo Program", "City"
@@ -4065,7 +4076,7 @@ reqs    =
 
 [effect_copernicus_observatory_culture]
 type    = "History"
-value	= 3
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Copernicus' Observatory", "City"
@@ -4091,7 +4102,7 @@ reqs    =
 
 [effect_cure_for_cancer_culture]
 type    = "History"
-value	= 6
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Cure For Cancer", "City"
@@ -4120,7 +4131,7 @@ reqs    =
 
 [effect_darwins_voyage_culture]
 type    = "History"
-value	= 4
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Darwin's Voyage", "City"
@@ -4182,7 +4193,7 @@ reqs    =
 
 [effect_great_library_culture]
 type    = "History"
-value	= 3
+value	= 4
 reqs	=
     { "type", "name", "range"
       "Building", "Great Library", "City"
@@ -4293,7 +4304,7 @@ reqs    =
 
 [effect_hoover_dam_culture]
 type    = "History"
-value	= 6
+value	= 4
 reqs	=
     { "type", "name", "range"
       "Building", "Hoover Dam", "City"
@@ -4329,7 +4340,7 @@ reqs    =
 
 [effect_isaac_newtons_college_culture]
 type    = "History"
-value	= 4
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Isaac Newton's College", "City"
@@ -4347,7 +4358,7 @@ reqs    =
 
 [effect_js_bachs_cathedral_culture]
 type    = "History"
-value	= 4
+value	= 10
 reqs	=
     { "type", "name", "range"
       "Building", "J.S. Bach's Cathedral", "City"
@@ -4372,7 +4383,7 @@ reqs    =
 
 [effect_king_richards_crusade_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "King Richard's Crusade", "City"
@@ -4484,7 +4495,7 @@ reqs    =
 
 [effect_magellans_expedition_culture]
 type    = "History"
-value	= 4
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Magellan's Expedition", "City"
@@ -4500,7 +4511,7 @@ reqs    =
 
 [effect_manhattan_project_culture]
 type    = "History"
-value	= 6
+value	= 10
 reqs	=
     { "type", "name", "range"
       "Building", "Manhattan Project", "City"
@@ -4516,7 +4527,7 @@ reqs    =
 
 [effect_marco_polos_embassy_culture]
 type    = "History"
-value	= 3
+value	= 5
 reqs	=
     { "type", "name", "range"
       "Building", "Marco Polo's Embassy", "City"
@@ -4533,7 +4544,7 @@ reqs    =
 
 [effect_michelangelos_chapel_culture]
 type    = "History"
-value	= 4
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Michelangelo's Chapel", "City"
@@ -4602,7 +4613,7 @@ reqs    =
 
 [effect_temple_of_artemis_culture]
 type    = "History"
-value	= 2
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Temple of Artemis", "City"
@@ -4619,7 +4630,7 @@ reqs    =
 
 [effect_pyramids_culture]
 type    = "History"
-value	= 2
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Pyramids", "City"
@@ -4673,7 +4684,7 @@ reqs    =
 
 [effect_internet_culture]
 type    = "History"
-value	= 6
+value	= 30
 reqs	=
     { "type", "name", "range"
       "Building", "Internet", "City"
@@ -4716,7 +4727,7 @@ reqs    =
 
 [effect_shakespeares_theatre_culture]
 type    = "History"
-value	= 6
+value	= 10
 reqs	=
     { "type", "name", "range"
       "Building", "Shakespeare's Theatre", "City"
@@ -4741,7 +4752,7 @@ reqs    =
 
 [effect_statue_of_liberty_culture]
 type    = "History"
-value	= 4
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Statue of Liberty", "City"
@@ -4833,7 +4844,7 @@ reqs    =
 
 [effect_united_nations_culture]
 type    = "History"
-value	= 6
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "United Nations", "City"
@@ -4847,6 +4858,14 @@ reqs    =
       "Building", "Hollywood", "Player"
     }
 
+[effect_hollywood_culture]
+type    = "History"
+value	= 20
+reqs	=
+    { "type", "name", "range"
+      "Building", "Hollywood", "City"
+    }
+
 [effect_womens_suffrage_happy]
 type    = "Make_Content"
 value   = 1
@@ -4857,7 +4876,7 @@ reqs    =
 
 [effect_womens_suffrage_culture]
 type    = "History"
-value	= 6
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Women's Suffrage", "City"
@@ -5425,6 +5444,15 @@ reqs    =
     { "type", "name", "range"
       "Building", "DARPA", "Player"
     }
+
+[effect_DARPA_culture]
+type    = "History"
+value	= 12
+reqs	=
+    { "type", "name", "range"
+      "Building", "DARPA", "City"
+    }
+
 
 ; Mobile X-ray HP regen (Land units)
 [effect_mobile_x-ray_hp_regen]
@@ -6126,8 +6154,6 @@ reqs    =
       "Terrain", "Desert", "Local", TRUE
     }
 
-
-
 [effect_massachusetts_institute_of_technology_1]
 type    = "Output_Add_Tile"
 value   = 4
@@ -6182,3 +6208,77 @@ reqs    =
       "Building", "Large Hadron Collider", "Player"
       "Tech", "Theory of Relativity", "Player"
     }
+
+[effect_stonehenge]
+type    = "Output_Add_Tile"
+value   = 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Stonehenge", "City"
+      "OutputType", "Science", "Local"
+    }
+
+[effect_stonehenge_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Stonehenge", "City"
+    }
+
+[effect_mobile_x-ray_culture]
+type    = "History"
+value	= 6
+reqs	=
+    { "type", "name", "range"
+      "Building", "Mobile X-ray", "Player"
+    }
+
+[effect_slavery_abolition_culture]
+type    = "History"
+value	= 8
+reqs	=
+    { "type", "name", "range"
+      "Building", "Slavery Abolition", "Player"
+    }
+
+[effect_massachusetts_institute_of_technology_culture]
+type    = "History"
+value	= 10
+reqs	=
+    { "type", "name", "range"
+      "Building", "Massachusetts Institute of Technology", "Player"
+    }
+
+[effect_pasteur_institute_culture]
+type    = "History"
+value	= 8
+reqs	=
+    { "type", "name", "range"
+      "Building", "Pasteur Institute", "Player"
+    }
+
+[effect_large_hadron_collider_culture]
+type    = "History"
+value	= 30
+reqs	=
+    { "type", "name", "range"
+      "Building", "Pasteur Institute", "Player"
+    }
+
+[effect_space_lift_culture]
+type    = "History"
+value	= 10
+reqs	=
+    { "type", "name", "range"
+      "Building", "Space Lift", "Player"
+    }
+
+[effect_global_positioning_culture]
+type    = "History"
+value	= 8
+reqs	=
+    { "type", "name", "range"
+      "Building", "Global Positioning System", "Player"
+    }
+

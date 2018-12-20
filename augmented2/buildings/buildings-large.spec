@@ -23,4 +23,5 @@ sprites =
 		"b.station", "augmented2/buildings/railway_station"
 		"b.cement_plant", "augmented2/buildings/cement_plant"
 		"b.city_hall", "augmented2/buildings/city_hall"
+		"b.church", "augmented2/buildings/church_Irwe"
 	}
