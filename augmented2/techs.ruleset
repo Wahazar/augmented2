@@ -221,7 +221,7 @@ req2     = "Refrigeration"
 flags    = ""
 graphic     = "a.biotechnology"
 graphic_alt = "-"
-cost     = 460
+cost     = 480
 
 [advance_bridge_building]
 name     = _("Bridge Building")
@@ -257,9 +257,9 @@ cost     = 80
 
 [advance_bushido]
 name     = _("Bushido")
-req1     = "Shogunate"
-req2     = "Confucianism"
-root_req = "Shogunate"
+req1     = "Martial Arts"
+req2     = "Chivalry"
+root_req = "Martial Arts"
 flags    = ""
 graphic     = "bushido"
 graphic_alt = "-"
@@ -291,7 +291,7 @@ req2     = "Tactics"
 graphic     = "a.chemical_synthesis"
 graphic_alt = "-"
 helptext = _("TIP: Enables farm fields - second irrigation.")
-cost     = 380
+cost     = 470
 
 [advance_chemistry]
 name     = _("Chemistry")
@@ -355,7 +355,7 @@ flags    = ""
 graphic     = "a.communism"
 graphic_alt = "-"
 helptext = _("Reduces the effect of Cathedrals.")
-cost     = 420
+cost     = 440
 
 [advance_computers]
 name     = _("Computers")
@@ -384,7 +384,7 @@ root_req = "Taoism"
 flags    = ""
 graphic     = "a.confucianism"
 graphic_alt = "-"
-cost     = 160
+cost     = 140
 
 [advance_conscription]
 name     = _("Conscription")
@@ -493,12 +493,12 @@ Allows irrigation tiles adjacent only to Sea, improves the \
 effect of Amphitheaters. \n \
 Together with Railway Station, increase radius of cities.\
 ")
-cost     = 310
+cost     = 410
 
 [advance_electromagnetism]
 name     = _("Electromagnetism")
 req1     = "Electricity"
-req2     = "Industrialization"
+req2     = "Atomic Theory"
 flags    = ""
 graphic     = "a.electromagnetism"
 graphic_alt = "-"
@@ -520,7 +520,7 @@ req2     = "Explosives"
 flags    = ""
 graphic     = "a.engineering"
 graphic_alt = "-"
-cost     = 400
+cost     = 420
 
 [advance_environmentalism]
 name     = _("Environmentalism")
@@ -539,7 +539,7 @@ root_req = "Communism"
 flags    = ""
 graphic     = "a.espionage"
 graphic_alt = "-"
-cost     = 440
+cost     = 470
 
 [advance_exploration]
 name     = _("Exploration")
@@ -795,7 +795,7 @@ root_req = "Confucianism"
 flags    = ""
 graphic     = "legalism"
 graphic_alt = "-"
-cost     = 200
+cost     = 190
 
 [advance_literacy]
 name     = _("Literacy")
@@ -841,6 +841,16 @@ flags    = ""
 graphic     = "a.map_making"
 graphic_alt = "-"
 cost     = 20
+
+[advance_martial_arts]
+name     = _("Martial Arts")
+req1     = "Shogunate"
+req2     = "Confucianism"
+root_req = "Confucianism"
+flags    = ""
+graphic     = "martial_arts"
+graphic_alt = "-"
+cost     = 160
 
 [advance_masonry]
 name     = _("Masonry")
@@ -1147,7 +1157,7 @@ req2     = "Steel"
 flags    = ""
 graphic     = "a.refining"
 graphic_alt = "-"
-cost     = 480
+cost     = 500
 helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to upgrade \
 mines to oil wells on Desert and Glacier tiles, for an extra production \
@@ -1160,7 +1170,7 @@ req1     = "Sanitation"
 req2     = "Electricity"
 graphic     = "a.refrigeration"
 graphic_alt = "-"
-cost     = 380
+cost     = 440
 
 [advance_robotics]
 name     = _("Robotics")
@@ -1233,7 +1243,7 @@ cost     = 40
 
 [advance_shinto]
 name     = _("Shinto")
-req1     = "Polytheism"
+req1     = "Seafaring"
 req2     = "Astrology"
 flags    = ""
 graphic     = "shinto"
@@ -1367,12 +1377,12 @@ cost     = 360
 [advance_taoism]
 name     = _("Taoism")
 req1     = "Paper Making"
-req2     = "Seafaring"
+req2     = "Map Making"
 root_req = "Literacy"
 flags    = ""
 graphic     = "a.taoism"
 graphic_alt = "-"
-cost     = 120
+cost     = 90
 
 [advance_thalassocracy]
 name     = _("Thalassocracy")
@@ -1394,7 +1404,7 @@ helptext = _("\
 Halves the corruption of trade related to distance from the capital \
 (or eliminates it for Federation governments).\
 ")
-cost     = 400
+cost     = 420
 
 [advance_the_republic]
 name     = _("The Republic")
@@ -1453,7 +1463,7 @@ graphic_alt = "-"
 helptext = _("\
 Halves the waste of production related to distance from the capital.\
 ")
-cost     = 40
+cost     = 50
 
 [advance_turbine]
 name     = _("Turbine")
@@ -1502,7 +1512,7 @@ cost     = 20
 
 [advance_zaibatsu]
 name     = _("Zaibatsu")
-req1     = "Shogunate"
+req1     = "Bushido"
 req2     = "Industrialization"
 root_req = "Shogunate"
 flags    = ""

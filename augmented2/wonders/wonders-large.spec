@@ -7,6 +7,9 @@ options = "+Freeciv-2.6-spec"
 
 artists = "
   Wahazar
+  wellcomeimages.org
+  Ariel Steiner
+  B.Ch.Torrissen
 "
 
 [extra]
@@ -23,4 +26,7 @@ sprites =
 		"b.mobile-x-ray", "augmented2/wonders/mobile-x-ray"
 		"b.stonehenge", "augmented2/wonders/stonehenge"
 		"b.yasir", "augmented2/wonders/yasir"
+		"b.western_wall", "augmented2/wonders/western_wall_wellcomeimg"
+		"b.leshan_buddha_statue", "augmented2/wonders/Leshan_Buddha_Statue_View-Ariel_Steiner"
+		"b.angkor_wat", "augmented2/wonders/Angkor_Wat-B.Ch.Torrissen"
 	}

@@ -2992,6 +2992,7 @@ reqs    =
     { "type", "name", "range"
       "Building", "Colosseum", "City"
       "OutputType", "Luxury", "Local"
+      "CityTile", "Center", "Local"
     }
 
 [effect_colosseum_1]
@@ -3951,7 +3952,6 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
-
 [effect_temple]
 type    = "Make_Content"
 value   = 2
@@ -4218,6 +4218,8 @@ reqs    =
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
+      "UnitClass", "Bomb", "Local", FALSE
+      "UnitClass", "Torpedos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "IgWall", "Local", FALSE
     }
@@ -4228,6 +4230,32 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Great Wall", "Player"
+    }
+
+; Cumulative with fortress
+; 50 + 50 + 50 = 150
+[effect_great_wall_fortress_defense]
+type    = "Defend_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Extra", "Fortress", "Local", TRUE
+;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Small Land", "Local", FALSE
+;      "UnitClass", "Big Land", "Local", FALSE
+;      "UnitClass", "Merchant", "Local", FALSE
+;      "UnitClass", "Riverboat", "Local", FALSE
+       "UnitClass", "Sea", "Local", FALSE
+       "UnitClass", "Trireme", "Local", FALSE
+;      "UnitClass", "Wheeled Unit", "Local", FALSE
+;      "UnitClass", "Suicidal", "Local", FALSE
+;      "UnitClass", "Turrets", "Local", FALSE
+      "UnitClass", "Helicopter", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
+      "UnitClass", "Bomb", "Local", FALSE
+      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Train", "Local", FALSE
     }
 
 [effect_great_wall_culture]
@@ -4527,7 +4555,7 @@ reqs    =
 
 [effect_marco_polos_embassy_culture]
 type    = "History"
-value	= 5
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Marco Polo's Embassy", "City"
@@ -6280,5 +6308,238 @@ value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Global Positioning System", "Player"
+    }
+
+[effect_leshan_buddha_statue_food]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "River", "Local"
+      "OutputType", "Food", "Local"
+      "Building", "Leshan Buddha Statue", "City"
+    }
+
+[effect_leshan_buddha_statue_happy]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Monk Monastery", "City"
+      "Building", "Leshan Buddha Statue", "World"
+    }
+
+[effect_kaaba_gold]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Road", "Local"
+      "OutputType", "Gold", "Local"
+      "Building", "Kaaba", "City"
+    }
+
+[effect_kaaba_happy]
+type    = "Make_Content_Mil"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Mosque", "City"
+      "Building", "Kaaba", "World"
+    }
+
+[effect_mosque]
+type    = "Make_Content"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Mosque", "City"
+    }
+
+[effect_western_wall_trade]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Trade", "Local"
+      "Building", "Western Wall", "City"
+    }
+
+[effect_western_wall_defense]
+type    = "Defend_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Western Wall", "City", TRUE
+      "Building", "Great Wall", "Player", FALSE
+      "CityTile", "Center", "Local", TRUE
+;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Small Land", "Local", FALSE
+;      "UnitClass", "Big Land", "Local", FALSE
+;      "UnitClass", "Merchant", "Local", FALSE
+;      "UnitClass", "Wheeled Unit", "Local", FALSE
+;      "UnitClass", "Suicidal", "Local", FALSE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Helicopter", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
+      "UnitClass", "Bomb", "Local", FALSE
+      "UnitClass", "Torpedos", "Local", FALSE
+;      "UnitClass", "Train", "Local", FALSE
+      "UnitFlag", "IgWall", "Local", FALSE
+    }
+
+[effect_angkor_wat]
+type    = "Output_Waste_Pct"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Angkor Wat", "City", TRUE
+      "OutputType", "Trade", "Local", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_angkor_wat_1]
+type    = "Output_Waste_Pct"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Angkor Wat", "City", TRUE
+      "OutputType", "Shield", "local", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_angkor_wat_2]
+type    = "Spy_Resistant"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Angkor Wat", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_angkor_wat_gov_center]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Angkor Wat", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_angkor_wat_despotism]
+type    = "Output_Bonus"
+value   = 75
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Despotism", "Player", TRUE, TRUE
+      "Building", "Angkor Wat", "City", TRUE, FALSE
+      "OutputType", "Gold", "Local", TRUE, FALSE
+      "Building", "Palace", "City", FALSE, FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE, FALSe
+    }
+
+[effect_angkor_wat_monarchy]
+type    = "Output_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Monarchy", "Player", TRUE, TRUE
+      "Building", "Angkor Wat", "City", TRUE, FALSE
+      "OutputType", "Gold", "Local", TRUE, FALSE
+      "Building", "Palace", "City", FALSE, FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE, FALSE
+    }
+
+[effect_angkor_wat_culture]
+type    = "History"
+value	= 5
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Angkor Wat", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_angkor_wat_luxury]
+type    = "Output_Add_Tile"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Angkor Wat", "City"
+      "OutputType", "Luxury", "Local"
+      "CityTile", "Center", "Local"
+    }
+
+[effect_golden_temple]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Golden Temple", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+      "Building", "Temple of Artemis", "Player", FALSE
+    }
+
+[effect_golden_temple_church]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Golden Temple", "Player"
+      "Building", "Church", "City"
+    }
+
+[effect_golden_mosque]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Golden Temple", "Player"
+      "Building", "Mosque", "City"
+    }
+
+[effect_js_bachs_cathedral_church]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "J.S. Bach's Cathedral", "Player", TRUE
+      "OutputType", "Luxury", "Local", TRUE
+      "Building", "Church", "City", TRUE
+      "Gov", "Communism", "Player", FALSE
+    }
+
+[effect_church]
+type    = "Make_Content"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Church", "City"
+    }
+
+[effect_shrine_torii]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Shrine Torii", "City", TRUE
+      "Building", "Temple", "City", TRUE
+      "Building", "Temple of Artemis", "Player", FALSE
+    }
+
+[effect_monk_monastery]
+type    = "Output_Add_Tile"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Monk Monastery", "City"
+      "OutputType", "Science", "Local"
+      "CityTile", "Center", "Local"
     }
 

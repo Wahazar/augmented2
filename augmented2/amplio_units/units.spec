@@ -184,8 +184,9 @@ sprites =
 		"u.junk", "augmented2/amplio_units/junk_a"
 		"u.mounted_archery", "augmented2/amplio_units/mounted_archery_a"
 		"u.dromedari", "augmented2/amplio_units/dromedari_a"
-		"u.janissaries", "augmented2/amplio_units/jannisaries_a"
+		"u.janissaries", "augmented2/amplio_units/janissaries_a"
 		"u.AT-gun", "augmented2/amplio_units/AT-gun_a"
 		"u.samurai", "augmented2/amplio_units/samurai_a"
 		"u.mounted_samurai", "augmented2/amplio_units/mounted_samurai_a"
+		"u.ninja", "augmented2/amplio_units/ninja_a"
 	}

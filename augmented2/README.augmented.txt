@@ -7,6 +7,8 @@ OBJECTIVES:
 -----------
 
 - Better balanced and more sophisticated technology tree, 62 new techs.
+  Facultative advance paths based on Asiatic culture (Arab, Hindu, Chinese, Japonese) 
+  - not required for mainstream technology path, but granting some extra units/buildings/wonders.
 
 - Clearly distinctive tiers of military unit classes: 
   defensive infantry, assault infantry, fast assault units, reconnaissance, 
@@ -273,6 +275,7 @@ New techs:
 * biology 
 * biotechnology 
 * buddhism 
+* bushido 
 * carpentry 
 * chemical_synthesis 
 * christianity 
@@ -294,7 +297,6 @@ New techs:
 * great_unification_theory 
 * hinduism 
 * imperialism 
-* insei 
 * islam 
 * jet_propulsion 
 * legalism 
@@ -395,6 +397,14 @@ plague probability 20% less
 Hospital
 plague probability 20% less (40% less with Pasteur Institure wonder)
 
+Monk Monastery: add 4 science points to the city (and 1 unhappy citizen content, if player posses Buddha Statue).
+Shrine Torii: cheap temple improvment (extra 1 unhappy citizen content).
+Church: makes 2 unhappy citizens content (3 with J.S. Bach's Cathedral), required for Cathedral.
+Mosque: makes 2 unhappy citizens content, additionally neutralizes unhappiness caused by one military unit (Kaaba required).
+
+Note: Sacral building improvments, belonging to different faiths, doesn't mix 
+(temple/church/mosque can't exists in same city)
+
 CITY SIZE:
 --------
 
@@ -421,11 +431,11 @@ WONDERS:
 Altered:
 Great Library obsololeted by Computers,
 Map Reveal shifted from Apollo to GPS
-Shakespeare's Theatre obsoleted by Nanotechnology
-(note: obsoleted wonders still support permanent granted worldwide bonuses).
+Shakespeare's Theatre obsoleted by Nanotechnology.
 No pollution reduction form Eiffel Tower (it is used to increase town influence and vision radius)
-Women Suffrage: additional trade point/tile in Democracy, or Shield point/tile in Republic.
-Internet: 
+Women Suffrage: additional trade point/tile in Democracy, or Shield point/tile in Republic. For unhapiness see: Hollywood.
+Internet: do not reveal map (use GPS instead).
+Great Wall: add defense also to fortress.
 
 New:
 
@@ -451,14 +461,36 @@ Required to make Spaceship Structurals
 
 Hollywood:
 Neutralizes the unhappiness caused by aggressively deployed military unit, like original Women Suffrage.
-Unlike other wonders, Hollywood have expensive upkeep.
+Unlike other wonders, Hollywood has expensive upkeep.
 
 Marie Curie Mobile X-ray fleet
 Faster heal of infantry units.
 
 DARPA
-Randomly upgrade unit. New Land, Small and Big Land units have Recruit rank (with Barrack, Hardened for Land and Big Land units). 
+Randomly upgrade unit. Small Land military units have Recruit rank (with Barrack, veteran). 
 Prerequisite to Internet wonder.
+
+Additional faith wonders:
+
+Leshan Buddha Statue
+Add +1 food for each river tile within city radius, neutralises 1 unhappy citizen for each city in the World with Monk Monastery.
+
+Kaaba: Add extra gold from each road tile within city radius. Each Mosque neutralizes unhappiness caused by one military unit.
+
+Angkor Wat: Act as second Palace (but can't be build if Player already have Ecclesiastical Palace or opposite), 
+add 4 Luxury point to the city where is located.
+
+Golden Temple: 
+Make one more happy citizen for each Temple, Church or Mosque.
+
+Western Wall: 50% defense for city (cumulative with City Walls, not cumulative with Great Wall),
+gold bonus as for Colossus (extra trade from each tile generating trade).
+
+Note: different faith wonders (above and Cathedrals or Crusade) doesn't mix 
+(can't exists in same country, except of Golden Palace and Western Wall, which are ecumenic).
+
+GREAT/SMALL WONDERS SUMMARY:
+---------------------------
 
 
 BONUS EFFECTS:
@@ -470,7 +502,9 @@ Increased unit vision benefit from Satellite System
 UNITS:
 ------
 
-Following units groups:
+Caravans and migrants are unique units. Freights and Slaves are not unique. 
+
+Following military unit groups:
 * regular Land units - defensive infantry, assault infantry, fast assault units, peacemakers - can't move into mountains/glaciers (some units can attack it).
 * reconnaissance Small Land units (explorers, archers, snipers etc) - can move everywhere;
 * direct fire artillery - movement restricted to roads (less restriction for self-propelled units), can't occupy towns, can attack non native tiles;

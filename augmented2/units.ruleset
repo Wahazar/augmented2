@@ -719,7 +719,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 0
-flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "Capturable"
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "Capturable", "HelpWonder"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -732,7 +732,10 @@ Slaves can perform some of the same \
 terrain alterations as Workers (but cannot build airstrips, \
 airbases, or buoys). Slaves have no veteran levels.\n\
 They can be also used to transfer population to other cities, but \
-may not found new cities.\
+may not found new cities.\n\
+A Slave sent to one of your own cities that is building a wonder \
+can add 10 shields towards its production. \
+Unlike Caravans, Slaves can't establish trade route.\
 ")
 
 [unit_warriors]
@@ -1568,6 +1571,38 @@ helptext      = _("\
 Navy Seals are special units of scuba divers, capable to attack other ships from land of aboard.\
 ")
 
+[unit_ninja]
+name          = _("Ninja warriors")
+class         = "Land"
+tech_req      = "Martial Arts"
+obsolete_by   = "Marines"
+graphic       = "u.ninja"
+graphic_alt   = "u.barbarian_leader"
+sound_move    = "m_warriors"
+sound_move_alt = "m_generic"
+sound_fight   = "f_warriors"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 5
+defense       = 2
+hitpoints     = 12
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 2
+flags         = "Partial_Invis", "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
+roles         = "Hunter"
+helptext      = _("\
+Ninja are s supreme units, skilled in all special operations, like espionage, sabotage, infiltration, assassination, guerrilla warfare etc.\n\
+They can even walk on water (using special shoes), thus can attack cities from aboard, like Marines.\
+")
+
 [unit_alpine_troops]
 name          = _("Alpine Troops")
 class         = "Small Land"
@@ -1693,7 +1728,7 @@ class         = "Land"
 tech_req      = "Gunpowder"
 gov_req       = "Fundamentalism"
 obsolete_by   = "Fanatics"
-graphic       = "u.jannisaries"
+graphic       = "u.janissaries"
 graphic_alt   = "u.musketeers"
 sound_move    = "m_fanatics"
 sound_move_alt = "m_generic"
@@ -1995,8 +2030,8 @@ name          = _("Mounted Samurai")
 class         = "Land"
 tech_req      = "Bushido"
 obsolete_by   = "Dragoons"
-graphic       = "u.knights"
-graphic_alt   = "-"
+graphic       = "u.mounted_samurai"
+graphic_alt   = "u.knights"
 sound_move    = "m_knights"
 sound_move_alt = "m_generic"
 sound_fight   = "f_knights"
@@ -4602,7 +4637,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
-flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
+flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Unique", "Unbribable"
 roles         = ""
 helptext      = _("\
 A Caravan carries goods or material for trading with other nations,\
@@ -4619,10 +4654,6 @@ A Caravan sent to a foreign city (one not owned by an enemy) can\
 A Caravan sent to one of your own cities that is building a wonder\
  can add 50 shields towards its production. If your city is not\
  building a wonder, the Caravan can take no special action.\
-"), _("\
-TIP:  You can stockpile a stack of Caravans in advance and bring\
- them all into a city where you have started to build a wonder,\
- and finish it in only one turn!\
 ")
 
 [unit_freight]

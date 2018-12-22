@@ -8,8 +8,12 @@ options = "+Freeciv-2.6-spec"
 
 artists = "
    andythenorth,
+   Irwe,
    Zephyris,
-   Wahazar
+   Wahazar,
+   3dman_eu
+   David_Shea 
+   Pixabay CC
 "
 [extra]
 sprites =
@@ -24,4 +28,8 @@ sprites =
 		"b.cement_plant", "augmented2/buildings/cement_plant"
 		"b.city_hall", "augmented2/buildings/city_hall"
 		"b.church", "augmented2/buildings/church_Irwe"
+		"b.mosque", "augmented2/buildings/mosque"
+		"b.shrine_torii", "augmented2/buildings/shrine_torii-David_Shea"
+		"b.monk_monastery", "augmented2/buildings/monk_monastery_3dman_eu"
+
 	}
