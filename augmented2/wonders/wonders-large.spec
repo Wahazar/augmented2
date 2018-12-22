@@ -10,6 +10,9 @@ artists = "
   wellcomeimages.org
   Ariel Steiner
   B.Ch.Torrissen
+  Basil D Soufi
+  Ttey Ratcliff
+  Jyoti_Dasila
 "
 
 [extra]
@@ -29,4 +32,7 @@ sprites =
 		"b.western_wall", "augmented2/wonders/western_wall_wellcomeimg"
 		"b.leshan_buddha_statue", "augmented2/wonders/Leshan_Buddha_Statue_View-Ariel_Steiner"
 		"b.angkor_wat", "augmented2/wonders/Angkor_Wat-B.Ch.Torrissen"
+		"b.kaaba", "augmented2/wonders/Kaaba_BDSoufi"
+		"b.thermal_bath", "augmented2/wonders/thermal_bath_TRatcliff"
+		"b.golden_temple", "augmented2/wonders/golden_temple_Jyoti_Dasila"
 	}

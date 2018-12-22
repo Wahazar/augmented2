@@ -1254,7 +1254,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 30
 pop_cost      = 0
 attack        = 5
-defense       = 3
+defense       = 4
 hitpoints     = 15
 firepower     = 1
 move_rate     = 1
@@ -1266,7 +1266,7 @@ uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
-roles         = "DefendOkStartUnit"
+roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianSeaTech"
 helptext      = _("\
 Samurai are excellent trained medieval Japan warriors.\
 ")
@@ -1394,7 +1394,7 @@ uk_gold       = 2
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "Marines", "Capturer", "Light Shells", "Only_Native_Attack"
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "BarbarianSeaTech"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
 Marines are infantry who are experts at marine warfare.\
 ")
@@ -1427,7 +1427,7 @@ uk_gold       = 2
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "Marines", "Capturer", "Only_Native_Attack"
-roles         = "DefendGood", "FirstBuild", "BarbarianSeaTech"
+roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 Super Soldiers are genetically modified Marines equipped with modern tactical tools.\
 Their wounds heal quickly in fortress and they have increased vision radius. \
@@ -1532,9 +1532,10 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
 flags         = "Capturer", "Unique", "Unbribable", "Marines"
-roles         = "Hunter"
+roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
-Corsairs are privateers hired by government to perform special operations: attacking other ships from aboard or capturing them, or making raids on enemy territory.\n\
+Corsairs are privateers hired by government to perform special operations: \
+attacking other ships from aboard or capturing them, or making raids on enemy territory.\n\
 They cannot occupy city thought.\
 ")
 
@@ -1566,7 +1567,7 @@ uk_gold       = 3
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "Capturer", "Unique", "Unbribable", "Marines", "Partial_Invis"
-roles         = "Hunter"
+roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
 Navy Seals are special units of scuba divers, capable to attack other ships from land of aboard.\
 ")
@@ -1582,7 +1583,7 @@ sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 60
 pop_cost      = 0
 attack        = 5
 defense       = 2
@@ -1595,7 +1596,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 3
 flags         = "Partial_Invis", "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
 roles         = "Hunter"
 helptext      = _("\
@@ -1725,7 +1726,7 @@ Fundamentalist nations can maintain Fanatic units without\
 [unit_janissaries]
 name          = _("Janissaries")
 class         = "Land"
-tech_req      = "Gunpowder"
+tech_req      = "Leadership"
 gov_req       = "Fundamentalism"
 obsolete_by   = "Fanatics"
 graphic       = "u.janissaries"
@@ -1749,7 +1750,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Light Shells"
-roles         = "AttackFastStartUnit", "BarbarianTech"
+roles         = "AttackFastStartUnit", "BarbarianTech", "BarbarianSeaTech"
 helptext      = _("\
 Janissaries are elite infantry, well disciplined and loyal only for Fundamentalistic government.\
 ")
@@ -1793,7 +1794,7 @@ These units have no veterancy levels though.
 ")
 
 
-;todo: samurai, sikh
+;todo: sikh
 
 [unit_horsemen]
 name          = _("Horsemen")
@@ -1853,7 +1854,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Horse", "Only_Native_Attack"
+flags         = "Capturer", "Horse"
 roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
 helptext      = _("\
 Archery Horsemen are shock-troop,\
@@ -2039,7 +2040,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 40
 pop_cost      = 0
 attack        = 5
-defense       = 2
+defense       = 3
 hitpoints     = 15
 firepower     = 1
 move_rate     = 2
@@ -2051,7 +2052,7 @@ uk_shield     = 0
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack"
-roles         = "DefendOkStartUnit", "AttackFastStartUnit",
+roles         = "DefendOkStartUnit", "AttackFastStartUnit", 
                 "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Samurai horsemen, thanks to the Bushido code and supreme martial art, where very effective medieval heavy cavalry.\
@@ -2658,7 +2659,7 @@ Battering ram need an escort to be protected against counterattack, and have mob
 name          = _("Artillery")
 class         = "Wheeled Unit"
 tech_req      = "Explosives"
-obsolete_by   = "Self-propelled Gun"
+obsolete_by   = "AT Gun"
 graphic       = "u.artillery"
 graphic_alt   = "-"
 sound_move    = "m_artillery"
@@ -2687,7 +2688,46 @@ very strong attacker but equally weak defender and will need an escort \
 to be effective, and has limited mobility.\
 ")
 
-;todo: AT-gun
+[unit_AT_gun]
+name          = _("AT Gun")
+class         = "Wheeled Unit"
+tech_req      = "Machine Tools"
+obsolete_by   = "Self-propelled Gun"
+graphic       = "u.AT-gun"
+graphic_alt   = "u.artillery"
+sound_move    = "m_artillery"
+sound_move_alt = "m_generic"
+sound_fight   = "f_artillery"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 10
+defense       = 3
+hitpoints     = 10
+firepower     = 3
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 3
+flags         = "CityBuster"
+roles         = "AttackStrongStartUnit"
+bonuses       =
+   { "flag", "type", "value"
+     "Armor", "DefenseMultiplier", 1
+     "Armor", "DefenseDivider", 1
+   }
+helptext      = _("\
+The Anti-tank gun is an improved artillery. As with its predecessors, it is a \
+very strong attacker but equally weak defender and will need an escort \
+to be effective, and has limited mobility.\
+"),
+_("\
+AT Guns have increased defence and attack against armors and mechanised infantry. \
+")
 
 [unit_self_propelled_gun]
 name          = _("Self-propelled Gun")
@@ -3527,6 +3567,44 @@ The Longboat is a very first and unique boat unit. It can act\
  rivers, but it may not enter deep ocean tiles.\
 ")
 
+[unit_junk]
+name          = _("Junk")
+class         = "Sea"
+tech_req      = "Taoism"
+obsolete_by   = "Galleon"
+graphic       = "u.junk"
+graphic_alt   = "u.caravel"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 3
+defense       = 3
+hitpoints     = 12
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 2
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 2
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant"
+flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
+roles         = "FerryStartUnit", "BarbarianBoat"
+veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 0, 1, 1, 2
+helptext      = _("\
+The Junk is a Chinese sailing ship that can enter\
+ any ocean tile.\
+")
+
 [unit_cog]
 name          = _("Cog")
 class         = "Sea"
@@ -4081,8 +4159,6 @@ Destroyer can hold two turrets or torpedos.\
 ")
 bombard_rate = 2
 
-;todo: junk
-
 [unit_submarine]
 name          = _("Submarine")
 class         = "Sea"
@@ -4432,6 +4508,67 @@ Ths huge GBU (Guided Bomb), carried by bombers, can precisely strike enemy unit,
  instead of spreading small bombs by bomber itself.\n\
 ")
 
+[unit_messenger]
+name          = _("Messenger")
+class         = "Small Land"
+tech_req      = "Alphabet"
+obsolete_by   = "Diplomat"
+graphic       = "u.messenger"
+graphic_alt   = "u.diplomat"
+sound_move    = "m_diplomat"
+sound_move_alt = "m_generic"
+sound_fight   = "f_diplomat"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 0
+defense       = 0
+hitpoints     = 10
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = "DiplomatStartUnit"
+helptext      = _("\
+A Messenger is an official that carries your dispatches and\
+ is authorized to deal with foreign dignitaries.\
+ Messengers can't perform any hostile actions against other cities,\
+  but can defend your own cities against enemy covert operations.\
+"),
+ _("\
+If a foreign unit is alone on a tile, you may attempt to bribe it\
+ with your Messenger. By paying a sum of gold the unit will immediately\
+ become yours; the exact sum depends on the status of the unit and\
+ that of the civilization owning it. However, units belonging to\
+ Republican governments may demand huge amount of gold be bribed. Bribery when\
+ not at war will cause a diplomatic incident.\
+"), 
+ _("\
+The actions available to Messenger in a city are:\
+"), _("\
+ - \"Establish Embassy\": This action always succeeds, and gives\
+ permanent contact with the city's owner, as well as intelligence\
+ on their tax rates and technology. Each player you have an embassy\
+ with that knows a technology reduces that technology's research\
+ cost to you.\
+"), _("\
+ - \"Investigate City\": Your unit attempts to report detailed\
+ information about the city: its status, what buildings and units are\
+ within, and what it is currently producing.\
+")
+
 [unit_diplomat]
 name          = _("Diplomat")
 class         = "Small Land"
@@ -4456,7 +4593,7 @@ fuel          = 0
 uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
-uk_gold       = 1
+uk_gold       = 2
 flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
@@ -4489,7 +4626,7 @@ If a foreign unit is alone on a tile, you may attempt to bribe it\
  with your Diplomat. By paying a sum of gold the unit will immediately\
  become yours; the exact sum depends on the status of the unit and\
  that of the civilization owning it. However, units belonging to\
- Republican or Democratic governments cannot be bribed. Bribery when\
+ Republican governments may demand huge amount of gold be bribed. Bribery when\
  not at war will cause a diplomatic incident.\
 "), _("\
 Diplomats can also perform a number of actions in another player's\
@@ -4531,7 +4668,7 @@ The actions available to Diplomats in a city are:\
  remain in the enemy's control, but units outside cities are lost to\
  both players. The exact sum depends on the status of the city and\
  that of the civilization that owns it. It is not possible to incite\
- a rebellion in a capital, or in any city governed by a Federation or\
+ a rebellion in a capital, and very expensive in any city governed by a Fundamentalism or\
  Democracy. Incitement may be attempted in peacetime, but will cause a\
  diplomatic incident.\
 "), _("\
@@ -4567,7 +4704,7 @@ fuel          = 0
 uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 3
 flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "Spy"
 veteran_names =
 ; /* TRANS: Spy veteran level */

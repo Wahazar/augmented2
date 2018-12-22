@@ -189,4 +189,6 @@ sprites =
 		"u.samurai", "augmented2/amplio_units/samurai_a"
 		"u.mounted_samurai", "augmented2/amplio_units/mounted_samurai_a"
 		"u.ninja", "augmented2/amplio_units/ninja_a"
+		"u.tribe", "augmented2/amplio_units/tribe_a"
+		"u.messenger", "augmented2/amplio_units/messenger_a"
 	}

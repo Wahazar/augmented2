@@ -279,7 +279,7 @@ sound		= "b_bank"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the luxury and tax output in a city by an additional 50%. \
+Increases the tax output in a city by an additional 50%. \
 With both a Bank and a Marketplace in a city, the total bonus is 100%.\
 ")
 
@@ -543,9 +543,8 @@ sabotage	= 100
 sound		= "b_colosseum"
 sound_alt	= "b_generic"
 helptext	= _("\
-Entertains the citizens of a city, making 3 unhappy citizens content. \
- (Four after the discovery of Electricity.)  However, it does not\
- affect citizens made unhappy by military activity.\
+Entertains the citizens of a city, adding 3 luxury points. \
+ (Four after the discovery of Electricity.) \
 ")
 
 [building_courthouse]
@@ -828,7 +827,7 @@ sound		= "b_marketplace"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the luxury and tax output in a city by 50%.\
+Increases the trade output in a city by 50%.\
 ")
 
 [building_mass_transit]
@@ -1735,7 +1734,7 @@ name		= _("Eiffel Tower")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Railroad", "Player"
+      "Tech", "Industrialization", "Player"
 	 "MinCulture", "30", "Player"
     }
 graphic	= "b.eiffel_tower"
@@ -2239,7 +2238,7 @@ sound		= "b_temple"
 sound_alt	= "b_generic"
 helptext	= _("\
 Temple improvement: make additional 1 unhappy citizen content.\n\
-Not cumulative with Temple of Artemis (but cumulative with Golden Palace)
+Not cumulative with Temple of Artemis (but cumulative with Golden Temple)
 ")
 
 [building_slavery_abolition]
@@ -2374,6 +2373,27 @@ Makes 2 additional unhappy citizens content in every city with \
 a Temple. Does not affect citizens made unhappy by aggression.\
 ")
 
+[building_thermal_bath]
+name		= _("Thermal Bath")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Islam", "Player"
+    }
+graphic	= "b.thermal_bath"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hanging_gardens"
+sound_alt	= "w_generic"
+helptext	= _("\
+Add 4 luxury point to the city where is located, \
+if Lazaretto exists, Thermal Bath reduces chance of plaque by additional 20%.\
+")
 
 [building_womens_suffrage]
 name		= _("Women's Suffrage")
@@ -2409,7 +2429,6 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Slave Trade", "Player"
       "Building", "Marketplace", "City", TRUE
-      "Tech", "Democracy", "Player", FALSE
     }
 graphic	= "b.yasir"
 graphic_alt	= "b.marketplace"
@@ -2613,7 +2632,7 @@ name		= _("Golden Temple")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Hinduism", "Player"
+      "Tech", "Sikhism", "Player"
       "Building", "Temple", "City"
 	 "MinCulture", "20", "Player"
     }
