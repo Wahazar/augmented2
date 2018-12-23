@@ -53,7 +53,8 @@ The differences from the classic ruleset are listed in full in\
 
 [options]
 global_init_techs=""
-global_init_buildings="Tribe Hut"
+global_init_buildings=""
+;Tribe Hut
 
 [civstyle]
 ; Value added to city pollution
@@ -645,7 +646,7 @@ effects        = "ReducePopulation", "Fallout"
 name           = _("Spaceship Launch")
 type           = "Spaceship"
 unique         = FALSE
-culture        = 5000
+culture        = 10000
 first_msg      = _("You're the first one to launch a spaceship towards Alpha Centauri!");
 cons_msg       = _("You have launched a spaceship towards Alpha Centauri!")
 
@@ -654,19 +655,9 @@ name           = _("Entire Map Known")
 type           = "Map_Known"
 unique         = FALSE
 value          = 100
-culture        = 200
+culture        = 1000
 first_msg      = _("You're the first one to have mapped the entire world!")
 cons_msg       = _("You have mapped the entire world!")
-
-[achievement_half_map_known]
-name           = _("All Your Hemisphere Mapped")
-type           = "Map_Known"
-unique         = FALSE
-value          = 50
-culture        = 20
-first_msg      = _("You're the first one to have mapped the half of entire world!")
-cons_msg       = _("You have mapped the half of entire world!")
-
 
 [achievement_another_island]
 name           = _("Land Ahoy")
@@ -682,7 +673,7 @@ name           = _("Literate")
 type           = "Literate"
 unique         = FALSE
 value          = 100
-culture        = 50
+culture        = 100
 ; /* xgettext:no-c-format */
 first_msg      = _("Your nation is the first to reach 100% literacy!")
 ; /* xgettext:no-c-format */
@@ -693,18 +684,9 @@ name           = _("Multicultural")
 type           = "Multicultural"
 unique         = FALSE
 value          = 2
-culture        = 10
+culture        = 20
 first_msg      = _("You're the first nation with a city containing 2 different nationalities!")
 cons_msg       = _("One of your cities has 2 different nationalities!")
-
-[achievement_megalopolis]
-name           = _("Megalopolis")
-type           = "Metropolis"
-unique         = FALSE
-value          = 80
-culture        = 200
-first_msg      = _("Your nation is the first with a city of population 80!")
-cons_msg       = _("One of your cities has reached population 80!")
 
 [achievement_metropolis]
 name           = _("Metropolis")
@@ -719,18 +701,37 @@ cons_msg       = _("One of your cities has reached population 20!")
 name           = _("Cultured City")
 type           = "Cultured_City"
 unique         = FALSE
-value          = 1000
-culture        = 1000
-first_msg      = _("Your nation is the first with a city of 1000 culture points!")
-cons_msg       = _("One of your cities has 1000 culture points!")
+value          = 2000
+culture        = 100
+first_msg      = _("Your nation is the first with a city of 2000 culture points!")
+cons_msg       = _("One of your cities has 2000 culture points!")
 
 [achievement_cultured_nation]
 name           = _("Cultured Nation")
 type           = "Cultured_Nation"
 unique         = FALSE
-value          = 10000
-first_msg      = _("Your nation is the first one to achieve 10000 culture points!")
-cons_msg       = _("Your nation has achieved 10000 culture points!")
+value          = 20000
+first_msg      = _("Your nation is the first one to achieve 20000 culture points!")
+cons_msg       = _("Your nation has achieved 20000 culture points!")
+ 
+[achievement_half_map_known]
+name           = _("All Your Hemisphere Mapped")
+type           = "Map_Known"
+unique         = FALSE
+value          = 50
+culture        = 20
+first_msg      = _("You're the first one to have mapped the half of entire world!")
+cons_msg       = _("You have mapped the half of entire world!")
+
+[achievement_megalopolis]
+name           = _("Megalopolis")
+type           = "Metropolis"
+unique         = FALSE
+value          = 80
+culture        = 200
+first_msg      = _("Your nation is the first with a city of population 80!")
+cons_msg       = _("One of your cities has reached population 80!")
+
 
 ;
 ; Trade settings

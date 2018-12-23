@@ -235,7 +235,7 @@ flags         = "BuildAnywhere", "ZOC", "CanFortify", "KillCitizen", "AttackNonN
 name          = _("?unitclass:Riverboat")
 min_speed     = 1
 hp_loss_pct   = 0
-flags         = "DamageSlows", "BuildAnywhere", "CanFortify", "DoesntOccupyTile"
+flags         = "DamageSlows", "CanFortify", "DoesntOccupyTile"
 
 [unitclass_train]
 ; /* TRANS: Unit class: used adjectivally */

@@ -137,7 +137,8 @@ files =
   "augmented2/buildings/buildings-large.spec",
   "augmented2/wonders/wonders-large.spec",
   "augmented2/amplio_units/units.spec",
-  "augmented2/misc/governments.spec"
+  "augmented2/misc/governments.spec",
+  "augmented2/terrain/terrain.spec"
 
 ; Include color definitions
 *include "misc/colors.tilespec"

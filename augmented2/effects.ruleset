@@ -581,17 +581,18 @@ reqs    =
 
 [effect_thermal_bath_1]
 type    = "Output_Add_Tile"
-value   = 4
+value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Thermal Bath", "City"
+      "Extra", "River", "Local"
       "CityTile", "Center", "Local"
       "OutputType", "Luxury", "Local"
     }
 
 [effect_thermal_bath_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Thermal Bath", "City"
@@ -2906,7 +2907,7 @@ reqs    =
 
 [effect_cathedral_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Cathedral", "City"
@@ -3150,6 +3151,17 @@ reqs    =
       "Building", "Factory", "City"
     }
 
+[effect_factory_zaibatsu]
+type    = "Output_Bonus"
+value   = 25
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Factory", "City", TRUE
+      "Tech", "Zaibatsu", "Player", TRUE
+      "Tech", "Labor Union", "Player", FALSE
+      "OutputType", "Shield", "Local", TRUE
+    }
+
 ; effect always has value>=50, so this halves food waste
 [effect_granary]
 type    = "Output_Waste_Pct"
@@ -3314,7 +3326,7 @@ reqs    =
 
 [effect_library_culture]
 type    = "History"
-value	= 2
+value	= 1
 reqs	=
     { "type", "name", "range"
       "Building", "Library", "City"
@@ -3568,7 +3580,7 @@ reqs    =
 
 [effect_ecclesiastical_palace_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Ecclesiastical Palace", "City", TRUE
@@ -3706,7 +3718,7 @@ reqs    =
 
 [effect_research_lab_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Research Lab", "City"
@@ -3942,7 +3954,7 @@ reqs    =
 
 [effect_super_highways_3]
 type    = "Pollu_Pop_Pct"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Super Highways", "City"
@@ -4018,13 +4030,13 @@ reqs    =
       "Gov", "Communism", "Player", FALSE
     }
 
-[effect_temple_culture]
-type    = "History"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Temple", "City"
-    }
+;[effect_temple_culture]
+;type    = "History"
+;value	= 1
+;reqs	=
+;    { "type", "name", "range"
+;      "Building", "Temple", "City"
+;    }
 
 [effect_university]
 type    = "Output_Bonus"
@@ -4037,7 +4049,7 @@ reqs    =
 
 [effect_university_culture]
 type    = "History"
-value	= 6
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "University", "City"
@@ -4061,7 +4073,7 @@ reqs    =
 
 [effect_apollo_program_culture]
 type    = "History"
-value	= 10
+value	= 5
 reqs	=
     { "type", "name", "range"
       "Building", "Apollo Program", "City"
@@ -4090,7 +4102,7 @@ reqs    =
 
 [effect_asmiths_trading_co_culture]
 type    = "History"
-value	= 4
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "A.Smith's Trading Co.", "City"
@@ -4124,7 +4136,7 @@ reqs    =
 
 [effect_copernicus_observatory_culture]
 type    = "History"
-value	= 6
+value	= 4
 reqs	=
     { "type", "name", "range"
       "Building", "Copernicus' Observatory", "City"
@@ -4150,7 +4162,7 @@ reqs    =
 
 [effect_cure_for_cancer_culture]
 type    = "History"
-value	= 8
+value	= 4
 reqs	=
     { "type", "name", "range"
       "Building", "Cure For Cancer", "City"
@@ -4179,7 +4191,7 @@ reqs    =
 
 [effect_darwins_voyage_culture]
 type    = "History"
-value	= 8
+value	= 5
 reqs	=
     { "type", "name", "range"
       "Building", "Darwin's Voyage", "City"
@@ -4204,7 +4216,7 @@ reqs    =
 
 [effect_eiffel_tower_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Eiffel Tower", "City"
@@ -4308,7 +4320,7 @@ reqs    =
 
 [effect_great_wall_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Great Wall", "City"
@@ -4416,25 +4428,26 @@ reqs    =
 
 [effect_isaac_newtons_college_culture]
 type    = "History"
-value	= 8
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Isaac Newton's College", "City"
     }
 
-[effect_js_bachs_cathedral]
+[effect_js_bachs_cathedral_lux]
 type    = "Output_Add_Tile"
 value   = 2
 reqs    =
     { "type", "name", "range"
       "Building", "J.S. Bach's Cathedral", "Player"
       "CityTile", "Center", "Local"
+      "Building", "Cathedral", "City"
       "OutputType", "Luxury", "Local"
     }
 
 [effect_js_bachs_cathedral_culture]
 type    = "History"
-value	= 10
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "J.S. Bach's Cathedral", "City"
@@ -4475,7 +4488,7 @@ reqs    =
 
 [effect_leonardos_workshop_culture]
 type    = "History"
-value	= 4
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Leonardo's Workshop", "City"
@@ -4571,7 +4584,7 @@ reqs    =
 
 [effect_magellans_expedition_culture]
 type    = "History"
-value	= 6
+value	= 4
 reqs	=
     { "type", "name", "range"
       "Building", "Magellan's Expedition", "City"
@@ -4587,7 +4600,7 @@ reqs    =
 
 [effect_manhattan_project_culture]
 type    = "History"
-value	= 10
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Manhattan Project", "City"
@@ -4603,7 +4616,7 @@ reqs    =
 
 [effect_marco_polos_embassy_culture]
 type    = "History"
-value	= 8
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Marco Polo's Embassy", "City"
@@ -4620,7 +4633,7 @@ reqs    =
 
 [effect_michelangelos_chapel_culture]
 type    = "History"
-value	= 8
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Michelangelo's Chapel", "City"
@@ -4706,7 +4719,7 @@ reqs    =
 
 [effect_pyramids_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Pyramids", "City"
@@ -4760,7 +4773,7 @@ reqs    =
 
 [effect_internet_culture]
 type    = "History"
-value	= 30
+value	= 10
 reqs	=
     { "type", "name", "range"
       "Building", "Internet", "City"
@@ -4803,7 +4816,7 @@ reqs    =
 
 [effect_shakespeares_theatre_culture]
 type    = "History"
-value	= 10
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Shakespeare's Theatre", "City"
@@ -4828,7 +4841,7 @@ reqs    =
 
 [effect_statue_of_liberty_culture]
 type    = "History"
-value	= 6
+value	= 4
 reqs	=
     { "type", "name", "range"
       "Building", "Statue of Liberty", "City"
@@ -4936,7 +4949,7 @@ reqs    =
 
 [effect_hollywood_culture]
 type    = "History"
-value	= 20
+value	= 10
 reqs	=
     { "type", "name", "range"
       "Building", "Hollywood", "City"
@@ -4952,7 +4965,7 @@ reqs    =
 
 [effect_womens_suffrage_culture]
 type    = "History"
-value	= 20
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Women's Suffrage", "City"
@@ -5523,7 +5536,7 @@ reqs    =
 
 [effect_DARPA_culture]
 type    = "History"
-value	= 12
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "DARPA", "City"
@@ -6304,7 +6317,7 @@ reqs	=
 
 [effect_mobile_x-ray_culture]
 type    = "History"
-value	= 6
+value	= 4
 reqs	=
     { "type", "name", "range"
       "Building", "Mobile X-ray", "Player"
@@ -6312,7 +6325,7 @@ reqs	=
 
 [effect_slavery_abolition_culture]
 type    = "History"
-value	= 8
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Slavery Abolition", "Player"
@@ -6320,7 +6333,7 @@ reqs	=
 
 [effect_massachusetts_institute_of_technology_culture]
 type    = "History"
-value	= 10
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Massachusetts Institute of Technology", "Player"
@@ -6328,7 +6341,7 @@ reqs	=
 
 [effect_pasteur_institute_culture]
 type    = "History"
-value	= 8
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Pasteur Institute", "Player"
@@ -6336,7 +6349,7 @@ reqs	=
 
 [effect_large_hadron_collider_culture]
 type    = "History"
-value	= 30
+value	= 10
 reqs	=
     { "type", "name", "range"
       "Building", "Pasteur Institute", "Player"
@@ -6344,7 +6357,7 @@ reqs	=
 
 [effect_space_lift_culture]
 type    = "History"
-value	= 10
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "Space Lift", "Player"
@@ -6377,6 +6390,14 @@ reqs    =
       "Building", "Leshan Buddha Statue", "World"
     }
 
+[effect_leshan_buddha_statue_culture]
+type    = "History"
+value	= 3
+reqs    =
+    { "type", "name", "range"
+      "Building", "Leshan Buddha Statue", "Player"
+    }
+
 [effect_kaaba_gold]
 type    = "Output_Add_Tile"
 value   = 1
@@ -6396,9 +6417,25 @@ reqs    =
       "Building", "Kaaba", "World"
     }
 
+[effect_kaaba_culture]
+type    = "History"
+value	= 3
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Kaaba", "Player", TRUE
+    }
+
 [effect_mosque]
 type    = "Make_Content"
 value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Mosque", "City"
+    }
+
+[effect_mosque_culture]
+type    = "History"
+value	= 1
 reqs    =
     { "type", "name", "range"
       "Building", "Mosque", "City"
@@ -6436,6 +6473,14 @@ reqs    =
       "UnitClass", "Torpedos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "IgWall", "Local", FALSE
+    }
+
+[effect_western_wall_culture]
+type    = "History"
+value	= 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Western Wall", "Player"
     }
 
 [effect_angkor_wat]
@@ -6506,7 +6551,7 @@ reqs    =
 
 [effect_angkor_wat_culture]
 type    = "History"
-value	= 5
+value	= 3
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Angkor Wat", "City", TRUE
@@ -6543,7 +6588,7 @@ reqs    =
       "Building", "Church", "City"
     }
 
-[effect_golden_mosque]
+[effect_golden_temple_mosque]
 type    = "Make_Content"
 value   = 1
 reqs    =
@@ -6552,13 +6597,28 @@ reqs    =
       "Building", "Mosque", "City"
     }
 
+[effect_golden_temple_culture]
+type    = "History"
+value	= 4
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Golden Temple", "Player", TRUE
+    }
+
+[effect_js_bachs_cathedral]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "J.S. Bach's Cathedral", "Player", TRUE
+    }
+
 [effect_js_bachs_cathedral_church]
 type    = "Make_Content"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "J.S. Bach's Cathedral", "Player", TRUE
-      "OutputType", "Luxury", "Local", TRUE
       "Building", "Church", "City", TRUE
       "Gov", "Communism", "Player", FALSE
     }
@@ -6566,6 +6626,14 @@ reqs    =
 [effect_church]
 type    = "Make_Content"
 value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Church", "City"
+    }
+
+[effect_church_culture]
+type    = "History"
+value	= 1
 reqs    =
     { "type", "name", "range"
       "Building", "Church", "City"
@@ -6581,6 +6649,14 @@ reqs    =
       "Building", "Temple of Artemis", "Player", FALSE
     }
 
+;[effect_shrine_torii_culture]
+;type    = "History"
+;value	= 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Shrine Torii", "City"
+;    }
+
 [effect_monk_monastery]
 type    = "Output_Add_Tile"
 value   = 4
@@ -6591,3 +6667,19 @@ reqs    =
       "CityTile", "Center", "Local"
     }
 
+[effect_monk_monastery_culture]
+type    = "History"
+value	= 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Monk Monastery", "City"
+    }
+
+;[effect_city_hall_culture]
+;type    = "History"
+;value	= 1
+;reqs	=
+;    { "type", "name", "range"
+;      "Building", "City Hall", "City"
+;      "MinSize", "4", "City"
+;    }

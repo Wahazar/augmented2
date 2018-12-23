@@ -377,7 +377,7 @@ defense_bonus        = 0
 food                 = 0
 shield               = 0
 trade                = 0
-resources            = "Ivory", "Oil"
+resources            = "Ivory", "Oil", "Seals"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
@@ -522,7 +522,7 @@ defense_bonus        = 0
 food                 = 2
 shield               = 0
 trade                = 0
-resources            = "Resources"
+resources            = "Resources", "Rice"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
@@ -564,9 +564,9 @@ class                = "Land"
 movement_cost        = 2
 defense_bonus        = 50
 food                 = 1
-shield               = 1
+shield               = 0
 trade                = 0
-resources            = "Coal", "Wine"
+resources            = "Coal", "Wine", "Saltpeter"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
@@ -710,7 +710,7 @@ defense_bonus        = 0
 food                 = 1
 shield               = 1
 trade                = 0
-resources            = "Buffalo", "Wheat"
+resources            = "Buffalo", "Wheat", "Horses"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
@@ -924,13 +924,21 @@ trade       = 4
 # jungle.
 
 ; "h" reserved for strategic horses
+[resource_horses]
+name        = _("Horses")
+graphic     = "ts.horses"
+graphic_alt = "ts.buffalo"
+identifier  = "h"
+shield      = 2
+trade      = 1
 
 [resource_buffalo]
 name        = _("Buffalo")
 graphic     = "ts.buffalo"
 graphic_alt = "-"
 identifier  = "b"
-shield      = 2
+shield      = 1
+food		= 1
 # plains (horses => buffalo => cattle).
 
 [resource_wheat]
@@ -943,7 +951,15 @@ food        = 2
 
 ; "k" reserved for (cane) sugar
 
-; "l" reserved for tobacco
+; "l" reserved for saltpeter
+[resource_saltpeter]
+name        = _("Saltpeter")
+graphic     = "ts.saltpeter"
+graphic_alt = "ts.grassland_resources"
+identifier  = "l"
+shield      = 2
+trade      = 1
+# hills
 
 ; "m" reserved for marble
 
@@ -986,10 +1002,18 @@ name        = _("Ivory")
 graphic     = "ts.arctic_ivory"
 graphic_alt = "-"
 identifier  = "i"
-food        = 1
 shield      = 1
 trade       = 4
 # glacier (seals => walrus).
+
+[resource_seals]
+name        = _("Seals")
+graphic     = "ts.seals"
+graphic_alt = "-"
+identifier  = "q"
+shield      = 1
+trade       = 1
+food        = 2
 
 [resource_silk]
 name        = _("Silk")
@@ -1036,6 +1060,13 @@ identifier  = "x"
 shield      = 3 ; glacier used to have 4
 # glacier, desert
 
+[resource_rice]
+name        = _("Rice")
+graphic     = "ts.rice"
+graphic_alt = "ts.wheat"
+identifier  = "z"
+food        = 1
+# grassland
 
 [extraui]
 

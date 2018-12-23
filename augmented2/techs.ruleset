@@ -1518,4 +1518,5 @@ root_req = "Shogunate"
 flags    = ""
 graphic     = "zaibatsu"
 graphic_alt = "-"
+helptext = _("TIP: Increase factory production by 25% (this effect is cancelled by Labor Union).")
 cost     = 400
