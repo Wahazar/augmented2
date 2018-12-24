@@ -5,7 +5,7 @@
 options = "+Freeciv-2.6-tilespec"
 
 ; A simple name for the tileset specified by this file:
-name = "Augmented2h"
+name = "augmented2"
 ; Tileset and graphics for augmented2 ruleset, based on hexemplio
 priority = 30
 

@@ -14,7 +14,7 @@ OBJECTIVES:
   defensive infantry, assault infantry, fast assault units, reconnaissance, 
   direct fire artillery, plunging fire artillery, peacekeepers, turrets etc.
 
-- Distinctive tiers of ships classes: river/coastal merchants, river/coastal warships, ocean merchants, ocean warships. 
+- Well defined tiers of ships classes: river/coastal merchants, river/coastal warships, ocean merchants, ocean warships. 
 
 - Ships and armoured train have decreased attack alone, but can be equipped with turret guns (destroyer and patrol boat also torpedos). 
 - Submarines can carry torpedos (nuclear submarine also missiles). 
@@ -25,6 +25,9 @@ OBJECTIVES:
 - New buildings and wonders, adopted to the new technology tree. 
   Some industrial improvements give additional bonus from certain tiles.
   City radius depend on city size and improvements.
+
+- Some building and especially wonders require certain level of Culture Points. These can be earned 
+  each turn from some other buildings, or granted by special events.
 
 - New governments and altered governments properties.
 

@@ -92,7 +92,7 @@ cost     = 650
 [advance_agricultural_farming]
 name     = _("Agricultural Farming")
 req1     = "Animal Husbandry"
-req2     = "Fire Making"
+req2     = "Pottery"
 flags    = ""
 graphic     = "a.agricultural_farming"
 graphic_alt = "-"
@@ -855,7 +855,7 @@ cost     = 160
 [advance_masonry]
 name     = _("Masonry")
 req1     = "Carpentry"
-req2     = "Pottery"
+req2     = "Bronze Working"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
@@ -929,6 +929,7 @@ cost     = 750
 name     = _("Monarchy")
 req1     = "Ceremonial Burial"
 req2     = "Code of Laws"
+root_req = "Agricultural Farming"
 flags    = ""
 graphic     = "a.monarchy"
 graphic_alt = "-"
@@ -1066,8 +1067,8 @@ cost     = 30
 
 [advance_pottery]
 name     = _("Pottery")
-req1     = "Agricultural Farming"
-req2     = "Forestry"
+req1     = "Fire Making"
+req2     = "Stone Knapping"
 flags    = ""
 graphic     = "a.pottery"
 graphic_alt = "-"
