@@ -1,4 +1,4 @@
 # Server commands to make Civ2Civ3 Freeciv rules
 #
-
+set techlevel=0
 rulesetdir augmented2

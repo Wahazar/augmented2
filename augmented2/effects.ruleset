@@ -2266,6 +2266,22 @@ reqs    =
       "UnitFlag", "NoVeteran", "Local", FALSE, FALSE
     }
 
+[effect_revolution_tribal]
+type    = "Revolution_Unhappiness"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+    }
+
+[effect_revolution_direct_democracy]
+type    = "Revolution_Unhappiness"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Direct Democracy", "Player"
+    }
+
 [effect_revolution_republic]
 type    = "Revolution_Unhappiness"
 value   = 2

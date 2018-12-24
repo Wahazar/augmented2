@@ -224,6 +224,7 @@ But some governments have bonuses or penalties while producing gold, science or 
 For example science and gold is suppressed under Tribalism, while improved under Republic.
 
 4. Additional unhappines is generated proportional to enemy nationality percentage in your city.
+It can throw out Tribal, Democracy or Republic gov.
 
 Gov. table reference:
 				anar. tri.	desp. mon. f.rep. rep.	d.dem. dem.	com.	fund.	fed.	thal.	fasc.					
@@ -257,7 +258,7 @@ veteran+				Y											Y
 
 has senate							Y	Y	Y	Y 			Y	Y	
 
-revolution								Y		Y					
+revolution				Y			Y	Y	Y					
 incite multiplier		0.5	2	1	1	1	2	2	2/10**	1	10	3	1	x/2*	* with statue of Liberty				
 bribing multipl.		0.5	1	1	2	2	2/10**	1	5	1	5	3	1	4	** 10 without slavery abolition				
 
