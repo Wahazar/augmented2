@@ -252,6 +252,7 @@ _("\
 name        = _("Fundamentalism")
 reqs = { "type", "name", "range"
          "tech", "Fundamentalism", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.fundamentalism"
 graphic_alt = "-"
@@ -338,6 +339,7 @@ _("\
 name        = _("Republic")
 reqs = { "type", "name", "range"
          "tech", "The Republic", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.republic"
 graphic_alt = "-"
@@ -379,6 +381,7 @@ _("\
 name        = _("Democracy")
 reqs = { "type", "name", "range"
          "tech", "Democracy", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.democracy"
 graphic_alt = "-"
@@ -419,6 +422,7 @@ _("\
 name        = _("Thalassocracy")
 reqs = { "type", "name", "range"
          "tech", "Thalassocracy", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.thalassocracy"
 graphic_alt = "s.tax_gold"
@@ -462,6 +466,7 @@ _("\
 name        = _("Fascism")
 reqs = { "type", "name", "range"
          "tech", "Imperialism", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.fascism"
 graphic_alt = "f.shield.kuna_yala"
@@ -500,6 +505,7 @@ _("\
 name        = _("First Republic")
 reqs = { "type", "name", "range"
          "tech", "First Republic", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.first_republic"
 graphic_alt = "gov.republic"
@@ -538,6 +544,7 @@ _("\
 name        = _("Direct Democracy")
 reqs = { "type", "name", "range"
          "tech", "Direct Democracy", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.direct_democracy"
 graphic_alt = "gov.democracy"
