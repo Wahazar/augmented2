@@ -236,7 +236,7 @@ helptext = _("Allows roads to be built on river tiles.")
 [advance_bronze_working]
 name     = _("Bronze Working")
 req1     = "Forestry"
-req2     = "Pottery"
+req2     = "Agricultural Farming"
 flags    = ""
 graphic     = "a.bronze_working"
 graphic_alt = "-"
@@ -544,7 +544,7 @@ cost     = 470
 [advance_exploration]
 name     = _("Exploration")
 req1     = "Pastoralism"
-req2     = "Warrior Code"
+req2     = "Leather Tanning"
 flags    = ""
 graphic     = "a.exploration"
 graphic_alt = "-"
@@ -787,6 +787,15 @@ graphic     = "a.leadership"
 graphic_alt = "-"
 cost     = 220
 
+[advance_leather_tanning]
+name     = _("Leather Tanning")
+req1     = "Fire Making"
+req2     = "Stone Knapping"
+flags    = ""
+graphic     = "a.leather_tanning"
+graphic_alt = "-"
+cost     = 6
+
 [advance_legalism]
 name     = _("Legalism")
 req1     = "Confucianism"
@@ -855,7 +864,7 @@ cost     = 160
 [advance_masonry]
 name     = _("Masonry")
 req1     = "Carpentry"
-req2     = "Bronze Working"
+req2     = "Pottery"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
@@ -1410,7 +1419,7 @@ cost     = 420
 [advance_the_republic]
 name     = _("The Republic")
 req1     = "Banking"
-req2     = "Craft Guilds"
+req2     = "University"
 root_req = "First Republic"
 flags    = ""
 graphic     = "a.the_republic"
@@ -1495,12 +1504,12 @@ cost     = 50
 
 [advance_warrior_code]
 name     = _("Warrior Code")
-req1     = "Stone Knapping"
-req2     = "None"
+req1     = "Creative Art"
+req2     = "Leather Tanning"
 flags    = ""
 graphic     = "a.warrior_code"
 graphic_alt = "-"
-cost     = 10
+cost     = 12
 
 [advance_writing]
 name     = _("Writing")

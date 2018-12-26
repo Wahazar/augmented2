@@ -1,0 +1,13 @@
+=================================
+Augmented2 Ruleset for Freeciv v2.6
+=================================
+
+
+2.6.1
+New tech: Leather Tanning
+New units: Hunters, Canoes.
+Decreased maximal possible city radius to maintain city properties window height.
+Fixed Eiffel Tower.
+
+2.6.0 
+Initial release

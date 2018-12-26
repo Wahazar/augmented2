@@ -738,10 +738,42 @@ can add 10 shields towards its production. \
 Unlike Caravans, Slaves can't establish trade route.\
 ")
 
+[unit_hunters]
+name          = _("Hunters")
+class         = "Small Land"
+tech_req      = "Stone Knapping"
+obsolete_by   = "Archers"
+graphic       = "u.hunters"
+graphic_alt   = "u.warriors"
+sound_move    = "m_warriors"
+sound_move_alt = "m_generic"
+sound_fight   = "f_warriors"
+sound_fight_alt = "f_generic"
+build_cost    = 8
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 6
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Only_Native_Attack"
+roles         = "DefendOkStartUnit", "Hunter"
+helptext      = _("\
+This unit emerged from stone age may be built almost from the start of the game.\
+It is the weak offensive unit, can't conquer enemy cities, but have high mobility including mountains.\
+")
+
 [unit_warriors]
 name          = _("Warriors")
 class         = "Land"
-tech_req      = "Stone Knapping"
+tech_req      = "Warrior Code"
 obsolete_by   = "Halberdier"
 graphic       = "u.warriors"
 graphic_alt   = "-"
@@ -767,7 +799,7 @@ flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "FirstBuild"
 helptext      = _("\
 This unit emerged from stone age may be built almost from the start of the game.\
-It is the weak offensive unit.\
+It is the weak offensive unit, but can be used to conquer enemy cities.\
 ")
 
 [unit_halberdier]
@@ -3214,6 +3246,38 @@ An improved Stealth Bomber, with a higher movement and fuel capacity\
 They can carry not only ordinary bombs, but also missiles.\
 ")
 bombard_rate = 6
+
+[unit_canoes]
+name          = _("Canoes")
+class         = "Trireme"
+tech_req      = "Fire Making"
+obsolete_by   = "Trireme"
+graphic       = "u.canoes"
+graphic_alt   = "unit.fortress"
+sound_move    = "m_trireme"
+sound_move_alt = "m_generic"
+sound_fight   = "f_trireme"
+sound_fight_alt = "f_generic"
+build_cost    = 8
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 5
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 1
+cargo         = "Small Land"
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 0
+uk_gold       = 1
+flags         = "NonMil", "NoVeteran", "HasNoZOC", "Unique", "Unbribable"
+roles         = "Ferryboat", "FerryStartUnit"
+helptext      = _("\
+Canoe made from hollowed trunk is a stone age form of transport, allow you to spread your Tribe onto nearby islands.
+")
 
 [unit_raft]
 name          = _("Raft")

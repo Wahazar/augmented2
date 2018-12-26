@@ -4230,6 +4230,15 @@ reqs    =
 ;      "Building", "Eiffel Tower", "Player"
 ;    }
 
+[effect_eiffel_tower_trade]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Eiffel Tower", "City"
+      "OutputType", "Trade", "Local"
+    }
+
 [effect_eiffel_tower_culture]
 type    = "History"
 value	= 2
@@ -5312,7 +5321,7 @@ type    = "Irrig_Possible"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "Extra", "Irrigation", "CAdjacent", TRUE
+      "Extra", "Irrigation", "Adjacent", TRUE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Trireme", "Local", FALSE
       "Tech", "Agricultural Farming", "Player", TRUE
@@ -5430,13 +5439,13 @@ reqs	=
       "MinSize", "2", "City"
     }
 
-[effect_city_hut_radius]
-type    = "City_Radius_Sq"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Tribe Hut", "City"    
-    }
+;[effect_city_hut_radius]
+;type    = "City_Radius_Sq"
+;value	= 1
+;reqs	=
+;    { "type", "name", "range"
+;      "Building", "Tribe Hut", "City"    
+;    }
 
 [effect_city_hall_radius]
 type    = "City_Radius_Sq"
@@ -5446,41 +5455,45 @@ reqs	=
       "Building", "City Hall", "City"
     }
 
-[effect_railwaystation_radius]
-type    = "City_Radius_Sq"
-value	= 6
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Railway Station", "City", TRUE
-      "Tech", "Electricity", "Player", TRUE
-      "Building", "Eiffel Tower", "Player", FALSE
-    }
+;[effect_railwaystation_radius]
+;type    = "City_Radius_Sq"
+;value	= 6
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Building", "Railway Station", "City", TRUE
+;      "Tech", "Electricity", "Player", TRUE
+;      "Building", "Eiffel Tower", "Player", FALSE
+;    }
 
 [effect_eiffel_tower_radius]
 type    = "City_Radius_Sq"
-value	= 7
+value	= 5
 reqs    =
     { "type", "name", "range"
       "Building", "Eiffel Tower", "Player"
+      "Building", "Railway Station", "City"
+      "Tech", "Electricity", "Player"
     }
 
-[effect_highways_radius]
-type    = "City_Radius_Sq"
-value	= 6
-reqs    =
-    { "type", "name", "range"
-      "Building", "Super Highways", "City"
-      "Tech", "Combustion", "Player"
-    }
+;[effect_highways_radius]
+;type    = "City_Radius_Sq"
+;value	= 6
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Building", "Super Highways", "City", TRUE
+;      "Tech", "Combustion", "Player", TRUE
+;      "Building", "Airport", "City", FALSE
+;    }
 
 [effect_airport_radius]
 type    = "City_Radius_Sq"
-value	= 6
+value	= 5
 reqs    =
-    { "type", "name", "range"
-      "Building", "Airport", "City"
-      "Building", "Mass Transit", "City"
-      "Tech", "Combustion", "Player"
+    { "type", "name", "range", "present"
+      "Building", "Airport", "City", TRUE
+      "Building", "Mass Transit", "City", TRUE
+      "Tech", "Combustion", "Player", TRUE
+      "Building", "Eiffel Tower", "Player", FALSE
     }
 
 [effect_courthouse_vision]
@@ -5502,16 +5515,15 @@ reqs    =
       "MaxUnitsOnTile", "0", "Local", FALSE
     }
 
-; only if occupied
 [effect_airport_vision]
 type    = "City_Vision_Radius_Sq"
 value	= 7
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Airport", "City", TRUE
-      "MaxUnitsOnTile", "0", "Local", FALSE
+;      "MaxUnitsOnTile", "0", "Local", FALSE
       "Tech", "Electricity", "Player", TRUE
-;      "Building", "Eiffel Tower", "City", FALSE
+      "Building", "Eiffel Tower", "City", FALSE
     }
 
 [effect_eiffel_tower_vision]

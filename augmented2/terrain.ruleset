@@ -957,7 +957,7 @@ name        = _("Saltpeter")
 graphic     = "ts.saltpeter"
 graphic_alt = "ts.grassland_resources"
 identifier  = "l"
-shield      = 2
+shield      = 1
 trade      = 1
 # hills
 

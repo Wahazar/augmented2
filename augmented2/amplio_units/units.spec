@@ -191,4 +191,6 @@ sprites =
 		"u.ninja", "augmented2/amplio_units/ninja_a"
 		"u.tribe", "augmented2/amplio_units/tribe_a"
 		"u.messenger", "augmented2/amplio_units/messenger_a"
+		"u.hunters", "augmented2/amplio_units/hunters_a"
+		"u.canoes", "augmented2/amplio_units/canoes_a"
 	}

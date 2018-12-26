@@ -289,7 +289,7 @@ name		= _("Barracks")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Fire Making", "Player"
+      "Tech", "Leather Tanning", "Player"
     }
 graphic	= "b.barracks_i"
 graphic_alt	= "-"
@@ -1212,10 +1212,6 @@ extra trade from gems and gold tiles, \n \
 extra shield from grassland resources, silk tiles and any jungle tile, \n \
 increased productivity and additional trade from coal mines and iron mines (together with steel mill, cement or power plant).\n \
 Together with supermarket, increases the tax output in a city by 25%.\
-"),
-; /* xgettext:no-c-format */
- _("\
-Railway Station also increase city radius, if player revealed Electricity advance.\
 ")
 
 [building_research_lab]
@@ -1552,9 +1548,6 @@ _("\
 Together with the Stock Exchange, also increase overall city Trade by an additional 25%.\
 "), 
 _("\
-Togehter with Combustion advance, increase city influence radius.\
-"),
-_("\
 Super Highways also increase the pollution caused by the population\
  of the city.\
 ")
@@ -1742,7 +1735,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 400
+build_cost	= 500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_eiffel_tower"
@@ -1750,7 +1743,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 AI nations are more inclined to be friendly and forgiving toward the \
 owner of this wonder (until the Apollo Program is completed). It also \
-increase radius of your city influence, where this building is located.\
+increase radius of your city influence, where this building is located together with Railway Station.\
 "),
 _("\
 Each tile around the city where this wonder is built that is already\

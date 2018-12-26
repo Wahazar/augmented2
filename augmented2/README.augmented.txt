@@ -321,6 +321,7 @@ New techs:
 * imperialism 
 * islam 
 * jet_propulsion 
+* leather tanning
 * legalism 
 * machinery 
 * modern_warfare 
