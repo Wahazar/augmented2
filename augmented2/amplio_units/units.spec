@@ -193,4 +193,6 @@ sprites =
 		"u.messenger", "augmented2/amplio_units/messenger_a"
 		"u.hunters", "augmented2/amplio_units/hunters_a"
 		"u.canoes", "augmented2/amplio_units/canoes_a"
+		"u.swordsmen", "augmented2/amplio_units/swordsmen_a"
+		"u.crusaders_horse", "augmented2/amplio_units/crusaders_horse_a"
 	}

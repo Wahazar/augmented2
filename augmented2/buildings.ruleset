@@ -2420,7 +2420,7 @@ name		= _("Yasir")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
-      "Tech", "Slave Trade", "Player"
+      "Tech", "Slave Trade", "Player", TRUE
       "Building", "Marketplace", "City", TRUE
     }
 graphic	= "b.yasir"

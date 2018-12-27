@@ -158,7 +158,7 @@ name          = _("?unitclass:Big Land")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
-                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "Airliftable" , "AttackNonNative"
+                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "Airliftable", "AttackNonNative"
 
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
@@ -1999,8 +1999,8 @@ class         = "Land"
 tech_req      = "Theology"
 gov_req       = "Fundamentalism"
 obsolete_by   = "Dragoons"
-graphic       = "u.crusaders"
-graphic_alt   = "u.knights"
+graphic       = "u.crusaders_horse"
+graphic_alt   = "u.crusaders"
 sound_move    = "m_crusaders"
 sound_move_alt = "m_generic"
 sound_fight   = "f_crusaders"

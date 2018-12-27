@@ -2,6 +2,9 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.2
+Terrain production tweaks
+Corrected Swordsmen and Crusaders sprites
 
 2.6.1
 New tech: Leather Tanning
