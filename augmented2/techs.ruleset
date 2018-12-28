@@ -320,6 +320,15 @@ graphic     = "a.christianity"
 graphic_alt = "-"
 cost     = 120
 
+[advance_cinematography]
+name     = _("Cinematography")
+req1     = "Modern Theatre"
+req2     = "Electricity"
+flags    = ""
+graphic     = "a.cinematography"
+graphic_alt = "-"
+cost     = 440
+
 [advance_code_of_laws]
 name     = _("Code of Laws")
 req1     = "Alphabet"
@@ -360,8 +369,8 @@ cost     = 440
 [advance_computers]
 name     = _("Computers")
 req1     = "Miniaturization"
-req2     = "Electronics"
-root_req = "Electricity"
+req2     = "Television"
+root_req = "Electronics"
 flags    = ""
 graphic     = "a.computers"
 graphic_alt = "-"
@@ -463,6 +472,15 @@ graphic     = "a.direct_democracy"
 graphic_alt = "-"
 cost     = 60
 
+[advance_drama]
+name     = _("Drama")
+req1     = "Writing"
+req2     = "Masonry"
+flags    = ""
+graphic     = "a.drama"
+graphic_alt = "-"
+cost     = 30
+
 [advance_economics]
 name     = _("Economics")
 req1     = "Banking"
@@ -489,9 +507,8 @@ flags    = ""
 graphic     = "a.electricity"
 graphic_alt = "-"
 helptext = _("\
-Allows irrigation tiles adjacent only to Sea, improves the \
-effect of Amphitheaters. \n \
-Together with Railway Station, increase radius of cities.\
+Allows irrigation tiles adjacent only to Sea.\n \
+Together with Railway Station and Eiffel Tower, increase radius of cities.\
 ")
 cost     = 410
 
@@ -870,6 +887,16 @@ graphic     = "a.masonry"
 graphic_alt = "-"
 cost     = 20
 
+
+[advance_mass_entertainment]
+name     = _("Mass Entertainment")
+req1     = "Drama"
+req2     = "Construction"
+flags    = ""
+graphic     = "a.mass_entertainment"
+graphic_alt = "-"
+cost     = 60
+
 [advance_mass_production]
 name     = _("Mass Production")
 req1     = "Automobile"
@@ -909,7 +936,7 @@ cost     = 200
 [advance_miniaturization]
 name     = _("Miniaturization")
 req1     = "Mass Production"
-req2     = "Radio"
+req2     = "Electronics"
 flags    = ""
 graphic     = "a.miniaturization"
 graphic_alt = "-"
@@ -924,6 +951,15 @@ flags    = ""
 graphic     = "a.mobile_warfare"
 graphic_alt = "-"
 cost     = 620
+
+[advance_modern_theatre]
+name     = _("Modern Theatre")
+req1     = "Mass Entertainment"
+req2     = "Invention"
+flags    = ""
+graphic     = "a.modern_theatre"
+graphic_alt = "-"
+cost     = 120
 
 [advance_modern_warfare]
 name     = _("Modern Warfare")
@@ -1103,8 +1139,9 @@ cost     = 820
 
 [advance_radar]
 name     = _("Radar")
-req1     = "Electronics"
+req1     = "Television"
 req2     = "Advanced Flight"
+root_req = "Electronics"
 flags    = ""
 graphic     = "a.radar"
 graphic_alt = "-"
@@ -1383,6 +1420,17 @@ flags    = ""
 graphic     = "a.tactics"
 graphic_alt = "-"
 cost     = 360
+
+[advance_television]
+name     = _("Television")
+req1     = "Cinematography"
+req2     = "Electronics"
+root_req = "Electricity"
+flags    = ""
+graphic     = "a.television"
+graphic_alt = "-"
+helptext = _("TIP: Together with Hollywood wonder, 3 additional entertainer specialists for each city. ")
+cost     = 520
 
 [advance_taoism]
 name     = _("Taoism")

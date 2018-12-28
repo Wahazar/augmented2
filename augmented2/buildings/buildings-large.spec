@@ -11,9 +11,10 @@ artists = "
    Irwe,
    Zephyris,
    Wahazar,
-   3dman_eu
-   David_Shea 
-   Pixabay CC
+   3dman_eu,
+   David_Shea, 
+   Pixabay CC,
+   ngunjaca
 "
 [extra]
 sprites =
@@ -31,5 +32,9 @@ sprites =
 		"b.mosque", "augmented2/buildings/mosque"
 		"b.shrine_torii", "augmented2/buildings/shrine_torii-David_Shea"
 		"b.monk_monastery", "augmented2/buildings/monk_monastery_3dman_eu"
+		"b.monk_monastery", "augmented2/buildings/monk_monastery_3dman_eu"
+		"b.amphitheater", "augmented2/buildings/amphitheater"
+		"b.theatre", "augmented2/buildings/cinema_Zephyris"
+
 
 	}

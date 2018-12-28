@@ -1,4 +1,7 @@
 # Server commands to make Civ2Civ3 Freeciv rules
 #
 set techlevel=0
+tinyisles=0
+aifill=10
 rulesetdir augmented2
+

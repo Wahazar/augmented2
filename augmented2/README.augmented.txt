@@ -301,12 +301,14 @@ New techs:
 * carpentry 
 * chemical_synthesis 
 * christianity 
+* cinematography
 * concrete 
 * confucianism 
 * craft_guilds 
 * creative_art 
 * desert_code 
 * direct_democracy 
+* drama
 * egalitarianism 
 * electromagnetism 
 * exploration 
@@ -324,6 +326,8 @@ New techs:
 * leather tanning
 * legalism 
 * machinery 
+* mass_entertainment
+* modern_theatre
 * modern_warfare 
 * nanotechnology 
 * offshore_exploration 
@@ -455,7 +459,7 @@ WONDERS:
 Altered:
 Great Library obsololeted by Computers,
 Map Reveal shifted from Apollo to GPS
-Shakespeare's Theatre obsoleted by Nanotechnology.
+Shakespeare's Theatre obsoleted by Television.
 No pollution reduction form Eiffel Tower (it is used to increase town influence and vision radius)
 Women Suffrage: additional trade point/tile in Democracy, or Shield point/tile in Republic. For unhapiness see: Hollywood.
 Internet: do not reveal map (use GPS instead).

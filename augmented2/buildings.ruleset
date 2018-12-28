@@ -84,6 +84,30 @@ but at the expence of Tribe Hut bonuses.
 Village Hut cannot be build, if City Hall already exists.\
 ")
 
+[building_amphitheater]
+name            = _("Amphitheater")
+;rule_name	= "Colosseum"
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Drama", "Player"
+	 "MinCulture", "100", "Player"
+    }
+graphic	= "b.amphitheater"
+graphic_alt	= "b.colosseum"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 3
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Entertains the citizens of a city, adding 3 luxury points. \
+ (only 2 after the discovery of Cinematography.) 
+")
+
 [building_city_hall]
 name		= _("City Hall")
 genus		= "Improvement"
@@ -522,30 +546,6 @@ Gives a +100% bonus to the intrinsic defense strength of units within \
 a city when defending against enemy ships. For small cities the defense \
 strength is doubled by this improvement; for cities larger than size 8, \
 it is increased by two-thirds.\
-")
-
-[building_colosseum]
-name            = _("Amphitheater")
-rule_name	= "Colosseum"
-genus		= "Improvement"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Construction", "Player"
-	 "MinCulture", "150", "Player"
-    }
-graphic	= "b.colosseum"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-    }
-build_cost	= 70
-upkeep		= 3
-sabotage	= 100
-sound		= "b_colosseum"
-sound_alt	= "b_generic"
-helptext	= _("\
-Entertains the citizens of a city, adding 3 luxury points. \
- (Four after the discovery of Electricity.) \
 ")
 
 [building_courthouse]
@@ -1641,6 +1641,29 @@ Textille Mill use water power, therefore can't be built in a city \
 without access to a river. \
 ")
 
+[building_theatre]
+name            = _("Theatre")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Modern Theatre", "Player"
+	 "MinCulture", "400", "Player"
+    }
+graphic	= "b.theatre"
+graphic_alt	= "b.colosseum"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 80
+upkeep		= 4
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Entertains the citizens of a city, adding 3 luxury points. \
+ (4 after the discovery of Cinematography.) 
+")
+
 [building_university]
 name		= _("University")
 genus		= "Improvement"
@@ -1671,6 +1694,37 @@ _("\
 The total bonus is 100% if a Library and a University are present \
 together in the same city, increasing to 200% once the Great Library or Internet and \
 Isaac Newton's College have both been built.\
+")
+
+;small wonders
+
+[building_colosseum]
+name            = _("Colosseum")
+; rule_name	= "Colosseum"
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mass Entertainment", "Player"
+	 "MinCulture", "350", "Player"
+    }
+graphic	= "b.colosseum"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 200
+upkeep		= 3
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increase luxury output of a city by 50%, \
+additionally neutralises unhappiness caused by one military \
+unit in its city.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_copernicus_observatory]
@@ -1804,7 +1858,7 @@ name		= _("Hollywood")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Electronics", "Player"
+      "Tech", "Cinematography", "Player"
       "Building", "Women's Suffrage", "Player"
 	 "MinCulture", "4500", "Player"
     }
@@ -1824,11 +1878,16 @@ deployed military unit per city. Under Democracy, it additionally \
 halves the unhappiness caused by military units (reducing it to the \
 same level as a Republic).\n\
 Besides this, Hollywood gives additional 6 luxuries to the city \
-where it is located.\
+where it is located.\n\
 "),
 ; /* xgettext:no-c-format */
- _("\
-Unlike other wonders, Hollywood need upkeep, which is expensive. \
+_("\
+With Television advance, entertainer specialists' luxury \
+output increases to 3 for player's nation.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_js_bachs_cathedral]
@@ -2193,10 +2252,10 @@ graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
-      "Tech", "Nanotechnology", "Player"
+      "Tech", "Television", "Player"
     }
 build_cost	= 250
-upkeep		= 0
+upkeep		= 6
 sabotage	= 0
 sound		= "w_shakespeares_theatre"
 sound_alt	= "w_generic"
@@ -2206,6 +2265,10 @@ where it is located.\
 "), _("\
 Upon completion of this wonder, entertainer specialists' luxury \
 output increases to 3 for player's nation.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_shrine_torii]

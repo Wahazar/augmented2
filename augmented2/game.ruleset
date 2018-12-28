@@ -828,11 +828,11 @@ colorlist =
 ;
 set =
     { "name", "value"
-      "aifill", 6
+      "aifill", 10
       "generator", "FRACTAL"
       "topology", "WRAPX|WRAPY|ISO|HEX"
       "mapsize", "PLAYER"
-      "tilesperplayer", 100
+      "tilesperplayer", 200
       "tinyisles", "ENABLED"
       "temperature", 60
       "flatpoles", 0
