@@ -35,6 +35,4 @@ sprites =
 		"b.monk_monastery", "augmented2/buildings/monk_monastery_3dman_eu"
 		"b.amphitheater", "augmented2/buildings/amphitheater"
 		"b.theatre", "augmented2/buildings/cinema_Zephyris"
-
-
 	}

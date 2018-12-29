@@ -91,7 +91,6 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Drama", "Player"
-	 "MinCulture", "100", "Player"
     }
 graphic	= "b.amphitheater"
 graphic_alt	= "b.colosseum"
@@ -105,7 +104,7 @@ sound		= "b_colosseum"
 sound_alt	= "b_generic"
 helptext	= _("\
 Entertains the citizens of a city, adding 3 luxury points. \
- (only 2 after the discovery of Cinematography.) 
+(but only 2 after the discovery of Cinematography.) 
 ")
 
 [building_city_hall]
@@ -763,6 +762,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Writing", "Player"
+      "MinCulture", "100", "Player"
     }
 graphic	= "b.library"
 graphic_alt	= "-"
@@ -1660,7 +1660,7 @@ sabotage	= 100
 sound		= "b_colosseum"
 sound_alt	= "b_generic"
 helptext	= _("\
-Entertains the citizens of a city, adding 3 luxury points. \
+Entertains the citizens of a city, adding 2 luxury points. \
  (4 after the discovery of Cinematography.) 
 ")
 
@@ -2501,6 +2501,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Yasir was a name of a place, where slaves were bought or sold.\n\
 With this building, cheap slave labor can be obtained and used as workers or migrants.\n\
+Additionally, city where Yasir is located, would get 25% more gold (not valid for Republic or Democracy), but additional unhapinnes would be generated.\n\
 Slavery Abolition wonder builded by owner, or United Nation wonder builded by any player, will obsolete this building.\
 ")
 
