@@ -28,7 +28,7 @@ name = _("Augmented ruleset")
 ;version = ""
 
 ;[tileset]
- preferred="augmented2"
+ preferred="augmentedo"
 
 
 ; Summary of the ruleset
@@ -830,7 +830,7 @@ set =
     { "name", "value"
       "aifill", 10
       "generator", "FRACTAL"
-      "topology", "WRAPX|WRAPY|ISO|HEX"
+      "topology", "WRAPX|WRAPY|HEX"
       "mapsize", "PLAYER"
       "tilesperplayer", 200
       "tinyisles", "ENABLED"

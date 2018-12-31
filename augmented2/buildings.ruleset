@@ -62,7 +62,7 @@ name		= _("Tribe Hut")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "present"
-;      "Building", "City Hall", "City", FALSE
+      "Building", "City Hall", "City", FALSE
     }
 graphic	= "tx.village"
 graphic_alt	= "-"
@@ -127,7 +127,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Town with City Hall pretend to be a city, it have larger radius, \
 (for town size 5 or above).\n\
-Advanced buildings such University, Stock Exchange or Palace, require City Hall. \
+Advanced buildings such University, Stock Exchange or Second Palace, require City Hall. \
 Tribe units can be no more produced, if City Hall was builded! \
 (Tribe units can be produced only when Tribe Hut is present) \
 ")
@@ -996,8 +996,8 @@ flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Carpentry", "Player"
-      "Building", "City Hall", "City"
-;	 "MinCulture", "1", "Player"
+;      "Building", "City Hall", "City"
+	 "MinCulture", "10", "Player"
     }
 graphic	= "b.palace"
 graphic_alt	= "-"
@@ -1036,6 +1036,12 @@ If the capital is in a dangerous location, or a more central capital\
 _("\
 Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Palace is required to build for any centralized government! \
+Start building it before conversion from Tribalism to Despotism or Monarchy. \
+You need some Culture Points, which can be gainded from Temples, or by achievements (conquering other cultures, revealing some unknown islands).\
 ")
 
 [building_ecclesiastical_palace]

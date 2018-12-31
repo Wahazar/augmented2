@@ -26,7 +26,7 @@ sprites =
 		"b.stonehenge", "augmented2/wonders_small/stonehenge_s"
 		"b.yasir", "augmented2/wonders_small/yasir_s"
 		"b.western_wall", "augmented2/wonders_small/western_wall_s"
-		"b.leshan_buddha_statue", "augmented2/wonders_small/Leshan_Buddha_s"
+		"b.leshan_buddha_statue", "augmented2/wonders_small/Leshan_Buddha_Statue_s"
 		"b.angkor_wat", "augmented2/wonders_small/Angkor_Wat_s"
 		"b.kaaba", "augmented2/wonders_small/Kaaba_s"
 		"b.thermal_bath", "augmented2/wonders_small/thermal_bath_s"

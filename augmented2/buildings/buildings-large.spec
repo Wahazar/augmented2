@@ -32,7 +32,6 @@ sprites =
 		"b.mosque", "augmented2/buildings/mosque"
 		"b.shrine_torii", "augmented2/buildings/shrine_torii-David_Shea"
 		"b.monk_monastery", "augmented2/buildings/monk_monastery_3dman_eu"
-		"b.monk_monastery", "augmented2/buildings/monk_monastery_3dman_eu"
 		"b.amphitheater", "augmented2/buildings/amphitheater"
 		"b.theatre", "augmented2/buildings/cinema_Zephyris"
 	}

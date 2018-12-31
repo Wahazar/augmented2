@@ -4,7 +4,8 @@ Augmented2 Ruleset for Freeciv v2.6
 
 2.6.4
 Added effects to Yasir, Amphitheater, Theatre.
-Buildings/Wonders Sprites for owerhead tileset.
+Buildings/Wonders/Units Sprites for owerhead tileset.
+Default tileset/geometry changed to HEX no ISO
 
 2.6.3
 Additional advance path for entertainment.
