@@ -524,9 +524,8 @@ Under a Ancient Republican government, citizens hold an election to select a\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Celebrating cities produce a further trade point for every worked tile\
- (land or water) which is already producing trade. (Cities below size 3\
- will not celebrate.)\n\
+* Celebrating cities with size 4 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
 * Each city can support 1 unit for free; further units each cost\
  1 shield per turn (more than 4, also gold).\n\
 * Each city tolerates two aggressively deployed military units;\
@@ -561,9 +560,8 @@ Under Direct Democracy, citizens govern directly by voting on issues.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Celebrating cities produce a further trade point for every worked tile\
- (land or water) which is already producing trade. (Cities below size 3\
- will not celebrate.)\n\
+* Celebrating cities with size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
 * Each city can support 1 unit for free; further units each cost\
  double gold (more than 3, also shields).\n\
 * Each city tolerates a single aggressively deployed military unit;\

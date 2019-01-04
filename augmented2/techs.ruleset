@@ -192,7 +192,8 @@ req2     = "Machine Tools"
 flags    = ""
 graphic     = "a.automobile"
 graphic_alt = "-"
-helptext = _("TIP: Enables more trade routes.")
+helptext = _("TIP: Enables more trade routes."),
+_("Makes it possible for Engineers to transform terrains.")
 cost     = 580
 
 [advance_banking]
@@ -315,6 +316,7 @@ cost     = 100
 name     = _("Christianity")
 req1     = "Monotheism"
 req2     = "First Republic"
+root_req = "Monotheism"
 flags    = ""
 graphic     = "a.christianity"
 graphic_alt = "-"
@@ -650,8 +652,7 @@ req2     = "Superconductors"
 flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
-helptext = _("Makes it possible for Engineers to transform terrains.")
-cost     = 1870
+cost     = 1970
 
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
@@ -762,6 +763,7 @@ cost     = 30
 name     = _("Islam")
 req1     = "Desert Code"
 req2     = "Monotheism"
+root_req = "Monotheism"
 flags    = ""
 graphic     = "a.islam"
 graphic_alt = "-"
@@ -987,6 +989,7 @@ req2     = "Absolutism"
 flags    = ""
 graphic     = "a.monotheism"
 graphic_alt = "-"
+helptext = _("TIP: Disables Rapture Growth.")
 cost     = 90
 
 [advance_mysticism]

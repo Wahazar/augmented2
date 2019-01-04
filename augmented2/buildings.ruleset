@@ -91,6 +91,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Drama", "Player"
+      "MinCulture", "200", "Player"
     }
 graphic	= "b.amphitheater"
 graphic_alt	= "b.colosseum"
@@ -1653,7 +1654,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Modern Theatre", "Player"
-	 "MinCulture", "400", "Player"
+	 "MinCulture", "500", "Player"
     }
 graphic	= "b.theatre"
 graphic_alt	= "b.colosseum"

@@ -2268,10 +2268,28 @@ reqs    =
 ;      "Gov", "Federation", "Player", FALSE, FALSE
 ;      "Gov", "Republic", "Player", FALSE, FALSE
 ;      "Gov", "Democracy", "Player", FALSE, FALSE
-;      "Gov", "First Republic", "Player", FALSE
+      "Gov", "First Republic", "Player", FALSE
 ;      "Gov", "Thalassocracy", "Player", FALSE
-;      "Gov", "Direct Democracy", "Player", FALSE
+      "Gov", "Direct Democracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
+    }
+
+[effect_rapture_grow_0]
+type    = "Rapture_Grow"
+value   = 4
+reqs	=
+    { "type", "name", "range", "present"
+      "Gov", "First Republic", "Player", TRUE
+      "Tech", "Monotheism", "Player", FALSE
+    }
+
+[effect_rapture_grow_1]
+type    = "Rapture_Grow"
+value   = 3
+reqs	=
+    { "type", "name", "range", "present"
+      "Gov", "Direct Democracy", "Player", TRUE
+      "Tech", "Monotheism", "Player", FALSE
     }
 
 [effect_content_tribal]
@@ -5222,8 +5240,9 @@ reqs    =
 type    = "Mining_Pct"
 value   = 100
 reqs    =
-    { "type", "name", "range"
-      "Extra", "Mine", "Local"
+    { "type", "name", "range", "present"
+;      "Terrain", "Desert", "Local", FALSE
+      "Extra", "Mine", "Local", TRUE
     }
 
 [effect_oil_well]
@@ -5326,7 +5345,18 @@ type    = "Irrig_Possible"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "Terrain", "Forest", "Adjacent", TRUE
+      "Terrain", "Swamp", "Adjacent", TRUE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Trireme", "Local", FALSE
+      "Tech", "Agricultural Farming", "Player", TRUE
+    }
+
+[effect_irrigate_src_oasis]
+type    = "Irrig_Possible"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Resource", "Oasis", "Local", TRUE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Trireme", "Local", FALSE
       "Tech", "Agricultural Farming", "Player", TRUE
@@ -5414,7 +5444,7 @@ type    = "Transform_Possible"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "Tech", "Fusion Power", "Player", TRUE
+      "Tech", "Combustion", "Player", TRUE
       "UnitFlag", "Transform", "Local", TRUE
       "UnitClass", "Trireme", "Local", FALSE
     }
@@ -5499,7 +5529,6 @@ reqs    =
     { "type", "name", "range"
       "Building", "Eiffel Tower", "Player"
       "Building", "Railway Station", "City"
-      "Tech", "Electricity", "Player"
     }
 
 ;[effect_highways_radius]
@@ -5512,14 +5541,13 @@ reqs    =
 ;      "Building", "Airport", "City", FALSE
 ;    }
 
-[effect_airport_radius]
+[effect_mass_transit_radius]
 type    = "City_Radius_Sq"
 value	= 5
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Airport", "City", TRUE
       "Building", "Mass Transit", "City", TRUE
-      "Tech", "Combustion", "Player", TRUE
+      "Building", "Railway Station", "City", TRUE
       "Building", "Eiffel Tower", "Player", FALSE
     }
 
@@ -5559,6 +5587,7 @@ value	= 7
 reqs    =
     { "type", "name", "range"
       "Building", "Eiffel Tower", "City"
+      "Tech", "Electricity", "Player"
     }
 
 ; Vision benefit from Satellite System
@@ -6095,8 +6124,8 @@ reqs    =
     }
 
 [effect_cement_plant_production_mountains]
-type    = "Mining_Pct"
-value   = 100
+type    = "Output_Inc_Tile"
+value   = 2
 reqs    =
     { "type", "name", "range"
       "Building", "Cement Plant", "City"
@@ -6129,6 +6158,7 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
+; additional shields from desert mine (but not oil well) with Cement Plant
 [effect_cement_plant_production_desert]
 type    = "Output_Inc_Tile"
 value   = 2
@@ -6138,10 +6168,11 @@ reqs    =
       "Extra", "Mine", "Local", TRUE
       "Terrain", "Desert", "Local", TRUE
       "Resource", "Oil", "Local", FALSE
+      "Extra", "Oil Well", "Local", FALSE
       "Resource", "Oasis", "Local", FALSE
       "Extra", "Railroad", "Local", TRUE
       "Building", "Railway Station", "City", TRUE
-      "OutputType", "Shield", "Local"
+      "OutputType", "Shield", "Local", TRUE
     }
 
 [effect_cement_plant_pollution]
@@ -6295,14 +6326,15 @@ reqs    =
     }
 
 [effect_manufacture_desert_mine]
-type    = "Mining_Pct"
-value   = 50
+type    = "Output_Inc_Tile"
+value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Resource", "Oil", "Local", FALSE
       "Resource", "Oasis", "Local", FALSE
       "Building", "Manufacture", "City", TRUE
       "Extra", "Mine", "Local", TRUE
+      "Extra", "Oil Well", "Local", FALSE
       "Terrain", "Desert", "Local", TRUE
     }
 

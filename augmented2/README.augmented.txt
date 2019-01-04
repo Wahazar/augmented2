@@ -89,7 +89,7 @@ TERRAIN:
   unless they have an Oasis; this simulates a growth boost like Nile
   floods.
 
-- Mountains give extra vision range. Cities can not be placed over
+- Mountains give extra vision range for small reconnaissance units. Cities can not be placed over
   Mountains. Regular military units can't go into unroaded mountains, except of spec-ops units.
 
 - Mines+Railroads in mountains and deserts give extra Shield production, if Cement Plant and Railroad Station is builded in city. 
@@ -123,7 +123,22 @@ and Recycling allow to irrigate without any restrictions.
 
 - Making mines possible with Bronze Working tech.
 
-- Tile transform is possible when Fusion tech is known (with some earlier exception for barges).
+- Tile transform is possible when Combustion tech is known (with some earlier exception for steam barge).
+
+- Terrain transformation pattern -
+transfOrm:
+Mountains -> Hills -> Plains - > Grassland -> Swamp <-> Lake
+Jungle -> Forest -> Tundra -> Desert -> Plains
+Glacier -> Lake
+Irrigate:
+Forest -> Grasslands
+Jungle -> Swamp
+Swamp -> Grassland
+Mining:
+Forest -> Plains
+Grassland -> Forest
+Plains -> Desert
+Swamp -> Jungle
 
 TILE      F/P/T  IRRIG(t)   MINE(t)    ROAD   MAX1   MAX2   TRANSFORM
 Deep      1/0/2  NO         NO         NO     2/0/2  2/1/2  No
@@ -413,7 +428,7 @@ Necessary to gain additional bonuses from Railroad tiles.
 Default shield bonus from any railroad decreased to 25%, but railroad together with Railway Station 
 yield additional output from some special resources or from mines (together with Steel Mill, Cement Plant or Coal Plant). 
 Instant hp regen of train class units.
-Increased city radius size.
+Increased city radius size with Eiffel Tower or Mass Transit.
 
 Oil Refinery
 100% tile production bonus from desert Oil Wells, trade points from Oil Wells on oil field,
@@ -442,16 +457,14 @@ Initial city workable square radius 1.
 Radius of workable area will grow with:
 city size 2 (rect. topo.)
 City Hall
-Railway Station (with Electricity) or Eiffel Tower.
-Super Highways (with Combustion)
-Airport (with Electricity and Combustion)
+Railway Station with
+Eiffel Tower or Mass Transit
 
 Initial city vision square radius 8.
 City vision area will grow with:
 city size 3 with Courthouse,
-occupied city with -
-City Walls
-Airport (with Electricity)
+occupied city with City Walls
+Airport or Eiffel Tower (with Electricity)
 
 WONDERS:
 --------
