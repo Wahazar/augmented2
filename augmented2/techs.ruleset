@@ -77,7 +77,7 @@ req2     = "Carpentry"
 flags    = ""
 graphic     = "a.absolutism"
 graphic_alt = "-"
-cost     = 8
+cost     = 18
  
 [advance_advanced_flight]
 name     = _("Advanced Flight")
@@ -99,7 +99,7 @@ graphic_alt = "-"
 helptext = _("\
 Allows irrigation if tile adjacent to fresh water (river, lake, swamp or other irrigation).\
 ")
-cost     = 6
+cost     = 12
 
 [advance_alchemy]
 name     = _("Alchemy")
@@ -244,7 +244,7 @@ graphic_alt = "-"
 helptext = _("\
 Allows making mines.\
 ")
-cost     = 15
+cost     = 18
 
 [advance_buddhism]
 name     = _("Buddhism")
@@ -338,7 +338,7 @@ req2     = "Absolutism"
 flags    = ""
 graphic     = "a.code_of_laws"
 graphic_alt = "-"
-cost     = 20
+cost     = 25
 
 [advance_combined_arms]
 name     = _("Combined Arms")
@@ -434,7 +434,7 @@ req2     = "Alphabet"
 flags    = ""
 graphic     = "a.currency"
 graphic_alt = "-"
-cost     = 20
+cost     = 30
 
 [advance_creative_art]
 name     = _("Creative Art")
@@ -462,7 +462,7 @@ req2     = "Feudalism"
 flags    = ""
 graphic     = "a.desert_code"
 graphic_alt = "-"
-cost     = 100
+cost     = 110
 
 [advance_direct_democracy]
 name     = _("Direct Democracy")
@@ -767,7 +767,7 @@ root_req = "Monotheism"
 flags    = ""
 graphic     = "a.islam"
 graphic_alt = "-"
-cost     = 130
+cost     = 150
 
 [advance_jet_propulsion]
 name     = _("Jet Propulsion")
@@ -1000,7 +1000,7 @@ flags    = ""
 graphic     = "a.mysticism"
 graphic_alt = "-"
 helptext = _("Improves the effect of Temples.")
-cost     = 20
+cost     = 30
 
 [advance_nanotechnology]
 name     = _("Nanotechnology")
@@ -1070,7 +1070,7 @@ req2     = "Pottery"
 flags    = ""
 graphic     = "a.pastoralism"
 graphic_alt = "-"
-cost     = 15
+cost     = 18
 
 [advance_philosophy]
 name     = _("Philosophy")
@@ -1335,7 +1335,7 @@ req2     = "Trade"
 flags    = ""
 graphic     = "a.desert_code"
 graphic_alt = "-"
-cost     = 60
+cost     = 80
 
 [advance_socialism]
 name     = _("Socialism")
@@ -1493,8 +1493,8 @@ req2     = "Christianity"
 flags    = ""
 graphic     = "a.theology"
 graphic_alt = "-"
-helptext = _("Improves the effect of Cathedrals.")
-cost     = 150
+helptext = _("Improves the effect of Churches.")
+cost     = 160
 
 [advance_theory_of_gravity]
 name     = _("Theory of Gravity")

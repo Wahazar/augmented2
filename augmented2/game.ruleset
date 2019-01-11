@@ -757,7 +757,7 @@ cons_msg       = _("One of your cities has reached population 80!")
 settings =
   { "type",       "pct", "cancelling", "bonus"
     "National",   0,     "Cancel",     "None"
-    "NationalIC", 0,     "Cancel",     "None"
+    "NationalIC", 25,     "Cancel",    "None"
     "IN",         50,   "Cancel",     "None"
     "INIC",       100,   "Cancel",     "None"
     "Ally",       25,   "Cancel",     "None"

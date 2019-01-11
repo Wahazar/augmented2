@@ -2,6 +2,10 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.6
+Temple add culture points.
+Adjustd tech costs.
+
 2.6.5
 Fixed swamp irrig.
 Reworked tile transform path.

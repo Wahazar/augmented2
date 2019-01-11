@@ -429,9 +429,9 @@ sound_alt	= "b_generic"
 helptext	= _("\
 A Cathedral makes 3 unhappy citizens content in a city, making it \
 easier to maintain order in that city; however, it does not affect \
-citizens made unhappy by aggression. Knowledge of Theology \
-increases the effect of a Cathedral, making an additional unhappy \
-citizen content, except under Communism.\
+citizens made unhappy by aggression.\
+With J.S. Bach's Cathedral, additional citizen is made content\
+(except of Communism).
 ")
 
 [building_cement_plant]
@@ -487,8 +487,9 @@ sabotage	= 100
 sound		= "b_temple"
 sound_alt	= "b_generic"
 helptext	= _("\
-Makes 2 unhappy citizens content. With J.S. Bach's Cathedral, 3 citizens are made content\
-(except of Communism). Does not affect citizens made unhappy by aggression.\
+Makes 2 unhappy citizens content. Does not affect citizens made unhappy by aggression.\
+Knowledge of Theology increases the effect of a Cathedral, making an additional unhappy \
+citizen content, except under Communism.
 ")
 
 [building_city_walls]

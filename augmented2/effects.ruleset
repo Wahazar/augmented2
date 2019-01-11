@@ -2966,22 +2966,22 @@ reqs    =
       "Building", "Cathedral", "City"
     }
 
+[effect_js_bachs_cathedral_1]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "J.S. Bach's Cathedral", "Player", TRUE
+      "Building", "Cathedral", "City", TRUE
+      "Gov", "Communism", "Player", FALSE
+    }
+
 [effect_cathedral_culture]
 type    = "History"
 value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Cathedral", "City"
-    }
-
-[effect_cathedral_1]
-type    = "Make_Content"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Tech", "Theology", "Player", TRUE
-      "Building", "Cathedral", "City", TRUE
-      "Gov", "Communism", "Player", FALSE
     }
 
 ; Every Land except Train
@@ -4091,13 +4091,13 @@ reqs    =
       "Gov", "Communism", "Player", FALSE
     }
 
-;[effect_temple_culture]
-;type    = "History"
-;value	= 1
-;reqs	=
-;    { "type", "name", "range"
-;      "Building", "Temple", "City"
-;    }
+[effect_temple_culture]
+type    = "History"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Temple", "City"
+    }
 
 [effect_university]
 type    = "Output_Bonus"
@@ -6706,16 +6706,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "J.S. Bach's Cathedral", "Player", TRUE
-    }
 
-[effect_js_bachs_cathedral_church]
-type    = "Make_Content"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "J.S. Bach's Cathedral", "Player", TRUE
-      "Building", "Church", "City", TRUE
-      "Gov", "Communism", "Player", FALSE
     }
 
 [effect_church]
@@ -6724,6 +6715,16 @@ value   = 2
 reqs    =
     { "type", "name", "range"
       "Building", "Church", "City"
+    }
+
+[effect_church_1]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Tech", "Theology", "Player", TRUE
+      "Building", "Church", "City", TRUE
+      "Gov", "Communism", "Player", FALSE
     }
 
 [effect_church_culture]
