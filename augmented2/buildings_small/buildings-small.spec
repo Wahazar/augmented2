@@ -29,4 +29,22 @@ sprites =
 		"b.monk_monastery", "augmented2/buildings_small/monk_monastery_s"
 		"b.amphitheater", "augmented2/buildings_small/amphitheaters"
 		"b.theatre", "augmented2/buildings_small/theatres"
+		"b.infantry_barracks1", "augmented2/buildings_small/infantry_barracks1"
+		"b.infantry_barracks2", "augmented2/buildings_small/infantry_barracks2"
+		"b.stables_barracks", "augmented2/buildings_small/stables_barracks"
 	}
+
+[file]
+gfx = "misc/buildings"
+
+[grid_imprvm]
+
+x_top_left = 0
+y_top_left = 0
+dx = 36
+dy = 20
+pixel_border = 1
+
+tiles = { "row", "column", "tag"
+  0,  1, "b.workshop_barracks"
+}

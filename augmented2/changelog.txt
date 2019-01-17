@@ -3,8 +3,12 @@ Augmented2 Ruleset for Freeciv v2.6
 =================================
 
 2.6.6
+ISO HEX tilesets with amplio and small version
+Reworked Land unit class, splitted to Infantry, Light Cavalry, Heavy Cavalry
+Separate barracks for infantry/firearms infantry and cavalry/tanks.
+Cheaper unit production, higher shield upkeep.
 Temple add culture points.
-Adjustd tech costs.
+Adjusted tech costs.
 
 2.6.5
 Fixed swamp irrig.

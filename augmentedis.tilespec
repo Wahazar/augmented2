@@ -5,28 +5,28 @@
 options = "+Freeciv-2.6-tilespec"
 
 ; A simple name for the tileset specified by this file:
-name = "augmentedo"
-priority = 20
+name = "augmentedis"
+priority = 3
 
 ; There`s no separate versioning in tilesets part of main freeciv distribution
 ;version = ""
 
 ; Summary and full description of the tileset.
-summary = _("Small overhead hex tiles for augmented2 modpack")
+summary = _("Isometric small hex tiles for augmented2 modpack.")
 ;description = ""
 
 ; TODO: add more overall information fields on tiles, 
 ; eg, authors, colors, etc.
 
 ; Basic tile sizes:
-normal_tile_width  = 40
-normal_tile_height = 72
+normal_tile_width  = 64
+normal_tile_height = 32
 small_tile_width   = 15
 small_tile_height  = 20
 
 ; Basic tile style.
-type = "overhead"
-hex_side = 24
+type = "isometric"
+hex_side = 16
 is_hex = TRUE
 
 ; Use old iso style
@@ -36,20 +36,20 @@ fog_style      = "Auto"
 darkness_style = "CardinalSingle"
 ; Which terrain layer darkness is drawn top of (0-2)
 darkness_layer = 0
-
+ 
 ; offset the flags by this amount when drawing units
-unit_flag_offset_x = 1
-unit_flag_offset_y = 23
-city_flag_offset_x = 1
-city_flag_offset_y = 25
+unit_flag_offset_x = 17
+unit_flag_offset_y = 11
+city_flag_offset_x = 17
+city_flag_offset_y = 11
 
 ; offset the city occupied sprite by this amount
 occupied_offset_x = 0
 occupied_offset_y = 0
 
-; offset units by this amount
-unit_offset_x = 4
-unit_offset_y = 21
+; offset the units by this amount
+unit_offset_x = 21
+unit_offset_y = 13
 
 ; offset of the normal activity icons
 activity_offset_x = 0
@@ -60,10 +60,10 @@ city_offset_x = 0
 city_offset_y = 0
 
 ; offset the city bar text by this amount (from the city tile origin)
-citybar_offset_y = 48
+citybar_offset_y = 20
 
 ; offset the tile label text by this amount
-tilelabel_offset_y = 28
+tilelabel_offset_y = 10
 
 ; offset the upkeep icons by this amount from the top of the unit itself.
 ; The default is the normal tile height, which means that the upkeep icons
@@ -94,18 +94,20 @@ minimap_intro_file = "misc/radar"
 files =
   "misc/overlays.spec",
   "misc/citybar.spec",
-  "hex2t/tiles.spec",
-  "hex2t/unitcost.spec",
-  "hex2t/overlays.spec",
-  "trident/units.spec",
-  "hex2t/select.spec",
-  "hex2t/items.spec",
-  "hex2t/grid.spec",
+  "isophex/terrain1.spec",
+  "isophex/terrain2.spec",
+  "isophex/darkness.spec",
+  "isotrident/tiles.spec",
+  "isotrident/unitcost.spec",
+  "isophex/grid.spec",
+  "isophex/rivers.spec",
   "misc/small.spec",
   "misc/events.spec",
   "misc/governments.spec",
   "misc/specialists.spec",
   "misc/buildings.spec",
+  "trident/units.spec",
+  "isotrident/unitextras.spec",
   "misc/flags.spec",
   "misc/shields.spec",
   "misc/cursors.spec",
@@ -114,11 +116,14 @@ files =
   "misc/treaty.spec",
   "misc/icons.spec",
   "misc/editor.spec",
-  "amplio2/nuke.spec",
-  "augmented2/overhead_units/units.spec",
+  "isotrident/nuke.spec",
+  "isotrident/cities.spec",
+  "isotrident/morecities.spec",
+  "augmented2/small_units/units.spec",
   "augmented2/buildings_small/buildings-small.spec",
   "augmented2/wonders_small/wonders-small.spec",
-  "augmented2/misc/governments.spec"
+  "augmented2/misc/governments.spec",
+  "augmented2/terrain/terrain-small.spec"
 
 ; Include color definitions
 *include "misc/colors.tilespec"
@@ -126,16 +131,24 @@ files =
 ; Terrain info - see README.graphics
 
 [layer0]
-match_types = "water", "land"
+match_types = "land", "water"
 
 [layer1]
-match_types = "forest", "jungle", "steep"
+match_types = "forest", "hills", "mountains", "ridge", "trench"
 
 ; Water graphics referenced by terrain.ruleset
 ;
+[tile_lake]
+tag = "lake"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "water"
+layer0_match_with = "water"
+layer0_sprite_type = "corner"
+
 [tile_coast]
 tag = "coast"
-blend_layer = 0
+blend_layer = 1
 num_layers = 1
 layer0_match_type = "water"
 layer0_match_with = "water"
@@ -143,7 +156,7 @@ layer0_sprite_type = "corner"
 
 [tile_floor]
 tag = "floor"
-blend_layer = 0
+blend_layer = 1
 num_layers = 1
 layer0_match_type = "water"
 layer0_match_with = "water"
@@ -188,23 +201,22 @@ tag = "hills"
 blend_layer = 1
 num_layers = 2
 layer0_match_type = "land"
-layer1_match_type = "steep"
-layer1_match_with = "steep"
+layer1_match_type = "hills"
+layer1_match_with = "hills"
 
 [tile_jungle]
 tag = "jungle"
 blend_layer = 1
-num_layers = 2
+num_layers = 1
 layer0_match_type = "land"
-layer1_match_type = "jungle"
 
 [tile_mountains]
 tag = "mountains"
 blend_layer = 1
 num_layers = 2
 layer0_match_type = "land"
-layer1_match_type = "steep"
-layer1_match_with = "steep"
+layer1_match_type = "mountains"
+layer1_match_with = "mountains"
 
 [tile_plains]
 tag = "plains"

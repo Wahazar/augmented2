@@ -193,4 +193,11 @@ sprites =
 		"u.canoes", "augmented2/amplio_units/canoes_a"
 		"u.swordsmen", "augmented2/amplio_units/swordsmen_a"
 		"u.crusaders_horse", "augmented2/amplio_units/crusaders_horse_a"
+		"u.bicycle_infantry", "augmented2/amplio_units/bicycle_infantry_a"
+		"u.mounted_inf", "augmented2/amplio_units/mounted_inf_a"
+		"u.lancers", "augmented2/amplio_units/lancers_a"
+		"u.dragoon", "augmented2/amplio_units/dragoon_a"
+
+
+
 	}

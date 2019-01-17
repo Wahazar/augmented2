@@ -317,12 +317,14 @@ value   = 25
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "Fortress", "Local", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Turrets", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
       "UnitClass", "Riverboat", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Trireme", "Local", FALSE
@@ -352,7 +354,7 @@ value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "Fort", "Local", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -362,6 +364,8 @@ reqs    =
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
 ;      "UnitClass", "Turrets", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -387,7 +391,9 @@ value   = 10
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "Airstrip", "Local", TRUE
-      "UnitClass", "Land", "Local", FALSE
+      "UnitClass", "Infantry", "Local", FALSE
+      "UnitClass", "Light Cavalry", "Local", FALSE
+      "UnitClass", "Heavy Cavalry", "Local", FALSE
       "UnitClass", "Small Land", "Local", FALSE
       "UnitClass", "Big Land", "Local", FALSE
       "UnitClass", "Wheeled Unit", "Local", FALSE
@@ -414,7 +420,9 @@ value   = 24
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "Airbase", "Local", TRUE
-      "UnitClass", "Land", "Local", FALSE
+      "UnitClass", "Infantry", "Local", FALSE
+      "UnitClass", "Light Cavalry", "Local", FALSE
+      "UnitClass", "Heavy Cavalry", "Local", FALSE
       "UnitClass", "Small Land", "Local", FALSE
       "UnitClass", "Big Land", "Local", FALSE
       "UnitClass", "Wheeled Unit", "Local", FALSE
@@ -438,7 +446,9 @@ value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "Airstrip", "Local", TRUE
-      "UnitClass", "Land", "Local", FALSE
+      "UnitClass", "Infantry", "Local", FALSE
+      "UnitClass", "Light Cavalry", "Local", FALSE
+      "UnitClass", "Heavy Cavalry", "Local", FALSE
       "UnitClass", "Small Land", "Local", FALSE
       "UnitClass", "Big Land", "Local", FALSE
       "UnitClass", "Wheeled Unit", "Local", FALSE
@@ -512,7 +522,9 @@ value   = -1
 reqs    =
     { "type", "name", "range", "present"
       "Terrain", "Mountains", "Local", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -2306,10 +2318,22 @@ value   = 50
 reqs    =
     { "type", "name", "range", "present", "quiet"
       "Gov", "Tribal", "Player", TRUE, TRUE
-      "UnitClass", "Land", "Local", TRUE, FALSE
+      "UnitClass", "Infantry", "Local", TRUE, FALSE
       "UnitFlag", "NonMil", "Local", FALSE, FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE, FALSE
     }
+
+[effect_combat_tribal_lc]
+type    = "Veteran_Combat"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Tribal", "Player", TRUE, TRUE
+      "UnitClass", "Light Cavalry", "Local", TRUE, FALSE
+      "UnitFlag", "NonMil", "Local", FALSE, FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE, FALSE
+    }
+
 
 [effect_revolution_tribal]
 type    = "Revolution_Unhappiness"
@@ -2762,51 +2786,169 @@ reqs    =
 ;      "OutputType", "Luxury", "Local"
 ;    }
 
-[effect_barracks_sl]
+[effect_infantry_barracks1_s]
 type    = "Veteran_Build"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Barracks", "City", TRUE
+      "Building", "Infantry Barracks I", "City", TRUE
       "UnitClass", "Small Land", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
-[effect_barracks_land]
+[effect_infantry_barracks1]
 type    = "Veteran_Build"
 value   = 2
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Barracks", "City", TRUE
-      "UnitClass", "Land", "Local", TRUE
+      "Building", "Infantry Barracks I", "City", TRUE
+      "UnitClass", "Infantry", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
-[effect_barracks_wu]
-type    = "Veteran_Build"
-value   = 2
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks", "City", TRUE
-      "UnitClass", "Wheeled Unit", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-      "Gov", "Despotism", "Player", TRUE
-    }
-
-[effect_barracks_hp]
+[effect_infantry_barracks1_hp]
 type    = "HP_Regen"
 value   = 100
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Barracks", "City", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+      "Building", "Infantry Barracks I", "City", TRUE
+      "UnitClass", "Infantry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+    }
+
+[effect_infantry_barracks2_s]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Infantry Barracks II", "City", TRUE
+      "UnitClass", "Small Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_infantry_barracks2]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Infantry Barracks II", "City", TRUE
+      "UnitClass", "Infantry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_infantry_barracks2_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Infantry Barracks II", "City", TRUE
+      "UnitClass", "Infantry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+    }
+
+[effect_stables_barracks_lc]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Stables Barracks", "City", TRUE
+      "UnitClass", "Light Cavalry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_stables_barracks_hc]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Stables Barracks", "City", TRUE
+      "UnitClass", "Heavy Cavalry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_stables_barracks_hp_lc]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Stables Barracks", "City", TRUE
+      "UnitClass", "Light Cavalry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+    }
+
+[effect_stables_barracks_hp_hc]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Stables Barracks", "City", TRUE
+      "UnitClass", "Heavy Cavalry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+    }
+
+[effect_workshop_barracks_wu]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Workshop Barracks", "City", TRUE
+      "UnitClass", "Wheeled Unit", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_workshop_barracks_bl]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Workshop Barracks", "City", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_workshop_barracks_lc]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Workshop Barracks", "City", TRUE
+      "UnitClass", "Light Cavalry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_workshop_barracks_mi]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Workshop Barracks", "City", TRUE
+      "UnitType", "Mech. Inf.", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_workshop_barracks_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Workshop Barracks", "City", TRUE
+;      "UnitClass", "Infantry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
-      "UnitClass", "Suicidal", "Local", FALSE
+;      "UnitClass", "Suicidal", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
       "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Riverboat", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
@@ -2820,143 +2962,40 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
     }
 
-[effect_barracks_ii]
-type    = "Veteran_Build"
-value   = 2
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks II", "City", TRUE
-      "UnitClass", "Land", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-    }
-
-[effect_barracks_ii_sl]
+[effect_infantry_barracks_ii_sl_DARPA]
 type    = "Veteran_Build"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Barracks II", "City", TRUE
-      "UnitClass", "Small Land", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-    }
-
-[effect_barracks_ii_wu]
-type    = "Veteran_Build"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks II", "City", TRUE
-      "UnitClass", "Wheeled Unit", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-    }
-
-[effect_barracks_ii_hp]
-type    = "HP_Regen"
-value   = 100
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks II", "City", TRUE
-;      "UnitClass", "Land", "Local", FALSE
-;      "UnitClass", "Small Land", "Local", FALSE
-;      "UnitClass", "Big Land", "Local", FALSE
-;      "UnitClass", "Wheeled Unit", "Local", FALSE
-      "UnitClass", "Suicidal", "Local", FALSE
-      "UnitClass", "Turrets", "Local", FALSE
-      "UnitClass", "Riverboat", "Local", FALSE
-      "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
-      "UnitClass", "Helicopter", "Local", FALSE
-      "UnitClass", "Air", "Local", FALSE
-      "UnitClass", "Missile", "Local", FALSE
-      "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
-      "UnitClass", "Train", "Local", FALSE
-      "UnitFlag", "NonMil", "Local", FALSE
-    }
-
-[effect_barracks_iii]
-type    = "Veteran_Build"
-value   = 2
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks III", "City", TRUE
-      "UnitClass", "Land", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-    }
-
-[effect_barracks_iii_sl]
-type    = "Veteran_Build"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks III", "City", TRUE
-      "UnitClass", "Small Land", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-    }
-
-[effect_barracks_iii_sl_DARPA]
-type    = "Veteran_Build"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks III", "City", TRUE
+      "Building", "Infantry Barracks II", "City", TRUE
       "Building", "DARPA", "Player", TRUE
       "UnitClass", "Small Land", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
-[effect_barracks_iii_wu]
-type    = "Veteran_Build"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks III", "City", TRUE
-      "UnitClass", "Wheeled Unit", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-    }
-
-
-[effect_barracks_iii_b]
-type    = "Veteran_Build"
+[effect_saltpeter_barracks]
+type    = "Specialist_Output"
 value   = 2
 reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks III", "City", TRUE
-      "UnitClass", "Big Land", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
+    { "type", "name", "range"
+      "Resource", "Saltpeter", "Local"
+      "Building", "Infantry Barracks II", "City"
+      "OutputType", "Gold", "Local"
     }
 
-[effect_barracks_iii_hp]
-type    = "HP_Regen"
-value   = 100
+[effect_horses_barracks]
+type    = "Specialist_Output"
+value   = 2
 reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Barracks III", "City"
-;      "UnitClass", "Land", "Local", FALSE
-;      "UnitClass", "Small Land", "Local", FALSE
-;      "UnitClass", "Big Land", "Local", FALSE
-;      "UnitClass", "Wheeled Unit", "Local", FALSE
-;      "UnitClass", "Suicidal", "Local", FALSE
-      "UnitClass", "Turrets", "Local", FALSE
-      "UnitClass", "Riverboat", "Local", FALSE
-      "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
-      "UnitClass", "Helicopter", "Local", FALSE
-      "UnitClass", "Air", "Local", FALSE
-      "UnitClass", "Missile", "Local", FALSE
-      "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
-      "UnitClass", "Train", "Local", FALSE
-      "UnitFlag", "NonMil", "Local", FALSE
+    { "type", "name", "range"
+      "Resource", "Horses", "Local"
+      "Building", "Stables Barracks", "City"
+      "OutputType", "Gold", "Local"
     }
+
+
+
 
 [effect_cathedral]
 type    = "Make_Content"
@@ -2991,7 +3030,9 @@ value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "CityTile", "Center", "Local", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -3016,7 +3057,9 @@ reqs    =
     { "type", "name", "range", "present"
       "MinSize", "9", "City", TRUE
       "CityTile", "Center", "Local", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -3041,7 +3084,9 @@ value   = 100
 reqs    =
     { "type", "name", "range", "present"
       "Building", "City Walls", "City", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -4337,7 +4382,9 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Great Wall", "Player", TRUE
       "CityTile", "Center", "Local", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -4370,7 +4417,9 @@ value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "Fortress", "Local", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -4923,7 +4972,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Sun Tzu's War Academy", "Player", TRUE
-      "UnitClass", "Land", "Local", TRUE
+      "UnitClass", "Infantry", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
@@ -4934,7 +4983,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Sun Tzu's War Academy", "Player", TRUE
-      "UnitClass", "Big Land", "Local", TRUE
+      "UnitClass", "Light Cavalry", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
@@ -4956,7 +5005,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Sun Tzu's War Academy", "Player", TRUE
-      "UnitClass", "Wheeled Unit", "Local", TRUE
+      "UnitClass", "Heavy Cavalry", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
@@ -5634,10 +5683,9 @@ value   = 25
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Mobile X-ray", "Player", TRUE
-      "UnitClass", "Land", "Local", TRUE
-      "Building", "Barracks", "Local", FALSE
-      "Building", "Barracks II", "Local", FALSE
-      "Building", "Barracks III", "Local", FALSE
+      "UnitClass", "Infantry", "Local", TRUE
+      "Building", "Infantry Barracks I", "Local", FALSE
+      "Building", "Infantry Barracks II", "Local", FALSE
     }
 
 [effect_base_enemy_unhappiness]
@@ -6553,7 +6601,9 @@ reqs    =
       "Building", "Western Wall", "City", TRUE
       "Building", "Great Wall", "Player", FALSE
       "CityTile", "Center", "Local", TRUE
-;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Infantry", "Local", FALSE
+;      "UnitClass", "Light Cavalry", "Local", FALSE
+;      "UnitClass", "Heavy Cavalry", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE

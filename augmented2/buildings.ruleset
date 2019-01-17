@@ -308,101 +308,131 @@ Increases the tax output in a city by an additional 50%. \
 With both a Bank and a Marketplace in a city, the total bonus is 100%.\
 ")
 
-[building_barracks]
-name		= _("Barracks")
+[building_infantry_barracks1]
+name		= _("Infantry Barracks I")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Leather Tanning", "Player"
     }
-graphic	= "b.barracks_i"
-graphic_alt	= "-"
+graphic	= "b.infantry_barracks1"
+graphic_alt	= "b.barracks_i"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "Gunpowder", "Player"
-      "Building", "Barracks II", "City"
-      "Building", "Barracks III", "City"
+      "Building", "Infantry Barracks II", "City"
     }
-build_cost	= 30
+build_cost	= 25
 upkeep		= 1
 sabotage	= 100
 sound		= "b_barracks_i"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Infantry Barracks, each new Infantry unit built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
+ defense strengths are increased by 50%.  Also, damaged infantry units\
  which stay in town for one full turn without moving are completely\
  restored.\
 "),
 _("\
 New reconnaissance (small land) units will have Recruit status\
-(attack and defense strengths are increased by 25%).  Also, wheeled units such Chariot\
- have already Recruit status under Despotism government.\
+(attack and defense strengths are increased by 25%).  \
 ")
 
-[building_barracks_ii]
-name		= _("Barracks II")
+[building_infantry_barracks2]
+name		= _("Infantry Barracks II")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Gunpowder", "Player"
     }
-graphic	= "b.barracks_ii"
+graphic	= "b.infantry_barracks2"
 graphic_alt	= "b.barracks_i"
 obsolete_by	=
     { "type", "name", "range"
-      "Tech", "Mobile Warfare", "Player"
-      "Building", "Barracks III", "City"
     }
-build_cost	= 30
-upkeep		= 1
+build_cost	= 40
+upkeep		= 2
 sabotage	= 100
 sound		= "b_barracks_ii"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Infantry Barracks II, each new Infantry unit built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
+ defense strengths are increased by 50%.  Also, damaged infantry units\
  which stay in town for one full turn without moving are completely\
  restored.\
 "),
 _("\
-New reconnaissance (small land) units and wheeled units will have Recruit status\
-(attack and defense strengths are increased by 25%)\
+New reconnaissance (small land) units will have Recruit status\
+(attack and defense strengths are increased by 25%).  \
+"),
+_("\
+Saltpetre strategic resources located within range of city with Infantry Barracks II \ 
+give additional 2 gold income (no upkeep).  \
 ")
 
-[building_barracks_iii]
-name		= _("Barracks III")
+
+[building_stables_barracks]
+name		= _("Stables Barracks")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Saddle Stirrup", "Player"
+    }
+graphic	= "b.stables_barracks"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Mobile Warfare", "Player"
+      "Building", "Workshop Barracks", "City"
+    }
+build_cost	= 40
+upkeep		= 2
+sabotage	= 100
+sound		= "b_barracks_ii"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+With a Stables Barracks, each new cavalry unit built in a city will\
+ automatically have Veteran status, which means that its attack and\
+ defense strengths are increased by 50%.  Also, damaged cavalry units\
+ which stay in town for one full turn without moving are completely\
+ restored.\
+"),
+_("\
+Horses strategic resources located within range of city with Stable Barracks \ 
+give additional 2 gold income (no upkeep).  \
+")
+
+
+[building_workshop_barracks]
+name		= _("Workshop Barracks")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Mobile Warfare", "Player"
+      "Building", "Oil Refinery", "City"
     }
-graphic	= "b.barracks_iii"
+graphic	= "b.workshop_barracks"
 graphic_alt	= "b.barracks_i"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 30
-upkeep		= 1
+build_cost	= 60
+upkeep		= 3
 sabotage	= 100
 sound		= "b_barracks_iii"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Workshop Barracks, each motorized or wheeled land unit built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
- which stay in town for one full turn without moving are completely\
+ defense strengths are increased by 50%.  Also, all fast land units, if damaged,\
+ and stay in town for one full turn without moving are completely\
  restored.\
-"),
-_("\
-New reconnaissance (small land) units, wheeled units and big land units\
-will have Recruit status(attack and defense strengths are increased by 25%)\n\
-All these above effects are cumulative with DARPA small wonder.
 ")
 
 [building_cathedral]
@@ -1780,7 +1810,7 @@ sound		= "w_internet"
 sound_alt	= "w_generic"
 helptext	= _("\
 Defense Advanced Research Projects Agency upgrades one obsolete unit per game turn.\n\
-Small Land military units have Veteran level instead of Recruits, if builded in Barracks III.\n\
+Small Land military units have Veteran level instead of Recruits, if builded in Infantry Barracks II.\n\
 DARPA is also required to build Internet.\
 ")
 
@@ -2407,7 +2437,7 @@ sabotage	= 0
 sound		= "w_sun_tzus_war_academy"
 sound_alt	= "w_generic"
 helptext	= _("\
-All your new military land units start with an additional veteran level \
+All your new infantry, cavalry or reconnaissance units start with an additional veteran level \
 (this is cumulative with any Barracks building in a city; with both, units \
 are created as Hardened).\
 ")

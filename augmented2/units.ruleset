@@ -135,9 +135,9 @@ hp_loss_pct   = 0
 hut_behavior  = "Frighten"
 flags         = "Missile", "Unreachable", "DoesntOccupyTile", "Airliftable"
 
-[unitclass_land]
+[unitclass_infantry]
 ; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Land")
+name          = _("?unitclass:Infantry")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
@@ -149,8 +149,26 @@ flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
 name          = _("?unitclass:Small Land")
 min_speed     = 1
 hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere", "CollectRansom",
+flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere", "CollectRansom", "CanPillage",
                 "ZOC", "CanFortify", "TerrainDefense", "DoesntOccupyTile", "Airliftable", "AttackNonNative"
+
+[unitclass_light_cavalry]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Light Cavalry")
+min_speed     = 1
+hp_loss_pct   = 0
+flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
+                "CollectRansom", "ZOC", "CanFortify", "CanPillage",
+                "TerrainDefense", "Airliftable", "AttackNonNative"
+
+[unitclass_heavy_cavalry]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Heavy Cavalry")
+min_speed     = 1
+hp_loss_pct   = 0
+flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
+                "CollectRansom", "ZOC", "CanFortify", "CanPillage",
+                "Airliftable", "AttackNonNative"
 
 [unitclass_land_big]
 ; /* TRANS: Unit class: used adjectivally */
@@ -158,7 +176,7 @@ name          = _("?unitclass:Big Land")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
-                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "Airliftable", "AttackNonNative"
+                "CollectRansom", "ZOC", "CanFortify", "KillCitizen", "Airliftable", "AttackNonNative"
 
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
@@ -538,7 +556,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Cities"
@@ -582,7 +600,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 0
 flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "Unique", "Unbribable", "NoVeteran"
@@ -622,7 +640,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Capturable"
@@ -663,10 +681,10 @@ firepower     = 1
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 1
-cargo         = "Land", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 1
 flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Transform"
@@ -738,42 +756,10 @@ can add 10 shields towards its production. \
 Unlike Caravans, Slaves can't establish trade route.\
 ")
 
-[unit_hunters]
-name          = _("Hunters")
+[unit_militia]
+name          = _("Militia")
 class         = "Small Land"
-tech_req      = "Stone Knapping"
-obsolete_by   = "Archers"
-graphic       = "u.hunters"
-graphic_alt   = "u.warriors"
-sound_move    = "m_warriors"
-sound_move_alt = "m_generic"
-sound_fight   = "f_warriors"
-sound_fight_alt = "f_generic"
-build_cost    = 8
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 6
-firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer", "Only_Native_Attack"
-roles         = "DefendOkStartUnit", "Hunter"
-helptext      = _("\
-This unit emerged from stone age may be built almost from the start of the game.\
-It is the weak offensive unit, can't conquer enemy cities, but have high mobility including mountains.\
-")
-
-[unit_warriors]
-name          = _("Warriors")
-class         = "Land"
-tech_req      = "Warrior Code"
+tech_req      = "Leather Tanning"
 obsolete_by   = "Halberdier"
 graphic       = "u.warriors"
 graphic_alt   = "-"
@@ -799,12 +785,12 @@ flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "FirstBuild"
 helptext      = _("\
 This unit emerged from stone age may be built almost from the start of the game.\
-It is the weak offensive unit, but can be used to conquer enemy cities.\
+It is the weak but cheap defensive unit.\
 ")
 
 [unit_halberdier]
 name          = _("Halberdier")
-class         = "Land"
+class         = "Small Land"
 tech_req      = "Craft Guilds"
 obsolete_by   = "Riot Police"
 graphic       = "u.halberdier"
@@ -824,7 +810,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -836,7 +822,7 @@ or enforcing the martial law.\
 
 [unit_riot_police]
 name          = _("Riot Police")
-class         = "Land"
+class         = "Small Land"
 tech_req      = "The Corporation"
 obsolete_by   = "None"
 graphic       = "u.riot_police"
@@ -856,7 +842,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -864,6 +850,39 @@ roles         = "DefendOkStartUnit", "FirstBuild"
 helptext      = _("\
 Riot Police is relatively weak but cheap unit suitable for enforcing the martial law.\
 ")
+
+[unit_hunters]
+name          = _("Hunters")
+class         = "Small Land"
+tech_req      = "Stone Knapping"
+obsolete_by   = "Archers"
+graphic       = "u.hunters"
+graphic_alt   = "u.warriors"
+sound_move    = "m_warriors"
+sound_move_alt = "m_generic"
+sound_fight   = "f_warriors"
+sound_fight_alt = "f_generic"
+build_cost    = 8
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 5
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Only_Native_Attack", "Bombarder"
+roles         = "DefendOkStartUnit", "Hunter"
+helptext      = _("\
+This unit emerged from stone age may be built almost from the start of the game.\
+It is the weak offensive unit, can throw ranged weapon, like jawelins.\
+")
+bombard_rate = 1
 
 [unit_archers]
 name          = _("Archers")
@@ -880,14 +899,14 @@ build_cost    = 25
 pop_cost      = 0
 attack        = 2
 defense       = 1
-hitpoints     = 5
+hitpoints     = 6
 firepower     = 1
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Bombarder"
@@ -916,13 +935,13 @@ pop_cost      = 0
 attack        = 6
 defense       = 3
 hitpoints     = 10
-firepower     = 1
+firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 flags         = "Capturer", "IgTer", "Bombarder", "Light Shells"
@@ -948,13 +967,13 @@ pop_cost      = 0
 attack        = 9
 defense       = 4
 hitpoints     = 10
-firepower     = 1
+firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 3
 embarks       = "Helicopter"
@@ -969,7 +988,7 @@ bombard_rate = 1
 
 [unit_phalanx]
 name          = _("Phalanx")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Bronze Working"
 obsolete_by   = "Pikemen"
 graphic       = "u.phalanx"
@@ -989,7 +1008,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -1000,7 +1019,7 @@ The Phalanx is armored infantry, suitable for defending your cities.\
 
 [unit_pikemen]
 name          = _("Pikemen")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Feudalism"
 obsolete_by   = "Riflemen"
 graphic       = "u.pikemen"
@@ -1020,7 +1039,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -1036,7 +1055,7 @@ Equipped with long pikes, Pikemen replaces Phalanx\
 
 [unit_musketeers]
 name          = _("Musketeers")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Metallurgy"
 obsolete_by   = "Riflemen"
 graphic       = "u.musketeer"
@@ -1056,7 +1075,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -1070,7 +1089,7 @@ Musketeers are infantry equipped with early\
 
 [unit_riflemen]
 name          = _("Riflemen")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Conscription"
 obsolete_by   = "Infantry"
 graphic       = "u.line_infantry"
@@ -1090,7 +1109,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Light Shells"
@@ -1102,7 +1121,7 @@ defending your cities or frontline.\
 
 [unit_infantry]
 name          = _("Infantry")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Machine Tools"
 obsolete_by   = "Modern Rangers"
 graphic       = "u.mg_infantry"
@@ -1122,7 +1141,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 targets       = "Helicopter"
@@ -1138,7 +1157,7 @@ They can also shoot down helicopters or drones.\
 
 [unit_modern_rangers]
 name          = _("Modern Rangers")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Modern Warfare"
 obsolete_by   = "None"
 graphic       = "u.rpg_infantry"
@@ -1158,7 +1177,7 @@ vision_radius_sq = 6
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 targets       = "Helicopter"
@@ -1177,52 +1196,20 @@ _("\
 They can also shoot down helicopters.\
 ")
 
-[unit_legion]
-name          = _("Legion")
-class         = "Land"
-tech_req      = "Iron Working"
-obsolete_by   = "Swordsmen"
-graphic       = "u.legion"
+[unit_skirmishers]
+name          = _("Skirmishers")
+class         = "Small Land"
+tech_req      = "Warrior Code"
+obsolete_by   = "Halberdier"
+graphic       = "u.warriors"
 graphic_alt   = "-"
-sound_move    = "m_legion"
+sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
-sound_fight   = "f_legion"
+sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 10
 pop_cost      = 0
-attack        = 3
-defense       = 2
-hitpoints     = 15
-firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer", "Only_Native_Attack"
-roles         = "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
-helptext      = _("\
-Legions are heavily armed and well disciplined infantry\
- units with an excellent offensive value.\
-")
-
-[unit_arbalest]
-name          = _("Arbalest")
-class         = "Land"
-tech_req      = "Simple Machines"
-obsolete_by   = "Riflemen"
-graphic       = "u.arbalest"
-graphic_alt   = "u.archers"
-sound_move    = "m_archers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_archers"
-sound_fight_alt = "f_generic"
-build_cost    = 35
-pop_cost      = 0
-attack        = 5
+attack        = 2
 defense       = 1
 hitpoints     = 10
 firepower     = 1
@@ -1234,6 +1221,69 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+flags         = "Capturer", "Only_Native_Attack"
+roles         = "DefendOkStartUnit", "FirstBuild"
+helptext      = _("\
+Skirmishers are first offensive units, they are relative weak but can be used to conquer enemy cities.\
+")
+
+[unit_legion]
+name          = _("Legion")
+class         = "Infantry"
+tech_req      = "Iron Working"
+obsolete_by   = "Swordsmen"
+graphic       = "u.legion"
+graphic_alt   = "-"
+sound_move    = "m_legion"
+sound_move_alt = "m_generic"
+sound_fight   = "f_legion"
+sound_fight_alt = "f_generic"
+build_cost    = 18
+pop_cost      = 0
+attack        = 3
+defense       = 2
+hitpoints     = 14
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Only_Native_Attack"
+roles         = "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
+helptext      = _("\
+Legions are heavily armed and well disciplined infantry\
+ units with an excellent offensive value.\
+")
+
+[unit_arbalest]
+name          = _("Arbalest")
+class         = "Infantry"
+tech_req      = "Simple Machines"
+obsolete_by   = "Riflemen"
+graphic       = "u.arbalest"
+graphic_alt   = "u.archers"
+sound_move    = "m_archers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_archers"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 5
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 1
+uk_gold       = 1
 flags         = "Capturer"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
@@ -1242,7 +1292,7 @@ The Arbalests equipped with powerful crosbows can be used to the range attack on
 
 [unit_swordsmen]
 name          = _("Swordsmen")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Feudalism"
 obsolete_by   = "Arquebusiers"
 graphic       = "u.swordsmen"
@@ -1251,7 +1301,7 @@ sound_move    = "m_legion"
 sound_move_alt = "m_generic"
 sound_fight   = "f_legion"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 25
 pop_cost      = 0
 attack        = 4
 defense       = 2
@@ -1262,7 +1312,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -1274,7 +1324,7 @@ Swordsmen are heavily armed and well disciplined infantry\
 
 [unit_samurai]
 name          = _("Samurai")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Shogunate"
 obsolete_by   = "Grenadier"
 graphic       = "u.samurai"
@@ -1294,7 +1344,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -1305,7 +1355,7 @@ Samurai are excellent trained medieval Japan warriors.\
 
 [unit_arquebusiers]
 name          = _("Arquebusiers")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Gunpowder"
 obsolete_by   = "Grenadier"
 graphic       = "u.arquebusiers"
@@ -1314,7 +1364,7 @@ sound_move    = "m_musketeers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_musketeers"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 30
 pop_cost      = 0
 attack        = 4
 defense       = 2
@@ -1325,7 +1375,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -1338,7 +1388,7 @@ Arquebusiers are infantry equipped with early\
 
 [unit_grenadier]
 name          = _("Grenadier")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Explosives"
 obsolete_by   = "Stormtrooper"
 graphic       = "u.grenadier"
@@ -1347,7 +1397,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 40
 pop_cost      = 0
 attack        = 6
 defense       = 3
@@ -1358,7 +1408,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
@@ -1369,7 +1419,7 @@ Grenadiers are offensive infantry squads, equipped with rifles and grenades.\
 
 [unit_stormtrooper]
 name          = _("Stormtrooper")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Chemical Synthesis"
 obsolete_by   = "Marines"
 graphic       = "u.stormtrooper"
@@ -1378,7 +1428,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 50
 pop_cost      = 0
 attack        = 6
 defense       = 4
@@ -1389,9 +1439,9 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
-uk_gold       = 1
+uk_gold       = 2
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "AttackStrongStartUnit"
 helptext      = _("\
@@ -1400,7 +1450,7 @@ Stormtroopers are offensive infantry squads, equipped with light machine guns an
 
 [unit_marines]
 name          = _("Marines")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Amphibious Warfare"
 obsolete_by   = "Super Soldiers"
 graphic       = "u.marines"
@@ -1409,7 +1459,7 @@ sound_move    = "m_marines"
 sound_move_alt = "m_generic"
 sound_fight   = "f_marines"
 sound_fight_alt = "f_generic"
-build_cost    = 65
+build_cost    = 60
 pop_cost      = 0
 attack        = 8
 defense       = 4
@@ -1420,7 +1470,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 embarks       = "Helicopter"
@@ -1433,7 +1483,7 @@ Marines are infantry who are experts at marine warfare.\
 
 [unit_super_soldiers]
 name          = _("Super Soldiers")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Super Soldiers"
 obsolete_by   = "None"
 graphic       = "u.super_soldiers"
@@ -1442,7 +1492,7 @@ sound_move    = "m_marines"
 sound_move_alt = "m_generic"
 sound_fight   = "f_marines"
 sound_fight_alt = "f_generic"
-build_cost    = 75
+build_cost    = 70
 pop_cost      = 0
 attack        = 9
 defense       = 5
@@ -1453,7 +1503,7 @@ vision_radius_sq = 4
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
 embarks       = "Helicopter"
@@ -1467,7 +1517,7 @@ Their wounds heal quickly in fortress and they have increased vision radius. \
 
 [unit_paratroopers]
 name          = _("Paratroopers")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Combined Arms"
 obsolete_by   = "None"
 graphic       = "u.paratroopers"
@@ -1476,7 +1526,7 @@ sound_move    = "m_paratroopers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_paratroopers"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 55
 pop_cost      = 0
 attack        = 6
 defense       = 5
@@ -1487,7 +1537,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 embarks       = "Helicopter"
@@ -1517,7 +1567,7 @@ sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 15
 pop_cost      = 0
 attack        = 1
 defense       = 1
@@ -1549,7 +1599,7 @@ sound_move    = "m_musketeers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_musketeers"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 20
 pop_cost      = 0
 attack        = 2
 defense       = 1
@@ -1582,7 +1632,7 @@ sound_move    = "m_marines"
 sound_move_alt = "m_generic"
 sound_fight   = "f_marines"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 40
 pop_cost      = 0
 attack        = 8
 defense       = 2
@@ -1593,7 +1643,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 3
 embarks       = "Helicopter"
@@ -1647,7 +1697,7 @@ sound_move    = "m_alpine_troops"
 sound_move_alt = "m_generic"
 sound_fight   = "f_alpine_troops"
 sound_fight_alt = "f_generic"
-build_cost    = 65
+build_cost    = 55
 pop_cost      = 0
 attack        = 7
 defense       = 5
@@ -1658,7 +1708,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 embarks       = "Helicopter"
@@ -1672,7 +1722,7 @@ They can't occupy city though.
 
 [unit_partisan]
 name          = _("Partisan")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Guerilla Warfare"
 obsolete_by   = "None"
 graphic       = "u.partisan"
@@ -1681,7 +1731,7 @@ sound_move    = "m_partisan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_partisan"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 15
 pop_cost      = 1
 attack        = 5
 defense       = 4
@@ -1697,7 +1747,7 @@ uk_food       = 0
 uk_gold       = 0
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer", "Light Shells", "Only_Native_Attack"
+flags         = "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Light Shells", "Only_Native_Attack"
 roles         = "DefendGood", "DefendGoodStartUnit", "Partisan", "BarbarianTech", "HutTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
@@ -1718,7 +1768,7 @@ Only shield upkeep is needed, food and gold upkeep is supported by citiziens.
 
 [unit_fanatics]
 name          = _("Fanatics")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Guerilla Warfare"
 gov_req       = "Fundamentalism"
 obsolete_by   = "None"
@@ -1728,7 +1778,7 @@ sound_move    = "m_fanatics"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fanatics"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 20
 pop_cost      = 0
 attack        = 4
 defense       = 5
@@ -1738,26 +1788,25 @@ move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
-uk_happy      = 0
+uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 0
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Fanatic", "Capturer", "Light Shells"
+flags         = "Fanatic", "Capturer", "Light Shells", "FieldUnit"
 roles         = "DefendGood", "DefendGoodStartUnit", "BarbarianTech", "HutTech"
 helptext      = _("\
 Fanatics are warriors extremely devoted to a higher cause.\
 "), _("\
 Fundamentalist nations can maintain Fanatic units without\
- having to pay gold upkeep nor causing military unhappiness. \
- Instead, each unit reduces the population by 1.\
+ having to pay gold upkeep, but instead it can cause military unhappiness. \
 ")
 
 
 [unit_janissaries]
 name          = _("Janissaries")
-class         = "Land"
+class         = "Infantry"
 tech_req      = "Leadership"
 gov_req       = "Fundamentalism"
 obsolete_by   = "Fanatics"
@@ -1767,7 +1816,7 @@ sound_move    = "m_fanatics"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fanatics"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 30
 pop_cost      = 0
 attack        = 4
 defense       = 4
@@ -1778,7 +1827,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Light Shells"
@@ -1810,69 +1859,36 @@ vision_radius_sq = 2
 transport_cap = 1
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 1
 cargo         = "Small Land"
-flags         = "CityBuster", "NoVeteran", "Only_Native_Attack"
+flags         = "CityBuster", "NoVeteran", "Only_Native_Attack", "FieldUnit"
 roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianBuildTech"
 helptext      = _("\
 Improvised vehicle driven by fanatics, ready to sacrifice their lives for a higher cause.\n\
-Huge amount of explosive materials would end their life and attacked infidels.
+Huge amount of explosive materials would end their life and maybe life of attacked infidels.
 "), _("\
 Fundamentalist nations can maintain Technical units without\
- having to pay only little shield/gold upkeep. \n \
+ having to pay only little shield/gold upkeep, but may cause military unhapiness. \n \
 These units have no veterancy levels though.
 ")
 
 
 ;todo: sikh
 
-[unit_horsemen]
-name          = _("Horsemen")
-class         = "Land"
-tech_req      = "Horseback Riding"
-obsolete_by   = "Knights"
-graphic       = "u.horsemen"
-graphic_alt   = "-"
-sound_move    = "m_horsemen"
-sound_move_alt = "m_generic"
-sound_fight   = "f_horsemen"
-sound_fight_alt = "f_generic"
-build_cost    = 18
-pop_cost      = 0
-attack        = 2
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
-roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
-helptext      = _("\
-Horsemen are mounted warriors and an early\
- shock-troop that can penetrate deep into\
- enemy territory.\
-")
-
 [unit_mounted_archery]
 name          = _("Mounted Archery")
-class         = "Land"
+class         = "Light Cavalry"
 tech_req      = "Saddle Stirrup"
-obsolete_by   = "Dragoons"
+obsolete_by   = "Lancers"
 graphic       = "u.mounted_archery"
 graphic_alt   = "u.horsemen"
 sound_move    = "m_horsemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_archers"
 sound_fight_alt = "f_generic"
-build_cost    = 25
+build_cost    = 18
 pop_cost      = 0
 attack        = 3
 defense       = 1
@@ -1883,8 +1899,8 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
+uk_shield     = 2
+uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse"
 roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
@@ -1893,79 +1909,11 @@ Archery Horsemen are shock-troop,\
  which can shoot arrows against enemy units hidden in hardly accessible terrain.\
 ")
 
-[unit_chariot]
-name          = _("Chariot")
-class         = "Wheeled Unit"
-tech_req      = "The Wheel"
-obsolete_by   = "Knights"
-graphic       = "u.chariot"
-graphic_alt   = "-"
-sound_move    = "m_chariot"
-sound_move_alt = "m_generic"
-sound_fight   = "f_chariot"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 4
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 2
-flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
-roles         = "AttackFastStartUnit"
-helptext      = _("\
-Chariots are horse-pulled war wagons. They have a stronger attack than \
-Horsemen, but their speed comes at a cost: they are more expensive \
-to build, they cannot take advantage of terrain to defend themselves, \
-they cannot move without roads, and they cannot be transported by sea using early ships \
-(Triremes, Aaks and Caravels).\
-")
-
-[unit_elephants]
-name          = _("Elephants")
-class         = "Big Land"
-tech_req      = "Hinduism"
-obsolete_by   = "Dragoons"
-graphic       = "u.elephants"
-graphic_alt   = "u.chariot"
-sound_move    = "m_elephants"
-sound_move_alt = "m_generic"
-sound_fight   = "f_elephants"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 3
-defense       = 2
-hitpoints     = 20
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 3
-uk_gold       = 1
-flags         = "Capturer", "Only_Native_Attack", "BadWallAttacker"
-roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
-helptext      = _("\
-Elephants are towering animals trained for war that are often used as\
- powerful shock troops, even against pikemen.\n\
-They mobility is restricted and it is not possible to train them in barracks.
-")
-
 [unit_dromedari]
 name          = _("Dromedari")
-class         = "Land"
+class         = "Light Cavalry"
 tech_req      = "Desert Code"
-obsolete_by   = "Dragoons"
+obsolete_by   = "Lancers"
 graphic       = "u.dromedari"
 graphic_alt   = "u.horsemen"
 sound_move    = "m_horsemen"
@@ -1983,8 +1931,8 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
+uk_shield     = 1
+uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
 roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
@@ -1992,10 +1940,179 @@ helptext      = _("\
 Dromedari are desert brave wariors, mounted on camels.\
 ")
 
+[unit_lancers]
+name          = _("Lancers")
+class         = "Light Cavalry"
+tech_req      = "Tactics"
+obsolete_by   = "Bicycle Infantry"
+graphic       = "u.lancers"
+graphic_alt   = "u.dragoons"
+sound_move    = "m_horsemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_archers"
+sound_fight_alt = "f_generic"
+build_cost    = 35
+pop_cost      = 0
+attack        = 5
+defense       = 3
+hitpoints     = 10
+firepower     = 2
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 2
+uk_gold       = 1
+flags         = "Capturer", "Horse"
+roles         = "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Lancers are shock-troop cavalrymen who fight with a lances as well as with short firearms.\
+")
+
+[unit_bicycle_infantry]
+name          = _("Bicycle Infantry")
+class         = "Light Cavalry"
+tech_req      = "Automobile"
+obsolete_by   = "None"
+graphic       = "u.bicycle_infantry"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 5
+defense       = 4
+hitpoints     = 10
+firepower     = 2
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 2
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Bicycle infantry are fast scouting units.\
+")
+
+[unit_horsemen]
+name          = _("Horsemen")
+class         = "Heavy Cavalry"
+tech_req      = "Horseback Riding"
+obsolete_by   = "Knights"
+graphic       = "u.horsemen"
+graphic_alt   = "-"
+sound_move    = "m_horsemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_horsemen"
+sound_fight_alt = "f_generic"
+build_cost    = 12
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 12
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 2
+uk_gold       = 1
+flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
+roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
+helptext      = _("\
+Horsemen are mounted warriors and an early\
+ shock-troop that can penetrate deep into\
+ enemy territory.\
+")
+
+[unit_chariot]
+name          = _("Chariot")
+class         = "Heavy Cavalry"
+tech_req      = "The Wheel"
+obsolete_by   = "Knights"
+graphic       = "u.chariot"
+graphic_alt   = "-"
+sound_move    = "m_chariot"
+sound_move_alt = "m_generic"
+sound_fight   = "f_chariot"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 4
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 2
+uk_gold       = 1
+flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
+roles         = "AttackFastStartUnit"
+helptext      = _("\
+Chariots are horse-pulled war wagons. They have a stronger attack than \
+Horsemen, but their speed comes at a cost: they are more expensive \
+to build, they cannot take advantage of terrain to defend themselves. \
+"),
+_("\
+This unit cannot move across swamps, glaciers, mountains, \
+and cannot be transported by sea using early ships \
+(Triremes and Aaks).\
+")
+
+[unit_elephants]
+name          = _("Elephants")
+class         = "Heavy Cavalry"
+tech_req      = "Hinduism"
+obsolete_by   = "Dragoons"
+graphic       = "u.elephants"
+graphic_alt   = "u.chariot"
+sound_move    = "m_elephants"
+sound_move_alt = "m_generic"
+sound_fight   = "f_elephants"
+sound_fight_alt = "f_generic"
+build_cost    = 35
+pop_cost      = 0
+attack        = 3
+defense       = 2
+hitpoints     = 20
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 3
+uk_gold       = 1
+flags         = "Capturer", "Only_Native_Attack", "BadWallAttacker"
+roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Elephants are towering animals trained for war that are often used as\
+ powerful shock troops, even against pikemen.\
+"),
+_("\
+This unit cannot move across swamps, glaciers, mountains, \
+and cannot be transported by sea using early ships \
+(Triremes and Aaks).\
+")
 
 [unit_crusaders]
 name          = _("Crusaders")
-class         = "Land"
+class         = "Heavy Cavalry"
 tech_req      = "Theology"
 gov_req       = "Fundamentalism"
 obsolete_by   = "Dragoons"
@@ -2005,18 +2122,18 @@ sound_move    = "m_crusaders"
 sound_move_alt = "m_generic"
 sound_fight   = "f_crusaders"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 25
 pop_cost      = 0
 attack        = 5
 defense       = 1
-hitpoints     = 15
+hitpoints     = 16
 firepower     = 1
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 2
 flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
@@ -2028,27 +2145,27 @@ Crusaders are highly disciplined mounted\
 
 [unit_knights]
 name          = _("Knights")
-class         = "Land"
+class         = "Heavy Cavalry"
 tech_req      = "Chivalry"
-obsolete_by   = "Dragoons"
+obsolete_by   = "Cuirassiers"
 graphic       = "u.knights"
 graphic_alt   = "-"
 sound_move    = "m_knights"
 sound_move_alt = "m_generic"
 sound_fight   = "f_knights"
 sound_fight_alt = "f_generic"
-build_cost    = 45
+build_cost    = 30
 pop_cost      = 0
 attack        = 4
 defense       = 2
-hitpoints     = 15
+hitpoints     = 16
 firepower     = 1
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
@@ -2056,11 +2173,17 @@ roles         = "DefendOkStartUnit", "AttackFastStartUnit",
                 "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Knights are mounted and heavily armored warriors.\
+"),
+_("\
+This unit cannot move across swamps, glaciers, mountains, \
+and cannot be transported by sea using early ships \
+(Triremes and Aaks).\
 ")
+
 
 [unit_mounted_samurai]
 name          = _("Mounted Samurai")
-class         = "Land"
+class         = "Heavy Cavalry"
 tech_req      = "Bushido"
 obsolete_by   = "Dragoons"
 graphic       = "u.mounted_samurai"
@@ -2069,7 +2192,7 @@ sound_move    = "m_knights"
 sound_move_alt = "m_generic"
 sound_fight   = "f_knights"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 35
 pop_cost      = 0
 attack        = 5
 defense       = 3
@@ -2080,7 +2203,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack"
@@ -2088,53 +2211,61 @@ roles         = "DefendOkStartUnit", "AttackFastStartUnit",
                 "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Samurai horsemen, thanks to the Bushido code and supreme martial art, where very effective medieval heavy cavalry.\
+"),
+_("\
+This unit cannot move across swamps, glaciers, mountains, \
+and cannot be transported by sea using early ships \
+(Triremes and Aaks).\
 ")
 
-[unit_dragoons]
-name          = _("Dragoons")
-class         = "Land"
+[unit_cuirassiers]
+name          = _("Cuirassiers")
+class         = "Heavy Cavalry"
 tech_req      = "Leadership"
-obsolete_by   = "Cavalry"
+obsolete_by   = "Dragoons"
 graphic       = "u.dragoons"
 graphic_alt   = "-"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
 sound_fight_alt = "f_generic"
-build_cost    = 55
+build_cost    = 40
 pop_cost      = 0
-attack        = 5
-defense       = 2
-hitpoints     = 12
+attack        = 4
+defense       = 3
+hitpoints     = 14
 firepower     = 2
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Light Shells", "BadWallAttacker"
 roles         = "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
-Dragoons are mounted warriors carrying early firearms.\
+Cuirassiers are heavy cavalry equipped with armour and early firearms.\
+"),
+_("\
+This unit cannot move across swamps, glaciers and mountains.\
 ")
 
-[unit_cavalry]
-name          = _("Cavalry")
-class         = "Land"
+[unit_dragoons]
+name          = _("Dragoons")
+class         = "Heavy Cavalry"
 tech_req      = "Tactics"
-obsolete_by   = "Mech. Inf."
-graphic       = "u.cavalry"
-graphic_alt   = "-"
+obsolete_by   = "Mounted Inf."
+graphic       = "u.dragoon"
+graphic_alt   = "u.cavalry"
 sound_move    = "m_cavalry"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cavalry"
 sound_fight_alt = "f_generic"
-build_cost    = 65
+build_cost    = 50
 pop_cost      = 0
-attack        = 7
+attack        = 6
 defense       = 4
 hitpoints     = 12
 firepower     = 2
@@ -2143,18 +2274,55 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 2
 uk_gold       = 2
 flags         = "Capturer", "Horse", "Light Shells", "BadWallAttacker"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
-Cavalry are mounted and highly trained soldiers.\
+Dragoons are well trained, mounted soldiers.\
+"),
+_("\
+This unit cannot move across swamps, glaciers and mountains.\
+")
+
+[unit_mounted_inf]
+name          = _("Mounted Inf.")
+class         = "Big Land"
+tech_req      = "Machine Tools"
+obsolete_by   = "Mech. Inf."
+graphic       = "u.mounted_inf"
+graphic_alt   = "u.cavalry"
+sound_move    = "m_cavalry"
+sound_move_alt = "m_generic"
+sound_fight   = "f_mech_inf"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 6
+defense       = 5
+hitpoints     = 12
+firepower     = 3
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 2
+uk_gold       = 3
+flags         = "Light Shells", "BadWallAttacker"
+roles         = "DefendGood", "DefendGoodStartUnit", "AttackFastStartUnit"
+helptext      = _("\
+The Mounted Infantry share mobility of cavalry and firepower of machine guns, mounted on 'tachanka'.\
+"),
+_("\
+This unit cannot move across swamps, glaciers and mountains.\
 ")
 
 [unit_mech_inf]
 name          = _("Mech. Inf.")
-class         = "Big Land"
+class         = "Heavy Cavalry"
 tech_req      = "Labor Union"
 obsolete_by   = "None"
 graphic       = "u.mech_inf"
@@ -2163,7 +2331,7 @@ sound_move    = "m_mech_inf"
 sound_move_alt = "m_generic"
 sound_fight   = "f_mech_inf"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 75
 pop_cost      = 0
 attack        = 6
 defense       = 6
@@ -2174,15 +2342,19 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 3
 flags         = "Armor", "Light Shells", "BadWallAttacker"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "AttackFastStartUnit"
 helptext      = _("\
 The Mechanized Infantry has the strongest inherent defensive strength \
 of any fast land unit, and have higher mobility than Armor.\
+"),
+_("\
+This unit cannot move across swamps, glaciers and mountains.\
 ")
+
 
 [unit_armoured_train]
 name          = _("Armoured Train")
@@ -2196,7 +2368,7 @@ sound_move    = "m_freight"
 sound_move_alt = "m_generic"
 sound_fight   = "f_freight"
 sound_fight_alt = "f_generic"
-build_cost    = 120
+build_cost    = 90
 pop_cost      = 0
 attack        = 6
 defense       = 8
@@ -2207,10 +2379,10 @@ vision_radius_sq = 2
 transport_cap = 3
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
-cargo         = "Small Land", "Land", "Turrets"
+cargo         = "Small Land", "Infantry", "Turrets"
 flags         = "BadCityDefender", "Bombarder", "Only_Native_Attack", "BadWallAttacker"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
@@ -2232,7 +2404,7 @@ sound_move    = "m_armor"
 sound_move_alt = "m_generic"
 sound_fight   = "f_armor"
 sound_fight_alt = "f_generic"
-build_cost    = 100
+build_cost    = 80
 pop_cost      = 0
 attack        = 10
 defense       = 5
@@ -2243,7 +2415,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 0
 uk_gold       = 3
 flags         = "Armor", "BadWallAttacker"
@@ -2271,7 +2443,7 @@ sound_move    = "m_armor"
 sound_move_alt = "m_generic"
 sound_fight   = "f_armor"
 sound_fight_alt = "f_generic"
-build_cost    = 130
+build_cost    = 100
 pop_cost      = 0
 attack        = 11
 defense       = 5
@@ -2282,7 +2454,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 0
 uk_gold       = 4
 flags         = "Armor", "BadWallAttacker"
@@ -2310,7 +2482,7 @@ sound_move    = "m_armor"
 sound_move_alt = "m_generic"
 sound_fight   = "f_mech_inf"
 sound_fight_alt = "f_generic"
-build_cost    = 180
+build_cost    = 130
 pop_cost      = 0
 attack        = 7
 defense       = 3
@@ -2321,9 +2493,9 @@ vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
-uk_gold       = 3
+uk_gold       = 4
 flags         = "BadWallAttacker"
 roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
@@ -2343,7 +2515,7 @@ sound_move    = "m_catapult"
 sound_move_alt = "m_generic"
 sound_fight   = "f_catapult"
 sound_fight_alt = "f_generic"
-build_cost    = 45
+build_cost    = 40
 pop_cost      = 0
 attack        = 6
 defense       = 1
@@ -2354,7 +2526,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 2
 flags         = "Bombarder", "IgWall"
@@ -2384,7 +2556,7 @@ sound_move    = "m_cannon"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cannon"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 50
 pop_cost      = 0
 attack        = 7
 defense       = 1
@@ -2395,7 +2567,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 flags         = "Bombarder", "IgWall"
@@ -2422,7 +2594,7 @@ sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 65
 pop_cost      = 0
 attack        = 9
 defense       = 1
@@ -2433,7 +2605,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
 flags         = "Bombarder", "IgWall", "Light Shells"
@@ -2457,7 +2629,7 @@ sound_move    = "m_howitzer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_howitzer"
 sound_fight_alt = "f_generic"
-build_cost    = 110
+build_cost    = 90
 pop_cost      = 0
 attack        = 10
 defense       = 2
@@ -2468,7 +2640,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 0
 uk_gold       = 4
 flags         = "Bombarder", "IgWall", "Armor"
@@ -2493,7 +2665,7 @@ sound_move    = "m_armor"
 sound_move_alt = "m_generic"
 sound_fight   = "f_mech_inf"
 sound_fight_alt = "f_generic"
-build_cost    = 120
+build_cost    = 80
 pop_cost      = 0
 attack        = 8
 defense       = 4
@@ -2504,7 +2676,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
 flags         = "Bombarder", "Light Shells"
@@ -2528,7 +2700,7 @@ sound_move    = "m_catapult"
 sound_move_alt = "m_generic"
 sound_fight   = "f_catapult"
 sound_fight_alt = "f_generic"
-build_cost    = 35
+build_cost    = 20
 pop_cost      = 0
 attack        = 7
 defense       = 1
@@ -2539,7 +2711,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 1
 flags         = "NoVeteran"
@@ -2562,7 +2734,7 @@ sound_move    = "m_cannon"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cannon"
 sound_fight_alt = "f_generic"
-build_cost    = 45
+build_cost    = 30
 pop_cost      = 0
 attack        = 8
 defense       = 1
@@ -2573,7 +2745,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 1
 flags         = "NoVeteran"
@@ -2599,7 +2771,7 @@ sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 50
 pop_cost      = 0
 attack        = 11
 defense       = 2
@@ -2610,7 +2782,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 0
 uk_gold       = 2
 flags         = "NoVeteran"
@@ -2633,10 +2805,10 @@ sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_mech_inf"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 40
 pop_cost      = 0
 attack        = 7
-defense       = 2
+defense       = 6
 hitpoints     = 10
 firepower     = 3
 move_rate     = 2
@@ -2644,7 +2816,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
@@ -2666,7 +2838,7 @@ sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 30
 pop_cost      = 0
 attack        = 7
 defense       = 1
@@ -2677,7 +2849,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
 flags         = "CityBuster", "Only_Native_Attack"
@@ -2698,7 +2870,7 @@ sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 45
 pop_cost      = 0
 attack        = 10
 defense       = 2
@@ -2709,7 +2881,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 flags         = "CityBuster"
@@ -2731,7 +2903,7 @@ sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
 sound_fight_alt = "f_generic"
-build_cost    = 70
+build_cost    = 60
 pop_cost      = 0
 attack        = 10
 defense       = 3
@@ -2742,7 +2914,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
 flags         = "CityBuster"
@@ -2772,7 +2944,7 @@ sound_move    = "m_howitzer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_howitzer"
 sound_fight_alt = "f_generic"
-build_cost    = 90
+build_cost    = 75
 pop_cost      = 0
 attack        = 12
 defense       = 4
@@ -2783,7 +2955,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 0
 uk_gold       = 2
 flags         = "CityBuster", "Armor"
@@ -2813,7 +2985,7 @@ sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 30
 pop_cost      = 0
 attack        = 4
 defense       = 4
@@ -2824,7 +2996,7 @@ vision_radius_sq = 8
 transport_cap = 0
 fuel          = 1
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
@@ -2846,7 +3018,7 @@ sound_move    = "m_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_bomber"
 sound_fight_alt = "f_generic"
-build_cost    = 70
+build_cost    = 50
 pop_cost      = 0
 attack        = 4
 defense       = 2
@@ -2858,7 +3030,7 @@ transport_cap = 0
 fuel          = 4
 uk_happy      = 1
 uk_shield     = 2
-uk_food       = 0
+uk_food       = 1
 uk_gold       = 2
 flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
@@ -2882,7 +3054,7 @@ sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 40
 pop_cost      = 0
 attack        = 5
 defense       = 5
@@ -2894,7 +3066,7 @@ vision_radius_sq = 8
 transport_cap = 0
 fuel          = 2
 uk_happy      = 0
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Missile", "Helicopter"
@@ -2920,7 +3092,7 @@ sound_move    = "m_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_bomber"
 sound_fight_alt = "f_generic"
-build_cost    = 110
+build_cost    = 90
 pop_cost      = 0
 attack        = 6
 defense       = 2
@@ -2934,7 +3106,7 @@ cargo         = "Bomb", "Missile"
 fuel          = 4
 uk_happy      = 2
 uk_shield     = 3
-uk_food       = 0
+uk_food       = 1
 uk_gold       = 2
 flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
@@ -2964,7 +3136,7 @@ sound_move    = "m_helicopter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_helicopter"
 sound_fight_alt = "f_generic"
-build_cost    = 90
+build_cost    = 75
 pop_cost      = 0
 attack        = 5
 defense       = 3
@@ -2976,10 +3148,10 @@ vision_radius_sq = 8
 transport_cap = 1
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
-cargo         = "Land", "Small Land"
+cargo         = "Infantry", "Small Land"
 flags         = "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
 helptext      = _("\
@@ -3009,7 +3181,7 @@ sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 60
 pop_cost      = 0
 attack        = 4
 defense       = 3
@@ -3022,7 +3194,7 @@ transport_cap = 1
 cargo         = "Bomb", "Torpedos"
 fuel          = 2
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
@@ -3046,7 +3218,7 @@ sound_move    = "m_stealth_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 90
+build_cost    = 70
 pop_cost      = 0
 attack        = 6
 defense       = 6
@@ -3058,7 +3230,7 @@ vision_radius_sq = 8
 transport_cap = 0
 fuel          = 2
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Missile", "Helicopter"
@@ -3080,7 +3252,7 @@ sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 100
+build_cost    = 90
 pop_cost      = 0
 attack        = 7
 defense       = 4
@@ -3093,7 +3265,7 @@ transport_cap = 1
 cargo         = "Bomb", "Torpedos"
 fuel          = 2
 uk_happy      = 1
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
@@ -3117,7 +3289,7 @@ sound_move    = "m_stealth_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 130
+build_cost    = 110
 pop_cost      = 0
 attack        = 8
 defense       = 8
@@ -3130,7 +3302,7 @@ transport_cap = 1
 cargo         = "Bomb", "Torpedos"
 fuel          = 2
 uk_happy      = 0
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 0
 uk_gold       = 3
 targets       = "Air", "Missile", "Helicopter"
@@ -3166,7 +3338,7 @@ cargo         = "Bomb", "Missile"
 fuel          = 4
 uk_happy      = 2
 uk_shield     = 4
-uk_food       = 0
+uk_food       = 1
 uk_gold       = 3
 flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = "DefendOkStartUnit"
@@ -3187,7 +3359,7 @@ sound_move    = "m_stealth_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 240
+build_cost    = 170
 pop_cost      = 0
 attack        = 9
 defense       = 9
@@ -3200,8 +3372,8 @@ transport_cap = 1
 cargo         = "Bomb", "Torpedos"
 fuel          = 3
 uk_happy      = 0
-uk_shield     = 3
-uk_food       = 1
+uk_shield     = 4
+uk_food       = 0
 uk_gold       = 4
 targets       = "Air", "Missile", "Helicopter"
 flags         = "Partial_Invis", "AirAttacker", "OneAttack", "HasNoZOC"
@@ -3222,7 +3394,7 @@ sound_move    = "m_stealth_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_bomber"
 sound_fight_alt = "f_generic"
-build_cost    = 360
+build_cost    = 280
 pop_cost      = 0
 attack        = 10
 defense       = 6
@@ -3258,7 +3430,7 @@ sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
-build_cost    = 25
+build_cost    = 15
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -3271,7 +3443,7 @@ cargo         = "Small Land"
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 0
-uk_food       = 0
+uk_food       = 1
 uk_gold       = 1
 flags         = "NonMil", "NoVeteran", "HasNoZOC", "Unique", "Unbribable"
 roles         = "Ferryboat", "FerryStartUnit"
@@ -3299,20 +3471,20 @@ firepower     = 1
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 1
-cargo         = "Small Land", "Land", "Big Land", "Merchant", "Suicidal", "Wheeled Unit", "Turrets"
+cargo         = "Small Land", "Infantry", "Light Cavalry", "Heavy Cavalry", "Big Land", "Merchant", "Suicidal", "Wheeled Unit", "Turrets"
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 0
-uk_gold       = 1
+uk_gold       = 0
 flags         = "NonMil", "NoVeteran", "HasNoZOC"
 roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 Raft is a rudimentary form of transport, limited to the rivers, lakes and fortresses only,\
-however because it can be used to relatively fast transport of any land units, including these, which cannot move without roads.
+however it can be used to relatively fast transport of any land units, including these, which cannot move on some terrains without roads.
 "),
 _("\
-Raft can be used as a temporary bridge (fortify it for anchor), but can be destroyed easily if not guarded.\
+TIP: Raft can be used as a temporary bridge (fortify it for anchor), but can be destroyed easily if not guarded.\
 ")
 
 [unit_trireme]
@@ -3326,7 +3498,7 @@ sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 20
 pop_cost      = 0
 attack        = 1
 defense       = 1
@@ -3337,11 +3509,11 @@ vision_radius_sq = 2
 transport_cap = 2
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant"
-flags         = "BadCityDefender", "HasNoZOC"
+cargo         = "Infantry", "Small Land", "Merchant"
+flags         = "BadCityDefender"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -3366,7 +3538,7 @@ sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
-build_cost    = 35
+build_cost    = 25
 pop_cost      = 0
 attack        = 0
 defense       = 2
@@ -3377,11 +3549,11 @@ vision_radius_sq = 2
 transport_cap = 3
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant"
-flags         = "BadCityDefender", "NonMil";, "Capturable"
+cargo         = "Infantry", "Light Cavalry", "Small Land", "Merchant"
+flags         = "BadCityDefender", "NonMil", "HasNoZOC";, "Capturable"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -3406,7 +3578,7 @@ sound_move    = "m_transport"
 sound_move_alt = "m_generic"
 sound_fight   = "f_transport"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 40
 pop_cost      = 0
 attack        = 0
 defense       = 2
@@ -3417,10 +3589,10 @@ vision_radius_sq = 2
 transport_cap = 4
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
 flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
@@ -3447,7 +3619,7 @@ sound_move    = "m_transport"
 sound_move_alt = "m_generic"
 sound_fight   = "f_transport"
 sound_fight_alt = "f_generic"
-build_cost    = 55
+build_cost    = 50
 pop_cost      = 0
 attack        = 0
 defense       = 3
@@ -3458,10 +3630,10 @@ vision_radius_sq = 2
 transport_cap = 5
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-cargo         = "Land", "Small Land", "Merchant", "Big Land", "Suicidal", "Wheeled Unit"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Suicidal", "Wheeled Unit"
 flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
@@ -3488,7 +3660,7 @@ sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
-build_cost    = 45
+build_cost    = 30
 pop_cost      = 0
 attack        = 2
 defense       = 4
@@ -3499,7 +3671,7 @@ vision_radius_sq = 2
 transport_cap = 1
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 2
 cargo         = "Turrets"
@@ -3526,7 +3698,7 @@ sound_move    = "m_ironclad"
 sound_move_alt = "m_generic"
 sound_fight   = "f_ironclad"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 50
 pop_cost      = 0
 attack        = 2
 defense       = 5
@@ -3537,7 +3709,7 @@ vision_radius_sq = 2
 transport_cap = 1
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 cargo         = "Turrets"
@@ -3566,7 +3738,7 @@ sound_move    = "m_destroyer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_destroyer"
 sound_fight_alt = "f_generic"
-build_cost    = 75
+build_cost    = 60
 pop_cost      = 0
 attack        = 3
 defense       = 5
@@ -3574,13 +3746,13 @@ hitpoints     = 20
 firepower     = 3
 move_rate     = 6
 vision_radius_sq = 2
-transport_cap = 1
+transport_cap = 2
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
-cargo         = "Turrets", "Torpedos"
+cargo         = "Turrets", "Torpedos", "Small Land"
 flags         = "BadCityDefender"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -3603,7 +3775,7 @@ sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 20
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -3642,7 +3814,7 @@ sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 25
 pop_cost      = 0
 attack        = 3
 defense       = 3
@@ -3653,10 +3825,10 @@ vision_radius_sq = 2
 transport_cap = 2
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant"
+cargo         = "Infantry", "Small Land", "Merchant"
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
 roles         = "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -3680,7 +3852,7 @@ sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 30
 pop_cost      = 0
 attack        = 0
 defense       = 3
@@ -3692,9 +3864,9 @@ transport_cap = 2
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
-uk_food       = 1
+uk_food       = 2
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant"
+cargo         = "Infantry", "Small Land", "Merchant"
 flags         = "BadCityDefender", "NonMil", "HasNoZOC";, "Capturable"
 roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -3733,10 +3905,10 @@ vision_radius_sq = 2
 transport_cap = 3
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Wheeled Unit", "Merchant"
+cargo         = "Infantry", "Light Cavalry", "Small Land", "Wheeled Unit", "Merchant"
 flags         = "BadCityDefender", "HasNoZOC"
 roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -3764,7 +3936,7 @@ sound_move    = "m_transport"
 sound_move_alt = "m_generic"
 sound_fight   = "f_transport"
 sound_fight_alt = "f_generic"
-build_cost    = 65
+build_cost    = 50
 pop_cost      = 0
 attack        = 0
 defense       = 4
@@ -3775,10 +3947,10 @@ vision_radius_sq = 8
 transport_cap = 6
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-cargo         = "Land", "Small Land", "Big Land", "Merchant", "Suicidal", "Wheeled Unit"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
 flags         = "BadCityDefender", "NonMil", "HasNoZOC";, "Capturable"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -3803,7 +3975,7 @@ sound_move    = "m_transport"
 sound_move_alt = "m_generic"
 sound_fight   = "f_transport"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 65
 pop_cost      = 0
 attack        = 0
 defense       = 5
@@ -3814,10 +3986,10 @@ vision_radius_sq = 8
 transport_cap = 8
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
-cargo         = "Land", "Small Land", "Big Land", "Merchant", "Wheeled Unit"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Suicidal", "Wheeled Unit"
 flags         = "Settlers", "BadCityDefender", "HasNoZOC"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -3848,7 +4020,7 @@ sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 40
 pop_cost      = 0
 attack        = 2
 defense       = 4
@@ -3859,11 +4031,11 @@ vision_radius_sq = 2
 transport_cap = 1
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant", "Turrets"
-flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
+cargo         = "Small Land", "Turrets"
+flags         = "BadCityDefender", "Only_Native_Attack"
 roles         = "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -3871,7 +4043,7 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-The Caravel is a sailing ship that can enter\
+The Caravel is a sailing warship that can enter\
  any ocean tile.\
 ")
 
@@ -3879,26 +4051,26 @@ The Caravel is a sailing ship that can enter\
 name          = _("Frigate")
 class         = "Sea"
 tech_req      = "Magnetism"
-obsolete_by   = "Ironclad"
+obsolete_by   = "Destroyer"
 graphic       = "u.frigate"
 graphic_alt   = "-"
 sound_move    = "m_frigate"
 sound_move_alt = "m_generic"
 sound_fight   = "f_frigate"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 50
 pop_cost      = 0
 attack        = 3
 defense       = 4
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 1
-cargo         = "Turrets"
+cargo         = "Small Land", "Turrets"
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 2
 flags         = "BadCityDefender", "Bombarder"
@@ -3928,19 +4100,19 @@ sound_move    = "m_frigate"
 sound_move_alt = "m_generic"
 sound_fight   = "f_frigate"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 70
 pop_cost      = 0
 attack        = 5
 defense       = 8
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 5
 vision_radius_sq = 2
 transport_cap = 2
 cargo         = "Turrets"
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 3
 flags         = "BadCityDefender", "Unique", "Unbribable", "Bombarder"
@@ -3963,26 +4135,26 @@ bombard_rate = 2
 name          = _("Ironclad")
 class         = "Sea"
 tech_req      = "Screw Propeller"
-obsolete_by   = "Destroyer"
+obsolete_by   = "Cruiser"
 graphic       = "u.ironclad"
 graphic_alt   = "-"
 sound_move    = "m_ironclad"
 sound_move_alt = "m_generic"
 sound_fight   = "f_ironclad"
 sound_fight_alt = "f_generic"
-build_cost    = 70
+build_cost    = 60
 pop_cost      = 0
 attack        = 4
 defense       = 5
 hitpoints     = 20
 firepower     = 2
-move_rate     = 4
+move_rate     = 3
 vision_radius_sq = 2
-transport_cap = 1
+transport_cap = 2
 cargo         = "Turrets"
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 flags         = "BadCityDefender", "Bombarder"
@@ -3994,7 +4166,7 @@ veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Ironclad is an armored ship,\
- more sturdy than the Frigate.\
+ more sturdy than the Frigate, but slow.\
 "),
 _("\
 Bombard or cannon turret can be installed aboard, for increase attack strength.\
@@ -4012,7 +4184,7 @@ sound_move    = "m_destroyer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_destroyer"
 sound_fight_alt = "f_generic"
-build_cost    = 90
+build_cost    = 65
 pop_cost      = 0
 attack        = 4
 defense       = 6
@@ -4021,10 +4193,10 @@ firepower     = 3
 move_rate     = 6
 vision_radius_sq = 8
 transport_cap = 1
-cargo         = "Turrets", "Torpedos"
+cargo         = "Small Land", "Turrets", "Torpedos"
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 3
 bonuses       =
@@ -4039,7 +4211,7 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-An improved Ironclad, with better move rate and vision.\
+An improved warship, with better move rate and vision.\
  Anti-submarine weapons double its defense against Submarines.\
 "), 
 _("\
@@ -4062,7 +4234,7 @@ sound_move    = "m_cruiser"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruiser"
 sound_fight_alt = "f_generic"
-build_cost    = 120
+build_cost    = 85
 pop_cost      = 0
 attack        = 5
 defense       = 10
@@ -4074,7 +4246,7 @@ transport_cap = 2
 cargo         = "Turrets"
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 1
 uk_gold       = 4
 flags         = "BadCityDefender", "Bombarder"
@@ -4100,7 +4272,7 @@ sound_move    = "m_battleship"
 sound_move_alt = "m_generic"
 sound_fight   = "f_battleship"
 sound_fight_alt = "f_generic"
-build_cost    = 160
+build_cost    = 100
 pop_cost      = 0
 attack        = 6
 defense       = 11
@@ -4112,7 +4284,7 @@ transport_cap = 3
 cargo         = "Turrets"
 fuel          = 0
 uk_happy      = 2
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 2
 uk_gold       = 4
 flags         = "BadCityDefender", "Bombarder"
@@ -4142,7 +4314,7 @@ sound_move    = "m_aegis_cruiser"
 sound_move_alt = "m_generic"
 sound_fight   = "f_aegis_cruiser"
 sound_fight_alt = "f_generic"
-build_cost    = 180
+build_cost    = 120
 pop_cost      = 0
 attack        = 7
 defense       = 12
@@ -4188,7 +4360,7 @@ sound_move    = "m_destroyer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_submarine"
 sound_fight_alt = "f_generic"
-build_cost    = 130
+build_cost    = 80
 pop_cost      = 0
 attack        = 4
 defense       = 7
@@ -4197,10 +4369,10 @@ firepower     = 4
 move_rate     = 6
 vision_radius_sq = 8
 transport_cap = 2
-cargo         = "Turrets", "Torpedos"
+cargo         = "Small Land", "Turrets", "Torpedos"
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 4
 bonuses       =
@@ -4234,7 +4406,7 @@ sound_move    = "m_submarine"
 sound_move_alt = "m_generic"
 sound_fight   = "f_submarine"
 sound_fight_alt = "f_generic"
-build_cost    = 140
+build_cost    = 90
 pop_cost      = 0
 attack        = 4
 defense       = 5
@@ -4245,7 +4417,7 @@ vision_radius_sq = 8
 transport_cap = 4
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 1
 uk_gold       = 3
 cargo         = "Torpedos"
@@ -4277,7 +4449,7 @@ sound_move    = "m_submarine"
 sound_move_alt = "m_generic"
 sound_fight   = "f_submarine"
 sound_fight_alt = "f_generic"
-build_cost    = 190
+build_cost    = 120
 pop_cost      = 0
 attack        = 5
 defense       = 6
@@ -4288,7 +4460,7 @@ vision_radius_sq = 8
 transport_cap = 8
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 3
+uk_shield     = 4
 uk_food       = 1
 uk_gold       = 4
 cargo         = "Missile", "Torpedos"
@@ -4321,7 +4493,7 @@ sound_move    = "m_carrier"
 sound_move_alt = "m_generic"
 sound_fight   = "f_carrier"
 sound_fight_alt = "f_generic"
-build_cost    = 150
+build_cost    = 110
 pop_cost      = 0
 attack        = 0
 defense       = 9
@@ -4332,10 +4504,10 @@ vision_radius_sq = 8
 transport_cap = 8
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 1
 uk_gold       = 4
-cargo         = "Land", "Air", "Missile", "Helicopter"
+cargo         = "Small Land", "Air", "Missile", "Helicopter"
 flags         = "BadCityDefender", "HasNoZOC"
 roles         = "DefendGood", "DefendGoodStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -4366,7 +4538,7 @@ sound_move    = "m_cruise_missile"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 40
 pop_cost      = 0
 attack        = 18
 defense       = 0
@@ -4377,7 +4549,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 1
 embarks       = "Sea"
@@ -4404,7 +4576,7 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 160
+build_cost    = 150
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -4415,7 +4587,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
 uk_happy      = 3
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 3
 embarks       = "Air"
@@ -4463,7 +4635,7 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 190
+build_cost    = 180
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -4474,7 +4646,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
 uk_happy      = 3
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
 flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "NoVeteran"
@@ -4527,7 +4699,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 1
 embarks       = "Air"
@@ -4551,7 +4723,7 @@ sound_move    = "m_cruise_missile"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 15
 pop_cost      = 0
 attack        = 10
 defense       = 0
@@ -4562,7 +4734,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
 flags         = "OneAttack", "AirAttacker", "CityBuster", "IgWall", "Capturable", "HasNoZOC"
@@ -4583,7 +4755,7 @@ sound_move    = "m_diplomat"
 sound_move_alt = "m_generic"
 sound_fight   = "f_diplomat"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 15
 pop_cost      = 0
 attack        = 0
 defense       = 0
@@ -4644,7 +4816,7 @@ sound_move    = "m_diplomat"
 sound_move_alt = "m_generic"
 sound_fight   = "f_diplomat"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 20
 pop_cost      = 0
 attack        = 0
 defense       = 0
@@ -4755,7 +4927,7 @@ sound_move    = "m_spy"
 sound_move_alt = "m_generic"
 sound_fight   = "f_spy"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 30
 pop_cost      = 0
 attack        = 0
 defense       = 0
@@ -4766,7 +4938,7 @@ vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
 uk_gold       = 3
 flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "Spy"
@@ -4824,7 +4996,7 @@ sound_move    = "m_caravan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravan"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 30
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -4901,7 +5073,7 @@ sound_move    = "m_freight"
 sound_move_alt = "m_generic"
 sound_fight   = "f_freight"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 60
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -4915,7 +5087,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 2
-cargo         = "Land", "Small Land", "Big Land", "Merchant", "Helicopter", "Suicidal", "Wheeled Unit"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Helicopter", "Suicidal", "Wheeled Unit"
 flags         = "NonMil", "Capturable", "NoVeteran"
 roles         = ""
 helptext      = _("\
@@ -4936,7 +5108,7 @@ sound_move    = "m_explorer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_explorer"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 15
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -4972,7 +5144,7 @@ Explorers can also perform some actions in another player's city, although\
 
 [unit_leader]
 name          = _("?unit:Leader")
-class         = "Land"
+class         = "Small Land"
 tech_req      = "None"
 obsolete_by   = "None"
 graphic       = "u.leader"
@@ -5012,7 +5184,7 @@ Won't unleash barbarians from huts.\
 
 [unit_barbarian_leader]
 name          = _("Barbarian Leader")
-class         = "Land"
+class         = "Small Land"
 tech_req      = "None"
 obsolete_by   = "None"
 graphic       = "u.barbarian_leader"
@@ -5063,7 +5235,7 @@ sound_move    = "m_generic"
 sound_move_alt = "m_generic"
 sound_fight   = "f_submarine"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 15
 pop_cost      = 0
 attack        = 0
 defense       = 2
@@ -5074,7 +5246,7 @@ vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
 flags         = "NonMil", "Capturable", "HasNoZOC"
@@ -5095,7 +5267,7 @@ sound_move    = "m_awacs"
 sound_move_alt = "m_generic"
 sound_fight   = "f_awacs"
 sound_fight_alt = "f_generic"
-build_cost    = 140
+build_cost    = 120
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -5106,7 +5278,7 @@ vision_radius_sq = 26
 transport_cap = 0
 fuel          = 3
 uk_happy      = 0
-uk_shield     = 2
+uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
 flags         = "HasNoZOC"
@@ -5128,7 +5300,7 @@ sound_move    = "m_cruise_missile"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 70
 pop_cost      = 0
 attack        = 4
 defense       = 2
@@ -5139,7 +5311,7 @@ vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 1
 flags         = "AirAttacker", "Partial_Invis", "Light Shells"
