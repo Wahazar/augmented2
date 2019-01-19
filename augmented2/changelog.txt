@@ -2,6 +2,13 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.7
+City Walls prohibit city growth above 46.
+Alternatively - Palisade - upkeep fee and less defense, but no growth restrictions.
+Water Treatment Plant - required for growth above 24 (can be also used instead Aqueduct, give higher plaque protection).
+Stable Barracks have cheaper upkeep with Horses on tile, Infantry Barracks II - with Saltpeter.
+New base: Water Lock - can be locatd on the coast, allows ships to enter one tile inland.
+
 2.6.6
 ISO HEX tilesets with amplio and small version
 Reworked Land unit class, splitted to Infantry, Light Cavalry, Heavy Cavalry

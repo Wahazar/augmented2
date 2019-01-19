@@ -203,7 +203,7 @@ which can destroy buildings in the city.\
 ; /* xgettext:no-c-format */
 _("\
 Starting at size 5, growing cities incur an increasing risk of plague \
-due to overcrowding; an Aqueduct reduces that base chance by 20%.\
+due to overcrowding; an Aqueduct reduces that base chance by 10%.\
 "), _("\
 Building an Aqueduct in a city without access to a lake or river requires \
 knowledge of Construction, and it costs more to build and maintain.\
@@ -240,7 +240,7 @@ which can destroy buildings in the city.\
 ; /* xgettext:no-c-format */
 _("\
 Starting at size 5, growing cities incur an increasing risk of plague \
-due to overcrowding; an Aqueduct reduces that base chance by 20%.\
+due to overcrowding; an Aqueduct reduces that base chance by 10%.\
 "), _("\
 Aqueducts in cities with access to a lake require no special technology and \
 are cheap to build and maintain.\
@@ -278,7 +278,7 @@ which can destroy buildings in the city.\
 ; /* xgettext:no-c-format */
 _("\
 Starting at size 5, growing cities incur an increasing risk of plague \
-due to overcrowding; an Aqueduct reduces that base chance by 20%.\
+due to overcrowding; an Aqueduct reduces that base chance by 10%.\
 "), _("\
 Aqueducts in cities with access to a river require no special technology and \
 are cheap to build and maintain.\
@@ -440,7 +440,7 @@ name		= _("Cathedral")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "present"
-      "Tech", "Christianity", "Player", TRUE
+      "Tech", "Theology", "Player", TRUE
       "Building", "Church", "City", TRUE
 	 "MinCulture", "500", "Player", TRUE
       "Building", "Temple", "City", FALSE
@@ -527,15 +527,16 @@ name		= _("City Walls")
 genus		= "Improvement"
 flags		= "VisibleByOthers"
 reqs	=
-    { "type", "name", "range"
-      "Tech", "Masonry", "Player"
+    { "type", "name", "range", "present"
+      "Tech", "Masonry", "Player", TRUE
+      "Building", "Palisade", "City", FALSE
     }
 graphic	= "b.city_walls"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 30
+build_cost	= 40
 upkeep		= 0
 sabotage	= 50
 sound		= "b_city_walls"
@@ -547,7 +548,8 @@ intrinsic defense strength of units within the city against land units \
 (that is a two-thirds increase for small cities, or a one-half increase \
 for cities larger than size 8), but are ineffective against airborne and \
 sea units or plunging fire artillery. City Walls also prevent the loss of population which occurs \
-when a defending unit is defeated by a land unit.\
+when a defending unit is defeated by a land unit.\n\
+City Walls need to be dismantled to allow city growth beyond size of 48.
 "),
 _("\
 Increase vision range of occupied city.\
@@ -1083,7 +1085,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
       "Building", "City Hall", "City", TRUE
-	 "MinCulture", "250", "Player", TRUE
+	 "MinCulture", "500", "Player", TRUE
 	 "Building", "Angkor Wat", "Player", FALSE
     }
 graphic	= "b.ecclesiastical_palace"
@@ -1114,6 +1116,36 @@ stationed in the city, or sabotage your buildings.\
 _("\
 Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
+")
+
+[building_palisade]
+name		= _("Palisade")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Forestry", "Player", TRUE
+      "Building", "City Walls", "City", FALSE
+    }
+graphic	= "b.palisade"
+graphic_alt	= "b.city_walls"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 30
+upkeep		= 1
+sabotage	= 50
+sound		= "b_city_walls"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Palisade add a +25% bonus to the \
+intrinsic defense strength of units within the city against land units \
+(that is a two-thirds increase for small cities, \
+but is ineffective against airborne, sea units or plunging fire artillery. \
+Unlike City Walls, Palisade does not prevent the loss of population which occurs \
+when a defending unit is defeated by a land unit.\n\
+Wooden Palisade need upkeep to be renovated or rebuilded, but unlike City Walls, doesn't constrain city growth.
 ")
 
 [building_police_station]
@@ -1702,6 +1734,30 @@ Entertains the citizens of a city, adding 2 luxury points. \
  (4 after the discovery of Cinematography.) 
 ")
 
+[building_water_treatment]
+name		= _("Water Treatment")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Industrialization", "Player"
+    }
+graphic	= "b.water_treatment"
+graphic_alt	= "sewer_system"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 1
+sabotage	= 50
+sound		= "b_sewer_system"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Water treatment facilities allows a city to grow larger than size 8 (can be used instead of aqueduct) \
+and is required for growth beyond size 24, \
+further reduces the chance of a plague (by 20% of the base chance).\
+")
+
 [building_university]
 name		= _("University")
 genus		= "Improvement"
@@ -1735,6 +1791,26 @@ Isaac Newton's College have both been built.\
 ")
 
 ;small wonders
+
+[building_atlantic_telegraph_company]
+name		= _("Atlantic Telegraph Company")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electromagnetism", "Player"
+      "Building", "University", "City"
+    }
+graphic	= "w.atlantic_telegraph_company"
+graphic_alt	= "b.university"
+obsolete_by	= "None"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+Player building it gets an embassy with all players.\
+")
 
 [building_colosseum]
 name            = _("Colosseum")
@@ -2076,8 +2152,7 @@ graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Democracy", "Player", FALSE
-
+      "Tech", "Electromagnetism", "Player", FALSE
     }
 build_cost	= 180
 upkeep		= 0
@@ -2099,7 +2174,7 @@ name		= _("Massachusetts Institute of Technology")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Electromagnetism", "Player"
+      "Tech", "Electronics", "Player"
       "Building", "Factory", "City"
       "Building", "Library", "City"
 	 "MinCulture", "2000", "Player"
@@ -2283,7 +2358,7 @@ rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Sanitation", "Player"
+      "Tech", "Modern Theatre", "Player"
 	 "MinCulture", "1600", "Player"
     }
 graphic	= "b.shakespeares_theatre"

@@ -761,13 +761,13 @@ name          = _("Militia")
 class         = "Small Land"
 tech_req      = "Leather Tanning"
 obsolete_by   = "Halberdier"
-graphic       = "u.warriors"
-graphic_alt   = "-"
+graphic       = "u.militia"
+graphic_alt   = "u.warriors"
 sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 10
+build_cost    = 6
 pop_cost      = 0
 attack        = 1
 defense       = 1
@@ -1201,8 +1201,8 @@ name          = _("Skirmishers")
 class         = "Small Land"
 tech_req      = "Warrior Code"
 obsolete_by   = "Halberdier"
-graphic       = "u.warriors"
-graphic_alt   = "-"
+graphic       = "u.skirmishers"
+graphic_alt   = "u.warriors"
 sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
@@ -1222,7 +1222,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
-roles         = "DefendOkStartUnit", "FirstBuild"
+roles         = "DefendOkStartUnit"
 helptext      = _("\
 Skirmishers are first offensive units, they are relative weak but can be used to conquer enemy cities.\
 ")
@@ -2024,7 +2024,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
@@ -2720,7 +2720,7 @@ helptext      = _("\
 Ballistas shoots heavy bolts or rocks.\
 "),
 _("\
-Such unit can be mounted in the fortress or on the ship.
+Such unit can be mounted on the ship or reside in the fortress, but can't move by itself beyond city/fortress.
 ")
 
 [unit_bombard]
@@ -2757,7 +2757,7 @@ attacking units but weak defenders and will need an escort to be \
 effective, and are rather immobile.\
 "),
 _("\
-Such unit can be mounted in the fortress or on the ship.
+Such unit can be mounted on the ship or reside in the fortress, but can't move by itself beyond city/fortress.
 ")
 
 [unit_turret_cannon]
@@ -2791,7 +2791,7 @@ helptext      = _("\
 Cannon Turret is kind of stationary artillery.\
 "),
 _("\
-Such unit can be mounted in the fortress or on the ship.
+Such unit can be mounted on the ship or reside in the fortress, but can't move by itself beyond city/fortress.
 ")
 
 [unit_turret_aa_gun]
@@ -2825,6 +2825,9 @@ roles         = ""
 helptext      = _("\
 Anti-aircraft Turret Gun can be mounted in the fortress or on the ship, it have less firepower than Turret Cannon, \
 but is capable to shoot twice and fight against aircrafts.\
+"),
+_("\
+Such unit can be mounted on the ship or reside in the fortress, but can't move by itself beyond city/fortress.
 ")
 
 [unit_battering_ram]

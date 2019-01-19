@@ -197,7 +197,5 @@ sprites =
 		"u.mounted_inf", "augmented2/amplio_units/mounted_inf_a"
 		"u.lancers", "augmented2/amplio_units/lancers_a"
 		"u.dragoon", "augmented2/amplio_units/dragoon_a"
-
-
-
+		"u.militia", "augmented2/amplio_units/militia_a"
 	}

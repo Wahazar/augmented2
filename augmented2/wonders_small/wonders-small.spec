@@ -31,5 +31,5 @@ sprites =
 		"b.kaaba", "augmented2/wonders_small/Kaaba_s"
 		"b.thermal_bath", "augmented2/wonders_small/thermal_bath_s"
 		"b.golden_temple", "augmented2/wonders_small/golden_temple_s"
-
+		"b.atlantic_telegraph_company", "augmented2/wonders_small/atlantic_telegraph_company"
 	}

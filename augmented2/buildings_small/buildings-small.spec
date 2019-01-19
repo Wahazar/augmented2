@@ -32,6 +32,8 @@ sprites =
 		"b.infantry_barracks1", "augmented2/buildings_small/infantry_barracks1"
 		"b.infantry_barracks2", "augmented2/buildings_small/infantry_barracks2"
 		"b.stables_barracks", "augmented2/buildings_small/stables_barracks"
+		"b.palisade", "augmented2/buildings_small/palisades"
+		"b.water_treatment", "augmented2/buildings_small/water_treatments"
 	}
 
 [file]

@@ -446,7 +446,7 @@ animal               = "None"
 warmer_wetter_result = "Swamp"
 warmer_drier_result  = "no"
 cooler_wetter_result = "Tundra"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "no"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Wheeled Unit", "Suicidal"
 flags                = "CanHaveRiver", "Oil"
 property_dry         = 100
@@ -496,7 +496,7 @@ animal               = "None"
 warmer_wetter_result = "Jungle"
 warmer_drier_result  = "no"
 cooler_wetter_result = "no"
-cooler_drier_result  = "no"
+cooler_drier_result  = "Tundra"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
 property_cold        = 20
@@ -730,7 +730,7 @@ clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "Swamp"
 warmer_drier_result  = "Desert"
-cooler_wetter_result = "Desert"
+cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Desert"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Wheeled Unit"
 flags                = "Starter", "CanHaveRiver"
@@ -822,9 +822,9 @@ clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "Swamp"
-warmer_drier_result  = "Swamp"
+warmer_drier_result  = "Desert"
 cooler_wetter_result = "Glacier"
-cooler_drier_result  = "Desert"
+cooler_drier_result  = "no"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "NoBarbs", "CanHaveRiver"
 property_cold        = 50
@@ -930,7 +930,6 @@ graphic     = "ts.horses"
 graphic_alt = "ts.buffalo"
 identifier  = "h"
 shield      = 2
-trade      = 1
 
 [resource_buffalo]
 name        = _("Buffalo")
@@ -958,7 +957,6 @@ graphic     = "ts.saltpeter"
 graphic_alt = "ts.grassland_resources"
 identifier  = "l"
 shield      = 1
-trade      = 1
 # hills
 
 ; "m" reserved for marble
@@ -1073,6 +1071,7 @@ food        = 1
 ; Player visible names of the base gui types.
 ui_name_base_fortress = _("?gui_type:Build Fort/Fortress/Buoy")
 ui_name_base_airbase = _("?gui_type:Build Airstrip/Airbase")
+ui_name_base_waterlock = _("?gui_type:Build Water Lock")
 
 ; /* <-- avoid gettext warnings
 ;
@@ -1294,8 +1293,8 @@ name           = _("Pollution")
 category       = "Nuisance"
 causes         = "Pollution"
 rmcauses       = "CleanPollution"
-graphic        = "tx.pollution"
-graphic_alt    = "-"
+graphic        = "tx.pollution_smoke"
+graphic_alt    = "tx.pollution"
 activity_gfx   = "None"
 act_gfx_alt    = "-"
 act_gfx_alt2   = "-"
@@ -1458,7 +1457,7 @@ rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 reqs           =
     { "type", "name", "range", "present", "quiet"
-      "Tech", "Construction", "Player", TRUE, FALSE
+      "Tech", "Carpentry", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
@@ -1578,6 +1577,7 @@ reqs           =
       "Extra", "Airstrip", "Local", TRUE, FALSE
       "Tech", "Radio", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+      "Terrain", "Mountains", "Local", FALSE, FALSE
       "UnitFlag", "Airbase", "Local", TRUE, FALSE
       "CityTile", "Center", "Local", FALSE, TRUE
       "Extra", "River", "Local", FALSE, FALSE
@@ -1685,7 +1685,7 @@ Roads allow your land units to move more quickly, and allow\
 On some terrains, roads also provide a trade bonus.\
 "), _("\
 Building roads on river tiles requires knowledge of Bridge Building.\
- City center tiles automatically get roads (even on a river tile).\
+ City center tiles automatically get roads (even on a river tile, if Bridge Building is know).\
 ")
 
 [extra_railroad]
@@ -1746,7 +1746,7 @@ reqs           =
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
     }
-build_time     = 3
+build_time     = 6
 removal_time   = 0
 native_to      = "Infantry", "Small Land"
 flags          = "NativeTile", "AutoOnCityCenter"
@@ -1796,6 +1796,39 @@ Roads and railroads can only be built on River tiles if your\
 Cities built on or next to rivers incur a small risk of flooding,\
  which will destroy stored food.\
 ")
+
+[extra_water_lock]
+name           = _("Water Lock")
+category       = "Infra"
+causes         = "Base"
+rmcauses       = "Pillage"
+graphic        = "base.waterlock"
+graphic_alt    = "base.fortress"
+activity_gfx   = "unit.buoy"
+act_gfx_alt    = "unit.road"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+reqs           =
+    { "type", "name", "range", "present", "quiet"
+      "UnitFlag", "Settlers", "Local", TRUE, FALSE
+      "TerrainClass", "Land", "Local", TRUE, FALSE
+      "TerrainClass", "Oceanic", "CAdjacent", TRUE, FALSE
+      "Tech", "Steam Engine", "Player", TRUE, FALSE
+      "CityTile", "Center", "Local", FALSE, TRUE
+      "Terrain", "Mountains", "Local", FALSE, FALSE
+    }
+build_time     = 14
+removal_time   = 2
+conflicts      = "Airstrip", "Airbase", "Fort", "Mine"
+native_to      = "Small Land", "Merchant", "Trireme", "Riverboat", "Sea"
+flags          = "NativeTile"
+helptext       = _("\
+Allow ships to enter inland.\
+"), _("\
+Building Water Lock requires ocean tile adjacent to this facility.\
+")
+
 
 ; /* <-- avoid gettext warnings
 ;
@@ -1858,6 +1891,11 @@ vision_main_sq = 5
 [base_ruins]
 extra          = "Ruins"
 gui_type       = "Other"
+
+[base_waterlock]
+extra          = "Water Lock"
+gui_type       = "Fortress"
+
 
 ; /* <-- avoid gettext warnings
 ;

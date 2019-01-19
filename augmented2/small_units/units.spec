@@ -58,7 +58,7 @@ sprites =
 		"u.vikings", "augmented2/small_units/viking_t"
 		"u.corsairs", "augmented2/small_units/corsair_t"
 		"u.battering_ram", "augmented2/small_units/battering_ram_t"
-;		"u.aak", "augmented2/small_units/Aak_t"
+		"u.aak", "augmented2/small_units/Aak_t"
 		"u.raft", "augmented2/small_units/raft_t"
 		"u.Abomb", "augmented2/small_units/Abomb_t"
 		"u.GBU", "augmented2/small_units/GBU_t"
@@ -88,6 +88,7 @@ sprites =
 		"u.mounted_inf", "augmented2/small_units/mounted_inf_t"
 		"u.lancers", "augmented2/small_units/lancers_t"
 		"u.dragoon", "augmented2/small_units/dragoon_t"
+		"u.militia", "augmented2/small_units/militia_t"
 ; swapped standard graphics
 		"u.direct_artillery", "augmented2/small_units/direct_artillery_t"
 		"u.plunging_cannon", "augmented2/small_units/plunging_cannon_t"

@@ -231,7 +231,7 @@ req2     = "Construction"
 flags    = "Bridge"
 graphic     = "a.bridge_building"
 graphic_alt = "-"
-cost     = 70
+cost     = 80
 helptext = _("Allows roads to be built on river tiles.")
 
 [advance_bronze_working]
@@ -273,6 +273,9 @@ req2     = "Creative Art"
 flags    = ""
 graphic     = "a.carpentry"
 graphic_alt = "-"
+helptext = _("\
+Allows Settlers, Migrants, Workers and Engineers to build Forts.\
+")
 cost     = 15
 
 [advance_ceremonial_burial]
@@ -416,7 +419,7 @@ graphic_alt = "-"
 helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to build fortresses.\
 ")
-cost     = 40
+cost     = 60
 
 [advance_craft_guilds]
 name     = _("Craft Guilds")
@@ -449,7 +452,7 @@ cost     = 3
 name     = _("Democracy")
 req1     = "Economics"
 req2     = "Egalitarianism"
-root_req = "The Republic"
+root_req = "Egalitarianism"
 flags    = ""
 graphic     = "a.democracy"
 graphic_alt = "-"
@@ -481,7 +484,7 @@ req2     = "Masonry"
 flags    = ""
 graphic     = "a.drama"
 graphic_alt = "-"
-cost     = 30
+cost     = 50
 
 [advance_economics]
 name     = _("Economics")
@@ -496,6 +499,7 @@ cost     = 170
 name     = _("Egalitarianism")
 req1     = "Theology"
 req2     = "Printing Press"
+root_req = "Theology"
 flags    = ""
 graphic     = "a.egalitarianism"
 graphic_alt = "-"
@@ -640,6 +644,7 @@ cost     = 6
 name     = _("Fundamentalism")
 req1     = "Theology"
 req2     = "Islam"
+root_req = "Islam"
 flags    = ""
 graphic     = "a.fundamentalism"
 graphic_alt = "-"
@@ -883,11 +888,11 @@ cost     = 160
 [advance_masonry]
 name     = _("Masonry")
 req1     = "Carpentry"
-req2     = "Pottery"
+req2     = "Bronze Working"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
-cost     = 20
+cost     = 30
 
 
 [advance_mass_entertainment]
@@ -897,7 +902,7 @@ req2     = "Construction"
 flags    = ""
 graphic     = "a.mass_entertainment"
 graphic_alt = "-"
-cost     = 60
+cost     = 80
 
 [advance_mass_production]
 name     = _("Mass Production")
@@ -957,11 +962,11 @@ cost     = 620
 [advance_modern_theatre]
 name     = _("Modern Theatre")
 req1     = "Mass Entertainment"
-req2     = "Invention"
+req2     = "Printing Press"
 flags    = ""
 graphic     = "a.modern_theatre"
 graphic_alt = "-"
-cost     = 120
+cost     = 240
 
 [advance_modern_warfare]
 name     = _("Modern Warfare")
@@ -1371,6 +1376,9 @@ req2     = "Machinery"
 flags    = ""
 graphic     = "a.steam_engine"
 graphic_alt = "-"
+helptext = _("\
+Allows Settlers, Migrants, Workers and Engineers to build Water Locks.\
+")
 cost     = 280
 
 [advance_steel]
@@ -1470,12 +1478,12 @@ cost     = 420
 [advance_the_republic]
 name     = _("The Republic")
 req1     = "Banking"
-req2     = "University"
+req2     = "Egalitarianism"
 root_req = "First Republic"
 flags    = ""
 graphic     = "a.the_republic"
 graphic_alt = "-"
-cost     = 160
+cost     = 260
 
 [advance_the_wheel]
 name     = _("The Wheel")
