@@ -504,7 +504,7 @@ sound_move    = "m_worker"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 15
 pop_cost      = 1
 attack        = 1
 defense       = 1
@@ -545,7 +545,7 @@ sound_move    = "m_settlers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_settlers"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 24
 pop_cost      = 2
 attack        = 0
 defense       = 1
@@ -589,7 +589,7 @@ sound_move    = "m_worker"
 sound_move_alt = "m_generic"
 sound_fight   = "f_worker"
 sound_fight_alt = "f_generic"
-build_cost    = 15
+build_cost    = 12
 pop_cost      = 1
 attack        = 0
 defense       = 1
@@ -629,7 +629,7 @@ sound_move    = "m_worker"
 sound_move_alt = "m_generic"
 sound_fight   = "f_worker"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 15
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -799,7 +799,7 @@ sound_move    = "m_phalanx"
 sound_move_alt = "m_generic"
 sound_fight   = "f_phalanx"
 sound_fight_alt = "f_generic"
-build_cost    = 15
+build_cost    = 10
 pop_cost      = 0
 attack        = 2
 defense       = 2
@@ -831,12 +831,12 @@ sound_move    = "m_partisan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_legion"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 15
 pop_cost      = 0
 attack        = 2
 defense       = 3
 hitpoints     = 15
-firepower     = 1
+firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -862,7 +862,7 @@ sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 8
+build_cost    = 10
 pop_cost      = 0
 attack        = 1
 defense       = 1
@@ -895,7 +895,7 @@ sound_move    = "m_archers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_archers"
 sound_fight_alt = "f_generic"
-build_cost    = 25
+build_cost    = 15
 pop_cost      = 0
 attack        = 2
 defense       = 1
@@ -930,7 +930,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 55
+build_cost    = 25
 pop_cost      = 0
 attack        = 6
 defense       = 3
@@ -962,7 +962,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 35
 pop_cost      = 0
 attack        = 9
 defense       = 4
@@ -997,7 +997,7 @@ sound_move    = "m_phalanx"
 sound_move_alt = "m_generic"
 sound_fight   = "f_phalanx"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 10
 pop_cost      = 0
 attack        = 1
 defense       = 2
@@ -1028,7 +1028,7 @@ sound_move    = "m_pikemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_pikemen"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 15
 pop_cost      = 0
 attack        = 2
 defense       = 3
@@ -1064,7 +1064,7 @@ sound_move    = "m_musketeers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_musketeers"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 20
 pop_cost      = 0
 attack        = 2
 defense       = 4
@@ -1098,7 +1098,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 45
+build_cost    = 30
 pop_cost      = 0
 attack        = 3
 defense       = 5
@@ -1130,7 +1130,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 40
 pop_cost      = 0
 attack        = 3
 defense       = 6
@@ -1166,7 +1166,7 @@ sound_move    = "m_marines"
 sound_move_alt = "m_generic"
 sound_fight   = "f_marines"
 sound_fight_alt = "f_generic"
-build_cost    = 55
+build_cost    = 50
 pop_cost      = 0
 attack        = 4
 defense       = 6
@@ -1198,7 +1198,7 @@ They can also shoot down helicopters.\
 
 [unit_skirmishers]
 name          = _("Skirmishers")
-class         = "Small Land"
+class         = "Infantry"
 tech_req      = "Warrior Code"
 obsolete_by   = "Halberdier"
 graphic       = "u.skirmishers"
@@ -1613,12 +1613,46 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
-flags         = "Capturer", "Unique", "Unbribable", "Marines"
+flags         = "Capturer", "Unique", "Unbribable", "Marines", "Diplomat"
 roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
 Corsairs are privateers hired by government to perform special operations: \
-attacking other ships from aboard or capturing them, or making raids on enemy territory.\n\
+attacking other ships from aboard or capturing them, or making raids on enemy territory and provide cover-ops like Diplomat \
+(except of establishing embassy).\n\
 They cannot occupy city thought.\
+")
+
+[unit_ninja]
+name          = _("Ninja Warriors")
+class         = "Small Land"
+tech_req      = "Martial Arts"
+obsolete_by   = "Marines"
+graphic       = "u.ninja"
+graphic_alt   = "u.barbarian_leader"
+sound_move    = "m_warriors"
+sound_move_alt = "m_generic"
+sound_fight   = "f_warriors"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 5
+defense       = 2
+hitpoints     = 12
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 3
+flags         = "Partial_Invis", "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
+roles         = "Hunter"
+helptext      = _("\
+Ninja are s supreme units, skilled in all special operations, like espionage, sabotage, infiltration, assassination, guerrilla warfare etc.\n\
+They can even walk on water (using special shoes), thus can attack other units from aboard \
+(or provide cover-ops like Spies, except of establishing embassies)\
 ")
 
 [unit_navy_seals]
@@ -1648,42 +1682,11 @@ uk_food       = 1
 uk_gold       = 3
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Capturer", "Unique", "Unbribable", "Marines", "Partial_Invis"
+flags         = "Capturer", "Unique", "Unbribable", "Marines", "Partial_Invis", "Diplomat", "Spy"
 roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
-Navy Seals are special units of scuba divers, capable to attack other ships from land of aboard.\
-")
-
-[unit_ninja]
-name          = _("Ninja warriors")
-class         = "Small Land"
-tech_req      = "Martial Arts"
-obsolete_by   = "Marines"
-graphic       = "u.ninja"
-graphic_alt   = "u.barbarian_leader"
-sound_move    = "m_warriors"
-sound_move_alt = "m_generic"
-sound_fight   = "f_warriors"
-sound_fight_alt = "f_generic"
-build_cost    = 60
-pop_cost      = 0
-attack        = 5
-defense       = 2
-hitpoints     = 12
-firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 3
-flags         = "Partial_Invis", "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
-roles         = "Hunter"
-helptext      = _("\
-Ninja are s supreme units, skilled in all special operations, like espionage, sabotage, infiltration, assassination, guerrilla warfare etc.\n\
-They can even walk on water (using special shoes), thus can attack other units from aboard (but can't conquer enemy cities like Marines)\
+Navy Seals are special units of scuba divers, capable to attack other ships from land or of aboard.\n\
+They can also provide cover ops like Spies (except of establishing embassies).
 ")
 
 [unit_alpine_troops]
@@ -1848,7 +1851,7 @@ sound_move    = "m_fanatics"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fanatics"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 45
 pop_cost      = 0
 attack        = 18
 defense       = 4
@@ -2001,6 +2004,8 @@ roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Bicycle infantry are fast scouting units.\
 ")
+
+;todo: ATV
 
 [unit_horsemen]
 name          = _("Horsemen")
