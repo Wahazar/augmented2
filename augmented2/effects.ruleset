@@ -3235,23 +3235,20 @@ reqs    =
 
 ;augmented: lux, no content
 [effect_colosseum]
-type    = "Output_Add_Tile"
-value   = 3
+type    = "Output_Bonus"
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Colosseum", "City"
       "OutputType", "Luxury", "Local"
-      "CityTile", "Center", "Local"
     }
 
 [effect_colosseum_1]
-type    = "Output_Add_Tile"
+type    = "Make_Content_Mil"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Tech", "Electricity", "Player"
       "Building", "Colosseum", "City"
-      "OutputType", "Luxury", "Local"
     }
 
 [effect_colosseum_culture]
@@ -3935,7 +3932,7 @@ reqs    =
 
 [effect_sdi_defense]
 type    = "Nuke_Proof"
-value   = 100
+value   = 75
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense", "City", TRUE

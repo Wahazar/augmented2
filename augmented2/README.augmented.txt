@@ -180,7 +180,7 @@ Elite                    +100%    (=)
 Veteran Elite            +125%    (=) 
 
 FORTIFIED                +50%     (=)
-(only Land, Big Land and spec-ops Small Land units can fortify; inside cities, they are
+(only military units can fortify; inside cities, they are
 always considered fortified)
 
 BASE             VS LAND  VS SEA   VS AIR   VS MISSILE
@@ -190,12 +190,13 @@ Airstrip         +0%      +0%      +50%     +50%
 Airbase          +50%     +50%     +100%    +100%
 
 CITY             VS LAND  VS SEA   VS AIR   VS MISSILE
-Ruins	  	      +25%
+Ruins	  	      +25% for Small Land
 Town (Pop<=8)    +50%     +0%      +0%      +0%
 City (Pop>8)     +100%    +50%     +0%      +0%
 
 Buildings each add:
 Walls            +100%    +0%      +0%      +0%
+Palisade         +25%
 Great Wall(W)    +50%     +0%      +0%      +0%
 Coastal Defense  +0%      +100%    +0%      +0%
 SAM Battery      +0%      +0%      +100%    +0%
@@ -377,9 +378,11 @@ BUILDINGS:
 Altered effects - 
 
 Barrack:
-Tier I: Recruits for Small Land (and Wheeled Units under Despotism), Veteran for Land units.
-Tier II: Recruits for Small Land and Wheeled Units, Veteran for Land units.
-Tier III: Recruits for Small Land and Wheeled Units, Veteran for Land and Big Land units.
+Infantry Barracks -
+Tier I: Recruits for Small Land, Veteran for Infantry units.
+Tier II: Recruits for Small Land, Veteran for Infantry units (trade bonus if Saltpeter tile is workable in city)
+Stable Barracks: Recruits for Light Cavalry, Veteran for Heavy Cavalry.
+Workshop Barrack: Veteran for Wheeled Units, Big Land, Mech. Inf.
 
 Harbour:
 Deckhand level for Sea class (cumulative with Lighthouse), 25% faster HP regen for Sea and Trireme.
@@ -390,7 +393,9 @@ Add 25% gold city income if Railway Station is builded.
 
 Super Highways, Courthouse, City Walls, Airport, Mass Transit: see CITY SIZE
 
-Colosseum: add 3 luxury points (4 with Electricity) instead of making content.
+Colosseum: Small Wonder, increase luxury by 50% and make 1 military unhappy citizen content.
+Amphitheatre: add 3 luxury points (only 2 with Cinematography) 
+Theater add 2 luxury points (4 with Cinematography)
 
 Bank, Stock Exchange: only Tax increase.
 Marketplace: overall Trade increase.
@@ -546,186 +551,198 @@ UNITS:
 Caravans and migrants are unique units. Freights and Slaves are not unique. 
 
 Following military unit groups:
-* regular Land units - defensive infantry, assault infantry, fast assault units, peacemakers - can't move into mountains/glaciers (some units can attack it).
-* reconnaissance Small Land units (explorers, archers, snipers etc) - can move everywhere;
-* direct fire artillery - movement restricted to roads (less restriction for self-propelled units), can't occupy towns, can attack non native tiles;
-* plunging fire artillery - movement restricted to roads (less restriction for self-propelled units), ignore walls, bombardment action, can't occupy towns, can attack non native tiles;
+* Infantry units - defensive or assault infantry - can't move into mountains (some units can attack it).
+* fast assault units: LightCavalry - can't move into mountains/glaciers (some units can attack it), Heavy Cavalry - cant go also into Swamps.
+* reconnaissance Small Land units (explorers, archers, snipers, peacemakers etc) - can move everywhere;
+* direct fire artillery - movement restricted to roads and flat tiles (less restriction for self-propelled units), can't occupy towns, can attack non native tiles;
+* plunging fire artillery - movement restricted to roads and flat tiles (less restriction for self-propelled units), ignore walls, bombardment action, can't occupy towns, can attack non native tiles;
 * Big Land class - movement more restricted than for regular Land class, but less compared to Wheeled Units. Can't be loaded on some units.
 * Turrets - can't move by itself (can reside in cities/forts/airstrips), can be boarded on Sea units/armoured trains, can attack from and at non native tiles;
 * Sea class units: can go on Ocean tiles;
 * Trireme class units: can go on Coast Ocean, River and Lake tiles;
 * Air class units, Helicopters, Missiles: can go everywhere;
 * Bombs, Torpedos - can be loaded on Air units (and some Sea units).
-* Diplomatic actions and espionage: Messenger, Diplomat, Spy (and unique Ninja)
+* Diplomatic actions and espionage: Messenger, Diplomat, Spy (and unique Corsair, Ninja, Navy Seals)
 
 Units reference table:
 
-upkeep -		production	sh.	fd.	gold	unh.	A	D	HP	FP	BR	MP	mov.restr.	fuel/pop	capacity	comments
+upkeep -	prod.	sh.	fd.	gold	unh.	A	D	HP	FP	BR	MP  m.restr. fuel/pop cap.  comments
 															
 initial															
-tribe	10		0	1	0	0	1	1	5	1		1		1P		
+tribe		15	0	1	0	0	1	1	5	1		1		1P		
 															
 civilian															
-settlers		30	0	2	1	0	0	1	20	1		1		2P		
-migrants		10	0	1	0	0	0	1	10	1		1		1P		unique
-workers		20	0	1	1	0	0	1	10	1		1				capturable
-engineers		30	1	0	1	0	0	2	20	1		2				
-slaves		10	0	1	0	0	0	1	5	1		1		1P		capturable
+settlers	24	1	2	1	0	0	1	20	1		1		2P		
+migrants	12	1	1	0	0	0	1	10	1		1		1P		unique
+workers		15	1	1	1	0	0	1	10	1			1			capturable
+engineers	30	2	0	1	0	0	2	20	1		2				
+slaves		15	0	1	0	0	0	1	5	1			1		1P	capturable	capturable
 															
 peacemakers															
-warriors		10	0	1	1	1	1	1	10	1		1	m,g			
-halberdier		15	0	1	1	1	2	2	12	1		1	m,g			
-riot police		20	1	1	1	1	2	3	15	2		1	m,g			
+militia 	6	0	1	1	1	1	1	10	1		1				
+halberdier	10	1	1	1	1	2	2	12	1		1				
+riot police	15	2	1	1	1	2	3	15	2		1				
 															
 reconnaissance															
-archers		25	1	1	1	1	2	1	5	1	3	1				IgWall, AttNoNat.
-marksman		55	1	1	2	1	6	2	10	2	1	1				IgTer, AttNoNat.
-sniper		60	1	1	3	1	9	4	10	2	1	1				IgTer, InVis, AttNoNat.
+hunters		10	1	1	1	1	2	1	5	1	1	1			AttNoNat.
+archers		15	2	1	1	1	2	1	6	1	3	1			IgWall, AttNoNat.
+marksman	25	2	1	2	1	6	2	10	2	1	1			IgTer, AttNoNat.
+sniper		35	2	1	3	1	9	4	10	2	1	1			IgTer, InVis, AttNoNat.
 															
 defending															
-phalanx		20	0	1	1	1	1	2	12	1		1	m,g			
-pikemen		30	0	1	1	1	2	3	15	1		1	m,g			Horse *2
-musketeers		40	1	1	1	1	2	4	10	2		1	m,g			
-riflemen		45	1	1	1	1	3	5	12	2		1	m,g			AttNoNat
-infantry		50	1	1	2	1	3	6	12	3		1	m,g			AttNoNat
-modern rangers	55	1	1	2	1	4	6	15	3		1	m,g			AttNoNat
+phalanx		10	1	1	1	1	1	2	12	1		1	m,g			
+pikemen		15	1	1	1	1	2	3	15	1		1	m,g			Horse *2
+musketeers	20	2	1	1	1	2	4	10	2		1	m,g			
+riflemen	30	2	1	1	1	3	5	12	2		1	m,g			AttNoNat
+infantry	40	2	1	2	1	3	6	12	3		1	m,g			AttNoNat
+modern rangers	50	2	1	2	1	4	6	15	3		1	m,g			AttNoNat
 															
 assaulting															
-legion		30	0	1	1	1	3	2	15	1		1	m,g			
-arbalest		35	1	1	1	1	5	1	10	1		1	m,g			AttNoNat
-swordsmen		40	0	1	1	1	4	2	15	1		1	m,g			
-arquebusiers	40	1	1	1	1	4	2	10	2		1	m,g			
-grenadier		50	1	1	1	1	6	3	10	2		1	m,g			
-stormtrooper	60	1	1	1	1	6	4	12	3		1	m,g			
-marines		65	1	1	2	1	8	4	15	3		1	m,g			Marines
-super soldiers	75	2	1	2	1	9	5	15	3		1	m,g			Marines
+skirmishers 	10	1	1	1	1	2	1	10	1		1	m,g			
+legion		18	1	1	1	1	3	2	14	1		1	m,g			
+arbalest	20	2	1	1	1	5	1	10	1		1	m,g			AttNoNat
+swordsmen	25	1	1	1	1	4	2	15	1		1	m,g			
+samurai		30	1	1	1	1	5	4	15	1		1	m,g			
+arquebusiers	30	2	1	1	1	4	2	10	2		1	m,g			
+grenadier	40	2	1	1	1	6	3	10	2		1	m,g			
+stormtrooper	50	2	1	2	1	6	4	12	3		1	m,g			
+marines		60	2	1	2	1	8	4	15	3		1	m,g			Marines
+super soldiers	70	3	1	2	1	9	5	15	3		1	m,g			Marines
 															
-paratroopers	60	1	1	2	1	6	5	12	3		1	m,g			Paratroopers
+paratroopers	55	2	1	2	1	6	5	12	3		1	m,g			Paratroopers
 															
 spec-ops															
-vikings		20	0	1	1	1	1	1	5	1		1				Unique,Marines,AttNoNat
-corsairs		30	1	1	2	1	2	1	10	2		1				Unique,Marines,AttNoNat
-navy seals		50	1	1	3	1	8	2	12	3		1				Unique,Marines,AttNoNat,InVis
-ninja	60		1	1	3	1	5	2	12	1		1				Unique,Marines,AttNoNat,InVis,Spy,IgTer
-alpine troops	65	1	1	2	1	7	5	12	2		1				IgTer
+vikings		15	0	1	1	1	1	1	5	1		1			Unique,Marines,AttNoNat
+corsairs	20	1	1	2	1	2	1	10	2		1			Unique,Marines,AttNoNat
+navy seals	40	2	1	3	1	8	2	12	3		1		Unique,Marines,AttNoNat,InVis
+ninja		60	1	1	3	1	5	2	12	1		1	Unique,Marines,AttNoNat,InVis,Spy,IgTer
+alpine troops	55	2	1	2	1	7	5	12	2		1				IgTer
 															
 other															
-partisan		30	1		0	1	5	3	10	3		1		1P		IgTer, IgZOC
-fanatics		40	1	1	0	0	4	5	10	3		1	m,g			Fanatic
+partisan	15	1	0	0	1	5	3	10	3		1		1P		IgTer, IgZOC
+fanatics	20	1	1	0	1	4	5	10	3		1	m,g	1U		Fanatic
+janissary	30	2	1	1	1	4	4	12	2		1	m,g			AttNoNat
+technical	45	2	0	2	1	18	4	15	3		2	only r		1	Fanatic, Missile
 															
-technical		50	1	0	1	1	18	4	15	3		2	only r		1	Fanatic, Missile
 															
-dromedari		30	0	1	1	1	4	2	10	1		2	m,g			BadWallAttacker
-janissary		40	1	1	1	1	4	4	10	2		1	m,g			AttNoNat
-samurai		35	0	1	1	1	5	4	15	1		1	m,g			
-mounted samurai	40	0	2	1	1	5	3	15	1		1	m,g			
+light cavalry															
 															
-cavalry															
-horsemen		18	0	1	1	1	2	1	10	1		2	m,g			BadWallAttacker
-mounted archery	25	1	1	1	1	3	1	10	1		2	m,g			AttNoNat
-chariot		30	0	1	2	1	4	1	10	1		2	only r			BadWallAttacker
-elephants		50	0	2	1	1	3	2	20	1		2	m,g,s			BadWallAttacker
-crusaders		40	0	2	2	1	5	1	15	1		2	m,g			Fanatic, BadWallAtt.
-knights		45	0	2	1	1	4	2	15	1		2	m,g			BadWallAttacker
-dragoons		55	1	2	1	1	5	2	12	2		2	m,g			AttNoNat, BadWallAtt
-cavalry		65	1	2	2	1	7	4	12	2		2	m,g			AttNoNat, BadWallAtt
-mech. Inf.		80	2	1	2	1	6	6	20	3		3	m,g			AttNoNat, BadWallAtt
+mounted archery	18	1	2	1	1	3	1	10	1		2	m,g			AttNoNat
+dromedari	25	1	2	1	1	4	2	10	1		2	m,g			
+lancers		35	2	2	1	1	4	3	10	2		2	m,g			AttNoNat
+bicycle inf.	40	2	1	2	1	5	3	10	2		2	m,g			AttNoNat
+ATV troops	50	3	1	2	1	7	4	10	3		3	m,g			AttNoNat
+															
+															
+heavy cavalry															
+horsemen	12	1	2	1	1	2	1	12	1		2	m,g			BadWallAttacker
+chariot		20	1	2	1	1	4	1	10	1		2	only r			BadWallAttacker
+elephants	35	1	3	1	1	3	2	20	1		2	m,g,s			BadWallAttacker
+crusaders	25	1	2	2	1	5	1	16	1		2	m,g			Fanatic, BadWallAtt.
+knights		30	1	2	1	1	4	2	16	1		2	m,g			BadWallAttacker
+mounted samurai	35	1	2	1	1	5	3	15	1		1	m,g			BadWallAttacker
+cuirassier	40	2	2	1	1	4	3	14	2		2	m,g			BadWallAttacker
+dragoons	50	2	2	2	1	6	4	12	2		2	m,g			BadWallAttacker
+mounted. Inf.	60	2	2	3	1	6	5	12	3		3	m,g		AttNoNat, BadWallAtt
+mech. Inf.	75	3	1	3	1	6	6	20	3		3	m,g		AttNoNat, BadWallAtt
 															
 armoured															
-armoured train	120	2	0	2	1	6	8	30	3	2	10	only rr, turret+		3	BadWallAtt
-armor			100	3	0	3	1	10	5	30	3		2	m,g,s			Lights. *2, AttNoNat, BadWallAtt
-reactive armor	130	3	0	4	1	11	5	30	3		3	m,g,s			Lights. *3, AttNoNat, BadWallAtt
-auton. war mech	180	2	0	3	0	7	3	20	3		2	m,g,s			AttNoNat, BadWallAtt
+armoured train	90	3	0	2	1	6	8	30	3	2	10	only rr, turret+		3	BadWallAtt
+armor		80	4	0	3	1	10	5	30	3		2	m,g,s			Lights. *2, AttNoNat, BadWallAtt
+reactive armor	100	4	0	4	1	11	5	30	3		3	m,g,s			Lights. *3, AttNoNat, BadWallAtt
+aut. war mech	130	3	0	4	0	7	3	20	3		2	m,g,s			AttNoNat, BadWallAtt
 															
 plunging fire artillery															
-catapult		45	1	0	2	1	6	1	5	1	1	1	only r			IgWall, AttNoNat
-cannon		60	2	0	2	1	7	1	5	2	2	1	only r			IgWall, AttNoNat
-howitzer		80	2	0	3	1	9	1	10	3	2	1	only r			IgWall, AttNoNat
-self-pr.howitzer	110	3	0	4	1	10	2	25	3	3	2	m,g,s			IgWall, AttNoNat
-mobile AA gun	120	2	0	3	1	8	4	20	3	4	3	m,g,s			AttNoNat
+catapult	40	2	0	2	1	6	1	5	1	1	1	only r			IgWall, AttNoNat
+cannon		50	3	0	2	1	7	1	5	2	2	1	only r			IgWall, AttNoNat
+howitzer	65	3	0	3	1	9	1	10	3	2	1	only r			IgWall, AttNoNat
+s-pr. howitzer	90	4	0	4	1	10	2	25	3	3	2	m,g,s			IgWall, AttNoNat
+mob. a-a gun	80	3	0	3	1	8	4	20	3	4	3	m,g,s			AttNoNat
 															
 stationary artillery															
-ballista		35	1	0	1	0	7	1	5	1		1	only f			NoVeteran, AttNoNat
-bombard		45	2	0	1	0	8	1	5	2		1	only f			NoVeteran, AttNoNat
-turret cannon	60	3	0	2	0	11	2	15	4		1	only f			NoVeteran, AttNoNat
-turret aa gun	50	2	0	2	0	7	2	10	3		2	only f			NoVeteran, AttNoNat
+ballista	20	2	0	1	0	7	1	5	1		1	only f		NoVeteran, AttNoNat
+bombard		30	3	0	1	0	8	1	5	2		1	only f		NoVeteran, AttNoNat
+turret cannon	50	4	0	2	0	11	2	15	4		1	only f		NoVeteran, AttNoNat
+turret aa gun	40	3	0	2	0	7	6	10	3		2	only f		NoVeteran, AttNoNat
 															
 siege artillery															
-battering ram	40	0	1	2	1	7	1	12	1		1	only r			CityBuster, AttNoNat
-artillery	60	2	0	2	1	10	2	10	2		1	only r			CityBuster, AttNoNat
-Anti-tank gun	70	2	0	3	1	10	3	12	3		2	only r			CityBuster, AttNoNat
-self-pr. gun	90	3	0	3	1	12	4	25	3		2	m,g,s			CityBuster, AttNoNat
+battering ram	30	1	1	2	1	7	1	12	1		1	only r		CityBuster, AttNoNat
+artillery	45	3	0	2	1	10	2	10	2		1	only r		CityBuster, AttNoNat
+Anti-tank gun	60	3	0	3	1	10	3	12	3		2	only r		CityBuster, AttNoNat
+s-prop. gun	75	4	0	3	1	12	4	25	3		2	m,g,s	CityBuster, AttNoNat
 															
 planes															
-airplane		40	1	0	2	1	4	4	10	2		8		1		
-zeppelin		70	2	0	2	1	5	2	10	2	1	4		4		
-fighter		60	2	0	2	1	5	5	15	3		8		2		
-bomber		110	3	0	2	2	6	2	20	3	2	6	bomb+	4	2	
-helicopter		90	2	0	3	1	5	3	30	3	2	6				
-strike aircraft	80	2	0	2	1	4	3	15	3		7	bomb/t+	2	1	
-jet fighter		90	2	0	2	1	6	6	20	3		12		2		
-strike jet		100	3	0	2	1	7	4	25	3		10	bomb/t+	2	1	
-stealth fighter	130	3	0	3	1	8	8	25	3		14	bomb/t+	2	1	
-stealth bomber	200	4	0	3	2	9	5	40	3	4	10	bomb+	4	3	
-antimatter fight.	240	3	0	4	1	9	9	20	3		16	bomb/t+	3	1	
-antimatter bomber	360	4	0	4	2	10	6	30	3	6	12	bomb+	6	2	
+airplane	30	2	0	2	1	4	4	10	2		8		1		
+zeppelin	50	2	1	2	1	5	2	10	2	1	4		4		
+fighter		40	3	0	2	1	5	5	15	3		8		2		
+bomber		90	3	1	2	2	6	2	20	3	2	6	bomb+	4	2	
+helicopter	75	3	0	3	1	5	3	30	3	2	6				
+strike aircraft	60	3	0	2	1	4	3	15	3		7	bomb/t+	2	1	
+jet fighter	70	3	0	2	1	6	6	20	3		12		2		
+strike jet	90	4	0	2	1	7	4	25	3		10	bomb/t+	2	1	
+stealth fighter	110	4	0	3	1	8	8	25	3		14	bomb/t+	2	1	
+stealth bomber	200	4	1	3	2	9	5	40	3	4	10	bomb+	4	3	
+a.matt. fighter	170	4	0	4	1	9	9	20	3		16	bomb/t+	3	1	
+a.matt. bomber	280	4	1	4	2	10	6	30	3	6	12	bomb+	6	2	
 															
 river/coast boats															
-raft			10	0	0	1	0	0	1	5	1		2			1	
-trireme		30	0	2	1	1	1	1	15	1		3			2	
-aak			35	0	2	1	0	0	2	20	1		3			3	
-steam_barge		50	1	1	1	0	0	2	25	1		3			4	
-diesel_barge	55	1	1	2	0	0	3	25	1		4			5	
+canoe		15	0	1	1	0	0	1	5	1		2			1	unique
+raft		10	1	0	0	0	0	1	5	1		2			1	
+trireme		20	1	2	1	1	1	1	15	1		3			2	
+aak		25	1	2	1	0	0	2	20	1		3			3	
+steam_barge	40	2	1	1	0	0	2	25	1		3			4	
+diesel_barge	50	2	1	2	0	0	3	25	1		4			5	
 															
 river/coast warships		0	0		0										
-galley		45	0	2	2	1	2	3	20	1		3	turret+		1	
-monitor		60	1	1	2	1	2	5	20	2		4	turret+		1	
-patrol boat		75	2	1	2	1	3	5	20	3		6	turret/t+		1	
+galley	30	1	2	2	1	2	3	20	1		3	turret+		1	
+monitor	50	2	1	2	1	2	5	20	2		4	turret+		1	
+patrol boat	60	3	1	2	1	3	5	20	3		6	turret/t+		1	
 															
 sea boats															
-longboat		30	0	1	1	0	0	1	10	1		2			1	Unique
-cog	40		0	2	1	0	0	3	10	1		3			2	
-Junk	40		0	2	1	1	2	2	10	1		3			2	
-galleon		50	0	2	1	0	0	3	20	1		4			3	
-paddle steamer	65	1	1	2	0	0	4	25	1		4			6	
-transport		80	2	1	2	0	0	5	40	1		5			8	
+longboat	20	0	1	1	0	0	1	10	1		2			1	Unique
+cog	30	1	2	1	0	0	3	10	1		3			2	
+Junk	25	1	2	1	1	2	2	10	1		3			2	
+galleon	40	1	2	1	0	0	3	20	1		4			3	
+paddle steamer	50	2	1	2	0	0	4	25	1		4			6	
+transport	65	3	1	2	0	0	5	40	1		5			8	
 															
 sea warships															
-caravel		50	0	2	1	1	2	4	15	1		3			1	turret+
-frigate		60	0	2	2	1	3	4	20	1		4			1	turret+, AttNoNat
-flagship frigate	80	0	2	3	1	5	8	20	1		5			2	Unique, turret+, AttNoNat
-ironclad		70	1	1	2	1	4	5	20	2		4			1	turret+, AttNoNat
-destroyer		90	1	1	3	1	4	6	25	3		6			1	turret/t+, AttNoNat
-cruiser		120	2	1	4	1	5	10	30	3		5			2	turret+, AttNoNat
-battleship		160	3	2	4	2	6	11	40	4		4			3	turret+, AttNoNat
-aegis cruiser	180	4	1	4	2	6	12	40	4		5			3	turret/c+, AttNoNat
-railgun destroyer	130	1	1	4	1	4	7	30	4		6			2	turret/t+, AttNoNat
+caravel		40	1	2	1	1	2	4	15	1		3			1	turret+
+frigate		50	1	2	2	1	3	4	20	1		4			1	turret+, AttNoNat
+flagship fr.	70	1	2	3	1	5	8	20	1		5			2	Unique, turret+, AttNoNat
+ironclad	60	2	1	2	1	4	5	20	2		4			1	turret+, AttNoNat
+destroyer	65	2	1	3	1	4	6	25	3		6			1	turret/t+, AttNoNat
+cruiser		85	3	1	4	1	5	10	30	3		5			2	turret+, AttNoNat
+battleship	100	4	2	4	2	6	11	40	4		4			3	turret+, AttNoNat
+aegis cruiser	120	4	1	4	2	6	12	40	4		5			3	turret/c+, AttNoNat
+railgun destr.	80	2	1	4	1	4	7	30	4		6			2	turret/t+, AttNoNat
 															
 other ships															
-submarine		140	2	1	3	1	4	5	20	2		5			4	torpedo+
-nuclear_submarine	190	3	1	4	1	5	6	25	3		6			8	torpedo/m+
-carrier		150	2	1	4	1	0	9	40	2		5			8	
+submarine	90	3	1	3	1	4	5	20	2		5			4	torpedo+
+nucl.submarine	120	4	1	4	1	5	6	25	3		6			8	torpedo/m+
+carrier		110	3	1	4	1	0	9	40	2		5			8	
 															
 missiles															
-cruise missile	50	1	0	2	1	18	0	10	4		16		1		
-Abomb			160	1	0	3	3	99	0	10	3		2		1		
-nuclear		190	2	0	3	3	99	0	10	4		16		1		
-torpedo		25	1	0	1	0	10	0	5	3		2		1		
-GBU			20	0	0	1	0	8	0	5	3		1		1		
+cruise missile	40	2	0	2	1	18	0	10	4		16		1		
+Abomb		150	2	0	3	3	99	0	10	3		2		1		
+nuclear		180	3	0	3	3	99	0	10	4		16		1		
+torpedo		20	2	0	1	0	10	0	5	3		2		1		
+GBU		15	1	0	1	0	8	0	5	3		1		1		
 															
 espionage															
-messenger		20	0	1	1	0	0	0	10	1		1				no incite
-diplomat		30	0	1	2	0	0	0	10	1		2				
-spy			40	0	1	3	0	0	0	10	1		3				
+messenger	15	0	1	1	0	0	0	10	1		1				no incite
+diplomat	20	0	1	2	0	0	0	10	1		2				
+spy		30	1	1	3	0	0	0	10	1		3				
 															
 land transport															
-caravan		50	0	1	1	0	0	1	10	1		1				
+caravan		30	0	1	1	0	0	1	10	1		1				Unique
 freight		50	1	0	1	0	0	1	20	1		2				
-train			80	1	0	2	0										
+train		60	1	0	2	0										
 															
 exploration															
-explorer		20	0	0	1	0	0	1	5	1		1				IgTer
+explorer	15	0	1	1	0	0	1	5	1		1				IgTer
 leader		0	0	0	0	0	2	20	1		2				
-balloon		20	0	1	0										
-AWACS			140	2	0	3	0	0	1	30	3		16		3		
-drone			80	1	0	1	0	4	2	10	3		12				
+balloon		15	1	0	1	0										
+AWACS		120	3	0	3	0	0	1	30	3		16		3		
+drone		70	2	0	1	0	4	2	10	3		12				
+

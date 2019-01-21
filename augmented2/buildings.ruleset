@@ -1365,7 +1365,7 @@ helptext	= _("\
 Protects a city and its environs (up to 2 tiles away) from attacks \
 by other nations' Nuclear units. A Nuclear unit not owned by you or a \
 teammate which attacks a city with SDI Defense, or attacks a unit (or is \
-deliberately exploded) within range, is shot down and simply has no effect. \
+deliberately exploded) within range, have 75% chance to be shot down. \
 Also, doubles the intrinsic defense strength of units in the city when \
 defending against conventional missiles.\
 ")
