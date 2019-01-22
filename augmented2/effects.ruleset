@@ -6991,7 +6991,7 @@ reqs	=
 ; Every Land except of IgWall flag
 [effect_palisade_0]
 type    = "Defend_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Palisade", "City", TRUE

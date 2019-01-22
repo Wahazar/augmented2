@@ -1200,7 +1200,7 @@ They can also shoot down helicopters.\
 name          = _("Skirmishers")
 class         = "Infantry"
 tech_req      = "Warrior Code"
-obsolete_by   = "Halberdier"
+obsolete_by   = "Legion"
 graphic       = "u.skirmishers"
 graphic_alt   = "u.warriors"
 sound_move    = "m_warriors"
@@ -2248,7 +2248,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 2
 uk_gold       = 1
-flags         = "Capturer", "Horse", "Light Shells", "BadWallAttacker"
+flags         = "Capturer", "Horse", "Light Shells", "BadWallAttacker", "Only_Native_Attack"
 roles         = "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Cuirassiers are heavy cavalry equipped with armour and early firearms.\
@@ -2282,7 +2282,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 2
 uk_gold       = 2
-flags         = "Capturer", "Horse", "Light Shells", "BadWallAttacker"
+flags         = "Capturer", "Horse", "Light Shells", "BadWallAttacker", "Only_Native_Attack"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Dragoons are well trained, mounted soldiers.\
@@ -2293,7 +2293,7 @@ This unit cannot move across swamps, glaciers and mountains.\
 
 [unit_mounted_inf]
 name          = _("Mounted Inf.")
-class         = "Big Land"
+class         = "Heavy Cavalry"
 tech_req      = "Machine Tools"
 obsolete_by   = "Mech. Inf."
 graphic       = "u.mounted_inf"

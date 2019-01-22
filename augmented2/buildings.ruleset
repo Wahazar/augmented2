@@ -1139,9 +1139,8 @@ sound		= "b_city_walls"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Palisade add a +25% bonus to the \
+Palisade add a +50% bonus to the \
 intrinsic defense strength of units within the city against land units \
-(that is a two-thirds increase for small cities, \
 but is ineffective against airborne, sea units or plunging fire artillery. \
 Unlike City Walls, Palisade does not prevent the loss of population which occurs \
 when a defending unit is defeated by a land unit.\n\
