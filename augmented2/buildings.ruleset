@@ -1280,7 +1280,8 @@ extra food from wheat and bison tiles, \n \
 extra trade from gems and gold tiles, \n \
 extra shield from grassland resources, silk tiles and any jungle tile, \n \
 increased productivity and additional trade from coal mines and iron mines (together with steel mill, cement or power plant).\n \
-Together with supermarket, increases the tax output in a city by 25%.\
+Together with supermarket, increases the tax output in a city by 25%.\n\
+Make veteran Armoured Trains and provide fast regeneration of train units.\
 ")
 
 [building_research_lab]
@@ -1586,7 +1587,8 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Increases tax output in a city by an additional 50%, \
-100% total with Bank.\
+100% total with Bank (except under a Communist government). \n\
+Additionally, together with Super Highways, increase city trade by 25% (regardless of government). \
 ")
 
 [building_super_highways]
@@ -1607,7 +1609,7 @@ sabotage	= 100
 sound		= "b_super_highways"
 sound_alt	= "b_generic"
 helptext	= _("\
-Each tile around the city with roads and without farmland, that\
+Each tile around the city with highways and without farmland, that\
  is already generating some trade, produces one extra trade resource.\
  The same applies to the city center tile (even if it is receiving a\
  farmland bonus).\
@@ -1615,8 +1617,7 @@ Each tile around the city with roads and without farmland, that\
 ; /* xgettext:no-c-format */
 _("\
 Together with the Stock Exchange, also increase overall city Trade by an additional 25%.\
-"), 
-_("\
+"), _("\
 Super Highways also increase the pollution caused by the population\
  of the city.\
 ")
@@ -1885,8 +1886,33 @@ sound		= "w_internet"
 sound_alt	= "w_generic"
 helptext	= _("\
 Defense Advanced Research Projects Agency upgrades one obsolete unit per game turn.\n\
-Small Land military units have Veteran level instead of Recruits, if builded in Infantry Barracks II.\n\
+Big Land military units have Veteran level instead of Recruits, if builded in Workshop Barracks.\n\
 DARPA is also required to build Internet.\
+")
+
+[building_ecole_speciale_militaire]
+name		= _("Ecole Speciale Militaire")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Chemical Synthesis", "Player"
+	 "MinCulture", "1200", "Player"
+    }
+graphic	= "b.ecole_speciale_militaire"
+graphic_alt	= "b.university"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "b_university"
+sound_alt	= "w_generic"
+helptext	= _("\
+Ecole speciale militaire de Saint-Cyr was founded by Napoleon Bonaparte, with given motto: 'study to win'.\n\
+All your new infantry, cavalry, reconnaissance or wheeled units start with an additional veteran level \
+(this is cumulative with any Barracks building in a city; with both, units \
+are created as Hardened).\
 ")
 
 [building_eiffel_tower]
@@ -2503,7 +2529,7 @@ graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Machine Tools", "Player", FALSE
+      "Tech", "Machine Tools", "World", FALSE
     }
 build_cost	= 300
 upkeep		= 0
@@ -2764,7 +2790,7 @@ sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 This stunning technological achievement makes one content citizen \
-happy in each of your cities (2 extra luxury per city).\n\
+happy in each of cities of any player who knows Genetic Engineering (2 extra luxury per city).\n\
 Together with an Aqueduct, a Sewer System, Hospital and Pasteur Institute, \
 it entirely eliminates the risk of plague.\
 ")
@@ -2991,7 +3017,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 This sacred site is a focal point of the pilgrimages.\n\
 Each tile with road around the city produce additional trade point.\n\
-Additionally, each Mosque which belongs to any player, neutralizes unhappiness caused by one military unit.\
+Additionally, each Mosque which belongs to any allied player, neutralizes unhappiness caused by one military unit.\
 ")
 
 [building_b_large_hadron_collider]
@@ -3031,7 +3057,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
-build_cost	= 1000
+build_cost	= 800
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -3040,7 +3066,7 @@ helptext	= _("\
 There is belief, that this giant statue calm turbulent river waters.\
 City with this Wonder would gain additional food from each river tile.\n\
 Additionally, thanks to the Buddha The Wise ideas, any Monk Monastery\
-would make 1 unhappy citizen content, for any player city.\
+would make 1 unhappy citizen content, for any alliance city.\
 ")
 
 [building_manhattan_project]

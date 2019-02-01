@@ -118,7 +118,7 @@ _("\
  (Cities below size 3 will not celebrate.)\n\
 * Each city gets 1 extra content citizen.\n\
 * Each city can support up to 2 units for free; further units each cost\
- 1 shield per turn (more than 6, also food).\n\
+  shields per turn (more than 6, also food).\n\
 * Unlike later governments, military units do not cause unhappiness even\
  when deployed aggressively.\n\
 * Base corruption and waste is 30% (the highest under any government)\
@@ -155,8 +155,7 @@ _("\
 * Each worked tile that gives more than 2 Food, Shield, or Trade will\
  suffer a -1 penalty, unless the city working it is celebrating.\
  (Cities below size 3 will not celebrate.)\n\
-* Each city can support up to 2 units for free; further units each cost\
- 1 gold per turn (more than 3 units, also shield).\n\
+* Each city can support up to 2 gold and 4 shield unit payments for free.\n\
 * Unlike later governments, military units do not cause unhappiness even\
  when deployed aggressively.\n\
 * Military units impose martial law. Up to 3 military units inside a city\
@@ -194,8 +193,8 @@ _("\
  Palace) get a +50% bonus to gold production.\n\
 * Celebrating cities produce one extra trade point for every tile which is\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
-* Each city can support up to 3 units for free (the maximum possible);\
- further units each cost 1 gold per turn (more than 4 units, also shield).\n\
+* Each city can support up to 3 gold payments for units for free,\
+ and 5 shield payments (additional payment free for city size 8 and above)\n\
 * Each city tolerates up to 3 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
 * Military units impose martial law. Up to 2 military units inside a city\
@@ -232,8 +231,8 @@ Communism is a good government for maximizing shield production, and\
 _("\
 * City improvements which would normally have an upkeep of 1 gold are\
  free of upkeep.\n\
-* Each city can support up to 3 units for free (the maximum possible);\
- further units each cost 1 shield per turn, more than 8 units pay also gold and doubled food.\n\
+* Each city can support up to 3 shield and 8 gold/food unit payments for free;\
+ food payment is doubled.\n\
 * Each city tolerates up to 3 aggressively deployed military units (cities size 8 or above support more of them);\
  each further unit causes 1 unhappy citizen.\n\
 * Military units impose martial law. Up to 3 military units inside a city\
@@ -283,8 +282,7 @@ _("\
 * Base science production is half that of other governments. (A\
  Fundamentalist city with a Library produces as much science as a\
  city under another government does alone.)\n\
-* Each city can support up to 2 units for free; further units each cost\
- double gold per turn (except for Fanatics). More than 6 units, pay also shield (mo exception)\n\
+* Each city can support up to 4 gold and 6 shield unit payments for free; \n\
 * Each city tolerates up to 2 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 15%. This increases with distance from the capital\
@@ -319,8 +317,7 @@ _("\
 * Each city gets 2 extra luxury points.\n\
 * Celebrating cities produce one extra trade point for every tile which is\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
-* Each city can support up to 2 units for free; further units each cost\
- shields and double gold).\n\
+* Each city can support up to 2 gold/shield unit payment for free; gold payment is doubled).\n\
 * Each city tolerates one aggressively deployed military unit;\
  each further unit causes 1 unhappy citizen.\n\
 * There is no base level of corruption, but an increasing amount\
@@ -362,8 +359,7 @@ _("\
 * Celebrating cities produce a further trade point for every worked tile\
  (land or water) which is already producing trade. (Cities below size 3\
  will not celebrate.)\n\
-* Each city with size 8 and above can support one unit for free; further units each cost\
- 1 shield per turn (more than 3, also gold).\n\
+* Each city with size 8 and above can support one shield unit payment for free; additionally 6 gold unit payment are free.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 25%. This increases with distance from the capital\
@@ -402,8 +398,8 @@ _("\
 * Celebrating cities produce a further trade point for every worked tile\
  (land or water) which is already producing trade. (Cities below size 3\
  will not celebrate.)\n\
-* Each city with size 8 and above can support one unit for free; further units each cost\
- double gold per turn (more than 3, also shield).\n\
+* Each city with size 8 and above can support 2 gold unit payments for free; gold payments is doubled. \
+  Additionally 3 shield payments are free.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 1 unhappy citizens.\n\
 * Base corruption is 5%. This increases with distance from the capital\
@@ -444,10 +440,9 @@ _("\
 * Celebrating cities produce one extra trade point for every tile which is\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
 * Each city gets extra luxury point.\n\
-* Each city can support up to 1 unit for free; further units each cost\
- 1 gold per turn (more than 4, also shield).\n\
+* Each city can support up to 1 gold and 4 shield unit payments for free; \n\
 * Martial law is limited to 1 unit.\n\
-* Each city tolerates up to 2 peacemaker units outside of state boundaries;\
+* Each city tolerates up to 1 peacemaker unit outside of state boundaries;\
  each further unit causes 3 unhappy citizens (2 with Hollywood).\n\
 * There is 10% base level of corruption, increasing slightly\
  with distance from the capital.\n\
@@ -461,7 +456,7 @@ _("\
 ")
 
 ;------------------------------------------------------------------------
-[government_Fascism]
+[government_fascism]
 
 name        = _("Fascism")
 reqs = { "type", "name", "range"
@@ -486,7 +481,7 @@ Fascism is a government suitable for maximizing shield production and military p
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Each city can support up to 4 units for free (the maximum possible);\
+* Each city can support up to 4 shield and 6 gold unit payment for free (shield payment are doubled);\
  further units each cost 2 shields per turn (more than 6, also gold).\n\
 * Base corruption is 20%, this increases with distance from the capital.\n\
 * There is no base production waste, but this increase with distance from the capital.\n\
@@ -526,8 +521,7 @@ Under a Ancient Republican government, citizens hold an election to select a\
 _("\
 * Celebrating cities with size 4 or above are subject of Rapture Growth \
  (this effect is cancelled by Monotheism)\n\
-* Each city can support 1 unit for free; further units each cost\
- 1 shield per turn (more than 4, also gold).\n\
+* Each city can support 1 shield and 6 gold unit payment for free.\n\
 * Each city tolerates two aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 20%. This increases with distance from the capital\
@@ -562,8 +556,7 @@ Under Direct Democracy, citizens govern directly by voting on issues.\
 _("\
 * Celebrating cities with size 3 or above are subject of Rapture Growth \
  (this effect is cancelled by Monotheism)\n\
-* Each city can support 1 unit for free; further units each cost\
- double gold (more than 3, also shields).\n\
+* Each city can support 4 gold and 5 shield unit payment for free; gold payment is doubled.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 2 unhappy citizens.\n\
 * Base corruption is 10%. This increases with distance from the capital\

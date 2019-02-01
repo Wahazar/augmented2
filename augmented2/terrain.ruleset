@@ -264,8 +264,8 @@ pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
-warmer_wetter_result = "Swamp"
-warmer_drier_result  = "no"
+warmer_wetter_result = "no"
+warmer_drier_result  = "Swamp"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "no"
 native_to            = "Sea", "Air", "Bomb", "Missile", "Helicopter", "Trireme", "Torpedos", "Riverboat"
@@ -623,10 +623,10 @@ road_time            = 4
 irrigation_result    = "Swamp"
 irrigation_food_incr = 0
 irrigation_time      = 10
-mining_result        = "no"
+mining_result        = "Forest"
 mining_shield_incr   = 0
-mining_time          = 0
-transform_result     = "Forest"
+mining_time          = 10
+transform_result     = "Plains"
 transform_time       = 24
 pillage_time         = 1
 clean_pollution_time = 3
@@ -634,8 +634,8 @@ clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "no"
 warmer_drier_result  = "no"
-cooler_wetter_result = "no"
-cooler_drier_result  = "Forest"
+cooler_wetter_result = "Forest"
+cooler_drier_result  = "Tundra"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
 property_foliage     = 50
@@ -722,13 +722,13 @@ irrigation_time      = 5
 mining_result        = "Desert"
 mining_shield_incr   = 0
 mining_time          = 10
-transform_result     = "Grassland"
+transform_result     = "Hills"
 transform_time       = 36
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
-warmer_wetter_result = "Swamp"
+warmer_wetter_result = "Grassland"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Desert"
@@ -766,17 +766,17 @@ irrigation_food_incr = 1
 irrigation_time      = 5
 mining_result        = "Jungle"
 mining_shield_incr   = 0
-mining_time          = 0
+mining_time          = 10
 transform_result     = "Lake"
 transform_time       = 36
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
-warmer_wetter_result = "Desert"
-warmer_drier_result  = "no"
-cooler_wetter_result = "Tundra"
-cooler_drier_result  = "Desert"
+warmer_wetter_result = "no"
+warmer_drier_result  = "Desert"
+cooler_wetter_result = "no"
+cooler_drier_result  = "Tundra"
 native_to            = "Infantry", "Light Cavalry", "Small Land", "Merchant", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
 property_wet         = 100
@@ -1675,7 +1675,7 @@ reqs           =
 build_time     = 0
 removal_time   = 0
 native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
-hidden_by      = "Railroad", "Maglev"
+hidden_by      = "Railroad"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
 Roads allow your land units to move more quickly, and allow\
@@ -1712,56 +1712,93 @@ build_time     = 3
 removal_time   = 0
 native_to      = "Infantry", "Light Cavalry", "Small Land", "Merchant", "Train"
 flags          = "NativeTile", "AutoOnCityCenter"
-hidden_by      = "Maglev"
+;hidden_by      = "Maglev"
 helptext       = _("\
-Once you learn the Railroad technology, you may upgrade your roads\
- to railroads. Units travel considerably faster along railroads than\
- along roads.\
+Once you learn the Railroad technology, you may upgrade your roads to railroads.\
+ Any land units can  be loaded into train, which travel very fast along the railway line.\
+ Small Land and Infantry units can also utilise railroad speed by themselves, without train.\
 "), _("\
-A railroad also increases any shield resources produced by a tile.\
- A tile whose road is upgraded to a railroad retains any trade bonus\
- from the road as well.\
+A railroad also increases shield resources produced by a tile by 25%,\
+ and together with Railway Station grant some other tile bonuses.\
 "), _("\
 City center tiles with roads are automatically upgraded to railroads\
  when you learn the Railroad technology.\
 ")
 
-[extra_maglev]
-name           = _("Maglev")
+;augmented: hwy instead
+;[extra_maglev]
+;name           = _("Maglev")
+;category       = "Infra"
+;causes         = "Road"
+;rmcauses       = "Pillage"
+;graphic        = "road.maglev"
+;graphic_alt    = "road.rail"
+;activity_gfx   = "unit.maglev"
+;act_gfx_alt    = "unit.road"
+;act_gfx_alt2   = "-"
+;rmact_gfx      = "None"
+;rmact_gfx_alt  = "-"
+;reqs           =
+;    { "type", "name", "range", "present", "quiet"
+;      "Tech", "Superconductors", "Player", TRUE, FALSE
+;      "Extra", "Railroad", "Local", TRUE, FALSE
+;      "UnitFlag", "Settlers", "Local", TRUE, FALSE
+;      "UnitClass", "Sea", "Local", FALSE, TRUE
+;      "TerrainClass", "Land", "Local", TRUE, FALSE
+;    }
+;build_time     = 6
+;removal_time   = 0
+;native_to      = "Infantry", "Small Land"
+;flags          = "NativeTile", "AutoOnCityCenter"
+;helptext       = _("\
+;With sufficient technology, you may build magnetic levitation systems\
+; along your railroad routes. Land and Small Land units expend no\
+; movement points when riding a maglev; you may ride indefinitely.\
+; (As may your enemies!)\
+;"), _("\
+;Your regular railroads are still used to carry heavy Big Land and\
+; Merchant units in Trains, for which the maglev system is unsuitable, and they\
+; continue to provide production and trade bonuses.\
+;"), _("\
+;City center tiles with railroads are automatically upgraded to maglev\
+; when you learn about Superconductors.\
+;")
+
+[extra_hwy]
+name           = _("HighWay")
 category       = "Infra"
 causes         = "Road"
 rmcauses       = "Pillage"
-graphic        = "road.maglev"
-graphic_alt    = "road.rail"
-activity_gfx   = "unit.maglev"
-act_gfx_alt    = "unit.road"
+graphic        = "road.hwy"
+graphic_alt    = "road.maglev"
+activity_gfx   = "unit.road"
+act_gfx_alt    = "-"
 act_gfx_alt2   = "-"
 rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 reqs           =
     { "type", "name", "range", "present", "quiet"
-      "Tech", "Superconductors", "Player", TRUE, FALSE
-      "Extra", "Railroad", "Local", TRUE, FALSE
-      "UnitFlag", "Settlers", "Local", TRUE, FALSE
+      "UnitFlag", "Transform", "Local", TRUE, FALSE
+      "Extra", "Road", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
     }
-build_time     = 6
+build_time     = 3
 removal_time   = 0
-native_to      = "Infantry", "Small Land"
+removal_time_factor = 2
+native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
+; hidden_by      = "Maglev"
 flags          = "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
-With sufficient technology, you may build magnetic levitation systems\
- along your railroad routes. Land and Small Land units expend no\
- movement points when riding a maglev; you may ride indefinitely.\
- (As may your enemies!)\
+Once you learn the Automobile technology, you may use Engineers to build highways,\
+ paralell to roads or railroads. \
+ All land units travel considerably faster along highways than along roads.\
 "), _("\
-Your regular railroads are still used to carry heavy Big Land and\
- Merchant units in Trains, for which the maglev system is unsuitable, and they\
- continue to provide production and trade bonuses.\
+A highway also increases shield resources produced by a tile by 25%\
+ (together with paralell railroad, 50%).\
 "), _("\
-City center tiles with railroads are automatically upgraded to maglev\
- when you learn about Superconductors.\
+City center tiles with roads are automatically upgraded to highways\
+ when you learn the Automobile technology.\
 ")
 
 [extra_river]
@@ -1981,20 +2018,31 @@ trade_bonus    = 0
 compat_special = "Railroad"
 flags          = "RequiresBridge"
 
-[road_maglev]
-extra          = "Maglev"
-move_cost      = 0
+;[road_maglev]
+;extra          = "Maglev"
+;move_cost      = 0
+;food_incr      = 0
+;shield_incr    = 0
+;trade_incr     = 0
+;food_bonus     = 0
+;shield_bonus   = 0
+;trade_bonus    = 0
+;flags          = "RequiresBridge"
+
+[road_hwy]
+extra          = "HighWay"
+move_cost      = 1
 food_incr      = 0
 shield_incr    = 0
 trade_incr     = 0
 food_bonus     = 0
-shield_bonus   = 0
+shield_bonus   = 25
 trade_bonus    = 0
 flags          = "RequiresBridge"
 
 [road_river]
 extra          = "River"
-move_cost      = 1
+move_cost      = 3
 move_mode      = "Cardinal"
 trade_incr_const = 1
 compat_special = "River"

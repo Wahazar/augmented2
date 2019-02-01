@@ -36,4 +36,5 @@ sprites =
 		"b.thermal_bath", "augmented2/wonders/thermal_bath_TRatcliff"
 		"b.golden_temple", "augmented2/wonders/golden_temple_Jyoti_Dasila"
 		"b.atlantic_telegraph_company", "augmented2/wonders/atlantic_telegraph_company"
+		"b.ecole_speciale_militaire", "augmented2/wonders/Ecole_de_Saint-Cyr"
 	}

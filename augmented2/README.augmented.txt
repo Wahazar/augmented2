@@ -127,8 +127,10 @@ and Recycling allow to irrigate without any restrictions.
 
 - Terrain transformation pattern -
 transfOrm:
-Mountains -> Hills -> Plains - > Grassland -> Swamp <-> Lake
-Jungle -> Forest -> Tundra -> Desert -> Plains
+Mountains -> Hills <-> Plains 
+Grassland -> Swamp <-> Lake
+Jungle -> Plains 
+Forest -> Tundra -> Desert -> Plains
 Glacier -> Lake
 Irrigate:
 Forest -> Grasslands
@@ -137,6 +139,7 @@ Swamp -> Grassland
 Mining:
 Forest -> Plains
 Grassland -> Forest
+Jungle -> Forest
 Plains -> Desert
 Swamp -> Jungle
 

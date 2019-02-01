@@ -138,7 +138,8 @@ files =
   "augmented2/wonders/wonders-large.spec",
   "augmented2/amplio_units/units.spec",
   "augmented2/misc/governments.spec",
-  "augmented2/terrain/terrain.spec"
+  "augmented2/terrain/terrain.spec",
+  "augmented2/terrain/roads-hwy.spec"
 
 ; Include color definitions
 *include "misc/colors.tilespec"
@@ -283,6 +284,7 @@ styles =
       "road.rail",     "RoadAllCombined"
       "road.maglev",   "RoadAllCombined"
       "road.pave",     "RoadAllSeparate"
+      "road.hwy",      "RoadAllCombined"
       "road.river",    "River"
       "tx.irrigation", "River"
       "tx.farmland",   "River"

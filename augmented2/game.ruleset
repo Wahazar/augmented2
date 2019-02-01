@@ -44,8 +44,8 @@ New distinctive tiers of unit classes.\n\
 New buildings and wonders.\n\
 New governments.\n\
 \n\n\
-The differences from the classic ruleset are listed in full in\
- freeciv forum thread.\
+The differences from the classic or civ2/civ3 rulesets are listed in full in\
+ freeciv forum thread or README.augmented.txt file.\
 ")
 
 ; Detailed description
@@ -584,7 +584,7 @@ reqs           =
       "Terrain", "Hills", "Local"
     }
 frequency      = 100
-effects        = "EmptyProdStock"
+effects        = "ReducePopulation", "EmptyProdStock"
 
 [disaster_flood]
 name           = _("Flood")
@@ -837,12 +837,12 @@ set =
       "topology", "WRAPX|WRAPY|HEX|ISO"
       "mapsize", "PLAYER"
       "tilesperplayer", 200
-      "tinyisles", "ENABLED"
+      "tinyisles", "DISABLED"
       "temperature", 60
       "flatpoles", 0
       "startunits", "cccc"
       "citymindist", 3
-      "techlevel", 1
+      "techlevel", 0
       "borders", "ENABLED"
       "foggedborders", "ENABLED"
       "restrictinfra", "ENABLED"
@@ -850,8 +850,9 @@ set =
       "onsetbarbs", 120
       "occupychance", 100
       "razechance", 10
-      "techlossforgiveness", 0
-      "techlossrestore", 50
+      "techlossforgiveness", 10
+      "techlossrestore", -1
+      "sciencebox", 60
       "revolen", 2
       "revolentype", "RANDQUICK"
     }

@@ -133,7 +133,7 @@ name          = _("?unitclass:Missile")
 min_speed     = 0
 hp_loss_pct   = 0
 hut_behavior  = "Frighten"
-flags         = "Missile", "Unreachable", "DoesntOccupyTile", "Airliftable"
+flags         = "Missile", "Unreachable", "DoesntOccupyTile", "Airliftable", "KillCitizen"
 
 [unitclass_infantry]
 ; /* TRANS: Unit class: used adjectivally */
@@ -213,7 +213,7 @@ name          = _("?unitclass:Air")
 min_speed     = 4
 hp_loss_pct   = 10
 hut_behavior  = "Frighten"
-flags         = "Unreachable", "DoesntOccupyTile", "CanPillage", "Airliftable"
+flags         = "Unreachable", "DoesntOccupyTile", "CanPillage", "Airliftable", "KillCitizen"
 
 [unitclass_bomb]
 ; /* TRANS: Unit class: used adjectivally */
@@ -2365,7 +2365,7 @@ This unit cannot move across swamps, glaciers and mountains.\
 name          = _("Armoured Train")
 class         = "Train"
 tech_req      = "Railroad"
-impr_req      = "Railway Station"
+;impr_req      = "Railway Station"
 obsolete_by   = "None"
 graphic       = "u.armoured_train"
 graphic_alt   = "u.freight"
@@ -2390,11 +2390,16 @@ uk_gold       = 2
 cargo         = "Small Land", "Infantry", "Turrets"
 flags         = "BadCityDefender", "Bombarder", "Only_Native_Attack", "BadWallAttacker"
 roles         = "DefendOkStartUnit"
+veteran_names = _("draisine"), _("armored van"), _("armored engine"), _("armored express"), _("ice piercer")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 1, 1, 2, 3
 helptext      = _("\
-Armoured Train is can use only railroads, but can carry up to 3 artillery turrets or infantry units, beside of its own bombardment firepower.\
+Armoured Train can use only railroads, but can carry up to 3 artillery turrets or infantry units, beside of its own bombardment firepower.\
 "),
 _("\
-Railway Station is required to build Armoured Train. Its HP can be quickly regenerated in any city with Railway Station.\
+Trains HP can be quickly regenerated in any city with Railway Station.\
 ")
 bombard_rate = 2
 
@@ -3040,7 +3045,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
 Zeppelins can only attack ground targets, not other airborne\
@@ -3078,7 +3083,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "HasNoZOC", "OneAttack", "Light Shells"
+flags         = "AirAttacker", "HasNoZOC", "OneAttack", "Light Shells", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 Fighters can move anywhere and attack any unit.\
@@ -3116,7 +3121,7 @@ uk_happy      = 2
 uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
 Bombers are specialized airborne units that may\
@@ -3206,7 +3211,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "HasNoZOC"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
 Strike Aircrafts can be used both like Fighters or light Bombers.\
@@ -3242,7 +3247,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "OneAttack", "Light Shells", "HasNoZOC"
+flags         = "AirAttacker", "OneAttack", "Light Shells", "HasNoZOC", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 An improved fighter or strike aircraft, with a higher speed and movement\
@@ -3277,7 +3282,7 @@ uk_shield     = 4
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
-flags         = "FieldUnit", "OneAttack", "AirAttacker"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "IgWall"
 roles         = ""
 helptext      = _("\
 Strike Jets can be used both like Fighters or light Bombers.\
@@ -3348,7 +3353,7 @@ uk_happy      = 2
 uk_shield     = 4
 uk_food       = 1
 uk_gold       = 3
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
@@ -3418,7 +3423,7 @@ uk_happy      = 1
 uk_shield     = 4
 uk_food       = 1
 uk_gold       = 4
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 An improved Stealth Bomber, with a higher movement and fuel capacity\
@@ -4550,7 +4555,7 @@ build_cost    = 40
 pop_cost      = 0
 attack        = 18
 defense       = 0
-hitpoints     = 10
+hitpoints     = 5
 firepower     = 4
 move_rate     = 16
 vision_radius_sq = 2
@@ -5073,7 +5078,7 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 name          = _("Train")
 class         = "Train"
 tech_req      = "Railroad"
-impr_req      = "Railway Station"
+;impr_req      = "Railway Station"
 obsolete_by   = "None"
 graphic       = "u.train"
 graphic_alt   = "u.freight"
@@ -5096,13 +5101,14 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 2
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Helicopter", "Suicidal", "Wheeled Unit"
-flags         = "NonMil", "Capturable", "NoVeteran"
+flags         = "NonMil", "Capturable", "NoVeteran", "Transform"
 roles         = ""
 helptext      = _("\
-Train is capable to fast transport of any land units or small air units.\
+Train can use only railroads, but is capable to fast transport many land units or helicopters.\
+It can also quickly transform terrain type.\
 "),
 _("\
-Railway Station is required to build Train. Its HP can be quickly regenerated in any city with Railway Station.\
+Trains HP can be quickly regenerated in any city with Railway Station.\
 ")
 
 [unit_explorer]
