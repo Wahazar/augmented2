@@ -1688,6 +1688,43 @@ Building roads on river tiles requires knowledge of Bridge Building.\
  City center tiles automatically get roads (even on a river tile, if Bridge Building is know).\
 ")
 
+[extra_hwy]
+name           = _("HighWay")
+category       = "Infra"
+causes         = "Road"
+rmcauses       = "Pillage"
+graphic        = "road.hwy"
+graphic_alt    = "road.maglev"
+activity_gfx   = "unit.road"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+reqs           =
+    { "type", "name", "range", "present", "quiet"
+      "UnitFlag", "Transform", "Local", TRUE, FALSE
+      "Extra", "Road", "Local", TRUE, FALSE
+      "UnitClass", "Sea", "Local", FALSE, TRUE
+      "TerrainClass", "Land", "Local", TRUE, FALSE
+    }
+build_time     = 3
+removal_time   = 0
+removal_time_factor = 2
+native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
+; hidden_by      = "Maglev"
+flags          = "NativeTile", "AutoOnCityCenter"
+helptext       = _("\
+Once you learn the Automobile technology, you may use Engineers to build highways,\
+ paralell to roads or railroads. \
+ All land units travel considerably faster along highways than along roads.\
+"), _("\
+A highway also increases shield resources produced by a tile by 25%\
+ (together with paralell railroad, 50%).\
+"), _("\
+City center tiles with roads are automatically upgraded to highways\
+ when you learn the Automobile technology.\
+")
+
 [extra_railroad]
 name           = _("Railroad")
 category       = "Infra"
@@ -1763,43 +1800,6 @@ City center tiles with roads are automatically upgraded to railroads\
 ;City center tiles with railroads are automatically upgraded to maglev\
 ; when you learn about Superconductors.\
 ;")
-
-[extra_hwy]
-name           = _("HighWay")
-category       = "Infra"
-causes         = "Road"
-rmcauses       = "Pillage"
-graphic        = "road.hwy"
-graphic_alt    = "road.maglev"
-activity_gfx   = "unit.road"
-act_gfx_alt    = "-"
-act_gfx_alt2   = "-"
-rmact_gfx      = "None"
-rmact_gfx_alt  = "-"
-reqs           =
-    { "type", "name", "range", "present", "quiet"
-      "UnitFlag", "Transform", "Local", TRUE, FALSE
-      "Extra", "Road", "Local", TRUE, FALSE
-      "UnitClass", "Sea", "Local", FALSE, TRUE
-      "TerrainClass", "Land", "Local", TRUE, FALSE
-    }
-build_time     = 3
-removal_time   = 0
-removal_time_factor = 2
-native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
-; hidden_by      = "Maglev"
-flags          = "NativeTile", "AutoOnCityCenter"
-helptext       = _("\
-Once you learn the Automobile technology, you may use Engineers to build highways,\
- paralell to roads or railroads. \
- All land units travel considerably faster along highways than along roads.\
-"), _("\
-A highway also increases shield resources produced by a tile by 25%\
- (together with paralell railroad, 50%).\
-"), _("\
-City center tiles with roads are automatically upgraded to highways\
- when you learn the Automobile technology.\
-")
 
 [extra_river]
 name           = _("River")
@@ -2006,6 +2006,17 @@ trade_bonus    = 0
 compat_special = "Road"
 flags          = "RequiresBridge"
 
+[road_hwy]
+extra          = "HighWay"
+move_cost      = 1
+food_incr      = 0
+shield_incr    = 0
+trade_incr     = 0
+food_bonus     = 0
+shield_bonus   = 25
+trade_bonus    = 0
+flags          = "RequiresBridge"
+
 [road_railroad]
 extra          = "Railroad"
 move_cost      = 1
@@ -2028,17 +2039,6 @@ flags          = "RequiresBridge"
 ;shield_bonus   = 0
 ;trade_bonus    = 0
 ;flags          = "RequiresBridge"
-
-[road_hwy]
-extra          = "HighWay"
-move_cost      = 1
-food_incr      = 0
-shield_incr    = 0
-trade_incr     = 0
-food_bonus     = 0
-shield_bonus   = 25
-trade_bonus    = 0
-flags          = "RequiresBridge"
 
 [road_river]
 extra          = "River"
