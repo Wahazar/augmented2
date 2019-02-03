@@ -1800,7 +1800,7 @@ reqs	=
       "Tech", "Electromagnetism", "Player"
       "Building", "University", "City"
     }
-graphic	= "w.atlantic_telegraph_company"
+graphic	= "b.atlantic_telegraph_company"
 graphic_alt	= "b.university"
 obsolete_by	= "None"
 build_cost	= 300

@@ -3083,7 +3083,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "HasNoZOC", "OneAttack", "Light Shells", "IgWall"
+flags         = "AirAttacker", "HasNoZOC", "Light Shells", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 Fighters can move anywhere and attack any unit.\
@@ -3211,7 +3211,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "HasNoZOC", "IgWall"
+flags         = "FieldUnit", "AirAttacker", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
 Strike Aircrafts can be used both like Fighters or light Bombers.\
@@ -3247,7 +3247,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "OneAttack", "Light Shells", "HasNoZOC", "IgWall"
+flags         = "AirAttacker", "Light Shells", "HasNoZOC", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 An improved fighter or strike aircraft, with a higher speed and movement\
@@ -3282,7 +3282,7 @@ uk_shield     = 4
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "IgWall"
+flags         = "FieldUnit", "AirAttacker", "IgWall"
 roles         = ""
 helptext      = _("\
 Strike Jets can be used both like Fighters or light Bombers.\
@@ -3389,7 +3389,7 @@ uk_shield     = 4
 uk_food       = 0
 uk_gold       = 4
 targets       = "Air", "Missile", "Helicopter"
-flags         = "Partial_Invis", "AirAttacker", "OneAttack", "HasNoZOC"
+flags         = "Partial_Invis", "AirAttacker", "HasNoZOC"
 roles         = "DefendGood"
 helptext      = _("\
 An improved Hypersonic Stealth Fighter, with a higher movement\

@@ -27,7 +27,7 @@ name = _("Augmented ruleset")
 ; There`s no separate versioning in rulesets part of main freeciv distribution
 ;version = ""
 
-;[tileset]
+[tileset]
  preferred="augmentedis"
 
 
@@ -852,7 +852,7 @@ set =
       "razechance", 10
       "techlossforgiveness", 10
       "techlossrestore", -1
-      "sciencebox", 60
+      "sciencebox", 160
       "revolen", 2
       "revolentype", "RANDQUICK"
     }
