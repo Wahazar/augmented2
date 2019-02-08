@@ -68,7 +68,7 @@ graphic	= "tx.village"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
-      "Tech", "Agricultural Farming", "Player"
+      "Tech", "Bronze Working", "Player"
       "Building", "City Hall", "City"
     }
 build_cost	= 10
@@ -407,7 +407,6 @@ Horses strategic resources located within range of city with Stable Barracks \
 give additional 2 gold income (no upkeep).  \
 ")
 
-
 [building_workshop_barracks]
 name		= _("Workshop Barracks")
 genus		= "Improvement"
@@ -433,6 +432,35 @@ With a Workshop Barracks, each motorized or wheeled land unit built in a city wi
  defense strengths are increased by 50%.  Also, all fast land units, if damaged,\
  and stay in town for one full turn without moving are completely\
  restored.\
+")
+
+[building_bunkers]
+name		= _("Bunkers")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Concrete", "Player", TRUE
+      "Building", "City Walls", "City", FALSE
+    }
+graphic	= "b.bunkers"
+graphic_alt	= "b.city_walls"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 1
+sabotage	= 50
+sound		= "b_city_walls"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Bunkers fortifications make it easier to defend a city. They add a +100% bonus to the \
+intrinsic defense strength of units within the city against land units (even plunging fire artillery), \
+but are ineffective against airborne and sea units. \
+Bunkers also prevent the loss of population which occurs \
+when a defending unit is defeated by any unit.\n\
+Unlike City Walls, bunkers doesn't restrict city growth.
 ")
 
 [building_cathedral]
@@ -530,6 +558,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Masonry", "Player", TRUE
       "Building", "Palisade", "City", FALSE
+      "Building", "Bunkers", "City", FALSE
     }
 graphic	= "b.city_walls"
 graphic_alt	= "-"
@@ -729,7 +758,7 @@ name		= _("Hydro Plant")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Concrete", "Player"
+      "Tech", "Turbine", "Player"
       "Building", "Factory", "City"
       "Extra", "River", "Adjacent"
     }
@@ -804,13 +833,13 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 60
-upkeep		= 1
+upkeep		= 2
 sabotage	= 100
 sound		= "b_library"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the science output in a city by 50%, or by 100% once the \
+Increases the science output in a city by 75%, or by 150% once the \
 Great Library has been built by any player.\
 ")
 
@@ -941,7 +970,7 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 240
-upkeep		= 2
+upkeep		= 3
 sabotage	= 100
 sound		= "b_nuclear_plant"
 sound_alt	= "b_generic"
@@ -967,6 +996,9 @@ can lead to fallout and reduce the city's population.\
 "), _("\
 In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or \
 Solar Plant can take effect at any one time.\
+"), _("\
+Nuclear Plant is required to produce nuclear warfare.\n\
+Any tile with Uranium within city with Nuclear Plant would yield additional 2 trade points (i.e. less upkeep).\
 ")
 
 [building_offshore_platform]
@@ -1131,6 +1163,7 @@ graphic	= "b.palisade"
 graphic_alt	= "b.city_walls"
 obsolete_by	=
     { "type", "name", "range"
+      "Tech", "Concrete", "Player"
     }
 build_cost	= 30
 upkeep		= 1
@@ -1152,7 +1185,7 @@ name		= _("Police Station")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Communism", "Player"
+      "Tech", "Socialism", "Player"
     }
 graphic	= "b.police_station"
 graphic_alt	= "-"
@@ -1175,7 +1208,7 @@ name		= _("Port Facility")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Combustion", "Player"
+      "Tech", "Offshore Exploration", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
     }
 graphic	= "b.port_facility"
@@ -1307,13 +1340,13 @@ sound		= "b_research_lab"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the science output in a city by an additional 50%, or \
-by 100% once the Internet wonder has been built by any player.\
+Increases the science output in a city by an additional 75%, or \
+by 150% once the Internet wonder has been built by any player.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-The total bonus is 150% if a Library, a University and a \
-Research Lab are all present in the same city, increasing to 300% \
+The total bonus is 225% if a Library, a University and a \
+Research Lab are all present in the same city, increasing to 400% \
 once the Isaac Newton's College, Massachusetts Institute of Technology and the Internet have \
 all been built.\
 "),
@@ -1780,13 +1813,13 @@ sound		= "b_university"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the science output in a city by an additional 50%, or \
-by 100% once Isaac Newton's College has been built by any player.\
+Increases the science output in a city by an additional 75%, or \
+by 150% once Isaac Newton's College has been built by any player.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-The total bonus is 100% if a Library and a University are present \
-together in the same city, increasing to 200% once the Great Library or Internet and \
+The total bonus is 150% if a Library and a University are present \
+together in the same city, increasing to 300% once the Great Library or Internet and \
 Isaac Newton's College have both been built.\
 ")
 
@@ -1885,7 +1918,8 @@ sabotage	= 0
 sound		= "w_internet"
 sound_alt	= "w_generic"
 helptext	= _("\
-Defense Advanced Research Projects Agency upgrades one obsolete unit per game turn.\n\
+Defense Advanced Research Projects Agency upgrades additionally second obsolete unit per game turn, on cost of its veteran level\
+ (Warfrare Museum prohibit any autoupgrades).\n\
 Big Land military units have Veteran level instead of Recruits, if builded in Workshop Barracks.\n\
 DARPA is also required to build Internet.\
 ")
@@ -2111,7 +2145,8 @@ sabotage	= 0
 sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
-Upgrades one obsolete unit per game turn.\
+Upgrades 2 obsolete units per game turn (3 with Metallurgy technology) on cost of 1 veteran level.\n\
+Warfrare Museum prohibit any autoupgrades.
 ")
 
 [building_lighthouse]
@@ -2163,35 +2198,6 @@ helptext	= _("\
 Gives all your sea units 1 additional movement point. The chance\
  of a sea unit getting the next veteran level after a battle\
  increases by half.\
-")
-
-[building_marco_polos_embassy]
-name		= _("Marco Polo's Embassy")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Trade", "Player"
-	 "MinCulture", "1000", "Player"
-    }
-graphic	= "b.marco_polos_embassy"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-      "Tech", "Electromagnetism", "Player", FALSE
-    }
-build_cost	= 180
-upkeep		= 0
-sabotage	= 0
-sound		= "w_marco_polos_embassy"
-sound_alt	= "w_generic"
-helptext	= _("\
-The player who owns it gets an embassy with all players.\
-"), _("\
-TIP: if you're behind in research, this can help you catch up, by \
-reducing the cost of technologies that other players already know.\
-"),
-_("\
-In case of Thalassocracy goverment system, production of the city with Marco Polo Embassy would be increased twice\
 ")
 
 [building_massachusetts_institute_of_technology]
@@ -2516,7 +2522,6 @@ where a single unit makes two citizens unhappy). Each city also avoids \
 one shield of upkeep for units.\
 ")
 
-
 [building_sun_tzus_war_academy]
 name		= _("Sun Tzu's War Academy")
 genus		= "SmallWonder"
@@ -2567,6 +2572,33 @@ Makes 2 additional unhappy citizens content in every city with \
 a Temple. Does not affect citizens made unhappy by aggression.\
 ")
 
+[building_temple_of_city_god]
+name		= _("Temple of City God")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Legalism", "Player"
+      "Building", "Temple", "City"
+      "MinCulture", "400", "Player"
+;      "Building", "Temple of Artemis", "Player", FALSE
+    }
+graphic         = "b.temple_of_city_god"
+graphic_alt     = "b.oracle"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes additional unhappy citizen content in every city with \
+a Temple without Shrine Torii. Does not affect citizens made unhappy by aggression.\n\
+In a city with this building, tax collector specialists' gold output \
+increases to 3.\
+")
+
 [building_thermal_bath]
 name		= _("Thermal Bath")
 genus		= "SmallWonder"
@@ -2587,6 +2619,32 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Add 1 luxury point to the city where is located and each river tile within city radius.\n\
 Together with Lazaretto improvment, Thermal Bath reduces chance of plaque in this city by additional 20%.\
+")
+
+[building_warfare_museum]
+name		= _("Warfare Museum")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "University", "Player"
+      "Building", "City Hall", "City"
+	 "MinCulture", "1000", "Player"
+    }
+graphic	= "b.warfare_museum"
+graphic_alt	= "b.colossus"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 140
+upkeep		= 0
+sabotage	= 0
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+This building prevent autoupgrade with cost of veteran level \
+- keep obsoleted units even if Leonardo Workshop or DARPA is builded. \n\
+You can still upgrade units manually with cost of gold.\
 ")
 
 [building_womens_suffrage]
@@ -2843,7 +2901,7 @@ sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
 Golden Temple is the important pilgrimage site of Sikhism.\n\
-Any city with Temple, Church or Mosque, which belong to the owner of this building,\
+Any city with Temple, Church or Mosque, which belong to the players allied with owner of this building,\
 would additionaly make 1 unhappy citizens content.\
 ")
 
@@ -2898,7 +2956,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Increases the defense of all your cities by adding a +50% bonus to \
 its units' intrinsic defense strength against straight attacking land units (this is cumulative \
-with any City Walls), and preventing the loss of population which occurs \
+with any City Walls), and any allied city is protected against the loss of population which occurs \
 when a defending unit is defeated by a land unit.\
 "),
 _("\
@@ -3039,8 +3097,11 @@ sabotage	= 0
 sound		= "b_nuclear_plant"
 sound_alt	= "w_generic"
 helptext	= _("\
-Large Hadron Collider reveal two new advances, when finished. \n\
-It is the best way to gain Great Unification Theory.\
+ Large Hadron Collider reveal two new advances, when finished.\
+ It is the best way to gain Great Unification Theory.\n\
+Upon completion of this wonder, scientist specialists' research output \
+increases to 3 permanently for every nation.\
+
 ")
 
 [building_leshan_buddha_statue]
@@ -3066,7 +3127,36 @@ helptext	= _("\
 There is belief, that this giant statue calm turbulent river waters.\
 City with this Wonder would gain additional food from each river tile.\n\
 Additionally, thanks to the Buddha The Wise ideas, any Monk Monastery\
-would make 1 unhappy citizen content, for any alliance city.\
+would make 1 unhappy citizen content, for any city on same continent.\
+")
+
+[building_marco_polos_embassy]
+name		= _("Marco Polo's Embassy")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Trade", "Player"
+	 "MinCulture", "1000", "Player"
+    }
+graphic	= "b.marco_polos_embassy"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Electromagnetism", "Player", FALSE
+    }
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+The player who owns it gets an embassy with all players.\
+"), _("\
+TIP: if you're behind in research, this can help you catch up, by \
+reducing the cost of technologies that other players already know.\
+"),
+_("\
+In case of Thalassocracy goverment system, celebration would give boost of shield production, if Marco Polo Embassy exist on same continent.\
 ")
 
 [building_manhattan_project]
@@ -3076,6 +3166,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
 	 "MinCulture", "2000", "Player"
+      "Resource", "Uranium", "Local"
     }
 graphic	= "b.manhattan_project"
 graphic_alt	= "-"
@@ -3233,6 +3324,36 @@ Add 50% defense for city, where it is builded (cumulative with City Walls, not c
 against any Land unit (except those with indirect fire).\n\
 Additionally, prayers going to the sacred site would generate extra trade from each tile around the city that is already\
  generating some trade.\
+")
+
+[building_5_years_plan]
+name		= _("5 Years Plan")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Communism", "Player"
+      "Building", "Police Station", "City"
+      "Building", "City Hall", "City"
+	 "MinCulture", "2000", "Player"
+    }
+graphic	= "b.5_years_plan"
+graphic_alt	= "gov.communism"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Imperialism", "Player"
+    }
+build_cost	= 40
+upkeep		= 2
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+The main point of Planned Economy, the Five Year Plan is \
+aimed at increasing the nation's production by concentrated \
+effort of the People.\n\
+Celebrating the anniversary of the Revolution would yield in additional shield production
+from any tile, which already rpoduce shields.
 ")
 
 [building_capitalization]

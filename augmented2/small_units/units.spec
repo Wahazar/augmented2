@@ -89,9 +89,14 @@ sprites =
 		"u.lancers", "augmented2/small_units/lancers_t"
 		"u.dragoon", "augmented2/small_units/dragoon_t"
 		"u.militia", "augmented2/small_units/militia_t"
+		"u.missile", "augmented2/small_units/missile_t"
+		"u.armor_car", "augmented2/small_units/armor_car_t"
 ; swapped standard graphics
 		"u.direct_artillery", "augmented2/small_units/direct_artillery_t"
 		"u.plunging_cannon", "augmented2/small_units/plunging_cannon_t"
 		"u.musketeer", "augmented2/small_units/musketeer_t"
+		"u.nuclear", "augmented2/small_units/nuclear_t"
+		"u.cruise_missile", "augmented2/small_units/cruise_missile_t"
+
 	}
 

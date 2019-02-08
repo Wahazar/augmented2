@@ -89,6 +89,16 @@ graphic_alt = "-"
 ; helptext = _("Enables movement of nuclear units.")
 cost     = 650
 
+[advance_advanced_rocketry]
+name     = _("Advanced Rocketry")
+req1     = "Space Flight"
+req2     = "Nuclear Power"
+root_req = "Flight"
+flags    = ""
+graphic     = "a.rocketry"
+graphic_alt = "-"
+cost     = 1800
+
 [advance_agricultural_farming]
 name     = _("Agricultural Farming")
 req1     = "Animal Husbandry"
@@ -231,7 +241,7 @@ req2     = "Construction"
 flags    = "Bridge"
 graphic     = "a.bridge_building"
 graphic_alt = "-"
-cost     = 80
+cost     = 90
 helptext = _("Allows roads to be built on river tiles.")
 
 [advance_bronze_working]
@@ -264,7 +274,7 @@ root_req = "Martial Arts"
 flags    = ""
 graphic     = "bushido"
 graphic_alt = "-"
-cost     = 190
+cost     = 260
 
 [advance_carpentry]
 name     = _("Carpentry")
@@ -355,7 +365,7 @@ cost     = 1150
 [advance_combustion]
 name     = _("Combustion")
 req1     = "Refining"
-req2     = "Engineering"
+req2     = "Turbine"
 flags    = ""
 graphic     = "a.combustion"
 graphic_alt = "-"
@@ -383,7 +393,7 @@ cost     = 760
 
 [advance_concrete]
 name     = _("Concrete")
-req1     = "Refining"
+req1     = "Machine Tools"
 req2     = "Turbine"
 flags    = ""
 graphic     = "a.concrete"
@@ -398,7 +408,7 @@ root_req = "Taoism"
 flags    = ""
 graphic     = "a.confucianism"
 graphic_alt = "-"
-cost     = 140
+cost     = 160
 
 [advance_conscription]
 name     = _("Conscription")
@@ -753,7 +763,7 @@ flags    = ""
 graphic     = "a.invention"
 graphic_alt = "-"
 helptext = _("Halves the upgrade cost of your units.")
-cost     = 120
+cost     = 130
 
 [advance_iron_working]
 name     = _("Iron Working")
@@ -828,7 +838,7 @@ root_req = "Confucianism"
 flags    = ""
 graphic     = "legalism"
 graphic_alt = "-"
-cost     = 190
+cost     = 220
 
 [advance_literacy]
 name     = _("Literacy")
@@ -883,7 +893,7 @@ root_req = "Confucianism"
 flags    = ""
 graphic     = "martial_arts"
 graphic_alt = "-"
-cost     = 160
+cost     = 230
 
 [advance_masonry]
 name     = _("Masonry")
@@ -938,6 +948,7 @@ req2     = "University"
 flags    = ""
 graphic     = "a.metallurgy"
 graphic_alt = "-"
+helptext = _("TIP: upgrade one obsolete unit per turn on cost of 1 veteran level (Warfare Museum will prevent this).")
 cost     = 200
 
 [advance_miniaturization]
@@ -1010,7 +1021,7 @@ cost     = 30
 [advance_nanotechnology]
 name     = _("Nanotechnology")
 req1     = "Robotics"
-req2     = "Satellite System"
+req2     = "Advanced Rocketry"
 flags    = ""
 graphic     = "a.nanotechnology"
 graphic_alt = "-"
@@ -1312,7 +1323,7 @@ req2     = "Feudalism"
 flags    = ""
 graphic     = "a.shogunate"
 graphic_alt = "-"
-cost     = 110
+cost     = 120
 
 [advance_sikhism]
 name     = _("Sikhism")
@@ -1446,12 +1457,12 @@ cost     = 520
 [advance_taoism]
 name     = _("Taoism")
 req1     = "Paper Making"
-req2     = "Map Making"
+req2     = "Philosophy"
 root_req = "Literacy"
 flags    = ""
 graphic     = "a.taoism"
 graphic_alt = "-"
-cost     = 90
+cost     = 130
 
 [advance_thalassocracy]
 name     = _("Thalassocracy")
@@ -1588,4 +1599,4 @@ flags    = ""
 graphic     = "zaibatsu"
 graphic_alt = "-"
 helptext = _("TIP: Increase factory production by 25% (this effect is cancelled by Labor Union).")
-cost     = 400
+cost     = 430

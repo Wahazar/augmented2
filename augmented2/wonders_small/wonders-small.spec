@@ -33,4 +33,6 @@ sprites =
 		"b.golden_temple", "augmented2/wonders_small/golden_temple_s"
 		"b.atlantic_telegraph_company", "augmented2/wonders_small/atlantic_telegraph_company"
 		"b.ecole_speciale_militaire", "augmented2/wonders_small/Ecole_de_Saint-Cyrs"
+		"b.temple_of_city_god", "augmented2/wonders_small/temple_of_city_gods"
+		"b.warfare_museum", "augmented2/wonders_small/Warfare_museum_s"
 	}

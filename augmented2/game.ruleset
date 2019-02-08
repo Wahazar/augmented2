@@ -28,7 +28,7 @@ name = _("Augmented ruleset")
 ;version = ""
 
 [tileset]
- preferred="augmentedis"
+ preferred="augmentedi"
 
 
 ; Summary of the ruleset

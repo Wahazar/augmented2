@@ -37,4 +37,6 @@ sprites =
 		"b.golden_temple", "augmented2/wonders/golden_temple_Jyoti_Dasila"
 		"b.atlantic_telegraph_company", "augmented2/wonders/atlantic_telegraph_company"
 		"b.ecole_speciale_militaire", "augmented2/wonders/Ecole_de_Saint-Cyr"
+		"b.temple_of_city_god", "augmented2/wonders/temple_of_city_god"
+		"b.warfare_museum", "augmented2/wonders/Warfare_museum"
 	}

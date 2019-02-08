@@ -191,8 +191,8 @@ Monarchy gives low unit upkeep costs.\
 _("\
 * Your centers of government (cities with Palace and Ecclesiastical\
  Palace) get a +50% bonus to gold production.\n\
-* Celebrating cities produce one extra trade point for every tile which is\
- already producing trade. (Cities below size 3 will not celebrate.)\n\
+* Celebrating capital produce one extra food for every tile which is\
+ already producing food. (Capital below size 3 will not celebrate, celebration in other cities has no effects.)\n\
 * Each city can support up to 3 gold payments for units for free,\
  and 5 shield payments (additional payment free for city size 8 and above)\n\
 * Each city tolerates up to 3 aggressively deployed military units;\
@@ -229,6 +229,9 @@ Communism is a good government for maximizing shield production, and\
 "),
 ; /* xgettext:no-c-format */
 _("\
+* Celebrating cities produce a further shield point for every worked tile\
+ (land or water) which is already producing shields. (Cities below size 3\
+ will not celebrate). 5 Year Plan required.\n\
 * City improvements which would normally have an upkeep of 1 gold are\
  free of upkeep.\n\
 * Each city can support up to 3 shield and 8 gold/food unit payments for free;\
@@ -315,7 +318,8 @@ Federalism is a system in which the power to govern is shared between\
 ; /* xgettext:no-c-format */
 _("\
 * Each city gets 2 extra luxury points.\n\
-* Celebrating cities produce one extra trade point for every tile which is\
+* Cities which belong to the nation with Women Suffrage small wonder,\
+ produce one extra trade point for every tile which is\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
 * Each city can support up to 2 gold/shield unit payment for free; gold payment is doubled).\n\
 * Each city tolerates one aggressively deployed military unit;\
@@ -354,11 +358,12 @@ Under a Republican government, citizens hold an election to select a\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* With Woman Suffrage wonder, cities produce an extra shield point for every worked land tile that is\
+* Cities which belong to the nation with Women Suffrage small wonder,\
+ produce an extra shield point for every worked land tile that is\
  already producing shields.\n\
 * Celebrating cities produce a further trade point for every worked tile\
  (land or water) which is already producing trade. (Cities below size 3\
- will not celebrate.)\n\
+ will not celebrate). Women Suffrage required.\n\
 * Each city with size 8 and above can support one shield unit payment for free; additionally 6 gold unit payment are free.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 1 unhappy citizen.\n\
@@ -393,11 +398,12 @@ Under Democracy, citizens govern indirectly by electing representatives.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* With Woman Suffrage wonder, cities produce an extra trade point for every worked land tile that is\
+* Cities which belong to the nation with Women Suffrage small wonder,\
+ produce an extra trade point for every worked land tile that is\
  already producing trade.\n\
 * Celebrating cities produce a further trade point for every worked tile\
  (land or water) which is already producing trade. (Cities below size 3\
- will not celebrate.)\n\
+ will not celebrate). Women Suffrage required.\n\
 * Each city with size 8 and above can support 2 gold unit payments for free; gold payments is doubled. \
   Additionally 3 shield payments are free.\n\
 * Each city tolerates a single aggressively deployed military unit;\
@@ -437,8 +443,9 @@ Thalassocracy is a system of 'empire at sea', which gain power\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Celebrating cities produce one extra trade point for every tile which is\
- already producing trade. (Cities below size 3 will not celebrate.)\n\
+* If there is Marco Polo Embassy on the same continent,\
+ celebrating cities produce one extra shield point for every tile which is\
+ already producing shield. (Cities below size 3 will not celebrate.)\n\
 * Each city gets extra luxury point.\n\
 * Each city can support up to 1 gold and 4 shield unit payments for free; \n\
 * Martial law is limited to 1 unit.\n\
@@ -449,7 +456,6 @@ _("\
 * Base production waste is 20%, \
   and is not affected by distance to the capital.\n\
   Production penalty is applied for inland tiles (except of city with the Lighthouse).\n\
-  If there is Marco Polo Embassy in town, overall production would be increased twice.\
 * Low chance of Civil War, however citizens are happy, when limited number of cities \
   participate within this sea-trade federation.\
 * Thalassocracy is very tolerant of mixed nationalities in your cities.\
@@ -524,11 +530,13 @@ _("\
 * Each city can support 1 shield and 6 gold unit payment for free.\n\
 * Each city tolerates two aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
+* Military units impose limited martial law: 1 military unit inside a city\
+ will force 1 unhappy citizen to become content.\n\
 * Base corruption is 20%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 10%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
-* Gold outcome is increased.\
+* Gold and luxury outcome is increased.\
 ")
 
 ;------------------------------------------------------------------------
@@ -544,7 +552,7 @@ graphic_alt = "gov.democracy"
 ai_better   = "Democracy"
 
 ruler_male_title = _("Archon %s")
-ruler_female_title = _("?female:Archon %s")
+ruler_female_title = _("?female:Nymph %s")
 
 helptext = _("\
 Under Direct Democracy, citizens govern directly by voting on issues.\
@@ -567,6 +575,42 @@ _("\
 * Direct Democracy is relatively tolerant of foreginers metics in cities.\
 * Science outcome is increased.\
 ")
+
+;------------------------------------------------------------------------
+[government_legalism]
+
+name        = _("Legalism")
+reqs = { "type", "name", "range"
+         "tech", "Legalism", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.legalism"
+graphic_alt = "gov.communism"
+ai_better   = "Communism"
+
+ruler_male_title = _("Emperor %s")
+ruler_female_title = _("?female:Empress %s")
+
+helptext = _("\
+ Legalism is a political philosophy based on the idea,\
+ that a highly efficient and powerful government is the key to social order.\
+ Army of skilled officials is able to maintain even huge empire, but such highly bureaucratized state\
+ is affected by relatively high corruption.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities with size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support 1 gold and 5 shield unit payment for free.\n\
+* Each city tolerates a single aggressively deployed military unit;\
+ each further unit causes unhappy citizens.\n\
+* Military units impose limited martial law: 1 military unit inside a city\
+ will force 2 unhappy citizen to become content.\n\
+* Base corruption is 20%. This increases slowly with distance from the capital\n\
+* Base production waste is 30%, regardless of distance from capital.\n\
+* Science and luxury outcome is decreased.\
+")
+
 
 ; /* <-- avoid gettext warnings
 ;
@@ -592,3 +636,5 @@ _("\
 ;                           newlines so that xgettext parsing works
 ;
 ; */ <-- avoid gettext warnings
+
+

@@ -661,7 +661,7 @@ defense_bonus        = 100
 food                 = 0
 shield               = 1
 trade                = 0
-resources            = "Gold", "Iron"
+resources            = "Gold", "Iron", "Uranium"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
@@ -957,6 +957,7 @@ graphic     = "ts.saltpeter"
 graphic_alt = "ts.grassland_resources"
 identifier  = "l"
 shield      = 1
+trade      = 1
 # hills
 
 ; "m" reserved for marble
@@ -1030,7 +1031,14 @@ food        = 1
 trade       = 4
 # swamp-only.
 
-; "u" reserved for uranium
+[resource_uranium]
+name        = _("Uranium")
+graphic     = "ts.uranium"
+graphic_alt = "ts.iron"
+identifier  = "n"
+shield      = 1
+trade       = 2
+# mountains
 
 [resource_whales]
 name        = _("Whales")
@@ -1839,8 +1847,8 @@ name           = _("Water Lock")
 category       = "Infra"
 causes         = "Base"
 rmcauses       = "Pillage"
-graphic        = "base.waterlock"
-graphic_alt    = "base.fortress"
+graphic        = "road.waterlock"
+graphic_alt    = "road.river"
 activity_gfx   = "unit.buoy"
 act_gfx_alt    = "unit.road"
 act_gfx_alt2   = "-"

@@ -198,4 +198,7 @@ sprites =
 		"u.lancers", "augmented2/amplio_units/lancers_a"
 		"u.dragoon", "augmented2/amplio_units/dragoon_a"
 		"u.militia", "augmented2/amplio_units/militia_a"
+		"u.missile", "augmented2/amplio_units/missile_a"
+		"u.armor_car", "augmented2/amplio_units/armor_car_a"
 	}
+

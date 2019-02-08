@@ -300,5 +300,5 @@ styles =
       "base.airbase",  "3layer"
       "base.buoy",     "3layer"
       "base.ruins",    "3layer"
-      "base.waterlock","3layer"
+      "road.waterlock","River"
     }

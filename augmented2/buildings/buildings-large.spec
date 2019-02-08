@@ -40,4 +40,6 @@ sprites =
 		"b.workshop_barracks", "augmented2/buildings/workshop_barracks"
 		"b.palisade", "augmented2/buildings/palisade"
 		"b.water_treatment", "augmented2/buildings/water_treatment"
+		"b.5_years_plan", "augmented2/buildings/5_years_plan"
+		"b.bunkers", "augmented2/buildings/bunker"
 	}

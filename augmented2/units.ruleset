@@ -2325,6 +2325,40 @@ _("\
 This unit cannot move across swamps, glaciers and mountains.\
 ")
 
+[unit_armor_car]
+name          = _("Armored Car")
+class         = "Wheeled Unit"
+tech_req      = "Automobile"
+obsolete_by   = "Mech. Inf."
+graphic       = "u.armor_car"
+graphic_alt   = "u.mech_inf"
+sound_move    = "m_mech_inf"
+sound_move_alt = "m_generic"
+sound_fight   = "f_mech_inf"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 5
+defense       = 3
+hitpoints     = 15
+firepower     = 3
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 1
+uk_gold       = 3
+flags         = "Light Shells", "BadWallAttacker"
+roles         = "AttackFastStartUnit"
+helptext      = _("\
+The Armored Car is very fast, but relatively weak unit.\
+"),
+_("\
+This unit can move only alng roads and flat terrain.\
+")
+
 [unit_mech_inf]
 name          = _("Mech. Inf.")
 class         = "Heavy Cavalry"
@@ -4239,7 +4273,7 @@ bombard_rate = 1
 [unit_cruiser]
 name          = _("Cruiser")
 class         = "Sea"
-tech_req      = "Turbine"
+tech_req      = "Combustion"
 obsolete_by   = "AEGIS Cruiser"
 graphic       = "u.cruiser"
 graphic_alt   = "-"
@@ -4540,10 +4574,45 @@ TIP:  Guard Carriers with a handful of fast-moving ships and a\
  painful and expensive.\
 ")
 
+[unit_missile]
+name          = _("Missile")
+class         = "Missile"
+tech_req      = "Rocketry"
+obsolete_by   = "None"
+graphic       = "u.missile"
+graphic_alt   = "u.cruise_missile"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 16
+defense       = 0
+hitpoints     = 2
+firepower     = 3
+move_rate     = 8
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 1
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 1
+embarks       = "Sea"
+disembarks    = "Sea"
+targets       = "Air", "Missile", "Helicopter"
+flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+Medium-distance Missile can devastate enemy units, especially is capable \
+to shoot down enemy aircrafts or missiles.\
+")
+
 [unit_cruise_missile]
 name          = _("Cruise Missile")
 class         = "Missile"
-tech_req      = "Rocketry"
+tech_req      = "Advanced Rocketry"
 obsolete_by   = "None"
 graphic       = "u.cruise_missile"
 graphic_alt   = "-"
@@ -4551,7 +4620,7 @@ sound_move    = "m_cruise_missile"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 50
 pop_cost      = 0
 attack        = 18
 defense       = 0
@@ -4564,10 +4633,9 @@ fuel          = 1
 uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
-uk_gold       = 1
+uk_gold       = 2
 embarks       = "Sea"
 disembarks    = "Sea"
-targets       = "Air", "Missile", "Helicopter"
 flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC"
 roles         = ""
 helptext      = _("\
@@ -4582,6 +4650,7 @@ TIP:  A handful of these can successfully keep the waters around\
 name          = _("Atomic Bomb")
 class         = "Missile"
 tech_req      = "Nuclear Fission"
+impr_req      = "Nuclear Plant"
 obsolete_by   = "None"
 graphic       = "u.Abomb"
 graphic_alt   = "u.nuclear"
@@ -4589,7 +4658,7 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 150
+build_cost    = 160
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -4640,7 +4709,8 @@ TIP:  You may be involved in a situation where you've invaded an\
 [unit_nuclear]
 name          = _("Nuclear")
 class         = "Missile"
-tech_req      = "Space Flight", "Nuclear Fission"
+tech_req      = "Advanced Rocketry", "Nuclear Fission"
+impr_req      = "Nuclear Plant"
 obsolete_by   = "None"
 graphic       = "u.nuclear"
 graphic_alt   = "-"
@@ -4648,7 +4718,7 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 180
+build_cost    = 220
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -5255,7 +5325,7 @@ attack        = 0
 defense       = 2
 hitpoints     = 10
 firepower     = 1
-move_rate     = 1
+move_rate     = 2
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0

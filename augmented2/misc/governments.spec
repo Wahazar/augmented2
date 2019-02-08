@@ -17,5 +17,6 @@ sprites =
 		"gov.fascism", "augmented2/misc/gov_fascism_cc"
 		"gov.first_republic", "augmented2/misc/gov_first_republic"
 		"gov.direct_democracy", "augmented2/misc/gov_direct_democracy"
+		"gov.legalism", "augmented2/misc/gov_legalism"
 	}
 
