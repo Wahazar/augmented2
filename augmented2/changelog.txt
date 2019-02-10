@@ -16,6 +16,8 @@ Celebrating cause:
  Food bonus under Monarchy (Palace req.)
 Metallurgy enable autoupgrade (on cost of v-level).
 Warfare Museum prevent autoupgrades from Metallurgy, Leonardo or DARPA.
+Bunkers: palisade replacement 
+General Staff tech.
 
 2.6.8
 Air units ignore walls and kill citizens.

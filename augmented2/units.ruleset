@@ -922,7 +922,7 @@ bombard_rate = 3
 [unit_marksman]
 name          = _("Marksman")
 class         = "Small Land"
-tech_req      = "Conscription"
+tech_req      = "General Staff"
 obsolete_by   = "Sniper"
 graphic       = "u.marksman"
 graphic_alt   = "u.riflemen"
@@ -1946,7 +1946,7 @@ Dromedari are desert brave wariors, mounted on camels.\
 [unit_lancers]
 name          = _("Lancers")
 class         = "Light Cavalry"
-tech_req      = "Tactics"
+tech_req      = "General Staff"
 obsolete_by   = "Bicycle Infantry"
 graphic       = "u.lancers"
 graphic_alt   = "u.dragoons"
@@ -2340,7 +2340,7 @@ build_cost    = 50
 pop_cost      = 0
 attack        = 5
 defense       = 3
-hitpoints     = 15
+hitpoints     = 20
 firepower     = 3
 move_rate     = 3
 vision_radius_sq = 2
@@ -2348,7 +2348,7 @@ transport_cap = 0
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 2
-uk_food       = 1
+uk_food       = 0
 uk_gold       = 3
 flags         = "Light Shells", "BadWallAttacker"
 roles         = "AttackFastStartUnit"

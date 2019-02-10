@@ -2477,12 +2477,21 @@ reqs    =
       "Building", "5 Years Plan", "City", TRUE, FALSE
     }
 
+[effect_5_Years_Plan_culture]
+type    = "History"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "5 Years Plan", "City"
+    }
+
 [effect_rapture_grow_0]
 type    = "Rapture_Grow"
 value   = 1
 reqs	=
     { "type", "name", "range", "present"
       "Gov", "First Republic", "Player", TRUE
+      "Building", "Granary", "City", TRUE
       "Tech", "Monotheism", "Player", FALSE
     }
 
@@ -2492,6 +2501,7 @@ value   = 1
 reqs	=
     { "type", "name", "range", "present"
       "Gov", "Direct Democracy", "Player", TRUE
+      "Building", "Granary", "City", TRUE
       "Tech", "Monotheism", "Player", FALSE
     }
 
@@ -2501,6 +2511,7 @@ value   = 1
 reqs	=
     { "type", "name", "range", "present"
       "Gov", "Legalism", "Player", TRUE
+      "Building", "Granary", "City", TRUE
       "Tech", "Monotheism", "Player", FALSE
     }
 
@@ -5044,6 +5055,22 @@ reqs	=
       "Building", "Marco Polo's Embassy", "City"
     }
 
+[effect_atlantic_telegraph_company]
+type    = "Have_Embassies"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Atlantic Telegraph Company", "Player"
+    }
+
+[effect_atlantic_telegraph_company_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Atlantic Telegraph Company", "City"
+    }
+
 [effect_michelangelos_chapel]
 type    = "Make_Content"
 value   = 3
@@ -7394,3 +7421,11 @@ reqs    =
       "Building", "Bunkers", "City"
     }
 
+
+[effect_warfare_museum_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Warfare Museum", "City"
+    }

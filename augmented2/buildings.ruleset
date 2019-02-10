@@ -470,7 +470,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
       "Building", "Church", "City", TRUE
-	 "MinCulture", "500", "Player", TRUE
+	 "MinCulture", "900", "Player", TRUE
       "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -530,7 +530,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Christianity", "Player", TRUE
-	 "MinCulture", "200", "Player", TRUE
+	 "MinCulture", "600", "Player", TRUE
       "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -616,6 +616,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Code of Laws", "Player"
+	 "MinCulture", "100", "Player", TRUE
     }
 graphic	= "b.courthouse"
 graphic_alt	= "-"
@@ -700,6 +701,8 @@ Together with a Courthouse it eliminates food waste.\
 "), _("\
 TIP: to maximise the speed with which a city grows, you should build a \
 Granary before it grows larger than size 4.\
+"), _("\
+TIP2: Granary is mandatory for Rapture growth under First Republic, Direct Democracy or Legalism gov.\
 ")
 
 [building_harbour]
@@ -956,6 +959,31 @@ A Manufacturing Plant also has a small risk of suffering an industrial \
 accident, which can lead to pollution and reduce the city's population.\
 ")
 
+[building_mosque]
+name		= _("Mosque")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Islam", "Player", TRUE
+	 "MinCulture", "600", "Player", TRUE
+	 "Building", "Temple", "City", FALSE
+	 "Building", "Church", "City", FALSE
+    }
+graphic	= "b.mosque"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+Makes 2 unhappy citizen content. Together with Kaaba, \
+makes also content one citizen unhappy by aggression.\
+")
+
 [building_nuclear_plant]
 name		= _("Nuclear Plant")
 genus		= "Improvement"
@@ -1117,7 +1145,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
       "Building", "City Hall", "City", TRUE
-	 "MinCulture", "500", "Player", TRUE
+	 "MinCulture", "950", "Player", TRUE
 	 "Building", "Angkor Wat", "Player", FALSE
     }
 graphic	= "b.ecclesiastical_palace"
@@ -1326,7 +1354,7 @@ reqs	=
       "Building", "University", "City", TRUE
       "Building", "Steel Mill", "City", FALSE
       "Building", "Cement Plant", "City", FALSE
-	 "MinCulture", "2000", "Player", TRUE
+	 "MinCulture", "3000", "Player", TRUE
     }
 graphic	= "b.research_lab"
 graphic_alt	= "-"
@@ -1425,6 +1453,32 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Together with an Aqueduct, allows a city to grow larger than size 16, \
 and further reduces the chance of a plague (by 30% of the base chance).\
+")
+
+[building_shrine_torii]
+name		= _("Shrine Torii")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Shinto", "Player", TRUE
+	 "Building", "Temple", "City", TRUE
+	 "MinCulture", "300", "Player", TRUE
+	 "Building", "Church", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+    }
+graphic	= "b.shrine_torii"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 10
+upkeep		= 0
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+Temple improvement: make additional 1 unhappy citizen content.\n\
+Not cumulative with Temple of Artemis or Temple of City God (but cumulative with Golden Temple)
 ")
 
 [building_solar_plant]
@@ -1750,7 +1804,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Modern Theatre", "Player"
-	 "MinCulture", "500", "Player"
+	 "MinCulture", "900", "Player"
     }
 graphic	= "b.theatre"
 graphic_alt	= "b.colosseum"
@@ -1799,7 +1853,7 @@ reqs	=
       "Tech", "University", "Player"
       "Building", "Library", "City"
       "Building", "City Hall", "City"
-	 "MinCulture", "1000", "Player"
+	 "MinCulture", "2000", "Player"
     }
 graphic	= "b.university"
 graphic_alt	= "-"
@@ -1836,7 +1890,7 @@ reqs	=
 graphic	= "b.atlantic_telegraph_company"
 graphic_alt	= "b.university"
 obsolete_by	= "None"
-build_cost	= 300
+build_cost	= 1300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
@@ -1852,7 +1906,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Mass Entertainment", "Player"
-	 "MinCulture", "350", "Player"
+	 "MinCulture", "450", "Player"
     }
 graphic	= "b.colosseum"
 graphic_alt	= "-"
@@ -1905,7 +1959,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Computers", "Player"
       "Building", "Research Lab", "City"
-	 "MinCulture", "2500", "Player"
+	 "MinCulture", "3500", "Player"
     }
 graphic	= "b.DARPA"
 graphic_alt	= "-"
@@ -1929,8 +1983,8 @@ name		= _("Ecole Speciale Militaire")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Chemical Synthesis", "Player"
-	 "MinCulture", "1200", "Player"
+      "Tech", "Tactics", "Player"
+	 "MinCulture", "1800", "Player"
     }
 graphic	= "b.ecole_speciale_militaire"
 graphic_alt	= "b.university"
@@ -1955,7 +2009,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Industrialization", "Player"
-	 "MinCulture", "1000", "Player"
+	 "MinCulture", "2000", "Player"
     }
 graphic	= "b.eiffel_tower"
 graphic_alt	= "-"
@@ -1985,7 +2039,7 @@ reqs	=
       "Tech", "Satellite System", "Player"
       "Building", "Apollo Program", "World"
       "Building", "Research Lab", "City"
-	 "MinCulture", "2500", "Player"
+	 "MinCulture", "5500", "Player"
     }
 graphic	= "b.global_positioning_system"
 graphic_alt	= "-"
@@ -2040,7 +2094,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 2000
+build_cost	= 4500
 upkeep	= 10
 sabotage	= 0
 sound		= "b_colosseum"
@@ -2069,7 +2123,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
-	 "MinCulture", "1500", "Player", TRUE
+	 "MinCulture", "2000", "Player", TRUE
       "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -2099,7 +2153,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Chivalry", "Player", TRUE
-	 "MinCulture", "400", "Player", TRUE
+	 "MinCulture", "800", "Player", TRUE
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -2233,7 +2287,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Vedism", "Player", TRUE
       "Building", "Temple", "City", TRUE
-	 "MinCulture", "300", "Player", TRUE
+	 "MinCulture", "500", "Player", TRUE
       "Building", "Church", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -2262,7 +2316,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Christianity", "Player", TRUE
       "Building", "Cathedral", "City", TRUE
-	 "MinCulture", "800", "Player", TRUE
+	 "MinCulture", "1200", "Player", TRUE
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -2291,7 +2345,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Radioactivity", "Player"
       "Building", "Hospital", "City"
-	 "MinCulture", "1200", "Player"
+	 "MinCulture", "2200", "Player"
     }
 graphic	= "b.mobile-x-ray"
 graphic_alt	= "-"
@@ -2307,31 +2361,6 @@ helptext	= _("\
 Increase healing of infantry or cavalry units by 25%, including those not fortified.\
 ")
 
-[building_mosque]
-name		= _("Mosque")
-genus		= "Improvement"
-reqs	=
-    { "type", "name", "range", "present"
-      "Tech", "Islam", "Player", TRUE
-	 "MinCulture", "200", "Player", TRUE
-	 "Building", "Temple", "City", FALSE
-	 "Building", "Church", "City", FALSE
-    }
-graphic	= "b.mosque"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-    }
-build_cost	= 40
-upkeep		= 1
-sabotage	= 100
-sound		= "b_temple"
-sound_alt	= "b_generic"
-helptext	= _("\
-Makes 2 unhappy citizen content. Together with Kaaba, \
-makes also content one citizen unhappy by aggression.\
-")
-
 [building_b_pasteur_institute]
 name		= _("Pasteur Institute")
 genus		= "SmallWonder"
@@ -2339,7 +2368,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Biology", "Player"
       "Building", "University", "City"
-	 "MinCulture", "1200", "Player"
+	 "MinCulture", "2200", "Player"
     }
 graphic	= "b.pasteur_institute"
 graphic_alt	= "-"
@@ -2390,7 +2419,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Modern Theatre", "Player"
-	 "MinCulture", "1600", "Player"
+	 "MinCulture", "2100", "Player"
     }
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
@@ -2413,32 +2442,6 @@ output increases to 3 for player's nation.\
 ; /* xgettext:no-c-format */
 _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
-")
-
-[building_shrine_torii]
-name		= _("Shrine Torii")
-genus		= "Improvement"
-reqs	=
-    { "type", "name", "range", "present"
-      "Tech", "Shinto", "Player", TRUE
-	 "Building", "Temple", "City", TRUE
-	 "MinCulture", "200", "Player", TRUE
-	 "Building", "Church", "City", FALSE
-	 "Building", "Mosque", "City", FALSE
-    }
-graphic	= "b.shrine_torii"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-    }
-build_cost	= 10
-upkeep		= 0
-sabotage	= 100
-sound		= "b_temple"
-sound_alt	= "b_generic"
-helptext	= _("\
-Temple improvement: make additional 1 unhappy citizen content.\n\
-Not cumulative with Temple of Artemis (but cumulative with Golden Temple)
 ")
 
 [building_slavery_abolition]
@@ -2474,7 +2477,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nanotechnology", "Player"
-	 "MinCulture", "2800", "Player"
+	 "MinCulture", "5800", "Player"
     }
 graphic	= "b.space_lift"
 graphic_alt	= "-"
@@ -2528,13 +2531,13 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Confucianism", "Player"
-	 "MinCulture", "600", "Player"
+	 "MinCulture", "800", "Player"
     }
 graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Machine Tools", "World", FALSE
+      "Tech", "Tactics", "World", FALSE
     }
 build_cost	= 300
 upkeep		= 0
@@ -2654,7 +2657,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Conscription", "Player"
       "Building", "Slavery Abolition", "Player"
-	 "MinCulture", "1400", "Player"
+	 "MinCulture", "2400", "Player"
     }
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
@@ -2710,7 +2713,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Hinduism", "Player", TRUE
       "Building", "City Hall", "City", TRUE
-	 "MinCulture", "400", "Player", TRUE
+	 "MinCulture", "800", "Player", TRUE
 	 "Building", "Ecclesiastical Palace", "Player", FALSE
     }
 graphic	= "b.angkor_wat"
@@ -2750,7 +2753,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Flight", "Player"
-	 "MinCulture", "2200", "Player"
+	 "MinCulture", "4200", "Player"
     }
 graphic	= "b.apollo_program"
 graphic_alt	= "-"
@@ -2782,14 +2785,14 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Economics", "Player"
       "Building", "Stock Exchange", "City"
-	 "MinCulture", "1000", "Player"
+	 "MinCulture", "2000", "Player"
     }
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 600
+build_cost	= 500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_asmiths_trading_co"
@@ -2833,7 +2836,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Genetic Engineering", "Player"
-	 "MinCulture", "5000", "Player"
+	 "MinCulture", "8000", "Player"
     }
 graphic	= "b.cure_for_cancer"
 graphic_alt	= "-"
@@ -2859,7 +2862,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Steam Engine", "Player"
-	 "MinCulture", "2000", "Player"
+	 "MinCulture", "3000", "Player"
     }
 graphic	= "b.darwins_voyage"
 graphic_alt	= "-"
@@ -2887,7 +2890,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Sikhism", "Player"
       "Building", "Temple", "City"
-	 "MinCulture", "1000", "Player"
+	 "MinCulture", "1500", "Player"
     }
 graphic	= "b.golden_temple"
 graphic_alt	= "b.palace"
@@ -2912,7 +2915,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Paper Making", "Player"
       "Building", "Library", "City"
-	 "MinCulture", "350", "Player"
+	 "MinCulture", "550", "Player"
     }
 graphic	= "b.great_library"
 graphic_alt	= "-"
@@ -2939,7 +2942,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Legalism", "Player"
-	 "MinCulture", "300", "Player"
+	 "MinCulture", "500", "Player"
     }
 graphic	= "b.great_wall"
 graphic_alt	= "-"
@@ -2997,7 +3000,7 @@ reqs	=
       "Tech", "Robotics", "Player"
       "Building", "Research Lab", "City"
       "Building", "DARPA", "Player"
-	 "MinCulture", "3000", "Player"
+	 "MinCulture", "4700", "Player"
     }
 graphic		= "b.internet"
 graphic_alt	= "b.seti_program"
@@ -3028,7 +3031,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Theory of Gravity", "Player"
       "Building", "University", "City"
-	 "MinCulture", "1600", "Player"
+	 "MinCulture", "2700", "Player"
     }
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
@@ -3091,7 +3094,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 3000
+build_cost	= 6000
 upkeep		= 1
 sabotage	= 0
 sound		= "b_nuclear_plant"
@@ -3111,7 +3114,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Buddhism", "Player"
       "Building", "Temple", "City"
-	 "MinCulture", "400", "Player"
+	 "MinCulture", "500", "Player"
     }
 graphic	= "b.leshan_buddha_statue"
 graphic_alt	= "-"
@@ -3165,7 +3168,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
-	 "MinCulture", "2000", "Player"
+	 "MinCulture", "3500", "Player"
       "Resource", "Uranium", "Local"
     }
 graphic	= "b.manhattan_project"
@@ -3219,14 +3222,14 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Democracy", "Player"
-	 "MinCulture", "1800", "Player"
+	 "MinCulture", "2800", "Player"
     }
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 2500
+build_cost	= 2200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_statue_of_liberty"
@@ -3273,7 +3276,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Communism", "Player"
-	 "MinCulture", "2200", "Player"
+	 "MinCulture", "3200", "Player"
     }
 graphic	= "b.united_nations"
 graphic_alt	= "-"

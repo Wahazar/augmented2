@@ -140,12 +140,12 @@ cost     = 630
 
 [advance_animal_husbandry]
 name     = _("Animal Husbandry")
-req1     = "None"
-req2     = "None"
+req1     = "Fire Making"
+req2     = "Stone Knapping"
 flags    = ""
 graphic     = "a.animal_husbandry"
 graphic_alt = "-"
-cost     = 4
+cost     = 6
 
 [advance_antimatter_propulsion]
 name     = _("Antimatter Propulsion")
@@ -669,6 +669,15 @@ graphic     = "a.fusion_power"
 graphic_alt = "-"
 cost     = 1970
 
+[advance_general_staff]
+name     = _("General Staff")
+req1     = "Leadership"
+req2     = "Metallurgy"
+flags    = ""
+graphic     = "a.general_staff"
+graphic_alt = "-"
+cost     = 270
+
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
 req1     = "Biotechnology"
@@ -730,11 +739,11 @@ cost     = 80
 [advance_horseback_riding]
 name     = _("Horseback Riding")
 req1     = "Animal Husbandry"
-req2     = "Stone Knapping"
+req2     = "Leather Tanning"
 flags    = ""
 graphic     = "a.horseback_riding"
 graphic_alt = "-"
-cost     = 10
+cost     = 12
 
 [advance_imperialism]
 name     = _("Imperialism")
@@ -1132,7 +1141,7 @@ cost     = 30
 [advance_pottery]
 name     = _("Pottery")
 req1     = "Fire Making"
-req2     = "Stone Knapping"
+req2     = "Creative Art"
 flags    = ""
 graphic     = "a.pottery"
 graphic_alt = "-"
@@ -1437,11 +1446,11 @@ cost     = 2900
 [advance_tactics]
 name     = _("Tactics")
 req1     = "Conscription"
-req2     = "Leadership"
+req2     = "General Staff"
 flags    = ""
 graphic     = "a.tactics"
 graphic_alt = "-"
-cost     = 360
+cost     = 400
 
 [advance_television]
 name     = _("Television")

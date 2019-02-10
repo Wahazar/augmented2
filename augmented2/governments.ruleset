@@ -525,7 +525,7 @@ Under a Ancient Republican government, citizens hold an election to select a\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Celebrating cities with size 4 or above are subject of Rapture Growth \
+* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
  (this effect is cancelled by Monotheism)\n\
 * Each city can support 1 shield and 6 gold unit payment for free.\n\
 * Each city tolerates two aggressively deployed military units;\
@@ -562,7 +562,7 @@ Under Direct Democracy, citizens govern directly by voting on issues.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Celebrating cities with size 3 or above are subject of Rapture Growth \
+* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
  (this effect is cancelled by Monotheism)\n\
 * Each city can support 4 gold and 5 shield unit payment for free; gold payment is doubled.\n\
 * Each city tolerates a single aggressively deployed military unit;\
@@ -599,7 +599,7 @@ helptext = _("\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Celebrating cities with size 3 or above are subject of Rapture Growth \
+* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
  (this effect is cancelled by Monotheism)\n\
 * Each city can support 1 gold and 5 shield unit payment for free.\n\
 * Each city tolerates a single aggressively deployed military unit;\
