@@ -1176,8 +1176,8 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "OutputType", "Gold", "Local", TRUE
-      "Gov", "Anarchy", "Player", FALSE
-;      "Gov", "Tribal", "Player", FALSE
+;      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Tribal", "Player", FALSE
 ;      "Gov", "Communism", "Player", FALSE
 ;      "Gov", "Despotism", "Player", FALSE
 ;      "Gov", "Monarchy", "Player", FALSE
