@@ -206,6 +206,41 @@ _("\
 ")
 
 ;------------------------------------------------------------------------
+[government_legalism]
+
+name        = _("Legalism")
+reqs = { "type", "name", "range"
+         "tech", "Legalism", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.legalism"
+graphic_alt = "gov.communism"
+ai_better   = "Communism"
+
+ruler_male_title = _("Emperor %s")
+ruler_female_title = _("?female:Empress %s")
+
+helptext = _("\
+ Legalism is a political philosophy based on the idea,\
+ that a highly efficient and powerful government is the key to social order.\
+ Army of skilled officials is able to maintain even huge empire, but such highly bureaucratized state\
+ is affected by relatively high corruption.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support 1 gold and 5 shield unit payment for free.\n\
+* Each city tolerates a single aggressively deployed military unit;\
+ each further unit causes unhappy citizens.\n\
+* Military units impose limited martial law: 1 military unit inside a city\
+ will force 2 unhappy citizen to become content.\n\
+* Base corruption is 20%. This increases slowly with distance from the capital\n\
+* Base production waste is 30%, regardless of distance from capital.\n\
+* Science and luxury outcome is decreased.\
+")
+
+;------------------------------------------------------------------------
 [government_communism]
 
 name        = _("Communism")
@@ -294,6 +329,124 @@ _("\
  capital (half as fast with knowledge of Trade).\n\
 * Due to high loyality of indoctrinated warriors, inciting revolt is very expensive.\n\
 * Science outcome is decreased.\
+")
+
+;------------------------------------------------------------------------
+[government_first_republic]
+
+name        = _("First Republic")
+reqs = { "type", "name", "range"
+         "tech", "First Republic", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.first_republic"
+graphic_alt = "gov.republic"
+ai_better   = "Republic"
+
+ruler_male_title = _("Consul %s")
+ruler_female_title = _("?female:Consul %s")
+
+helptext = _("\
+Under a Ancient Republican government, citizens hold an election to select a\
+ members of Senate, who will govern them; since elected Senators must\
+ remain popular to remain in control, citizens are given a greater\
+ degree of freedom.  Citizens under the First Republic become unhappy\
+ easily, but the self-sufficiency of your citizens allows high levels\
+ of trade.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support 1 shield and 6 gold unit payment for free.\n\
+* Each city tolerates two aggressively deployed military units;\
+ each further unit causes 1 unhappy citizen.\n\
+* Military units impose limited martial law: 1 military unit inside a city\
+ will force 1 unhappy citizen to become content.\n\
+* Base corruption is 20%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 10%. This increases with distance from the\
+ capital (half as fast with knowledge of Trade).\n\
+* Gold and luxury outcome is increased.\
+")
+
+;------------------------------------------------------------------------
+[government_direct_democracy]
+
+name        = _("Direct Democracy")
+reqs = { "type", "name", "range"
+         "tech", "Direct Democracy", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.direct_democracy"
+graphic_alt = "gov.democracy"
+ai_better   = "Democracy"
+
+ruler_male_title = _("Archon %s")
+ruler_female_title = _("?female:Nymph %s")
+
+helptext = _("\
+Under Direct Democracy, citizens govern directly by voting on issues.\
+ Direct Democracy offers high boost of science, but also\
+ offers the most potential for unhappiness; citizens become very\
+ upset during wars. Limited possibility of tax rates change.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support 4 gold and 5 shield unit payment for free; gold payment is doubled.\n\
+* Each city tolerates a single aggressively deployed military unit;\
+ each further unit causes 2 unhappy citizens.\n\
+* Base corruption is 10%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 20%. This increases with distance from the\
+ capital.\n\
+* Has a senate that may prevent declaration of war.\
+* Direct Democracy is relatively tolerant of foreginers metics in cities.\
+* Science outcome is increased.\
+")
+
+;------------------------------------------------------------------------
+[government_thalassocracy]
+
+name        = _("Thalassocracy")
+reqs = { "type", "name", "range"
+         "tech", "Thalassocracy", "Player"
+;         "Building", "Palace", "Player"
+       }
+graphic     = "gov.thalassocracy"
+graphic_alt = "s.tax_gold"
+
+ruler_male_title = _("Council %s")
+ruler_female_title = _("?female:Council %s")
+
+helptext = _("\
+Thalassocracy is a system of 'empire at sea', which gain power\
+ from naval and sea trade supremacy. \n\
+ This decentralised state of selfdom cities have moderate corruption\
+ and increased money income from sea,\
+ albeit decreased inland productivity. \n\
+ Due to long traditions of its maritime supremacy, all new warships have already deckhand level \
+(hardened with Lighthouse and Harbour or Port Facility). \
+"),
+; /* xgettext:no-c-format */
+_("\
+* If there is Marco Polo Embassy on the same continent,\
+ celebrating cities produce one extra shield point for every tile which is\
+ already producing shield. (Cities below size 3 will not celebrate.)\n\
+* Each city gets extra luxury point.\n\
+* Each city can support up to 1 gold and 4 shield unit payments for free; \n\
+* Martial law is limited to 1 unit.\n\
+* Each city tolerates up to 1 peacemaker unit outside of state boundaries;\
+  each further unit causes 3 unhappy citizens (2 with Hollywood).\n\
+* There is 10% base level of corruption, not affected by distance to the capital.\n\
+* Base production waste is 20%, \
+  and is not affected by distance to the capital.\n\
+  Production penalty is applied for inland tiles (except of city with the Lighthouse).\n\
+* Low chance of Civil War, however citizens are happy, when limited number of cities \
+  participate within this sea-trade federation.\
+* Thalassocracy is very tolerant of mixed nationalities in your cities.\
 ")
 
 ;------------------------------------------------------------------------
@@ -419,49 +572,6 @@ _("\
 ")
 
 ;------------------------------------------------------------------------
-[government_thalassocracy]
-
-name        = _("Thalassocracy")
-reqs = { "type", "name", "range"
-         "tech", "Thalassocracy", "Player"
-         "Building", "Palace", "Player"
-       }
-graphic     = "gov.thalassocracy"
-graphic_alt = "s.tax_gold"
-
-ruler_male_title = _("Council %s")
-ruler_female_title = _("?female:Council %s")
-
-helptext = _("\
-Thalassocracy is a system of 'empire at sea', which gain power\
- from naval and sea trade supremacy. \n\
- This decentralised state of selfdom cities have moderate corruption \
- caused by distance to capital, and increased money income from sea, \
- albeit decreased inland productivity. \n\
- Due to long traditions of its maritime supremacy, all new warships have already deckhand level \
-(hardened with Lighthouse and Harbour or Port Facility). \
-"),
-; /* xgettext:no-c-format */
-_("\
-* If there is Marco Polo Embassy on the same continent,\
- celebrating cities produce one extra shield point for every tile which is\
- already producing shield. (Cities below size 3 will not celebrate.)\n\
-* Each city gets extra luxury point.\n\
-* Each city can support up to 1 gold and 4 shield unit payments for free; \n\
-* Martial law is limited to 1 unit.\n\
-* Each city tolerates up to 1 peacemaker unit outside of state boundaries;\
- each further unit causes 3 unhappy citizens (2 with Hollywood).\n\
-* There is 10% base level of corruption, increasing slightly\
- with distance from the capital.\n\
-* Base production waste is 20%, \
-  and is not affected by distance to the capital.\n\
-  Production penalty is applied for inland tiles (except of city with the Lighthouse).\n\
-* Low chance of Civil War, however citizens are happy, when limited number of cities \
-  participate within this sea-trade federation.\
-* Thalassocracy is very tolerant of mixed nationalities in your cities.\
-")
-
-;------------------------------------------------------------------------
 [government_fascism]
 
 name        = _("Fascism")
@@ -489,6 +599,9 @@ Fascism is a government suitable for maximizing shield production and military p
 _("\
 * Each city can support up to 4 shield and 6 gold unit payment for free (shield payment are doubled);\
  further units each cost 2 shields per turn (more than 6, also gold).\n\
+* Celebrating cities produce a further shield point for every worked tile\
+ (land or water) which is already producing shield. (Cities below size 3\
+ will not celebrate). Police Station required.\n\
 * Base corruption is 20%, this increases with distance from the capital.\n\
 * There is no base production waste, but this increase with distance from the capital.\n\
 * Each factory production is increased twice.\
@@ -500,116 +613,6 @@ _("\
 * Luxury and science outcome is decreased.\
 ")
 
-;------------------------------------------------------------------------
-[government_first_republic]
-
-name        = _("First Republic")
-reqs = { "type", "name", "range"
-         "tech", "First Republic", "Player"
-         "Building", "Palace", "Player"
-       }
-graphic     = "gov.first_republic"
-graphic_alt = "gov.republic"
-ai_better   = "Republic"
-
-ruler_male_title = _("Consul %s")
-ruler_female_title = _("?female:Consul %s")
-
-helptext = _("\
-Under a Ancient Republican government, citizens hold an election to select a\
- members of Senate, who will govern them; since elected Senators must\
- remain popular to remain in control, citizens are given a greater\
- degree of freedom.  Citizens under the First Republic become unhappy\
- easily, but the self-sufficiency of your citizens allows high levels\
- of trade.\
-"),
-; /* xgettext:no-c-format */
-_("\
-* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
- (this effect is cancelled by Monotheism)\n\
-* Each city can support 1 shield and 6 gold unit payment for free.\n\
-* Each city tolerates two aggressively deployed military units;\
- each further unit causes 1 unhappy citizen.\n\
-* Military units impose limited martial law: 1 military unit inside a city\
- will force 1 unhappy citizen to become content.\n\
-* Base corruption is 20%. This increases with distance from the capital\
- (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 10%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\n\
-* Gold and luxury outcome is increased.\
-")
-
-;------------------------------------------------------------------------
-[government_direct_democracy]
-
-name        = _("Direct Democracy")
-reqs = { "type", "name", "range"
-         "tech", "Direct Democracy", "Player"
-         "Building", "Palace", "Player"
-       }
-graphic     = "gov.direct_democracy"
-graphic_alt = "gov.democracy"
-ai_better   = "Democracy"
-
-ruler_male_title = _("Archon %s")
-ruler_female_title = _("?female:Nymph %s")
-
-helptext = _("\
-Under Direct Democracy, citizens govern directly by voting on issues.\
- Direct Democracy offers high boost of science, but also\
- offers the most potential for unhappiness; citizens become very\
- upset during wars. Limited possibility of tax rates change.\
-"),
-; /* xgettext:no-c-format */
-_("\
-* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
- (this effect is cancelled by Monotheism)\n\
-* Each city can support 4 gold and 5 shield unit payment for free; gold payment is doubled.\n\
-* Each city tolerates a single aggressively deployed military unit;\
- each further unit causes 2 unhappy citizens.\n\
-* Base corruption is 10%. This increases with distance from the capital\
- (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 20%. This increases with distance from the\
- capital.\n\
-* Has a senate that may prevent declaration of war.\
-* Direct Democracy is relatively tolerant of foreginers metics in cities.\
-* Science outcome is increased.\
-")
-
-;------------------------------------------------------------------------
-[government_legalism]
-
-name        = _("Legalism")
-reqs = { "type", "name", "range"
-         "tech", "Legalism", "Player"
-         "Building", "Palace", "Player"
-       }
-graphic     = "gov.legalism"
-graphic_alt = "gov.communism"
-ai_better   = "Communism"
-
-ruler_male_title = _("Emperor %s")
-ruler_female_title = _("?female:Empress %s")
-
-helptext = _("\
- Legalism is a political philosophy based on the idea,\
- that a highly efficient and powerful government is the key to social order.\
- Army of skilled officials is able to maintain even huge empire, but such highly bureaucratized state\
- is affected by relatively high corruption.\
-"),
-; /* xgettext:no-c-format */
-_("\
-* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
- (this effect is cancelled by Monotheism)\n\
-* Each city can support 1 gold and 5 shield unit payment for free.\n\
-* Each city tolerates a single aggressively deployed military unit;\
- each further unit causes unhappy citizens.\n\
-* Military units impose limited martial law: 1 military unit inside a city\
- will force 2 unhappy citizen to become content.\n\
-* Base corruption is 20%. This increases slowly with distance from the capital\n\
-* Base production waste is 30%, regardless of distance from capital.\n\
-* Science and luxury outcome is decreased.\
-")
 
 
 ; /* <-- avoid gettext warnings

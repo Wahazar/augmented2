@@ -668,13 +668,23 @@ reqs    =
     }
 
 ; Total -1% food each 4 tiles
-[effect_food_waste_distance_3]
-type    = "Output_Waste_Pct"
-value   = 50
+;[effect_food_waste_distance_3]
+;type    = "Output_Waste_Pct"
+;value   = 50
+;reqs    =
+;    { "type", "name", "range"
+;      "OutputType", "Food", "Local"
+;      "Gov", "Thalassocracy", "Player"
+;    }
+
+; 0% food waste distance with Thalassocracy
+[effect_food_waste_distance_thalassocracy]
+type    = "Output_Waste_By_Distance"
+value   = -1
 reqs    =
     { "type", "name", "range"
-      "OutputType", "Food", "Local"
       "Gov", "Thalassocracy", "Player"
+      "OutputType", "Food", "Local"
     }
 
 ; Base 30% food waste with Anarchy, no distance waste
@@ -951,14 +961,25 @@ reqs    =
     }
 
 ; decreased distance waste
-[effect_gold_corruption_distance_thalassocracy_1]
-type    = "Output_Waste_Pct"
-value   = 50
+;[effect_gold_corruption_distance_thalassocracy_1]
+;type    = "Output_Waste_Pct"
+;value   = 50
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "OutputType", "Trade", "Local", TRUE
+;      "Gov", "Thalassocracy", "Player", FALSE
+;    }
+
+; 0% trade waste distance with Thalassocracy
+[effect_trade_waste_distance_thalassocracy]
+type    = "Output_Waste_By_Distance"
+value   = -1
 reqs    =
-    { "type", "name", "range", "present"
-      "OutputType", "Trade", "Local", TRUE
-      "Gov", "Thalassocracy", "Player", FALSE
+    { "type", "name", "range"
+      "Gov", "Thalassocracy", "Player"
+      "OutputType", "Trade", "Local"
     }
+
 
 ; base -1% shields each tile
 [effect_waste_distance]
@@ -2464,6 +2485,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present", "quiet"
       "OutputType", "Shield", "Local", TRUE, TRUE
+      "Building", "Police Station", "City", TRUE, FALSE
       "Gov", "Fascism", "Player", TRUE, FALSE
     }
 
@@ -3301,21 +3323,22 @@ value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Cathedral", "City"
+      "Building", "Church", "City"
     }
 
-[effect_js_bachs_cathedral_1]
-type    = "Make_Content"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Building", "J.S. Bach's Cathedral", "Player", TRUE
-      "Building", "Cathedral", "City", TRUE
-      "Gov", "Communism", "Player", FALSE
-    }
+;[effect_js_bachs_cathedral_1]
+;type    = "Make_Content"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Building", "J.S. Bach's Cathedral", "Player", TRUE
+;      "Building", "Cathedral", "City", TRUE
+;      "Gov", "Communism", "Player", FALSE
+;    }
 
 [effect_cathedral_culture]
 type    = "History"
-value	= 2
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Cathedral", "City"
@@ -7099,7 +7122,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "J.S. Bach's Cathedral", "Player", TRUE
-
+      "Gov", "Communism", "Player", FALSE
     }
 
 [effect_church]
@@ -7122,7 +7145,7 @@ reqs    =
 
 [effect_church_culture]
 type    = "History"
-value	= 1
+value	= 2
 reqs    =
     { "type", "name", "range"
       "Building", "Church", "City"

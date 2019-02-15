@@ -10,6 +10,6 @@ options = "+Freeciv-2.6-spec"
 
 sprites =
 	{	"tag", "file"
-		"ts.rice", "augmented2/terrain/rice_t"
+		"ts.rice", "augmented2/terrain_small/rice_t"
 	}
 

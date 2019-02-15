@@ -1410,6 +1410,11 @@ flags    = ""
 graphic     = "a.steel"
 graphic_alt = "-"
 cost     = 430
+helptext = _("\
+Allows Engineers and barges to build Road Bridges \
+over Lakes or Ocean (bridge need to be adjancent to coast) \
+") 
+
 
 [advance_stone_knapping]
 name     = _("Stone Knapping")

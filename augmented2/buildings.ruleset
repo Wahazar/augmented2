@@ -485,10 +485,11 @@ sabotage	= 100
 sound		= "b_cathedral"
 sound_alt	= "b_generic"
 helptext	= _("\
-A Cathedral makes 3 unhappy citizens content in a city, making it \
-easier to maintain order in that city; however, it does not affect \
+A Cathedral makes 3 unhappy citizens content in a city \
+(6 with Michelangelo's Chapel), making it easier to \
+maintain order in that city; however, it does not affect \
 citizens made unhappy by aggression.\
-With J.S. Bach's Cathedral, additional citizen is made content\
+With J.S. Bach's Cathedral, additional citizen is made happy\
 (except of Communism).
 ")
 
@@ -540,13 +541,13 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 40
-upkeep		= 1
+upkeep		= 2
 sabotage	= 100
 sound		= "b_temple"
 sound_alt	= "b_generic"
 helptext	= _("\
 Makes 2 unhappy citizens content. Does not affect citizens made unhappy by aggression.\
-Knowledge of Theology increases the effect of a Cathedral, making an additional unhappy \
+Knowledge of Theology increases the effect of a Church, making an additional unhappy \
 citizen content, except under Communism.
 ")
 
@@ -2009,7 +2010,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Industrialization", "Player"
-	 "MinCulture", "2000", "Player"
+	 "MinCulture", "2500", "Player"
     }
 graphic	= "b.eiffel_tower"
 graphic_alt	= "-"
@@ -2039,7 +2040,7 @@ reqs	=
       "Tech", "Satellite System", "Player"
       "Building", "Apollo Program", "World"
       "Building", "Research Lab", "City"
-	 "MinCulture", "5500", "Player"
+	 "MinCulture", "7500", "Player"
     }
 graphic	= "b.global_positioning_system"
 graphic_alt	= "-"
@@ -2087,7 +2088,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Cinematography", "Player"
       "Building", "Women's Suffrage", "Player"
-	 "MinCulture", "4500", "Player"
+	 "MinCulture", "6500", "Player"
     }
 graphic	= "b.hollywood"
 graphic_alt	= "-"
@@ -2123,7 +2124,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
-	 "MinCulture", "2000", "Player", TRUE
+	 "MinCulture", "3000", "Player", TRUE
       "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -2262,7 +2263,7 @@ reqs	=
       "Tech", "Electronics", "Player"
       "Building", "Factory", "City"
       "Building", "Library", "City"
-	 "MinCulture", "2000", "Player"
+	 "MinCulture", "4300", "Player"
     }
 graphic	= "b.massachusetts_institute_of_technology"
 graphic_alt	= "-"
@@ -2316,7 +2317,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Christianity", "Player", TRUE
       "Building", "Cathedral", "City", TRUE
-	 "MinCulture", "1200", "Player", TRUE
+	 "MinCulture", "2200", "Player", TRUE
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -2345,7 +2346,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Radioactivity", "Player"
       "Building", "Hospital", "City"
-	 "MinCulture", "2200", "Player"
+	 "MinCulture", "3200", "Player"
     }
 graphic	= "b.mobile-x-ray"
 graphic_alt	= "-"
@@ -2368,7 +2369,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Biology", "Player"
       "Building", "University", "City"
-	 "MinCulture", "2200", "Player"
+	 "MinCulture", "3000", "Player"
     }
 graphic	= "b.pasteur_institute"
 graphic_alt	= "-"
@@ -2419,7 +2420,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Modern Theatre", "Player"
-	 "MinCulture", "2100", "Player"
+	 "MinCulture", "4100", "Player"
     }
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
@@ -2477,7 +2478,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nanotechnology", "Player"
-	 "MinCulture", "5800", "Player"
+	 "MinCulture", "7800", "Player"
     }
 graphic	= "b.space_lift"
 graphic_alt	= "-"
@@ -2657,7 +2658,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Conscription", "Player"
       "Building", "Slavery Abolition", "Player"
-	 "MinCulture", "2400", "Player"
+	 "MinCulture", "3400", "Player"
     }
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
@@ -2753,7 +2754,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Flight", "Player"
-	 "MinCulture", "4200", "Player"
+	 "MinCulture", "6200", "Player"
     }
 graphic	= "b.apollo_program"
 graphic_alt	= "-"
@@ -2836,7 +2837,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Genetic Engineering", "Player"
-	 "MinCulture", "8000", "Player"
+	 "MinCulture", "9000", "Player"
     }
 graphic	= "b.cure_for_cancer"
 graphic_alt	= "-"
@@ -3000,7 +3001,7 @@ reqs	=
       "Tech", "Robotics", "Player"
       "Building", "Research Lab", "City"
       "Building", "DARPA", "Player"
-	 "MinCulture", "4700", "Player"
+	 "MinCulture", "8700", "Player"
     }
 graphic		= "b.internet"
 graphic_alt	= "b.seti_program"
@@ -3094,7 +3095,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 6000
+build_cost	= 9000
 upkeep		= 1
 sabotage	= 0
 sound		= "b_nuclear_plant"
@@ -3168,7 +3169,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
-	 "MinCulture", "3500", "Player"
+	 "MinCulture", "4800", "Player"
       "Resource", "Uranium", "Local"
     }
 graphic	= "b.manhattan_project"
@@ -3222,7 +3223,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Democracy", "Player"
-	 "MinCulture", "2800", "Player"
+	 "MinCulture", "4800", "Player"
     }
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
@@ -3276,7 +3277,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Communism", "Player"
-	 "MinCulture", "3200", "Player"
+	 "MinCulture", "5200", "Player"
     }
 graphic	= "b.united_nations"
 graphic_alt	= "-"

@@ -2,6 +2,11 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.10
+Thalassocracy tweaks
+Highway fix - need automobile
+Suspension "Bridge Road" over Sea or Lake
+
 2.6.9
 Temple of city god - small wonder
 Tech tree tweaks
@@ -10,9 +15,9 @@ Nuclear units require Nuclear Plant
 Uranium strategic resource required for Manhattan Project, and add bonus trade to Nuclear Power.
 Libraries output increased to 75%, to balance worse science unders ome govs.
 Celebrating cause: 
- Rapture under First Republic, Democracy or Legalism, 
- Trade bonus under Republic, Democracy, Federation (Women suffrage req)
- Shield bonus under Fascism, Communism (5-year Plan req), Thalassocracy (Marco Polo's Embassy req),
+ Rapture under First Republic, Democracy or Legalism (Granary req.), 
+ Trade bonus under Republic, Democracy, Federation (Women suffrage req.)
+ Shield bonus under Fascism (Police Station req.), Communism (5-year Plan req,), Thalassocracy (Marco Polo's Embassy req.),
  Food bonus under Monarchy (Palace req.)
 Metallurgy enable autoupgrade (on cost of v-level).
 Warfare Museum prevent autoupgrades from Metallurgy, Leonardo or DARPA.

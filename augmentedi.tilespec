@@ -139,7 +139,9 @@ files =
   "augmented2/amplio_units/units.spec",
   "augmented2/misc/governments.spec",
   "augmented2/terrain/terrain.spec",
-  "augmented2/terrain/roads-hwy.spec"
+  "augmented2/terrain/roads-hwy.spec",
+  "augmented2/terrain/waterlock.spec",
+  "augmented2/terrain/road_bridge.spec"
 
 ; Include color definitions
 *include "misc/colors.tilespec"
@@ -301,4 +303,5 @@ styles =
       "base.buoy",     "3layer"
       "base.ruins",    "3layer"
       "road.waterlock","River"
+      "road.road_bridge","RoadAllCombined"
     }

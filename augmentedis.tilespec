@@ -123,8 +123,10 @@ files =
   "augmented2/buildings_small/buildings-small.spec",
   "augmented2/wonders_small/wonders-small.spec",
   "augmented2/misc/governments.spec",
-  "augmented2/terrain/terrain-small.spec",
-  "augmented2/terrain/roads-hwys.spec"
+  "augmented2/terrain_small/terrain-small.spec",
+  "augmented2/terrain_small/roads-hwys.spec",
+  "augmented2/terrain_small/waterlocks.spec",
+  "augmented2/terrain_small/road_bridges.spec"
 
 ; Include color definitions
 *include "misc/colors.tilespec"
@@ -259,4 +261,6 @@ styles =
       "base.airbase",  "3Layer"
       "base.buoy",     "3Layer"
       "base.ruins",    "3Layer"
+      "road.waterlock","River"
+      "road.road_bridge","RoadAllCombined"
     }

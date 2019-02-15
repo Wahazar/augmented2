@@ -11,7 +11,7 @@ artists = "
 "
 
 [file]
-gfx = "augmented2/terrain/hwroads_s"
+gfx = "augmented2/terrain_small/hwroads_s"
 
 [grid_main]
 
