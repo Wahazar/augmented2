@@ -658,14 +658,14 @@ reqs    =
     }
 
 ; Total -1% food each 4 tiles
-[effect_food_waste_distance_2]
-type    = "Output_Waste_Pct"
-value   = 50
-reqs    =
-    { "type", "name", "range"
-      "OutputType", "Food", "Local"
-      "Gov", "Federation", "Player"
-    }
+;[effect_food_waste_distance_2]
+;type    = "Output_Waste_Pct"
+;value   = 50
+;reqs    =
+;    { "type", "name", "range"
+;      "OutputType", "Food", "Local"
+;      "Gov", "Federation", "Player"
+;    }
 
 ; Total -1% food each 4 tiles
 ;[effect_food_waste_distance_3]
@@ -684,6 +684,16 @@ value   = -1
 reqs    =
     { "type", "name", "range"
       "Gov", "Thalassocracy", "Player"
+      "OutputType", "Food", "Local"
+    }
+
+; 0% food waste distance with Federation
+[effect_food_waste_distance_federation]
+type    = "Output_Waste_By_Distance"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Federation", "Player"
       "OutputType", "Food", "Local"
     }
 
@@ -758,7 +768,7 @@ reqs    =
 ;augmented: no base waste if supermarket
 [effect_food_waste_federation]
 type    = "Output_Waste"
-value   = 15
+value   = 20
 reqs    =
     { "type", "name", "range", "present", "quiet"
       "Gov", "Federation", "Player", TRUE, TRUE
@@ -840,14 +850,14 @@ reqs    =
     }
 
 
-; Total = 0 for Federation with The Corporation, -1% for Federation alone
+; Total = 0 for Federation 
 [effect_corruption_distance_federation]
 type    = "Output_Waste_By_Distance"
 value   = -1
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Federation", "Player", TRUE
-      "OutputType", "Trade", "Local", FALSE
+;      "OutputType", "Trade", "Local", FALSE
     }
 
 ; Corruption + waste = 30% for all govs except Tribal and Anarchy
@@ -5972,6 +5982,15 @@ reqs    =
       "MaxUnitsOnTile", "0", "Local", FALSE
     }
 
+[effect_watchtower_vision]
+type    = "City_Vision_Radius_Sq"
+value   = 7
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Watchtower", "City", TRUE
+      "Tech", "Glass Working", "Player", TRUE
+    }
+
 [effect_airport_vision]
 type    = "City_Vision_Radius_Sq"
 value	= 7
@@ -7444,6 +7463,14 @@ reqs    =
       "Building", "Bunkers", "City"
     }
 
+[effect_metallurgy]
+type    = "Upgrade_Unit"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Tech", "Metallurgy", "Player", TRUE
+      "Building", "Warfare Museum", "Player", FALSE
+    }
 
 [effect_warfare_museum_culture]
 type    = "History"

@@ -472,6 +472,7 @@ Initial city vision square radius 8.
 City vision area will grow with:
 city size 3 with Courthouse,
 occupied city with City Walls
+city with Watchtower
 Airport or Eiffel Tower (with Electricity)
 
 WONDERS:

@@ -1288,7 +1288,7 @@ reqs           =
     }
 build_time     = 0
 removal_time   = 0
-conflicts      = "Buoy", "Road Bridge"
+conflicts      = "Buoy";, "Road Bridge"
 helptext       = _("\
 Oil platforms allow cities with Offshore Platforms to get an extra \
 production point from Deep Ocean tiles.\
@@ -1631,7 +1631,7 @@ reqs           =
     }
 build_time     = 3
 removal_time   = 0
-conflicts      = "Oil Platform", "Road Bridge"
+conflicts      = "Oil Platform";, "Road Bridge"
 flags          = "ShowFlag"
 helptext       = _("\
 Buoys may be built in the ocean (by units on a sea-going vessel) to \
@@ -1876,37 +1876,39 @@ Allow ships to enter inland.\
 Building Water Lock requires ocean tile adjacent to this facility.\
 ")
 
-[extra_road_bridge]
-name           = _("Road Bridge")
-category       = "Infra"
-causes         = "Road"
-rmcauses       = "Pillage"
-graphic        = "road.road_bridge"
-graphic_alt    = "road.road"
-activity_gfx   = "unit.buoy"
-act_gfx_alt    = "unit.road"
-act_gfx_alt2   = "-"
-rmact_gfx      = "None"
-rmact_gfx_alt  = "-"
-reqs           =
-    { "type", "name", "range", "present", "quiet"
-      "UnitFlag", "Transform", "Local", TRUE, FALSE
-      "TerrainClass", "Oceanic", "Local", TRUE, FALSE
-      "TerrainClass", "Land", "CAdjacent", TRUE, FALSE
-      "Tech", "Steel", "Player", TRUE, FALSE
-      "CityTile", "Center", "Local", FALSE, TRUE
-      "Terrain", "Deep Ocean", "Local", FALSE, FALSE
-    }
-build_time     = 8
-removal_time   = 2
-conflicts      = "Oil Platform", "Buoy"
-native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
-flags          = "NativeTile", "ConnectLand"
-helptext       = _("\
-Allow land units to pass Ocean or Lake.\
-"), _("\
-Engineers or Barge is required to build Road Bridge, land tile need to be adjacent to this facility.\
-")
+
+;[extra_road_bridge]
+;name           = _("Road Bridge")
+;category       = "Infra"
+;causes         = "Road"
+;rmcauses       = "Pillage"
+;graphic        = "road.road_bridge"
+;graphic_alt    = "road.road"
+;activity_gfx   = "unit.buoy"
+;act_gfx_alt    = "unit.road"
+;act_gfx_alt2   = "-"
+;rmact_gfx      = "None"
+;rmact_gfx_alt  = "-"
+;reqs           =
+;    { "type", "name", "range", "present", "quiet"
+;      "UnitFlag", "Transform", "Local", TRUE, FALSE
+;      "TerrainClass", "Oceanic", "Local", TRUE, FALSE
+;      "TerrainClass", "Land", "CAdjacent", TRUE, FALSE
+;      "Tech", "Steel", "Player", TRUE, FALSE
+;      "CityTile", "Center", "Local", FALSE, TRUE
+;      "Terrain", "Deep Ocean", "Local", FALSE, FALSE
+;    }
+;build_time     = 8
+;removal_time   = 2
+;conflicts      = "Oil Platform", "Buoy"
+;native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
+;flags          = "NativeTile", "ConnectLand"
+;helptext       = _("\
+;Allow land units to pass Ocean or Lake.\
+;"), _("\
+;Engineers or Barge is required to build Road Bridge, land tile need to be adjacent to this facility.\
+;")
+
 
 ; /* <-- avoid gettext warnings
 ;
@@ -2061,16 +2063,16 @@ shield_bonus   = 25
 trade_bonus    = 0
 flags          = "RequiresBridge"
 
-[road_road_bridge]
-extra          = "Road Bridge"
-move_cost      = 1
-food_incr      = 0
-shield_incr    = 0
-trade_incr     = 0
-food_bonus     = 0
-shield_bonus   = 0
-trade_bonus    = 0
-flags          = "RequiresBridge"
+;[road_road_bridge]
+;extra          = "Road Bridge"
+;move_cost      = 1
+;food_incr      = 0
+;shield_incr    = 0
+;trade_incr     = 0
+;food_bonus     = 0
+;shield_bonus   = 0
+;trade_bonus    = 0
+;flags          = "RequiresBridge"
 
 [road_railroad]
 extra          = "Railroad"

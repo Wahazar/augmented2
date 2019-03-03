@@ -272,7 +272,7 @@ req1     = "Martial Arts"
 req2     = "Chivalry"
 root_req = "Martial Arts"
 flags    = ""
-graphic     = "bushido"
+graphic     = "a.bushido"
 graphic_alt = "-"
 cost     = 260
 
@@ -332,7 +332,7 @@ req2     = "First Republic"
 root_req = "Monotheism"
 flags    = ""
 graphic     = "a.christianity"
-graphic_alt = "-"
+graphic_alt = "a.monotheism"
 cost     = 120
 
 [advance_cinematography]
@@ -693,7 +693,7 @@ req1     = "Direct Democracy"
 req2     = "Trade"
 flags    = ""
 graphic     = "a.glass_working"
-graphic_alt = "-"
+graphic_alt = "a.espionage"
 cost     = 100
 
 [advance_great_unification_theory]
@@ -732,8 +732,8 @@ req1     = "Vedism"
 req2     = "Mysticism"
 root_req = "Vedism"
 flags    = ""
-graphic     = "a.polytheism"
-graphic_alt = "-"
+graphic     = "a.hinduism"
+graphic_alt = "a.polytheism"
 cost     = 80
 
 [advance_horseback_riding]
@@ -845,7 +845,7 @@ req1     = "Confucianism"
 req2     = "Bridge Building"
 root_req = "Confucianism"
 flags    = ""
-graphic     = "legalism"
+graphic     = "a.legalism"
 graphic_alt = "-"
 cost     = 220
 
@@ -879,7 +879,7 @@ cost     = 520
 [advance_magnetism]
 name     = _("Magnetism")
 req1     = "Navigation"
-req2     = "University"
+req2     = "Thalassocracy"
 flags    = ""
 graphic     = "a.magnetism"
 graphic_alt = "-"
@@ -900,7 +900,7 @@ req1     = "Shogunate"
 req2     = "Confucianism"
 root_req = "Confucianism"
 flags    = ""
-graphic     = "martial_arts"
+graphic     = "a.martial_arts"
 graphic_alt = "-"
 cost     = 230
 
@@ -1321,7 +1321,7 @@ name     = _("Shinto")
 req1     = "Seafaring"
 req2     = "Astrology"
 flags    = ""
-graphic     = "shinto"
+graphic     = "a.shinto"
 graphic_alt = "-"
 cost     = 80
 
@@ -1358,7 +1358,7 @@ name     = _("Slave Trade")
 req1     = "Saddle Stirrup"
 req2     = "Trade"
 flags    = ""
-graphic     = "a.desert_code"
+graphic     = "a.slave_trade"
 graphic_alt = "-"
 cost     = 80
 
@@ -1421,7 +1421,7 @@ name     = _("Stone Knapping")
 req1     = "None"
 req2     = "None"
 flags    = ""
-graphic     = "a._stone_knapping"
+graphic     = "a.stone_knapping"
 graphic_alt = "-"
 cost     = 3
 
@@ -1485,7 +1485,7 @@ req2     = "First Republic"
 flags    = ""
 graphic     = "a.thalassocracy"
 graphic_alt = "-"
-cost     = 140
+cost     = 150
 
 [advance_the_corporation]
 name     = _("The Corporation")
@@ -1610,7 +1610,7 @@ req1     = "Bushido"
 req2     = "Industrialization"
 root_req = "Shogunate"
 flags    = ""
-graphic     = "zaibatsu"
+graphic     = "a.zaibatsu"
 graphic_alt = "-"
 helptext = _("TIP: Increase factory production by 25% (this effect is cancelled by Labor Union).")
 cost     = 430

@@ -3577,7 +3577,7 @@ The Trireme is your first boat unit. It can act\
 [unit_aak]
 name          = _("Aak")
 class         = "Trireme"
-tech_req      = "Glass Working"
+tech_req      = "Thalassocracy"
 obsolete_by   = "Steam Barge"
 graphic       = "u.aak"
 graphic_alt   = "u.trireme"

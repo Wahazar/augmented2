@@ -42,4 +42,5 @@ sprites =
 		"b.water_treatment", "augmented2/buildings/water_treatment"
 		"b.5_years_plan", "augmented2/buildings/5_years_plan"
 		"b.bunkers", "augmented2/buildings/bunker"
+		"b.watchtower", "augmented2/buildings/watchtower"
 	}

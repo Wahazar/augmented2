@@ -1830,7 +1830,7 @@ reqs	=
       "Tech", "Industrialization", "Player"
     }
 graphic	= "b.water_treatment"
-graphic_alt	= "sewer_system"
+graphic_alt	= "b.sewer_system"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1844,6 +1844,28 @@ helptext	= _("\
 Water treatment facilities allows a city to grow larger than size 8 (can be used instead of aqueduct) \
 and is required for growth beyond size 24, \
 further reduces the chance of a plague (by 20% of the base chance).\
+")
+
+[building_watchtower]
+name		= _("Watchtower")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Glass Working", "Player"
+    }
+graphic	= "b.watchtower"
+graphic_alt	= "b.city_walls"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 20
+upkeep		= 1
+sabotage	= 50
+sound		= "b_sewer_system"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increase vision range of the city.\
 ")
 
 [building_university]
@@ -3170,7 +3192,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
 	 "MinCulture", "4800", "Player"
-      "Resource", "Uranium", "Local"
+      "Resource", "Uranium", "City"
     }
 graphic	= "b.manhattan_project"
 graphic_alt	= "-"
