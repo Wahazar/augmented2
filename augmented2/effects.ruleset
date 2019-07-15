@@ -2544,7 +2544,21 @@ reqs	=
     { "type", "name", "range", "present"
       "Gov", "Legalism", "Player", TRUE
       "Building", "Granary", "City", TRUE
+      "Building", "Temple", "City", TRUE
       "Tech", "Monotheism", "Player", FALSE
+    }
+
+[effect_rapture_grow_khajuraho_temple]
+type    = "Rapture_Grow"
+value   = 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Fascism", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Building", "Granary", "City", TRUE
+      "Building", "Khajuraho Temple", "City", TRUE
     }
 
 [effect_content_tribal]
@@ -7479,3 +7493,12 @@ reqs	=
     { "type", "name", "range"
       "Building", "Warfare Museum", "City"
     }
+
+[effect_khajuraho_temple_culture]
+type    = "History"
+value	= 3
+reqs	=
+    { "type", "name", "range"
+      "Building", "Khajuraho Temple", "City"
+    }
+

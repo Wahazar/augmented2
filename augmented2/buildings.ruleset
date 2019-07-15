@@ -2170,6 +2170,32 @@ _("\
 Increase effect of Church (not under Communism gov.)\
 ")
 
+[building_khajuraho_temple]
+name		= _("Khajuraho Temple")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Hinduism", "Player"
+      "Building", "Temple", "City"
+	 "MinCulture", "1000", "Player"
+    }
+graphic	= "b.khajuraho_temple"
+graphic_alt	= "b.oracle"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 540
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+This building keep effect of Rapture Growth in the city where it is founded\
+ (together with Granary and Temple, under any government except of Democracy, Communism or Fascism),\n\
+ even if Monotheism advance is already known to the player.\
+")
+
 [building_king_richards_crusade]
 name		= _("King Richard's Crusade")
 genus		= "SmallWonder"

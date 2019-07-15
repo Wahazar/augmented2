@@ -87,7 +87,7 @@ flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
 ; helptext = _("Enables movement of nuclear units.")
-cost     = 650
+cost     = 680
 
 [advance_advanced_rocketry]
 name     = _("Advanced Rocketry")
@@ -95,8 +95,8 @@ req1     = "Space Flight"
 req2     = "Nuclear Power"
 root_req = "Flight"
 flags    = ""
-graphic     = "a.rocketry"
-graphic_alt = "-"
+graphic     = "a.advanced_rocketry"
+graphic_alt = "a.rocketry"
 cost     = 1800
 
 [advance_agricultural_farming]
@@ -227,12 +227,12 @@ cost     = 290
 
 [advance_biotechnology]
 name     = _("Biotechnology")
-req1     = "Biology"
+req1     = "Radioactivity"
 req2     = "Refrigeration"
 flags    = ""
 graphic     = "a.biotechnology"
 graphic_alt = "-"
-cost     = 480
+cost     = 760
 
 [advance_bridge_building]
 name     = _("Bridge Building")
@@ -367,17 +367,17 @@ name     = _("Combustion")
 req1     = "Refining"
 req2     = "Turbine"
 flags    = ""
-graphic     = "a.combustion"
-graphic_alt = "-"
-cost     = 500
+graphic     = "a.combustion_eng"
+graphic_alt = "a.combustion"
+cost     = 530
 
 [advance_communism]
 name     = _("Communism")
 req1     = "Socialism"
 req2     = "Industrialization"
 flags    = ""
-graphic     = "a.communism"
-graphic_alt = "-"
+graphic     = "a.communism_sov"
+graphic_alt = "a.communism"
 helptext = _("Reduces the effect of Cathedrals.")
 cost     = 440
 
@@ -389,7 +389,7 @@ root_req = "Electronics"
 flags    = ""
 graphic     = "a.computers"
 graphic_alt = "-"
-cost     = 760
+cost     = 770
 
 [advance_concrete]
 name     = _("Concrete")
@@ -544,7 +544,7 @@ req2     = "Radio"
 flags    = ""
 graphic     = "a.electronics"
 graphic_alt = "-"
-cost     = 460
+cost     = 660
 
 [advance_engineering]
 name     = _("Engineering")
@@ -636,7 +636,7 @@ req2     = "Screw Propeller"
 flags    = "Build_Airborne"
 graphic     = "a.flight"
 graphic_alt = "-"
-cost     = 500
+cost     = 650
 
 [advance_forestry]
 name     = _("Forestry")
@@ -752,7 +752,7 @@ req2     = "Zaibatsu"
 flags    = ""
 graphic     = "a.imperialism"
 graphic_alt = "-"
-cost     = 490
+cost     = 720
 
 [advance_industrialization]
 name     = _("Industrialization")
@@ -967,7 +967,7 @@ req2     = "Electronics"
 flags    = ""
 graphic     = "a.miniaturization"
 graphic_alt = "-"
-cost     = 680
+cost     = 700
 
 [advance_mobile_warfare]
 name     = _("Mobile Warfare")
@@ -977,7 +977,7 @@ root_req = "Combustion"
 flags    = ""
 graphic     = "a.mobile_warfare"
 graphic_alt = "-"
-cost     = 620
+cost     = 650
 
 [advance_modern_theatre]
 name     = _("Modern Theatre")
@@ -1012,8 +1012,8 @@ name     = _("Monotheism")
 req1     = "Vedism"
 req2     = "Absolutism"
 flags    = ""
-graphic     = "a.monotheism"
-graphic_alt = "-"
+graphic     = "a.monotheism_jud"
+graphic_alt = "a.monotheism"
 helptext = _("TIP: Disables Rapture Growth.")
 cost     = 90
 
@@ -1105,8 +1105,8 @@ root_req = "Writing"
 flags    = "Bonus_Tech"
 bonus_message = _("Great philosophers from all the world join \
 your civilization: you learn %s immediately.")
-graphic     = "a.philosophy"
-graphic_alt = "-"
+graphic     = "a.philosophy_gr"
+graphic_alt = "a.philosophy"
 cost     = 90
 
 [advance_physics]
@@ -1223,15 +1223,15 @@ graphic_alt = "-"
 helptext = _("\
 Allows irrigation tiles not adjacent to any water source.\
 ")
-cost     = 730
+cost     = 820
 
 [advance_refining]
 name     = _("Refining")
 req1     = "Chemical Synthesis"
 req2     = "Steel"
 flags    = ""
-graphic     = "a.refining"
-graphic_alt = "-"
+graphic     = "a.refining_oil"
+graphic_alt = "a.refining"
 cost     = 500
 helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to upgrade \
@@ -1241,11 +1241,11 @@ point.\
 
 [advance_refrigeration]
 name     = _("Refrigeration")
-req1     = "Sanitation"
-req2     = "Electricity"
+req1     = "Biology"
+req2     = "Refining"
 graphic     = "a.refrigeration"
 graphic_alt = "-"
-cost     = 440
+cost     = 540
 
 [advance_robotics]
 name     = _("Robotics")
@@ -1273,7 +1273,7 @@ name     = _("Saddle Stirrup")
 req1     = "Pastoralism"
 req2     = "Warrior Code"
 flags    = ""
-graphic     = "a.saddle stirrup"
+graphic     = "a.saddle_stirrup"
 graphic_alt = "-"
 cost     = 30
 
@@ -1368,7 +1368,7 @@ req1     = "Egalitarianism"
 req2     = "University"
 flags    = ""
 graphic     = "a.socialism"
-graphic_alt = "-"
+graphic_alt = "a.communism"
 cost     = 280
 
 [advance_space_flight]
@@ -1466,7 +1466,7 @@ flags    = ""
 graphic     = "a.television"
 graphic_alt = "-"
 helptext = _("TIP: Together with Hollywood wonder, 3 additional entertainer specialists for each city. ")
-cost     = 520
+cost     = 690
 
 [advance_taoism]
 name     = _("Taoism")
@@ -1490,7 +1490,7 @@ cost     = 150
 [advance_the_corporation]
 name     = _("The Corporation")
 req1     = "Economics"
-req2     = "Industrialization"
+req2     = "Refining"
 flags    = ""
 graphic     = "a.the_corporation"
 graphic_alt = "-"
@@ -1498,7 +1498,7 @@ helptext = _("\
 Halves the corruption of trade related to distance from the capital \
 (or eliminates it for Federation governments).\
 ")
-cost     = 420
+cost     = 530
 
 [advance_the_republic]
 name     = _("The Republic")

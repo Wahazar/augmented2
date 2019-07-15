@@ -39,4 +39,5 @@ sprites =
 		"b.ecole_speciale_militaire", "augmented2/wonders/Ecole_de_Saint-Cyr"
 		"b.temple_of_city_god", "augmented2/wonders/temple_of_city_god"
 		"b.warfare_museum", "augmented2/wonders/Warfare_museum"
+		"b.khajuraho_temple", "augmented2/wonders/Khajuraho_temple"
 	}

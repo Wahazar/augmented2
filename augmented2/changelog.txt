@@ -1,6 +1,9 @@
 =================================
 Augmented2 Ruleset for Freeciv v2.6
 =================================
+2.6.12
+Khajuraho temple added
+tech icons added
 
 2.6.11
 Watchtower added, tech tree tweaks
