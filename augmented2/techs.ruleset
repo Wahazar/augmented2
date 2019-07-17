@@ -562,6 +562,7 @@ req2     = "Space Flight"
 flags    = ""
 graphic     = "a.environmentalism"
 graphic_alt = "-"
+helptext = _("TIP: Enables wind turbines - on hills with irrigation.")
 cost     = 1660
 
 [advance_espionage]
@@ -1014,7 +1015,7 @@ req2     = "Absolutism"
 flags    = ""
 graphic     = "a.monotheism_jud"
 graphic_alt = "a.monotheism"
-helptext = _("TIP: Disables Rapture Growth.")
+helptext = _("Warning: Disables Rapture Growth (except of the city with Khajuraho wonder).")
 cost     = 90
 
 [advance_mysticism]

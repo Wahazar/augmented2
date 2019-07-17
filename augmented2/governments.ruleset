@@ -59,6 +59,7 @@ name        = _("Anarchy")
 ; No reqs
 graphic     = "gov.anarchy"
 graphic_alt = "-"
+ai_better   = "Tribal"
 
 ruler_male_title = _("Warlord %s")
 ruler_female_title = _("Warlady %s")
@@ -96,7 +97,7 @@ name        = _("Tribal")
 ; No reqs
 graphic     = "gov.tribal"
 graphic_alt = "s.tax_luxury"
-ai_better   = "First Republic"
+ai_better   = "Despotism"
 
 ruler_male_title = _("Warlord %s")
 ruler_female_title = _("Warlady %s")

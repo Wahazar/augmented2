@@ -6775,6 +6775,17 @@ reqs    =
       "Terrain", "Desert", "Local", TRUE
     }
 
+[effect_wind_turbine_bonus]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Wind Turbine", "Local"
+      "Terrain", "Hills", "Local"
+      "OutputType", "Shield", "Local"
+      "Tech", "Electricity", "Player"
+    }
+
 [effect_massachusetts_institute_of_technology_1]
 type    = "Output_Add_Tile"
 value   = 4

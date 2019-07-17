@@ -1228,6 +1228,7 @@ reqs           =
     { "type", "name", "range", "present", "quiet"
       "TerrainClass", "Oceanic", "Local", FALSE, TRUE
       "UnitClass", "Sea", "Local", FALSE, TRUE
+      "Extra", "Irrigation", "Local", FALSE, FALSE
     }
 build_time     = 0
 removal_time   = 0
@@ -1239,7 +1240,7 @@ number of production points produced by that tile. Hills and Mountains \
 get an extra 2 production points per tile; other terrains get 1 extra \
 production point.\
 "), _("\
-Building a mine on an irrigated tile will destroy the irrigation.\
+You need to destroy the irrigation prior to building mine.\
 ")
 
 [extra_oil_well]
@@ -1268,6 +1269,39 @@ helptext       = _("\
 Once Refining is known, mines on Desert and Glacier tiles can be \
 upgraded to oil wells for an extra production point.\
 ")
+
+[extra_wind_turbine]
+name           = _("Wind Turbine")
+category       = "Infra"
+causes         = "Mine"
+rmcauses       = "Pillage"
+graphic        = "tx.wind_turbine"
+graphic_alt    = "tx.oil_rig"
+activity_gfx   = "unit.mine"
+act_gfx_alt    = "unit.plant"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+reqs           =
+    { "type", "name", "range", "present", "quiet"
+      "TerrainClass", "Oceanic", "Local", FALSE, TRUE
+      "UnitClass", "Sea", "Local", FALSE, TRUE
+      "Tech", "Environmentalism", "Player", TRUE, FALSE
+      "Terrain", "Hills", "Local", TRUE, FALSE
+      "Extra", "Mine", "Local", FALSE, FALSE
+      "Extra", "Irrigation", "Local", TRUE, FALSE
+    }
+build_time     = 8
+removal_time   = 0
+conflicts      = "Mine", "Oil Well"
+helptext       = _("\
+Wind turbines can be builded on the hills with irrigation or farmland, \
+such tile get 1 extra production point, while keeping current food production.\n\
+Electricty knowledge is required.\
+"), _("\
+Building a mine will destroy both wind turbines and irrigation. \
+")
+
 
 [extra_oil_platform]
 name           = _("Oil Platform")

@@ -151,7 +151,7 @@ sprites =
 		"u.reactive_armor", "augmented2/amplio_units/reactive_armor_a"
 		"u.bombard", "augmented2/amplio_units/bombard_a"
 		"u.gun_howitzer", "augmented2/amplio_units/gun_howitzer_a"
-		"u.ballista", "augmented2/amplio_units/ballista2_a"
+		"u.ballista", "augmented2/amplio_units/ballista_a"
 ;		"u.cannon", "augmented2/amplio_units/cannon_a"
 		"u.galley", "augmented2/amplio_units/galley_a"
 		"u.cog", "augmented2/amplio_units/cog_a"

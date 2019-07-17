@@ -111,7 +111,7 @@ files =
   "misc/treaty.spec",
   "misc/icons.spec",
   "misc/editor.spec",
-  "amplio2/units.spec",
+; it is in augmented-  "amplio2/units.spec",
   "amplio2/nuke.spec",
   "amplio2/explosions.spec",
   "hexemplio/activities.spec",
