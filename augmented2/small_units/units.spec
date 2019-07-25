@@ -91,6 +91,7 @@ sprites =
 		"u.militia", "augmented2/small_units/militia_t"
 		"u.missile", "augmented2/small_units/missile_t"
 		"u.armor_car", "augmented2/small_units/armor_car_t"
+		"u.atv_infantry", "augmented2/small_units/ATV_infantry_t"
 ; swapped standard graphics
 		"u.direct_artillery", "augmented2/small_units/direct_artillery_t"
 		"u.plunging_cannon", "augmented2/small_units/plunging_cannon_t"

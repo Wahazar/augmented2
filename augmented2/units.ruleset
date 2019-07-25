@@ -1968,7 +1968,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 2
 uk_gold       = 1
-flags         = "Capturer", "Horse"
+flags         = "Capturer", "Horse", "Light Shells"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Lancers are shock-troop cavalrymen who fight with a lances as well as with short firearms.\
@@ -1978,7 +1978,7 @@ Lancers are shock-troop cavalrymen who fight with a lances as well as with short
 name          = _("Bicycle Infantry")
 class         = "Light Cavalry"
 tech_req      = "Automobile"
-obsolete_by   = "None"
+obsolete_by   = "ATV infantry"
 graphic       = "u.bicycle_infantry"
 graphic_alt   = "u.riflemen"
 sound_move    = "m_riflemen"
@@ -1999,13 +1999,47 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 2
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Light Shells"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Bicycle infantry are fast scouting units.\
 ")
 
-;todo: ATV
+[unit_atv_infantry]
+name          = _("ATV infantry")
+class         = "Light Cavalry"
+tech_req      = "Modern Warfare"
+obsolete_by   = "None"
+graphic       = "u.atv_infantry"
+graphic_alt   = "u.mech_inf"
+sound_move    = "m_mech_inf"
+sound_move_alt = "m_generic"
+sound_fight   = "f_mech_inf"
+sound_fight_alt = "f_generic"
+build_cost    = 48
+pop_cost      = 0
+attack        = 6
+defense       = 4
+hitpoints     = 12
+firepower     = 3
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 2
+uk_gold       = 2
+embarks       = "Helicopter"
+disembarks    = "Helicopter"
+flags         = "Capturer", "Paratroopers", "Light Shells"
+roles         = "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Infantry equipped with light all-terrain vehicles is fast scout unit which can be paradropped.\
+")
+paratroopers_range = 8
+paratroopers_mr_req = 1
+paratroopers_mr_sub = 0
 
 [unit_horsemen]
 name          = _("Horsemen")
@@ -2934,9 +2968,8 @@ uk_gold       = 2
 flags         = "CityBuster"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
-The artillery is an upgraded cannon. As with its predecessors, it is a \
-very strong attacker but equally weak defender and will need an escort \
-to be effective, and has limited mobility.\
+The artillery is a very strong direct fire attacker but equally weak defender \
+and will need an escort to be effective, and has limited mobility.\
 ")
 
 [unit_AT_gun]
@@ -4154,7 +4187,7 @@ defense       = 8
 hitpoints     = 20
 firepower     = 2
 move_rate     = 5
-vision_radius_sq = 2
+vision_radius_sq = 8
 transport_cap = 2
 cargo         = "Turrets"
 fuel          = 0
@@ -4602,7 +4635,7 @@ uk_gold       = 1
 embarks       = "Sea"
 disembarks    = "Sea"
 targets       = "Air", "Missile", "Helicopter"
-flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC"
+flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
 Medium-distance Missile can devastate enemy units, especially is capable \
@@ -4636,7 +4669,7 @@ uk_food       = 0
 uk_gold       = 2
 embarks       = "Sea"
 disembarks    = "Sea"
-flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC"
+flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
@@ -4674,7 +4707,7 @@ uk_food       = 0
 uk_gold       = 3
 embarks       = "Air"
 disembarks    = "Air"
-flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "Capturable", "NoVeteran"
+flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "Capturable", "NoVeteran", "IgWall"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -4732,7 +4765,7 @@ uk_happy      = 3
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
-flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "NoVeteran"
+flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "NoVeteran", "IgWall"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0

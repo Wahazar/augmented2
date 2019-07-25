@@ -714,7 +714,7 @@ cons_msg       = _("One of your cities has 2000 culture points!")
 name           = _("Cultured Nation")
 type           = "Cultured_Nation"
 unique         = FALSE
-value          = 20000
+value          = 5000
 first_msg      = _("Your nation is the first one to achieve 20000 culture points!")
 cons_msg       = _("Your nation has achieved 20000 culture points!")
  

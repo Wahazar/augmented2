@@ -11,6 +11,7 @@ options = "+Freeciv-2.6-spec"
 sprites =
 	{	"tag", "file"
 		"ts.rice", "augmented2/terrain_small/rice_t"
-		"tx.wind_turbine", "augmented2/terrain_small/Wind_turbine_group"
+		"tx.pollution_smoke", "augmented2/terrain_small/pollution_t"
+		"tx.wind_turbine", "augmented2/terrain_small/wind_turbines_hexs"
 	}
 

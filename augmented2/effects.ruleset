@@ -614,7 +614,7 @@ type    = "Health_Pct"
 value   = 20
 reqs    =
     { "type", "name", "range"
-      "Building", "Thermal Bath", "City"
+      "Building", "Thermal Bath", "Player"
       "Building", "Lazaretto", "City"
     }
 
@@ -966,7 +966,7 @@ type    = "Output_Waste"
 value   = 20
 reqs    =
     { "type", "name", "range", "quiet"
-      "Gov", "Legalism", "Player", "Player", TRUE
+      "Gov", "Legalism", "Player", TRUE
       "OutputType", "Trade", "Local", FALSE
     }
 
@@ -3456,6 +3456,17 @@ reqs    =
     { "type", "name", "range", "Present"
       "Building", "City Walls", "City", TRUE
       "UnitFlag", "IgWall", "Local", FALSE
+      "MinSize", "9", "City", TRUE
+    }
+
+
+[effect_city_walls_2]
+type    = "Unit_No_Lose_Pop"
+value   = 1
+reqs    =
+    { "type", "name", "range", "Present"
+      "Building", "City Walls", "City", TRUE
+      "MinSize", "9", "City", FALSE
     }
 
 [effect_city_walls_visible]
@@ -4761,12 +4772,8 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Great Wall", "Alliance", TRUE
-      "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
-      "UnitClass", "Helicopter", "Local", FALSE
-      "UnitClass", "Air", "Local", FALSE
-      "UnitClass", "Missile", "Local", FALSE
-      "UnitClass", "Bomb", "Local", FALSE
+      "UnitFlag", "AirAttacker", "Local", FALSE
+      "UnitFlag", "OneAttack", "Local", FALSE
     }
 
 ; Cumulative with fortress
@@ -7478,6 +7485,8 @@ value   = 1
 reqs    =
     { "type", "name", "range", "Present"
       "Building", "Bunkers", "City", TRUE
+      "UnitFlag", "AirAttacker", "Local", FALSE
+      "UnitFlag", "OneAttack", "Local", FALSE
     }
 
 [effect_bunkers_visible]

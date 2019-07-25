@@ -1289,6 +1289,7 @@ reqs           =
       "Tech", "Environmentalism", "Player", TRUE, FALSE
       "Terrain", "Hills", "Local", TRUE, FALSE
       "Extra", "Mine", "Local", FALSE, FALSE
+      "CityTile", "Center", "Local", FALSE, FALSE
       "Extra", "Irrigation", "Local", TRUE, FALSE
     }
 build_time     = 8

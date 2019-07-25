@@ -97,7 +97,7 @@ name        = _("Tribal")
 ; No reqs
 graphic     = "gov.tribal"
 graphic_alt = "s.tax_luxury"
-ai_better   = "Despotism"
+ai_better   = "Thalassocracy"
 
 ruler_male_title = _("Warlord %s")
 ruler_female_title = _("Warlady %s")
@@ -418,6 +418,7 @@ reqs = { "type", "name", "range"
        }
 graphic     = "gov.thalassocracy"
 graphic_alt = "s.tax_gold"
+ai_better   = "Federation"
 
 ruler_male_title = _("Council %s")
 ruler_female_title = _("?female:Council %s")

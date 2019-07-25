@@ -1,6 +1,11 @@
 =================================
 Augmented2 Ruleset for Freeciv v2.6
 =================================
+2.6.14
+ATV infantry unit added
+small bugfixes and tweaks
+history pts thresholds tweaks
+
 2.6.13
 Wind turbine added
 some units gfx improved

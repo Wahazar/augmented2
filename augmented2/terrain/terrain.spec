@@ -31,7 +31,7 @@ sprites =
 	{	"tag", "file"
 		"ts.rice", "augmented2/terrain/rice_a"
 		"tx.pollution_smoke", "augmented2/terrain/pollution_a"
-		"tx.wind_turbine", "augmented2/terrain/wind_turbines_v2"
+		"tx.wind_turbine", "augmented2/terrain/wind_turbines_hex"
 ;		"base.waterlock_fg", "augmented2/terrain/waterlock_fg_a"
 ;		"base.waterlock_bg", "augmented2/terrain/waterlock_bg_a"
 
