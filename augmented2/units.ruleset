@@ -527,10 +527,12 @@ veteran_power_fact = 100
 veteran_move_bonus = 0
 roles         = "DefendOkStartUnit", "FirstBuild", "CitiesStartUnit", "Hut"
 helptext      = _("\
-Tribes are the first and universal unit type. \
-They can be used to transfer population to other cities, or may found new towns.\
-Can also be used as a weak combat groups, but cannot occupy city itself. \n\
-Tribes can be assigned to work, if technology required to given work is available.\n\
+Tribes are the first and universal unit type.\
+ They can be used to transfer population to other cities, or may found new towns.\
+ Can also be used as a weak combat group, but cannot occupy a city itself.\
+"), _("\
+Tribes can be assigned to work, if technology required to given work is available.\
+"), _("\
 Work, combat or barracks training doesn't improve their ability.\
 ")
 
@@ -568,14 +570,14 @@ veteran_power_fact = 100
 veteran_move_bonus = 0
 roles         = "CitiesStartUnit"
 helptext      = _("\
-Settlers are one of the key units in the game, as they are your main \
-means of founding new cities.\
+Settlers are one of the key units in the game, as they are your main\
+ means of founding new cities.\
 "), _("\
-Settlers can also perform some of the same terrain alterations as \
-Workers (but cannot build airstrips, airbases, or buoys).\
+Settlers can also perform some of the same terrain alterations as\
+ Workers (but cannot build airstrips, airbases, or buoys).\
 "), _("\
-TIP: optimal production of Settlers occurs in cities of at most \
-size 4, or cities with a Granary of at most size 6.\
+TIP: optimal production of Settlers occurs in cities of at most\
+ size 4, or cities with a Granary of at most size 6.\
 ")
 
 [unit_migrants]
@@ -612,10 +614,10 @@ veteran_power_fact = 100
 veteran_move_bonus = 0
 roles         = "Settlers"
 helptext      = _("\
-Migrants can be used to transfer population to other cities, but \
-may not found new cities. They can also perform some of the same \
-terrain alterations as Workers (but cannot build airstrips, \
-airbases, or buoys).\
+Migrants can be used to transfer population to other cities, but\
+ may not found new cities. They can also perform some of the same\
+ terrain alterations as Workers (but cannot build airstrips,\
+ airbases, or buoys).\
 ")
 
 [unit_worker]
@@ -651,14 +653,14 @@ veteran_power_fact        = 100, 150, 175, 200
 veteran_move_bonus        = 0, 0, 0, 1
 roles         = "Settlers", "WorkerStartUnit"
 helptext      = _("\
-Workers have the ability to improve terrain tiles. See the help on \
-Terrain and Terrain Alterations for the effects of their actions.\
+Workers have the ability to improve terrain tiles. See the help on\
+ Terrain and Terrain Alterations for the effects of their actions.\
 "), _("\
-Workers can build airstrips, airbases, and buoys, which Settlers \
-and Migrants cannot. Workers must be on board a ship to build buoys.\
+Workers can build airstrips, airbases, and buoys, which Settlers\
+ and Migrants cannot. Workers must be on board a ship to build buoys.\
 "), _("\
-Workers may gain experience from work enabling \
-them to work even faster.\
+Workers may gain experience from work enabling\
+ them to work even faster.\
 ")
 
 [unit_engineers]
@@ -695,19 +697,18 @@ veteran_power_fact        = 100, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1
 roles         = "Settlers", "WorkerStartUnit"
 helptext      = _("\
-Engineers are similar to Workers, but they work twice as fast, \
-move twice as fast, and may gain experience from work enabling \
-them to work even faster.\
+Engineers are similar to Workers, but they work twice as fast,\
+ move twice as fast, and may gain experience from work enabling\
+ them to work even faster.\
 "), _("\
-With knowledge of Fusion Power, Engineers may also perform more \
-radical terrain transformations than Workers, Settlers, or Migrants, \
-with the \"transform\" order. Examples include conversion of \
-Tundra into Plains, or even Ocean into Swamp in some circumstances \
-(when on board an ocean-going vessel, on a tile surrounded by \
-sufficient existing land). See the Terrain Alterations section \
-for more details.\
-"), 
-_("\
+With knowledge of Fusion Power, Engineers may also perform more\
+ radical terrain transformations than Workers, Settlers, or Migrants,\
+ with the \"transform\" order. Examples include conversion of\
+ Tundra into Plains, or even Ocean into Swamp in some circumstances\
+ (when on board an ocean-going vessel, on a tile surrounded by\
+ sufficient existing land). See the Terrain Alterations section\
+ for more details.\
+"), _("\
 Engineers have worse mobility than workers, but can be also used as a landing aid for other land units.\
 ")
 
@@ -746,14 +747,16 @@ veteran_power_fact = 100
 veteran_move_bonus = 0
 roles         = "Settlers"
 helptext      = _("\
-Slaves can perform some of the same \
-terrain alterations as Workers (but cannot build airstrips, \
-airbases, or buoys). Slaves have no veteran levels.\n\
-They can be also used to transfer population to other cities, but \
-may not found new cities.\n\
-A Slave sent to one of your own cities that is building a wonder \
-can add 10 shields towards its production. \
-Unlike Caravans, Slaves can't establish trade route.\
+Slaves can perform some of the same\
+ terrain alterations as Workers (but cannot build airstrips,\
+ airbases, or buoys). Slaves have no veteran levels.\
+"), _("\
+They can be also used to transfer population to other cities, but\
+ may not found new cities.\
+"), _("\
+A Slave sent to one of your own cities that is building a wonder\
+ can add 10 shields towards its production.\
+ Unlike Caravans, Slaves can't establish trade route.\
 ")
 
 [unit_militia]
@@ -785,7 +788,7 @@ flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "FirstBuild"
 helptext      = _("\
 This unit emerged from stone age may be built almost from the start of the game.\
-It is the weak but cheap defensive unit.\
+ It is the weak but cheap defensive unit.\
 ")
 
 [unit_halberdier]
@@ -816,8 +819,8 @@ uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "FirstBuild"
 helptext      = _("\
-The Halberdiers are infantry equipped with long halberds, suitable for defending your cities,
-or enforcing the martial law.\
+The Halberdiers are infantry equipped with long halberds, suitable for defending your cities,\
+ or enforcing martial law.\
 ")
 
 [unit_riot_police]
@@ -848,7 +851,7 @@ uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "FirstBuild"
 helptext      = _("\
-Riot Police is relatively weak but cheap unit suitable for enforcing the martial law.\
+Riot Police is relatively weak but cheap unit suitable for enforcing martial law.\
 ")
 
 [unit_hunters]
@@ -879,8 +882,8 @@ uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack", "Bombarder"
 roles         = "DefendOkStartUnit", "Hunter"
 helptext      = _("\
-This unit emerged from stone age may be built almost from the start of the game.\
-It is the weak offensive unit, can throw ranged weapon, like jawelins.\
+This unit emerged from stone age and may be built almost from the start of the game.\
+ It is a weak offensive unit, can throw ranged weapon, like javelins.\
 ")
 bombard_rate = 1
 
@@ -913,8 +916,7 @@ flags         = "Capturer", "Bombarder"
 roles         = "DefendOkStartUnit", "Hut"
 helptext      = _("\
 Archers use bows to fire several rounds of arrows, thus can be used to wound enemy units.\
-"),
-_("\
+"), _("\
 Due to indirect plunging fire, City Walls give no benefits to defenders.\
 ")
 bombard_rate = 3
@@ -947,7 +949,7 @@ uk_gold       = 2
 flags         = "Capturer", "IgTer", "Bombarder", "Light Shells"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
-Marksmen squads skilled in precision shooting, can be used to wound enemy units or for reconnaissance.
+Marksmen squads skilled in precision shooting, can be used to wound enemy units or for reconnaissance.\
 ")
 bombard_rate = 1
 
@@ -981,7 +983,8 @@ disembarks    = "Helicopter"
 flags         = "Capturer", "Partial_Invis", "IgTer", "Bombarder", "Light Shells", "HasNoZOC"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
-Sniper sharpshooters squads can be used to wound enemy units or for reconnaissance. \n \
+Sniper sharpshooter squads can be used to wound enemy units or for reconnaissance.\
+"), _("\
 Snipers have large radius of view while, thanks to their excellent camouflage, are hard to spot.\
 ")
 bombard_rate = 1
@@ -1115,8 +1118,8 @@ uk_gold       = 1
 flags         = "Capturer", "Light Shells"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
-Riflemen are a line infantry equipped with precise riffled firearms, good for \
-defending your cities or frontline.\
+Riflemen are a line infantry equipped with precise riffled firearms, good for\
+ defending your cities or frontline.\
 ")
 
 [unit_infantry]
@@ -1148,10 +1151,9 @@ targets       = "Helicopter"
 flags         = "Capturer", "Light Shells"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
-Infantry are World War-era soldiers equipped with machine guns, \
-very good at defending your cities and fortifications.\
-"),
-_("\
+Infantry are World War-era soldiers equipped with machine guns,\
+ very good at defending your cities and fortifications.\
+"), _("\
 They can also shoot down helicopters or drones.\
 ")
 
@@ -1188,11 +1190,10 @@ bonuses       =
 flags         = "Capturer"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
-Rangers infantry units, equipped with machine guns and rocket-propelled grenade launchers, \
-very good at defending your cities and fortifications, especially against armoured tanks.\
-Thanks to the modern communication support and equippment, rangers have improved range of sight.\
-"),
-_("\
+Ranger infantry units, equipped with machine guns and rocket-propelled grenade launchers,\
+ very good at defending your cities and fortifications, especially against armoured tanks.\
+ Thanks to the modern communication support and equippment, rangers have improved range of sight.\
+"), _("\
 They can also shoot down helicopters.\
 ")
 
@@ -1287,7 +1288,7 @@ uk_gold       = 1
 flags         = "Capturer"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
-The Arbalests equipped with powerful crosbows can be used to the range attack on enemy units.\
+The Arbalest equipped with powerful crosbows can be used to the range attack on enemy units.\
 ")
 
 [unit_swordsmen]
@@ -1350,7 +1351,7 @@ uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianSeaTech"
 helptext      = _("\
-Samurai are excellent trained medieval Japan warriors.\
+Samurai are excellent trained medieval Japanese warriors.\
 ")
 
 [unit_arquebusiers]
@@ -1445,7 +1446,7 @@ uk_gold       = 2
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "AttackStrongStartUnit"
 helptext      = _("\
-Stormtroopers are offensive infantry squads, equipped with light machine guns and grenades .\
+Stormtroopers are offensive infantry squads, equipped with light machine guns and grenades.\
 ")
 
 [unit_marines]
@@ -1512,7 +1513,7 @@ flags         = "Marines", "Capturer", "Only_Native_Attack"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 Super Soldiers are genetically modified Marines equipped with modern tactical tools.\
-Their wounds heal quickly in fortress and they have increased vision radius. \
+ Their wounds heal quickly in fortress and they have increased vision radius.\
 ")
 
 [unit_paratroopers]
@@ -1545,12 +1546,12 @@ disembarks    = "Helicopter"
 flags         = "Paratroopers", "Capturer", "Light Shells"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
-Paratroopers are experts at airborne attacks. From a friendly city, \
-airbase, or airstrip, Paratroopers who have not expended any \
-movement points can paradrop directly to any tile in range, and be \
-immediately ready to act there. (Beware dropping into unseen territory, \
-as Paratroopers landing on a tile occupied by enemy units are easy \
-targets!)\
+Paratroopers are experts at airborne attacks. From a friendly city,\
+ airbase, or airstrip, Paratroopers who have not expended any\
+ movement points can paradrop directly to any tile in range, and be\
+ immediately ready to act there. (Beware dropping into unseen territory,\
+ as Paratroopers landing on a tile occupied by enemy units are easy\
+ targets!)\
 ")
 paratroopers_range = 10
 paratroopers_mr_req = 1
@@ -1584,8 +1585,9 @@ uk_gold       = 1
 flags         = "Capturer", "Unique", "Unbribable", "Marines"
 roles         = "Hunter"
 helptext      = _("\
-Vikings are small but brave units capable to attack from aboard, also assault other ships, or make raids on enemy territory \n\
-pillaging or capturing workers. They cannot occupy city thought.\
+Vikings are small, but brave units capable to attack from aboard ships,\
+ also assault other ships, or make raids on enemy territory\
+ by pillaging or capturing workers. They cannot occupy city though.\
 ")
 
 [unit_corsairs]
@@ -1616,10 +1618,10 @@ uk_gold       = 2
 flags         = "Capturer", "Unique", "Unbribable", "Marines", "Diplomat"
 roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
-Corsairs are privateers hired by government to perform special operations: \
-attacking other ships from aboard or capturing them, or making raids on enemy territory and provide cover-ops like Diplomat \
-(except of establishing embassy).\n\
-They cannot occupy city thought.\
+Corsairs are privateers hired by a government to perform special\
+ operations: attacking other ships from aboard ship or capturing them,\
+ or making raids on enemy territory and provide covert-ops like Diplomat\
+ (except of establishing embassy). They cannot occupy city though.\
 ")
 
 [unit_ninja]
@@ -1650,9 +1652,11 @@ uk_gold       = 3
 flags         = "Partial_Invis", "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
 roles         = "Hunter"
 helptext      = _("\
-Ninja are s supreme units, skilled in all special operations, like espionage, sabotage, infiltration, assassination, guerrilla warfare etc.\n\
-They can even walk on water (using special shoes), thus can attack other units from aboard \
-(or provide cover-ops like Spies, except of establishing embassies)\
+Ninjas are a supreme unit, skilled in all special operations,\
+ such as espionage, sabotage, infiltration, assassination,\
+ guerrilla warfare, etc. They can even walk on water (using\
+ special shoes), thus can attack other units from aboard ship\
+ (or provide covert-ops like Spies, except of establishing embassies).\
 ")
 
 [unit_navy_seals]
@@ -1685,8 +1689,8 @@ disembarks    = "Helicopter"
 flags         = "Capturer", "Unique", "Unbribable", "Marines", "Partial_Invis", "Diplomat", "Spy"
 roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
-Navy Seals are special units of scuba divers, capable to attack other ships from land or of aboard.\n\
-They can also provide cover ops like Spies (except of establishing embassies).
+Navy Seals are special units of scuba divers, capable to attack other ships from land or from aboard ship.\
+ They can also provide covert-ops like Spies (except of establishing embassies).\
 ")
 
 [unit_alpine_troops]
@@ -1719,8 +1723,9 @@ disembarks    = "Helicopter"
 flags         = "IgTer", "Capturer", "Light Shells", "Only_Native_Attack"
 roles         = "Hunter"
 helptext      = _("\
-Alpine Troops are highly mobile units, which can operate in mountains or on glaciers, even without roads.\
-They can't occupy city though.
+Alpine Troops are highly mobile units, which can operate\
+ in mountains or on glaciers, even without roads.\
+ They can't occupy city though.\
 ")
 
 [unit_partisan]
@@ -1756,17 +1761,16 @@ helptext      = _("\
 Partisans are guerilla fighters who are experts\
  at using the terrain to their advantage.\
 "), _("\
-A number of Partisans are granted free when an enemy conquers your\
- city -- they automatically assume defensive positions in the\
- surrounding countryside -- but only under these conditions:\n\
+A number of Partisans are released when an enemy conquers your\
+ city. They automatically assume defensive positions in the\
+ surrounding countryside, but only under these conditions:\n\
  - Guerilla Warfare must be known by at least one player.\n\
  - At least three quarters of the citizens must have your nationality.\n\
  - You must know about Communism and Gunpowder.\n\
  - You must run either a Democracy or a Communist government.\
-"),
-_("\
-Partisans are recruited from civilian, thus their cost is a city size.\
-Only shield upkeep is needed, food and gold upkeep is supported by citiziens.
+"), _("\
+Partisans are recruited from civilians, thus their cost is a city size.\
+ Only shield upkeep is needed, food and gold upkeep is supported by citiziens.
 ")
 
 [unit_fanatics]
@@ -1803,7 +1807,7 @@ helptext      = _("\
 Fanatics are warriors extremely devoted to a higher cause.\
 "), _("\
 Fundamentalist nations can maintain Fanatic units without\
- having to pay gold upkeep, but instead it can cause military unhappiness. \
+ having to pay gold upkeep, but instead it can cause military unhappiness.\
 ")
 
 
@@ -1869,12 +1873,12 @@ cargo         = "Small Land"
 flags         = "CityBuster", "NoVeteran", "Only_Native_Attack", "FieldUnit"
 roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianBuildTech"
 helptext      = _("\
-Improvised vehicle driven by fanatics, ready to sacrifice their lives for a higher cause.\n\
-Huge amount of explosive materials would end their life and maybe life of attacked infidels.
+Improvised vehicle driven by fanatics, ready to sacrifice their lives for a higher cause.\
+ Huge amount of explosive materials would end their life and maybe life of attacked infidels.\
 "), _("\
-Fundamentalist nations can maintain Technical units without\
- having to pay only little shield/gold upkeep, but may cause military unhapiness. \n \
-These units have no veterancy levels though.
+Fundamentalist nations can maintain Technical units with\
+ having to pay only little shield/gold upkeep, but may cause military unhapiness.\
+ These units have no veterancy levels though.
 ")
 
 
@@ -1908,8 +1912,8 @@ uk_gold       = 1
 flags         = "Capturer", "Horse"
 roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
 helptext      = _("\
-Archery Horsemen are shock-troop,\
- which can shoot arrows against enemy units hidden in hardly accessible terrain.\
+Archery Horsemen are a shock-troop,\
+ which can shoot arrows against enemy units hidden in hard to access terrain.\
 ")
 
 [unit_dromedari]
@@ -1971,7 +1975,7 @@ uk_gold       = 1
 flags         = "Capturer", "Horse", "Light Shells"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
-Lancers are shock-troop cavalrymen who fight with a lances as well as with short firearms.\
+Lancers are a shock-troop cavalrymen who fight with lances as well as with short firearms.\
 ")
 
 [unit_bicycle_infantry]
@@ -2035,7 +2039,7 @@ disembarks    = "Helicopter"
 flags         = "Capturer", "Paratroopers", "Light Shells"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
-Infantry equipped with light all-terrain vehicles is fast scout unit which can be paradropped.\
+Infantry equipped with light all-terrain vehicles is a fast scout unit which can be paradropped.\
 ")
 paratroopers_range = 8
 paratroopers_mr_req = 1
@@ -2102,14 +2106,13 @@ uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
 roles         = "AttackFastStartUnit"
 helptext      = _("\
-Chariots are horse-pulled war wagons. They have a stronger attack than \
-Horsemen, but their speed comes at a cost: they are more expensive \
-to build, they cannot take advantage of terrain to defend themselves. \
-"),
-_("\
-This unit cannot move across swamps, glaciers, mountains, \
-and cannot be transported by sea using early ships \
-(Triremes and Aaks).\
+Chariots are horse-pulled war wagons. They have a stronger attack than\
+ Horsemen, but their speed comes at a cost: they are more expensive\
+ to build, they cannot take advantage of terrain to defend themselves.\
+"), _("\
+This unit cannot move across swamps, glaciers, or mountains,\
+ and cannot be transported by sea using early ships\
+ (Triremes and Aaks).\
 ")
 
 [unit_elephants]
@@ -2142,11 +2145,10 @@ roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Elephants are towering animals trained for war that are often used as\
  powerful shock troops, even against pikemen.\
-"),
-_("\
-This unit cannot move across swamps, glaciers, mountains, \
-and cannot be transported by sea using early ships \
-(Triremes and Aaks).\
+"), _("\
+This unit cannot move across swamps, glaciers, or mountains,\
+ and cannot be transported by sea using early ships\
+ (Triremes and Aaks).\
 ")
 
 [unit_crusaders]
@@ -2180,6 +2182,8 @@ roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Crusaders are highly disciplined mounted\
  warriors driven by a higher cause.\
+"), _("\
+Only fundamentalistic government can built Crusaders.\
 ")
 
 [unit_knights]
@@ -2212,11 +2216,10 @@ roles         = "DefendOkStartUnit", "AttackFastStartUnit",
                 "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Knights are mounted and heavily armored warriors.\
-"),
-_("\
-This unit cannot move across swamps, glaciers, mountains, \
-and cannot be transported by sea using early ships \
-(Triremes and Aaks).\
+"), _("\
+This unit cannot move across swamps, glaciers, or mountains,\
+ and cannot be transported by sea using early ships\
+ (Triremes and Aaks).\
 ")
 
 
@@ -2249,12 +2252,12 @@ flags         = "Capturer", "Horse", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "AttackFastStartUnit", 
                 "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
-Samurai horsemen, thanks to the Bushido code and supreme martial art, where very effective medieval heavy cavalry.\
-"),
-_("\
-This unit cannot move across swamps, glaciers, mountains, \
-and cannot be transported by sea using early ships \
-(Triremes and Aaks).\
+Samurai horsemen, thanks to the Bushido code and supreme\
+ martial arts, are a very effective medieval heavy cavalry.\
+"), _("\
+This unit cannot move across swamps, glaciers, or mountains,\
+ and cannot be transported by sea using early ships\
+ (Triremes and Aaks).\
 ")
 
 [unit_cuirassiers]
@@ -2286,9 +2289,8 @@ flags         = "Capturer", "Horse", "Light Shells", "BadWallAttacker", "Only_Na
 roles         = "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Cuirassiers are heavy cavalry equipped with armour and early firearms.\
-"),
-_("\
-This unit cannot move across swamps, glaciers and mountains.\
+"), _("\
+This unit cannot move across swamps, glaciers or mountains.\
 ")
 
 [unit_dragoons]
@@ -2320,9 +2322,8 @@ flags         = "Capturer", "Horse", "Light Shells", "BadWallAttacker", "Only_Na
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Dragoons are well trained, mounted soldiers.\
-"),
-_("\
-This unit cannot move across swamps, glaciers and mountains.\
+"), _("\
+This unit cannot move across swamps, glaciers or mountains.\
 ")
 
 [unit_mounted_inf]
@@ -2354,9 +2355,8 @@ flags         = "Light Shells", "BadWallAttacker"
 roles         = "DefendGood", "DefendGoodStartUnit", "AttackFastStartUnit"
 helptext      = _("\
 The Mounted Infantry share mobility of cavalry and firepower of machine guns, mounted on 'tachanka'.\
-"),
-_("\
-This unit cannot move across swamps, glaciers and mountains.\
+"), _("\
+This unit cannot move across swamps, glaciers or mountains.\
 ")
 
 [unit_armor_car]
@@ -2387,10 +2387,9 @@ uk_gold       = 3
 flags         = "Light Shells", "BadWallAttacker"
 roles         = "AttackFastStartUnit"
 helptext      = _("\
-The Armored Car is very fast, but relatively weak unit.\
-"),
-_("\
-This unit can move only alng roads and flat terrain.\
+The Armored Car is a very fast, but relatively weak unit.\
+"), _("\
+This unit can move only along roads and flat terrain.\
 ")
 
 [unit_mech_inf]
@@ -2421,11 +2420,10 @@ uk_gold       = 3
 flags         = "Armor", "Light Shells", "BadWallAttacker"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "AttackFastStartUnit"
 helptext      = _("\
-The Mechanized Infantry has the strongest inherent defensive strength \
-of any fast land unit, and have higher mobility than Armor.\
-"),
-_("\
-This unit cannot move across swamps, glaciers and mountains.\
+The Mechanized Infantry has the strongest inherent defensive strength\
+ of any fast land unit, and have higher mobility than Armor.\
+"), _("\
+This unit cannot move across swamps, glaciers or mountains.\
 ")
 
 
@@ -2464,9 +2462,9 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 1, 1, 2, 3
 helptext      = _("\
-Armoured Train can use only railroads, but can carry up to 3 artillery turrets or infantry units, beside of its own bombardment firepower.\
-"),
-_("\
+Armoured Train can only use railroads, but can carry up to 3\
+ artillery turrets or infantry units, beside of its own bombardment firepower.\
+"), _("\
 Trains HP can be quickly regenerated in any city with Railway Station.\
 ")
 bombard_rate = 2
@@ -2503,11 +2501,11 @@ bonuses       =
      "Light Shells", "DefenseMultiplier", 1
    }
 helptext      = _("\
-Armors are motorized war wagons that are faster, stronger, and can take \
-more damage than any mounted unit. However, they are less adaptable to \
-very rough terrain (they cannot move into mountains, glaciers or swamps \
-without roads), and unable to use less rough terrain to improve their \
-defense.\
+Armors are motorized war wagons that are faster, stronger, and can take\
+ more damage than any mounted unit. However, they are less adaptable to\
+ very rough terrain (they cannot move into mountains, glaciers or swamps\
+ without roads), and are unable to use less rough terrain to improve their\
+ defense.\
 ")
 
 [unit_reactive_armor]
@@ -2542,11 +2540,11 @@ bonuses       =
    }
 roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
-Tanks with reactive armor are upgrade version of armor, they are faster and stronger than their predecessors, \
-and can ease sustain attack of most of infantry or mounted units. However, they are less adaptable to \
-very rough terrain (they cannot move into mountains, glaciers or swamps \
-without roads), and unable to use less rough terrain to improve their \
-defense.\
+Tanks with reactive armor are upgrade version of armor, they are faster and stronger than their predecessors,\
+ and can easily sustain attack of most infantry or mounted units. However, they are less adaptable to\
+ very rough terrain (they cannot move into mountains, glaciers or swamps\
+ without roads), and unable to use less rough terrain to improve their\
+ defense.\
 ")
 
 [unit_autonomous_war_mech]
@@ -2577,9 +2575,10 @@ uk_gold       = 4
 flags         = "BadWallAttacker"
 roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
-An antimatter powered Autonomous War Mech, \
-can spread Democracy without concern of peacefull citizens.n\
-Unfortunately A.I. cannot cope with difficult terrain such glaciers, swamp, mountains.\
+An antimatter powered Autonomous War Mech,\
+ can spread Democracy without concern of peacefull citizens.\
+"), _("\
+Unfortunately A.I. cannot cope with difficult terrain such glaciers, swamp, or mountains.\
 ")
 
 [unit_catapult]
@@ -2614,11 +2613,10 @@ Catapults are large rock-throwing machines of war.\
  They are very strong attackers but equally weak\
  defenders and will need an escort to be effective.\
 "), _("\
-While powerful, Catapults (and their successors) are bulky and awkward; \
-they require roads to move, are difficult to defend, and are too big for early ships \
-(Triremes and Caravels).\
-"),
-_("\
+While powerful, Catapults (and their successors) are bulky and awkward;\
+ they require roads to move, are difficult to defend, and are too big for early ships\
+ (Triremes and Caravels).\
+"), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
 bombard_rate = 1
@@ -2651,12 +2649,11 @@ uk_gold       = 2
 flags         = "Bombarder", "IgWall"
 roles         = ""
 helptext      = _("\
-Cannons are large firearms that can fire heavy projectiles over long \
-distances. As with the catapults they replace, they are very strong \
-attackers but equally weak defenders and will need an escort to be \
-effective, and have limited mobility.\
-"),
-_("\
+Cannons are large firearms that can fire heavy projectiles over long\
+ distances. As with the catapults they replace, they are very strong\
+ attackers but equally weak defenders and will need an escort to be\
+ effective, and have limited mobility.\
+"), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
 bombard_rate = 1
@@ -2689,9 +2686,9 @@ uk_gold       = 3
 flags         = "Bombarder", "IgWall", "Light Shells"
 roles         = ""
 helptext      = _("\
-Howitzers are upgraded cannons with improved fire power and mobility, which limitations is now same as for artillery.\
-"),
-_("\
+Howitzers are upgraded cannons with improved fire power and\
+ mobility, which limitations is now the same as artillery.\
+"), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
 bombard_rate = 2
@@ -2724,10 +2721,9 @@ uk_gold       = 4
 flags         = "Bombarder", "IgWall", "Armor"
 roles         = ""
 helptext      = _("\
-Self-propelled howitzers are upgraded artillery howitzers with improved defensive as well as \
-offensive capabilities.\
-"),
-_("\
+Self-propelled howitzers are upgraded artillery howitzers with improved defensive as well as\
+ offensive capabilities.\
+"), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
 bombard_rate = 3
@@ -2761,9 +2757,9 @@ flags         = "Bombarder", "Light Shells"
 targets       = "Air", "Missile", "Helicopter"
 roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
-Anti-Aircraft Gun is a mobile unit equipped with radar and two autocannons, \
-can attack both land units or aircrafts.\
-It cannot destroy target completely, but can devastate it enough for other units to exterminate it.\
+Anti-Aircraft Gun is a mobile unit equipped with radar and two autocannons,\
+ can attack both land units or aircrafts. It cannot destroy a target\
+ completely, but can weaken it enough for other units to exterminate it.\
 ")
 bombard_rate = 4
 
@@ -2796,9 +2792,8 @@ flags         = "NoVeteran"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Ballistas shoots heavy bolts or rocks.\
-"),
-_("\
-Such unit can be mounted on the ship or reside in the fortress, but can't move by itself beyond city/fortress.
+"), _("\
+Such unit can be mounted on a ship or reside in a fortress, but can't move by itself beyond city/fortress.
 ")
 
 [unit_bombard]
@@ -2829,13 +2824,12 @@ uk_gold       = 1
 flags         = "NoVeteran"
 roles         = "AttackStrongStartUnit", "BarbarianBuildTech"
 helptext      = _("\
-Bombards are stationary cannons that can fire heavy projectile balls. \
-As with the ballistas they replace, they are very strong \
-attacking units but weak defenders and will need an escort to be \
-effective, and are rather immobile.\
-"),
-_("\
-Such unit can be mounted on the ship or reside in the fortress, but can't move by itself beyond city/fortress.
+Bombards are stationary cannons that can fire heavy projectile balls.\
+ As with the ballistas they replace, they are very strong\
+ attacking units but weak defenders and will need an escort to be\
+ effective, and are rather immobile.\
+"), _("\
+Such unit can be mounted on a ship or reside in a fortress, but can't move by itself beyond city/fortress.
 ")
 
 [unit_turret_cannon]
@@ -2867,9 +2861,8 @@ flags         = "NoVeteran"
 roles         = ""
 helptext      = _("\
 Cannon Turret is kind of stationary artillery.\
-"),
-_("\
-Such unit can be mounted on the ship or reside in the fortress, but can't move by itself beyond city/fortress.
+"), _("\
+Such unit can be mounted on a ship or reside in a fortress, but can't move by itself beyond city/fortress.
 ")
 
 [unit_turret_aa_gun]
@@ -2901,11 +2894,10 @@ targets       = "Air", "Helicopter"
 flags         = "NoVeteran", "Light Shells"
 roles         = ""
 helptext      = _("\
-Anti-aircraft Turret Gun can be mounted in the fortress or on the ship, it have less firepower than Turret Cannon, \
-but is capable to shoot twice and fight against aircrafts.\
-"),
-_("\
-Such unit can be mounted on the ship or reside in the fortress, but can't move by itself beyond city/fortress.
+Anti-aircraft Turret Gun can be mounted in a fortress or on a ship, it has less firepower than the Turret Cannon,\
+ but is capable of shooting twice and fights against aircrafts.\
+"), _("\
+Such unit can be mounted on a ship or reside in a fortress, but can't move by itself beyond city/fortress.\
 ")
 
 [unit_battering_ram]
@@ -2936,8 +2928,9 @@ uk_gold       = 2
 flags         = "CityBuster", "Only_Native_Attack"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
-Battering ram is an excellent unit for besieging cities, even those with city walls (but cannot occupy city itself).\n\
-Battering ram need an escort to be protected against counterattack, and have mobility limited strictly to the roads. 
+Battering ram is an excellent unit for besieging cities, even those with city walls (but cannot occupy city itself).\
+"), _("\
+Battering ram needs an escort to be protected against counterattack, and have mobility limited strictly to roads.\ 
 ")
 
 [unit_artillery]
@@ -2968,8 +2961,8 @@ uk_gold       = 2
 flags         = "CityBuster"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
-The artillery is a very strong direct fire attacker but equally weak defender \
-and will need an escort to be effective, and has limited mobility.\
+The artillery is a very strong direct fire attacker but equally weak defender\
+ and will need an escort to be effective, and has limited mobility.\
 ")
 
 [unit_AT_gun]
@@ -3005,12 +2998,11 @@ bonuses       =
      "Armor", "DefenseDivider", 1
    }
 helptext      = _("\
-The Anti-tank gun is an improved artillery. As with its predecessors, it is a \
-very strong attacker but equally weak defender and will need an escort \
-to be effective, and has limited mobility.\
-"),
-_("\
-AT Guns have increased defence and attack against armors and mechanised infantry. \
+The Anti-tank gun is an improved artillery. As with its predecessors, it is a\
+ very strong attacker but equally weak defender and will need an escort\
+ to be effective, and has limited mobility.\
+"), _("\
+AT Guns have increased defence and attack against armors and mechanised infantry.\
 ")
 
 [unit_self_propelled_gun]
@@ -3046,12 +3038,11 @@ bonuses       =
      "Armor", "DefenseDivider", 1
    }
 helptext      = _("\
-The self-propelled gun is an upgraded artillery. As with its predecessors, it is a \
-very strong attacker but equally weak defender and will need an escort \
-to be effective, and has limited mobility.\
-"),
-_("\
-Self-propelled Guns (so called Tank Destroyers) have increased defence and attack against armors and mechanised infantry. \
+The self-propelled gun is an upgraded artillery. As with its predecessors, it is a\
+ very strong attacker but equally weak defender and will need an escort\
+ to be effective, and has limited mobility.\
+"), _("\
+Self-propelled Guns (so called Tank Destroyers) have increased defence and attack against armors and mechanised infantry.\
 ")
 
 [unit_airplane]
@@ -3085,6 +3076,10 @@ roles         = "DefendOkStartUnit"
 helptext      = _("\
 Air bi-planes are your very first airborne units. They can\
  move anywhere and attack any unit, but are relatively slow and weak.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 
 [unit_zeppelin]
@@ -3119,7 +3114,11 @@ Zeppelins can only attack ground targets, not other airborne\
  units.\
 "), _("\
 Attack against units on land is a bombard attack; against\
- units on water it has a regular attack.\
+ units on water it is a regular attack.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 bombard_rate = 1
 
@@ -3157,8 +3156,12 @@ Fighters can move anywhere and attack any unit.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-Fighters and other aircraft lose 10% of their hitpoints for every \
-turn not spent in a city, airstrip, or airbase, or on a Carrier.\
+Fighters and other aircraft lose 10% of their hitpoints for every\
+ turn not spent in a city, airstrip, airbase, or on a Carrier.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 
 [unit_bomber]
@@ -3196,12 +3199,16 @@ Bombers are specialized airborne units that may\
  units.\
 "), _("\
 A Bomber's attack against units on land is a bombard attack; against\
- units on water it has a regular attack.\
+ units on water it is a regular attack.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-As with other aircraft, Bombers lose 10% of their hitpoints for every \
-turn not spent in a city, airstrip, or airbase, or on a Carrier.\
+As with other aircraft, Bombers lose 10% of their hitpoints for every\
+ turn not spent in a city, airstrip, airbase, or on a Carrier.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 bombard_rate = 3
 
@@ -3235,18 +3242,18 @@ cargo         = "Infantry", "Small Land"
 flags         = "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
 helptext      = _("\
-A Helicopter's attack against units on land is a bombard attack; against \
-units on water it has a regular attack.\
+A Helicopter's attack against units on land is a bombard attack; against\
+ units on water it is a regular attack.\
 "), _("\
-Helicopters can also transport one military land unit; while most troops \
-must load or unload in a city, airstrip, or airbase (and not in the field \
-or onboard a Carrier), units specializing in mobility (Paratroopers, \
-Alpine Troops, Marines, Partisans, and Fanatics) can embark or disembark \
-at any time.\
+Helicopters can also transport one military land unit; while most troops\
+ must load or unload in a city, airstrip, or airbase (and not in the field\
+ or onboard a Carrier), units specializing in mobility (Paratroopers,\
+ Alpine Troops, Marines, Partisans, and Fanatics) can embark or disembark\
+ at any time.\
 "), _("\
-Unlike other aircraft, Helicopters are not required to return to a city, \
-base, or Carrier to refuel after a set number of turns; however, care \
-must be exercised, due to the health they lose every turn.\
+Unlike other aircraft, Helicopters are not required to return to a city,\
+ base, or Carrier to refuel after a set number of turns; however, care\
+ must be exercised, due to the health they lose every turn.\
 ")
 bombard_rate = 2
 
@@ -3283,8 +3290,12 @@ roles         = ""
 helptext      = _("\
 Strike Aircrafts can be used both like Fighters or light Bombers.\
 "), _("\
-They can carry one bomb, or can attack directly like fighter, \
-albeit at the expense of less movement radius and firepower strenght.\
+They can carry one bomb, or can attack directly like fighter,\
+ albeit at the expense of less movement radius and firepower strenght.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 
 [unit_jet_fighter]
@@ -3319,6 +3330,10 @@ roles         = "DefendOkStartUnit"
 helptext      = _("\
 An improved fighter or strike aircraft, with a higher speed and movement\
  radius.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 
 [unit_strike_jet]
@@ -3354,8 +3369,12 @@ roles         = ""
 helptext      = _("\
 Strike Jets can be used both like Fighters or light Bombers.\
 "), _("\
-They can carry one bomb, or can attack directly like fighter, \
-albeit at the expense of less movement radius and firepower strenght.\
+They can carry one bomb, or can attack directly like fighter,\
+ albeit at the expense of less movement radius and firepower strenght.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 
 [unit_stealth_fighter]
@@ -3391,6 +3410,10 @@ roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
 An improved Jet Fighter, with improved attack, higher movement\
  radius and partial invisibility.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 
 [unit_stealth_bomber]
@@ -3425,6 +3448,10 @@ roles         = "DefendOkStartUnit"
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
  radius.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 bombard_rate = 4
 
@@ -3461,6 +3488,10 @@ roles         = "DefendGood"
 helptext      = _("\
 An improved Hypersonic Stealth Fighter, with a higher movement\
  radius and fuel capacity thanks to the (very expensive) antimatter propulsion system.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 
 [unit_antimatter_bomber]
@@ -3494,8 +3525,12 @@ flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bomba
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 An improved Stealth Bomber, with a higher movement and fuel capacity\
- thanks to the (very expensive) antimatter propulsion system.\n\
-They can carry not only ordinary bombs, but also missiles.\
+ thanks to the (very expensive) antimatter propulsion system.\
+ They can carry not only ordinary bombs, but also missiles.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 bombard_rate = 6
 
@@ -3528,7 +3563,9 @@ uk_gold       = 1
 flags         = "NonMil", "NoVeteran", "HasNoZOC", "Unique", "Unbribable"
 roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
-Canoe made from hollowed trunk is a stone age form of transport, allow you to spread your Tribe onto nearby islands.
+Canoe made from hollowed trunk is a stone age form of\
+ transport, allow you to spread your Tribe onto nearby islands.\
+ Shallow water only, not able to go into deep ocean.\
 ")
 
 [unit_raft]
@@ -3561,9 +3598,8 @@ flags         = "NonMil", "NoVeteran", "HasNoZOC"
 roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 Raft is a rudimentary form of transport, limited to the rivers, lakes and fortresses only,\
-however it can be used to relatively fast transport of any land units, including these, which cannot move on some terrains without roads.
-"),
-_("\
+ however it can be used to relatively fast transport of any land units, including these, which cannot move on some terrains without roads.\
+"), _("\
 TIP: Raft can be used as a temporary bridge (fortify it for anchor), but can be destroyed easily if not guarded.\
 ")
 
@@ -3642,9 +3678,8 @@ veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Aak is a small cargo boat designed for serving inland waters.\
-"),
-_("\
-It is merchant vessel, thus cannot be equipped with artillery turrets. \
+"), _("\
+It is merchant vessel, thus cannot be equipped with artillery turrets.\
 ")
 
 [unit_steam_barge]
@@ -3681,12 +3716,11 @@ veteran_work_raise_chance = 2, 1, 1, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-Steam barge can transport land units along or across rivers or shallow sea, but it may not enter deep ocean tiles - \
-use steam paddler or transport ship instead. 
-"),
-_("\
- Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
- ")
+Steam barge can transport land units along or across rivers or shallow sea, but it may not enter deep ocean tiles -\
+ use steam paddler or transport ship instead. 
+"), _("\
+Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
+")
 
 [unit_diesel_barge]
 name          = _("Diesel Barge")
@@ -3722,12 +3756,11 @@ veteran_work_raise_chance = 2, 1, 1, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-Diesel barge can transport land units, also big ones, along or across rivers or shallow sea, but it may not enter deep ocean tiles - \
-use transport ship instead.
-"),
-_("\
- Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
- ")
+Diesel barge can transport land units, also big ones, along or across rivers or shallow sea, but it may not enter deep ocean tiles -\
+ use transport ship instead.
+"), _("\
+Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
+")
 
 [unit_galley]
 name          = _("Galley")
@@ -3763,8 +3796,9 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-Galley, thanks to rowing, can operate both on shallow sea waters or inland rivers as well, \
+Galley, thanks to rowing, can operate both on shallow sea waters or inland rivers as well,\
  as a battle ship, especially if equipped with ballistas or bombards.\
+ Galley cannot enter deep ocean tiles.\
 ")
 
 [unit_monitor]
@@ -3801,9 +3835,9 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-Monitors are small warships, which can be equipped with powerful turret gun. They are designed for operation on shallow coastal waters or rivers.\
-"),
-_("\
+Monitors are small warships, which can be equipped with powerful turret gun. They are designed for operation on shallow coastal waters or rivers\
+ and connect enter deep ocean tiles.\
+"), _("\
 Bombard or cannon turret can be installed aboard, for increase attack strength.\
 ")
 
@@ -3879,8 +3913,8 @@ veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Longboat is a very first and unique boat unit. It can act\
- as a small transport ship, can travel on\
- rivers, but it may not enter deep ocean tiles.\
+ as a small transport ship and can travel on\
+ any ocean tile.\
 ")
 
 [unit_junk]
@@ -3958,9 +3992,8 @@ helptext      = _("\
 The Cog is a pure transport ship, the first which can\
  transport units across ocean. It cannot attack other ships, though\
  it may still defend itself when attacked.\
-"),
-_("\
-It is merchant vessel, thus cannot be equipped with artillery turrets. \
+"), _("\
+It is merchant vessel, thus cannot be equipped with artillery turrets.\
 ")
 
 [unit_galleon]
@@ -4000,9 +4033,8 @@ helptext      = _("\
 The Galleon is a pure transport ship, the first which can\
  transport large wheeled units. It cannot attack other ships, though\
  it may still defend itself when attacked.\
-"),
-_("\
-It is merchant vessel, thus cannot be equipped with artillery turrets. \
+"), _("\
+It is merchant vessel, thus cannot be equipped with artillery turrets.\
 ")
 
 [unit_paddle_steamer]
@@ -4041,7 +4073,7 @@ veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Paddle Steamer is an sea transport ship.\
 "), _("\
-It is merchant vessel, thus cannot be equipped with artillery turrets. \
+It is merchant vessel, thus cannot be equipped with artillery turrets.\
 ")
 
 [unit_transport]
@@ -4081,12 +4113,11 @@ helptext      = _("\
 The Transport cannot attack on its own but\
  may defend itself when under attack.\
 "), _("\
-Transports can also clean pollution and fallout on water tiles, and \
-with knowledge of Sea Exploration, may build oil platforms on deep ocean \
-tiles (for use by Offshore Platforms).\
-"),
-_("\
-It is merchant vessel, thus cannot be equipped with artillery turrets. \
+Transports can also clean pollution and fallout on water tiles, and\
+ with knowledge of Sea Exploration, may build oil platforms on deep ocean\
+ tiles (for use by Offshore Platforms).\
+"), _("\
+It is merchant vessel, thus cannot be equipped with artillery turrets.\
 ")
 
 [unit_caravel]
@@ -4163,8 +4194,7 @@ veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Frigate is a specialized ship with a strong offensive value,\
  and can attack units on land, but it cannot transport units.\
-"),
-_("\
+"), _("\
 Ballista or bombard can be installed aboard, for increase attack strength.\
 ")
 bombard_rate = 1
@@ -4203,11 +4233,14 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-The Flagship is the command and conquer Frigate with a strong offensive value if equippped with additional artillery units,
- and can attack units on land, but it cannot transport land units.\
-"),
-_("\
-Ballista or bombard can be installed aboard, for increase attack strength.\
+The Flagship is the command and conquer Frigate with\
+ a strong offensive value if equippped with additional\
+ artillery units,  and can attack units on land, but it\
+ cannot transport land units. The Flagship Frigate in a\
+ unique unit and as such only one can be built.\
+"), _("\
+Ballista or bombard can be installed aboard, for increase
+ attack strength.\
 ")
 bombard_rate = 2
 
@@ -4247,8 +4280,7 @@ veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Ironclad is an armored ship,\
  more sturdy than the Frigate, but slow.\
-"),
-_("\
+"), _("\
 Bombard or cannon turret can be installed aboard, for increase attack strength.\
 ")
 bombard_rate = 1
@@ -4293,11 +4325,9 @@ veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 An improved warship, with better move rate and vision.\
  Anti-submarine weapons double its defense against Submarines.\
-"), 
-_("\
-Destroyer can hold one turret or torpedo.\n\
-"),  
-_("\
+"), _("\
+Destroyer can hold one turret or torpedo.\
+"), _("\
 TIP:  A very fast unit, which is very useful for hunting down enemy\
  Transports and Submarines.\
 ")
@@ -4377,8 +4407,7 @@ veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Battleship is the supreme naval unit with\
  excellent offensive and defensive values.\
-"),
-_("\
+"), _("\
 The Battleship can hold up to 3 artillery or gun turrets.\
 ")
 bombard_rate = 3
@@ -4423,8 +4452,7 @@ veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The AEGIS Cruiser is equipped with an advanced\
  defensive missile system.\
-"),
-_("\
+"), _("\
 AEGIS Cruiser can hold up to 3 turrets or cruise rockets.\
 ")
 bombard_rate = 3
@@ -4467,10 +4495,9 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-A destroyer powered by fusion power and equipped with electromagnetic railguns, \
-can destroy targets with double firepower.\
-"), 
-_("\
+A destroyer powered by fusion power and equipped with electromagnetic railguns,\
+ can destroy targets with double firepower.\
+"), _("\
 Destroyer can hold two turrets or torpedos.\
 ")
 bombard_rate = 2
@@ -4512,8 +4539,7 @@ helptext      = _("\
 Traveling under the surface of the ocean, Submarines have\
  a very high strategic value, but a weak defense if caught\
  off guard.\
-"),
-_("\
+"), _("\
 Submarines can carry torpedos or can attack directly using deck cannon.\
 ")
 bombard_rate = 1
@@ -4555,10 +4581,9 @@ helptext      = _("\
 Traveling under the surface of the ocean, Submarines have\
  a very high strategic value, but a weak defense if caught\
  off guard.\
-"),
-_("\
+"), _("\
 Nuclear Submarines can carry torpedos or missiles, or can attack directly using deck cannon.\
-They are faster than their predecessors.
+ They are faster than their predecessors.
 ")
 bombard_rate = 1
 
@@ -4638,8 +4663,8 @@ targets       = "Air", "Missile", "Helicopter"
 flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
-Medium-distance Missile can devastate enemy units, especially is capable \
-to shoot down enemy aircrafts or missiles.\
+Medium-distance Missile can devastate enemy units, especially is capable\
+ to shoot down enemy aircraft or missiles.\
 ")
 
 [unit_cruise_missile]
@@ -4718,7 +4743,7 @@ roles         = ""
 helptext      = _("\
 You can build Atomic Bomb units when you have the required Nuclear Fission advance, and\
  the Manhattan Project wonder has been built by any player.\
-Bombers or their successors can carry Atomic Bomb.\
+ Bombers or their successors can carry Atomic Bomb.\
 "), _("\
 On impact, the blast will destroy any unit in an area 3 tiles wide\
  (3x3 squares for rectangular grids), including friendly units.\
@@ -4825,7 +4850,7 @@ flags         = "OneAttack", "NoVeteran", "Capturable", "Partial_Invis", "Only_N
 roles         = ""
 helptext      = _("\
 Torpedos, carried by submarine or patrol boat, can attack other ships.\
-They have short range and must to be used within one round.
+ They have short range and must to be used within one round.\
 ")
 
 [unit_GBU]
@@ -4856,8 +4881,8 @@ uk_gold       = 1
 flags         = "OneAttack", "AirAttacker", "CityBuster", "IgWall", "Capturable", "HasNoZOC"
 roles         = ""
 helptext      = _("\
-Ths huge GBU (Guided Bomb), carried by bombers, can precisely strike enemy unit,\
- instead of spreading small bombs by bomber itself.\n\
+Ths huge GBU (Guided Bomb Unit), carried by bombers, can precisely strike enemy unit,\
+ instead of spreading small bombs by bomber itself.\
 ")
 
 [unit_messenger]
@@ -4886,7 +4911,7 @@ uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
 flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "NoVeteran"
-; No veteran levels (level name is never displayed)
+; No veteran levels (level name is ever displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
 veteran_work_raise_chance = 0
@@ -4897,17 +4922,15 @@ helptext      = _("\
 A Messenger is an official that carries your dispatches and\
  is authorized to deal with foreign dignitaries.\
  Messengers can't perform any hostile actions against other cities,\
-  but can defend your own cities against enemy covert operations.\
-"),
- _("\
+ but can defend your own cities against enemy covert operations.\
+"), _("\
 If a foreign unit is alone on a tile, you may attempt to bribe it\
  with your Messenger. By paying a sum of gold the unit will immediately\
  become yours; the exact sum depends on the status of the unit and\
  that of the civilization owning it. However, units belonging to\
- Republican governments may demand huge amount of gold be bribed. Bribery when\
- not at war will cause a diplomatic incident.\
-"), 
- _("\
+ Republican governments may demand huge amount of gold to be bribed. Bribery\
+ when not at war will cause a diplomatic incident.\
+"), _("\
 The actions available to Messenger in a city are:\
 "), _("\
  - \"Establish Embassy\": This action always succeeds, and gives\
@@ -4978,8 +5001,8 @@ If a foreign unit is alone on a tile, you may attempt to bribe it\
  with your Diplomat. By paying a sum of gold the unit will immediately\
  become yours; the exact sum depends on the status of the unit and\
  that of the civilization owning it. However, units belonging to\
- Republican governments may demand huge amount of gold be bribed. Bribery when\
- not at war will cause a diplomatic incident.\
+ Republican governments may demand huge amount of gold to be bribed. Bribery\
+ when not at war will cause a diplomatic incident.\
 "), _("\
 Diplomats can also perform a number of actions in another player's\
  city, although each Diplomat may attempt only one action. Most of\
@@ -4992,7 +5015,7 @@ Diplomats can also perform a number of actions in another player's\
 The actions available to Diplomats in a city are:\
 "), _("\
  - \"Establish Embassy\": This action always succeeds, and gives\
- permanent contact with the city's owner, as well as intelligence\
+ a permanent contact with the city's owner, as well as intelligence\
  on their tax rates and technology. Each player you have an embassy\
  with that knows a technology reduces that technology's research\
  cost to you.\
@@ -5020,9 +5043,9 @@ The actions available to Diplomats in a city are:\
  remain in the enemy's control, but units outside cities are lost to\
  both players. The exact sum depends on the status of the city and\
  that of the civilization that owns it. It is not possible to incite\
- a rebellion in a capital, and very expensive in any city governed by a Fundamentalism or\
- Democracy. Incitement may be attempted in peacetime, but will cause a\
- diplomatic incident.\
+ a rebellion in a capital, and very expensive in any city governed by a\
+ Fundamentalism or Democracy. Incitement may be attempted in peacetime,\
+ but will cause a diplomatic incident.\
 "), _("\
 In some game strategies, hordes of Diplomats can be used to wreak\
  havoc on the enemy.  Little wonder that Diplomats are often\
@@ -5081,15 +5104,20 @@ She can perform all the functions of the Diplomat; refer to the Diplomat\
  Spies are also more effective than Diplomats at defending cities\
  against foreign Diplomats and Spies.\
 "), _("\
-A Spy can also be used to:\n\
+A Spy can also be used to:\
+"), _("\
  - sabotage an enemy unit (reducing its hit points to half), if it is\
- alone on a tile and the players are at war;\n\
+ alone on a tile and the players are at war;\
+"), _("\
  - poison the water supply of an enemy city (reducing the population\
- by one);\n\
- - steal specific technology (with a reduced chance of success);\n\
+ by one);\
+"), _("\
+ - steal specific technology (with a reduced chance of success);\
+"), _("\
  - steal further technologies from a city which has already been\
  stolen from (although cities become more resistant each time they\
- are stolen from);\n\
+ are stolen from);\
+"), _("\
  - sabotage predetermined city targets (with a reduced chance of\
  success).\
 "), _("\
@@ -5174,7 +5202,7 @@ flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
 roles         = ""
 helptext      = _("\
 The Freight unit replaces the Caravan, and moves at twice the speed.\
- It has the same behavior and movement restrictions.\
+ It has the same behavior and movement restrictions as Caravan.\
 ")
 
 [unit_train]
@@ -5207,10 +5235,9 @@ cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big
 flags         = "NonMil", "Capturable", "NoVeteran", "Transform"
 roles         = ""
 helptext      = _("\
-Train can use only railroads, but is capable to fast transport many land units or helicopters.\
-It can also quickly transform terrain type.\
-"),
-_("\
+Train can only use railroads, but is capable to fast transport many land units or helicopters.\
+ It can also quickly transform terrain type.\
+"), _("\
 Trains HP can be quickly regenerated in any city with Railway Station.\
 ")
 
@@ -5338,7 +5365,7 @@ One Barbarian Leader appears every time there is a barbarian uprising\
  somewhere in the world.\
 "), _("\
 When a Barbarian Leader is killed on a tile without any defending units,\
- the 100 gold ransom is paid, but only to land units and helicopters.\
+ a 100 gold ransom is paid, but only to land units and helicopters.\
 ")
 
 [unit_balloon]
@@ -5370,7 +5397,7 @@ flags         = "NonMil", "Capturable", "HasNoZOC"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 Balloons are your first units, which can move anywhere.\
-Useable for observation, or for protecting your cities against air raids.\
+ Useable for observation, or for protecting your cities against air raids.\
 ")
 
 [unit_awacs]
@@ -5401,9 +5428,13 @@ uk_gold       = 3
 flags         = "HasNoZOC"
 roles         = ""
 helptext      = _("\
-The AWACS (Airborne Warning and Control System) is an airplane with an \
-advanced radar that can determine the location of enemy units over a \
-wide area.\
+The AWACS (Airborne Warning and Control System) is an airplane with an\
+ advanced radar that can determine the location of enemy units over a\
+ wide area.\
+"), _("\
+All aircraft is subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
 ")
 
 [unit_drone]
@@ -5434,6 +5465,6 @@ uk_gold       = 1
 flags         = "AirAttacker", "Partial_Invis", "Light Shells"
 roles         = "Explorer"
 helptext      = _("\
-Unmanned light drone are useful for patrol duty, \
-they need no refuelling, and citisens are not upset when drone is used abroad.\
+Unmanned light drone are useful for patrol duty,\
+ they need no refuelling, and citisens are not upset when drone is used abroad.\
 ")
