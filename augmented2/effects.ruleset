@@ -3464,15 +3464,15 @@ reqs    =
       "UnitFlag", "IgWall", "Local", FALSE
     }
 
-[effect_city_walls_1]
-type    = "Unit_No_Lose_Pop"
-value   = 1
-reqs    =
-    { "type", "name", "range", "Present"
-      "Building", "City Walls", "City", TRUE
-      "UnitFlag", "IgWall", "Local", TRUE
-      "MinSize", "9", "City", FALSE
-    }
+;[effect_city_walls_1]
+;type    = "Unit_No_Lose_Pop"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range", "Present"
+;      "Building", "City Walls", "City", TRUE
+;      "UnitFlag", "IgWall", "Local", TRUE
+;      "MinSize", "9", "City", FALSE
+;    }
 
 
 [effect_city_walls_2]
@@ -3481,7 +3481,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "Present"
       "Building", "City Walls", "City", TRUE
-      "UnitFlag", "IgWall", "Local", FALSE
+;      "UnitFlag", "IgWall", "Local", FALSE
       "UnitFlag", "AirAttacker", "Local", FALSE
     }
 
