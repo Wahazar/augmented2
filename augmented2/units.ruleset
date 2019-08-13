@@ -3716,8 +3716,8 @@ veteran_work_raise_chance = 2, 1, 1, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-Steam barge can transport land units along or across rivers or shallow sea, but it may not enter deep ocean tiles -\
- use steam paddler or transport ship instead. 
+Steam barge can transport land units along or across rivers or shallow sea, but it may not enter deep ocean tiles.\
+ Use steam paddler or transport ship instead.\
 "), _("\
 Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
 ")
