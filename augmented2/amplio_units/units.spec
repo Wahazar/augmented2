@@ -201,5 +201,6 @@ sprites =
 		"u.missile", "augmented2/amplio_units/missile_a"
 		"u.armor_car", "augmented2/amplio_units/armor_car_a"
 		"u.atv_infantry", "augmented2/amplio_units/ATV_infantry_a"
+		"u.builder", "augmented2/amplio_units/builders_a"
 	}
 

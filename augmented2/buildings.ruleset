@@ -513,16 +513,16 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 120
-upkeep	= 2
+upkeep	= 3
 sabotage	= 100
 sound		= "b_factory"
 sound_alt	= "b_generic"
 helptext	= _("\
-Cement Plant increases overall city production and additionally production mines located in mountains by 50%, \
-add extra 2 trade point for each coal mine and 2 shields for each mine on desert without resources.\n\
+Cement Plant increases overall city production by 50%, \
+add extra 2 trade point for each coal mine and 2 shields for each mine in mountains or on desert without resources.\n\
 Railway station in city and railroads on mine tiles are necessary to gain above effects.\n\
 This facility increase significantly rate of pollution.\n\
-Note: Cement Plant cannot be built in a city, where Research Lab is located.\
+Note: Cement Plant cannot be built in a city, where the Research Lab is located.\
 ")
 
 [building_church]
@@ -1078,10 +1078,10 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Oil Refinery increases twice production from oil wells \
+Oil Refinery increases overall city production by 25%, increases twice production from oil wells \
 and add extra 4 trade point for each oil field with oil well (i.e. free upkeep).\n\
 Oil Refinery is also required for building and functioning of the Offshore Platform. \n\
-There is small additional risk of pollution.\
+There is a small additional risk of pollution.\
 ")
 
 [building_palace]
@@ -1137,6 +1137,10 @@ _("\
 Palace is required to build for any centralized government! \
 Start building it before conversion from Tribalism to Despotism or Monarchy. \
 You need some Culture Points, which can be gainded from Temples, or by achievements (conquering other cultures, revealing some unknown islands).\
+"),
+_("\
+Capital city with Palace gain additional 4 luxury points (except for Communism).\n
+There is no science penalty for city with Palace in case of Tribal or Despotism.\
 ")
 
 [building_ecclesiastical_palace]
@@ -1734,7 +1738,7 @@ Decrease food waste from tiles with Farmland.\n\
 Farmland tiles are those which have been irrigated a second time (Chemical Synthesis required).\
 "),
 _("\
-Together with Railway Station, increases the tax output in a city by 25%.\
+Together with Railway Station or Port Facility, increases the tax output in a city by 25%.\
 ")
 
 [building_temple]
@@ -2748,7 +2752,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Yasir was a name of a place, where slaves were bought or sold.\n\
 With this building, cheap slave labor can be obtained and used as workers or migrants.\n\
-Additionally, city where Yasir is located, would get 25% more gold (not valid for Republic or Democracy), but additional unhapinnes would be generated.\n\
+Additionally, city where Yasir is located, would get 25% more gold (not valid for Republic or Democracy), but additional unhapinnes would be generated for each Players city and additionally for city with Yasir.\n\
 Slavery Abolition wonder builded by owner, or United Nation wonder builded by any player, will obsolete this building.\
 ")
 
@@ -3382,10 +3386,9 @@ name		= _("5 Years Plan")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Communism", "Player"
-      "Building", "Police Station", "City"
-      "Building", "City Hall", "City"
-	 "MinCulture", "3000", "Player"
+      "Gov", "Communism", "Player"
+      "Building", "Factory", "City"
+      "MinCulture", "3200", "Player"
     }
 graphic	= "b.5_years_plan"
 graphic_alt	= "gov.communism"
@@ -3393,7 +3396,7 @@ obsolete_by	=
     { "type", "name", "range"
       "Tech", "Imperialism", "Player"
     }
-build_cost	= 40
+build_cost	= 80
 upkeep		= 2
 sabotage	= 100
 sound		= "b_university"
@@ -3403,8 +3406,10 @@ helptext	= _("\
 The main point of Planned Economy, the Five Year Plan is \
 aimed at increasing the nation's production by concentrated \
 effort of the People.\n\
-Celebrating the anniversary of the Revolution would yield in additional shield production
-from any tile, which already rpoduce shields.
+So called 'Udarniks' (shock labour team) while celebrating the anniversary of the Revolution would be superproductive.
+"),_("\
+% Years plan remove luxuty penalty for Communism and would yield in additional shield production
+from any tile, which already produce shields, if city is already celebrating.
 ")
 
 [building_capitalization]

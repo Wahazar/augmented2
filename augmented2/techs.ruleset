@@ -356,7 +356,7 @@ cost     = 25
 [advance_combined_arms]
 name     = _("Combined Arms")
 req1     = "Amphibious Warfare"
-req2     = "Jet Propulsion"
+req2     = "Radar"
 flags    = ""
 graphic     = "a.combined_arms"
 graphic_alt = "-"
