@@ -788,7 +788,7 @@ color.g              = 85
 color.b              = 97
 helptext             = _("\
 Swamps suffer from an over-abundance of water, making agriculture\
- somewhat problematic. Big Land units may not move in swamps without\
+ somewhat problematic. Big Land and Heavy Cavalry units may not move in swamps without\
  a road.\
 ")
 
@@ -1318,7 +1318,7 @@ rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 reqs           =
     { "type", "name", "range", "present"
-      "Tech", "Miniaturization", "Player", TRUE
+      "Tech", "Offshore Exploration", "Player", TRUE
       "Terrain", "Deep Ocean", "Local", TRUE
     }
 build_time     = 0

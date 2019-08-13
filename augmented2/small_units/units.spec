@@ -98,6 +98,6 @@ sprites =
 		"u.musketeer", "augmented2/small_units/musketeer_t"
 		"u.nuclear", "augmented2/small_units/nuclear_t"
 		"u.cruise_missile", "augmented2/small_units/cruise_missile_t"
-
+		"u.builder", "augmented2/small_units/builders_t"
 	}
 

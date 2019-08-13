@@ -94,7 +94,7 @@ minimap_intro_file = "misc/radar"
 files =
   "misc/overlays.spec",
   "misc/citybar.spec",
-  "isophex/terrain1.spec",
+;  "isophex/terrain1.spec",
   "isophex/terrain2.spec",
   "isophex/darkness.spec",
   "isotrident/tiles.spec",
