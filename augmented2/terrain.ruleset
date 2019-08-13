@@ -409,8 +409,7 @@ helptext             = _("\
 Glaciers are found only in the most northerly or southerly\
  reaches of the world.  They are very cold, and hence difficult to\
  work with.\
-"),
-_("\
+"), _("\
 Land units (except of small ones, including Alpine Troops) can't move on Glaciers without roads.
 ")
 
@@ -599,7 +598,7 @@ helptext             = _("\
 In addition to being amenable to agriculture, Hills are frequently\
  rich in resources.\
 "), _("\
-Cities built in hills are at risk of earthquakes, which can interrupt\
+Cities built on hills are at risk of earthquakes, which can interrupt\
  a city's current project.\
 ")
 
@@ -1190,26 +1189,26 @@ removal_time   = 0
 conflicts      = "Mine", "Oil Well"
 hidden_by      = "Farmland"
 helptext       = _("\
-Building an irrigation system on a suitable tile causes it to \
-produce some extra food each turn. Most tiles yield one extra food; \
-a desert with a river will yield two, if it is not already benefiting \
-from an oasis.\
+Building an irrigation system on a suitable tile causes it to\
+ produce some extra food each turn. Most tiles yield one extra food;\
+ a desert with a river will yield two, if it is not already benefiting\
+ from an oasis. Requires knowldge of Agricultural Farming.\
 "), _("\
-Without knowledge of Electricity, irrigation requires a nearby source \
-of water: an ocean, lake, or river tile, or another tile with an \
-irrigation system, must share an edge (not just a corner) with the \
-target tile. However, once irrigated, land remains so even if the \
-water source is removed. Once Electricity is known, any suitable \
-tile may be irrigated without a water source.\
+Without knowledge of Electricity, irrigation requires a nearby source\
+ of water: an ocean, lake, or river tile, or another tile with an\
+ irrigation system, must share an edge (not just a corner) with the\
+ target tile. However, once irrigated, land remains so even if the\
+ water source is removed. Once Electricity is known, any suitable\
+ tile may be irrigated without a water source.\
 "), _("\
 Building irrigation on a tile with a mine or oil well will destroy it.\
 "), _("\
-City center tiles get their terrain's irrigation bonus automatically, \
-if there is no conflicting mine or oil well on the tile; however, \
-this does not make cities count as a water source for further \
-irrigation. Irrigation can be built on the city tile simply to allow \
-building further irrigation elsewhere, but will not give the tile any \
-further bonus.\
+City center tiles get their terrain's irrigation bonus automatically,\
+ if there is no conflicting mine or oil well on the tile; however,\
+ this does not make cities count as a water source for further\
+ irrigation. Irrigation can be built on the city tile simply to allow\
+ building further irrigation elsewhere, but will not give the tile any\
+ further bonus.\
 ")
 
 [extra_mine]
@@ -1235,10 +1234,10 @@ removal_time   = 0
 conflicts      = "Irrigation", "Farmland"
 hidden_by      = "Oil Well"
 helptext       = _("\
-Mines can be built on some types of terrain, which increases the \
-number of production points produced by that tile. Hills and Mountains \
-get an extra 2 production points per tile; other terrains get 1 extra \
-production point.\
+Mines can be built on some types of terrain, which increases the\
+ number of production points produced by that tile. Hills and Mountains\
+ get an extra 2 production points per tile; other terrains get 1 extra\
+ production point.\
 "), _("\
 You need to destroy the irrigation prior to building mine.\
 ")
@@ -1266,8 +1265,8 @@ build_time     = 0
 removal_time   = 0
 conflicts      = "Irrigation", "Farmland"
 helptext       = _("\
-Once Refining is known, mines on Desert and Glacier tiles can be \
-upgraded to oil wells for an extra production point.\
+Once Refining is known, mines on Desert and Glacier tiles can be\
+ upgraded to oil wells for an extra production point.\
 ")
 
 [extra_wind_turbine]
@@ -1296,11 +1295,12 @@ build_time     = 8
 removal_time   = 0
 conflicts      = "Mine", "Oil Well"
 helptext       = _("\
-Wind turbines can be builded on the hills with irrigation or farmland, \
-such tile get 1 extra production point, while keeping current food production.\n\
+Wind turbines can be builded on the hills with irrigation or farmland,\
+ such tile get 1 extra production point, while keeping current food production.\
+"), _("\
 Electricty knowledge is required.\
 "), _("\
-Building a mine will destroy both wind turbines and irrigation. \
+Building a mine will destroy both wind turbines and irrigation.\
 ")
 
 
@@ -1325,11 +1325,11 @@ build_time     = 0
 removal_time   = 0
 conflicts      = "Buoy";, "Road Bridge"
 helptext       = _("\
-Oil platforms allow cities with Offshore Platforms to get an extra \
-production point from Deep Ocean tiles.\
+Oil platforms allow cities with Offshore Platforms to get an extra\
+ production point from Deep Ocean tiles.\
 "), _("\
-Oil platforms can be built by Workers and similar units on board ships, \
-or directly by Transport units.\
+Oil platforms can be built by Workers and similar units on board ships,\
+ or directly by Transport units.\
 ")
 
 [extra_pollution]
@@ -1351,45 +1351,45 @@ reqs           =
 removal_time   = 0
 flags          = "GlobalWarming"
 helptext       = _("\
-Pollution appears on tiles around cities with high production or \
-population, or when a Mfg. Plant suffers an industrial accident. \
-It halves all output from its tile, and contributes to the risk of \
-global warming.\
+Pollution appears on tiles around cities with high production or\
+ population, or when a Mfg. Plant suffers an industrial accident.\
+ It halves all output from its tile, and contributes to the risk of\
+ global warming.\
 "), _("\
-The pollution can only be cleared by dispatching Workers, Migrants, \
-Settlers, Engineers, or a Transport with the \"clean pollution\" order.\
+The pollution can only be cleared by dispatching Workers, Migrants,\
+ Settlers, Engineers, or a Transport with the \"clean pollution\" order.\
 "), _("\
-Pollution from production is likely to start becoming important as \
-your civilization becomes more industrialized, giving you buildings \
-such as Factory and Power Plant which boost production. Replacing a \
-Power Plant with cleaner forms of energy -- a Hydro Plant / Hoover \
-Dam, Nuclear Plant, or Solar Plant -- will reduce pollution from \
-production, as will a Recycling Center.\
+Pollution from production is likely to start becoming important as\
+ your civilization becomes more industrialized, giving you buildings\
+ such as Factory and Power Plant which boost production. Replacing a\
+ Power Plant with cleaner forms of energy -- a Hydro Plant / Hoover\
+ Dam, Nuclear Plant, or Solar Plant -- will reduce pollution from\
+ production, as will a Recycling Center.\
 "), _("\
-The city's population starts adding to pollution with the Factory, \
-Super Highways, Offshore Platform, and Mfg. Plant buildings; each \
-building causes the population to add more to pollution. A Mass \
-Transit will counteract the pollution from two buildings in a city, \
-and the Eiffel Tower wonder will counteract the pollution from one \
-building in all the owner's cities.\
+The city's population starts adding to pollution with the Factory,\
+ Super Highways, Offshore Platform, and Mfg. Plant buildings; each\
+ building causes the population to add more to pollution. A Mass\
+ Transit will counteract the pollution from two buildings in a city,\
+ and the Eiffel Tower wonder will counteract the pollution from one\
+ building in all the owner's cities.\
 "), _("\
-The contribution of these factors can be seen in the city dialog; once \
-it exceeds a threshold, the excess is the percent chance of pollution \
-appearing each turn.\
+The contribution of these factors can be seen in the city dialog; once\
+ it exceeds a threshold, the excess is the percent chance of pollution\
+ appearing each turn.\
 "), _("\
-When an unused tile becomes polluted, there is the temptation to avoid \
-the effort of cleaning it; but the spread of pollution has far more \
-terrible results than the immediate economic impact -- every polluted \
-tile increases the chance of global warming. Each time global warming \
-advances, the entire world loses coastal land to the sea and to jungles \
-and swamps, and inland tiles are lost to desert. This tends to \
-devastate cities and leads to global impoverishment.\
+When an unused tile becomes polluted, there is the temptation to avoid\
+ the effort of cleaning it; but the spread of pollution has far more\
+ terrible results than the immediate economic impact -- every polluted\
+ tile increases the chance of global warming. Each time global warming\
+ advances, the entire world loses coastal land to the sea and to jungles\
+ and swamps, and inland tiles are lost to desert. This tends to\
+ devastate cities and leads to global impoverishment.\
 "), _("\
-The risk of global warming is cumulative; the longer polluted tiles \
-are left uncleaned, the higher the risk becomes, and the risk can \
-linger for some time even after all pollution has been cleaned. If a \
-long time passes with an elevated risk of warming, its effects will be \
-all the more severe when it does occur.\
+The risk of global warming is cumulative; the longer polluted tiles\
+ are left uncleaned, the higher the risk becomes, and the risk can\
+ linger for some time even after all pollution has been cleaned. If a\
+ long time passes with an elevated risk of warming, its effects will be\
+ all the more severe when it does occur.\
 ")
 
 [extra_hut]
@@ -1410,17 +1410,17 @@ reqs           =
       "TerrainClass", "Land", "Local"
     }
 helptext = _("\
-Villages (also called \"huts\") are primitive communities spread \
-across the world at the beginning of the game. Any land unit can enter \
-a village, making the village disappear and deliver a random response. \
-If the village proves hostile, it could produce barbarians or the unit \
-entering may simply be destroyed. If they are friendly, the player \
-could receive gold, a new technology, a military unit (occasionally a \
-settler; and sometimes a unit that the player cannot yet create), or \
-even a new city.\
+Villages (also called \"huts\") are primitive communities spread\
+ across the world at the beginning of the game. Any land unit can enter\
+ a village, making the village disappear and deliver a random response.\
+ If the village proves hostile, it could produce barbarians or the unit\
+ entering may simply be destroyed. If they are friendly, the player\
+ could receive gold, a new technology, a military unit (occasionally a\
+ settler; and sometimes a unit that the player cannot yet create), or\
+ even a new city.\
 "), _("\
-Later in the game, helicopters may also enter villages, but overflight \
-by other aircraft will cause the villagers to take fright and disband.\
+Later in the game, helicopters may also enter villages, but overflight\
+ by other aircraft will cause the villagers to take fright and disband.\
 ")
 
 [extra_farmland]
@@ -1447,9 +1447,9 @@ removal_time   = 0
 conflicts      = "Mine", "Oil Well"
 ; /* xgettext:no-c-format */
 helptext       = _("\
-Once Refrigeration is known, irrigation systems can be upgraded to \
-farmland by irrigating them a second time; if the city working the tile \
-has a Supermarket, a farmland tile provides 50% more food.\
+Once Refrigeration is known, irrigation systems can be upgraded to\
+ farmland by irrigating them a second time; if the city working the tile\
+ has a Supermarket, a farmland tile provides 50% more food.\
 "), _("\
 Farmland on a tile prevents any trade bonus from Super Highways.\
 "), _("\
@@ -1475,16 +1475,16 @@ reqs           =
 removal_time   = 0
 flags          = "NuclearWinter"
 helptext       = _("\
-Nuclear fallout can appear on tiles when a Nuclear unit is \
-detonated, or when a city's Nuclear Plant has an accident. It halves \
-all output from its tile.\
+Nuclear fallout can appear on tiles when a Nuclear unit is\
+ detonated, or when a city's Nuclear Plant has an accident. It halves\
+ all output from its tile.\
 "), _("\
-Every tile with nuclear fallout also increases the risk of global \
-nuclear winter. If nuclear winter occurs, land across the globe \
-changes into desert, tundra, and ice, and lakes and oceans freeze.\
+Every tile with nuclear fallout also increases the risk of global\
+ nuclear winter. If nuclear winter occurs, land across the globe\
+ changes into desert, tundra, and ice, and lakes and oceans freeze.\
 "), _("\
-Settlers, Workers, Migrants, Engineers, and Transport units can all \
-clean up nuclear fallout.\
+Settlers, Workers, Migrants, Engineers, and Transport units can all\
+ clean up nuclear fallout.\
 ")
 
 [extra_fort]
@@ -1515,9 +1515,9 @@ hidden_by      = "Fortress"
 flags          = "NativeTile"
 ; /* xgettext:no-c-format */
 helptext       = _("\
-Forts are rapidly-built fortifications providing some defense (+50%) \
-against land units and boats. A fort is also necessary to start building \
-a fortress.\
+Forts are rapidly-built fortifications providing some defense (+50%)\
+ against land units and boats. A fort is also necessary to start building\
+ a fortress.\
 ")
 
 [extra_fortress]
@@ -1548,20 +1548,18 @@ native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Me
 conflicts      = "Airstrip", "Airbase"
 flags          = "NativeTile"
 helptext       = _("\
-Fortresses are more permanent forts; construction on them can only begin \
-once the underlying fort is complete. Forts on River tiles cannot be \
-upgraded to Fortresses.\
-"),
-; /* xgettext:no-c-format */
-_("\
-Compared to a fort, units in a fortress receive extra defense (+50%) \
-against all units (in total, their defense against land units and boats \
-is doubled), and do not count as aggressive if near a friendly city. \
-Any kind of land unit remaining in a fortress for a whole turn without \
-moving recovers a quarter of its hit points.\
+Fortresses are more permanent forts; construction on them can only begin\
+ once the underlying fort is complete. Forts on River tiles cannot be\
+ upgraded to Fortresses.\
 "), _("\
-With Astronomy, fortresses gain watchtowers from which units can see \
-further afield.\
+Compared to a fort, units in a fortress receive extra defense (+50%)\
+ against all units (in total, their defense against land units and boats\
+ is doubled), and do not count as aggressive if near a friendly city.\
+ Any kind of land unit remaining in a fortress for a whole turn without\
+ moving recovers a quarter of its hit points.\
+"), _("\
+With Astronomy, fortresses gain watchtowers from which units can see\
+ further afield.\
 ")
 
 [extra_airstrip]
@@ -1590,16 +1588,14 @@ conflicts      = "Fort", "Fortress"
 hidden_by      = "Airbase"
 flags          = "Refuel"
 helptext       = _("\
-Airstrips are rapidly-built runways allowing air units to land, refuel, \
-and recover outside cities; an aircraft remaining on an airstrip for a \
-whole turn without moving recovers a tenth of its hit points (that is, \
-the same amount it loses each turn while airborne). However, air units on \
-an airstrip are vulnerable to attack by land units.\
-"),
-; /* xgettext:no-c-format */
-_("\
-Any units on an airstrip receive extra defense (+50%) against enemy \
-aircraft.\
+Airstrips are rapidly-built runways allowing air units to land, refuel,\
+ and recover outside cities; an aircraft remaining on an airstrip for a\
+ whole turn without moving recovers a tenth of its hit points (that is,\
+ the same amount it loses each turn while airborne). However, air units on\
+ an airstrip are vulnerable to attack by land units.\
+"), _("\
+Any units on an airstrip receive extra defense (+50%) against enemy\
+ aircraft.\
 "), _("\
 An airstrip is necessary to start building an airbase.\
 ")
@@ -1632,17 +1628,15 @@ native_to      = "Air", "Bomb", "Helicopter", "Missile", "Torpedos", "Suicidal",
 conflicts      = "Fort", "Fortress"
 flags          = "Refuel"
 helptext       = _("\
-Airbases are more permanent airstrips; construction on them can only \
-begin once the underlying airstrip is complete. Airstrips on River tiles \
-cannot be upgraded to Airbases.\
-"),
-; /* xgettext:no-c-format */
-_("\
-Compared to an airstrip, units in an airbase receive extra defense (+50%) \
-against all units (in total, their defense against air units and missiles \
-is doubled), do not count as aggressive if near a friendly city, and can \
-see further afield. Also, air units recover more hit points (a third per \
-turn, the same as in a city without an Airport).\
+Airbases are more permanent airstrips; construction on them can only\
+ begin once the underlying airstrip is complete. Airstrips on River tiles\
+ cannot be upgraded to Airbases.\
+"), _("\
+Compared to an airstrip, units in an airbase receive extra defense (+50%)\
+ against all units (in total, their defense against air units and missiles\
+ is doubled), do not count as aggressive if near a friendly city, and can\
+ see further afield. Also, air units recover more hit points (a third per\
+ turn, the same as in a city without an Airport).\
 ")
 
 [extra_buoy]
@@ -1669,8 +1663,8 @@ removal_time   = 0
 conflicts      = "Oil Platform";, "Road Bridge"
 flags          = "ShowFlag"
 helptext       = _("\
-Buoys may be built in the ocean (by units on a sea-going vessel) to \
-allow their owner to see the surrounding tiles.\
+Buoys may be built in the ocean (by units on a sea-going vessel) to\
+ allow their owner to see the surrounding tiles.\
 ")
 
 [extra_ruins]
@@ -1694,8 +1688,8 @@ buildable      = FALSE
 removal_time   = 0
 flags          = "TerrChangeRemoves"
 helptext       = _("\
-Ruins mark the former site of a city that was destroyed or abandoned. \
-They have no effect on gameplay.\
+Ruins mark the former site of a city that was destroyed or abandoned.\
+ They have no effect on gameplay.\
 ")
 
 [extra_road]
