@@ -677,7 +677,7 @@ name           = _("Literate")
 type           = "Literate"
 unique         = FALSE
 value          = 100
-culture        = 100
+culture        = 200
 ; /* xgettext:no-c-format */
 first_msg      = _("Your nation is the first to reach 100% literacy!")
 ; /* xgettext:no-c-format */
@@ -714,7 +714,8 @@ cons_msg       = _("One of your cities has 2000 culture points!")
 name           = _("Cultured Nation")
 type           = "Cultured_Nation"
 unique         = FALSE
-value          = 5000
+value          = 20000
+culture        = 1000
 first_msg      = _("Your nation is the first one to achieve 20000 culture points!")
 cons_msg       = _("Your nation has achieved 20000 culture points!")
  
@@ -840,7 +841,7 @@ set =
       "tinyisles", "DISABLED"
       "temperature", 60
       "flatpoles", 0
-      "startunits", "cccc"
+      "startunits", "ccccx"
       "citymindist", 3
       "techlevel", 0
       "borders", "ENABLED"

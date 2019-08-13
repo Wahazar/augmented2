@@ -176,7 +176,7 @@ name          = _("?unitclass:Big Land")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
-                "CollectRansom", "ZOC", "CanFortify", "KillCitizen", "Airliftable", "AttackNonNative"
+                "CollectRansom", "ZOC", "CanFortify", "KillCitizen", "AttackNonNative", "CanPillage"
 
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
@@ -204,8 +204,8 @@ flags         = "ZOC", "DamageSlows", "AttFromNonNative"
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Helicopter")
 min_speed     = 3
-hp_loss_pct   = 10
-flags         = "Unreachable", "DoesntOccupyTile", "CanOccupyCity", "CollectRansom", "Airliftable"
+hp_loss_pct   = 20
+flags         = "Unreachable", "DoesntOccupyTile", "CollectRansom", "Airliftable"
 
 [unitclass_air]
 ; /* TRANS: Unit class: used adjectivally */
@@ -260,7 +260,7 @@ flags         = "DamageSlows", "CanFortify", "DoesntOccupyTile"
 name          = _("?unitclass:Train")
 min_speed     = 3
 hp_loss_pct   = 0
-flags         = "BuildAnywhere", "DoesntOccupyTile"
+flags         = "BuildAnywhere", "DoesntOccupyTile", "CanPillage"
 
 [unitclass_torpedos]
 ; /* TRANS: Unit class: used adjectivally */
@@ -525,7 +525,7 @@ veteran_raise_chance = 0
 veteran_work_raise_chance = 0
 veteran_power_fact = 100
 veteran_move_bonus = 0
-roles         = "DefendOkStartUnit", "FirstBuild", "CitiesStartUnit", "Hut"
+roles         = "DefendOkStartUnit", "FirstBuild", "CitiesStartUnit", "Hut", "WorkerStartUnit"
 helptext      = _("\
 Tribes are the first and universal unit type.\
  They can be used to transfer population to other cities, or may found new towns.\
@@ -547,7 +547,7 @@ sound_move    = "m_settlers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_settlers"
 sound_fight_alt = "f_generic"
-build_cost    = 24
+build_cost    = 30
 pop_cost      = 2
 attack        = 0
 defense       = 1
@@ -561,7 +561,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Cities"
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Cities", "AddToCity"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -602,9 +602,9 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 0
 uk_food       = 1
-uk_gold       = 0
+uk_gold       = 1
 flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "Unique", "Unbribable", "NoVeteran"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
@@ -624,7 +624,7 @@ Migrants can be used to transfer population to other cities, but\
 name          = _("?unit:Workers")
 class         = "Small Land"
 tech_req      = "Animal Husbandry"
-obsolete_by   = "None"
+obsolete_by   = "Builders"
 graphic       = "u.worker"
 graphic_alt   = "u.engineers" ; for compatibility
 sound_move    = "m_worker"
@@ -645,28 +645,73 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Capturable"
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Capturable"
 veteran_names = _("beginner"), _("seasoned"), _("senior"), _("expert")
 veteran_raise_chance      = 50, 33, 20, 0
-veteran_work_raise_chance = 3, 2, 1, 0
-veteran_power_fact        = 100, 150, 175, 200
+veteran_work_raise_chance = 2, 1, 1, 0
+veteran_power_fact        = 100, 125, 150, 175
 veteran_move_bonus        = 0, 0, 0, 1
 roles         = "Settlers", "WorkerStartUnit"
 helptext      = _("\
 Workers have the ability to improve terrain tiles. See the help on\
  Terrain and Terrain Alterations for the effects of their actions.\
 "), _("\
-Workers can build airstrips, airbases, and buoys, which Settlers\
- and Migrants cannot. Workers must be on board a ship to build buoys.\
+Workers can make Railroad if rough road is already done for certain tile. \
+For making Highways you need Engineers.\
 "), _("\
 Workers may gain experience from work enabling\
  them to work even faster.\
 ")
 
+[unit_builder]
+name          = _("?unit:Builders")
+class         = "Small Land"
+tech_req      = "Engineering"
+obsolete_by   = "None"
+graphic       = "u.builder"
+graphic_alt   = "u.worker" 
+sound_move    = "m_worker"
+sound_move_alt = "m_generic"
+sound_fight   = "f_worker"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 12
+firepower     = 2
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Capturable"
+veteran_names = _("beginner"), _("seasoned"), _("senior"), _("expert")
+veteran_raise_chance      = 50, 33, 20, 0
+veteran_work_raise_chance = 3, 2, 1, 0
+veteran_power_fact        = 100, 125, 150, 175
+veteran_move_bonus        = 0, 1, 1, 2
+roles         = "Settlers", "WorkerStartUnit"
+helptext      = _("\
+Builders are improved version of Workers, if trained, work faster than Worker of the same veterancy level.\
+"), _("\
+Builders can build airstrips, airbases, and buoys, which Settlers, \
+Migrants, Slaves or Workers cannot. Builders must be on board a ship to build buoys.\
+"), _("\
+Builders can make Railroad if rough road is already done for certain tile. \
+For making Highways you need Engineers.\
+"), _("\
+Builders may gain experience from work enabling \
+them to work even faster.\
+")
+
 [unit_engineers]
 name          = _("Engineers")
 class         = "Big Land"
-tech_req      = "Engineering"
+tech_req      = "The Corporation"
 obsolete_by   = "None"
 graphic       = "u.engineers"
 graphic_alt   = "-"
@@ -674,12 +719,12 @@ sound_move    = "m_engineers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_engineers"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 40
 pop_cost      = 0
 attack        = 0
 defense       = 2
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 1
@@ -693,23 +738,26 @@ flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Tr
 veteran_names = _("beginner"), _("seasoned"), _("senior"), _("expert")
 veteran_raise_chance      = 50, 33, 20, 0
 veteran_work_raise_chance = 3, 2, 1, 0
-veteran_power_fact        = 100, 150, 175, 200
+veteran_power_fact        = 100, 125, 150, 175
 veteran_move_bonus        = 0, 0, 1, 1
 roles         = "Settlers", "WorkerStartUnit"
 helptext      = _("\
-Engineers are similar to Workers, but they work twice as fast,\
+Engineers are similar to Workers or Builders, but they work twice as fast,\
  move twice as fast, and may gain experience from work enabling\
  them to work even faster.\
 "), _("\
-With knowledge of Fusion Power, Engineers may also perform more\
- radical terrain transformations than Workers, Settlers, or Migrants,\
- with the \"transform\" order. Examples include conversion of\
- Tundra into Plains, or even Ocean into Swamp in some circumstances\
- (when on board an ocean-going vessel, on a tile surrounded by\
- sufficient existing land). See the Terrain Alterations section\
- for more details.\
-"), _("\
-Engineers have worse mobility than workers, but can be also used as a landing aid for other land units.\
+With knowledge of Combustion, Engineers may also perform more \
+radical terrain transformations than Workers, Builders, Settlers or Migrants, \
+with the \"transform\" order. Examples include conversion of \
+Tundra into Plains, or even Ocean into Swamp in some circumstances \
+(when on board an ocean-going vessel, on a tile surrounded by \
+sufficient existing land). See the Terrain Alterations section \
+for more details.\
+"), 
+_("\
+Beign the Big Land unit class, Engineers have restricted mobility \
+(rough terrain such montains, swamp, jungle require roads wich can be prepared by Workers or Builders), \
+but they can be also used as a landing/transport aid for other land units (excluding Big Land).\
 ")
 
 [unit_slave]
@@ -880,7 +928,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack", "Bombarder"
-roles         = "DefendOkStartUnit", "Hunter"
+roles         = "ExplorerStartUnit", "DefendOkStartUnit", "Hunter", "Hut", "Barbarian"
 helptext      = _("\
 This unit emerged from stone age and may be built almost from the start of the game.\
  It is a weak offensive unit, can throw ranged weapon, like javelins.\
@@ -913,7 +961,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Bombarder"
-roles         = "DefendOkStartUnit", "Hut"
+roles         = "DefendOkStartUnit", "HutTech"
 helptext      = _("\
 Archers use bows to fire several rounds of arrows, thus can be used to wound enemy units.\
 "), _("\
@@ -1181,7 +1229,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 3
 targets       = "Helicopter"
 bonuses       =
    { "flag", "type", "value"
@@ -1223,7 +1271,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
-roles         = "DefendOkStartUnit"
+roles         = "DefendOkStartUnit", "Barbarian"
 helptext      = _("\
 Skirmishers are first offensive units, they are relative weak but can be used to conquer enemy cities.\
 ")
@@ -1473,7 +1521,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 3
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "Marines", "Capturer", "Light Shells", "Only_Native_Attack"
@@ -1506,7 +1554,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 3
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 3
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "Marines", "Capturer", "Only_Native_Attack"
@@ -1628,7 +1676,7 @@ Corsairs are privateers hired by a government to perform special\
 name          = _("Ninja Warriors")
 class         = "Small Land"
 tech_req      = "Martial Arts"
-obsolete_by   = "Marines"
+obsolete_by   = "Navy Seals"
 graphic       = "u.ninja"
 graphic_alt   = "u.barbarian_leader"
 sound_move    = "m_warriors"
@@ -1730,7 +1778,7 @@ Alpine Troops are highly mobile units, which can operate\
 
 [unit_partisan]
 name          = _("Partisan")
-class         = "Infantry"
+class         = "Small Land"
 tech_req      = "Guerilla Warfare"
 obsolete_by   = "None"
 graphic       = "u.partisan"
@@ -1742,7 +1790,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 15
 pop_cost      = 1
 attack        = 5
-defense       = 4
+defense       = 3
 hitpoints     = 10
 firepower     = 3
 move_rate     = 1
@@ -1796,7 +1844,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 1
 uk_gold       = 0
 embarks       = "Helicopter"
@@ -1871,7 +1919,7 @@ uk_food       = 0
 uk_gold       = 1
 cargo         = "Small Land"
 flags         = "CityBuster", "NoVeteran", "Only_Native_Attack", "FieldUnit"
-roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianBuildTech"
+roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianBuildTech", "HutTech"
 helptext      = _("\
 Improvised vehicle driven by fanatics, ready to sacrifice their lives for a higher cause.\
  Huge amount of explosive materials would end their life and maybe life of attacked infidels.\
@@ -1910,7 +1958,7 @@ uk_shield     = 2
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse"
-roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
+roles         = "AttackFastStartUnit", "HutTech", "Barbarian", "Hunter"
 helptext      = _("\
 Archery Horsemen are a shock-troop,\
  which can shoot arrows against enemy units hidden in hard to access terrain.\
@@ -1942,7 +1990,7 @@ uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
-roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
+roles         = "AttackFastStartUnit", "HutTech", "Barbarian", "Hunter"
 helptext      = _("\
 Dromedari are desert brave wariors, mounted on camels.\
 ")
@@ -1982,7 +2030,7 @@ Lancers are a shock-troop cavalrymen who fight with lances as well as with short
 name          = _("Bicycle Infantry")
 class         = "Light Cavalry"
 tech_req      = "Automobile"
-obsolete_by   = "ATV infantry"
+obsolete_by   = "ATV Infantry"
 graphic       = "u.bicycle_infantry"
 graphic_alt   = "u.riflemen"
 sound_move    = "m_riflemen"
@@ -2010,7 +2058,7 @@ Bicycle infantry are fast scouting units.\
 ")
 
 [unit_atv_infantry]
-name          = _("ATV infantry")
+name          = _("ATV Infantry")
 class         = "Light Cavalry"
 tech_req      = "Modern Warfare"
 obsolete_by   = "None"
@@ -2031,8 +2079,8 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
-uk_shield     = 2
-uk_food       = 2
+uk_shield     = 3
+uk_food       = 1
 uk_gold       = 2
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
@@ -2080,7 +2128,7 @@ Horsemen are mounted warriors and an early\
 
 [unit_chariot]
 name          = _("Chariot")
-class         = "Heavy Cavalry"
+class         = "Big Land"
 tech_req      = "The Wheel"
 obsolete_by   = "Knights"
 graphic       = "u.chariot"
@@ -2212,8 +2260,7 @@ uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
-roles         = "DefendOkStartUnit", "AttackFastStartUnit",
-                "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
+roles         = "DefendOkStartUnit", "AttackFastStartUnit", "BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Knights are mounted and heavily armored warriors.\
 "), _("\
@@ -2431,7 +2478,7 @@ This unit cannot move across swamps, glaciers or mountains.\
 name          = _("Armoured Train")
 class         = "Train"
 tech_req      = "Railroad"
-;impr_req      = "Railway Station"
+impr_req      = "Railway Station"
 obsolete_by   = "None"
 graphic       = "u.armoured_train"
 graphic_alt   = "u.freight"
@@ -2868,7 +2915,7 @@ Such unit can be mounted on a ship or reside in a fortress, but can't move by it
 [unit_turret_aa_gun]
 name          = _("Anti-aircraft Turret Gun")
 class         = "Turrets"
-tech_req      = "Machine Tools"
+tech_req      = "Mobile Warfare"
 obsolete_by   = "None"
 graphic       = "u.turret_aa_gun"
 graphic_alt   = "u.artillery"
@@ -3062,10 +3109,10 @@ attack        = 4
 defense       = 4
 hitpoints     = 10
 firepower     = 2
-move_rate     = 8
+move_rate     = 6
 vision_radius_sq = 8
 transport_cap = 0
-fuel          = 1
+fuel          = 2
 uk_happy      = 0
 uk_shield     = 2
 uk_food       = 0
@@ -3084,9 +3131,9 @@ All aircraft is subject to refuling and must return to a city, airstrip,\
 
 [unit_zeppelin]
 name          = _("Zeppelin")
-class         = "Air"
+class         = "Helicopter"
 tech_req      = "Flight"
-obsolete_by   = "Bomber"
+obsolete_by   = "Helicopter"
 graphic       = "u.zeppelin"
 graphic_alt   = "u.bomber"
 sound_move    = "m_bomber"
@@ -3100,9 +3147,11 @@ defense       = 2
 hitpoints     = 10
 firepower     = 2
 move_rate     = 4
+; range 4*2=8
 vision_radius_sq = 8
-transport_cap = 0
-fuel          = 4
+transport_cap = 1
+cargo         = "Small Land"
+fuel          = 0
 uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
@@ -3113,12 +3162,17 @@ helptext      = _("\
 Zeppelins can only attack ground targets, not other airborne\
  units.\
 "), _("\
-Attack against units on land is a bombard attack; against\
- units on water it is a regular attack.\
+Attack against units on land is a bombard attack; against \
+units on water it has a regular attack.\
+"),_("\
+Zepellins, simlar to Helicopters, can also transport one small land unit; while most troops \
+must load or unload in a city, airstrip, or airbase (and not in the field \
+or onboard a Carrier), Snipers, Alpine Troops and Partisans can embark or disembark \
+at any time.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
- airbase, or a Carrier before MP's are exhausted or the aircraft will\
- run out of fuel and be destroyed.\
+Unlike other aircraft, Zeppelins are not required to return to a city, \
+base, or Carrier to refuel after a set number of turns; however, care \
+must be exercised, due to the health they lose every turn.\
 ")
 bombard_rate = 1
 
@@ -3227,10 +3281,10 @@ build_cost    = 75
 pop_cost      = 0
 attack        = 5
 defense       = 3
-hitpoints     = 30
+hitpoints     = 20
 firepower     = 3
-move_rate     = 6
-; range 6*2=12
+move_rate     = 4
+; range 4*20/2=40
 vision_radius_sq = 8
 transport_cap = 1
 fuel          = 0
@@ -3238,18 +3292,18 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
-cargo         = "Infantry", "Small Land"
+cargo         = "Infantry", "Small Land", "Light Cavalry"
 flags         = "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
 helptext      = _("\
 A Helicopter's attack against units on land is a bombard attack; against\
  units on water it is a regular attack.\
 "), _("\
-Helicopters can also transport one military land unit; while most troops\
- must load or unload in a city, airstrip, or airbase (and not in the field\
- or onboard a Carrier), units specializing in mobility (Paratroopers,\
- Alpine Troops, Marines, Partisans, and Fanatics) can embark or disembark\
- at any time.\
+Helicopters can also transport one light military land unit; while most troops \
+must load or unload in a city, airstrip, or airbase (and not in the field \
+or onboard a Carrier), units specializing in mobility (Paratroopers, \
+Alpine Troops, Marines, Snipers, ATV Infantry, Partisans, and Fanatics) can embark or disembark \
+at any time.\
 "), _("\
 Unlike other aircraft, Helicopters are not required to return to a city,\
  base, or Carrier to refuel after a set number of turns; however, care\
@@ -3452,6 +3506,9 @@ An improved Bomber, with improved attack and a higher movement\
 All aircraft is subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 4
 
@@ -3524,13 +3581,16 @@ uk_gold       = 4
 flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
-An improved Stealth Bomber, with a higher movement and fuel capacity\
+An improved Stealth Bomber, with a higher movement and fuel capacity \
  thanks to the (very expensive) antimatter propulsion system.\
  They can carry not only ordinary bombs, but also missiles.\
 "), _("\
 All aircraft is subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 6
 
@@ -3827,7 +3887,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 cargo         = "Turrets"
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "Bombarder"
 roles         = ""
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -3839,7 +3899,11 @@ Monitors are small warships, which can be equipped with powerful turret gun. The
  and connect enter deep ocean tiles.\
 "), _("\
 Bombard or cannon turret can be installed aboard, for increase attack strength.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
+bombard_rate = 1
 
 [unit_patrol_boat]
 name          = _("Patrol Boat")
@@ -3867,7 +3931,7 @@ uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
 cargo         = "Turrets", "Torpedos", "Small Land"
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "Bombarder"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0
@@ -3876,7 +3940,11 @@ veteran_move_bonus        = 0, 0, 1, 1, 2
 roles         = ""
 helptext      = _("\
 Patrol boats are small but fast units, can be equipped with turret gun or torpedo. They can operate on shallow coastal waters or rivers.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
+bombard_rate = 1
 
 [unit_longboat]
 name          = _("Longboat")
@@ -3914,7 +3982,7 @@ veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Longboat is a very first and unique boat unit. It can act\
  as a small transport ship and can travel on\
- any ocean tile.\
+ any ocean tile, can carry one Small Land unit.\
 ")
 
 [unit_junk]
@@ -4196,6 +4264,9 @@ The Frigate is a specialized ship with a strong offensive value,\
  and can attack units on land, but it cannot transport units.\
 "), _("\
 Ballista or bombard can be installed aboard, for increase attack strength.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 1
 
@@ -4241,6 +4312,9 @@ The Flagship is the command and conquer Frigate with\
 "), _("\
 Ballista or bombard can be installed aboard, for increase
  attack strength.\
+ _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 2
 
@@ -4282,6 +4356,9 @@ The Ironclad is an armored ship,\
  more sturdy than the Frigate, but slow.\
 "), _("\
 Bombard or cannon turret can be installed aboard, for increase attack strength.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 1
 
@@ -4328,6 +4405,10 @@ An improved warship, with better move rate and vision.\
 "), _("\
 Destroyer can hold one turret or torpedo.\
 "), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
+"),  
+_("\
 TIP:  A very fast unit, which is very useful for hunting down enemy\
  Transports and Submarines.\
 ")
@@ -4368,6 +4449,9 @@ veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 The Cruiser is a strong offensive boat unit, can carry 2 artillery or gun turrets.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 2
 
@@ -4409,6 +4493,9 @@ The Battleship is the supreme naval unit with\
  excellent offensive and defensive values.\
 "), _("\
 The Battleship can hold up to 3 artillery or gun turrets.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 3
 
@@ -4454,6 +4541,9 @@ The AEGIS Cruiser is equipped with an advanced\
  defensive missile system.\
 "), _("\
 AEGIS Cruiser can hold up to 3 turrets or cruise rockets.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 3
 
@@ -4499,6 +4589,9 @@ A destroyer powered by fusion power and equipped with electromagnetic railguns,\
  can destroy targets with double firepower.\
 "), _("\
 Destroyer can hold two turrets or torpedos.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 2
 
@@ -4541,6 +4634,9 @@ Traveling under the surface of the ocean, Submarines have\
  off guard.\
 "), _("\
 Submarines can carry torpedos or can attack directly using deck cannon.\
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 1
 
@@ -4584,6 +4680,9 @@ Traveling under the surface of the ocean, Submarines have\
 "), _("\
 Nuclear Submarines can carry torpedos or missiles, or can attack directly using deck cannon.\
  They are faster than their predecessors.
+"), _("\
+Attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
 ")
 bombard_rate = 1
 
@@ -5209,7 +5308,7 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 name          = _("Train")
 class         = "Train"
 tech_req      = "Railroad"
-;impr_req      = "Railway Station"
+impr_req      = "Railway Station"
 obsolete_by   = "None"
 graphic       = "u.train"
 graphic_alt   = "u.freight"
@@ -5232,8 +5331,13 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 2
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Helicopter", "Suicidal", "Wheeled Unit"
-flags         = "NonMil", "Capturable", "NoVeteran", "Transform"
+flags         = "NonMil", "Capturable", "Settlers", "Transform"
 roles         = ""
+veteran_names = _("draisine"), _("steam locomotive"), _("compound steam"), _("diesel locomotive"), _("express locomotive")
+veteran_raise_chance      = 0, 0, 0, 0, 0
+veteran_work_raise_chance = 2, 1, 1, 1, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 1, 2, 3, 3
 helptext      = _("\
 Train can only use railroads, but is capable to fast transport many land units or helicopters.\
  It can also quickly transform terrain type.\
@@ -5245,7 +5349,7 @@ Trains HP can be quickly regenerated in any city with Railway Station.\
 name          = _("Explorer")
 class         = "Small Land"
 tech_req      = "Exploration"
-obsolete_by   = "None"
+obsolete_by   = "Partisan"
 graphic       = "u.explorer"
 graphic_alt   = "-"
 sound_move    = "m_explorer"

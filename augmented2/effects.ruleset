@@ -827,6 +827,8 @@ reqs    =
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Republic", "Player", FALSE
       "Gov", "Legalism", "Player", FALSE
+      "Gov", "Federation", "Player", FALSE
+      "Gov", "Thalassocracy", "Player", FALSE
     }
 
 ; Total = 0 for Communism
@@ -1012,6 +1014,8 @@ reqs    =
       "Gov", "Federation", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Federation", "Player", FALSE
+      "Gov", "Thalassocracy", "Player", FALSE
     }
 
 ; 1 - 1 = 0% with Communism
@@ -1172,6 +1176,14 @@ reqs    =
       "OutputType", "Shield", "Local", FALSE
     }
 
+[effect_waste_communism]
+type    = "Output_Waste"
+value   = 10
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Communism", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+    }
 
 ; [effect_waste_fascism] no base shield waste
 
@@ -2738,9 +2750,10 @@ reqs    =
 type    = "Output_Bonus"
 value   = -75
 reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Communism", "Player", TRUE
-      "OutputType", "Luxury", "Local", FALSE
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Communism", "Player", TRUE, TRUE
+      "OutputType", "Luxury", "Local", TRUE, FALSE
+      "Building", "5 Years Plan", "City", FALSE, FALSE
     }
 
 [effect_good_lux_democracy]
@@ -2846,18 +2859,20 @@ reqs    =
 type    = "Output_Bonus"
 value   = -25
 reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Tribal", "Player", TRUE
-      "OutputType", "Science", "Local", FALSE
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Tribal", "Player", TRUE, TRUE
+      "OutputType", "Science", "Local", TRUE, FALSE
+      "Building", "Palace", "City", FALSE, FALSE
     }
 
 [effect_bad_sci_despotism]
 type    = "Output_Bonus"
 value   = -50
 reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Despotism", "Player", TRUE
-      "OutputType", "Science", "Local", FALSE
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Despotism", "Player", TRUE, TRUE
+      "OutputType", "Science", "Local", TRUE, FALSE
+      "Building", "Palace", "City", FALSE, FALSE
     }
 
 [effect_good_sci_republic]
@@ -3455,8 +3470,8 @@ value   = 1
 reqs    =
     { "type", "name", "range", "Present"
       "Building", "City Walls", "City", TRUE
-      "UnitFlag", "IgWall", "Local", FALSE
-      "MinSize", "9", "City", TRUE
+      "UnitFlag", "IgWall", "Local", TRUE
+      "MinSize", "9", "City", FALSE
     }
 
 
@@ -3466,7 +3481,8 @@ value   = 1
 reqs    =
     { "type", "name", "range", "Present"
       "Building", "City Walls", "City", TRUE
-      "MinSize", "9", "City", FALSE
+      "UnitFlag", "IgWall", "Local", FALSE
+      "UnitFlag", "AirAttacker", "Local", FALSE
     }
 
 [effect_city_walls_visible]
@@ -3906,6 +3922,17 @@ reqs    =
     { "type", "name", "range"
       "Building", "Offshore Platform", "City"
       "Building", "Oil Refinery", "City"
+    }
+
+[effect_palace_luxury]
+type    = "Output_Add_Tile"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Palace", "City", TRUE
+      "Gov", "Communism", "Player", FALSE
+      "CityTile", "Center", "Local", TRUE
+      "OutputType", "Luxury", "Local", TRUE
     }
 
 [effect_palace]
@@ -4482,6 +4509,17 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
+[effect_supermarket_gold_port]
+type    = "Output_Bonus"
+value   = 25
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Supermarket", "City", TRUE
+      "Building", "Port Facility", "City", TRUE
+      "Building", "Railway Station", "City", FALSE
+      "OutputType", "Gold", "Local", TRUE
+    }
+
 [effect_temple]
 type    = "Make_Content"
 value   = 2
@@ -4970,6 +5008,7 @@ value   = 2
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Leonardo's Workshop", "Player", TRUE
+;      "TerrainClass", "Land", "Local", TRUE
       "Building", "Warfare Museum", "Player", FALSE
     }
 
@@ -5680,7 +5719,7 @@ reqs    =
 
 [effect_oil_well]
 type    = "Mining_Pct"
-value   = 50
+value   = 100
 reqs    =
     { "type", "name", "range"
       "Extra", "Oil Well", "Local"
@@ -5960,7 +5999,7 @@ type    = "City_Radius_Sq"
 value	= 5
 reqs    =
     { "type", "name", "range"
-      "Building", "Eiffel Tower", "Player"
+      "Building", "Eiffel Tower", "City"
       "Building", "Railway Station", "City"
     }
 
@@ -5981,7 +6020,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Mass Transit", "City", TRUE
       "Building", "Railway Station", "City", TRUE
-      "Building", "Eiffel Tower", "Player", FALSE
+      "Building", "Eiffel Tower", "City", FALSE
     }
 
 [effect_courthouse_vision]
@@ -6058,6 +6097,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "DARPA", "Player", TRUE
+;      "CityTile", "Center", "Local", TRUE
       "Building", "Warfare Museum", "Player", FALSE
     }
 
@@ -6253,15 +6293,6 @@ reqs    =
       "Gov", "Thalassocracy", "Player"
       "OutputType", "Shield", "Local"
     }
-
-;[effect_waste_distance_thalassocracy_1]
-;type    = "Output_Waste_Pct"
-;value   = 50
-;reqs    =
-;    { "type", "name", "range"
-;      "OutputType", "Shield", "Local"
-;      "Gov", "Thalassocracy", "Player"
-;    }
 
 ;[effect_marco_polos_embassy_income]
 ;type    = "Output_Bonus"
@@ -6545,15 +6576,24 @@ reqs    =
       "UnitClass", "Train", "Local"
     }
 
-[effect_ai_railway_station_veteran]
+[effect_factory_train_veteran]
 type    = "Veteran_Build"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Railway Station", "City", TRUE
+      "Building", "Factory", "City", TRUE
       "UnitClass", "Train", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_workshop_train_veteran]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Railway Station", "City", TRUE
+      "Building", "Workshop Barracks", "City", TRUE
+      "UnitClass", "Train", "Local", TRUE
     }
 
 ; Factory HP regen (Turrets if not in port facility)
@@ -6699,7 +6739,16 @@ reqs    =
       "Building", "Railway Station", "City"
     }
 
-[effect_oil_refinery_production]
+[effect_refinery]
+type    = "Output_Bonus"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Oil Refinery", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_oil_refinery_oil_well]
 type    = "Mining_Pct"
 value   = 100
 reqs    =
@@ -7266,6 +7315,14 @@ reqs    =
       "Building", "Yasir", "City"
     }
 
+[effect_yasir_unhappy_nationwide]
+type    = "Make_Content"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Yasir", "Player"
+    }
+
 [effect_amphitheater]
 type    = "Output_Add_Tile"
 value   = 2
@@ -7497,12 +7554,14 @@ reqs    =
       "Building", "Bunkers", "City"
     }
 
+; random upgrade
 [effect_metallurgy]
 type    = "Upgrade_Unit"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Tech", "Metallurgy", "Player", TRUE
+;      "CityTile", "Center", "Local", TRUE
       "Building", "Warfare Museum", "Player", FALSE
     }
 
