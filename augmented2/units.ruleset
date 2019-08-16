@@ -4312,7 +4312,7 @@ The Flagship is the command and conquer Frigate with\
 "), _("\
 Ballista or bombard can be installed aboard, for increase
  attack strength.\
- _("\
+"), _("\
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
