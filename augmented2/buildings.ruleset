@@ -428,7 +428,7 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 With a Workshop Barracks, each motorized or wheeled land unit built in a city will\
- automatically have Veteran status, which means that its attack and\
+ automatically have Veteran status (or Senior in case of Engineers), which means that its attack and\
  defense strengths are increased by 50%.  Also, all fast land units, if damaged,\
  and stay in town for one full turn without moving are completely\
  restored.\
@@ -521,8 +521,13 @@ helptext	= _("\
 Cement Plant increases overall city production by 50%, \
 add extra 2 trade point for each coal mine and 2 shields for each mine in mountains or on desert without resources.\n\
 Railway station in city and railroads on mine tiles are necessary to gain above effects.\n\
-This facility increase significantly rate of pollution.\n\
-Note: Cement Plant cannot be built in a city, where the Research Lab is located.\
+This facility increase significantly rate of pollution.
+"), _("\
+With sufficient shield production, cities with a Cement Plant \
+can produce up to two units each turn (but only single units of types \
+which cost population).\
+"), _("\
+Note: Cement Plant require mountains within city range and cannot be built in a city, where the Research Lab is located.\
 ")
 
 [building_church]
@@ -729,8 +734,7 @@ helptext	= _("\
 Gives one extra food resource on all Ocean or Deep Ocean tiles (but \
 not Lakes). The city needs to be coastal (next to one of these tiles) \
 to build this improvement.\
-"),
-_("\
+"), _("\
 All ships would be repaired 25% faster in city where harbour exits. This effect is cancelled by better port facility effect.\
 ")
 
@@ -1258,9 +1262,11 @@ helptext	= _("\
 Allows a city to build veteran sea units.  Also, damaged sea units\
  which stay in town for one full turn without moving are completely\
  restored.\
+"), _("\
+Together with supermarket, increases the tax output in a city by 25%.\
+"), _("\
+Increase city radius (not cumulative with Mass Transit or Eiffel Tower)\
 ")
-; Includes Triremes, but not worth mentioning explicitly as unlikely
-; to happen
 
 [building_power_plant]
 name		= _("Power Plant")
@@ -1345,9 +1351,11 @@ Railway Station, together with a tile railroad, is required to increase producti
 extra food from wheat and bison tiles, \n \
 extra trade from gems and gold tiles, \n \
 extra shield from grassland resources, silk tiles and any jungle tile, \n \
-increased productivity and additional trade from coal mines and iron mines (together with steel mill, cement or power plant).\n \
-Together with supermarket, increases the tax output in a city by 25%.\n\
-Make veteran Armoured Trains and provide fast regeneration of train units.\
+increased productivity and additional trade from coal mines and iron mines (together with steel mill, cement or power plant). \
+"), _("\
+Together with supermarket, increases the tax output in a city by 25%.\
+"), _("\
+Required to make trains and provide fast regeneration of train units.\
 ")
 
 [building_research_lab]
@@ -1367,7 +1375,7 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 120
-upkeep		= 3
+upkeep		= 4
 sabotage	= 100
 sound		= "b_research_lab"
 sound_alt	= "b_generic"
@@ -1650,11 +1658,16 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Steel Mill increases overall city production twice, production from coal mines by 50%\
-and add extra 4 trade point for each iron mine (i.e. free upkeep).\n\
+Steel Mill increases overall city production twice, production from iron mines by 50%\
+and add extra 4 trade point for each coal mine (i.e. free upkeep).\n\
 Railway station in city and railroads on mine tiles are necessary to gain above effects.\n\
-This facility increase substantially rate of pollution.\n\
-Note: Steel Mill cannot be built in a city, where Research Lab is located.\
+This facility increase substantially rate of pollution.
+"), _("\
+With sufficient shield production, cities with a Steel Mill \
+can produce up to two units each turn (but only single units of types \
+which cost population).\
+"), _("\
+Note: Steel Mill require Iron resource within city range and cannot be built in a city, where Research Lab is located.\
 ")
 
 [building_stock_exchange]
@@ -1888,7 +1901,7 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 120
-upkeep		= 2
+upkeep		= 3
 sabotage	= 100
 sound		= "b_university"
 sound_alt	= "b_generic"
@@ -2517,9 +2530,12 @@ sound		= "w_womens_suffrage"
 sound_alt	= "w_generic"
 helptext	= _("\
 Increase general threshold of city size generating unhapiness, \
-if there is courthouse in the given city, and makes 2 unhappy citizens content \n\
+if there is courthouse in the given city, and makes 2 unhappy citizens content \
 in a city were Slavery Abolition was founded. \n\
-Side effect: decreased gold income from gold mines. \n\
+Additionally empire size unhapiness step is increased for Federation, Republic and Democracy.\
+"), _("\
+Side effect: decreased gold income from gold and diamond mines. 
+"), _("\
 Note: Slavery Abolition is a prerequisite for Women's Suffrage.\
 ")
 

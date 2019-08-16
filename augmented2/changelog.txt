@@ -1,6 +1,12 @@
 =================================
 Augmented2 Ruleset for Freeciv v2.6
 =================================
+2.6.16
+Slavery abolition - increased empire unhapiness threshold step.
+Fixed empire step for Tribal, Anarchy.
+Workshop Barrack add veterean also for Enginners
+Port Facility increase city radius
+
 2.6.15
 Cultured nation score fixed
 Railway station required to make trains

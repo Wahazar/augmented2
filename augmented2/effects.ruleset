@@ -206,9 +206,37 @@ reqs    =
       "Building", "Courthouse", "City", TRUE
     }
 
+[effect_empire_size_step_federation_noslaves]
+type    = "Empire_Size_Step"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Federation", "Player"
+      "Building", "Slavery Abolition", "Player"
+    }
+
+[effect_empire_size_step_republic_noslaves]
+type    = "Empire_Size_Step"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+      "Building", "Slavery Abolition", "Player"
+    }
+
+[effect_empire_size_step_democracy_noslaves]
+type    = "Empire_Size_Step"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+      "Building", "Slavery Abolition", "Player"
+    }
+
+
 [effect_slavery_abolition_penalty]
 type    = "Output_Penalty_Tile"
-value   = 5
+value   = 4
 reqs    =
     { "type", "name", "range"
       "Building", "Slavery Abolition", "Player"
@@ -2086,7 +2114,7 @@ type    = "Empire_Size_Step"
 value   = 8
 reqs    =
     { "type", "name", "range"
-      "Gov", "Tribal", "Player"
+      "Gov", "Anarchy", "Player"
     }
 
 [effect_empire_size_step_tribal]
@@ -2748,12 +2776,22 @@ reqs    =
 
 [effect_bad_lux_communism]
 type    = "Output_Bonus"
-value   = -75
+value   = -60
 reqs    =
     { "type", "name", "range", "present", "quiet"
       "Gov", "Communism", "Player", TRUE, TRUE
       "OutputType", "Luxury", "Local", TRUE, FALSE
       "Building", "5 Years Plan", "City", FALSE, FALSE
+    }
+
+[effect_bad_lux_communism_5_year_plan]
+type    = "Output_Bonus"
+value   = -30
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Communism", "Player", TRUE, TRUE
+      "OutputType", "Luxury", "Local", TRUE, FALSE
+      "Building", "5 Years Plan", "City", TRUE, FALSE
     }
 
 [effect_good_lux_democracy]
@@ -3272,7 +3310,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Workshop Barracks", "City", TRUE
       "UnitClass", "Big Land", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
+;      "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
@@ -5615,6 +5653,8 @@ value   = 1
 reqs   =
     { "type", "name", "range", "present"
       "Building", "Mfg. Plant", "City", FALSE
+      "Building", "Cement Plant", "City", FALSE
+      "Building", "Steel Mill", "City", FALSE
     }
 
 ; Mfg. Plant => 2 slots total
@@ -5624,6 +5664,24 @@ value   = 2
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
+    }
+
+;additional slot for Steel Mill
+[effect_city_build_slots_steel_mill]
+type    = "City_Build_Slots"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Steel Mill", "City"
+    }
+
+;additional slot for Cement Plant
+[effect_city_build_slots_cement_plant]
+type    = "City_Build_Slots"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Cement Plant", "City"
     }
 
 ; free granary, etc, runs out
@@ -5994,13 +6052,22 @@ reqs	=
 ;      "Building", "Eiffel Tower", "Player", FALSE
 ;    }
 
+[effect_port_facility_radius]
+type    = "City_Radius_Sq"
+value	= 5
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Port Facility", "City", TRUE
+    }
+
 [effect_eiffel_tower_radius]
 type    = "City_Radius_Sq"
 value	= 5
 reqs    =
-    { "type", "name", "range"
-      "Building", "Eiffel Tower", "City"
-      "Building", "Railway Station", "City"
+    { "type", "name", "range", "present"
+      "Building", "Eiffel Tower", "City", TRUE
+      "Building", "Railway Station", "City", TRUE
+      "Building", "Port Facility", "City", FALSE
     }
 
 ;[effect_highways_radius]
@@ -6021,6 +6088,7 @@ reqs    =
       "Building", "Mass Transit", "City", TRUE
       "Building", "Railway Station", "City", TRUE
       "Building", "Eiffel Tower", "City", FALSE
+      "Building", "Port Facility", "City", FALSE
     }
 
 [effect_courthouse_vision]
