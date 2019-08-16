@@ -281,7 +281,7 @@ _("\
 * There is no production waste.\
 * Communism is relatively tolerant of cosmopolitan cities.\n\
 * If United Nation wonder was built by any player, inciting communistic cities is 4x more expensive.\n\
-* Gold and luxury outcome is decreased.\
+* Gold outcome is decreased, luxury outcome is substantially supressed (except for cities with 5 Year Plan founded).\
 ")
 
 ;------------------------------------------------------------------------
