@@ -675,7 +675,7 @@ reqs    =
     }
 
 ; Total -1% food each 2 tiles
-;except despotism
+;except despotism and anarchy
 [effect_food_waste_distance_1]
 type    = "Output_Waste_Pct"
 value   = 50
@@ -683,27 +683,8 @@ reqs    =
     { "type", "name", "range", "present"
       "OutputType", "Food", "Local", TRUE
       "Gov", "Despotism", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
-
-; Total -1% food each 4 tiles
-;[effect_food_waste_distance_2]
-;type    = "Output_Waste_Pct"
-;value   = 50
-;reqs    =
-;    { "type", "name", "range"
-;      "OutputType", "Food", "Local"
-;      "Gov", "Federation", "Player"
-;    }
-
-; Total -1% food each 4 tiles
-;[effect_food_waste_distance_3]
-;type    = "Output_Waste_Pct"
-;value   = 50
-;reqs    =
-;    { "type", "name", "range"
-;      "OutputType", "Food", "Local"
-;      "Gov", "Thalassocracy", "Player"
-;    }
 
 ; 0% food waste distance with Thalassocracy
 [effect_food_waste_distance_thalassocracy]
@@ -2111,7 +2092,7 @@ reqs    =
 
 [effect_empire_size_step_anarchy]
 type    = "Empire_Size_Step"
-value   = 8
+value   = 6
 reqs    =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
@@ -2119,7 +2100,7 @@ reqs    =
 
 [effect_empire_size_step_tribal]
 type    = "Empire_Size_Step"
-value   = 6
+value   = 8
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -2812,14 +2793,14 @@ reqs    =
       "OutputType", "Luxury", "Local", FALSE
     }
 
-[effect_bad_lux_legalism]
-type    = "Output_Bonus"
-value   = -25
-reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Legalism", "Player", TRUE
-      "OutputType", "Luxury", "Local", FALSE
-    }
+;[effect_bad_lux_legalism]
+;type    = "Output_Bonus"
+;value   = -25
+;reqs    =
+;    { "type", "name", "range", "quiet"
+;      "Gov", "Legalism", "Player", TRUE
+;      "OutputType", "Luxury", "Local", FALSE
+;    }
 
 [effect_bad_gold_tribal]
 type    = "Output_Bonus"
@@ -2913,6 +2894,16 @@ reqs    =
       "Building", "Palace", "City", FALSE, FALSE
     }
 
+[effect_bad_sci_monarchy]
+type    = "Output_Bonus"
+value   = -25
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Monarchy", "Player", TRUE, TRUE
+      "OutputType", "Science", "Local", TRUE, FALSE
+      "Building", "Palace", "City", FALSE, FALSE
+    }
+
 [effect_good_sci_republic]
 type    = "Output_Bonus"
 value   = 25
@@ -2973,6 +2964,7 @@ value   = 1
 reqs    = 
     { "type", "name", "range", "quiet"
       "Gov", "Fundamentalism", "Player", TRUE
+      "Building", "Sultan Palace", "City", TRUE
     }
 
 [effect_fanatics_fundamentalism]
@@ -3362,7 +3354,7 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
     }
 
-[effect_infantry_barracks_ii_bl_DARPA]
+[effect_workshop_barracks_bl_DARPA]
 type    = "Veteran_Build"
 value   = 1
 reqs    =
@@ -4560,7 +4552,7 @@ reqs    =
 
 [effect_temple]
 type    = "Make_Content"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Temple", "City"
@@ -5042,12 +5034,22 @@ reqs	=
 
 [effect_leonardos_workshop]
 type    = "Upgrade_Unit"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Leonardo's Workshop", "Player", TRUE
-;      "TerrainClass", "Land", "Local", TRUE
       "Building", "Warfare Museum", "Player", FALSE
+    }
+
+[effect_leonardos_workshop_wu]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Leonardo's Workshop", "Player", TRUE
+      "UnitClass", "Wheeled Unit", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
 [effect_leonardos_workshop_culture]
@@ -6091,14 +6093,14 @@ reqs    =
       "Building", "Port Facility", "City", FALSE
     }
 
-[effect_courthouse_vision]
-type    = "City_Vision_Radius_Sq"
-value   = 7
-reqs    =
-    { "type", "name", "range"
-      "Building", "Courthouse", "City"
-      "MinSize", "3", "City"
-    }
+;[effect_courthouse_vision]
+;type    = "City_Vision_Radius_Sq"
+;value   = 7
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Courthouse", "City"
+;      "MinSize", "3", "City"
+;    }
 
 ; only if occupied
 [effect_city_walls_vision]
@@ -7170,6 +7172,7 @@ reqs    =
       "Building", "Angkor Wat", "City", TRUE
       "OutputType", "Trade", "Local", TRUE
       "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
     }
 
@@ -7181,6 +7184,7 @@ reqs    =
       "Building", "Angkor Wat", "City", TRUE
       "OutputType", "Shield", "local", TRUE
       "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
     }
 
@@ -7191,6 +7195,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Angkor Wat", "City", TRUE
       "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
     }
 
@@ -7201,6 +7206,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Building", "Angkor Wat", "City", TRUE
       "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
     }
 
@@ -7235,6 +7241,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Building", "Angkor Wat", "City", TRUE
       "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
     }
 
@@ -7247,6 +7254,144 @@ reqs    =
       "OutputType", "Luxury", "Local"
       "CityTile", "Center", "Local"
     }
+
+[effect_forbidden_city]
+type    = "Output_Waste_Pct"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Forbidden City", "City", TRUE
+      "OutputType", "Trade", "Local", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_forbidden_city_1]
+type    = "Output_Waste_Pct"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Forbidden City", "City", TRUE
+      "OutputType", "Shield", "local", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_forbidden_city_2]
+type    = "Spy_Resistant"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Forbidden City", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_forbidden_city_gov_center]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Forbidden City", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_forbidden_city_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Forbidden City", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_forbidden_city_luxury]
+type    = "Output_Add_Tile"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Forbidden City", "City"
+      "OutputType", "Luxury", "Local"
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+      "CityTile", "Center", "Local"
+      "Gov", "Legalism", "Player"
+    }
+
+[effect_sultan_palace]
+type    = "Output_Waste_Pct"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Sultan Palace", "City", TRUE
+      "OutputType", "Trade", "Local", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_sultan_palace_1]
+type    = "Output_Waste_Pct"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Sultan Palace", "City", TRUE
+      "OutputType", "Shield", "local", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_sultan_palace_2]
+type    = "Spy_Resistant"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Sultan Palace", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_sultan_palace_gov_center]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Sultan Palace", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_sultan_palace_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Sultan Palace", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+    }
+
+[effect_sultan_palace_luxury]
+type    = "Output_Add_Tile"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Sultan Palace", "City"
+      "OutputType", "Luxury", "Local"
+      "CityTile", "Center", "Local"
+    }
+
 
 [effect_golden_temple]
 type    = "Make_Content"

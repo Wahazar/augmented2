@@ -536,7 +536,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Christianity", "Player", TRUE
-	 "MinCulture", "600", "Player", TRUE
+	 "MinCulture", "1000", "Player", TRUE
       "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -622,7 +622,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Code of Laws", "Player"
-	 "MinCulture", "100", "Player", TRUE
+	 "MinCulture", "200", "Player", TRUE
     }
 graphic	= "b.courthouse"
 graphic_alt	= "-"
@@ -970,7 +970,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Islam", "Player", TRUE
-	 "MinCulture", "600", "Player", TRUE
+	 "MinCulture", "1600", "Player", TRUE
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Church", "City", FALSE
     }
@@ -1153,9 +1153,12 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
-      "Building", "City Hall", "City", TRUE
-	 "MinCulture", "1500", "Player", TRUE
-	 "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Church", "City", TRUE
+      "MinCulture", "2200", "Player", TRUE
+      "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Palace", "City", FALSE
     }
 graphic	= "b.ecclesiastical_palace"
 graphic_alt	= "b.palace"
@@ -1475,7 +1478,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Shinto", "Player", TRUE
 	 "Building", "Temple", "City", TRUE
-	 "MinCulture", "800", "Player", TRUE
+	 "MinCulture", "1200", "Player", TRUE
 	 "Building", "Church", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -1822,7 +1825,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Modern Theatre", "Player"
-	 "MinCulture", "1900", "Player"
+	 "MinCulture", "2900", "Player"
     }
 graphic	= "b.theatre"
 graphic_alt	= "b.colosseum"
@@ -1893,7 +1896,7 @@ reqs	=
       "Tech", "University", "Player"
       "Building", "Library", "City"
       "Building", "City Hall", "City"
-	 "MinCulture", "2400", "Player"
+	 "MinCulture", "3400", "Player"
     }
 graphic	= "b.university"
 graphic_alt	= "-"
@@ -1946,7 +1949,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Mass Entertainment", "Player"
-	 "MinCulture", "450", "Player"
+	 "MinCulture", "850", "Player"
     }
 graphic	= "b.colosseum"
 graphic_alt	= "-"
@@ -1974,7 +1977,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Astronomy", "Player"	 
-	 "MinCulture", "2500", "Player"
+	 "MinCulture", "3500", "Player"
     }
 graphic	= "b.copernicus_observatory"
 graphic_alt	= "-"
@@ -1999,7 +2002,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Computers", "Player"
       "Building", "Research Lab", "City"
-	 "MinCulture", "6500", "Player"
+	 "MinCulture", "8500", "Player"
     }
 graphic	= "b.DARPA"
 graphic_alt	= "-"
@@ -2024,7 +2027,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Tactics", "Player"
-	 "MinCulture", "3800", "Player"
+	 "MinCulture", "4800", "Player"
     }
 graphic	= "b.ecole_speciale_militaire"
 graphic_alt	= "b.university"
@@ -2048,7 +2051,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Industrialization", "Player"
-	 "MinCulture", "3500", "Player"
+	 "MinCulture", "4500", "Player"
     }
 graphic	= "b.eiffel_tower"
 graphic_alt	= "-"
@@ -2070,6 +2073,45 @@ Each tile around the city where this wonder is built that is already\
  generating some trade produces one extra trade resource.\
 ")
 
+[building_forbidden_city]
+name		= _("Forbidden City")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Confucianism", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+      "MinCulture", "3400", "Player", TRUE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+    }
+graphic	= "b.forbidden_city"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Giant palace complex, which makes a city a second center \
+of government and is required for Legalism.\n\
+Additionally, under Legalism government, extra 4 luxury points are generated in this city.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) \
+is related to how far away from the nearest capital they are. On top of \
+this, corruption and production waste in the capital itself is half \
+of what it would otherwise be (and a Courthouse will eliminate it \
+entirely).\
+"), _("\
+The city where this palace is located cannot be incited to revolt, \
+and enjoys a bonus when enemy agents try to evade your own agents \
+stationed in the city, or sabotage your buildings.\
+")
+
 [building_global_positioning_system]
 name		= _("Global Positioning System")
 genus		= "SmallWonder"
@@ -2078,7 +2120,7 @@ reqs	=
       "Tech", "Satellite System", "Player"
       "Building", "Apollo Program", "World"
       "Building", "Research Lab", "City"
-	 "MinCulture", "8500", "Player"
+	 "MinCulture", "9500", "Player"
     }
 graphic	= "b.global_positioning_system"
 graphic_alt	= "-"
@@ -2126,7 +2168,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Cinematography", "Player"
       "Building", "Women's Suffrage", "Player"
-	 "MinCulture", "12500", "Player"
+	 "MinCulture", "15500", "Player"
     }
 graphic	= "b.hollywood"
 graphic_alt	= "-"
@@ -2162,7 +2204,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
-	 "MinCulture", "3800", "Player", TRUE
+	 "MinCulture", "4800", "Player", TRUE
       "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -2191,9 +2233,9 @@ name		= _("Khajuraho Temple")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Hinduism", "Player"
+      "Tech", "Jainism", "Player"
       "Building", "Temple", "City"
-	 "MinCulture", "1300", "Player"
+	 "MinCulture", "2100", "Player"
     }
 graphic	= "b.khajuraho_temple"
 graphic_alt	= "b.oracle"
@@ -2218,7 +2260,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Chivalry", "Player", TRUE
-	 "MinCulture", "1800", "Player", TRUE
+	 "MinCulture", "1900", "Player", TRUE
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -2250,7 +2292,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Invention", "Player"
-	 "MinCulture", "2800", "Player"
+	 "MinCulture", "2900", "Player"
     }
 graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
@@ -2264,8 +2306,11 @@ sabotage	= 0
 sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
-Upgrades 2 obsolete units per game turn (3 with Metallurgy technology) on cost of 1 veteran level.\n\
+Upgrades 1 obsolete units per game turn (1 with Metallurgy technology) on cost of 1 veteran level.\n\
 Warfrare Museum prohibit any autoupgrades.
+"),
+_("\
+Additional veteran level for any Wheeled Unit.\
 ")
 
 [building_lighthouse]
@@ -2300,7 +2345,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Navigation", "Player"
       "TerrainFlag", "Sea", "Adjacent"
-	 "MinCulture", "2200", "Player"
+	 "MinCulture", "2800", "Player"
     }
 graphic	= "b.magellans_expedition"
 graphic_alt	= "-"
@@ -2327,7 +2372,7 @@ reqs	=
       "Tech", "Electronics", "Player"
       "Building", "Factory", "City"
       "Building", "Library", "City"
-	 "MinCulture", "5300", "Player"
+	 "MinCulture", "6200", "Player"
     }
 graphic	= "b.massachusetts_institute_of_technology"
 graphic_alt	= "-"
@@ -2352,7 +2397,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Vedism", "Player", TRUE
       "Building", "Temple", "City", TRUE
-	 "MinCulture", "1500", "Player", TRUE
+	 "MinCulture", "1900", "Player", TRUE
       "Building", "Church", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -2410,7 +2455,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Radioactivity", "Player"
       "Building", "Hospital", "City"
-	 "MinCulture", "4200", "Player"
+	 "MinCulture", "4800", "Player"
     }
 graphic	= "b.mobile-x-ray"
 graphic_alt	= "-"
@@ -2433,7 +2478,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Biology", "Player"
       "Building", "University", "City"
-	 "MinCulture", "4000", "Player"
+	 "MinCulture", "4400", "Player"
     }
 graphic	= "b.pasteur_institute"
 graphic_alt	= "-"
@@ -2456,7 +2501,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Masonry", "Player"
-	 "MinCulture", "100", "Player"
+	 "MinCulture", "150", "Player"
     }
 graphic	= "b.pyramids"
 graphic_alt	= "-"
@@ -2484,7 +2529,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Modern Theatre", "Player"
-	 "MinCulture", "4400", "Player"
+	 "MinCulture", "4900", "Player"
     }
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
@@ -2516,7 +2561,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Egalitarianism", "Player"
       "Building", "Courthouse", "City"
-	 "MinCulture", "3200", "Player"
+	 "MinCulture", "3500", "Player"
     }
 graphic	= "b.slavery_abolition"
 graphic_alt	= "-"
@@ -2545,7 +2590,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nanotechnology", "Player"
-	 "MinCulture", "15500", "Player"
+	 "MinCulture", "18500", "Player"
     }
 graphic	= "b.space_lift"
 graphic_alt	= "-"
@@ -2560,6 +2605,47 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Space lift allow to cheap transport of heavy components from Earth to geostationary orbit. \n\
 This facility is required to produce space ship structural components.\
+")
+
+[building_sultan_palace]
+name		= _("Sultan Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Sunnism", "Player", TRUE
+      "Building", "Mosque", "City", TRUE
+      "MinCulture", "3900", "Player", TRUE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+    }
+graphic	= "b.sultan_palace"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Giant palace complex, which makes a city a second center \
+of government.\n\
+Additionally, produces extra 4 luxury points in this city.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) \
+is related to how far away from the nearest capital they are. On top of \
+this, corruption and production waste in the capital itself is half \
+of what it would otherwise be (and a Courthouse will eliminate it \
+entirely).\
+"), _("\
+The city where this palace is located cannot be incited to revolt, \
+and enjoys a bonus when enemy agents try to evade your own agents \
+stationed in the city, or sabotage your buildings.\
+"), _("\
+Sultan Palace is a prerequisite to get Fundamentalism effect of `tithes` (gold) from sacral buildings.\
 ")
 
 [building_statue_of_zeus]
@@ -2599,7 +2685,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Confucianism", "Player"
-	 "MinCulture", "1800", "Player"
+	 "MinCulture", "2700", "Player"
     }
 graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
@@ -2625,7 +2711,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Mysticism", "Player"
       "Building", "Temple", "City"
-	 "MinCulture", "100", "Player"
+	 "MinCulture", "180", "Player"
     }
 graphic         = "b.temple_of_artemis"
 graphic_alt     = "b.oracle"
@@ -2650,7 +2736,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Legalism", "Player"
       "Building", "Temple", "City"
-      "MinCulture", "1100", "Player"
+      "MinCulture", "2100", "Player"
 ;      "Building", "Temple of Artemis", "Player", FALSE
     }
 graphic         = "b.temple_of_city_god"
@@ -2675,7 +2761,7 @@ name		= _("Thermal Bath")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Islam", "Player"
+      "Tech", "Sunnism", "Player"
     }
 graphic	= "b.thermal_bath"
 graphic_alt	= "-"
@@ -2699,7 +2785,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "University", "Player"
       "Building", "City Hall", "City"
-	 "MinCulture", "3000", "Player"
+	 "MinCulture", "3500", "Player"
     }
 graphic	= "b.warfare_museum"
 graphic_alt	= "b.colossus"
@@ -2725,7 +2811,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Conscription", "Player"
       "Building", "Slavery Abolition", "Player"
-	 "MinCulture", "5400", "Player"
+	 "MinCulture", "6400", "Player"
     }
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
@@ -2780,16 +2866,19 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Hinduism", "Player", TRUE
-      "Building", "City Hall", "City", TRUE
-	 "MinCulture", "1800", "Player", TRUE
-	 "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Temple", "City", TRUE
+      "MinCulture", "2800", "Player", TRUE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Palace", "City", FALSE
     }
 graphic	= "b.angkor_wat"
 graphic_alt	= "b.palace"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 200
+build_cost	= 250
 upkeep		= 0
 sabotage	= 0
 sound		= "b_palace"
@@ -2797,7 +2886,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Giant temple, which makes a city a second center \
 of government.\n\
-Additionally, produces extra 4 luxuty points in this city.\
+Additionally, produces extra 4 luxury points in this city.\
 "), _("\
 Waste in other cities (corruption, production waste, and food waste) \
 is related to how far away from the nearest capital they are. On top of \
@@ -2821,7 +2910,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Flight", "Player"
-	 "MinCulture", "8000", "Player"
+	 "MinCulture", "12000", "Player"
     }
 graphic	= "b.apollo_program"
 graphic_alt	= "-"
@@ -2853,7 +2942,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Economics", "Player"
       "Building", "Stock Exchange", "City"
-	 "MinCulture", "4000", "Player"
+	 "MinCulture", "4500", "Player"
     }
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
@@ -2904,7 +2993,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Genetic Engineering", "Player"
-	 "MinCulture", "15000", "Player"
+	 "MinCulture", "19000", "Player"
     }
 graphic	= "b.cure_for_cancer"
 graphic_alt	= "-"
@@ -2930,7 +3019,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Steam Engine", "Player"
-	 "MinCulture", "3500", "Player"
+	 "MinCulture", "4500", "Player"
     }
 graphic	= "b.darwins_voyage"
 graphic_alt	= "-"
@@ -2958,7 +3047,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Sikhism", "Player"
       "Building", "Temple", "City"
-	 "MinCulture", "2500", "Player"
+	 "MinCulture", "3900", "Player"
     }
 graphic	= "b.golden_temple"
 graphic_alt	= "b.palace"
@@ -2983,7 +3072,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Paper Making", "Player"
       "Building", "Library", "City"
-	 "MinCulture", "550", "Player"
+	 "MinCulture", "1550", "Player"
     }
 graphic	= "b.great_library"
 graphic_alt	= "-"
@@ -3010,7 +3099,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Legalism", "Player"
-	 "MinCulture", "800", "Player"
+	 "MinCulture", "900", "Player"
     }
 graphic	= "b.great_wall"
 graphic_alt	= "-"
@@ -3068,7 +3157,7 @@ reqs	=
       "Tech", "Robotics", "Player"
       "Building", "Research Lab", "City"
       "Building", "DARPA", "Player"
-	 "MinCulture", "9700", "Player"
+	 "MinCulture", "10500", "Player"
     }
 graphic		= "b.internet"
 graphic_alt	= "b.seti_program"
@@ -3099,7 +3188,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Theory of Gravity", "Player"
       "Building", "University", "City"
-	 "MinCulture", "3700", "Player"
+	 "MinCulture", "4700", "Player"
     }
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
@@ -3155,7 +3244,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Superconductors", "Player"
-	 "MinCulture", "23000", "Player"
+	 "MinCulture", "25000", "Player"
     }
 graphic	= "b.large_hadron_collider"
 graphic_alt	= "-"
@@ -3182,7 +3271,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Buddhism", "Player"
       "Building", "Temple", "City"
-	 "MinCulture", "1500", "Player"
+	 "MinCulture", "2200", "Player"
     }
 graphic	= "b.leshan_buddha_statue"
 graphic_alt	= "-"
@@ -3207,7 +3296,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Trade", "Player"
-	 "MinCulture", "1800", "Player"
+	 "MinCulture", "1900", "Player"
     }
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
@@ -3236,7 +3325,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
-	 "MinCulture", "8800", "Player"
+	 "MinCulture", "9800", "Player"
       "Resource", "Uranium", "City"
     }
 graphic	= "b.manhattan_project"
@@ -3290,7 +3379,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Democracy", "Player"
-	 "MinCulture", "5800", "Player"
+	 "MinCulture", "7800", "Player"
     }
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
@@ -3344,7 +3433,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Communism", "Player"
-	 "MinCulture", "7200", "Player"
+	 "MinCulture", "9200", "Player"
     }
 graphic	= "b.united_nations"
 graphic_alt	= "-"
@@ -3404,7 +3493,7 @@ reqs	=
     { "type", "name", "range"
       "Gov", "Communism", "Player"
       "Building", "Factory", "City"
-      "MinCulture", "3200", "Player"
+      "MinCulture", "5200", "Player"
     }
 graphic	= "b.5_years_plan"
 graphic_alt	= "gov.communism"

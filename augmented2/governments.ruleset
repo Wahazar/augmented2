@@ -87,7 +87,8 @@ _("\
  Conventional corruption increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 30%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
+ capital (half as fast with knowledge of Trade).\n\
+* Beside of base waste, shield and science outcome are additionally decreased.\
 ")
 
 ;------------------------------------------------------------------------
@@ -165,7 +166,7 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 10%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
-* Science outcome is decreased.\
+* Science outcome is decreased twice.\
 ")
 
 ;------------------------------------------------------------------------
@@ -203,7 +204,8 @@ _("\
 * Base corruption is 10%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 20%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
+ capital (half as fast with knowledge of Trade).\n\
+* Science and luxury outcome are decreased.\
 ")
 
 ;------------------------------------------------------------------------
@@ -212,7 +214,7 @@ _("\
 name        = _("Legalism")
 reqs = { "type", "name", "range"
          "tech", "Legalism", "Player"
-         "Building", "Palace", "Player"
+         "Building", "Forbidden City", "Player"
        }
 graphic     = "gov.legalism"
 graphic_alt = "gov.communism"
@@ -238,7 +240,7 @@ _("\
  will force 2 unhappy citizen to become content.\n\
 * Base corruption is 20%. This increases slowly with distance from the capital\n\
 * Base production waste is 30%, regardless of distance from capital.\n\
-* Science and luxury outcome is decreased.\
+* Science outcome is decreased.\
 ")
 
 ;------------------------------------------------------------------------
@@ -308,8 +310,8 @@ In a fundamentalist society, the people and the rulers are entirely\
  devoted to their beliefs, and are usually willing to die to\
  preserve them.\
 "), _("\
-Improvements that normally convert unhappy citizens to content\
- citizens, produce `tithes' (gold) equivalent to the number\
+If Sultan Palace is founded, improvements that normally convert unhappy citizens to content\
+ citizens, produce `tithes` (gold) equivalent to the number\
  of people they would convert, and require no maintenance.\
 "), _("\
 Fundamentalism is a good government for maximizing gold, and its Fanatics\

@@ -1363,7 +1363,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
-uk_gold       = 1
+uk_gold       = 2
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
@@ -1395,7 +1395,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
-uk_gold       = 1
+uk_gold       = 2
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianSeaTech"
 helptext      = _("\
@@ -1862,7 +1862,7 @@ Fundamentalist nations can maintain Fanatic units without\
 [unit_janissaries]
 name          = _("Janissaries")
 class         = "Infantry"
-tech_req      = "Leadership"
+tech_req      = "Sunnism"
 gov_req       = "Fundamentalism"
 obsolete_by   = "Fanatics"
 graphic       = "u.janissaries"
@@ -2202,8 +2202,7 @@ This unit cannot move across swamps, glaciers, or mountains,\
 [unit_crusaders]
 name          = _("Crusaders")
 class         = "Heavy Cavalry"
-tech_req      = "Theology"
-gov_req       = "Fundamentalism"
+tech_req      = "Fundamentalism"
 obsolete_by   = "Dragoons"
 graphic       = "u.crusaders_horse"
 graphic_alt   = "u.crusaders"
@@ -2230,8 +2229,6 @@ roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Crusaders are highly disciplined mounted\
  warriors driven by a higher cause.\
-"), _("\
-Only fundamentalistic government can built Crusaders.\
 ")
 
 [unit_knights]
@@ -2294,7 +2291,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
-uk_gold       = 1
+uk_gold       = 2
 flags         = "Capturer", "Horse", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "AttackFastStartUnit", 
                 "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
@@ -5008,7 +5005,7 @@ fuel          = 0
 uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
-uk_gold       = 1
+uk_gold       = 2
 flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "NoVeteran"
 ; No veteran levels (level name is ever displayed)
 veteran_names = _("green")
@@ -5067,7 +5064,7 @@ fuel          = 0
 uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 3
 flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
@@ -5178,7 +5175,7 @@ fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
-uk_gold       = 3
+uk_gold       = 4
 flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "Spy"
 veteran_names =
 ; /* TRANS: Spy veteran level */

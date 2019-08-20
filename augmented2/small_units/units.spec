@@ -56,6 +56,7 @@ sprites =
 		"u.steam_barge", "augmented2/small_units/steam_barge_t"
 		"u.diesel_barge", "augmented2/small_units/diesel_barge_t"
 		"u.vikings", "augmented2/small_units/viking_t"
+		"u.longboat", "augmented2/small_units/Longship3"
 		"u.corsairs", "augmented2/small_units/corsair_t"
 		"u.battering_ram", "augmented2/small_units/battering_ram_t"
 		"u.aak", "augmented2/small_units/Aak_t"
