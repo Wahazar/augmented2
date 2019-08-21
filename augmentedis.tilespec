@@ -106,7 +106,7 @@ files =
   "misc/governments.spec",
   "misc/specialists.spec",
   "misc/buildings.spec",
-  "trident/units.spec",
+;  "trident/units.spec",
   "isotrident/unitextras.spec",
   "misc/flags.spec",
   "misc/shields.spec",
