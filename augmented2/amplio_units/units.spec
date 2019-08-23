@@ -178,7 +178,6 @@ sprites =
 		"u.riot_police", "augmented2/amplio_units/riot_police_a"
 		"u.navy_seals", "augmented2/amplio_units/navy_seals_a"
 		"u.slave", "augmented2/amplio_units/slave_a"
-		"u.messenger", "augmented2/amplio_units/messenger_a"
 		"u.mounted_samurai", "augmented2/amplio_units/mounted_samurai_a"
 		"u.samurai", "augmented2/amplio_units/samurai_a"
 		"u.junk", "augmented2/amplio_units/junk_a"

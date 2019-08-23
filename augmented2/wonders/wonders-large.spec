@@ -40,4 +40,6 @@ sprites =
 		"b.temple_of_city_god", "augmented2/wonders/temple_of_city_god"
 		"b.warfare_museum", "augmented2/wonders/Warfare_museum"
 		"b.khajuraho_temple", "augmented2/wonders/Khajuraho_temple"
+		"b.forbidden_city", "augmented2/wonders/forbidden_city"
+		"b.sultan_palace", "augmented2/wonders/sultan_palace"
 	}

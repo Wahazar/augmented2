@@ -1,6 +1,21 @@
 =================================
 Augmented2 Ruleset for Freeciv v2.6
 =================================
+
+2.6.17
+Tweaked Temple output and Tribal/Anarchy emipre step.
+Improved gfx of amplio Hunters and small HWroads
+Culture pts req. adjusted
+Longboat small sprite added
+Monarchy: added 25% sci penalty
+Forbidden City - second gov. center for Temple oriented nation
+Sultan Palace - second gov. center for Mosque oriented nation
+Sultan Palace as req. for tithies under Funda.
+Legalism req. Forbidden City
+Tech costs fixed
+New Techs: Jainism, Sunnism
+Leonardo Workshop - 1 unit upgrade, Wheeled unit v+
+
 2.6.16
 Slavery abolition - increased empire unhapiness threshold step.
 Fixed empire step for Tribal, Anarchy.
