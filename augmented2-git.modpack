@@ -8,8 +8,8 @@ version = "2.6.17"
 [files]
 list =
 { "src", "dest"
-  "LICENSE", "augmented2/LICENSE"
-  "README.md", "augmented2/README.md"
+  "LICENSE", "LICENSE"
+  "README.md", "README.md"
   "augmented2.serv"
   "augmentedi.tilespec"
   "augmentedis.tilespec"
