@@ -1,6 +1,6 @@
 [info]
 options = "+Freeciv-2.6-modpack"
-baseURL = "https://raw.githubusercontent.com/Wahazar/augmented2/master/augmented2-git.modpack"
+baseURL = "https://raw.githubusercontent.com/Wahazar/augmented2/master/"
 name = "Augmented2"
 type = "Modpack"
 version = "2.6.17"
@@ -154,6 +154,7 @@ list =
   "augmented2/buildings_small/steel_mill.png"
   "augmented2/buildings_small/textille_mill.png"
   "augmented2/buildings_small/theatres.png"
+  "augmented2/buildings_small/watchtowers.png"
   "augmented2/buildings_small/water_treatments.png"
   "augmented2/misc/gov_direct_democracy.png"
   "augmented2/misc/gov_fascism_cc.png"
@@ -321,7 +322,6 @@ list =
   "augmented2/wonders_small/pasteur_institute_s.png"
   "augmented2/wonders_small/slavery_abolition_s.png"
   "augmented2/wonders_small/space_lift_s.png"
-  "augmented2/wonders_small/stonehenge.png"
   "augmented2/wonders_small/stonehenge_s.png"
   "augmented2/wonders_small/sultan_palace_s.png"
   "augmented2/wonders_small/temple_of_city_gods.png"
