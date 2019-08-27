@@ -2,6 +2,10 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.18
+Modpack Installer file fixed
+Merge with jwrober's string fixture branch
+
 2.6.17
 Tweaked Temple output and Tribal/Anarchy emipre step.
 Improved gfx of amplio Hunters and small HWroads
