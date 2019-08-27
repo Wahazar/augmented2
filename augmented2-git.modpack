@@ -3,13 +3,13 @@ options = "+Freeciv-2.6-modpack"
 baseURL = "https://raw.githubusercontent.com/Wahazar/augmented2/master/"
 name = "Augmented2"
 type = "Modpack"
-version = "2.6.17"
+version = "2.6.18"
 
 [files]
 list =
 { "src", "dest"
-  "LICENSE", "LICENSE"
-  "README.md", "README.md"
+  "LICENSE", "augmented2/LICENSE"
+  "README.md", "augmented2/README.md"
   "augmented2.serv"
   "augmentedi.tilespec"
   "augmentedis.tilespec"
