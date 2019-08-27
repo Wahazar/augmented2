@@ -1,9 +1,9 @@
 [info]
 options = "+Freeciv-2.6-modpack"
 baseURL = "https://raw.githubusercontent.com/Wahazar/augmented2/master/"
-name = "Augmented2"
+name = "augmented2"
 type = "Modpack"
-version = "2.6.18"
+version = "git"
 
 [files]
 list =
