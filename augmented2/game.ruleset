@@ -393,7 +393,7 @@ target_reqs  =
 ;      "Gov", "Democracy", "Player", FALSE
       "Building", "Palace", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
-      "Building", "Mausoleum of Mausolos", "Player", FALSE
+      "Building", "Mausoleum of Mausolos", "City", FALSE
       "Building", "United Nations", "Player", FALSE
     }
 

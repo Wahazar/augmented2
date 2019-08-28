@@ -455,11 +455,11 @@ sound		= "b_cathedral"
 sound_alt	= "b_generic"
 helptext	= _("\
 A Cathedral makes 3 unhappy citizens content in a city. The addition of\
- Michelangelo's Chapel (small wonder) increases the number of unhappy to\
+ Michelangelo's Chapel (ally great wonder) increases the number of unhappy to\
  content citizens to 6 (e.g. doubles the effect of Cathedral). This makes\
  it easier to maintain order in that city, however it does not affect\
  citizens made unhappy by aggression.  The addition of J.S. Bach's Cathedral\
- (small wonder) brings an additional happy citizen, except when in Communism\
+ (small wonder) brings additional entertainer specialist, except when in Communism\
  government.\
 ")
 
@@ -1705,6 +1705,7 @@ reqs	=
       "Tech", "Ceremonial Burial", "Player", TRUE
 ;	 "MinCulture", "100", "Player", TRUE
 	 "Building", "Church", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
     }
 graphic	= "b.temple"
 graphic_alt	= "-"
@@ -1723,7 +1724,8 @@ and the Temple of Artemis, 4 citizens are made content (3 under \
 Communism). Does not affect citizens made unhappy by aggression.\
 "),
 _("\
-Shrine Torii or Golden Temple also make additional unhappy citizen content, but not cumulative with Temple of Artemis.\
+Shrine Torii, Temple of City God or Golden Temple also make additional unhappy citizen content, \
+but not cumulative with Temple of Artemis.\
 ")
 
 [building_textille_mill]
@@ -2129,11 +2131,14 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
+      "Building", "Cathedral", "City", TRUE
 	 "MinCulture", "4800", "Player", TRUE
       "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
 	 "Building", "Leshan Buddha Statue", "Player", FALSE
+	 "Building", "Golden Temple", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
     }
 graphic	= "b.js_bachs_cathedral"
 graphic_alt	= "-"
@@ -2146,11 +2151,8 @@ sabotage	= 0
 sound		= "w_js_bachs_cathedral"
 sound_alt	= "w_generic"
 helptext	= _("\
-Makes one content citizen happy in every city of the player that owns \
-it (and 2 extra luxury points per city with Cathedral).\
-"),
-_("\
-Increase effect of Church (not under Communism gov.)\
+Makes one content citizen happy for every player's Church \
+and 2 extra luxury points per city with Cathedral (not under Communism gov.) \
 ")
 
 [building_khajuraho_temple]
@@ -2345,30 +2347,32 @@ If Leshan Buddha Statue was built by any player, additional one unhappy citizen 
 
 [building_michelangelos_chapel]
 name		= _("Michelangelo's Chapel")
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Christianity", "Player", TRUE
-      "Building", "Cathedral", "City", TRUE
+      "Building", "Church", "City", TRUE
 	 "MinCulture", "3200", "Player", TRUE
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
 	 "Building", "Leshan Buddha Statue", "Player", FALSE
+	 "Building", "Golden Temple", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
     }
 graphic	= "b.michelangelos_chapel"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 400
+build_cost	= 500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_michelangelos_chapel"
 sound_alt	= "w_generic"
 helptext	= _("\
-Doubles the base effect of Cathedrals. This makes 3 additional unhappy \
-citizens content in each city with a Cathedral; however, it does \
+Doubles the base effect of Cathedrals which belong to the players allied with owner of this building. \n\
+This makes 3 additional unhappy citizens content in each allied city with a Cathedral; however, it does \
 not affect citizens made unhappy by aggression.\
 ")
 
@@ -2978,8 +2982,9 @@ sabotage	= 0
 sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
-Golden Temple is the important pilgrimage site of Sikhism.\n\
-Any city with Temple, Church or Mosque, which belong to the players allied with owner of this building,\
+Golden Temple is the important Sikhism pilgrimage site.\n\
+Thanks to the ecumenic spirit of Golden Temple, any city with Temple, Church or Mosque, \
+which belong to the players allied with owner of this building,\
 would additionaly make 1 unhappy citizens content.\
 ")
 
@@ -3278,15 +3283,15 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Socialism", "Player", FALSE
     }
-build_cost	= 200
+build_cost	= 250
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
 sound_alt	= "w_generic"
 helptext	= _("\
-With this wonder, City Walls and Courthouses each make one unhappy \
+If allied player posses this wonder, City Walls and Courthouses each make one unhappy \
 citizen content in their city, unless that citizen is unhappy about \
-aggression. Also, none of the owner's cities can be incited to revolt.\
+aggression. Also, city where Mausoleum of Mausolos is founded can't be incited to revolt.\
 ")
 
 [building_statue_of_liberty]
@@ -3369,12 +3374,12 @@ AI players are more inclined to be friendly and forgiving toward the \
 owner of this wonder. These effects last until the Apollo Program \
 is completed.\
 "), _("\
-Also, if any player's city is in disorder for more than two turns in \
+Also, for all players, if any city is in disorder for more than two turns in \
 a row, that player's government falls (even for governments other than \
 Republic and Democracy).\
 "), _("\
-United Nations increase 4x cost of inciting revolt in any cities belonging to that player,\
-or in any cities ruled by a communistic system.\
+United Nations quadruple cost of inciting revolt in any cities belonging to that player, \
+or for any player's cities ruled by a communistic system.\
 ")
 
 [building_western_wall]
@@ -3396,10 +3401,10 @@ sabotage	= 0
 sound		= "w_city_walls"
 sound_alt	= "w_generic"
 helptext	= _("\
-Add 50% defense for city, where it is builded (cumulative with City Walls, not cumulative with Great Wall),\
+Add 50% defense for city, where it is builded (cumulative with City Walls, not cumulative with Great Wall), \
 against any Land unit (except those with indirect fire).\n\
-Additionally, prayers going to the sacred site would generate extra trade from each tile around the city that is already\
- generating some trade.\
+Additionally, prayers going to the sacred site would generate extra trade from each tile around the city that is already \
+generating some trade.\
 ")
 
 [building_5_years_plan]

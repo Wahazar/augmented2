@@ -3395,16 +3395,6 @@ reqs    =
       "Building", "Church", "City"
     }
 
-;[effect_js_bachs_cathedral_1]
-;type    = "Make_Content"
-;value   = 1
-;reqs    =
-;    { "type", "name", "range", "present"
-;      "Building", "J.S. Bach's Cathedral", "Player", TRUE
-;      "Building", "Cathedral", "City", TRUE
-;      "Gov", "Communism", "Player", FALSE
-;    }
-
 [effect_cathedral_culture]
 type    = "History"
 value	= 3
@@ -5001,7 +4991,7 @@ reqs    =
 
 [effect_js_bachs_cathedral_culture]
 type    = "History"
-value	= 8
+value	= 6
 reqs	=
     { "type", "name", "range"
       "Building", "J.S. Bach's Cathedral", "City"
@@ -5210,12 +5200,12 @@ value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Cathedral", "City"
-      "Building", "Michelangelo's Chapel", "Player"
+      "Building", "Michelangelo's Chapel", "Alliance"
     }
 
 [effect_michelangelos_chapel_culture]
 type    = "History"
-value	= 6
+value	= 8
 reqs	=
     { "type", "name", "range"
       "Building", "Michelangelo's Chapel", "City"
@@ -5227,7 +5217,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "City Walls", "City"
-      "Building", "Mausoleum of Mausolos", "Player"
+      "Building", "Mausoleum of Mausolos", "Alliance"
     }
 
 [effect_mausoleum_of_mausolos_1]
@@ -5236,7 +5226,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Courthouse", "City"
-      "Building", "Mausoleum of Mausolos", "Player"
+      "Building", "Mausoleum of Mausolos", "Alliance"
     }
 
 [effect_mausoleum_of_mausolos_culture]
@@ -7435,6 +7425,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "J.S. Bach's Cathedral", "Player", TRUE
+      "Building", "Church", "City", TRUE
       "Gov", "Communism", "Player", FALSE
     }
 
