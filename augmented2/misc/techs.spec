@@ -93,4 +93,5 @@ tiles = { "row", "column","tag"
   7, 5, "a.combustion_eng"
   7, 6, "a.jainism"
   7, 7, "a.sunnism"
+  7, 8, "a.shiism"
 }

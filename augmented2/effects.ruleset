@@ -2882,6 +2882,7 @@ reqs    =
       "Gov", "Tribal", "Player", TRUE, TRUE
       "OutputType", "Science", "Local", TRUE, FALSE
       "Building", "Palace", "City", FALSE, FALSE
+      "Building", "Stonehenge", "Continent", FALSE, FALSE
     }
 
 [effect_bad_sci_despotism]
@@ -3551,7 +3552,7 @@ reqs    =
       "OutputType", "Luxury", "Local"
     }
 
-[effect_colosseum_1]
+[effect_colosseum_free_mil]
 type    = "Make_Content_Mil"
 value   = 1
 reqs    =
@@ -3805,7 +3806,7 @@ type    = "Pollu_Prod_Pct"
 value   = -25
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Hoover Dam", "Player", TRUE
+      "Building", "Hoover Dam", "Continent", TRUE
       "Building", "Hydro Plant", "City", TRUE
       "Building", "Solar Plant", "City", FALSE
       "Building", "Hoover Dam", "City", FALSE
@@ -3916,11 +3917,13 @@ reqs    =
 type    = "Output_Add_Tile"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "TerrainClass", "Oceanic", "Local"
-      "Building", "Offshore Platform", "City"
-      "Building", "Oil Refinery", "City"
-      "OutputType", "Shield", "Local"
+    { "type", "name", "range", "present"
+      "TerrainClass", "Oceanic", "Local", TRUE
+      "Building", "Offshore Platform", "City", TRUE
+      "Building", "Oil Refinery", "City", TRUE
+      "OutputType", "Shield", "Local", TRUE
+      "Resource", "Fish", "Local", FALSE
+      "Resource", "Whales", "Local", FALSE
     }
 
 [effect_offshore_platform_1]
@@ -4566,13 +4569,23 @@ reqs	=
       "Building", "Temple", "City"
     }
 
-[effect_university]
+[effect_university_basic]
 type    = "Output_Bonus"
-value   = 75
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "University", "City"
       "OutputType", "Science", "Local"
+    }
+
+[effect_university_nofunda]
+type    = "Output_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "University", "City", TRUE
+      "OutputType", "Science", "Local", TRUE
+      "Gov", "Fundamentalism", "Player", FALSE
     }
 
 [effect_university_culture]
@@ -4643,6 +4656,17 @@ reqs    =
     { "type", "name", "range"
       "Building", "Colossus", "City"
       "OutputType", "Trade", "Local"
+    }
+
+[effect_colossus_1]
+type    = "Specialist_Output"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Colossus", "Continent"
+      "CityTile", "Center", "Local"
+      "Specialist", "Taxman", "Local"
+      "OutputType", "Gold", "Local"
     }
 
 [effect_colossus_culture]
@@ -5003,6 +5027,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "King Richard's Crusade", "Player"
+      "Building", "Church", "City"
     }
 
 [effect_king_richards_crusade_1]
@@ -5302,7 +5327,7 @@ type    = "Output_Bonus"
 value   = 75
 reqs    =
     { "type", "name", "range", "survives"
-      "Building", "Internet", "World", TRUE
+      "Building", "Internet", "Alliance", TRUE
       "Building", "Research Lab", "City"
       "OutputType", "Science", "Local"
     }
@@ -5380,7 +5405,7 @@ type    = "Specialist_Output"
 value   = 1
 reqs    =
     { "type", "name", "range", "survives"
-      "Building", "Shakespeare's Theatre", "Player", TRUE
+      "Building", "Shakespeare's Theatre", "World", TRUE
       "Specialist", "Elvis", "Local"
       "OutputType", "Luxury", "Local"
       "Tech", "Television", "Player", FALSE
@@ -5767,13 +5792,13 @@ reqs    =
       "Extra", "Mine", "Local", TRUE
     }
 
-[effect_oil_well]
-type    = "Mining_Pct"
-value   = 100
-reqs    =
-    { "type", "name", "range"
-      "Extra", "Oil Well", "Local"
-    }
+;[effect_oil_well]
+;type    = "Mining_Pct"
+;value   = 100
+;reqs    =
+;    { "type", "name", "range"
+;      "Extra", "Oil Well", "Local"
+;    }
 
 ; Make Irrigation extra do something
 [effect_irrigation]
@@ -6117,9 +6142,19 @@ value	= 7
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Airport", "City", TRUE
-;      "MaxUnitsOnTile", "0", "Local", FALSE
       "Tech", "Electricity", "Player", TRUE
       "Building", "Eiffel Tower", "City", FALSE
+    }
+
+[effect_mass_transit_vision]
+type    = "City_Vision_Radius_Sq"
+value	= 7
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Mass Transit", "City", TRUE
+      "Tech", "Combustion", "Player", TRUE
+      "Building", "Eiffel Tower", "City", FALSE
+      "Building", "Airport", "City", FALSE
     }
 
 [effect_eiffel_tower_vision]
@@ -6266,7 +6301,7 @@ type    = "Specialist_Output"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Internet", "Player"
+      "Building", "Internet", "World"
       "Specialist", "Elvis", "Local"
       "OutputType", "Luxury", "Local"
     }
@@ -6815,7 +6850,7 @@ reqs    =
     { "type", "name", "range"
       "Building", "Oil Refinery", "City"
       "Extra", "Oil Well", "Local"
-      "Terrain", "Desert", "Local"
+;      "Terrain", "Desert", "Local"
     }
 
 [effect_oil_refinery_trade]
@@ -7034,7 +7069,7 @@ reqs	=
 
 [effect_global_positioning_culture]
 type    = "History"
-value	= 8
+value	= 7
 reqs	=
     { "type", "name", "range"
       "Building", "Global Positioning System", "Player"
@@ -7077,7 +7112,7 @@ reqs    =
       "Building", "Kaaba", "City"
     }
 
-[effect_kaaba_happy]
+[effect_kaaba_free_mil]
 type    = "Make_Content_Mil"
 value   = 1
 reqs    =
@@ -7164,6 +7199,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_angkor_wat_1]
@@ -7176,6 +7213,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_angkor_wat_2]
@@ -7187,6 +7226,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_angkor_wat_gov_center]
@@ -7198,6 +7239,8 @@ reqs	=
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_angkor_wat_despotism]
@@ -7209,7 +7252,9 @@ reqs    =
       "Building", "Angkor Wat", "City", TRUE, FALSE
       "OutputType", "Gold", "Local", TRUE, FALSE
       "Building", "Palace", "City", FALSE, FALSE
-      "Building", "Ecclesiastical Palace", "City", FALSE, FALSe
+      "Building", "Ecclesiastical Palace", "City", FALSE, FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_angkor_wat_monarchy]
@@ -7222,6 +7267,8 @@ reqs    =
       "OutputType", "Gold", "Local", TRUE, FALSE
       "Building", "Palace", "City", FALSE, FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE, FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_angkor_wat_culture]
@@ -7233,6 +7280,8 @@ reqs	=
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_angkor_wat_luxury]
@@ -7255,6 +7304,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Angkor Wat", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_forbidden_city_1]
@@ -7267,6 +7318,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Angkor Wat", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_forbidden_city_2]
@@ -7278,6 +7331,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Angkor Wat", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_forbidden_city_gov_center]
@@ -7289,6 +7344,8 @@ reqs	=
       "Building", "Palace", "City", FALSE
       "Building", "Angkor Wat", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_forbidden_city_culture]
@@ -7300,6 +7357,8 @@ reqs	=
       "Building", "Palace", "City", FALSE
       "Building", "Angkor Wat", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
     }
 
 [effect_forbidden_city_luxury]
@@ -7311,6 +7370,8 @@ reqs    =
       "OutputType", "Luxury", "Local"
       "Building", "Angkor Wat", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
       "CityTile", "Center", "Local"
       "Gov", "Legalism", "Player"
     }
@@ -7325,6 +7386,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
     }
 
 [effect_sultan_palace_1]
@@ -7337,6 +7400,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
     }
 
 [effect_sultan_palace_2]
@@ -7348,6 +7413,8 @@ reqs    =
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
     }
 
 [effect_sultan_palace_gov_center]
@@ -7359,6 +7426,8 @@ reqs	=
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
     }
 
 [effect_sultan_palace_culture]
@@ -7370,6 +7439,8 @@ reqs	=
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
     }
 
 [effect_sultan_palace_luxury]
@@ -7378,6 +7449,92 @@ value   = 4
 reqs    =
     { "type", "name", "range"
       "Building", "Sultan Palace", "City"
+      "OutputType", "Luxury", "Local"
+      "CityTile", "Center", "Local"
+    }
+
+[effect_osaka_castle]
+type    = "Output_Waste_Pct"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Osaka Castle", "City", TRUE
+      "OutputType", "Trade", "Local", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
+    }
+
+[effect_osaka_castle_1]
+type    = "Output_Waste_Pct"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Osaka Castle", "City", TRUE
+      "OutputType", "Shield", "local", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
+    }
+
+[effect_osaka_castle_2]
+type    = "Spy_Resistant"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Osaka Castle", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
+    }
+
+[effect_osaka_castle_gov_center]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Osaka Castle", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
+    }
+
+[effect_osaka_castle_free_mil]
+type    = "Make_Content_Mil"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Osaka Castle", "City", TRUE, 
+      "Building", "Temple", "City", TRUE
+    }
+
+[effect_osaka_castle_culture]
+type    = "History"
+value	= 3
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Osaka Castle", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
+    }
+
+[effect_osaka_castle_luxury]
+type    = "Output_Add_Tile"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Osaka Castle", "City"
       "OutputType", "Luxury", "Local"
       "CityTile", "Center", "Local"
     }
@@ -7517,14 +7674,6 @@ value   = -1
 reqs    =
     { "type", "name", "range"
       "Building", "Yasir", "City"
-    }
-
-[effect_yasir_unhappy_nationwide]
-type    = "Make_Content"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Yasir", "Player"
     }
 
 [effect_amphitheater]
@@ -7783,5 +7932,79 @@ value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Khajuraho Temple", "City"
+    }
+
+[effect_taj_mahal]
+type    = "Output_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Building", "Taj Mahal", "City"
+      "OutputType", "Luxury", "Local"
+    }
+
+[effect_taj_mahal_1]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Taj Mahal", "Alliance"
+      "Building", "Madrasa", "City"
+    }
+
+[effect_taj_mahal_culture]
+type    = "History"
+value	= 3
+reqs	=
+    { "type", "name", "range"
+      "Building", "Taj Mahal", "City"
+    }
+
+[effect_madrasa]
+type    = "Output_Bonus"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Madrasa", "City"
+      "OutputType", "Science", "Local"
+    }
+
+[effect_madrasa_culture]
+type    = "History"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Madrasa", "City"
+    }
+
+[effect_kyoto_fushimi_inari]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Kyoto Fushimi Inari", "Alliance", TRUE
+      "Building", "Shrine Torii", "City", True
+      "Building", "J.S. Bach's Cathedral", "Alliance", FALSE
+      "Building", "Temple of City God", "Player", FALSE
+    }
+
+[effect_kyoto_fushimi_inari_culture]
+type    = "History"
+value	= 3
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Kyoto Fushimi Inari", "City", TRUE
+      "Building", "Shrine Torii", "City", TRUE
+    }
+
+[effect_kyoto_fushimi_inari_luxury]
+type    = "Output_Add_Tile"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Kyoto Fushimi Inari", "City"
+      "OutputType", "Luxury", "Local"
+      "CityTile", "Center", "Local"
+      "Building", "Shrine Torii", "City"
     }
 

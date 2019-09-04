@@ -106,6 +106,8 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Entertains the citizens of a city by adding 3 luxury points.\
  The discovery of Cinematography reduces the luxury bonus to 2 points.
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_city_hall]
@@ -159,11 +161,7 @@ Two cities with Airports can airlift one unit per turn (including aircraft).\
  use all of the unit's movement points. A unit must have some movement points\
  left to be airlifted, and cannot carry cargo.\
 "), _("\
-Airport, together with Mass Transit and the discovery of Combustion increase\
- city vision radius.\
-"), _("\
-Airport, together with the discovery of Electricity, increases the city\
- vision radius.\
+Airport increases the city vision radius.\
 ")
 
 [building_aqueduct]
@@ -279,7 +277,7 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 80
-upkeep		= 1
+upkeep		= 2
 sabotage	= 100
 sound		= "b_bank"
 sound_alt	= "b_generic"
@@ -399,9 +397,9 @@ sound		= "b_barracks_iii"
 sound_alt	= "b_generic"
 helptext	= _("\
 With a Workshop Barracks, each new motorized/wheeled unit built in a\
- city will automatically have Veteran status, which means that its attack\
- and defense strengths are increased by 50%. Damaged wheeled units which\
- stay in town for one full turn without moving are completely restored.\
+ city will automatically have Recruit status, which means that its attack\
+ and defense strengths are increased by 25% (this effect is cumulative with Ecole Speciale Militaire or DARPA bonus)\
+ Damaged wheeled units which stay in town for one full turn without moving are completely restored.\
 ")
 
 [building_bunkers]
@@ -471,6 +469,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Concrete", "Player"
       "Building", "Railway Station", "City"
+      "Building", "Factory", "City"
       "Terrain", "Mountains", "City"
     }
 nreqs	=
@@ -818,6 +817,35 @@ Increases the science output in a city by 75%, or 150% once the\
  Great Library (great wonder) has been built by any player.\
 ")
 
+[building_madrasa]
+name		= _("Madrasa")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Fundamentalism", "Player"
+      "Building", "Mosque", "City"
+      "Building", "City Hall", "City"
+	 "MinCulture", "2400", "Player"
+    }
+graphic	= "b.madrasa"
+graphic_alt	= "b.university"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 90
+upkeep		= 2
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increases the science output in a city by an additional 25%, regardless of government form.\
+"), _("\
+The total bonus is 100% if a Library is present.\
+"), _("\
+If Taj Mahal (great wonder) was build by allied player, each Madrasa makes one unhappy citizen content \
+(does not affect citizens made unhappy by aggression)\
+")
+
 [building_manufacture]
 name		= _("Manufacture")
 genus		= "Improvement"
@@ -949,8 +977,8 @@ sabotage	= 100
 sound		= "b_temple"
 sound_alt	= "b_generic"
 helptext	= _("\
-A Mosque makes 2 unhappy citizen content. Together with Kaaba\
- makes content one citizen unhappy due to aggression.\
+A Mosque makes 2 unhappy citizen content (3 with Madrasa and allied Taj Mahal wonder). \
+Together with allied Kaaba, Mosque makes also content one citizen unhappy due to aggression.\
 ")
 
 [building_nuclear_plant]
@@ -1014,9 +1042,9 @@ sabotage	= 100
 sound		= "b_offshore_platform"
 sound_alt	= "b_generic"
 helptext	= _("\
-With an Offshore Platform every Ocean, Deep Ocean, or Lake tile\
- worked by the city yields one extra shield resource. The city\
- needs to be next to a water tile and have Oil Refinery in order\
+With an Offshore Platform every Ocean, Deep Ocean (with Oil Platform), or Lake tile\
+ (except those with Fish/Whale resources) worked by the city yields one extra shield resource. \
+ The city needs to be next to a water tile and have Oil Refinery in order\
  to build this improvement.\
 "), _("\
 Offshore Platforms also increase the pollution caused by the\
@@ -1045,7 +1073,7 @@ helptext	= _("\
 Oil Refinery increases the overall city production by 25%; doubles\
  production from oil wells and adds an extra 4 trade points for each\
  oil field with oil well (providing free upkeep). An Oil Refinery is\
- also required for building of the Offshore Platform.\
+ also required for building of the Offshore Platform and gain additional production from Oil Wells.\
 "), _("\
 There is a small additional risk of pollution.\
 ")
@@ -1112,10 +1140,12 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
       "Building", "Church", "City", TRUE
+      "Building", "Cathedral", "City", TRUE
       "MinCulture", "2200", "Player", TRUE
       "Building", "Angkor Wat", "Player", FALSE
       "Building", "Forbidden City", "Player", FALSE
       "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
       "Building", "Palace", "City", FALSE
     }
 graphic	= "b.ecclesiastical_palace"
@@ -1361,8 +1391,8 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 70
-upkeep		= 2
+build_cost	= 90
+upkeep		= 3
 sabotage	= 100
 sound		= "b_sam_battery"
 sound_alt	= "b_generic"
@@ -1383,8 +1413,8 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 140
-upkeep		= 3
+build_cost	= 180
+upkeep		= 4
 sabotage	= 100
 sound		= "b_sdi_defense"
 sound_alt	= "b_generic"
@@ -1436,15 +1466,16 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 10
+build_cost	= 15
 upkeep		= 0
 sabotage	= 100
 sound		= "b_temple"
 sound_alt	= "b_generic"
 helptext	= _("\
-Temple improvement: make additional 1 unhappy citizen content. Not\
- cumulative with Temple of Artemis (small wonder) or Temple of City\
- God (small wonder), but cumulative with Golden Temple (great wonder).\
+Temple improvement: make additional 1 unhappy citizen content. Not \
+cumulative with Temple of Artemis (small wonder) or Temple of City \
+God (small wonder), but cumulative with Golden Temple (great wonder). \
+If allied player founded Kyoto Fushimi Inari (great wonder), two additional citizens are content.\
 ")
 
 [building_solar_plant]
@@ -1497,7 +1528,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 300
+build_cost	= 350
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_component"
@@ -1527,7 +1558,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 600
+build_cost	= 700
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_module"
@@ -1566,7 +1597,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 150
+build_cost	= 200
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_structural"
@@ -1588,6 +1619,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Steel", "Player"
       "Building", "Railway Station", "City"
+      "Building", "Factory", "City"
       "Resource", "Coal", "City"
     }
 nreqs	=
@@ -1632,7 +1664,7 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 120
-upkeep		= 2
+upkeep		= 3
 sabotage	= 100
 sound		= "b_stock_exchange"
 sound_alt	= "b_generic"
@@ -1645,6 +1677,7 @@ Additionally, together with Super Highways, increase city trade by 25% (regardle
 [building_super_highways]
 name		= _("Super Highways")
 genus		= "Improvement"
+flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
       "Tech", "Automobile", "Player"
@@ -1806,6 +1839,7 @@ further reduces the chance of a plague (by 20% of the base chance).\
 [building_watchtower]
 name		= _("Watchtower")
 genus		= "Improvement"
+flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
       "Tech", "Glass Working", "Player"
@@ -1851,6 +1885,36 @@ by 150% once Isaac Newton's College has been built by any player.\
 The total bonus is 150% if a Library and a University are present \
 together in the same city, increasing to 300% once the Great Library or Internet and \
 Isaac Newton's College have both been built.\
+"), _("\
+Notice: under Fundamentalism government, University output is dimnished to 25% (or 100% with Isaac Newton College).\
+")
+
+[building_yasir]
+name		= _("Yasir")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Slave Trade", "Player", TRUE
+      "Building", "Marketplace", "City", TRUE
+    }
+graphic	= "b.yasir"
+graphic_alt	= "b.marketplace"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Slavery Abolition", "Player"
+      "Building", "United Nations", "World"
+      "Tech", "The Corporation", "Player"
+    }
+build_cost	= 90
+upkeep		= 1
+sabotage	= 20
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Yasir was a name of a place, where slaves were bought or sold.\n\
+With this building, cheap slave labor can be obtained and used as workers or migrants.\n\
+Additionally, city where Yasir is located, would get 25% more gold (not valid for Republic or Democracy), but additional unhapinnes would be generated for city with Yasir.\n\
+Slavery Abolition wonder builded by owner, or United Nation wonder builded by any player, will obsolete this building.\
 ")
 
 ;small wonders
@@ -1940,7 +2004,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 400
+build_cost	= 800
 upkeep	= 0
 sabotage	= 0
 sound		= "w_internet"
@@ -2011,10 +2075,12 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Confucianism", "Player", TRUE
       "Building", "Temple", "City", TRUE
+      "Building", "City Walls", "City", TRUE
       "MinCulture", "3400", "Player", TRUE
       "Building", "Ecclesiastical Palace", "Player", FALSE
       "Building", "Angkor Wat", "Player", FALSE
       "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
       "Building", "Palace", "City", FALSE
     }
 graphic	= "b.forbidden_city"
@@ -2058,7 +2124,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 1000
+build_cost	= 1400
 upkeep		= 0
 sabotage	= 0
 sound		= "w_apollo_program"
@@ -2139,6 +2205,7 @@ reqs	=
 	 "Building", "Leshan Buddha Statue", "Player", FALSE
 	 "Building", "Golden Temple", "Player", FALSE
 	 "Building", "Temple of City God", "Player", FALSE
+	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
     }
 graphic	= "b.js_bachs_cathedral"
 graphic_alt	= "-"
@@ -2157,19 +2224,23 @@ and 2 extra luxury points per city with Cathedral (not under Communism gov.) \
 
 [building_khajuraho_temple]
 name		= _("Khajuraho Temple")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
-    { "type", "name", "range"
-      "Tech", "Jainism", "Player"
-      "Building", "Temple", "City"
-	 "MinCulture", "2100", "Player"
+    { "type", "name", "range", "present"
+      "Tech", "Jainism", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+      "MinCulture", "2100", "Player", TRUE
+      "Building", "Kaaba", "Player", FALSE
+      "Building", "King Richard's Crusade", "Player", FALSE
+      "Building", "Michelangelo's Chapel", "Player", FALSE
+      "Building", "J.S. Bach's Cathedral", "Player", FALSE
     }
 graphic	= "b.khajuraho_temple"
 graphic_alt	= "b.oracle"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 540
+build_cost	= 440
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -2190,7 +2261,10 @@ reqs	=
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
+	 "Building", "Taj Mahal", "Player", FALSE
 	 "Building", "Mausoleum of Mausolos", "Player", FALSE
+	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
+	 "Building", "Statue of Zeus", "Player", FALSE
     }
 graphic	= "b.king_richards_crusade"
 graphic_alt	= "-"
@@ -2205,7 +2279,7 @@ sound		= "w_king_richards_crusade"
 sound_alt	= "w_generic"
 helptext	= _("\
 Reduces the unhappiness caused by aggressively deployed military \
-units owned by the city by 1 -- in other words, it neutralizes the \
+units owned by the city with Church by 1 -- in other words, it neutralizes the \
 unhappiness caused by a single military unit (except under Democracy, \
 where a single unit makes two citizens unhappy). Under governments \
 where unit upkeep is paid in gold, it gives two free gold per city \
@@ -2305,7 +2379,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 600
+build_cost	= 650
 upkeep	= 0
 sabotage	= 0
 sound		= "w_copernicus_observatory"
@@ -2334,46 +2408,16 @@ obsolete_by	=
       "Tech", "Nuclear Power", "Player"
       "Building", "University", "City"
     }
-build_cost	= 80
+build_cost	= 90
 upkeep	= 0
 sabotage	= 0
 sound		= "w_copernicus_observatory"
 sound_alt	= "w_generic"
 helptext	= _("\
 Gives 4 extra research points every turn to its city. \n\
-If Leshan Buddha Statue was built by any player, additional one unhappy citizen become content\
- (does not affect citizens made unhappy by aggression)\
-")
-
-[building_michelangelos_chapel]
-name		= _("Michelangelo's Chapel")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range", "present"
-      "Tech", "Christianity", "Player", TRUE
-      "Building", "Church", "City", TRUE
-	 "MinCulture", "3200", "Player", TRUE
-	 "Building", "Temple", "City", FALSE
-	 "Building", "Mosque", "City", FALSE
-	 "Building", "Kaaba", "Player", FALSE
-	 "Building", "Leshan Buddha Statue", "Player", FALSE
-	 "Building", "Golden Temple", "Player", FALSE
-	 "Building", "Temple of City God", "Player", FALSE
-    }
-graphic	= "b.michelangelos_chapel"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-    }
-build_cost	= 500
-upkeep		= 0
-sabotage	= 0
-sound		= "w_michelangelos_chapel"
-sound_alt	= "w_generic"
-helptext	= _("\
-Doubles the base effect of Cathedrals which belong to the players allied with owner of this building. \n\
-This makes 3 additional unhappy citizens content in each allied city with a Cathedral; however, it does \
-not affect citizens made unhappy by aggression.\
+If Leshan Buddha Statue was built on same continent, \
+additional one unhappy citizen become content \
+(does not affect citizens made unhappy by aggression)\
 ")
 
 [building_mobile-x-ray]
@@ -2453,7 +2497,7 @@ as if all your cities were always celebrating.\
 [building_shakespeares_theatre]
 name		= _("Shakespeare's Theater")
 rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Modern Theatre", "Player"
@@ -2463,19 +2507,19 @@ graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
-      "Tech", "Television", "Player"
+      "Tech", "Computers", "Player"
     }
-build_cost	= 250
+build_cost	= 450
 upkeep		= 6
 sabotage	= 0
 sound		= "w_shakespeares_theatre"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives 1 additional luxury to every city, and 6 luxuries to the city \
+Gives 1 additional luxury to every player's city, and 6 luxuries to the city \
 where it is located.\
 "), _("\
 Upon completion of this wonder, entertainer specialists' luxury \
-output increases to 3 for player's nation.\
+output increases to 3 for every nation.\
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
@@ -2540,10 +2584,12 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Sunnism", "Player", TRUE
       "Building", "Mosque", "City", TRUE
+      "Building", "Madrasa", "City", TRUE
       "MinCulture", "3900", "Player", TRUE
       "Building", "Ecclesiastical Palace", "Player", FALSE
       "Building", "Angkor Wat", "Player", FALSE
       "Building", "Forbidden City", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
       "Building", "Palace", "City", FALSE
     }
 graphic	= "b.sultan_palace"
@@ -2701,7 +2747,7 @@ sound		= "w_hanging_gardens"
 sound_alt	= "w_generic"
 helptext	= _("\
 Add 1 luxury point to the city where is located and each river tile within city radius.\n\
-Thermal Bath reduces chance of plaque in any player's city with Lazaretto improvment by additional 20%.\
+Thermal Bath reduces chance of plaque in any player's city with Lazaretto improvement by additional 20%.\
 ")
 
 [building_warfare_museum]
@@ -2756,33 +2802,6 @@ Similar effect for shields production occurs in case of Republic.\n\
 Beside this, regardless of government type, Women's Suffrage make 1 unhappy citizens content in each player's city.\
 ")
 
-[building_yasir]
-name		= _("Yasir")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range", "present"
-      "Tech", "Slave Trade", "Player", TRUE
-      "Building", "Marketplace", "City", TRUE
-    }
-graphic	= "b.yasir"
-graphic_alt	= "b.marketplace"
-obsolete_by	=
-    { "type", "name", "range"
-      "Building", "Slavery Abolition", "Player"
-      "Building", "United Nations", "World"
-    }
-build_cost	= 100
-upkeep		= 1
-sabotage	= 20
-sound		= "b_palace"
-sound_alt	= "b_generic"
-helptext	= _("\
-Yasir was a name of a place, where slaves were bought or sold.\n\
-With this building, cheap slave labor can be obtained and used as workers or migrants.\n\
-Additionally, city where Yasir is located, would get 25% more gold (not valid for Republic or Democracy), but additional unhapinnes would be generated for each Players city and additionally for city with Yasir.\n\
-Slavery Abolition wonder builded by owner, or United Nation wonder builded by any player, will obsolete this building.\
-")
-
 ; great wonders:
 
 [building_angkor_wat]
@@ -2796,6 +2815,7 @@ reqs	=
       "Building", "Ecclesiastical Palace", "Player", FALSE
       "Building", "Forbidden City", "Player", FALSE
       "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
       "Building", "Palace", "City", FALSE
     }
 graphic	= "b.angkor_wat"
@@ -2872,7 +2892,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 500
+build_cost	= 750
 upkeep		= 0
 sabotage	= 0
 sound		= "w_asmiths_trading_co"
@@ -2900,7 +2920,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Railroad", "Player", FALSE
     }
-build_cost	= 150
+build_cost	= 250
 upkeep		= 0
 sabotage	= 0
 sound		= "w_colossus"
@@ -2908,6 +2928,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Each tile around the city where this wonder is built that is already\
  generating some trade produces one extra trade resource.\
+"), _("\
+Moreover, each city on the continent with Colossus gain 1 additional Taxman Specialist. \
 ")
 
 [building_cure_for_cancer]
@@ -2923,7 +2945,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 2000
+build_cost	= 2500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_cure_for_cancer"
@@ -2948,7 +2970,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 600
+build_cost	= 650
 upkeep		= 0
 sabotage	= 0
 sound		= "w_darwins_voyage"
@@ -2976,7 +2998,7 @@ graphic_alt	= "b.palace"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 400
+build_cost	= 700
 upkeep		= 0
 sabotage	= 0
 sound		= "b_palace"
@@ -3003,7 +3025,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Computers", "World", FALSE
     }
-build_cost	= 500
+build_cost	= 550
 upkeep		= 0
 sabotage	= 0
 sound		= "w_great_library"
@@ -3059,7 +3081,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 5000
+build_cost	= 4000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_hoover_dam"
@@ -3067,7 +3089,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Acts as a Hydro Plant in the city where it is built, and reduces \
 pollution from shield production by a further 25% in all cities \
-with Hydro Plants, making them equivalent to Solar Plants.\
+with Hydro Plants on same continent, making them equivalent to Solar Plants.\
 ")
 
 [building_internet]
@@ -3085,7 +3107,7 @@ graphic_alt	= "b.seti_program"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 1000
+build_cost	= 1200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_seti_program"
@@ -3095,11 +3117,12 @@ All cities on the map are continuously visible to its \
 owner despite fog-of-war.\
 "), 
 _("\
-Gives 1 additional luxury to every owner's city.\
+Upon completion of this wonder, entertainer specialists' luxury \
+output increases to 3 for every nation.\
 "),
 _("\
 Completion of this wonder permanently doubles the effect of \
-Universities for every player.\
+Universities for allied players.\
 ")
 
 [building_isaac_newtons_college]
@@ -3116,7 +3139,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 800
+build_cost	= 900
 upkeep		= 0
 sabotage	= 0
 sound		= "w_isaac_newtons_college"
@@ -3142,13 +3165,15 @@ reqs	=
 	 "Building", "Michelangelo's Chapel", "Player", FALSE
 	 "Building", "J.S. Bach's Cathedral", "Player", FALSE
 	 "Building", "King Richard's Crusade", "Player", FALSE
+	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
+	 "Building", "Statue of Zeus", "Player", FALSE
     }
 graphic	= "b.kaaba"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
-build_cost	= 400
+build_cost	= 550
 upkeep		= 0
 sabotage	= 0
 sound		= "w_temple"
@@ -3157,6 +3182,40 @@ helptext	= _("\
 This sacred site is a focal point of the pilgrimages.\n\
 Each tile with road around the city produce additional trade point.\n\
 Additionally, each Mosque which belongs to any allied player, neutralizes unhappiness caused by one military unit.\
+")
+
+[building_kyoto_fushimi_inari]
+name		= _("Kyoto Fushimi Inari")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Bushido", "Player", TRUE
+         "Building", "Temple", "City", TRUE
+         "Building", "Shrine Torii", "City", TRUE
+	 "MinCulture", "3800", "Player", TRUE
+         "Building", "Church", "City", FALSE
+         "Building", "Cathedral", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+	 "Building", "Kaaba", "Player", FALSE
+	 "Building", "King Richard's Crusade", "Player", FALSE
+	 "Building", "Michelangelo's Chapel", "Player", FALSE
+	 "Building", "J.S. Bach's Cathedral", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
+	 "Building", "Taj Mahal", "Player", FALSE
+    }
+graphic	= "b.fushimi_inari"
+graphic_alt	= "b.temple"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 450
+upkeep		= 0
+sabotage	= 0
+sound		= "b_temple"
+sound_alt	= "w_generic"
+helptext	= _("\
+Pilgrimages to this giant Shrine makes additional content citizen happy for every allied player's Temple with Shrine Torii \
+and 2 extra luxury points per city with Fushimi Inari wonder.\
 ")
 
 [building_b_large_hadron_collider]
@@ -3225,7 +3284,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Electromagnetism", "Player", FALSE
     }
-build_cost	= 200
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
@@ -3237,7 +3296,8 @@ TIP: if you're behind in research, this can help you catch up, by \
 reducing the cost of technologies that other players already know.\
 "),
 _("\
-In case of Thalassocracy goverment system, celebration would give boost of shield production, if Marco Polo Embassy exist on same continent.\
+In case of Thalassocracy goverment system, celebration would give boost of shield production, \
+if Marco Polo Embassy exist on the same continent.\
 ")
 
 [building_manhattan_project]
@@ -3272,10 +3332,6 @@ reqs	=
 	 "Building", "Church", "City", FALSE
 	 "Building", "Cathedral", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
-	 "Building", "Kaaba", "Player", FALSE
-	 "Building", "Angkor Wat", "Player", FALSE
-	 "Building", "Michelangelo's Chapel", "Player", FALSE
-	 "Building", "J.S. Bach's Cathedral", "Player", FALSE
     }
 graphic         = "b.mausoleum"
 graphic_alt     = "b.oracle"
@@ -3292,6 +3348,82 @@ helptext	= _("\
 If allied player posses this wonder, City Walls and Courthouses each make one unhappy \
 citizen content in their city, unless that citizen is unhappy about \
 aggression. Also, city where Mausoleum of Mausolos is founded can't be incited to revolt.\
+")
+
+[building_michelangelos_chapel]
+name		= _("Michelangelo's Chapel")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Christianity", "Player", TRUE
+      "Building", "Church", "City", TRUE
+	 "MinCulture", "3200", "Player", TRUE
+	 "Building", "Temple", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+	 "Building", "Kaaba", "Player", FALSE
+	 "Building", "Leshan Buddha Statue", "Player", FALSE
+	 "Building", "Golden Temple", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
+	 "Building", "Taj Mahal", "Player", FALSE
+    }
+graphic	= "b.michelangelos_chapel"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_michelangelos_chapel"
+sound_alt	= "w_generic"
+helptext	= _("\
+Doubles the base effect of Cathedrals which belong to the players allied with owner of this building. \n\
+This makes 3 additional unhappy citizens content in each allied city with a Cathedral; however, it does \
+not affect citizens made unhappy by aggression.\
+")
+
+[building_osaka_castle]
+name		= _("Osaka Castle")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Shogunate", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+      "Building", "Shrine Torii", "City", TRUE
+      "MinCulture", "2800", "Player", TRUE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+    }
+graphic	= "b.osaka_castle"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Giant temple, which makes a city a second center \
+of government.\n\
+Additionally, produces extra 4 luxury points in this city.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) \
+is related to how far away from the nearest capital they are. On top of \
+this, corruption and production waste in the capital itself is half \
+of what it would otherwise be (and a Courthouse will eliminate it \
+entirely).\
+"), _("\
+The city where this palace is located cannot be incited to revolt, \
+and enjoys a bonus when enemy agents try to evade your own agents \
+stationed in the city, or sabotage your buildings.\
+"), _("\
+Osaka Castle will also make content two citizens unhappy due to aggression
+in the city where is founded.\
 ")
 
 [building_statue_of_liberty]
@@ -3337,7 +3469,7 @@ obsolete_by	=
       "Tech", "Christianity", "Player"
       "Building", "Isaac Newton's College", "World"
     }
-build_cost	= 100
+build_cost	= 150
 upkeep	= 0
 sabotage	= 0
 sound		= "w_copernicus_observatory"
@@ -3346,6 +3478,42 @@ helptext	= _("\
 This megalithic structure act like giant astronomical calendar.
 Each tile worked by the city where this wonder is built produces \
 one extra research point.\
+"), _("\
+Additionally, each city on the continent where Stonehenge is located is not affected by Tribal government science penalty, \
+if Tribe Hut is present.\
+")
+
+[building_taj_mahal]
+name		= _("Taj Mahal")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Shiism", "Player", TRUE
+	 "Building", "Mosque", "City", TRUE
+	 "MinCulture", "2800", "Player", TRUE
+	 "Building", "Temple", "City", FALSE
+         "Building", "Church", "City", FALSE
+	 "Building", "Michelangelo's Chapel", "Player", FALSE
+	 "Building", "King Richard's Crusade", "Player", FALSE
+	 "Building", "Leshan Buddha Statue", "Player", FALSE
+	 "Building", "Golden Temple", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
+    }
+graphic	= "b.taj_mahal"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 550
+upkeep		= 4
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "w_generic"
+helptext	= _("\
+Increase luxury output of a city by 50%, additionally each Madrasa \
+will make one unhappy citizen content in any city which belong to allied players.
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_united_nations]
@@ -3433,7 +3601,7 @@ aimed at increasing the nation's production by concentrated \
 effort of the People.\n\
 So called 'Udarniks' (shock labour team) while celebrating the anniversary of the Revolution would be superproductive.
 "),_("\
-% Years plan remove luxuty penalty for Communism and would yield in additional shield production
+% Years plan halves down luxury penalty for Communism and would yield in additional shield production
 from any tile, which already produce shields, if city is already celebrating.
 ")
 

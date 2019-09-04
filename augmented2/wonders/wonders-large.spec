@@ -28,7 +28,7 @@ sprites =
 		"b.DARPA", "augmented2/wonders/DARPA"
 		"b.mobile-x-ray", "augmented2/wonders/mobile-x-ray"
 		"b.stonehenge", "augmented2/wonders/stonehenge"
-		"b.yasir", "augmented2/wonders/yasir"
+;		"b.yasir", "augmented2/wonders/yasir"
 		"b.western_wall", "augmented2/wonders/western_wall_wellcomeimg"
 		"b.leshan_buddha_statue", "augmented2/wonders/Leshan_Buddha_Statue_View-Ariel_Steiner"
 		"b.angkor_wat", "augmented2/wonders/Angkor_Wat-B.Ch.Torrissen"
@@ -42,4 +42,7 @@ sprites =
 		"b.khajuraho_temple", "augmented2/wonders/Khajuraho_temple"
 		"b.forbidden_city", "augmented2/wonders/forbidden_city"
 		"b.sultan_palace", "augmented2/wonders/sultan_palace"
+		"b.taj_mahal", "augmented2/wonders/Taj_Mahal_Dennis_Jarvis"
+		"b.osaka_castle", "augmented2/wonders/Osaka_Castle_Bagus_Pagestu"
+		"b.fushimi_inari", "augmented2/wonders/Fushimi_Inari"
 	}

@@ -3941,7 +3941,7 @@ Patrol boats are small but fast units, can be equipped with turret gun or torped
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_longboat]
 name          = _("Longboat")
@@ -4357,7 +4357,7 @@ Bombard or cannon turret can be installed aboard, for increase attack strength.\
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_destroyer]
 name          = _("Destroyer")
@@ -4409,7 +4409,7 @@ _("\
 TIP:  A very fast unit, which is very useful for hunting down enemy\
  Transports and Submarines.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_cruiser]
 name          = _("Cruiser")
@@ -4450,7 +4450,7 @@ The Cruiser is a strong offensive boat unit, can carry 2 artillery or gun turret
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 2
+bombard_rate = 3
 
 [unit_battleship]
 name          = _("Battleship")
@@ -4494,7 +4494,7 @@ The Battleship can hold up to 3 artillery or gun turrets.\
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 3
+bombard_rate = 4
 
 [unit_aegis_cruiser]
 name          = _("AEGIS Cruiser")
@@ -4542,7 +4542,7 @@ AEGIS Cruiser can hold up to 3 turrets or cruise rockets.\
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 3
+bombard_rate = 4
 
 [unit_railgun_destroyer]
 name          = _("Railgun Destroyer")
@@ -4590,7 +4590,7 @@ Destroyer can hold two turrets or torpedos.\
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 2
+bombard_rate = 3
 
 [unit_submarine]
 name          = _("Submarine")
@@ -4681,7 +4681,7 @@ Nuclear Submarines can carry torpedos or missiles, or can attack directly using 
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_carrier]
 name          = _("Carrier")

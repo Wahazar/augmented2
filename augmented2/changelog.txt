@@ -2,6 +2,16 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.19
+GreatWonders range fixed
+Bombard rate of ships adjusted
+Oil Wells tweaked
+City styles improved
+Shiism tech added
+New wonders: Taj Mahal, Osaka Castle, Kyoto Fushimi Inari
+New buildings: Madrasa
+Yasir as improvement building instead of small wonder.
+
 2.6.18
 Modpack Installer file fixed
 Merge with jwrober's string fixture branch

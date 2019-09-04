@@ -52,7 +52,7 @@ reqs		=
     }
 helptext        = _("\
 Each entertainer produces two luxury points for their city per turn, \
-increasing to three once any player has built Shakespeare's Theater. \
+increasing to three once any player has built Shakespeare's Theater or Internet. \
 See the section on Happiness for the effects of luxury points.\
 ")
 
@@ -67,7 +67,7 @@ reqs		=
 helptext        = _("\
 Each scientist adds two points to your empire's research output \
 per turn, increasing to three once any player has built Darwin's \
-Voyage.\
+Voyage or Large Hadron Collider.\
 ")
 
 [specialist_taxman]

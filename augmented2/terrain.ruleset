@@ -1231,7 +1231,7 @@ reqs           =
     }
 build_time     = 0
 removal_time   = 0
-conflicts      = "Irrigation", "Farmland"
+conflicts      = "Irrigation", "Farmland", "Water Lock"
 hidden_by      = "Oil Well"
 helptext       = _("\
 Mines can be built on some types of terrain, which increases the\
@@ -1266,7 +1266,7 @@ removal_time   = 0
 conflicts      = "Irrigation", "Farmland"
 helptext       = _("\
 Once Refining is known, mines on Desert and Glacier tiles can be\
- upgraded to oil wells for an extra production point.\
+ upgraded to oil wells for an extra production point if Refinery is builded.\
 ")
 
 [extra_wind_turbine]
@@ -1510,7 +1510,7 @@ reqs           =
 build_time     = 2
 removal_time   = 0
 native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Suicidal", "Turrets"
-conflicts      = "Airstrip", "Airbase"
+conflicts      = "Airstrip", "Airbase", "Water Lock"
 hidden_by      = "Fortress"
 flags          = "NativeTile"
 ; /* xgettext:no-c-format */
@@ -1545,7 +1545,7 @@ reqs           =
 build_time     = 2
 removal_time   = 0
 native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Torpedos", "Wheeled Unit", "Suicidal", "Turrets"
-conflicts      = "Airstrip", "Airbase"
+conflicts      = "Airstrip", "Airbase", "Water Lock"
 flags          = "NativeTile"
 helptext       = _("\
 Fortresses are more permanent forts; construction on them can only begin\
@@ -1584,7 +1584,7 @@ reqs           =
 build_time     = 2
 removal_time   = 0
 native_to      = "Air", "Bomb", "Helicopter", "Missile", "Torpedos", "Turrets"
-conflicts      = "Fort", "Fortress"
+conflicts      = "Fort", "Fortress", "Water Lock"
 hidden_by      = "Airbase"
 flags          = "Refuel"
 helptext       = _("\
@@ -1625,7 +1625,7 @@ reqs           =
 build_time     = 2
 removal_time   = 0
 native_to      = "Air", "Bomb", "Helicopter", "Missile", "Torpedos", "Suicidal", "Wheeled Unit", "Turrets"
-conflicts      = "Fort", "Fortress"
+conflicts      = "Fort", "Fortress", "Water Lock"
 flags          = "Refuel"
 helptext       = _("\
 Airbases are more permanent airstrips; construction on them can only\
@@ -1896,7 +1896,7 @@ reqs           =
     }
 build_time     = 14
 removal_time   = 2
-conflicts      = "Airstrip", "Airbase", "Fort", "Mine"
+conflicts      = "Airstrip", "Airbase", "Fort", "Mine", "Oil Well"
 native_to      = "Small Land", "Merchant", "Trireme", "Riverboat", "Sea"
 flags          = "NativeTile"
 helptext       = _("\

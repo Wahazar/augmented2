@@ -1326,6 +1326,16 @@ graphic     = "a.seafaring"
 graphic_alt = "-"
 cost     = 40
 
+[advance_shiism]
+name     = _("Shiism")
+req1     = "Islam"
+req2     = "Philosophy"
+root_req = "Islam"
+flags    = ""
+graphic     = "a.shiism"
+graphic_alt = "-"
+cost     = 210
+
 [advance_shinto]
 name     = _("Shinto")
 req1     = "Seafaring"
@@ -1347,12 +1357,12 @@ cost     = 170
 [advance_sikhism]
 name     = _("Sikhism")
 req1     = "Jainism"
-req2     = "Islam"
+req2     = "Shiism"
 root_req = "Monotheism"
 flags    = ""
 graphic     = "a.sikhism"
 graphic_alt = "-"
-cost     = 200
+cost     = 290
 
 [advance_simple_machines]
 name     = _("Simple Machines")
