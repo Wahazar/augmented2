@@ -8,7 +8,7 @@ Bombard rate of ships adjusted
 Oil Wells tweaked
 City styles improved
 New wonders: Taj Mahal, Osaka Castle, Kyoto Fushimi Inari, Jousting Tiltyard
-New buildings: Madrasa, Amusement Park
+New buildings/improvements: Madrasa, Amusement Park, Trade Union
 Yasir as improvement building instead of small wonder.
 New techs: Shiism, Hastilude, Mass Entertainment (old renamed to Martial Games), Welding Technology, reworked tech tree
 

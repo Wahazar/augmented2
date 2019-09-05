@@ -280,10 +280,10 @@ _("\
  will each force 2 unhappy citizens to become content (the maximum\
  possible).\n\
 * Base corruption is 30%, but is not affected by distance to the capital.\n\
-* There is no production waste.\
+* There is small 10% production waste.\
 * Communism is relatively tolerant of cosmopolitan cities.\n\
 * If United Nation wonder was built by any player, inciting communistic cities is 4x more expensive.\n\
-* Gold outcome is decreased, luxury outcome is substantially supressed (except for cities with 5 Year Plan founded).\
+* Gold outcome is decreased, luxury outcome is substantially supressed by 60% (except for cities with Trade Union improvement: 30%).\
 ")
 
 ;------------------------------------------------------------------------

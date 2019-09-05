@@ -388,7 +388,7 @@ root_req = "Electronics"
 flags    = ""
 graphic     = "a.computers"
 graphic_alt = "-"
-cost     = 1770
+cost     = 1780
 
 [advance_concrete]
 name     = _("Concrete")
@@ -543,7 +543,7 @@ req2     = "Radio"
 flags    = ""
 graphic     = "a.electronics"
 graphic_alt = "-"
-cost     = 860
+cost     = 890
 
 [advance_engineering]
 name     = _("Engineering")
@@ -959,7 +959,7 @@ req2     = "The Corporation"
 flags    = ""
 graphic     = "a.mass_production"
 graphic_alt = "-"
-cost     = 910
+cost     = 1150
 
 [advance_mathematics]
 name     = _("Mathematics")
@@ -996,7 +996,7 @@ req2     = "Electronics"
 flags    = ""
 graphic     = "a.miniaturization"
 graphic_alt = "-"
-cost     = 1200
+cost     = 1450
 
 [advance_mobile_warfare]
 name     = _("Mobile Warfare")
@@ -1157,7 +1157,7 @@ req2     = "Advanced Flight"
 flags    = ""
 graphic     = "a.plastics"
 graphic_alt = "-"
-cost     = 1580
+cost     = 1780
 
 [advance_polytheism]
 name     = _("Polytheism")
@@ -1193,7 +1193,7 @@ req2     = "Mass Production"
 flags    = ""
 graphic     = "a.quantum_theory"
 graphic_alt = "-"
-cost     = 1420
+cost     = 1520
 
 [advance_radar]
 name     = _("Radar")
@@ -1213,7 +1213,7 @@ flags    = ""
 graphic     = "a.radio"
 graphic_alt = "-"
 helptext = _("Allows Workers and Engineers to build airbases and buoys.")
-cost     = 680
+cost     = 780
 
 [advance_radioactivity]
 name     = _("Radioactivity")
@@ -1594,7 +1594,7 @@ req2     = "Electromagnetism"
 flags    = ""
 graphic     = "a.theory_of_relativity"
 graphic_alt = "-"
-cost     = 770
+cost     = 990
 
 [advance_trade]
 name     = _("Trade")
@@ -1647,7 +1647,7 @@ cost     = 12
 [advance_welding_technology]
 name     = _("Welding Technology")
 req1     = "Automobile"
-req2     = "The Corporation"
+req2     = "Electromagnetism"
 root_req = "Steel"
 flags    = ""
 graphic     = "a.welding_technology"

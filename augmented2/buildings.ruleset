@@ -3676,9 +3676,9 @@ sound		= "b_university"
 sound_alt	= "b_generic"
 helptext	= _("\
 Workers syndicate for collective bargaining better wages and working conditions. \
-Makes 2 unhappy citizens content in a city and halves production waste by distance. \
+Makes 2 unhappy citizens content in a city and almost halves production waste by distance. \
 "),_("\
-Additionally halves down city luxury penalty in case of Communism government.
+Additionally this improvement halves down city luxury penalty in case of Communism government.
 ")
 
 [building_capitalization]

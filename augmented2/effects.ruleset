@@ -8074,7 +8074,7 @@ reqs    =
 
 [effect_trade_union_waste_corruption_distance]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 40
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
