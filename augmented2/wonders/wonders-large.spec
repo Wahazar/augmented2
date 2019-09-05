@@ -13,6 +13,8 @@ artists = "
   Basil D Soufi
   Ttey Ratcliff
   Jyoti_Dasila
+  Bagus Pagestu
+  Dennis_Jarvis
 "
 
 [extra]
@@ -45,4 +47,5 @@ sprites =
 		"b.taj_mahal", "augmented2/wonders/Taj_Mahal_Dennis_Jarvis"
 		"b.osaka_castle", "augmented2/wonders/Osaka_Castle_Bagus_Pagestu"
 		"b.fushimi_inari", "augmented2/wonders/Fushimi_Inari"
+		"b.jousting_tiltyard", "augmented2/wonders/jousting_tiltyard"
 	}

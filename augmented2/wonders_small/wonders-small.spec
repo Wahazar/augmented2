@@ -41,4 +41,5 @@ sprites =
 		"b.taj_mahal", "augmented2/wonders_small/taj_mahal_s"
 		"b.osaka_castle", "augmented2/wonders_small/osaka_castle_s"
 		"b.fushimi_inari", "augmented2/wonders_small/fushimi_inari_s"
+		"b.jousting_tiltyard", "augmented2/wonders_small/jousting_tiltyard_s"
 	}

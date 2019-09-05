@@ -84,9 +84,30 @@ New settlements that build the Tribe Hut can produce Tribe units.\
  Hut bonus.\
 ")
 
+[building_amusement_park]
+name            = _("Amusement Park")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mass Entertainment", "Player"
+	 "MinCulture", "3800", "Player"
+    }
+graphic	= "b.amusement_park"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 100
+upkeep		= 4
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increase luxury output of a city by 50% \
+")
+
 [building_amphitheater]
 name        = _("Amphitheater")
-;rule_name	= "Colosseum"
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
@@ -1791,11 +1812,11 @@ without access to a river. \
 ")
 
 [building_theatre]
-name            = _("Theatre")
+name            = _("Theatre Stage")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Modern Theatre", "Player"
+      "Tech", "Theatre", "Player"
 	 "MinCulture", "2900", "Player"
     }
 graphic	= "b.theatre"
@@ -1945,7 +1966,7 @@ name            = _("Colosseum")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Mass Entertainment", "Player"
+      "Tech", "Martial Games", "Player"
 	 "MinCulture", "850", "Player"
     }
 graphic	= "b.colosseum"
@@ -2220,6 +2241,33 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Makes one content citizen happy for every player's Church \
 and 2 extra luxury points per city with Cathedral (not under Communism gov.) \
+")
+
+[building_jousting_tiltyard]
+name            = _("Jousting Tiltyard")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Hastilude", "Player"
+      "Building", "Palace", "City"
+      "MinCulture", "1650", "Player"
+    }
+graphic	= "b.jousting_tiltyard"
+graphic_alt	= "b.colosseum"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Communism", "Player"
+    }
+build_cost	= 180
+upkeep		= 2
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Add 2 luxury points to your capital. \
+Additionally in case of Monarchy, increase luxury output of a capital city by 50% \
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_khajuraho_temple]
@@ -2500,7 +2548,7 @@ rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Modern Theatre", "Player"
+      "Tech", "Theatre", "Player"
 	 "MinCulture", "4900", "Player"
     }
 graphic	= "b.shakespeares_theatre"
@@ -3365,6 +3413,7 @@ reqs	=
 	 "Building", "Golden Temple", "Player", FALSE
 	 "Building", "Temple of City God", "Player", FALSE
 	 "Building", "Taj Mahal", "Player", FALSE
+	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
     }
 graphic	= "b.michelangelos_chapel"
 graphic_alt	= "-"
@@ -3601,8 +3650,35 @@ aimed at increasing the nation's production by concentrated \
 effort of the People.\n\
 So called 'Udarniks' (shock labour team) while celebrating the anniversary of the Revolution would be superproductive.
 "),_("\
-% Years plan halves down luxury penalty for Communism and would yield in additional shield production
-from any tile, which already produce shields, if city is already celebrating.
+5 Years plan under Communism government would yield in additional shield production \
+from any tile, which already produce shields, if city is already celebrating \ 
+(Trade Union is also recommended to gain city celebration status)\
+")
+
+[building_trade_union]
+name		= _("Trade Union")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Labor Union", "Player"
+      "Building", "Factory", "City"
+      "MinCulture", "4100", "Player"
+    }
+graphic	= "b.trade_union"
+graphic_alt	= "a.labor_union"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 2
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+helptext	= _("\
+Workers syndicate for collective bargaining better wages and working conditions. \
+Makes 2 unhappy citizens content in a city and halves production waste by distance. \
+"),_("\
+Additionally halves down city luxury penalty in case of Communism government.
 ")
 
 [building_capitalization]

@@ -45,4 +45,5 @@ sprites =
 		"b.watchtower", "augmented2/buildings/watchtower"
 		"b.madrasa", "augmented2/buildings/madrasa"
 		"b.yasir", "augmented2/buildings/yasir"
+		"b.amusement_park", "augmented2/buildings/amusement_park"
 	}

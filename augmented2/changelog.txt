@@ -7,10 +7,10 @@ GreatWonders range fixed
 Bombard rate of ships adjusted
 Oil Wells tweaked
 City styles improved
-Shiism tech added
-New wonders: Taj Mahal, Osaka Castle, Kyoto Fushimi Inari
-New buildings: Madrasa
+New wonders: Taj Mahal, Osaka Castle, Kyoto Fushimi Inari, Jousting Tiltyard
+New buildings: Madrasa, Amusement Park
 Yasir as improvement building instead of small wonder.
+New techs: Shiism, Hastilude, Mass Entertainment (old renamed to Martial Games), Welding Technology, reworked tech tree
 
 2.6.18
 Modpack Installer file fixed

@@ -39,6 +39,7 @@ sprites =
 		"b.watchtower", "augmented2/buildings_small/watchtowers"
 		"b.madrasa", "augmented2/buildings_small/madrasa_s"
 		"b.yasir", "augmented2/buildings_small/yasir_s"
+		"b.amusement_park", "augmented2/buildings_small/amusement_park_s"
 	}
 
 [file]

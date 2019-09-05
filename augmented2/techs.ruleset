@@ -131,12 +131,12 @@ cost     = 10
 
 [advance_amphibious_warfare]
 name     = _("Amphibious Warfare")
-req1     = "Guerilla Warfare"
-req2     = "Automobile"
+req1     = "Mobile Warfare"
+req2     = "Offshore Exploration"
 flags    = ""
 graphic     = "a.amphibious_warfare"
 graphic_alt = "-"
-cost     = 930
+cost     = 1550
 
 [advance_animal_husbandry]
 name     = _("Animal Husbandry")
@@ -335,7 +335,7 @@ cost     = 120
 
 [advance_cinematography]
 name     = _("Cinematography")
-req1     = "Modern Theatre"
+req1     = "Theatre"
 req2     = "Electricity"
 flags    = ""
 graphic     = "a.cinematography"
@@ -358,7 +358,7 @@ req2     = "Radar"
 flags    = ""
 graphic     = "a.combined_arms"
 graphic_alt = "-"
-cost     = 1950
+cost     = 2450
 
 [advance_combustion]
 name     = _("Combustion")
@@ -372,13 +372,13 @@ cost     = 740
 
 [advance_communism]
 name     = _("Communism")
-req1     = "Socialism"
-req2     = "Industrialization"
+req1     = "Guerilla Warfare"
+req2     = "The Corporation"
 flags    = ""
 graphic     = "a.communism_sov"
 graphic_alt = "a.communism"
 helptext = _("Reduces the effect of Cathedrals and Mysticism.")
-cost     = 590
+cost     = 890
 
 [advance_computers]
 name     = _("Computers")
@@ -388,7 +388,7 @@ root_req = "Electronics"
 flags    = ""
 graphic     = "a.computers"
 graphic_alt = "-"
-cost     = 1570
+cost     = 1770
 
 [advance_concrete]
 name     = _("Concrete")
@@ -572,7 +572,7 @@ root_req = "Communism"
 flags    = ""
 graphic     = "a.espionage"
 graphic_alt = "-"
-cost     = 670
+cost     = 1100
 
 [advance_exploration]
 name     = _("Exploration")
@@ -711,12 +711,12 @@ cost     = 7500
 
 [advance_guerilla_warfare]
 name     = _("Guerilla Warfare")
-req1     = "Communism"
+req1     = "Labor Union"
 req2     = "Tactics"
 flags    = ""
 graphic     = "a.guerilla_warfare"
 graphic_alt = "-"
-cost     = 680
+cost     = 700
 
 [advance_gunpowder]
 name     = _("Gunpowder")
@@ -726,6 +726,16 @@ root_req = "Iron Working"
 graphic     = "a.gunpowder"
 graphic_alt = "-"
 cost     = 200
+
+[advance_hastilude]
+name     = _("Hastilude")
+req1     = "Chivalry"
+req2     = "Martial Games"
+flags    = ""
+root_req = "Martial Games"
+graphic     = "a.hastilude"
+graphic_alt = "-"
+cost     = 180
 
 [advance_hinduism]
 name     = _("Hinduism")
@@ -806,21 +816,22 @@ cost     = 110
 [advance_jet_propulsion]
 name     = _("Jet Propulsion")
 req1     = "Radar"
-req2     = "Labor Union"
+req2     = "Mobile Warfare"
 flags    = ""
 graphic     = "a.jet_propulsion"
 graphic_alt = "-"
 ;helptext = _("Enables movement of nuclear units.")
-cost     = 1980
+cost     = 2150
 
 [advance_labor_union]
 name     = _("Labor Union")
-req1     = "Guerilla Warfare"
-req2     = "Mobile Warfare"
+req1     = "Socialism"
+req2     = "Industrialization"
 flags    = ""
 graphic     = "a.labor_union"
 graphic_alt = "-"
-cost     = 1220
+helptext = _("Warning: Labor Union cancel Zaibatsu effect.")
+cost     = 580
 
 [advance_laser]
 name     = _("Laser")
@@ -914,6 +925,15 @@ graphic     = "a.martial_arts"
 graphic_alt = "-"
 cost     = 230
 
+[advance_martial_games]
+name     = _("Martial Games")
+req1     = "Drama"
+req2     = "Construction"
+flags    = ""
+graphic     = "a.martial_games"
+graphic_alt = "-"
+cost     = 80
+
 [advance_masonry]
 name     = _("Masonry")
 req1     = "Carpentry"
@@ -923,19 +943,18 @@ graphic     = "a.masonry"
 graphic_alt = "-"
 cost     = 30
 
-
 [advance_mass_entertainment]
 name     = _("Mass Entertainment")
-req1     = "Drama"
-req2     = "Construction"
+req1     = "Cinematography"
+req2     = "The Corporation"
 flags    = ""
 graphic     = "a.mass_entertainment"
 graphic_alt = "-"
-cost     = 80
+cost     = 880
 
 [advance_mass_production]
 name     = _("Mass Production")
-req1     = "Automobile"
+req1     = "Welding Technology"
 req2     = "The Corporation"
 flags    = ""
 graphic     = "a.mass_production"
@@ -981,20 +1000,21 @@ cost     = 1200
 
 [advance_mobile_warfare]
 name     = _("Mobile Warfare")
-req1     = "Automobile"
-req2     = "The Corporation"
-root_req = "Combustion"
+req1     = "Espionage"
+req2     = "Welding Technology"
 flags    = ""
+root_req = "Combustion"
 graphic     = "a.mobile_warfare"
 graphic_alt = "-"
-cost     = 950
+cost     = 1220
 
-[advance_modern_theatre]
-name     = _("Modern Theatre")
-req1     = "Mass Entertainment"
+[advance_theatre]
+name     = _("Theatre")
+req1     = "Hastilude"
 req2     = "Printing Press"
+root_req = "Literacy"
 flags    = ""
-graphic     = "a.modern_theatre"
+graphic     = "a.theatre"
 graphic_alt = "-"
 cost     = 240
 
@@ -1132,12 +1152,12 @@ cost     = 380
 
 [advance_plastics]
 name     = _("Plastics")
-req1     = "Mass Production"
-req2     = "Robotics"
+req1     = "Miniaturization"
+req2     = "Advanced Flight"
 flags    = ""
 graphic     = "a.plastics"
 graphic_alt = "-"
-cost     = 2380
+cost     = 1580
 
 [advance_polytheism]
 name     = _("Polytheism")
@@ -1183,7 +1203,7 @@ root_req = "Electronics"
 flags    = ""
 graphic     = "a.radar"
 graphic_alt = "-"
-cost     = 1470
+cost     = 1670
 
 [advance_radio]
 name     = _("Radio")
@@ -1259,13 +1279,13 @@ cost     = 790
 
 [advance_robotics]
 name     = _("Robotics")
-req1     = "Labor Union"
+req1     = "Mobile Warfare"
 req2     = "Computers"
 root_req = "Miniaturization"
 flags    = ""
 graphic     = "a.robotics"
 graphic_alt = "-"
-cost     = 1880
+cost     = 1980
 
 [advance_rocketry]
 name     = _("Rocketry")
@@ -1385,11 +1405,11 @@ cost     = 80
 [advance_socialism]
 name     = _("Socialism")
 req1     = "Egalitarianism"
-req2     = "University"
+req2     = "Machinery"
 flags    = ""
 graphic     = "a.socialism"
 graphic_alt = "a.communism"
-cost     = 320
+cost     = 420
 
 [advance_space_flight]
 name     = _("Space Flight")
@@ -1488,14 +1508,14 @@ cost     = 560
 
 [advance_television]
 name     = _("Television")
-req1     = "Cinematography"
+req1     = "Mass Entertainment"
 req2     = "Electronics"
 root_req = "Electricity"
 flags    = ""
 graphic     = "a.television"
 graphic_alt = "-"
 helptext = _("TIP: Together with Hollywood wonder, 3 additional entertainer specialists for each city. ")
-cost     = 990
+cost     = 1100
 
 [advance_taoism]
 name     = _("Taoism")
@@ -1623,6 +1643,16 @@ flags    = ""
 graphic     = "a.warrior_code"
 graphic_alt = "-"
 cost     = 12
+
+[advance_welding_technology]
+name     = _("Welding Technology")
+req1     = "Automobile"
+req2     = "The Corporation"
+root_req = "Steel"
+flags    = ""
+graphic     = "a.welding_technology"
+graphic_alt = "-"
+cost     = 950
 
 [advance_writing]
 name     = _("Writing")

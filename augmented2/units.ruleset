@@ -1004,7 +1004,7 @@ bombard_rate = 1
 [unit_sniper]
 name          = _("Sniper")
 class         = "Small Land"
-tech_req      = "Amphibious Warfare"
+tech_req      = "Guerilla Warfare"
 obsolete_by   = "None"
 graphic       = "u.sniper"
 graphic_alt   = "u.riflemen"
@@ -1894,7 +1894,7 @@ Janissaries are elite infantry, well disciplined and loyal only for Fundamentali
 [unit_technical]
 name          = _("Technical")
 class         = "Suicidal"
-tech_req      = "Labor Union"
+tech_req      = "Mobile Warfare"
 gov_req       = "Fundamentalism"
 obsolete_by   = "None"
 graphic       = "u.technical"
@@ -2439,7 +2439,7 @@ This unit can move only along roads and flat terrain.\
 [unit_mech_inf]
 name          = _("Mech. Inf.")
 class         = "Heavy Cavalry"
-tech_req      = "Labor Union"
+tech_req      = "Mobile Warfare"
 obsolete_by   = "None"
 graphic       = "u.mech_inf"
 graphic_alt   = "-"
@@ -2516,7 +2516,7 @@ bombard_rate = 2
 [unit_armor]
 name          = _("Armor")
 class         = "Big Land"
-tech_req      = "Mobile Warfare"
+tech_req      = "Welding Technology"
 obsolete_by   = "Reactive Armor"
 graphic       = "u.armor"
 graphic_alt   = "-"
@@ -2912,7 +2912,7 @@ Such unit can be mounted on a ship or reside in a fortress, but can't move by it
 [unit_turret_aa_gun]
 name          = _("Anti-aircraft Turret Gun")
 class         = "Turrets"
-tech_req      = "Mobile Warfare"
+tech_req      = "Welding Technology"
 obsolete_by   = "None"
 graphic       = "u.turret_aa_gun"
 graphic_alt   = "u.artillery"
