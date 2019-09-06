@@ -271,7 +271,7 @@ _("\
  (land or water) which is already producing shields. (Cities below size 3\
  will not celebrate). 5 Year Plan required.\n\
 * City improvements which would normally have an upkeep of 1 gold are\
- free of upkeep.\n\
+ free of upkeep (except of cities with Trade Union).\n\
 * Each city can support up to 3 shield and 8 gold/food unit payments for free;\
  food payment is doubled.\n\
 * Each city tolerates up to 3 aggressively deployed military units (cities size 8 or above support more of them);\

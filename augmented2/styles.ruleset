@@ -121,6 +121,17 @@ reqs = { "type", "name", "range"
          "Style", "Celtic", "Player"
        }
 
+[citystyle_electric]
+name        = _("?citystyle:ElectricAge")
+graphic     = "city.electricage"
+graphic_alt = "city.modern"
+citizens_graphic     = "electricage"
+citizens_graphic_alt = "generic"
+reqs = { "type", "name", "range"
+         "tech", "Electricity", "Player"
+         "Building", "Railway Station", "City"
+       }
+
 [citystyle_industrial]
 name        = _("?citystyle:Industrial")
 graphic     = "city.industrial"
@@ -131,17 +142,6 @@ reqs = { "type", "name", "range"
          "tech", "Turbine", "Player"
          "Building", "Railway Station", "City"
          "Building", "Factory", "City"
-       }
-
-[citystyle_electric]
-name        = _("?citystyle:ElectricAge")
-graphic     = "city.electricage"
-graphic_alt = "city.modern"
-citizens_graphic     = "electricage"
-citizens_graphic_alt = "generic"
-reqs = { "type", "name", "range"
-         "tech", "Electricity", "Player"
-         "Building", "Railway Station", "City"
        }
 
 [citystyle_modern]

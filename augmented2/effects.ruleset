@@ -1225,8 +1225,9 @@ reqs    =
 type    = "Upkeep_Free"
 value   = 1
 reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Communism", "Player", TRUE
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Communism", "Player", TRUE, TRUE
+      "Building", "Trade Union", "City", FALSE, TRUE
     }
 
 
