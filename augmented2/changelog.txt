@@ -2,6 +2,13 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.20
+Luxury from Amphitheater, Theatre Stage and Thermal Bath fixed
+Add to city size limit = 7
+Rice (2f) on Swamp, Deer (2f) in Forest, Pheasant (1f) also on Grassland
+Western Wall obsoleted by Guerilla Warfare
+2 traderoutes, +1 with automobile
+
 2.6.19
 GreatWonders range fixed
 Bombard rate of ships adjusted

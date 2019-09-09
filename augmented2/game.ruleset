@@ -76,8 +76,8 @@ granary_food_ini = 20, 20, 20, 20, 20, 30, 30, 40
 granary_food_inc = 0
 
 ; City center minimum outputs
-min_city_center_food    = 0
-min_city_center_shield  = 0
+min_city_center_food    = 1
+min_city_center_shield  = 1
 min_city_center_trade   = 0
 
 ; Square of initial city radius
@@ -584,7 +584,7 @@ reqs           =
       "Terrain", "Hills", "Local"
     }
 frequency      = 100
-effects        = "ReducePopulation", "EmptyProdStock"
+effects        = "ReducePopulation", "EmptyProdStock", "DestroyBuilding"
 
 [disaster_flood]
 name           = _("Flood")
@@ -593,7 +593,7 @@ reqs           =
       "Extra", "River", "Adjacent"
     }
 frequency      = 100
-effects        = "EmptyFoodStock"
+effects        = "EmptyFoodStock", "ReducePopulation"
 
 [disaster_fire]
 name           = _("Fire")

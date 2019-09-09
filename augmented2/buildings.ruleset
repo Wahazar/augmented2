@@ -3611,6 +3611,7 @@ graphic	= "b.western_wall"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
+      "Tech", "Guerilla Warfare", "Player", FALSE
     }
 build_cost	= 300
 upkeep		= 0

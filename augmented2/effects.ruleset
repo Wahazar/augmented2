@@ -507,13 +507,14 @@ reqs    =
 type    = "Max_Trade_Routes"
 value   = 2
 
+;additional with automobile
 [effect_trade_routes_automobile]
 type    = "Max_Trade_Routes"
 reqs    =
     { "type", "name", "range", "present"
       "Tech", "automobile", "Player", TRUE
     }
-value   = 3
+value   = 1
 
 
 ; Base vision range 
@@ -662,7 +663,7 @@ reqs    =
     { "type", "name", "range"
       "Building", "Thermal Bath", "City"
       "Extra", "River", "Local"
-      "CityTile", "Center", "Local"
+;      "CityTile", "Center", "Local"
       "OutputType", "Luxury", "Local"
     }
 
@@ -7704,6 +7705,7 @@ reqs    =
       "Tech", "Cinematography", "Player", FALSE
       "Building", "Amphitheater", "City", TRUE
       "OutputType", "Luxury", "Local", TRUE
+      "CityTile", "Center", "Local", TRUE
     }
 
 [effect_amphitheater_culture]
@@ -7732,11 +7734,12 @@ reqs    =
       "Tech", "Cinematography", "Player"
       "Building", "Theatre Stage", "City"
       "OutputType", "Luxury", "Local"
+      "CityTile", "Center", "Local"
     }
 
 [effect_theatre_culture]
 type    = "History"
-value	= 1
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Theatre Stage", "City"
@@ -8059,7 +8062,7 @@ reqs    =
 
 [effect_jousting_tiltyard_culture]
 type    = "History"
-value	= 2
+value	= 1
 reqs	=
     { "type", "name", "range"
       "Building", "Jousting Tiltyard", "City"
