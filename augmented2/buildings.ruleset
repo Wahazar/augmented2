@@ -396,6 +396,8 @@ With a Stables Barracks, each new cavalry (horse based) unit built in a\
 If the Horse strategic resource is located within range of the city's\
  vision radius, the construction of Stables Barracks gives an additional\
  2 gold income negating the upkeep cost.\
+"), _("\
+In case of Absolutism, also Chariots built in Stables Barracks would gain Veteran status.\
 ")
 
 [building_workshop_barracks]
@@ -1540,7 +1542,6 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Fusion Power", "Player"
       "Building", "Factory", "City"
-      "Building", "Library", "City"
       "Building", "University", "City"
       "Building", "Research Lab", "City"
     }
@@ -1570,7 +1571,6 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Environmentalism", "Player"
       "Building", "Factory", "City"
-      "Building", "Library", "City"
       "Building", "University", "City"
       "Building", "Research Lab", "City"
     }
@@ -1609,8 +1609,8 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Nanotechnology", "Player"
       "Building", "Factory", "City"
-      "Building", "Library", "City"
       "Building", "University", "City"
+      "Building", "Research Lab", "City"
       "Building", "Space Lift", "City"
     }
 graphic	= "b.space_structural"
@@ -2608,6 +2608,8 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nanotechnology", "Player"
+      "Building", "Research Lab", "City"
+      "Building", "Apollo Program", "World"
 	 "MinCulture", "18500", "Player"
     }
 graphic	= "b.space_lift"
@@ -2901,6 +2903,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Flight", "Player"
+      "Building", "Research Lab", "City"
 	 "MinCulture", "12000", "Player"
     }
 graphic	= "b.apollo_program"

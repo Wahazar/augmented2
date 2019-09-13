@@ -2,6 +2,16 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.21
+AI gains trade from Palace under Tribal
+Migrants no longer Unique
+OneAttack for all Air and for direct fire artillery
+Weak units hp/cost tweaked
+Veteran bonus for govs: 
+Despotism+Stable Barracks: Chariot, Direct Democracy: Phalanx, Archers, First Republic: Legion, Swordsmen, Monarchy: Pikemen, Arbalest, 
+Thalassocracy: Sea units, Legalism: Halberdiers, Democracy: Riflemen, Sniper, Republic: Builders, Train
+Communism: Partisan, Federation: Diplomat, Spy, Fascism: Paratroopers 
+
 2.6.20
 Luxury from Amphitheater, Theatre Stage and Thermal Bath fixed
 Add to city size limit = 7

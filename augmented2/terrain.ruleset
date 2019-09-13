@@ -1755,7 +1755,7 @@ reqs           =
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
     }
-build_time     = 3
+build_time     = 4
 removal_time   = 0
 removal_time_factor = 2
 native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"

@@ -29,6 +29,17 @@ options="+Freeciv-2.6-ruleset"
 ; */ <-- avoid gettext warnings
 
 ; "Away" "Novice" "Easy" "Normal" "Hard" "Cheating" "Experimental"
+
+[effect_ai_cheat_palace]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "AI", "Cheating", "Player"
+      "Building", "Palace", "City"
+      "OutputType", "Trade", "Local"
+    }
+
 [effect_ai_cheat_food]
 type    = "Upkeep_Factor"
 value   = -1
@@ -128,6 +139,39 @@ value   = -20
 reqs    =
     { "type", "name", "range"
       "AI", "Cheating", "Player"
+    }
+
+[effect_ai_easy_palace]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "AI", "Easy", "Player"
+      "Building", "Palace", "City"
+      "Gov", "Tribal", "Player"
+      "OutputType", "Trade", "Local"
+      "CityTile", "Center", "Local"
+    }
+
+[effect_ai_normal_palace]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "AI", "Normal", "Player"
+      "Building", "Palace", "City"
+      "Gov", "Tribal", "Player"
+      "OutputType", "Trade", "Local"
+    }
+
+[effect_ai_hard_palace]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "AI", "Hard", "Player"
+      "Building", "Palace", "City"
+      "OutputType", "Trade", "Local"
     }
 
 [effect_ai_easy_sci]
@@ -2686,13 +2730,135 @@ reqs    =
       "Building", "Statue of Liberty", "Player", FALSE
     }
 
+;bonuses for gov. veterancy levels:
+
+[effect_veteran_despotism]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "UnitType", "Chariot", "Local"
+      "Building", "Stables Barracks", "City"
+    }
+
+[effect_veteran_direct_democracy_phalanx]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Direct Democracy", "Player"
+      "UnitType", "Phalanx", "Local"
+    }
+
+[effect_veteran_direct_democracy_archers]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Direct Democracy", "Player"
+      "UnitType", "Archers", "Local"
+    }
+
+[effect_veteran_first_republic_legion]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "First Republic", "Player"
+      "UnitType", "Legion", "Local"
+    }
+
+[effect_veteran_first_republic_swordsmen]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "First Republic", "Player"
+      "UnitType", "Swordsmen", "Local"
+    }
+
+[effect_veteran_monarchy_pikemen]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+      "UnitType", "Pikemen", "Local"
+    }
+
+[effect_veteran_monarchy_arbalest]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+      "UnitType", "Arbalest", "Local"
+    }
+
+[effect_veteran_thalassocracy]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Gov", "Thalassocracy", "Player", TRUE
+      "UnitClass", "Sea", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_veteran_legalism_halberdier]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Legalism", "Player"
+      "UnitType", "Halberdier", "Local"
+    }
+
+[effect_veteran_democracy_riflemen]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+      "UnitType", "Riflemen", "Local"
+    }
+
+[effect_veteran_democracy_sniper]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+      "UnitType", "Sniper", "Local"
+    }
+
+[effect_veteran_republic_builders]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+      "UnitType", "Builders", "Local"
+    }
+
+[effect_veteran_republic_train]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+      "UnitType", "Train", "Local"
+    }
+
 [effect_veteran_communism]
 type    = "Veteran_Build"
 value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "Communism", "Player"
-      "UnitFlag", "Diplomat", "Local"
+      "UnitType", "Partisan", "Local"
     }
 
 [effect_veteran_federation]
@@ -2702,6 +2868,15 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
       "UnitFlag", "Diplomat", "Local"
+    }
+
+[effect_veteran_fascism]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fascism", "Player"
+      "UnitType", "Paratroopers", "Local"
     }
 
 [effect_partisan_communism]
@@ -6379,16 +6554,6 @@ reqs    =
       "Building", "Lighthouse", "City", FALSE
     }
 
-[effect_veteran_thalassocracy]
-type    = "Veteran_Build"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Gov", "Thalassocracy", "Player", TRUE
-      "UnitClass", "Sea", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-    }
 
 ; 1 - 1 = 0% with Thalassocracy
 [effect_waste_distance_thalassocracy]
@@ -6464,7 +6629,7 @@ reqs	=
 
 [effect_incite_cost_direct_democracy]
 type = "Incite_Cost_Pct"
-value = 100
+value = 200
 reqs	=
     { "type", "name", "range"
       "Gov", "Direct Democracy", "Player"
@@ -6472,7 +6637,7 @@ reqs	=
 
 [effect_incite_cost_democracy]
 type = "Incite_Cost_Pct"
-value = 100
+value = 200
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Slavery Abolition", "Player", FALSE
@@ -8084,3 +8249,5 @@ reqs    =
       "OutputType", "Trade", "Local"
       "Building", "Trade Union", "City"
     }
+
+

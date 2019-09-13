@@ -166,6 +166,7 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 10%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
+* Chariots gain Veteran level if built in city with Stable Barracks).\n\
 * Science outcome is decreased twice.\
 ")
 
@@ -205,6 +206,7 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 20%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
+* Pikemen and Arbalests gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
 * Science and luxury outcome are decreased.\
 ")
 
@@ -240,6 +242,7 @@ _("\
  will force 2 unhappy citizen to become content.\n\
 * Base corruption is 20%. This increases slowly with distance from the capital\n\
 * Base production waste is 30%, regardless of distance from capital.\n\
+* Halberdiers gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
 * Science outcome is decreased.\
 ")
 
@@ -282,6 +285,7 @@ _("\
 * Base corruption is 30%, but is not affected by distance to the capital.\n\
 * There is small 10% production waste.\
 * Communism is relatively tolerant of cosmopolitan cities.\n\
+* Partisans gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
 * If United Nation wonder was built by any player, inciting communistic cities is 4x more expensive.\n\
 * Gold outcome is decreased, luxury outcome is substantially supressed by 60% (except for cities with Trade Union improvement: 30%).\
 ")
@@ -370,6 +374,8 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 10%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
+* Legions or Swordsmen gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
+* Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
 * Gold and luxury outcome is increased.\
 ")
 
@@ -407,6 +413,8 @@ _("\
  capital.\n\
 * Has a senate that may prevent declaration of war.\
 * Direct Democracy is relatively tolerant of foreginers metics in cities.\
+* Phalanx and Archers gain additional veterancy level (cumulative with Barracks).\n\
+* Inciting revolt is 3x more expensive than Despotism or Monarchy.\n\
 * Science outcome is increased.\
 ")
 
@@ -488,6 +496,8 @@ _("\
  capital.\n\
 * Has a senate that may prevent declaration of war.\n\
 * Federation is relatively tolerant of cosmopolitan cities.\n\
+* Diplomats and Spies gain additional veterancy level (secretary).\n\
+* Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
 * Gold outcome is increased.\
 ")
 
@@ -529,7 +539,9 @@ _("\
 * Base production waste is 5%. This increases slowly with distance from the\
  capital.\
 * Republic is relatively tolerant of cosmopolitan cities.\n\
+* Builders and freight Trains gain additional veterancy level.\n\
 * Bribing units is possible, but with Slavery Abolition wonder, is very expensive.\n\
+* Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
 * Gold and science outcome is increased.\
 ")
 
@@ -571,6 +583,7 @@ _("\
  capital.\n\
 * Has a senate that may prevent declaration of war.\n\
 * Democracy is very tolerant of multicultural cities.\n\
+* Riflemen and Snipers gain additional veterancy level (cumulative with Barracks).\n\
 * Revolt inciting is possible, but with Slavery Abolition wonder, is very expensive.\n\
 * Science and gold outcome is increased.\
 ")

@@ -508,7 +508,7 @@ build_cost    = 20
 pop_cost      = 1
 attack        = 1
 defense       = 1
-hitpoints     = 10
+hitpoints     = 12
 firepower     = 1
 move_rate     = 1
 vision_radius_sq = 2
@@ -605,7 +605,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
-flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "Unique", "Unbribable", "NoVeteran"
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "NoVeteran"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -661,6 +661,8 @@ For making Highways you need Engineers.\
 "), _("\
 Workers may gain experience from work enabling\
  them to work even faster.\
+"), _("\
+Republic grant additional veterancy level for the Builders.\
 ")
 
 [unit_builder]
@@ -705,7 +707,7 @@ Builders can make Railroad if rough road is already done for certain tile. \
 For making Highways you need Engineers.\
 "), _("\
 Builders may gain experience from work enabling \
-them to work even faster.\
+them to work even faster. Republic government grant additional veterancy level for new Builders.\
 ")
 
 [unit_engineers]
@@ -822,7 +824,7 @@ build_cost    = 6
 pop_cost      = 0
 attack        = 1
 defense       = 1
-hitpoints     = 10
+hitpoints     = 8
 firepower     = 1
 move_rate     = 1
 vision_radius_sq = 2
@@ -852,9 +854,9 @@ sound_fight   = "f_phalanx"
 sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
-attack        = 2
+attack        = 1
 defense       = 2
-hitpoints     = 12
+hitpoints     = 10
 firepower     = 1
 move_rate     = 1
 vision_radius_sq = 2
@@ -869,7 +871,10 @@ roles         = "DefendOkStartUnit", "FirstBuild"
 helptext      = _("\
 The Halberdiers are infantry equipped with long halberds, suitable for defending your cities,\
  or enforcing martial law.\
+"), _("\
+Legalism grant additional veterancy level for the Halberdier.\
 ")
+
 
 [unit_riot_police]
 name          = _("Riot Police")
@@ -886,7 +891,7 @@ build_cost    = 15
 pop_cost      = 0
 attack        = 2
 defense       = 3
-hitpoints     = 15
+hitpoints     = 12
 firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
@@ -966,6 +971,8 @@ helptext      = _("\
 Archers use bows to fire several rounds of arrows, thus can be used to wound enemy units.\
 "), _("\
 Due to indirect plunging fire, City Walls give no benefits to defenders.\
+"), _("\
+Direct Democracy grant additional veterancy level for the Archers.\
 ")
 bombard_rate = 3
 
@@ -1016,7 +1023,7 @@ build_cost    = 35
 pop_cost      = 0
 attack        = 9
 defense       = 4
-hitpoints     = 10
+hitpoints     = 12
 firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
@@ -1034,6 +1041,8 @@ helptext      = _("\
 Sniper sharpshooter squads can be used to wound enemy units or for reconnaissance.\
 "), _("\
 Snipers have large radius of view while, thanks to their excellent camouflage, are hard to spot.\
+"), _("\
+Democracy grant additional veterancy level for the Sniper.\
 ")
 bombard_rate = 1
 
@@ -1048,7 +1057,7 @@ sound_move    = "m_phalanx"
 sound_move_alt = "m_generic"
 sound_fight   = "f_phalanx"
 sound_fight_alt = "f_generic"
-build_cost    = 10
+build_cost    = 12
 pop_cost      = 0
 attack        = 1
 defense       = 2
@@ -1066,7 +1075,10 @@ flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
 The Phalanx is armored infantry, suitable for defending your cities.\
+"), _("\
+Direct Democracy grant additional veterancy level for the Phalanx.\
 ")
+
 
 [unit_pikemen]
 name          = _("Pikemen")
@@ -1168,7 +1180,10 @@ roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
 Riflemen are a line infantry equipped with precise riffled firearms, good for\
  defending your cities or frontline.\
+"), _("\
+Democracy grant additional veterancy level for the Riflemen.\
 ")
+
 
 [unit_infantry]
 name          = _("Infantry")
@@ -1306,6 +1321,8 @@ roles         = "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
 Legions are heavily armed and well disciplined infantry\
  units with an excellent offensive value.\
+"), _("\
+First Republic grant additional veterancy level for the Legion.\
 ")
 
 [unit_arbalest]
@@ -1337,6 +1354,8 @@ flags         = "Capturer"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 The Arbalest equipped with powerful crosbows can be used to the range attack on enemy units.\
+"), _("\
+Monarchy grant additional veterancy level for the Arbalest.\
 ")
 
 [unit_swordsmen]
@@ -1369,6 +1388,8 @@ roles         = "DefendOkStartUnit"
 helptext      = _("\
 Swordsmen are heavily armed and well disciplined infantry\
  units with an excellent offensive value.\
+"), _("\
+First Republic grant additional veterancy level for the Swordsmen.\
 ")
 
 [unit_samurai]
@@ -1600,6 +1621,8 @@ Paratroopers are experts at airborne attacks. From a friendly city,\
  immediately ready to act there. (Beware dropping into unseen territory,\
  as Paratroopers landing on a tile occupied by enemy units are easy\
  targets!)\
+"), _("\
+Fascism grant Veteran level for the Paratroopers (Elite with Infantry Barracks II)\
 ")
 paratroopers_range = 10
 paratroopers_mr_req = 1
@@ -1818,7 +1841,9 @@ A number of Partisans are released when an enemy conquers your\
  - You must run either a Democracy or a Communist government.\
 "), _("\
 Partisans are recruited from civilians, thus their cost is a city size.\
- Only shield upkeep is needed, food and gold upkeep is supported by citiziens.
+ Only shield upkeep is needed, food and gold upkeep is supported by citiziens.\
+"), _("\
+Under Communism gov. Partisans gain additional veterancy level (cumulative with Infantry Barracks II).\n\
 ")
 
 [unit_fanatics]
@@ -2161,6 +2186,8 @@ Chariots are horse-pulled war wagons. They have a stronger attack than\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
  (Triremes and Aaks).\
+"), _("\
+This unit can gain Veteran status if built in city with Stables Barracks, ruled by Despotism.\
 ")
 
 [unit_elephants]
@@ -2510,6 +2537,8 @@ Armoured Train can only use railroads, but can carry up to 3\
  artillery turrets or infantry units, beside of its own bombardment firepower.\
 "), _("\
 Trains HP can be quickly regenerated in any city with Railway Station.\
+"), _("\
+Factory or Workshop Barracks yield additional veterancy level (cumulative if both are present).\
 ")
 bombard_rate = 2
 
@@ -2969,7 +2998,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
-flags         = "CityBuster", "Only_Native_Attack"
+flags         = "CityBuster", "Only_Native_Attack", "OneAttack"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Battering ram is an excellent unit for besieging cities, even those with city walls (but cannot occupy city itself).\
@@ -3002,7 +3031,7 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
-flags         = "CityBuster"
+flags         = "CityBuster", "OneAttack"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 The artillery is a very strong direct fire attacker but equally weak defender\
@@ -3034,7 +3063,7 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
-flags         = "CityBuster"
+flags         = "CityBuster", "OneAttack"
 roles         = "AttackStrongStartUnit"
 bonuses       =
    { "flag", "type", "value"
@@ -3200,7 +3229,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "HasNoZOC", "Light Shells", "IgWall"
+flags         = "AirAttacker", "OneAttack", "HasNoZOC", "Light Shells", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 Fighters can move anywhere and attack any unit.\
@@ -3336,7 +3365,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
-flags         = "FieldUnit", "AirAttacker", "HasNoZOC", "IgWall"
+flags         = "FieldUnit", "AirAttacker", "OneAttack", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
 Strike Aircrafts can be used both like Fighters or light Bombers.\
@@ -3376,7 +3405,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "Light Shells", "HasNoZOC", "IgWall"
+flags         = "AirAttacker", "OneAttack", "Light Shells", "HasNoZOC", "IgWall"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 An improved fighter or strike aircraft, with a higher speed and movement\
@@ -3415,7 +3444,7 @@ uk_shield     = 4
 uk_food       = 0
 uk_gold       = 2
 targets       = "Air", "Helicopter"
-flags         = "FieldUnit", "AirAttacker", "IgWall"
+flags         = "FieldUnit", "AirAttacker", "OneAttack", "IgWall"
 roles         = ""
 helptext      = _("\
 Strike Jets can be used both like Fighters or light Bombers.\
@@ -3456,7 +3485,7 @@ uk_shield     = 4
 uk_food       = 0
 uk_gold       = 3
 targets       = "Air", "Missile", "Helicopter"
-flags         = "Partial_Invis", "AirAttacker", "HasNoZOC"
+flags         = "Partial_Invis", "AirAttacker", "OneAttack", "HasNoZOC"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
 An improved Jet Fighter, with improved attack, higher movement\
@@ -3537,7 +3566,7 @@ uk_shield     = 4
 uk_food       = 0
 uk_gold       = 4
 targets       = "Air", "Missile", "Helicopter"
-flags         = "Partial_Invis", "AirAttacker", "HasNoZOC"
+flags         = "Partial_Invis", "AirAttacker", "OneAttack", "HasNoZOC"
 roles         = "DefendGood"
 helptext      = _("\
 An improved Hypersonic Stealth Fighter, with a higher movement\
@@ -3606,7 +3635,7 @@ build_cost    = 15
 pop_cost      = 0
 attack        = 0
 defense       = 1
-hitpoints     = 5
+hitpoints     = 10
 firepower     = 1
 move_rate     = 2
 vision_radius_sq = 2
@@ -3639,7 +3668,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
 attack        = 0
-defense       = 1
+defense       = 0
 hitpoints     = 5
 firepower     = 1
 move_rate     = 2
@@ -5147,7 +5176,7 @@ In some game strategies, hordes of Diplomats can be used to wreak\
  havoc on the enemy.  Little wonder that Diplomats are often\
  viewed with suspicion and fear!\
 "), _("\
-Diplomats built under Communist or Federation governments will\
+Diplomats built under Federation government will\
  start at the first veteran level (secretary).\
 ")
 
@@ -5221,7 +5250,7 @@ A Spy that survives the more aggressive actions (sabotage, theft,\
  inciting rebellion, and poisoning) escapes to the safety of the\
  nearest friendly city.\
 "), _("\
-Spies built under Communist or Federation governments will start\
+Spies built under Federation government will start\
  at the first veteran level (handler).\
 ")
 
@@ -5340,6 +5369,10 @@ Train can only use railroads, but is capable to fast transport many land units o
  It can also quickly transform terrain type.\
 "), _("\
 Trains HP can be quickly regenerated in any city with Railway Station.\
+"), _("\
+Factory or Workshop Barracks yield additional veterancy level (cumulative if both are present).\
+"), _("\
+Republic grant additional veterancy level for freight Trains.\
 ")
 
 [unit_explorer]
