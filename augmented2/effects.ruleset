@@ -2059,7 +2059,7 @@ reqs    =
 
 [effect_empire_size_base_despotism]
 type    = "Empire_Size_Base"
-value   = 10
+value   = 12
 reqs    =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"
@@ -2147,7 +2147,7 @@ reqs    =
 
 [effect_empire_size_step_anarchy]
 type    = "Empire_Size_Step"
-value   = 6
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
@@ -2163,7 +2163,7 @@ reqs    =
 
 [effect_empire_size_step_despotism]
 type    = "Empire_Size_Step"
-value   = 8
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"

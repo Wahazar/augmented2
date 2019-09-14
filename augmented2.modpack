@@ -3,7 +3,7 @@ options = "+Freeciv-2.6-modpack"
 baseURL = "http://149.156.194.203/~mczapkie/fc/augmented/"
 name = "augmented2"
 type = "Modpack"
-version = "2.6.19"
+version = "2.6.21"
 
 [files]
 list =

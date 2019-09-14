@@ -205,7 +205,7 @@ flags         = "ZOC", "DamageSlows", "AttFromNonNative"
 name          = _("?unitclass:Helicopter")
 min_speed     = 3
 hp_loss_pct   = 20
-flags         = "Unreachable", "DoesntOccupyTile", "CollectRansom", "Airliftable"
+flags         = "Unreachable", "DoesntOccupyTile", "CollectRansom", "Airliftable", "DamageSlows"
 
 [unitclass_air]
 ; /* TRANS: Unit class: used adjectivally */
@@ -213,7 +213,7 @@ name          = _("?unitclass:Air")
 min_speed     = 4
 hp_loss_pct   = 10
 hut_behavior  = "Frighten"
-flags         = "Unreachable", "DoesntOccupyTile", "CanPillage", "Airliftable", "KillCitizen"
+flags         = "Unreachable", "DoesntOccupyTile", "CanPillage", "Airliftable", "KillCitizen", "DamageSlows"
 
 [unitclass_bomb]
 ; /* TRANS: Unit class: used adjectivally */
@@ -260,7 +260,7 @@ flags         = "DamageSlows", "CanFortify", "DoesntOccupyTile"
 name          = _("?unitclass:Train")
 min_speed     = 3
 hp_loss_pct   = 0
-flags         = "BuildAnywhere", "DoesntOccupyTile", "CanPillage"
+flags         = "BuildAnywhere", "DoesntOccupyTile", "CanPillage", "DamageSlows"
 
 [unitclass_torpedos]
 ; /* TRANS: Unit class: used adjectivally */
