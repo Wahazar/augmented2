@@ -26,7 +26,6 @@ sprites =
 		"b.church", "augmented2/buildings_small/churchs"
 		"b.mosque", "augmented2/buildings_small/mosques"
 		"b.shrine_torii", "augmented2/buildings_small/shrine_torii_s"
-		"b.monk_monastery", "augmented2/buildings_small/monk_monastery_s"
 		"b.amphitheater", "augmented2/buildings_small/amphitheaters"
 		"b.theatre", "augmented2/buildings_small/theatres"
 		"b.infantry_barracks1", "augmented2/buildings_small/infantry_barracks1"

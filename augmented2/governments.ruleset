@@ -113,7 +113,7 @@ Compared to Despotism, a Tribal economy is more shield-oriented, without governm
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Increases by half the chance of infantry and light cavalry units getting the next veteran level\
+* Increases by half the chance of small land, infantry and light cavalry units getting the next veteran level\
  after a battle.\n\
 * Each worked tile that gives more than 2 Food, Shield, or Trade will\
  suffer a -1 penalty, unless the city working it is celebrating or Tribe Hut exist.\

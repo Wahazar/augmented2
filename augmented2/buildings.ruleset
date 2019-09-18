@@ -191,6 +191,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Construction", "Player", TRUE
+      "Extra", "Irrigation", "Adjacent", TRUE
       "Extra", "River", "Adjacent", FALSE
       "Terrain", "Lake", "Adjacent", FALSE
     }
@@ -215,8 +216,8 @@ Starting at size 5, growing cities incur an increasing risk of plague due\
  to overcrowding. An Aqueduct reduces that base chance by 10%.\
 "), _("\
 Building an Aqueduct in a city without adjancent tile access to a lake or\
- river requires knowledge of Construction. These Aqueducts cost more to\
- build and maintain.\
+ river requires knowledge of Construction and at least one irrigated tile within city radius. \
+These Aqueducts cost more to build and maintain.\
 ")
 
 [building_aqueduct_lake]
@@ -439,7 +440,7 @@ graphic_alt	= "b.city_walls"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 60
+build_cost	= 80
 upkeep		= 1
 sabotage	= 50
 sound		= "b_city_walls"
@@ -447,7 +448,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 The Bunkers fortification makes it easier to defend a city. They add a 100%\
  bonus to the intrinsic defense strength of units within the city against\
- land units including plunging fire artillery, but are ineffective against\
+ bombs and land units (including plunging fire artillery), but are ineffective against\
  airborne and sea units. Bunkers also prevent the loss of population which\
  occurs when a defending unit is defeated. Unlike City Walls, bunkers do\
  not restrict city growth.\
@@ -460,7 +461,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
       "Building", "Church", "City", TRUE
-	 "MinCulture", "1900", "Player", TRUE
+	 "MinCulture", "2900", "Player", TRUE
       "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -565,7 +566,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 40
+build_cost	= 60
 upkeep		= 0
 sabotage	= 50
 sound		= "b_city_walls"
@@ -580,9 +581,9 @@ City Walls make it easier to defend a city. They add a 100% bonus to\
  or if it is bombarded when population is below 9.
 "), _("\
 City Walls need to be dismantled to allow city growth beyond size of 48.\
- See Bunkers.\
+ For larger cities use Bunkers.\
 "), _("\
-Increases the vision range of the occupied city.\ See City Hall and Airport.\
+Increases the vision range of the occupied city.\
 ")
 
 [building_coastal_defense]
@@ -1164,7 +1165,7 @@ reqs	=
       "Tech", "Theology", "Player", TRUE
       "Building", "Church", "City", TRUE
       "Building", "Cathedral", "City", TRUE
-      "MinCulture", "2200", "Player", TRUE
+      "MinCulture", "3200", "Player", TRUE
       "Building", "Angkor Wat", "Player", FALSE
       "Building", "Forbidden City", "Player", FALSE
       "Building", "Sultan Palace", "Player", FALSE
@@ -1220,9 +1221,9 @@ sound		= "b_city_walls"
 sound_alt	= "b_generic"
 helptext	= _("\
 Palisade adds a +50% bonus to the intrinsic defense strength of units\
- within the city against land units but is ineffective against airborne,\
- sea units or plunging fire artillery. Unlike City Walls, Palisade does\
- not prevent the loss of population which occurs when a defending unit\
+ within the city against land units (and additiopnal 50% in case of Horse units),\
+ but is ineffective against airborne, sea units or plunging fire artillery. \
+ Unlike City Walls, Palisade does not prevent the loss of population which occurs when a defending unit\
  is defeated by a land unit. Wooden Palisades need upkeep to be renovated\
  or rebuilt, but unlike City Walls, doesn't constrain city growth.
 ")
@@ -1375,7 +1376,7 @@ reqs	=
       "Building", "University", "City", TRUE
       "Building", "Steel Mill", "City", FALSE
       "Building", "Cement Plant", "City", FALSE
-	 "MinCulture", "4500", "Player", TRUE
+	 "MinCulture", "5500", "Player", TRUE
     }
 graphic	= "b.research_lab"
 graphic_alt	= "-"
@@ -1480,7 +1481,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Shinto", "Player", TRUE
 	 "Building", "Temple", "City", TRUE
-	 "MinCulture", "1200", "Player", TRUE
+	 "MinCulture", "1300", "Player", TRUE
 	 "Building", "Church", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -1817,7 +1818,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Theatre", "Player"
-	 "MinCulture", "2900", "Player"
+	 "MinCulture", "3900", "Player"
     }
 graphic	= "b.theatre"
 graphic_alt	= "b.colosseum"
@@ -1958,6 +1959,8 @@ sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
 Player building it gets an embassy with all players.\
+"), _("\
+Any player's city with Library will gain additional culture point per turn.\
 ")
 
 [building_colosseum]
@@ -2043,7 +2046,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Tactics", "Player"
-	 "MinCulture", "4800", "Player"
+	 "MinCulture", "5800", "Player"
     }
 graphic	= "b.ecole_speciale_militaire"
 graphic_alt	= "b.university"
@@ -2277,7 +2280,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Jainism", "Player", TRUE
       "Building", "Temple", "City", TRUE
-      "MinCulture", "2100", "Player", TRUE
+      "MinCulture", "3100", "Player", TRUE
       "Building", "Kaaba", "Player", FALSE
       "Building", "King Richard's Crusade", "Player", FALSE
       "Building", "Michelangelo's Chapel", "Player", FALSE
@@ -2305,7 +2308,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Chivalry", "Player", TRUE
-	 "MinCulture", "1900", "Player", TRUE
+	 "MinCulture", "1800", "Player", TRUE
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -2340,7 +2343,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Invention", "Player"
-	 "MinCulture", "2900", "Player"
+	 "MinCulture", "2800", "Player"
     }
 graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
@@ -2382,8 +2385,10 @@ sound		= "w_lighthouse"
 sound_alt	= "w_generic"
 helptext	= _("\
 Gives all your sea units 1 additional movement point (except Triremes \
-while moving on rivers). Makes all your new sea units veterans (for all \
-your cities).\
+while moving on rivers). Makes all your new trireme units veterans (for all \
+your cities) and sea units deckhand (for all cities with Harbour).\
+"), _("\
+In case of Thalassocracy goverment, shield penalty is not applied to city with Lighthouse \
 ")
 
 [building_magellans_expedition]
@@ -2420,7 +2425,7 @@ reqs	=
       "Tech", "Electronics", "Player"
       "Building", "Factory", "City"
       "Building", "Library", "City"
-	 "MinCulture", "6200", "Player"
+	 "MinCulture", "6300", "Player"
     }
 graphic	= "b.massachusetts_institute_of_technology"
 graphic_alt	= "-"
@@ -2475,7 +2480,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Radioactivity", "Player"
       "Building", "Hospital", "City"
-	 "MinCulture", "4800", "Player"
+	 "MinCulture", "4200", "Player"
     }
 graphic	= "b.mobile-x-ray"
 graphic_alt	= "-"
@@ -2498,7 +2503,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Biology", "Player"
       "Building", "University", "City"
-	 "MinCulture", "4400", "Player"
+	 "MinCulture", "4300", "Player"
     }
 graphic	= "b.pasteur_institute"
 graphic_alt	= "-"
@@ -2513,6 +2518,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Pasteur Institute reduce risk of plaque in all your cities with Hospital by additional 20%. \n\
 It would also reveal one new advance, once completed.\n\
+On each turn, 1 culture point is added to each player's city, instead of just this city.\
 ")
 
 [building_pyramids]
@@ -2540,36 +2546,6 @@ generating some shield output produces one extra shield resource. \
 Under Despotism or Tribal governments, the Pyramids cancel the penalty \
 to worked tiles with output greater than 2 (for all kinds of output), \
 as if all your cities were always celebrating.\
-")
-
-[building_shakespeares_theatre]
-name		= _("Shakespeare's Theater")
-rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Theatre", "Player"
-	 "MinCulture", "4900", "Player"
-    }
-graphic	= "b.shakespeares_theatre"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-      "Tech", "Computers", "Player"
-    }
-build_cost	= 450
-upkeep		= 6
-sabotage	= 0
-sound		= "w_shakespeares_theatre"
-sound_alt	= "w_generic"
-helptext	= _("\
-Gives 1 additional luxury to every player's city, and 6 luxuries to the city \
-where it is located.\
-"), _("\
-Upon completion of this wonder, entertainer specialists' luxury \
-output increases to 3 for every nation.\
-"), _("\
-Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_slavery_abolition]
@@ -2676,6 +2652,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Polytheism", "Player", TRUE
+      "MinCulture", "900", "Player"
 	 "Building", "Church", "City", FALSE
 	 "Building", "Cathedral", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
@@ -2707,7 +2684,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Confucianism", "Player"
-	 "MinCulture", "2700", "Player"
+	 "MinCulture", "2800", "Player"
     }
 graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
@@ -2758,7 +2735,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Legalism", "Player"
       "Building", "Temple", "City"
-      "MinCulture", "2100", "Player"
+      "MinCulture", "2700", "Player"
 ;      "Building", "Temple of Artemis", "Player", FALSE
     }
 graphic         = "b.temple_of_city_god"
@@ -2807,7 +2784,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "University", "Player"
       "Building", "City Hall", "City"
-	 "MinCulture", "3500", "Player"
+	 "MinCulture", "4000", "Player"
     }
 graphic	= "b.warfare_museum"
 graphic_alt	= "b.colossus"
@@ -2825,6 +2802,32 @@ This building prevent autoupgrade with cost of veteran level \
 You can still upgrade units manually with cost of gold.\
 ")
 
+[building_western_wall]
+name		= _("Western Wall")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monotheism", "Player"
+      "Building", "City Walls", "City"
+    }
+graphic	= "b.western_wall"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Guerilla Warfare", "Player", FALSE
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_city_walls"
+sound_alt	= "w_generic"
+helptext	= _("\
+Add 50% defense for city, where it is builded (cumulative with City Walls, not cumulative with Great Wall), \
+against any Land unit (except those with indirect fire).\n\
+Additionally, prayers going to the sacred site would generate extra trade from each tile around the city that is already \
+generating some trade.\
+")
+
 [building_womens_suffrage]
 name		= _("Women's Suffrage")
 genus		= "SmallWonder"
@@ -2832,7 +2835,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Conscription", "Player"
       "Building", "Slavery Abolition", "Player"
-	 "MinCulture", "6400", "Player"
+	 "MinCulture", "7400", "Player"
     }
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
@@ -2917,11 +2920,10 @@ sabotage	= 0
 sound		= "w_apollo_program"
 sound_alt	= "w_generic"
 helptext	= _("\
-The entire map becomes permanently visible to the player who owns it \
--- the player always has up-to-date knowledge of all terrain and \
-cities (but not units) despite fog-of-war.  It allows all players to \
+Apollo Program allows all players to \
 start building spaceship parts (assuming they have researched the \
-necessary technologies).\
+necessary technologies and have Space Lift small wonder finished).\n\
+Existing of Apollo Program is also necessary to build Global Positioning System.\
 "), _("\
 Completion of the Apollo Program also allows nuclear-armed powers to \
 declare war without provocation, regardless of the existence of the \
@@ -3042,7 +3044,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Sikhism", "Player"
       "Building", "Temple", "City"
-	 "MinCulture", "3900", "Player"
+	 "MinCulture", "4500", "Player"
     }
 graphic	= "b.golden_temple"
 graphic_alt	= "b.palace"
@@ -3095,7 +3097,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Legalism", "Player"
-	 "MinCulture", "900", "Player"
+	 "MinCulture", "1500", "Player"
     }
 graphic	= "b.great_wall"
 graphic_alt	= "-"
@@ -3168,8 +3170,10 @@ All cities on the map are continuously visible to its \
 owner despite fog-of-war.\
 "), 
 _("\
-Upon completion of this wonder, entertainer specialists' luxury \
-output increases to 3 for every nation.\
+Upon completion of this wonder, for each nation which know Computers advance,
+entertainer specialists' luxury output increases to 3,
+ for every nation which know Computers advance,\
+and each city would gain 1 culture point.\
 "),
 _("\
 Completion of this wonder permanently doubles the effect of \
@@ -3183,7 +3187,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Theory of Gravity", "Player"
       "Building", "University", "City"
-	 "MinCulture", "4700", "Player"
+	 "MinCulture", "5700", "Player"
     }
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
@@ -3200,7 +3204,7 @@ Gives an immediate technology advance to the player that builds it, \
 and thereafter 6 extra research points every turn to its city.\
 "), _("\
 Completion of this wonder permanently doubles the effect of \
-Universities for every player.\
+Universities for every player as well as add 1 culture point to any city with University.
 ")
 
 [building_kaaba]
@@ -3266,7 +3270,8 @@ sound		= "b_temple"
 sound_alt	= "w_generic"
 helptext	= _("\
 Pilgrimages to this giant Shrine makes additional content citizen happy for every allied player's Temple with Shrine Torii \
-and 2 extra luxury points per city with Fushimi Inari wonder.\
+and 4 extra luxury points for city with Fushimi Inari wonder.\n\
+Each player's city with Shrine Torii and Temple gain 1 culture point.
 ")
 
 [building_b_large_hadron_collider]
@@ -3291,8 +3296,8 @@ helptext	= _("\
  Large Hadron Collider reveal two new advances, when finished.\
  It is the best way to gain Great Unification Theory.\n\
 Upon completion of this wonder, scientist specialists' research output \
-increases to 3 permanently for every nation.\
-
+increases to 3 permanently for every nation.\n\
+Each player's city with Research Center would gain 1 culture point.
 ")
 
 [building_leshan_buddha_statue]
@@ -3408,7 +3413,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Christianity", "Player", TRUE
       "Building", "Church", "City", TRUE
-	 "MinCulture", "3200", "Player", TRUE
+	 "MinCulture", "3800", "Player", TRUE
 	 "Building", "Temple", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
@@ -3431,7 +3436,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Doubles the base effect of Cathedrals which belong to the players allied with owner of this building. \n\
 This makes 3 additional unhappy citizens content in each allied city with a Cathedral; however, it does \
-not affect citizens made unhappy by aggression.\
+not affect citizens made unhappy by aggression.\n\
+Any city with Cathedral would also gain 1 additional culture point.
 ")
 
 [building_osaka_castle]
@@ -3476,6 +3482,36 @@ stationed in the city, or sabotage your buildings.\
 "), _("\
 Osaka Castle will also make content two citizens unhappy due to aggression
 in the city where is founded.\
+")
+
+[building_shakespeares_theatre]
+name		= _("Shakespeare's Theater")
+rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theatre", "Player"
+	 "MinCulture", "4900", "Player"
+    }
+graphic	= "b.shakespeares_theatre"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Computers", "Player"
+    }
+build_cost	= 450
+upkeep		= 6
+sabotage	= 0
+sound		= "w_shakespeares_theatre"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives 1 additional luxury to every player's city, and 6 luxuries to the city \
+where it is located.\
+"), _("\
+Upon completion of this wonder, entertainer specialists' luxury \
+output increases to 3 for every nation.\
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_statue_of_liberty]
@@ -3574,7 +3610,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Communism", "Player"
-	 "MinCulture", "9200", "Player"
+	 "MinCulture", "12500", "Player"
     }
 graphic	= "b.united_nations"
 graphic_alt	= "-"
@@ -3600,32 +3636,6 @@ Republic and Democracy).\
 "), _("\
 United Nations quadruple cost of inciting revolt in any cities belonging to that player, \
 or for any player's cities ruled by a communistic system.\
-")
-
-[building_western_wall]
-name		= _("Western Wall")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Monotheism", "Player"
-      "Building", "City Walls", "City"
-    }
-graphic	= "b.western_wall"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-      "Tech", "Guerilla Warfare", "Player", FALSE
-    }
-build_cost	= 300
-upkeep		= 0
-sabotage	= 0
-sound		= "w_city_walls"
-sound_alt	= "w_generic"
-helptext	= _("\
-Add 50% defense for city, where it is builded (cumulative with City Walls, not cumulative with Great Wall), \
-against any Land unit (except those with indirect fire).\n\
-Additionally, prayers going to the sacred site would generate extra trade from each tile around the city that is already \
-generating some trade.\
 ")
 
 [building_5_years_plan]

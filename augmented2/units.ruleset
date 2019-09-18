@@ -33,7 +33,7 @@ flags =
     _("Unbribable")
     _("TradeRoute"), _("Can establish trade routes (must travel to target city).")
     _("HelpWonder")
-    _("Horse"), _("Attack value halved when attacking Pikemen.")
+    _("Horse"), _("Attack value halved when attacking Pikemen or Palisade.")
     _("Armor"), _("Attack value halved when attacking anti-tank gun or RPG rangers.")
     _("Light Shells"), _("Attack value decreased when attacking armoured vehicle.")
     _("IgWall"), _("This unit ignore defenders bonus from City Walls improvement") ;FIXME

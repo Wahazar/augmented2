@@ -6,7 +6,8 @@ options = "+Freeciv-2.6-spec"
 [info]
 
 artists = "
-  Wahazar
+  Wahazar,
+  3dman_eu,
   wellcomeimages.org
   Ariel Steiner
   B.Ch.Torrissen
@@ -48,4 +49,5 @@ sprites =
 		"b.osaka_castle", "augmented2/wonders/Osaka_Castle_Bagus_Pagestu"
 		"b.fushimi_inari", "augmented2/wonders/Fushimi_Inari"
 		"b.jousting_tiltyard", "augmented2/wonders/jousting_tiltyard"
+		"b.monk_monastery", "augmented2/wonders/monk_monastery_3dman_eu"
 	}

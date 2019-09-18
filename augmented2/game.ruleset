@@ -393,8 +393,12 @@ target_reqs  =
 ;      "Gov", "Democracy", "Player", FALSE
       "Building", "Palace", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
       "Building", "Mausoleum of Mausolos", "City", FALSE
-      "Building", "United Nations", "Player", FALSE
+;      "Building", "United Nations", "Player", FALSE
     }
 
 [actionenabler_bribe_unit]
@@ -724,7 +728,7 @@ name           = _("All Your Hemisphere Mapped")
 type           = "Map_Known"
 unique         = FALSE
 value          = 50
-culture        = 20
+culture        = 200
 first_msg      = _("You're the first one to have mapped the half of entire world!")
 cons_msg       = _("You have mapped the half of entire world!")
 
@@ -733,7 +737,7 @@ name           = _("Megalopolis")
 type           = "Metropolis"
 unique         = FALSE
 value          = 80
-culture        = 200
+culture        = 500
 first_msg      = _("Your nation is the first with a city of population 80!")
 cons_msg       = _("One of your cities has reached population 80!")
 

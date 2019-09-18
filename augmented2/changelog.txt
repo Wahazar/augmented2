@@ -2,6 +2,12 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.22
+Several bugfixes and description corrections.
+Horse unit attack halved against Palisade.
+Bunkers protection againt Bombs.
+Culture pts fixed and tweaked
+
 2.6.21
 AI gains trade from Palace under Tribal
 Migrants no longer Unique

@@ -2645,6 +2645,17 @@ reqs    =
       "Gov", "Tribal", "Player", TRUE
     }
 
+[effect_combat_tribal_sl]
+type    = "Veteran_Combat"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Tribal", "Player", TRUE, TRUE
+      "UnitClass", "Small Land", "Local", TRUE, FALSE
+      "UnitFlag", "NonMil", "Local", FALSE, FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE, FALSE
+    }
+
 [effect_combat_tribal]
 type    = "Veteran_Combat"
 value   = 50
@@ -3473,7 +3484,7 @@ reqs    =
 
 [effect_workshop_barracks_wu]
 type    = "Veteran_Build"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Workshop Barracks", "City", TRUE
@@ -3484,7 +3495,7 @@ reqs    =
 
 [effect_workshop_barracks_bl]
 type    = "Veteran_Build"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Workshop Barracks", "City", TRUE
@@ -3495,7 +3506,7 @@ reqs    =
 
 [effect_workshop_barracks_lc]
 type    = "Veteran_Build"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Workshop Barracks", "City", TRUE
@@ -3506,7 +3517,7 @@ reqs    =
 
 [effect_workshop_barracks_mi]
 type    = "Veteran_Build"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Workshop Barracks", "City", TRUE
@@ -3584,7 +3595,7 @@ reqs    =
 
 [effect_cathedral_culture]
 type    = "History"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Cathedral", "City"
@@ -4027,7 +4038,7 @@ reqs    =
 ; Counteracts population pollution from any 2 other buildings
 [effect_mass_transit]
 type    = "Pollu_Pop_Pct"
-value   = -50
+value   = -25
 reqs    =
     { "type", "name", "range"
       "Building", "Mass Transit", "City"
@@ -4393,7 +4404,7 @@ reqs    =
 ; Recycling Center gives a lesser additional bonus with plants
 [effect_recycling_center]
 type    = "Pollu_Prod_Pct"
-value   = -50
+value   = -25
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Recycling Center", "City", TRUE
@@ -5146,7 +5157,7 @@ reqs    =
 
 [effect_hoover_dam_culture]
 type    = "History"
-value	= 4
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Hoover Dam", "City"
@@ -5182,10 +5193,11 @@ reqs    =
 
 [effect_isaac_newtons_college_culture]
 type    = "History"
-value	= 6
+value	= 1
 reqs	=
     { "type", "name", "range"
-      "Building", "Isaac Newton's College", "City"
+      "Building", "Isaac Newton's College", "World"
+      "Building", "University", "City"
     }
 
 [effect_js_bachs_cathedral_lux]
@@ -5399,10 +5411,11 @@ reqs    =
 
 [effect_atlantic_telegraph_company_culture]
 type    = "History"
-value	= 2
+value	= 1
 reqs	=
     { "type", "name", "range"
-      "Building", "Atlantic Telegraph Company", "City"
+      "Building", "Atlantic Telegraph Company", "Player"
+      "Building", "Library", "City"
     }
 
 [effect_michelangelos_chapel]
@@ -5416,10 +5429,11 @@ reqs    =
 
 [effect_michelangelos_chapel_culture]
 type    = "History"
-value	= 8
+value	= 1
 reqs	=
     { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "City"
+      "Building", "Michelangelo's Chapel", "World"
+      "Building", "Cathedral", "City"
     }
 
 [effect_mausoleum_of_mausolos]
@@ -5502,7 +5516,7 @@ reqs    =
 
 [effect_pyramids_culture]
 type    = "History"
-value	= 2
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Pyramids", "City"
@@ -5556,10 +5570,11 @@ reqs    =
 
 [effect_internet_culture]
 type    = "History"
-value	= 10
+value	= 1
 reqs	=
     { "type", "name", "range"
-      "Building", "Internet", "City"
+      "Building", "Internet", "World"
+      "Tech", "Computers", "Player"
     }
 
 ;augmented: obsoleted
@@ -5599,10 +5614,11 @@ reqs    =
 
 [effect_shakespeares_theatre_culture]
 type    = "History"
-value	= 8
+value	= 1
 reqs	=
     { "type", "name", "range"
-      "Building", "Shakespeare's Theatre", "City"
+      "Building", "Shakespeare's Theatre", "World"
+      "Tech", "Drama", "Player"
     }
 
 ; No_Anarchy includes no_senate effect
@@ -6490,6 +6506,7 @@ reqs    =
       "Building", "Internet", "World"
       "Specialist", "Elvis", "Local"
       "OutputType", "Luxury", "Local"
+      "Tech", "Computers", "Player"
     }
 
 ;augmented - new gov.:
@@ -7200,7 +7217,7 @@ type    = "History"
 value	= 4
 reqs	=
     { "type", "name", "range"
-      "Building", "Mobile X-ray", "Player"
+      "Building", "Mobile X-ray", "City"
     }
 
 [effect_slavery_abolition_culture]
@@ -7208,7 +7225,7 @@ type    = "History"
 value	= 6
 reqs	=
     { "type", "name", "range"
-      "Building", "Slavery Abolition", "Player"
+      "Building", "Slavery Abolition", "City"
     }
 
 [effect_massachusetts_institute_of_technology_culture]
@@ -7216,39 +7233,41 @@ type    = "History"
 value	= 6
 reqs	=
     { "type", "name", "range"
-      "Building", "Massachusetts Institute of Technology", "Player"
+      "Building", "Massachusetts Institute of Technology", "City"
     }
 
 [effect_pasteur_institute_culture]
 type    = "History"
-value	= 6
+value	= 1
 reqs	=
     { "type", "name", "range"
       "Building", "Pasteur Institute", "Player"
+      "Building", "University", "City"
     }
 
 [effect_large_hadron_collider_culture]
 type    = "History"
-value	= 10
+value	= 1
 reqs	=
     { "type", "name", "range"
-      "Building", "Pasteur Institute", "Player"
+      "Building", "Large Hadron Collider", "Player"
+      "Building", "Research Lab", "City"
     }
 
 [effect_space_lift_culture]
 type    = "History"
-value	= 6
+value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "Space Lift", "Player"
+      "Building", "Space Lift", "City"
     }
 
 [effect_global_positioning_culture]
 type    = "History"
-value	= 7
+value	= 6
 reqs	=
     { "type", "name", "range"
-      "Building", "Global Positioning System", "Player"
+      "Building", "Global Positioning System", "City"
     }
 
 [effect_leshan_buddha_statue_food]
@@ -7275,7 +7294,7 @@ type    = "History"
 value	= 3
 reqs    =
     { "type", "name", "range"
-      "Building", "Leshan Buddha Statue", "Player"
+      "Building", "Leshan Buddha Statue", "City"
     }
 
 [effect_kaaba_gold]
@@ -7302,7 +7321,7 @@ type    = "History"
 value	= 3
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Kaaba", "Player", TRUE
+      "Building", "Kaaba", "City", TRUE
     }
 
 [effect_mosque]
@@ -7362,7 +7381,7 @@ type    = "History"
 value	= 2
 reqs    =
     { "type", "name", "range"
-      "Building", "Western Wall", "Player"
+      "Building", "Western Wall", "City"
     }
 
 [effect_angkor_wat]
@@ -7746,10 +7765,10 @@ reqs    =
 
 [effect_golden_temple_culture]
 type    = "History"
-value	= 4
+value	= 3
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Golden Temple", "Player", TRUE
+      "Building", "Golden Temple", "City", TRUE
     }
 
 [effect_js_bachs_cathedral]
@@ -7782,7 +7801,7 @@ reqs    =
 
 [effect_church_culture]
 type    = "History"
-value	= 2
+value	= 1
 reqs    =
     { "type", "name", "range"
       "Building", "Church", "City"
@@ -7818,7 +7837,7 @@ reqs    =
 
 [effect_monk_monastery_culture]
 type    = "History"
-value	= 1
+value	= 2
 reqs    =
     { "type", "name", "range"
       "Building", "Monk Monastery", "City"
@@ -7936,6 +7955,16 @@ reqs    =
       "UnitClass", "Torpedos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "IgWall", "Local", FALSE
+    }
+
+
+[effect_palisade_1]
+type    = "Defend_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Palisade", "City", TRUE
+      "UnitFlag", "Horse", "Local", TRUE
     }
 
 [effect_palisade_visible]
@@ -8056,13 +8085,13 @@ reqs    =
 ;      "UnitClass", "Merchant", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
-      "UnitClass", "Turrets", "Local", FALSE
+;      "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Trireme", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
-      "UnitClass", "Bomb", "Local", FALSE
+;      "UnitClass", "Bomb", "Local", FALSE
       "UnitClass", "Torpedos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
     }
@@ -8098,7 +8127,7 @@ reqs    =
 
 [effect_warfare_museum_culture]
 type    = "History"
-value	= 2
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Warfare Museum", "City"
@@ -8144,6 +8173,7 @@ value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Madrasa", "City"
+      "Gov", "Fundamentalism", "Player"
       "OutputType", "Science", "Local"
     }
 
@@ -8168,11 +8198,12 @@ reqs    =
 
 [effect_kyoto_fushimi_inari_culture]
 type    = "History"
-value	= 3
+value	= 1
 reqs	=
     { "type", "name", "range", "present"
-      "Building", "Kyoto Fushimi Inari", "City", TRUE
+      "Building", "Kyoto Fushimi Inari", "Player", TRUE
       "Building", "Shrine Torii", "City", TRUE
+      "Building", "Temple", "City", TRUE
     }
 
 [effect_kyoto_fushimi_inari_luxury]

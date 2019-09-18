@@ -493,6 +493,7 @@ req2     = "Masonry"
 flags    = ""
 graphic     = "a.drama"
 graphic_alt = "-"
+helptext = _("Additional culture point to each city, if Shakespeare's Theater exist")
 cost     = 50
 
 [advance_economics]
