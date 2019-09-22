@@ -14,6 +14,7 @@ artists = "
    David_Shea, 
    Pixabay CC,
    ngunjaca
+   Zimlock
 "
 [extra]
 sprites =
@@ -45,4 +46,6 @@ sprites =
 		"b.yasir", "augmented2/buildings/yasir"
 		"b.amusement_park", "augmented2/buildings/amusement_park"
 		"b.trade_union", "augmented2/buildings/trade_union"
+		"b.river_embankments", "augmented2/buildings/embankments"
+		"b.fire_station", "augmented2/buildings/fire_station_Zimlock"
 	}

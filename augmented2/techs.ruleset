@@ -392,8 +392,8 @@ cost     = 1780
 
 [advance_concrete]
 name     = _("Concrete")
-req1     = "Machine Tools"
-req2     = "Turbine"
+req1     = "Steel"
+req2     = "Labor Union"
 flags    = ""
 graphic     = "a.concrete"
 graphic_alt = "-"
@@ -1099,7 +1099,7 @@ cost     = 1990
 [advance_offshore_exploration]
 name     = _("Offshore Exploration")
 req1     = "Concrete"
-req2     = "Automobile"
+req2     = "Turbine"
 flags    = ""
 graphic     = "a.offshore_exploration"
 graphic_alt = "-"

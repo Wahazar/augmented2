@@ -80,6 +80,8 @@ not changed yet
 TERRAIN:
 --------
 
+- Transforming terrain from forest/to forest possible with Forestry tech.
+
 - Jungles receive +1 Shield (2/1/0) with Railroad on its tile and Railway Station in city. 
   Swamps can be irrigated for +1 Food (to 2/0/0), next irrigation convert them to grassland. 
   Tundras can be mined for +1 Shield (instead of irrigated)
@@ -89,8 +91,14 @@ TERRAIN:
   unless they have an Oasis; this simulates a growth boost like Nile
   floods.
 
+- Irrigation possible with Agriculture Farming tech, and can be performed if River, Lake or Swamp is adjacent to tile, 
+  or another irrigated tile is cardinally adjacent. Electricity allow to irrigate if Sea is cardinally adjacent, 
+  and Recycling allow to irrigate without any restrictions.
+
 - Mountains give extra vision range for small reconnaissance units. Cities can not be placed over
   Mountains. Regular military units can't go into unroaded mountains, except of spec-ops units.
+
+- The discovery of Bronze Working allow mining.
 
 - Mines+Railroads in mountains and deserts give extra Shield production, if Cement Plant and Railroad Station is builded in city. 
   Mines+Railroads on coal give extra trade point in above case. 
@@ -113,15 +121,9 @@ TERRAIN:
   without the need of Workers/Engineers. Jungles and Forests are less
   affected by global warming.
 
-- No minimum city output. City central tile simply gets  +1 Shield, +1 Trade.
+- Environmentalism allow to make Wind Turbine on hills with irrigation.
 
-- Irrigation possible with Agriculture Farming tech, and can be performed if River, Lake or Swamp is adjacent to tile, 
-or another irrigated tile is cardinally adjacent. Electricity allow to irrigate if Sea is cardinally adjacent, 
-and Recycling allow to irrigate without any restrictions.
-
-- Transforming terrain from forest/to forest possible with Forestry tech.
-
-- Making mines possible with Bronze Working tech.
+- No minimum city output. City central tile simply gets  +1 Shield, and without mine, +1 Food 
 
 - Tile transform is possible when Combustion tech is known (with some earlier exception for steam barge).
 
@@ -168,57 +170,54 @@ DEFENSE:
 
 - Halved the terrain defense bonuses, now more similar to civ3 values:
 
-TERRAIN                  NEW      OLD
-Forest/Jungle/Swamp      +25%     +50%
-Hills                    +50%     +100%
-Mountains                +100%    +200%
+TERRAIN                        
+Forest/Jungle/Swamp      +25%     
+Hills                    +50%     
+Mountains                +100%    
 
-RIVER                    +25%     +50%
+RIVER                    +25%     
 
 VETERAN
-Recruit                  +25%     (=)
-Veteran                  +50%     (=)
-Hardened                 +75%     (=)
-Elite                    +100%    (=)
-Veteran Elite            +125%    (=) 
+Recruit                  +25%     
+Veteran                  +50%     
+Hardened                 +75%     
+Elite                    +100%    
+Veteran Elite            +125%    
 
-FORTIFIED                +50%     (=)
+FORTIFIED                +50%     
 (only military units can fortify; inside cities, they are
 always considered fortified)
 
-BASE             VS LAND  VS SEA   VS AIR   VS MISSILE
+BASE             VS LAND  VS SEA   VS AIR   VS MISSILE/BOMB
 Fort             +50%     +50%     +0%      +0%
 Fortress         +100%    +100%    +50%     +50%
 Airstrip         +0%      +0%      +50%     +50%
 Airbase          +50%     +50%     +100%    +100%
 
-CITY             VS LAND  VS SEA   VS AIR   VS MISSILE
-Ruins	  	      +25% for Small Land
+CITY             VS LAND  VS SEA   VS AIR   VS MISSILE/BOMB
+Ruins	  	 +25% for Small Land
 Town (Pop<=8)    +50%     +0%      +0%      +0%
 City (Pop>8)     +100%    +50%     +0%      +0%
 
 Buildings each add:
+Palisade         +50% (+50% against Horses)
 Walls            +100%    +0%      +0%      +0%
-Palisade         +25%
+Bunkers          +100%    +0%      +0%      +100%
 Great Wall(W)    +50%     +0%      +0%      +0%
 Coastal Defense  +0%      +100%    +0%      +0%
 SAM Battery      +0%      +0%      +100%    +0%
-SDI Defense      +0%      +0%      +0%      +100%
+SDI Defense      +0%      +0%      +0%      +100%/50%
 
 - Every City of any size receives an inherent Defend_Bonus = +50%
-  against all kinds of land units.
+  against all kinds of land units except of Train and Turrets.
 
-- Every City with Pop>8 receives an additional free Defend_Bonus = +25%
+- Every City with Pop>8 receives an additional free Defend_Bonus = +50%
   against land units.
 
-- Every City with Pop>16 receives an additional free Defend_Bonus = +25%
-  against both land and sea units.
-
-- Walls effect reduced from 200% to 100%, and cost reduced from 60
-  to 30. Bonus not apply against plunging fire units. Walls upkeep 1 gold.
+- Walls effect not apply against plunging fire units. 
 
 - Great Wall gives additional Defend_Bonus = +50% against Land units,
-  and prevents population loss in any city when a defending unit loses.
+  and prevents population loss in any allied city when a defending unit loses.
 
 Total Defense = (UNIT DEFENSE) * (100+TERRAIN)/100 * (100+RIVER)/100
  * (100+CITY+BASE)/100 * (100+FORTIFIED)/100 * (100+VETERAN)/100
@@ -234,8 +233,9 @@ For example Monarchy have 4 unit shield upkeep free, but only 3 units gold upkee
 while First Republic only 1 unit shield  upkeep free, but 4 units gold upkeep free. 
 Food upkeep depend only on city size (except of Communism, which offer more free food).
 
-2. Neither government is immune on bribery or revolting (except of cities with Palace etc). 
-However cost of such actions depend on government.
+2. Neither government is immune on bribery or revolting (except of cities with Palace etc, or Fascism without Statue of Liberty). 
+However cost of such actions depend on government, and sometimes on Wonders 
+(for example, 200% for inciting revolt in case of Democracy without Slavery Abolition, 1000 % with)
 
 3. There is no extra gold per tile in Democracy or Republic 
 (unless Women's Suffrage wonder exists, wich gives such effect for Democracy, or extra shield for Republic).
@@ -246,59 +246,7 @@ For example science and gold is suppressed under Tribalism, while improved under
 It can throw out Tribal, Democracy or Republic gov.
 
 Gov. table reference:
-				anar. tri.	desp. mon. f.rep. rep.	d.dem. dem.	com.	fund.	fed.	thal.	fasc.					
-
-shield base waste		50	30	10	20	10	5	20	25	10	15	25	20	0					
-shield dist.waste		x	x	/2**	/2**	/2	/4**	/2	/4	x	/2	x	x	/4					
-food base waste		30	0	0	0	0	0	10	20s	30	0	15s	0	10s					
-food dist. waste		x	x	/1	/2	/2	/2	/4	x	x	/2	/4	/4	/2					
-gold base waste		x	30*	20	10	20	25	10	5	30	15	5	10	20					
-gold dist. waste		x	0	/1*	/2*	/2	/2	/4*	/4	x	/2	x	/4**	/2					
-max rate			x	60	90	80	70	60	50	40	90	40	70	60	80					
-																			
-* Corruption by Distance is doubled until Banking is researched  by the player																			
-** Waste by Distance is doubled until The Corporation is researched by the player																			
-
-sci.bonus/penalty		n	-25%	-50%	n	n	25%	25%	50%	n	-50%	n	n	-25%
-gold bonus/penalt		n	-25%	n	n	25%	50%	n	25%	-50%	n	25%	n	n
-lux bonus/penalty		-50%	n	n	-25%	n	n	n	25%	-75%	n	n	25%	-75%
-tile prod.penalty	 -1 if >2 -1 if >2 -1 if >2							   -1 if >2 shield land	
-
-empire size			x	8	10	14	16	16	20	32	28	14	24	12	16
-empire size step		x	4	8	14	14	16	16	32	14	10	24	12	8
-
-martial law each		1	0	1	1	1	0	0	0	2	0	0	1	2
-martial law max		3		3	2	1				3			2	2
-% enemy unhappy		100	100	100	100	100	50	60	33	70	100	80	33	150
-
-celebrate					Y	Y	Y	Y	Y			Y	Y	
-
-veteran+				Y											Y
-
-has senate							Y	Y	Y	Y 			Y	Y	
-
-revolution				Y			Y	Y	Y					
-incite multiplier		0.5	2	1	1	1	2	2	2/10**	1	10	3	1	x/2*	* with statue of Liberty				
-bribing multipl.		0.5	1	1	2	2	2/10**	1	5	1	5	3	1	4	** 10 without slavery abolition				
-
-lux												+2	+1						
-
-unit upkeep shield	1	1	1	1	1	1	1	1	1	1	1	1	2					
-unit upkeep food		1	1	1	1	1	1	1	1	2	1	1	1	1					
-unit upkeep gold		x	x	1	1	1	1	2	2	1	2	2	1	1					
-
-unhappy factor		0	0	0	1	1	1	1	2	1	1	1	3	1					
-max unit abroad		2	2	2	3	2	1	0	0	3	2	1	2	4					
-
-free upkeep shield	2	2	3	4	1	0/1	3	3	3	6	2	4	4					
-					
-free upkeep gold		x	x	2	3	4	3	1	0/1	8	4	2	1	6					
-
-* Corruption by Distance is doubled until Banking is researched
-  by the player
-** Waste by Distance is doubled until The Corporation is researched by the player.
-+ Partisans appear in conquered cities (democratic or communist) if
-  Guerilla Warfare has been researched by any player.
+see docs/gov.xls
 
 
 TECHS:
@@ -307,6 +255,7 @@ Improved tech tree.
 New techs:
 
 * absolutism 
+* advanced_rocketry
 * agricultural_farming 
 * alchemy 
 * animal_husbandry 
@@ -336,15 +285,19 @@ New techs:
 * first_republic 
 * forestry 
 * fundamentalism 
+* general_staff
 * glass_working 
 * great_unification_theory 
+* hastilude
 * hinduism 
 * imperialism 
 * islam 
+* jainism
 * jet_propulsion 
 * leather tanning
 * legalism 
 * machinery 
+* martial_games
 * mass_entertainment
 * modern_theatre
 * modern_warfare 
@@ -359,6 +312,7 @@ New techs:
 * saddle_stirrup 
 * satellite_system 
 * screw_propeller 
+* shiism
 * shinto 
 * shogunate 
 * sikhism 
@@ -366,11 +320,13 @@ New techs:
 * slave_trade 
 * socialism 
 * stone_knapping 
+* sunnism
 * super_soldiers 
 * taoism 
 * thalassocracy 
 * theory_of_relativity 
 * turbine 
+* welding_technology
 * vedism 
 * zaibatsu 
 

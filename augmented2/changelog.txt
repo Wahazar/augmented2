@@ -2,6 +2,13 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.23
+Rapture growth with Pyramids for Tribal and Despotism
+New disasters: Tsunami for coastial towns and Fire caused by Fallout 
+No incite Fascism except if target have Statue of Libery
+New improvments: River Embankments and Fire Station
+Pollution tweaked
+
 2.6.22
 Several bugfixes and description corrections.
 Horse unit attack halved against Palisade.

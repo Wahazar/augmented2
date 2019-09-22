@@ -391,6 +391,7 @@ target_reqs  =
     { "type",   "name", "range", "present"
 ;      "Gov", "Federation", "Player", FALSE
 ;      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Fascism", "Player", FALSE
       "Building", "Palace", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
       "Building", "Angkor Wat", "City", FALSE
@@ -400,6 +401,32 @@ target_reqs  =
       "Building", "Mausoleum of Mausolos", "City", FALSE
 ;      "Building", "United Nations", "Player", FALSE
     }
+
+
+[actionenabler_incite_city_1]
+action = "Incite City"
+actor_reqs    =
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Diplomat", "Local", TRUE
+      "UnitType", "Messenger", "Local", FALSE
+      "DiplRel", "Alliance", "Local", FALSE
+      "DiplRel", "Team", "Local", FALSE
+      "UnitState", "OnLivableTile", "Local", TRUE
+      "MinMoveFrags", "1", "Local", TRUE
+    }
+target_reqs  =
+    { "type",   "name", "range", "present"
+      "Gov", "Fascism", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+      "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "Angkor Wat", "City", FALSE
+      "Building", "Forbidden City", "City", FALSE
+      "Building", "Osaka Castle", "City", FALSE
+      "Building", "Sultan Palace", "City", FALSE
+      "Building", "Mausoleum of Mausolos", "City", FALSE
+      "Building", "Statue of Liberty", "Player", TRUE
+    }
+
 
 [actionenabler_bribe_unit]
 action = "Bribe Unit"
@@ -587,35 +614,87 @@ reqs           =
     { "type", "name", "range"
       "Terrain", "Hills", "Local"
     }
-frequency      = 100
-effects        = "ReducePopulation", "EmptyProdStock", "DestroyBuilding"
+frequency      = 20
+effects        = "ReducePopulation", "DestroyBuilding"
+
+[disaster_tsunami_hill]
+name           = _("Tsunami")
+reqs           =
+    { "type", "name", "range"
+      "Terrain", "Hills", "Local"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+frequency      = 10
+effects        = "EmptyFoodStock"
+
+[disaster_tsunami_river]
+name           = _("Tsunami")
+reqs           =
+    { "type", "name", "range", "present"
+      "Extra", "River", "Adjacent", TRUE
+      "TerrainClass", "Oceanic", "Adjacent", TRUE
+      "Building", "River Embankments", "City", FALSE
+    }
+frequency      = 40
+effects        = "ReducePopulation", "EmptyFoodStock", "DestroyBuilding"
 
 [disaster_flood]
 name           = _("Flood")
 reqs           =
-    { "type", "name", "range"
-      "Extra", "River", "Adjacent"
+    { "type", "name", "range", "present"
+      "Extra", "River", "Adjacent", TRUE
+      "Building", "River Embankments", "City", FALSE
     }
-frequency      = 100
-effects        = "EmptyFoodStock", "ReducePopulation"
+frequency      = 200
+effects        = "EmptyFoodStock"
+
+[disaster_fire_small]
+name           = _("Fire")
+reqs           =
+    { "type", "name", "range"
+      "MinSize", "17", "City"
+    }
+frequency      = 20
+effects        = "EmptyProdStock"
 
 [disaster_fire]
 name           = _("Fire")
 reqs           =
-    { "type", "name", "range"
-      "MinSize", "9", "City"
+    { "type", "name", "range", "present"
+      "MinSize", "9", "City", TRUE
+      "Building", "Fire Station", "City", FALSE
     }
-frequency      = 100
-effects        = "DestroyBuilding"
+frequency      = 80
+effects        = "EmptyProdStock", "ReducePopDestroy"
 
-[disaster_industrial_accident]
+[disaster_nuke_fire]
+name           = _("Fire")
+reqs           =
+    { "type", "name", "range"
+      "Extra", "Fallout", "Local"
+      "MinSize", "2", "City"
+    }
+frequency      = 1000
+effects        = "ReducePopDestroy"
+
+[disaster_industrial_accident_small]
 name           = _("Industrial Accident")
 reqs           =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
     }
+frequency      = 25
+effects        = "Pollution"
+
+[disaster_industrial_accident]
+name           = _("Industrial Accident")
+reqs           =
+    { "type", "name", "range", "present"
+      "Building", "Factory", "City", TRUE
+      "Building", "Fire Station", "City", FALSE
+    }
 frequency      = 100
-effects        = "ReducePopulation", "Pollution"
+effects        = "EmptyProdStock", "Pollution"
 
 [disaster_nuclear_accident]
 name           = _("Nuclear Accident")
@@ -860,4 +939,5 @@ set =
       "sciencebox", 160
       "revolen", 2
       "revolentype", "RANDQUICK"
+      "killunhomed", 1
     }

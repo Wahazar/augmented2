@@ -154,7 +154,7 @@ reqs = { "type", "name", "range"
          "tech", "Automobile", "Player"
          "Building", "Railway Station", "City"
          "Building", "Super Highways", "City"
-         "Building", "Factory", "City"
+;         "Building", "Factory", "City"
        }
 
 [citystyle_postmodern]
@@ -166,7 +166,7 @@ citizens_graphic_alt = "generic"
 reqs = { "type", "name", "range"
          "tech", "Rocketry", "Player"
          "Building", "Railway Station", "City"
-         "Building", "Factory", "City"
+;         "Building", "Factory", "City"
          "Building", "Super Highways", "City"
          "Building", "Airport", "City"
        }

@@ -3,7 +3,7 @@ options = "+Freeciv-2.6-modpack"
 baseURL = "http://149.156.194.203/~mczapkie/fc/augmented/"
 name = "augmented2"
 type = "Modpack"
-version = "2.6.21"
+version = "2.6.23"
 
 [files]
 list =
@@ -136,6 +136,8 @@ list =
   "augmented2/buildings/yasir.png"
   "augmented2/buildings/amusement_park.png"
   "augmented2/buildings/trade_union.png"
+  "augmented2/buildings/fire_station_Zimlock.png"
+  "augmented2/buildings/embankments.png"
   "augmented2/buildings_small/5_years_plans.png"
   "augmented2/buildings_small/amphitheaters.png"
   "augmented2/buildings_small/buildings-small.spec"
@@ -163,7 +165,8 @@ list =
   "augmented2/buildings_small/madrasa_s.png"
   "augmented2/buildings_small/yasir_s.png"
   "augmented2/buildings_small/amusement_park_s.png"
-  "augmented2/buildings_small/trade_union_s.png"
+  "augmented2/buildings_small/fire_station_s.png"
+  "augmented2/buildings_small/embankment_s.png"
   "augmented2/misc/gov_direct_democracy.png"
   "augmented2/misc/gov_fascism_cc.png"
   "augmented2/misc/gov_first_republic.png"

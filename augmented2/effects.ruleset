@@ -2624,12 +2624,36 @@ reqs	=
       "Tech", "Monotheism", "Player", FALSE
     }
 
+[effect_rapture_grow_4]
+type    = "Rapture_Grow"
+value   = 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Gov", "Tribal", "Player", TRUE
+      "Building", "Granary", "City", TRUE
+      "Building", "Pyramids", "Player", TRUE
+      "Tech", "Monotheism", "Player", FALSE
+    }
+
+[effect_rapture_grow_5]
+type    = "Rapture_Grow"
+value   = 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Gov", "Despotism", "Player", TRUE
+      "Building", "Granary", "City", TRUE
+      "Building", "Pyramids", "Player", TRUE
+      "Tech", "Monotheism", "Player", FALSE
+    }
+
 [effect_rapture_grow_khajuraho_temple]
 type    = "Rapture_Grow"
 value   = 1
 reqs	=
     { "type", "name", "range", "present"
       "Gov", "Democracy", "Player", FALSE
+      "Gov", "Federation", "Player", FALSE
+      "Gov", "Republic", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
@@ -3345,7 +3369,7 @@ reqs    =
       "Building", "Water Treatment", "City"
     }
 
-;augmented: city wall for more than 48
+;augmented: fire station and no city wall for more than 48
 [effect_city_wall_unlimit]
 type    = "Size_Unlimit"
 value   = 1
@@ -3355,6 +3379,7 @@ reqs    =
       "Building", "Recycling Center", "City", TRUE
       "Building", "Sewer System", "City", TRUE
       "Building", "Water Treatment", "City", TRUE
+      "Building", "Fire Station", "City", TRUE
     }
 
 [effect_bank]
@@ -3601,7 +3626,7 @@ reqs	=
       "Building", "Cathedral", "City"
     }
 
-; Every Land except Train
+; Every Land except Train, Turrets
 [effect_city_defense_0]
 type    = "Defend_Bonus"
 value   = 50
@@ -3838,6 +3863,14 @@ reqs    =
     }
 
 [effect_factory_1]
+type    = "Pollu_Prod_Pct"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Factory", "City"
+    }
+
+[effect_factory_2]
 type    = "Pollu_Pop_Pct"
 value   = 25
 reqs    =
@@ -3979,7 +4012,7 @@ reqs    =
 
 [effect_hydro_plant_2]
 type    = "Pollu_Prod_Pct"
-value   = -40
+value   = -50
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Hydro Plant", "City", TRUE
@@ -4038,7 +4071,7 @@ reqs    =
 ; Counteracts population pollution from any 2 other buildings
 [effect_mass_transit]
 type    = "Pollu_Pop_Pct"
-value   = -25
+value   = -50
 reqs    =
     { "type", "name", "range"
       "Building", "Mass Transit", "City"
@@ -4054,6 +4087,14 @@ reqs    =
     }
 
 [effect_mfg_plant_1]
+type    = "Pollu_Prod_Pct"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Mfg. Plant", "City"
+    }
+
+[effect_mfg_plant_2]
 type    = "Pollu_Pop_Pct"
 value   = 25
 reqs    =
@@ -4136,7 +4177,7 @@ reqs    =
     }
 
 [effect_offshore_platform_2]
-type    = "Pollu_Pop_Pct"
+type    = "Pollu_Prod_Pct"
 value   = 25
 reqs    =
     { "type", "name", "range"
@@ -4404,7 +4445,7 @@ reqs    =
 ; Recycling Center gives a lesser additional bonus with plants
 [effect_recycling_center]
 type    = "Pollu_Prod_Pct"
-value   = -25
+value   = -50
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Recycling Center", "City", TRUE
@@ -4412,6 +4453,15 @@ reqs    =
       "Building", "Hydro Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
       "Building", "Hoover Dam", "City", FALSE
+    }
+
+[effect_recycling_center_1]
+type    = "Pollu_Pop_Pct"
+value   = -20
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Recycling Center", "City", TRUE
+      "Building", "Sewer System", "City", TRUE
     }
 
 [effect_research_lab]
@@ -4671,7 +4721,7 @@ reqs    =
 
 [effect_super_highways_3]
 type    = "Pollu_Pop_Pct"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Super Highways", "City"
@@ -5845,7 +5895,7 @@ reqs    =
 ; No base pop pollution; buildings will increase it
 [effect_pollu_pop]
 type    = "Pollu_Pop_Pct"
-value   = -100
+value   = -50
 
 ; tech_upkeep_divider = 6000, Max tech upkeep = 13
 [effect_upkeep_tech_base]
@@ -6948,7 +6998,7 @@ reqs    =
     }
 
 [effect_cement_plant_pollution]
-type    = "Pollu_Pop_Pct"
+type    = "Pollu_Prod_Pct"
 value   = 100
 reqs    =
     { "type", "name", "range"
@@ -7019,7 +7069,7 @@ reqs    =
     }
 
 [effect_steel_mill_pollution]
-type    = "Pollu_Pop_Pct"
+type    = "Pollu_Prod_Pct"
 value   = 150
 reqs    =
     { "type", "name", "range"
@@ -7059,7 +7109,7 @@ reqs    =
     }
 
 [effect_oil_refinery_pollution]
-type    = "Pollu_Pop_Pct"
+type    = "Pollu_Prod_Pct"
 value   = 25
 reqs    =
     { "type", "name", "range"
@@ -8090,7 +8140,7 @@ reqs    =
       "UnitClass", "Trireme", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
-      "UnitClass", "Missile", "Local", FALSE
+;      "UnitClass", "Missile", "Local", FALSE
 ;      "UnitClass", "Bomb", "Local", FALSE
       "UnitClass", "Torpedos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
@@ -8281,4 +8331,11 @@ reqs    =
       "Building", "Trade Union", "City"
     }
 
+[effect_content_embankments]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "River Embankments", "City"
+    }
 
