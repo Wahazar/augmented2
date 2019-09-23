@@ -670,12 +670,13 @@ effects        = "EmptyProdStock", "ReducePopDestroy"
 [disaster_nuke_fire]
 name           = _("Fire")
 reqs           =
-    { "type", "name", "range"
-      "Extra", "Fallout", "Local"
-      "MinSize", "2", "City"
+    { "type", "name", "range", "present"
+      "Extra", "Fallout", "Local", TRUE
+      "MinSize", "2", "City", TRUE
+      "Building", "Fire Station", "City", FALSE
     }
-frequency      = 1000
-effects        = "ReducePopDestroy"
+frequency      = 255
+effects        = "EmptyProdStock", "ReducePopDestroy"
 
 [disaster_industrial_accident_small]
 name           = _("Industrial Accident")
@@ -683,7 +684,7 @@ reqs           =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
     }
-frequency      = 25
+frequency      = 50
 effects        = "Pollution"
 
 [disaster_industrial_accident]
@@ -693,7 +694,7 @@ reqs           =
       "Building", "Factory", "City", TRUE
       "Building", "Fire Station", "City", FALSE
     }
-frequency      = 100
+frequency      = 250
 effects        = "EmptyProdStock", "Pollution"
 
 [disaster_nuclear_accident]
@@ -704,6 +705,7 @@ reqs           =
     }
 frequency      = 100
 effects        = "ReducePopulation", "Fallout"
+
 
 ; /* <-- avoid gettext warnings
 ;

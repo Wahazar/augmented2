@@ -1006,7 +1006,7 @@ roles         = "DefendOkStartUnit"
 helptext      = _("\
 Marksmen squads skilled in precision shooting, can be used to wound enemy units or for reconnaissance.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_sniper]
 name          = _("Sniper")
@@ -1044,7 +1044,7 @@ Snipers have large radius of view while, thanks to their excellent camouflage, a
 "), _("\
 Democracy grant additional veterancy level for the Sniper.\
 ")
-bombard_rate = 1
+bombard_rate = 3
 
 [unit_phalanx]
 name          = _("Phalanx")
@@ -2667,7 +2667,7 @@ sound_fight   = "f_catapult"
 sound_fight_alt = "f_generic"
 build_cost    = 40
 pop_cost      = 0
-attack        = 6
+attack        = 5
 defense       = 1
 hitpoints     = 5
 firepower     = 1
@@ -2692,7 +2692,7 @@ While powerful, Catapults (and their successors) are bulky and awkward;\
 "), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_cannon]
 name          = _("Cannon")
@@ -2707,7 +2707,7 @@ sound_fight   = "f_cannon"
 sound_fight_alt = "f_generic"
 build_cost    = 50
 pop_cost      = 0
-attack        = 7
+attack        = 6
 defense       = 1
 hitpoints     = 5
 firepower     = 2
@@ -2729,7 +2729,7 @@ Cannons are large firearms that can fire heavy projectiles over long\
 "), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_howitzer]
 name          = _("Howitzer")
@@ -2744,10 +2744,10 @@ sound_fight   = "f_artillery"
 sound_fight_alt = "f_generic"
 build_cost    = 65
 pop_cost      = 0
-attack        = 9
+attack        = 8
 defense       = 1
 hitpoints     = 10
-firepower     = 3
+firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -2764,7 +2764,7 @@ Howitzers are upgraded cannons with improved fire power and\
 "), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
-bombard_rate = 2
+bombard_rate = 3
 
 [unit_self_propelled_howitzer]
 name          = _("Self-propelled Howitzer")
@@ -2884,7 +2884,7 @@ build_cost    = 30
 pop_cost      = 0
 attack        = 8
 defense       = 1
-hitpoints     = 5
+hitpoints     = 8
 firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
@@ -2986,9 +2986,9 @@ sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
 build_cost    = 30
 pop_cost      = 0
-attack        = 7
+attack        = 6
 defense       = 1
-hitpoints     = 12
+hitpoints     = 10
 firepower     = 1
 move_rate     = 1
 vision_radius_sq = 2
@@ -3019,7 +3019,7 @@ sound_fight   = "f_artillery"
 sound_fight_alt = "f_generic"
 build_cost    = 45
 pop_cost      = 0
-attack        = 10
+attack        = 9
 defense       = 2
 hitpoints     = 10
 firepower     = 2
@@ -3053,7 +3053,7 @@ build_cost    = 60
 pop_cost      = 0
 attack        = 10
 defense       = 3
-hitpoints     = 10
+hitpoints     = 12
 firepower     = 3
 move_rate     = 1
 vision_radius_sq = 2
@@ -3646,7 +3646,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
-flags         = "NonMil", "NoVeteran", "HasNoZOC", "Unique", "Unbribable"
+flags         = "NonMil", "NoVeteran", "HasNoZOC", "Unique", "Unbribable", "Trireme"
 roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 Canoe made from hollowed trunk is a stone age form of\
@@ -3863,7 +3863,7 @@ build_cost    = 30
 pop_cost      = 0
 attack        = 2
 defense       = 4
-hitpoints     = 10
+hitpoints     = 15
 firepower     = 1
 move_rate     = 3
 vision_radius_sq = 2

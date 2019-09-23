@@ -1381,7 +1381,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Railway Station, together with a railroaded tile, is required\
 - to increase food productivity of tiles with special resources,\
-which already produce food (wheat, bison, rice, fruit etc)\n\
+which already produce food (wheat, bison, rice, fruit etc., without mine)\n\
  - to increase productivity and additional trade from coal mines\
  and iron mines (together with Steel Mill, Cement or Power Plant).\
 "), _("\

@@ -6897,11 +6897,12 @@ reqs    =
 type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Resource", "Oasis", "Local"
-      "Building", "Railway Station", "City"
-      "Extra", "RailRoad", "Local"
-      "OutputType", "Food", "Local"
+    { "type", "name", "range", "present"
+      "Resource", "Oasis", "Local", TRUE
+      "Building", "Railway Station", "City", TRUE
+      "Extra", "RailRoad", "Local", TRUE
+      "OutputType", "Food", "Local", TRUE
+      "Extra", "Mine", "Local", FALSE
     }
 
 [effect_railroad_pheasant]
@@ -6941,11 +6942,12 @@ reqs    =
 type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Resource", "Wine", "Local"
-      "Building", "Railway Station", "City"
-      "Extra", "RailRoad", "Local"
-      "OutputType", "Food", "Local"
+    { "type", "name", "range", "present"
+      "Resource", "Wine", "Local", TRUE
+      "Building", "Railway Station", "City", TRUE
+      "Extra", "RailRoad", "Local", TRUE
+      "OutputType", "Food", "Local", TRUE
+      "Extra", "Mine", "Local", FALSE
     }
 
 [effect_railroad_rice]

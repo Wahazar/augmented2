@@ -8,6 +8,7 @@ New disasters: Tsunami for coastial towns and Fire caused by Fallout
 No incite Fascism except if target have Statue of Libery
 New improvments: River Embankments and Fire Station
 Pollution tweaked
+Artillery tweaked
 
 2.6.22
 Several bugfixes and description corrections.
