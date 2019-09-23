@@ -1380,16 +1380,14 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 helptext	= _("\
 Railway Station, together with a railroaded tile, is required\
- to increase productivity of tiles with special resources: \n\
- - extra food from wheat and bison tiles,\n\
- - extra trade from gems and gold tiles,\n\
- - extra shield from grassland resources, silk and jungle tiles,\n\
- - increased productivity and additional trade from coal mines\
+- to increase food productivity of tiles with special resources,\
+which already produce food (wheat, bison, rice, fruit etc)\n\
+ - to increase productivity and additional trade from coal mines\
  and iron mines (together with Steel Mill, Cement or Power Plant).\
 "), _("\
 Together with Supermarket, increases the tax output in a city by 25%.\
 "), _("\
-Required to make trains and provide fast regeneration of train units.\
+Required to produce any trains units and provide fast regeneration of train units.\
 ")
 
 [building_research_lab]

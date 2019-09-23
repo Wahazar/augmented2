@@ -878,7 +878,7 @@ graphic_alt = "-"
 identifier  = "e"
 food        = 2
 shield      = 1
-# tundra.
+# tundra. +1f with RR
 
 [resource_furs]
 name        = _("Furs")
@@ -887,7 +887,7 @@ graphic_alt = "-"
 identifier  = "u"
 food        = 1
 trade       = 3
-# tundra-only (beaver pelts).
+# tundra-only (beaver pelts). +1f with RR
 
 [resource_coal]
 name        = _("Coal")
@@ -912,7 +912,7 @@ graphic_alt = "-"
 identifier  = "f"
 food        = 3
 trade       = 1
-# jungle.
+# jungle. +1f with RR
 
 [resource_gems]
 name        = _("Gems")
@@ -928,7 +928,7 @@ name        = _("Horses")
 graphic     = "ts.horses"
 graphic_alt = "ts.buffalo"
 identifier  = "h"
-shield      = 2
+shield      = 1
 
 [resource_buffalo]
 name        = _("Buffalo")
@@ -937,7 +937,7 @@ graphic_alt = "-"
 identifier  = "b"
 shield      = 1
 food		= 1
-# plains (horses => buffalo => cattle).
+# plains. +1f with RR
 
 [resource_wheat]
 name        = _("Wheat")
@@ -983,7 +983,7 @@ graphic     = "ts.pheasant"
 graphic_alt = "-"
 identifier  = "p"
 food        = 1
-# grassland, forest 
+# grassland, forest, +1f qith RR 
 
 ; "r" reserved for rubber
 
@@ -1012,6 +1012,7 @@ identifier  = "q"
 shield      = 1
 trade       = 1
 food        = 2
+# glaciers. +1f with RR
 
 [resource_silk]
 name        = _("Silk")
@@ -1054,7 +1055,7 @@ graphic     = "ts.wine"
 graphic_alt = "-"
 identifier  = "w"
 food       = 1
-trade       = 3
+trade       = 2
 # hills-only.
 
 [resource_oil]
@@ -1804,7 +1805,7 @@ Once you learn the Railroad technology, you may upgrade your roads to railroads.
  Small Land and Infantry units can also utilise railroad speed by themselves, without train.\
 "), _("\
 A railroad also increases shield resources produced by a tile by 25%,\
- and together with Railway Station grant some other tile bonuses.\
+ and together with Railway Station grant some food tile bonuses.\
 "), _("\
 City center tiles with roads are automatically upgraded to railroads\
  when you learn the Railroad technology.\

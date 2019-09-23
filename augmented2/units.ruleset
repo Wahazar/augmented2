@@ -2153,7 +2153,7 @@ Horsemen are mounted warriors and an early\
 
 [unit_chariot]
 name          = _("Chariot")
-class         = "Big Land"
+class         = "Wheeled Unit"
 tech_req      = "The Wheel"
 obsolete_by   = "Knights"
 graphic       = "u.chariot"

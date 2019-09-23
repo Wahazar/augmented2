@@ -2769,7 +2769,7 @@ reqs    =
 
 [effect_veteran_despotism]
 type    = "Veteran_Build"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"
@@ -6837,13 +6837,35 @@ reqs    =
       "Gov", "Fascism", "Player"
     }
 
-;augmented: bonuses from extras+railroad
-[effect_railroad_wheat]
+;augmented: food bonuses from extras+railroad
+[effect_railroad_game]
 type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Resource", "Wheat", "Local"
+      "Resource", "Game", "Local"
+      "Building", "Railway Station", "City"
+      "Extra", "RailRoad", "Local"
+      "OutputType", "Food", "Local"
+    }
+
+[effect_railroad_furs]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Resource", "Furs", "Local"
+      "Building", "Railway Station", "City"
+      "Extra", "RailRoad", "Local"
+      "OutputType", "Food", "Local"
+    }
+
+[effect_railroad_fruit]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Resource", "Fruit", "Local"
       "Building", "Railway Station", "City"
       "Extra", "RailRoad", "Local"
       "OutputType", "Food", "Local"
@@ -6860,49 +6882,106 @@ reqs    =
       "OutputType", "Food", "Local"
     }
 
-[effect_railroad_gems]
+[effect_railroad_wheat]
 type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Resource", "Gems", "Local"
+      "Resource", "Wheat", "Local"
       "Building", "Railway Station", "City"
       "Extra", "RailRoad", "Local"
-      "OutputType", "Trade", "Local"
+      "OutputType", "Food", "Local"
     }
 
-[effect_railroad_jungle]
+[effect_railroad_oasis]
 type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Terrain", "Jungle", "Local"
+      "Resource", "Oasis", "Local"
       "Building", "Railway Station", "City"
       "Extra", "RailRoad", "Local"
-      "OutputType", "Shield", "Local"
+      "OutputType", "Food", "Local"
     }
 
-[effect_railroad_silk]
+[effect_railroad_pheasant]
 type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Resource", "Silk", "Local"
+      "Resource", "Pheasant", "Local"
       "Building", "Railway Station", "City"
       "Extra", "RailRoad", "Local"
-      "OutputType", "Shield", "Local"
+      "OutputType", "Food", "Local"
     }
 
-[effect_railroad_resources]
+[effect_railroad_seals]
 type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Resource", "Resources", "Local"
+      "Resource", "Seals", "Local"
       "Building", "Railway Station", "City"
       "Extra", "RailRoad", "Local"
-      "OutputType", "Shield", "Local"
+      "OutputType", "Food", "Local"
     }
+
+[effect_railroad_spice]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Resource", "Spice", "Local"
+      "Building", "Railway Station", "City"
+      "Extra", "RailRoad", "Local"
+      "OutputType", "Food", "Local"
+    }
+
+[effect_railroad_wine]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Resource", "Wine", "Local"
+      "Building", "Railway Station", "City"
+      "Extra", "RailRoad", "Local"
+      "OutputType", "Food", "Local"
+    }
+
+[effect_railroad_rice]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Resource", "Rice", "Local"
+      "Building", "Railway Station", "City"
+      "Extra", "RailRoad", "Local"
+      "OutputType", "Food", "Local"
+    }
+
+[effect_railroad_forest_game]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Resource", "Forest Game", "Local"
+      "Building", "Railway Station", "City"
+      "Extra", "RailRoad", "Local"
+      "OutputType", "Food", "Local"
+    }
+
+;improved jungle output
+;[effect_railroad_jungle]
+;type    = "Output_Inc_Tile"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Terrain", "Jungle", "Local"
+;      "Building", "Railway Station", "City"
+;      "Extra", "RailRoad", "Local"
+;      "OutputType", "Shield", "Local"
+;    }
+
 
 ; Railway Station HP regen (Every Train units)
 [effect_railway_station_hp_regen]
