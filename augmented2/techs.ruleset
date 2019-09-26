@@ -77,7 +77,7 @@ req2     = "Carpentry"
 flags    = ""
 graphic     = "a.absolutism"
 graphic_alt = "-"
-cost     = 18
+cost     = 20
  
 [advance_advanced_flight]
 name     = _("Advanced Flight")
@@ -174,7 +174,7 @@ req2     = "Mathematics"
 flags    = ""
 graphic     = "a.astrology"
 graphic_alt = "-"
-cost     = 80
+cost     = 90
 
 [advance_astronomy]
 name     = _("Astronomy")
@@ -201,7 +201,7 @@ req2     = "Machine Tools"
 flags    = ""
 graphic     = "a.automobile"
 graphic_alt = "-"
-helptext = _("TIP: Enables more trade routes.")
+helptext = _("TIP: Enables more trade routes with Post Office.")
 cost     = 790
 
 [advance_banking]
@@ -349,7 +349,7 @@ req2     = "Absolutism"
 flags    = ""
 graphic     = "a.code_of_laws"
 graphic_alt = "-"
-cost     = 25
+cost     = 30
 
 [advance_combined_arms]
 name     = _("Combined Arms")
@@ -677,7 +677,7 @@ req2     = "Metallurgy"
 flags    = ""
 graphic     = "a.general_staff"
 graphic_alt = "-"
-cost     = 270
+cost     = 330
 
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
@@ -812,7 +812,7 @@ req2     = "Astrology"
 flags    = ""
 graphic     = "a.jainism"
 graphic_alt = "-"
-cost     = 110
+cost     = 120
 
 [advance_jet_propulsion]
 name     = _("Jet Propulsion")
@@ -845,12 +845,12 @@ cost     = 2350
 
 [advance_leadership]
 name     = _("Leadership")
-req1     = "Chivalry"
+req1     = "Hastilude"
 req2     = "Gunpowder"
 flags    = ""
 graphic     = "a.leadership"
 graphic_alt = "-"
-cost     = 220
+cost     = 250
 
 [advance_leather_tanning]
 name     = _("Leather Tanning")
@@ -878,16 +878,16 @@ req2     = "Code of Laws"
 flags    = ""
 graphic     = "a.literacy"
 graphic_alt = "-"
-cost     = 40
+cost     = 45
 
 [advance_machinery]
 name     = _("Machinery")
 req1     = "Theory of Gravity"
-req2     = "Craft Guilds"
+req2     = "Overseas Trade"
 flags    = ""
 graphic     = "a.machinery"
 graphic_alt = "-"
-cost     = 370
+cost     = 380
 
 [advance_machine_tools]
 name     = _("Machine Tools")
@@ -964,12 +964,12 @@ cost     = 1150
 
 [advance_mathematics]
 name     = _("Mathematics")
-req1     = "Writing"
+req1     = "Masonry"
 req2     = "Simple Machines"
 flags    = ""
 graphic     = "a.mathematics"
 graphic_alt = "-"
-cost     = 60
+cost     = 70
 
 [advance_medicine]
 name     = _("Medicine")
@@ -1036,7 +1036,7 @@ root_req = "Agricultural Farming"
 flags    = ""
 graphic     = "a.monarchy"
 graphic_alt = "-"
-cost     = 40
+cost     = 50
 
 [advance_monotheism]
 name     = _("Monotheism")
@@ -1108,6 +1108,19 @@ helptext = _("\
 Allows embarked Settlers, Migrants, Workers, Engineers or Transports and Barges to build \
 oil platforms on Deep Ocean, required to get the bonus from \
 Offshore Platforms.\
+") 
+
+[advance_overseas_trade]
+name     = _("Overseas Trade")
+req1     = "Gunpowder"
+req2     = "Magnetism"
+root_req = "Seafaring"
+flags    = "Claim_Ocean"
+graphic     = "a.physics"
+graphic_alt = "-"
+cost     = 300
+helptext = _("\
+Enhanced range of territoral waters. \
 ") 
 
 [advance_paper_making]
@@ -1242,7 +1255,7 @@ For Despotism or Tribal governments, cancels the penalty to worked \
 tiles with output greater than 2 (as if all your cities were always \
 celebrating).\
 ")
-cost     = 450
+cost     = 460
 
 [advance_recycling]
 name     = _("Recycling")
@@ -1336,7 +1349,7 @@ req2     = "Physics"
 flags    = ""
 graphic     = "a.screw_propeller"
 graphic_alt = "-"
-cost     = 480
+cost     = 500
 
 [advance_seafaring]
 name     = _("Seafaring")
@@ -1410,7 +1423,7 @@ req2     = "Machinery"
 flags    = ""
 graphic     = "a.socialism"
 graphic_alt = "a.communism"
-cost     = 420
+cost     = 440
 
 [advance_space_flight]
 name     = _("Space Flight")
@@ -1440,7 +1453,7 @@ graphic_alt = "-"
 helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to build Water Locks.\
 ")
-cost     = 400
+cost     = 430
 
 [advance_steel]
 name     = _("Steel")

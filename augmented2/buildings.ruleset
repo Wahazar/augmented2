@@ -632,7 +632,7 @@ helptext	= _("\
 The Courthouse halves all kinds of waste in a city (corruption,\
  production waste, and food waste). In your capital, corruption\
  and production waste is eliminated. A Granary together with a\
- Courthouse in a city will eliminate food waste.\
+ Courthouse in a city will decrease food waste.\
 "), _("\
 Courthouse makes one unhappy citizen content (unless that citizen\
  is unhappy about military activity), and makes the revolt cost\
@@ -1333,6 +1333,29 @@ In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or\
  Solar Plant can take effect at any one time.\
 ")
 
+[building_post_office]
+name		= _("Post Office")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electromagnetism", "Player"
+    }
+graphic	= "b.post_office"
+graphic_alt	= "b.police_station"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 0
+sabotage	= 10
+sound		= "b_police_station"
+sound_alt	= "b_generic"
+helptext	= _("\
+Post Office allow additional traderoute to this city, if Automobile advance is known to the player.\n\
+This improvement decrease waste by 20% by istelf, and together with Courthouse, \
+decrease trade corruption by 70%.\ 
+")
+
 [building_recycling_center]
 name		= _("Recycling Center")
 genus		= "Improvement"
@@ -1995,8 +2018,8 @@ name		= _("Atlantic Telegraph Company")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Electromagnetism", "Player"
-      "Building", "University", "City"
+      "Tech", "Radio", "Player"
+      "Building", "Post Office", "City"
     }
 graphic	= "b.atlantic_telegraph_company"
 graphic_alt	= "b.university"
@@ -2025,6 +2048,7 @@ graphic	= "b.colosseum"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
+      "Tech", "Mass Entertainment", "Player"
     }
 build_cost	= 200
 upkeep		= 3
@@ -3313,7 +3337,7 @@ graphic_alt	= "b.temple"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 450
+build_cost	= 500
 upkeep		= 0
 sabotage	= 0
 sound		= "b_temple"
@@ -3388,7 +3412,7 @@ graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Electromagnetism", "Player", FALSE
+      "Tech", "Radio", "Player", FALSE
     }
 build_cost	= 300
 upkeep		= 0
@@ -3478,7 +3502,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 600
+build_cost	= 650
 upkeep		= 0
 sabotage	= 0
 sound		= "w_michelangelos_chapel"
@@ -3740,7 +3764,7 @@ sound		= "b_university"
 sound_alt	= "b_generic"
 helptext	= _("\
 Workers syndicate for collective bargaining better wages and working conditions. \
-Makes 2 unhappy citizens content in a city and almost halves production waste by distance. \
+Makes 2 unhappy citizens content in a city. \
 "),_("\
 Additionally this improvement halves down city luxury penalty in case of Communism government,
 on the expense of lack of buildings free upkeep.

@@ -201,5 +201,8 @@ sprites =
 		"u.armor_car", "augmented2/amplio_units/armor_car_a"
 		"u.atv_infantry", "augmented2/amplio_units/ATV_infantry_a"
 		"u.builder", "augmented2/amplio_units/builders_a"
+		"u.clipper", "augmented2/amplio_units/clipper_a"
+		"u.freighter", "augmented2/amplio_units/freighter_a"
+		"u.jetliner", "augmented2/amplio_units/jetliner_PikkaBird"
 	}
 

@@ -42,6 +42,7 @@ sprites =
 		"b.trade_union", "augmented2/buildings_small/trade_union_s"
 		"b.river_embankments", "augmented2/buildings_small/embankment_s"
 		"b.fire_station", "augmented2/buildings_small/fire_station_s"
+		"b.post_office", "augmented2/buildings_small/post_office_s"
 	}
 
 [file]

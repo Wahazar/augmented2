@@ -162,12 +162,16 @@ sprites =
 		"u.missile", "augmented2/small_units/missile_t"
 		"u.armor_car", "augmented2/small_units/armor_car_t"
 		"u.atv_infantry", "augmented2/small_units/ATV_infantry_t"
+		"u.flagship_frigate", "augmented2/small_units/Flagship2"
+		"u.builder", "augmented2/small_units/builders_t"
+		"u.clipper", "augmented2/small_units/clipper_t"
+		"u.freighter", "augmented2/small_units/freighter_t"
+		"u.jetliner", "augmented2/small_units/jetliner_t"
 ; swapped standard graphics
 		"u.direct_artillery", "augmented2/small_units/direct_artillery_t"
 		"u.plunging_cannon", "augmented2/small_units/plunging_cannon_t"
 		"u.musketeer", "augmented2/small_units/musketeer_t"
 		"u.nuclear", "augmented2/small_units/nuclear_t"
 		"u.cruise_missile", "augmented2/small_units/cruise_missile_t"
-		"u.builder", "augmented2/small_units/builders_t"
 	}
 

@@ -850,12 +850,12 @@ settings =
     "NationalIC", 25,     "Cancel",    "None"
     "IN",         50,   "Cancel",     "None"
     "INIC",       100,   "Cancel",     "None"
-    "Ally",       25,   "Cancel",     "None"
-    "AllyIC",     50,   "Cancel",     "None"
+    "Ally",       50,   "Cancel",     "None"
+    "AllyIC",     100,   "Cancel",     "None"
     "Enemy",      0,     "Cancel",     "None"
     "EnemyIC",    0,     "Cancel",     "None"
-    "Team",       25,   "Cancel",     "None"
-    "TeamIC",     50,   "Cancel",     "None"
+    "Team",       50,   "Cancel",     "None"
+    "TeamIC",     100,   "Cancel",     "None"
   }
 
 [playercolors]

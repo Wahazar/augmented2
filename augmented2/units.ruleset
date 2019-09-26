@@ -806,7 +806,7 @@ They can be also used to transfer population to other cities, but\
 "), _("\
 A Slave sent to one of your own cities that is building a wonder\
  can add 10 shields towards its production.\
- Unlike Caravans, Slaves can't establish trade route.\
+ Unlike Caravans, Slave can't establish trade route.\
 ")
 
 [unit_militia]
@@ -1654,7 +1654,7 @@ uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Unique", "Unbribable", "Marines"
-roles         = "Hunter"
+roles         = "Hunter", "BarbarianSea"
 helptext      = _("\
 Vikings are small, but brave units capable to attack from aboard ships,\
  also assault other ships, or make raids on enemy territory\
@@ -3150,7 +3150,7 @@ helptext      = _("\
 Air bi-planes are your very first airborne units. They can\
  move anywhere and attack any unit, but are relatively slow and weak.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -3239,7 +3239,7 @@ _("\
 Fighters and other aircraft lose 10% of their hitpoints for every\
  turn not spent in a city, airstrip, airbase, or on a Carrier.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -3286,7 +3286,7 @@ _("\
 As with other aircraft, Bombers lose 10% of their hitpoints for every\
  turn not spent in a city, airstrip, airbase, or on a Carrier.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -3373,7 +3373,7 @@ Strike Aircrafts can be used both like Fighters or light Bombers.\
 They can carry one bomb, or can attack directly like fighter,\
  albeit at the expense of less movement radius and firepower strenght.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -3411,7 +3411,7 @@ helptext      = _("\
 An improved fighter or strike aircraft, with a higher speed and movement\
  radius.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -3452,7 +3452,7 @@ Strike Jets can be used both like Fighters or light Bombers.\
 They can carry one bomb, or can attack directly like fighter,\
  albeit at the expense of less movement radius and firepower strenght.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -3491,7 +3491,7 @@ helptext      = _("\
 An improved Jet Fighter, with improved attack, higher movement\
  radius and partial invisibility.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -3529,7 +3529,7 @@ helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
  radius.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 "), _("\
@@ -3572,7 +3572,7 @@ helptext      = _("\
 An improved Hypersonic Stealth Fighter, with a higher movement\
  radius and fuel capacity thanks to the (very expensive) antimatter propulsion system.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -3611,7 +3611,7 @@ An improved Stealth Bomber, with a higher movement and fuel capacity \
  thanks to the (very expensive) antimatter propulsion system.\
  They can carry not only ordinary bombs, but also missiles.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 "), _("\
@@ -3693,7 +3693,7 @@ TIP: Raft can be used as a temporary bridge (fortify it for anchor), but can be 
 name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
-obsolete_by   = "Aak"
+obsolete_by   = "Galley"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -3714,7 +3714,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Infantry", "Small Land", "Merchant"
+cargo         = "Infantry", "Small Land"
 flags         = "BadCityDefender"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
@@ -3833,7 +3833,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Suicidal", "Wheeled Unit"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Suicidal", "Wheeled Unit", "Riverboat"
 flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
@@ -3873,7 +3873,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 2
-cargo         = "Turrets"
+cargo         = "Turrets", "Infantry", "Small Land"
 flags         = "BadCityDefender"
 roles         = "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -3912,7 +3912,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-cargo         = "Turrets"
+cargo         = "Turrets", "Infantry", "Small Land"
 flags         = "BadCityDefender", "Bombarder"
 roles         = ""
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -3956,14 +3956,14 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
-cargo         = "Turrets", "Torpedos", "Small Land"
+cargo         = "Turrets", "Torpedos", "Infantry", "Small Land"
 flags         = "BadCityDefender", "Bombarder"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
-roles         = ""
+roles         = "BarbarianBuildTech"
 helptext      = _("\
 Patrol boats are small but fast units, can be equipped with turret gun or torpedo. They can operate on shallow coastal waters or rivers.\
 "), _("\
@@ -3976,7 +3976,7 @@ bombard_rate = 2
 name          = _("Longboat")
 class         = "Sea"
 tech_req      = "Seafaring"
-obsolete_by   = "Cog"
+obsolete_by   = "Caravel"
 graphic       = "u.longboat"
 graphic_alt   = "u.trireme"
 sound_move    = "m_trireme"
@@ -4011,22 +4011,22 @@ The Longboat is a very first and unique boat unit. It can act\
  any ocean tile, can carry one Small Land unit.\
 ")
 
-[unit_junk]
-name          = _("Junk")
+[unit_caravel]
+name          = _("Caravel")
 class         = "Sea"
-tech_req      = "Taoism"
-obsolete_by   = "Galleon"
-graphic       = "u.junk"
-graphic_alt   = "u.caravel"
+tech_req      = "Navigation"
+obsolete_by   = "Frigate"
+graphic       = "u.caravel"
+graphic_alt   = "-"
 sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
 sound_fight_alt = "f_generic"
-build_cost    = 25
+build_cost    = 40
 pop_cost      = 0
-attack        = 3
+attack        = 2
 defense       = 3
-hitpoints     = 12
+hitpoints     = 15
 firepower     = 1
 move_rate     = 3
 vision_radius_sq = 2
@@ -4037,7 +4037,7 @@ uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 cargo         = "Infantry", "Small Land", "Merchant"
-flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
+flags         = "BadCityDefender", "Only_Native_Attack"
 roles         = "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4045,49 +4045,8 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-The Junk is a Chinese sailing ship that can enter\
+The Caravel is a sailing ship that can enter\
  any ocean tile.\
-")
-
-[unit_cog]
-name          = _("Cog")
-class         = "Sea"
-tech_req      = "Navigation"
-obsolete_by   = "Galleon"
-graphic       = "u.cog"
-graphic_alt   = "u.caravel"
-sound_move    = "m_caravel"
-sound_move_alt = "m_generic"
-sound_fight   = "f_caravel"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 0
-defense       = 3
-hitpoints     = 10
-firepower     = 1
-move_rate     = 3
-vision_radius_sq = 8
-transport_cap = 2
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 2
-uk_gold       = 1
-cargo         = "Infantry", "Small Land", "Merchant"
-flags         = "BadCityDefender", "NonMil", "HasNoZOC";, "Capturable"
-roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
-veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
-veteran_raise_chance      = 50, 33, 20, 10, 0
-veteran_work_raise_chance = 0, 0, 0, 0, 0
-veteran_power_fact        = 100, 125, 150, 175, 200
-veteran_move_bonus        = 0, 0, 1, 1, 2
-helptext      = _("\
-The Cog is a pure transport ship, the first which can\
- transport units across ocean. It cannot attack other ships, though\
- it may still defend itself when attacked.\
-"), _("\
-It is merchant vessel, thus cannot be equipped with artillery turrets.\
 ")
 
 [unit_galleon]
@@ -4147,7 +4106,7 @@ pop_cost      = 0
 attack        = 0
 defense       = 4
 hitpoints     = 25
-firepower     = 1
+firepower     = 2
 move_rate     = 4
 vision_radius_sq = 8
 transport_cap = 6
@@ -4186,7 +4145,7 @@ pop_cost      = 0
 attack        = 0
 defense       = 5
 hitpoints     = 40
-firepower     = 1
+firepower     = 2
 move_rate     = 5
 vision_radius_sq = 8
 transport_cap = 8
@@ -4214,24 +4173,179 @@ Transports can also clean pollution and fallout on water tiles, and\
 It is merchant vessel, thus cannot be equipped with artillery turrets.\
 ")
 
-[unit_caravel]
-name          = _("Caravel")
+[unit_junk]
+name          = _("Junk")
 class         = "Sea"
-tech_req      = "Navigation"
-obsolete_by   = "Frigate"
-graphic       = "u.caravel"
-graphic_alt   = "-"
+tech_req      = "Taoism"
+obsolete_by   = "Clipper"
+graphic       = "u.junk"
+graphic_alt   = "u.caravel"
 sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 25
 pop_cost      = 0
 attack        = 2
-defense       = 4
-hitpoints     = 15
+defense       = 3
+hitpoints     = 12
 firepower     = 1
 move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 2
+uk_gold       = 1
+flags         = "BadCityDefender", "TradeRoute", "HelpWonder", "Unique", "Unbribable"
+roles         = ""
+veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 0, 1, 1, 2
+helptext      = _("\
+The Junk is a Chinese sailing ship that can enter\
+ any ocean tile.\
+"), _("\
+This ship carries goods or material for trading with other nations,\
+ or to help build wonders in your own cities, similar to caravans.\
+")
+
+[unit_cog]
+name          = _("Cog")
+class         = "Sea"
+tech_req      = "Thalassocracy"
+obsolete_by   = "Galleon"
+gov_req       = "Thalassocracy"
+graphic       = "u.cog"
+graphic_alt   = "u.caravel"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 0
+defense       = 3
+hitpoints     = 12
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 2
+uk_gold       = 1
+flags         = "Fanatic", "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
+roles         = ""
+veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 0, 1, 1, 2
+helptext      = _("\
+The Cog carries goods or material for trading with other nations,\
+ or to help build wonders in your own cities, similar to caravans.\
+"), _("\
+These ships can be produced exclusively by maritime realms governed by Thalassocracy.\
+")
+
+[unit_clipper]
+name          = _("Clipper")
+class         = "Sea"
+tech_req      = "Overseas Trade"
+obsolete_by   = "Freighter"
+graphic       = "u.clipper"
+graphic_alt   = "u.frigate"
+sound_move    = "m_frigate"
+sound_move_alt = "m_generic"
+sound_fight   = "f_frigate"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 0
+defense       = 3
+hitpoints     = 20
+firepower     = 2
+move_rate     = 5
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 2
+uk_gold       = 2
+flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
+roles         = ""
+veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 0, 1, 1, 2
+helptext      = _("\
+Clipper carries goods or material for trading with other nations,\
+ or to help build wonders in your own cities, similar to caravans.\
+")
+
+[unit_freighter]
+name          = _("Freighter")
+class         = "Sea"
+tech_req      = "Steel"
+obsolete_by   = "None"
+graphic       = "u.freighter"
+graphic_alt   = "u.transport"
+sound_move    = "m_transport"
+sound_move_alt = "m_generic"
+sound_fight   = "f_transport"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 0
+defense       = 4
+hitpoints     = 30
+firepower     = 2
+move_rate     = 6
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 1
+uk_gold       = 2
+flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
+roles         = ""
+veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 0, 1, 1, 2
+helptext      = _("\
+Freighter carries goods or material for trading with other nations,\
+ or to help build wonders in your own cities, similar to caravans or freight land units.\
+")
+
+;navy
+[unit_brig]
+name          = _("Brig")
+class         = "Sea"
+tech_req      = "Navigation"
+obsolete_by   = "Frigate"
+graphic       = "u.brig"
+graphic_alt   = "u.caravel"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_frigate"
+sound_fight_alt = "f_generic"
+build_cost    = 35
+pop_cost      = 0
+attack        = 2
+defense       = 3
+hitpoints     = 15
+firepower     = 1
+move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 1
 fuel          = 0
@@ -4241,15 +4355,17 @@ uk_food       = 2
 uk_gold       = 1
 cargo         = "Small Land", "Turrets"
 flags         = "BadCityDefender", "Only_Native_Attack"
-roles         = "FerryStartUnit"
+roles         = ""
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-The Caravel is a sailing warship that can enter\
+The Brig is a sailing warship that can enter\
  any ocean tile.\
+"), _("\
+Ballista or bombard can be installed aboard, for increase attack strength.\
 ")
 
 [unit_frigate]
@@ -4299,7 +4415,7 @@ bombard_rate = 1
 [unit_flagship_frigate]
 name          = _("Flagship Frigate")
 class         = "Sea"
-tech_req      = "Magnetism"
+tech_req      = "Overseas Trade"
 obsolete_by   = "Cruiser"
 graphic       = "u.flagship_frigate"
 graphic_alt   = "u.frigate"
@@ -4361,7 +4477,7 @@ attack        = 4
 defense       = 5
 hitpoints     = 20
 firepower     = 2
-move_rate     = 3
+move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 2
 cargo         = "Turrets"
@@ -5285,16 +5401,13 @@ helptext      = _("\
 A Caravan carries goods or material for trading with other nations,\
  or to help build wonders in your own cities.\
 "), _("\
-Caravans cannot take advantage of maglevs, but may travel on\
- the railroads that accompany them.\
-"), _("\
 A Caravan sent to a foreign city (one not owned by an enemy) can\
  establish a trade route. The route's ongoing revenue is doubled\
  if the two cities involved are on different continents. Each city\
- can support a maximum of two trade routes.\
+ can support a maximum of two trade routes (one without Post Office and Automobile).\
 "), _("\
 A Caravan sent to one of your own cities that is building a wonder\
- can add 50 shields towards its production. If your city is not\
+ can add 30 shields towards its production. If your city is not\
  building a wonder, the Caravan can take no special action.\
 ")
 
@@ -5320,7 +5433,7 @@ vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 1
 flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
@@ -5353,7 +5466,7 @@ vision_radius_sq = 2
 transport_cap = 10
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 2
 uk_food       = 0
 uk_gold       = 2
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Helicopter", "Suicidal", "Wheeled Unit"
@@ -5566,7 +5679,7 @@ The AWACS (Airborne Warning and Control System) is an airplane with an\
  advanced radar that can determine the location of enemy units over a\
  wide area.\
 "), _("\
-All aircraft is subject to refuling and must return to a city, airstrip,\
+All aircraft are subject to refuling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
 ")
@@ -5602,3 +5715,51 @@ helptext      = _("\
 Unmanned light drone are useful for patrol duty,\
  they need no refuelling, and citisens are not upset when drone is used abroad.\
 ")
+
+[unit_jetliner]
+name          = _("Jetliner")
+class         = "Air"
+tech_req      = "Space Flight"
+impr_req      = "Airport"
+obsolete_by   = "None"
+graphic       = "u.jetliner"
+graphic_alt   = "u.awacs"
+sound_move    = "m_stealth_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 1
+attack        = 0
+defense       = 5
+hitpoints     = 20
+firepower     = 3
+move_rate     = 15
+; range 15*4=60
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 4
+uk_happy      = 0
+uk_shield     = 3
+uk_food       = 1
+uk_gold       = 3
+flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable", "AddToCity"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = ""
+helptext      = _("\
+Jetliner is a huge pasenger or cargo airplane.\
+ This unit can enable trading with other nations\
+ or help build wonders in your own cities similar to caravans,\
+ or be used to transfer population between cities, like migrants.\
+"), _("\
+All aircraft are subject to refuling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
+")
+
+

@@ -48,4 +48,5 @@ sprites =
 		"b.trade_union", "augmented2/buildings/trade_union"
 		"b.river_embankments", "augmented2/buildings/embankments"
 		"b.fire_station", "augmented2/buildings/fire_station_Zimlock"
+		"b.post_office", "augmented2/buildings/post_office_Zimlock"
 	}

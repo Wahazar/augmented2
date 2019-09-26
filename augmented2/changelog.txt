@@ -2,6 +2,15 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.24
+Colosseum obsoleted
+Teh tree tweaks
+Flag ship trident gfx added
+Post Office added
+caravan-like units: Junk, Cog, Clipper, Freighter, Jetliner
+Caravel: transport ship
+Brig: navy ship
+
 2.6.23
 Rapture growth with Pyramids for Tribal and Despotism
 New disasters: Tsunami for coastial towns and Fire caused by Fallout 
