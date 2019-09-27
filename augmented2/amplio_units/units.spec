@@ -46,6 +46,7 @@ artists = "
 	shadedancer619
 	dunnoob
 	Wyrmshadow 
+	Mouse
 "
 
 [file]
@@ -204,5 +205,7 @@ sprites =
 		"u.clipper", "augmented2/amplio_units/clipper_a"
 		"u.freighter", "augmented2/amplio_units/freighter_a"
 		"u.jetliner", "augmented2/amplio_units/jetliner_PikkaBird"
+		"u.brig", "augmented2/amplio_units/brig_a"
+		"u.pirates_brig", "augmented2/amplio_units/pirates_brig_a"
 	}
 

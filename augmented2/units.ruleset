@@ -1002,7 +1002,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 flags         = "Capturer", "IgTer", "Bombarder", "Light Shells"
-roles         = "DefendOkStartUnit"
+roles         = "DefendOkStartUnit", "BarbarianTech"
 helptext      = _("\
 Marksmen squads skilled in precision shooting, can be used to wound enemy units or for reconnaissance.\
 ")
@@ -1317,7 +1317,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
-roles         = "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
+roles         = "DefendOkStartUnit", "BarbarianBuildTech", "BarbarianTech"
 helptext      = _("\
 Legions are heavily armed and well disciplined infantry\
  units with an excellent offensive value.\
@@ -1641,7 +1641,7 @@ sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
 build_cost    = 15
 pop_cost      = 0
-attack        = 1
+attack        = 2
 defense       = 1
 hitpoints     = 5
 firepower     = 1
@@ -1654,7 +1654,7 @@ uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Unique", "Unbribable", "Marines"
-roles         = "Hunter", "BarbarianSea"
+roles         = "Hunter"
 helptext      = _("\
 Vikings are small, but brave units capable to attack from aboard ships,\
  also assault other ships, or make raids on enemy territory\
@@ -1687,7 +1687,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
 flags         = "Capturer", "Unique", "Unbribable", "Marines", "Diplomat"
-roles         = "Hunter", "BarbarianSeaTech"
+roles         = "Hunter"
 helptext      = _("\
 Corsairs are privateers hired by a government to perform special\
  operations: attacking other ships from aboard ship or capturing them,\
@@ -1721,7 +1721,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 3
 flags         = "Partial_Invis", "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
-roles         = "Hunter"
+roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
 Ninjas are a supreme unit, skilled in all special operations,\
  such as espionage, sabotage, infiltration, assassination,\
@@ -1758,7 +1758,7 @@ uk_gold       = 3
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "Capturer", "Unique", "Unbribable", "Marines", "Partial_Invis", "Diplomat", "Spy"
-roles         = "Hunter", "BarbarianSeaTech"
+roles         = "Hunter"
 helptext      = _("\
 Navy Seals are special units of scuba divers, capable to attack other ships from land or from aboard ship.\
  They can also provide covert-ops like Spies (except of establishing embassies).\
@@ -2284,7 +2284,7 @@ uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
-roles         = "DefendOkStartUnit", "AttackFastStartUnit", "BarbarianTech", "BarbarianBuildTech", "Hunter"
+roles         = "DefendOkStartUnit", "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Knights are mounted and heavily armored warriors.\
 "), _("\
@@ -5614,6 +5614,144 @@ One Barbarian Leader appears every time there is a barbarian uprising\
 When a Barbarian Leader is killed on a tile without any defending units,\
  a 100 gold ransom is paid, but only to land units and helicopters.\
 ")
+
+[unit_barbarians]
+name          = _("Barbarians")
+class         = "Small Land"
+tech_req      = "None"
+obsolete_by   = "Pirates"
+graphic       = "u.vikings"
+graphic_alt   = "u.warriors"
+sound_move    = "m_warriors"
+sound_move_alt = "m_generic"
+sound_fight   = "f_warriors"
+sound_fight_alt = "f_generic"
+build_cost    = 15
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Marines", "BarbarianOnly"
+roles         = "BarbarianSea", "BarbarianBuild"
+helptext      = _("\
+Barbarians are small, but brave units capable to attack from aboard ships,\
+ also assault other ships. They cannot occupy city though.\
+")
+
+[unit_pirates]
+name          = _("Pirates")
+class         = "Infantry"
+tech_req      = "Overseas Trade"
+obsolete_by   = "Little Green Men"
+graphic       = "u.corsairs"
+graphic_alt   = "u.musketeers"
+sound_move    = "m_musketeers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_musketeers"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 3
+defense       = 2
+hitpoints     = 10
+firepower     = 2
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Marines", "BarbarianOnly"
+roles         = "Hunter", "BarbarianSeaTech", "BarbarianBuild"
+helptext      = _("\
+Pirates can attack other ships from aboard ship,\
+ or making raids on coastial cities.\
+")
+
+[unit_little_green_men]
+name          = _("Little Green Men")
+class         = "Infantry"
+tech_req      = "Communism"
+obsolete_by   = "None"
+graphic       = "u.navy_seals"
+graphic_alt   = "u.marines"
+sound_move    = "m_marines"
+sound_move_alt = "m_generic"
+sound_fight   = "f_marines"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 8
+defense       = 3
+hitpoints     = 12
+firepower     = 3
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+embarks       = "Helicopter"
+disembarks    = "Helicopter"
+flags         = "Capturer", "Marines", "Partial_Invis", "BarbarianOnly"
+roles         = "Hunter", "BarbarianSeaTech", "BarbarianBuildTech", "BarbarianTech"
+helptext      = _("\
+Little Green Men are masked soliers without army insignia, \
+used for un-official assault spec-ops.\
+")
+
+[unit_pirates_brig]
+name          = _("Pirates Brig")
+class         = "Sea"
+;tech_req      = "Magnetism"
+tech_req      = "None"
+obsolete_by   = "Patrol Boat"
+graphic       = "u.pirates_brig"
+graphic_alt   = "u.caravel"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_frigate"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 3
+defense       = 3
+hitpoints     = 15
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 2
+transport_cap = 4
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Small Land", "Infantry"
+flags         = "BadCityDefender", "BarbarianOnly"
+roles         = "BarbarianBoat"
+veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 0, 1, 1, 2
+helptext      = _("\
+The Brig is a sailing warship that can enter\
+ any ocean tile.\
+")
+
 
 [unit_balloon]
 name          = _("Balloon")

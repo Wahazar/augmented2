@@ -167,6 +167,8 @@ sprites =
 		"u.clipper", "augmented2/small_units/clipper_t"
 		"u.freighter", "augmented2/small_units/freighter_t"
 		"u.jetliner", "augmented2/small_units/jetliner_t"
+		"u.brig", "augmented2/small_units/brig_t"
+		"u.pirates_brig", "augmented2/small_units/pirates_brig_t"
 ; swapped standard graphics
 		"u.direct_artillery", "augmented2/small_units/direct_artillery_t"
 		"u.plunging_cannon", "augmented2/small_units/plunging_cannon_t"

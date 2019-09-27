@@ -136,7 +136,7 @@ req2     = "Offshore Exploration"
 flags    = ""
 graphic     = "a.amphibious_warfare"
 graphic_alt = "-"
-cost     = 1550
+cost     = 1700
 
 [advance_animal_husbandry]
 name     = _("Animal Husbandry")
@@ -568,12 +568,12 @@ cost     = 2960
 [advance_espionage]
 name     = _("Espionage")
 req1     = "Communism"
-req2     = "Democracy"
+req2     = "Federation"
 root_req = "Communism"
 flags    = ""
 graphic     = "a.espionage"
 graphic_alt = "-"
-cost     = 1100
+cost     = 1150
 
 [advance_exploration]
 name     = _("Exploration")
@@ -1007,7 +1007,7 @@ flags    = ""
 root_req = "Combustion"
 graphic     = "a.mobile_warfare"
 graphic_alt = "-"
-cost     = 1220
+cost     = 1350
 
 [advance_theatre]
 name     = _("Theatre")

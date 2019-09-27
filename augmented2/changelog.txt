@@ -10,6 +10,7 @@ Post Office added
 caravan-like units: Junk, Cog, Clipper, Freighter, Jetliner
 Caravel: transport ship
 Brig: navy ship
+Pirates Brig, new units exclusive for Barbarians (Barbarians, Pirates, Little Green Men)
 
 2.6.23
 Rapture growth with Pyramids for Tribal and Despotism
