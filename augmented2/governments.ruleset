@@ -444,13 +444,10 @@ Thalassocracy is a system of 'empire at sea', which gain power\
  and increased money income from sea,\
  albeit decreased inland productivity. \n\
  Due to long traditions of its maritime supremacy, all new warships have already deckhand level \
-(hardened with Lighthouse and Harbour or Port Facility). \
+(veteran with Harbour). \
 "),
 ; /* xgettext:no-c-format */
 _("\
-* If there is Marco Polo Embassy on the same continent,\
- celebrating cities produce one extra shield point for every tile which is\
- already producing shield. (Cities below size 3 will not celebrate.)\n\
 * Each city gets extra luxury point.\n\
 * Each city can support up to 1 gold and 4 shield unit payments for free; \n\
 * Martial law is limited to 1 unit.\n\
@@ -459,9 +456,12 @@ _("\
 * There is 10% base level of corruption, not affected by distance to the capital.\n\
 * Base production waste is 20%, \
   and is not affected by distance to the capital.\n\
-  Production penalty is applied for inland tiles (except of city with the Lighthouse).\n\
-* Low chance of Civil War, however citizens are happy, when limited number of cities \
-  participate within this sea-trade federation.\
+* Production penalty is applied for inland tiles, except \
+ if Marco Polo embassy is on the same continent.\n\
+* Additional trade point from each Lake, Ocean or Deep Ocean tile for celebrating cities.\n\
+* City with the Lighthouse and Harbor harvest additional food from Deep Ocean tiles.\n\
+* Low chance of Civil War, however citizens are happy, when limited number of cities\
+ participate within this sea-trade federation.\
 * Thalassocracy is very tolerant of mixed nationalities in your cities.\
 ")
 
@@ -529,12 +529,9 @@ Under a Republican government, citizens hold an election to select a\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Cities which belong to the nation with Women Suffrage small wonder,\
+* Celebrating cities which belong to the nation with Women Suffrage small wonder,\
  produce an extra shield point for every worked land tile that is\
- already producing shields.\n\
-* Celebrating cities produce a further trade point for every worked tile\
- (land or water) which is already producing trade. (Cities below size 3\
- will not celebrate). Women Suffrage required.\n\
+ already producing shields (Cities below size 3 will not celebrate).\n\
 * Each city with size 8 and above can support one shield unit payment for free; additionally 6 gold unit payment are free.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 1 unhappy citizen.\n\
@@ -571,13 +568,10 @@ Under Democracy, citizens govern indirectly by electing representatives.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Cities which belong to the nation with Women Suffrage small wonder,\
+* Celebrating cities which belong to the nation with Women Suffrage small wonder,\
  produce an extra trade point for every worked land tile that is\
- already producing trade.\n\
-* Celebrating cities produce a further trade point for every worked tile\
- (land or water) which is already producing trade. (Cities below size 3\
- will not celebrate). Women Suffrage required.\n\
-* Each city with size 8 and above can support 2 gold unit payments for free; gold payments is doubled. \
+ already producing trade. (Cities below size 3 will not celebrate)\n\
+* Each city with size 8 and above can support 2 gold unit payments for free; gold payments are doubled. \
   Additionally 3 shield payments are free.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 1 unhappy citizens.\n\

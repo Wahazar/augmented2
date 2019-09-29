@@ -767,7 +767,7 @@ name          = _("Slave")
 class         = "Small Land"
 tech_req      = "Slave Trade"
 impr_req      = "Yasir"
-obsolete_by   = "Engineers"
+obsolete_by   = "Builders"
 graphic       = "u.slave"
 graphic_alt   = "u.worker"
 sound_move    = "m_worker"
@@ -3624,7 +3624,7 @@ bombard_rate = 6
 name          = _("Canoes")
 class         = "Trireme"
 tech_req      = "Fire Making"
-obsolete_by   = "Trireme"
+obsolete_by   = "Aak"
 graphic       = "u.canoes"
 graphic_alt   = "unit.fortress"
 sound_move    = "m_trireme"
@@ -3651,7 +3651,7 @@ roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 Canoe made from hollowed trunk is a stone age form of\
  transport, allow you to spread your Tribe onto nearby islands.\
- Shallow water only, not able to go into deep ocean.\
+ Canoe can go along rivers or coast, not able to go far into Ocean.\
 ")
 
 [unit_raft]
@@ -3715,7 +3715,7 @@ uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 cargo         = "Infantry", "Small Land"
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "Trireme"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -3726,7 +3726,7 @@ helptext      = _("\
 The Trireme is your first boat unit. It can act\
  as a transport ship and has rudimentary offensive\
  capabilities, and can travel on\
- rivers, but it may not enter deep ocean tiles.\
+ rivers and along the coastline, but it may not enter into far ocean tiles.\
 ")
 
 [unit_aak]
@@ -3763,7 +3763,8 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-The Aak is a small cargo boat designed for serving inland waters.\
+The Aak is a small cargo boat designed for serving inland or coastal waters, \
+but it may not enter deep ocean tiles.\
 "), _("\
 It is merchant vessel, thus cannot be equipped with artillery turrets.\
 ")
@@ -3883,7 +3884,7 @@ veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 Galley, thanks to rowing, can operate both on shallow sea waters or inland rivers as well,\
- as a battle ship, especially if equipped with ballistas or bombards.\
+ as a troops transport or battle ship, especially if equipped with ballistas or bombards.\
  Galley cannot enter deep ocean tiles.\
 ")
 
@@ -4036,7 +4037,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Infantry", "Small Land", "Merchant"
+cargo         = "Infantry", "Small Land", "Light Cavalry", "Merchant"
 flags         = "BadCityDefender", "Only_Native_Attack"
 roles         = "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")

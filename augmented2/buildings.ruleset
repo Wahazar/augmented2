@@ -409,7 +409,7 @@ flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Concrete", "Player", TRUE
-      "Building", "City Walls", "City", FALSE
+;      "Building", "City Walls", "City", FALSE
     }
 graphic	= "b.bunkers"
 graphic_alt	= "b.city_walls"
@@ -557,13 +557,14 @@ flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Masonry", "Player", TRUE
-      "Building", "Palisade", "City", FALSE
+;      "Building", "Palisade", "City", FALSE
       "Building", "Bunkers", "City", FALSE
     }
 graphic	= "b.city_walls"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
+      "Building", "Bunkers", "City"
     }
 build_cost	= 60
 upkeep		= 0
@@ -736,14 +737,16 @@ name        = _("Harbor")
 rule_name   = "Harbour"     ; en_GB spelling used originally
 genus		= "Improvement"
 reqs	=
-    { "type", "name", "range"
-      "Tech", "Seafaring", "Player"
-      "TerrainFlag", "Sea", "Adjacent"
+    { "type", "name", "range", "present"
+      "Tech", "Seafaring", "Player", TRUE
+      "TerrainFlag", "Sea", "Adjacent", TRUE
+      "Building", "Port Facility", "City", FALSE
     }
 graphic	= "b.harbour"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
+      "Building", "Port Facility", "City"
     }
 build_cost	= 40
 upkeep		= 1
@@ -751,12 +754,17 @@ sabotage	= 100
 sound		= "b_harbour"
 sound_alt	= "b_generic"
 helptext	= _("\
-Building a Harbor gives one extra food resource on all Ocean or\
- Deep Ocean tiles, but not Lakes. The city needs to be coastal\
- (e.g. adjacent to Ocean or Deep Ocean tiles) to build this improvement.\
+Building a Harbor gives one extra food resource on shallow Ocean\
+ tiles, but not Lakes. The city needs to be coastal\
+ (e.g. adjacent to Ocean tiles) to build this improvement.\
+ City with Lighthouse gain extra food also from Deep Ocean tiles.\
 "), _("\
-All ships are repaired 25% faster in a city where harbor exits.\
- This effect is cancelled when a Port Facility in constructed in the city.\
+All ships are repaired 50% faster in a city where Harbor exits.\
+"), _("\
+In case of Thalassocracy goverment, any new Sea unit built in a city with Harbor \
+have Veteran status.\
+"), _("\
+Tip: Port Facility is an improved version of the Harbor.\
 ")
 
 [building_hospital]
@@ -829,7 +837,8 @@ graphic	= "b.lazaretto"
 graphic_alt	= "b.aqueduct"
 obsolete_by	=
     { "type", "name", "range"
-      "Tech", "Biotechnology", "Player"
+      "Tech", "Genetic Engineering", "Player"
+      "Building", "Hospital", "City"
     }
 build_cost	= 60
 upkeep	= 1
@@ -837,7 +846,8 @@ sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
 helptext	= _("\
-The Lazaretto isolates ill people and therefore reduces chance of plaque by 20%.\
+The Lazaretto isolates ill people and therefore reduces chance of plaque by 20% \
+(30% if player have Thermal Bath small wonder).\
 ")
 
 [building_library]
@@ -904,6 +914,7 @@ graphic_alt	= "b.factory"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "The Corporation", "Player"
+      "Building", "Power Plant", "City"
     }
 build_cost	= 80
 upkeep	= 1
@@ -1235,6 +1246,7 @@ graphic_alt	= "b.city_walls"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "Concrete", "Player"
+      "Building", "City Walls", "City"
     }
 build_cost	= 30
 upkeep		= 1
@@ -1268,9 +1280,9 @@ sabotage	= 100
 sound		= "b_police_station"
 sound_alt	= "b_generic"
 helptext	= _("\
-A Police Station neutralizes any unhappiness caused by one military\
- unit in its city. It also makes up to 2 more unhappy citizens content\
- provided they are not unhappy about aggression.\
+In case of Democracy, Republic or Federation, a Police Station neutralizes any unhappiness caused by \
+one military unit in its city. For all governments, it also makes 1 unhappy citizen content \
+provided they are not unhappy about aggression.\
 ")
 
 [building_port_facility]
@@ -1292,14 +1304,20 @@ sabotage	= 100
 sound		= "b_port_facility"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to build veteran sea units.  Also, damaged sea units\
- which stay in town for one full turn without moving are completely\
+Port Facility gives one extra food resource on all Ocean or\
+ Deep Ocean tiles, but not Lakes. The city needs to be coastal\
+ (e.g. adjacent to Ocean or Deep Ocean tiles) to build this improvement.\
+"), _("\
+Port Facility allows a city to build veteran navy units.  Also, damaged sea units\
+ and turets which stay in town for one full turn without moving are completely\
  restored.\
 "), _("\
-Together with supermarket, increases the tax output in a city by 25%.\
+Together with supermarket, increases the tax output in a city by 25%\ 
+(not cumulative with Railway Station).\
 "), _("\
 Increase city vision radius (not cumulative with Mass Transit or Eiffel Tower)\
 ")
+
 
 [building_power_plant]
 name		= _("Power Plant")
@@ -1472,7 +1490,8 @@ helptext	= _("\
 River embankments eliminate totally any risk of the Flood disaster in city \
 adjacent to tile with river, also in case of coastal city with river, \
 risk and results of Tsunami disasters are substancially reduced.\n\
-Additionally, riverside boulevard make one unhappy citizen content (except of unhappiness caused by militry units)\
+Additionally, riverside boulevard make one unhappy citizen content \
+(except of unhappiness caused by militry units), if there is no pollution around city.\
 ")
 
 [building_sam_battery]
@@ -1868,6 +1887,7 @@ graphic_alt	= "b.factory"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "Plastics", "Player"
+      "Building", "Mfg. Plant", "City"
     }
 build_cost	= 100
 upkeep	= 2
@@ -1944,7 +1964,7 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 20
-upkeep		= 1
+upkeep		= 0
 sabotage	= 50
 sound		= "b_sewer_system"
 sound_alt	= "b_generic"
@@ -1997,7 +2017,7 @@ obsolete_by	=
     { "type", "name", "range"
       "Building", "Slavery Abolition", "Player"
       "Building", "United Nations", "World"
-      "Tech", "The Corporation", "Player"
+      "Tech", "Engineering", "Player"
     }
 build_cost	= 90
 upkeep		= 1
@@ -2023,7 +2043,9 @@ reqs	=
     }
 graphic	= "b.atlantic_telegraph_company"
 graphic_alt	= "b.university"
-obsolete_by	= "None"
+obsolete_by	= 
+    { "type", "name", "range"
+    }
 build_cost	= 1300
 upkeep		= 0
 sabotage	= 0
@@ -2333,6 +2355,7 @@ graphic_alt	= "b.colosseum"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "Communism", "Player"
+      "Building", "Internet", "World", FALSE
     }
 build_cost	= 180
 upkeep		= 2
@@ -2395,6 +2418,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Communism", "Player", FALSE
+      "Building", "United Nations", "World", FALSE
     }
 build_cost	= 300
 upkeep		= 0
@@ -2449,7 +2473,7 @@ graphic	= "b.lighthouse"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Engineering", "Player", FALSE
+      "Tech", "Screw Propeller", "Player", FALSE
     }
 build_cost	= 200
 upkeep		= 0
@@ -2459,9 +2483,10 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Gives all your sea units 1 additional movement point (except Triremes \
 while moving on rivers). Makes all your new trireme units veterans (for all \
-your cities) and sea units deckhand (for all cities with Harbour).\
+your cities).\
 "), _("\
-In case of Thalassocracy goverment, shield penalty is not applied to city with Lighthouse \
+In case of Thalassocracy goverment, Harbor food production in the city with Lighthouse \
+is increased also for Deep Ocean tiles (similar to Port Facility effect).
 ")
 
 [building_magellans_expedition]
@@ -2641,10 +2666,10 @@ sabotage	= 0
 sound		= "w_womens_suffrage"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increase general threshold of city size generating unhapiness, \
-if there is courthouse in the given city, and makes 2 unhappy citizens content \
-in a city were Slavery Abolition was founded. \n\
-Additionally empire size unhapiness step is increased for Federation, Republic and Democracy.\
+Makes 2 unhappy citizens content in a city were Slavery Abolition was founded, \
+and additional unhappy citizen content for each player's city with courthouse \
+in case of Republic, Democracy or Federation government. \
+Also inctite cost in case of Democracy and bribing cost in case of Republic is increased x5. \
 "), _("\
 Side effect: decreased gold income from gold and diamond mines. 
 "), _("\
@@ -2737,6 +2762,7 @@ graphic_alt     = "b.oracle"
 obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Conscription", "Player", FALSE
+      "Tech", "Automobile", "World", FALSE
     }
 build_cost	= 250
 upkeep		= 0
@@ -2763,7 +2789,8 @@ graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Tactics", "World", FALSE
+      "Tech", "Tactics", "Player", FALSE
+      "Tech", "Mobile Warfare", "World", FALSE
     }
 build_cost	= 300
 upkeep		= 0
@@ -2790,7 +2817,8 @@ graphic_alt     = "b.oracle"
 obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Theology", "Player", FALSE
-      "Building", "Temple of City God", "Player"
+      "Building", "Temple of City God", "Player", FALSE
+      "Building", "Golden Temple", "World", FALSE
     }
 build_cost	= 200
 upkeep		= 0
@@ -2848,7 +2876,7 @@ sound		= "w_hanging_gardens"
 sound_alt	= "w_generic"
 helptext	= _("\
 Add 1 luxury point to the city where is located and each river tile within city radius.\n\
-Thermal Bath reduces chance of plaque in any player's city with Lazaretto improvement by additional 20%.\
+Thermal Bath reduces chance of plaque in any player's city with Lazaretto improvement by additional 10%.\
 ")
 
 [building_warfare_museum]
@@ -2923,7 +2951,7 @@ sound		= "w_womens_suffrage"
 sound_alt	= "w_generic"
 helptext	= _("\
 Women have right to vote and work equal to men.\n\ 
-With Women's Suffrage and Democracy, cities produce an extra trade point for every worked land tile that is\
+With Women's Suffrage and Democracy, celebrating cities produce an extra trade point for every worked land tile that is\
  already producing trade.\n\
 Similar effect for shields production occurs in case of Republic.\n\
 Beside this, regardless of government type, Women's Suffrage make 1 unhappy citizens content in each player's city.\
@@ -3178,6 +3206,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Mobile Warfare", "Player", FALSE
+      "Tech", "Rocketry", "World", FALSE
     }
 build_cost	= 2000
 upkeep		= 0
@@ -3657,8 +3686,6 @@ reqs	=
          "Building", "Church", "City", FALSE
 	 "Building", "Michelangelo's Chapel", "Player", FALSE
 	 "Building", "King Richard's Crusade", "Player", FALSE
-	 "Building", "Leshan Buddha Statue", "Player", FALSE
-	 "Building", "Golden Temple", "Player", FALSE
 	 "Building", "Temple of City God", "Player", FALSE
     }
 graphic	= "b.taj_mahal"

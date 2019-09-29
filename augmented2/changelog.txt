@@ -11,6 +11,11 @@ caravan-like units: Junk, Cog, Clipper, Freighter, Jetliner
 Caravel: transport ship
 Brig: navy ship
 Pirates Brig, new units exclusive for Barbarians (Barbarians, Pirates, Little Green Men)
+Revised effects and buildings constrictions/obsoleting.
+Port Facility is now an improved version of Harbour.
+Pollution decrease empire size step
+Fixed Slavery Abolition effecs
+Democracy and Republic tile bonus only for Celebrating
 
 2.6.23
 Rapture growth with Pyramids for Tribal and Despotism
