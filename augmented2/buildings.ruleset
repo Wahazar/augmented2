@@ -1636,6 +1636,7 @@ reqs	=
       "Building", "Factory", "City"
       "Building", "University", "City"
       "Building", "Research Lab", "City"
+      "Building", "Space Lift", "City"
     }
 graphic	= "b.space_component"
 graphic_alt	= "-"
@@ -1665,6 +1666,7 @@ reqs	=
       "Building", "Factory", "City"
       "Building", "University", "City"
       "Building", "Research Lab", "City"
+      "Building", "Space Lift", "City"
     }
 graphic	= "b.space_modules"
 graphic_alt	= "-"
@@ -2639,11 +2641,13 @@ sabotage	= 0
 sound		= "w_pyramids"
 sound_alt	= "w_generic"
 helptext	= _("\
-Each tile around the city where this wonder is built that is already \
-generating some shield output produces one extra shield resource. \
 Under Despotism or Tribal governments, the Pyramids cancel the penalty \
 to worked tiles with output greater than 2 (for all kinds of output), \
-as if all your cities were always celebrating.\
+as if all your cities were always celebrating.\n\
+In above case, celebrating cities with Granary and size 3 or above will be subject of Rapture Growth \
+(this effect is cancelled by Monotheism).\
+"), _("\
+Additionally, 1 extra luxury point is added to the city with Pyramids.\
 ")
 
 [building_slavery_abolition]

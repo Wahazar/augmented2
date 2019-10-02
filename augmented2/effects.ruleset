@@ -2929,7 +2929,7 @@ reqs    =
 
 [effect_lux_thalassocracy]
 type    = "Output_Add_Tile"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Thalassocracy", "Player", TRUE
@@ -2984,14 +2984,14 @@ reqs    =
       "OutputType", "Luxury", "Local", FALSE
     }
 
-[effect_good_lux_thalassocracy]
-type    = "Output_Bonus"
-value   = 25
-reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Thalassocracy", "Player", TRUE
-      "OutputType", "Luxury", "Local", FALSE
-    }
+;[effect_good_lux_thalassocracy]
+;type    = "Output_Bonus"
+;value   = 25
+;reqs    =
+;    { "type", "name", "range", "quiet"
+;      "Gov", "Thalassocracy", "Player", TRUE
+;      "OutputType", "Luxury", "Local", FALSE
+;    }
 
 ;[effect_bad_lux_legalism]
 ;type    = "Output_Bonus"
@@ -5601,7 +5601,8 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Pyramids", "City"
-      "OutputType", "Shield", "Local"
+      "CityTile", "Center", "Local"
+      "OutputType", "Luxury", "Local"
     }
 
 [effect_pyramids_culture]

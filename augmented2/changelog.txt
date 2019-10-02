@@ -2,6 +2,13 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+galley/monitor capacity 2
+terrain transform tweaked
+thalassocracy and federation luxury changed
+all spaceship partreq. Space Lift
+pyramids tweaked.
+units transport description corrected.
+
 2.6.24
 Colosseum obsoleted
 Teh tree tweaks

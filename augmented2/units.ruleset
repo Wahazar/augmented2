@@ -759,7 +759,7 @@ for more details.\
 _("\
 Beign the Big Land unit class, Engineers have restricted mobility \
 (rough terrain such montains, swamp, jungle require roads wich can be prepared by Workers or Builders), \
-but they can be also used as a landing/transport aid for other land units (excluding Big Land).\
+but they can be also used as a landing/transport aid for other land units (excluding Big Land ones).\
 ")
 
 [unit_slave]
@@ -1757,7 +1757,7 @@ uk_food       = 1
 uk_gold       = 3
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Capturer", "Unique", "Unbribable", "Marines", "Partial_Invis", "Diplomat", "Spy"
+flags         = "Capturer", "Unique", "Unbribable", "Marines", "Partial_Invis", "Diplomat", "Spy", "Paratroopers"
 roles         = "Hunter"
 helptext      = _("\
 Navy Seals are special units of scuba divers, capable to attack other ships from land or from aboard ship.\
@@ -1987,6 +1987,8 @@ roles         = "AttackFastStartUnit", "HutTech", "Barbarian", "Hunter"
 helptext      = _("\
 Archery Horsemen are a shock-troop,\
  which can shoot arrows against enemy units hidden in hard to access terrain.\
+"), _("\
+Light Cavalry units cannot be transported by sea using early ships (Triremes).\
 ")
 
 [unit_dromedari]
@@ -2018,6 +2020,8 @@ flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
 roles         = "AttackFastStartUnit", "HutTech", "Barbarian", "Hunter"
 helptext      = _("\
 Dromedari are desert brave wariors, mounted on camels.\
+"), _("\
+Light Cavalry units cannot be transported by sea using early ships (Triremes).\
 ")
 
 [unit_lancers]
@@ -2149,6 +2153,10 @@ helptext      = _("\
 Horsemen are mounted warriors and an early\
  shock-troop that can penetrate deep into\
  enemy territory.\
+"), _("\
+This unit cannot move across swamps, glaciers, or mountains,\
+ and cannot be transported by sea using early ships\
+ (Triremes, Caravels and Aaks).\
 ")
 
 [unit_chariot]
@@ -2185,7 +2193,7 @@ Chariots are horse-pulled war wagons. They have a stronger attack than\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes and Aaks).\
+ (Triremes, Caravels and Aaks).\
 "), _("\
 This unit can gain Veteran status if built in city with Stables Barracks, ruled by Despotism.\
 ")
@@ -2223,7 +2231,7 @@ Elephants are towering animals trained for war that are often used as\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes and Aaks).\
+ (Triremes, Caravels and Aaks).\
 ")
 
 [unit_crusaders]
@@ -2256,6 +2264,10 @@ roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Crusaders are highly disciplined mounted\
  warriors driven by a higher cause.\
+"), _("\
+This unit cannot move across swamps, glaciers, or mountains,\
+ and cannot be transported by sea using early ships\
+ (Triremes, Caravels and Aaks).\
 ")
 
 [unit_knights]
@@ -2290,7 +2302,7 @@ Knights are mounted and heavily armored warriors.\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes and Aaks).\
+ (Triremes, Caravels and Aaks).\
 ")
 
 
@@ -2328,7 +2340,7 @@ Samurai horsemen, thanks to the Bushido code and supreme\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes and Aaks).\
+ (Triremes, Caravels and Aaks).\
 ")
 
 [unit_cuirassiers]
@@ -2528,8 +2540,8 @@ cargo         = "Small Land", "Infantry", "Turrets"
 flags         = "BadCityDefender", "Bombarder", "Only_Native_Attack", "BadWallAttacker"
 roles         = "DefendOkStartUnit"
 veteran_names = _("draisine"), _("armored van"), _("armored engine"), _("armored express"), _("ice piercer")
-veteran_raise_chance      = 50, 33, 20, 10, 0
-veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_raise_chance      = 0, 0, 00, 0, 0
+veteran_work_raise_chance = 1, 1, 1, 1, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 1, 1, 2, 3
 helptext      = _("\
@@ -2688,7 +2700,7 @@ Catapults are large rock-throwing machines of war.\
 "), _("\
 While powerful, Catapults (and their successors) are bulky and awkward;\
  they require roads to move, are difficult to defend, and are too big for early ships\
- (Triremes and Caravels).\
+ (Triremes, Aaks and Caravels).\
 "), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
@@ -2726,6 +2738,10 @@ Cannons are large firearms that can fire heavy projectiles over long\
  distances. As with the catapults they replace, they are very strong\
  attackers but equally weak defenders and will need an escort to be\
  effective, and have limited mobility.\
+"), _("\
+This unit cannot move across swamps, glaciers, or mountains,\
+ and cannot be transported by sea using early ships\
+ (Triremes, Caravels and Aaks).\
 "), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
@@ -2933,7 +2949,7 @@ uk_gold       = 2
 flags         = "NoVeteran"
 roles         = ""
 helptext      = _("\
-Cannon Turret is kind of stationary artillery.\
+Cannon Turret is a kind of stationary artillery.\
 "), _("\
 Such unit can be mounted on a ship or reside in a fortress, but can't move by itself beyond city/fortress.
 ")
@@ -3003,7 +3019,10 @@ roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Battering ram is an excellent unit for besieging cities, even those with city walls (but cannot occupy city itself).\
 "), _("\
-Battering ram needs an escort to be protected against counterattack, and have mobility limited strictly to roads.\ 
+Battering ram needs an escort to be protected against counterattack, and have mobility limited strictly to roads and flat terrain.\ 
+"), _("\
+This unit cannot be transported by sea using early ships\
+ (Triremes, Caravels and Aaks).\
 ")
 
 [unit_artillery]
@@ -3035,7 +3054,10 @@ flags         = "CityBuster", "OneAttack"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 The artillery is a very strong direct fire attacker but equally weak defender\
- and will need an escort to be effective, and has limited mobility.\
+ and will need an escort to be effective, and has mobility limited to roads and flat terrain.\
+"), _("\
+This unit cannot be transported by sea using early ships\
+ (Triremes, Caravels and Aaks).\
 ")
 
 [unit_AT_gun]
@@ -3073,7 +3095,7 @@ bonuses       =
 helptext      = _("\
 The Anti-tank gun is an improved artillery. As with its predecessors, it is a\
  very strong attacker but equally weak defender and will need an escort\
- to be effective, and has limited mobility.\
+ to be effective, and has mobility limited to roads and flat terrain.\
 "), _("\
 AT Guns have increased defence and attack against armors and mechanised infantry.\
 ")
@@ -3309,8 +3331,8 @@ attack        = 5
 defense       = 3
 hitpoints     = 20
 firepower     = 3
-move_rate     = 4
-; range 4*20/2=40
+move_rate     = 6
+; range 5*20/2=50
 vision_radius_sq = 8
 transport_cap = 1
 fuel          = 0
@@ -3868,7 +3890,7 @@ hitpoints     = 15
 firepower     = 1
 move_rate     = 3
 vision_radius_sq = 2
-transport_cap = 1
+transport_cap = 2
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
@@ -3907,7 +3929,7 @@ hitpoints     = 20
 firepower     = 2
 move_rate     = 4
 vision_radius_sq = 2
-transport_cap = 1
+transport_cap = 2
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 2
@@ -4075,7 +4097,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Infantry", "Light Cavalry", "Small Land", "Wheeled Unit", "Merchant"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Wheeled Unit", "Merchant"
 flags         = "BadCityDefender", "HasNoZOC"
 roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -5211,6 +5233,8 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 3
+embarks       = "Helicopter"
+disembarks    = "Helicopter"
 flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
@@ -5322,6 +5346,8 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 4
+embarks       = "Helicopter"
+disembarks    = "Helicopter"
 flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "Spy"
 veteran_names =
 ; /* TRANS: Spy veteran level */

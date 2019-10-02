@@ -937,7 +937,7 @@ set =
       "occupychance", 100
       "razechance", 10
       "techlossforgiveness", 10
-      "techlossrestore", -1
+      "techlossrestore", 10
       "sciencebox", 160
       "revolen", 2
       "revolentype", "RANDQUICK"

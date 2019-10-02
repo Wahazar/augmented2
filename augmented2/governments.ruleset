@@ -118,7 +118,7 @@ _("\
 * Without Pyramids, each worked tile that gives more than 2 Food, Shield, or Trade will\
  suffer a -1 penalty, unless the city working it is celebrating or Tribe Hut exist.\
  (Cities below size 3 will not celebrate.)\n\
-* Celebrating cities with granary, Pyramids and size 3 or above are subject of Rapture Growth \
+* With Pyramids, celebrating cities with Granary and size 3 or above are subject of Rapture Growth \
  (this effect is cancelled by Monotheism)\n\
 * Each city gets 1 extra content citizen.\n\
 * Each city can support up to 2 units for free; further units each cost\
@@ -159,7 +159,7 @@ _("\
 * Without Pyramids, each worked tile that gives more than 2 Food, Shield, or Trade will\
  suffer a -1 penalty, unless the city working it is celebrating.\
  (Cities below size 3 will not celebrate.)\n\
-* Celebrating cities with granary, Pyramids and size 3 or above are subject of Rapture Growth \
+* With Pyramids, celebrating cities with Granary and size 3 or above are subject of Rapture Growth \
  (this effect is cancelled by Monotheism)\n\
 * Each city can support up to 2 gold and 4 shield unit payments for free.\n\
 * Unlike later governments, military units do not cause unhappiness even\
@@ -448,7 +448,7 @@ Thalassocracy is a system of 'empire at sea', which gain power\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Each city gets extra luxury point.\n\
+* Each city gets extra 2 luxury points.\n\
 * Each city can support up to 1 gold and 4 shield unit payments for free; \n\
 * Martial law is limited to 1 unit.\n\
 * Each city tolerates up to 1 peacemaker unit outside of state boundaries;\
@@ -502,7 +502,7 @@ _("\
 * Federation is relatively tolerant of cosmopolitan cities.\n\
 * Diplomats and Spies gain additional veterancy level (secretary).\n\
 * Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
-* Gold outcome is increased.\
+* Luxury and gold outcome is increased.\
 ")
 
 ;------------------------------------------------------------------------
