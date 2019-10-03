@@ -480,10 +480,10 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
-irrigation_result    = "Jungle"
+irrigation_result    = "Plains"
 irrigation_food_incr = 0
 irrigation_time      = 20
-mining_result        = "Plains"
+mining_result        = "Jungle"
 mining_shield_incr   = 0
 mining_time          = 15
 transform_result     = "Grassland"
@@ -493,7 +493,7 @@ clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "Jungle"
-warmer_drier_result  = "no"
+warmer_drier_result  = "Plains"
 cooler_wetter_result = "no"
 cooler_drier_result  = "Tundra"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter"
@@ -530,7 +530,7 @@ road_time            = 2
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 5
-mining_result        = "Forest"
+mining_result        = "Jungle"
 mining_shield_incr   = 0
 mining_time          = 15
 transform_result     = "Swamp"
@@ -540,7 +540,7 @@ clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "Swamp"
-warmer_drier_result  = "Swamp"
+warmer_drier_result  = "Plains"
 cooler_wetter_result = "Swamp"
 cooler_drier_result  = "Tundra"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Wheeled Unit"
@@ -718,7 +718,7 @@ road_time            = 2
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 5
-mining_result        = "Desert"
+mining_result        = "Forest"
 mining_shield_incr   = 0
 mining_time          = 10
 transform_result     = "Hills"
@@ -1276,7 +1276,7 @@ removal_time   = 0
 conflicts      = "Irrigation", "Farmland"
 helptext       = _("\
 Once Refining is known, mines on Desert and Glacier tiles can be\
- upgraded to oil wells for an extra production point if Refinery is builded.\
+ upgraded to oil wells for an extra production point, if Refinery is builded.\
 ")
 
 [extra_wind_turbine]
@@ -1308,7 +1308,7 @@ helptext       = _("\
 Wind turbines can be builded on the hills with irrigation or farmland,\
  such tile get 1 extra production point, while keeping current food production.\
 "), _("\
-Electricty knowledge is required.\
+Electricty knowledge is required to gain extra production from Wind Turbine.\
 "), _("\
 Building a mine will destroy both wind turbines and irrigation.\
 ")

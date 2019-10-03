@@ -6083,6 +6083,7 @@ reqs    =
     { "type", "name", "range", "present"
 ;      "Terrain", "Desert", "Local", FALSE
       "Extra", "Mine", "Local", TRUE
+      "Tech", "Bronze Working", "Player", TRUE
     }
 
 ;[effect_oil_well]
@@ -6100,6 +6101,7 @@ value   = 100
 reqs    =
     { "type", "name", "range"
       "Extra", "Irrigation", "Local"
+      "Tech", "Agricultural Farming", "Player", TRUE
     }
 
 ; Simulate presence of irrigation extra in unirrigated city centers
