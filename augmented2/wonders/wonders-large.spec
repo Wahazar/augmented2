@@ -50,4 +50,6 @@ sprites =
 		"b.fushimi_inari", "augmented2/wonders/Fushimi_Inari"
 		"b.jousting_tiltyard", "augmented2/wonders/jousting_tiltyard"
 		"b.monk_monastery", "augmented2/wonders/monk_monastery_3dman_eu"
+		"b.moai_statues", "augmented2/wonders/moai_statues"
+		"b.colosseum_wonder", "augmented2/wonders/colosseum_wonder"
 	}

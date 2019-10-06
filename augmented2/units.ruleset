@@ -193,9 +193,9 @@ min_speed     = 2
 hp_loss_pct   = 0
 flags         = "DamageSlows", "AttackNonNative", "AttFromNonNative"
 
-[unitclass_trireme]
+[unitclass_coaster]
 ; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Trireme")
+name          = _("?unitclass:Coaster")
 min_speed     = 2
 hp_loss_pct   = 0
 flags         = "ZOC", "DamageSlows", "AttFromNonNative"
@@ -3644,7 +3644,7 @@ bombard_rate = 6
 
 [unit_canoes]
 name          = _("Canoes")
-class         = "Trireme"
+class         = "Coaster"
 tech_req      = "Fire Making"
 obsolete_by   = "Aak"
 graphic       = "u.canoes"
@@ -3713,7 +3713,7 @@ TIP: Raft can be used as a temporary bridge (fortify it for anchor), but can be 
 
 [unit_trireme]
 name          = _("Trireme")
-class         = "Trireme"
+class         = "Coaster"
 tech_req      = "Map Making"
 obsolete_by   = "Galley"
 graphic       = "u.trireme"
@@ -3753,7 +3753,7 @@ The Trireme is your first boat unit. It can act\
 
 [unit_aak]
 name          = _("Aak")
-class         = "Trireme"
+class         = "Coaster"
 tech_req      = "Thalassocracy"
 obsolete_by   = "Steam Barge"
 graphic       = "u.aak"
@@ -3793,7 +3793,7 @@ It is merchant vessel, thus cannot be equipped with artillery turrets.\
 
 [unit_steam_barge]
 name          = _("Steam Barge")
-class         = "Trireme"
+class         = "Coaster"
 tech_req      = "Steam Engine"
 obsolete_by   = "Diesel Barge"
 graphic       = "u.steam_barge"
@@ -3833,7 +3833,7 @@ Barges can also clean pollution and fallout on water tiles, or transform tiles w
 
 [unit_diesel_barge]
 name          = _("Diesel Barge")
-class         = "Trireme"
+class         = "Coaster"
 tech_req      = "Mass Production"
 obsolete_by   = "None"
 graphic       = "u.diesel_barge"
@@ -3873,7 +3873,7 @@ Barges can also clean pollution and fallout on water tiles, or transform tiles w
 
 [unit_galley]
 name          = _("Galley")
-class         = "Trireme"
+class         = "Coaster"
 tech_req      = "Seafaring"
 obsolete_by   = "Monitor"
 graphic       = "u.galley"
@@ -3912,7 +3912,7 @@ Galley, thanks to rowing, can operate both on shallow sea waters or inland river
 
 [unit_monitor]
 name          = _("Monitor")
-class         = "Trireme"
+class         = "Coaster"
 tech_req      = "Screw Propeller"
 obsolete_by   = "Patrol Boat"
 graphic       = "u.monitor"
@@ -3956,7 +3956,7 @@ bombard_rate = 1
 
 [unit_patrol_boat]
 name          = _("Patrol Boat")
-class         = "Trireme"
+class         = "Coaster"
 tech_req      = "Amphibious Warfare"
 obsolete_by   = "None"
 graphic       = "u.patrol_boat"
@@ -4240,7 +4240,7 @@ This ship carries goods or material for trading with other nations,\
 name          = _("Cog")
 class         = "Sea"
 tech_req      = "Thalassocracy"
-obsolete_by   = "Galleon"
+obsolete_by   = "Clipper"
 gov_req       = "Thalassocracy"
 graphic       = "u.cog"
 graphic_alt   = "u.caravel"
@@ -5109,7 +5109,7 @@ uk_food       = 0
 uk_gold       = 1
 embarks       = "Air"
 disembarks    = "Air"
-targets       = "Sea", "Trireme"
+targets       = "Sea", "Coaster"
 flags         = "OneAttack", "NoVeteran", "Capturable", "Partial_Invis", "Only_Native_Attack", "Submarine", "HasNoZOC"
 roles         = ""
 helptext      = _("\

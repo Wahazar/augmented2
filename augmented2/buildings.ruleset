@@ -80,7 +80,7 @@ helptext	= _("\
 New settlements that build the Tribe Hut can produce Tribe units.\
  The Tribe Hut gives improved tile production when in Tribalism\
  goverment (no tile penalty). You can replace Tribe Hut with City Hall\
- to increase town influence/vision radius, but at the expence of Tribe\
+ to increase town influence/vision radius, but at the expense of Tribe\
  Hut bonus.\
 ")
 
@@ -127,8 +127,6 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Entertains the citizens of a city by adding 3 luxury points.\
  The discovery of Cinematography reduces the luxury bonus to 2 points.
-"), _("\
-Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
 
 [building_airport]
@@ -531,7 +529,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Christianity", "Player", TRUE
 	  "MinCulture", "1000", "Player", TRUE
-      "Building", "Temple", "City", FALSE
+;obsolete      "Building", "Temple", "City", FALSE
 	  "Building", "Mosque", "City", FALSE
     }
 graphic	= "b.church"
@@ -1020,7 +1018,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Islam", "Player", TRUE
 	 "MinCulture", "1600", "Player", TRUE
-	 "Building", "Temple", "City", FALSE
+;obsolete	 "Building", "Temple", "City", FALSE
 	 "Building", "Church", "City", FALSE
     }
 graphic	= "b.mosque"
@@ -1859,6 +1857,8 @@ graphic	= "b.temple"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
+      "Building", "Church", "City"
+      "Building", "Mosque", "City"
     }
 build_cost	= 30
 upkeep		= 1
@@ -2068,8 +2068,8 @@ reqs	=
       "Tech", "Martial Games", "Player"
 	 "MinCulture", "850", "Player"
     }
-graphic	= "b.colosseum"
-graphic_alt	= "-"
+graphic	= "b.colosseum_wonder"
+graphic_alt	= "b.colosseum"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "Mass Entertainment", "Player"
@@ -2380,7 +2380,7 @@ reqs	=
       "Building", "Temple", "City", TRUE
       "MinCulture", "3100", "Player", TRUE
       "Building", "Kaaba", "Player", FALSE
-      "Building", "King Richard's Crusade", "Player", FALSE
+;      "Building", "King Richard's Crusade", "Player", FALSE
       "Building", "Michelangelo's Chapel", "Player", FALSE
       "Building", "J.S. Bach's Cathedral", "Player", FALSE
     }
@@ -2411,9 +2411,9 @@ reqs	=
 	 "Building", "Mosque", "City", FALSE
 	 "Building", "Kaaba", "Player", FALSE
 	 "Building", "Taj Mahal", "Player", FALSE
-	 "Building", "Mausoleum of Mausolos", "Player", FALSE
+;	 "Building", "Mausoleum of Mausolos", "Player", FALSE
 	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
-	 "Building", "Statue of Zeus", "Player", FALSE
+;	 "Building", "Statue of Zeus", "Player", FALSE
     }
 graphic	= "b.king_richards_crusade"
 graphic_alt	= "-"
@@ -2483,8 +2483,8 @@ sabotage	= 0
 sound		= "w_lighthouse"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives all your sea units 1 additional movement point (except Triremes \
-while moving on rivers). Makes all your new trireme units veterans (for all \
+Gives all your sea units 1 additional movement point (except Coasters \
+while moving on rivers). Makes all your new Coaster units veterans (for all \
 your cities).\
 "), _("\
 In case of Thalassocracy goverment, Harbor food production in the city with Lighthouse \
@@ -2593,7 +2593,7 @@ sabotage	= 0
 sound		= "w_cure_for_cancer"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increase healing of infantry or cavalry units by 25%, including those not fortified.\
+Increase healing of small land or infantry units by 50%, including those not fortified.\
 ")
 
 [building_b_pasteur_institute]
@@ -2731,9 +2731,8 @@ sabotage	= 0
 sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
-Giant palace complex, which makes a city a second center \
-of government.\n\
-Additionally, produces extra 4 luxury points in this city.\
+Sultan Palace is a second center of Islamic government.\n\
+Additionally, it produces extra 4 luxury points in this city.\
 "), _("\
 Waste in other cities (corruption, production waste, and food waste) \
 is related to how far away from the nearest capital they are. On top of \
@@ -2767,6 +2766,8 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Conscription", "Player", FALSE
       "Tech", "Automobile", "World", FALSE
+      "Building", "King Richard's Crusade", "Player", FALSE
+      "Building", "Kaaba", "Player", FALSE
     }
 build_cost	= 250
 upkeep		= 0
@@ -2822,6 +2823,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Theology", "Player", FALSE
       "Building", "Temple of City God", "Player", FALSE
+      "Building", "Kyoto Fushimi Inari", "Player", FALSE
       "Building", "Golden Temple", "World", FALSE
     }
 build_cost	= 200
@@ -2988,7 +2990,7 @@ sabotage	= 0
 sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
-Giant temple, which makes a city a second center \
+Giant complex of temples, which makes a city a second center \
 of government.\n\
 Additionally, produces extra 4 luxury points in this city.\
 "), _("\
@@ -3328,7 +3330,7 @@ reqs	=
 	 "Building", "J.S. Bach's Cathedral", "Player", FALSE
 	 "Building", "King Richard's Crusade", "Player", FALSE
 	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
-	 "Building", "Statue of Zeus", "Player", FALSE
+;	 "Building", "Statue of Zeus", "Player", FALSE
     }
 graphic	= "b.kaaba"
 graphic_alt	= "-"
@@ -3427,9 +3429,9 @@ sabotage	= 0
 sound		= "w_oracle"
 sound_alt	= "w_generic"
 helptext	= _("\
-There is belief, that this giant statue calm turbulent river waters.\
+There is belief, that this giant statue calm turbulent river waters. \
 City with this Wonder would gain additional food from each river tile.\n\
-Additionally, thanks to the Buddha The Wise ideas, any Monk Monastery\
+Additionally, thanks to the Buddha The Wise ideas, any Monk Monastery \
 would make 1 unhappy citizen content, for any city on same continent.\
 ")
 
@@ -3459,7 +3461,7 @@ TIP: if you're behind in research, this can help you catch up, by \
 reducing the cost of technologies that other players already know.\
 "),
 _("\
-In case of Thalassocracy goverment system, celebration would give boost of shield production, \
+In case of Thalassocracy government system, celebration would give boost of shield production, \
 if Marco Polo Embassy exist on the same continent.\
 ")
 
@@ -3501,6 +3503,7 @@ graphic_alt     = "b.oracle"
 obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Socialism", "Player", FALSE
+      "Building", "King Richard's Crusade", "Player", FALSE
     }
 build_cost	= 250
 upkeep		= 0

@@ -2,6 +2,13 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.26
+Smooth transition from Temple to Church or Mosque
+and from early temple wonders to advanced far-east temple wonders
+Trireme class renamed to Coaster class.
+Thalassocracy martial law fixed
+upgraded sprites 
+
 2.6.25
 galley/monitor capacity 2
 terrain transform tweaked

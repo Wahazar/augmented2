@@ -375,7 +375,7 @@ reqs    =
 ;      "UnitClass", "Heavy Cavalry", "Local", FALSE
       "UnitClass", "Riverboat", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -408,7 +408,7 @@ reqs    =
 ;      "UnitClass", "Merchant", "Local", FALSE
 ;      "UnitClass", "Riverboat", "Local", FALSE
 ;      "UnitClass", "Sea", "Local", FALSE
-;      "UnitClass", "Trireme", "Local", FALSE
+;      "UnitClass", "Coaster", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
 ;      "UnitClass", "Turrets", "Local", FALSE
@@ -450,7 +450,7 @@ reqs    =
       "UnitClass", "Merchant", "Local", FALSE
       "UnitClass", "Riverboat", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
 ;      "UnitClass", "Helicopter", "Local", FALSE
 ;      "UnitClass", "Air", "Local", FALSE
 ;      "UnitClass", "Bomb", "Local", FALSE
@@ -479,7 +479,7 @@ reqs    =
       "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Merchant", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
 ;      "UnitClass", "Helicopter", "Local", FALSE
 ;      "UnitClass", "Air", "Local", FALSE
 ;      "UnitClass", "Bomb", "Local", FALSE
@@ -504,7 +504,7 @@ reqs    =
 ;      "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Merchant", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
 ;      "UnitClass", "Helicopter", "Local", FALSE
 ;      "UnitClass", "Air", "Local", FALSE
 ;      "UnitClass", "Missile", "Local", FALSE
@@ -591,7 +591,7 @@ reqs    =
 ;      "UnitClass", "Suicidal", "Local", FALSE
       "UnitClass", "Riverboat", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -1455,7 +1455,7 @@ reqs   =
       "Gov", "Republic", "Player", FALSE
       "Gov", "Democracy", "Player", FALSE
       "Gov", "Direct Democracy", "Player", FALSE
-;      "Gov", "Thalassocracy", "Player", FALSE
+      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
       "Gov", "Legalism", "Player", FALSE
     }
@@ -3546,7 +3546,7 @@ reqs    =
       "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Riverboat", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -3622,7 +3622,7 @@ reqs    =
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
       "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -3631,7 +3631,7 @@ reqs    =
       "UnitClass", "Train", "Local", FALSE
     }
 
-; Every Land, Sea, Trireme
+; Every Land, Sea, Coaster
 [effect_city_defense_1]
 type    = "Defend_Bonus"
 value   = 50
@@ -3646,7 +3646,7 @@ reqs    =
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
 ;      "UnitClass", "Sea", "Local", FALSE
-;      "UnitClass", "Trireme", "Local", FALSE
+;      "UnitClass", "Coaster", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Turrets", "Local", FALSE
@@ -3676,7 +3676,7 @@ reqs    =
 ;      "UnitClass", "Suicidal", "Local", FALSE
       "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -3730,7 +3730,7 @@ value   = 100
 reqs    =
     { "type", "name", "range"
       "Building", "Coastal Defense", "City"
-      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Coaster", "Local"
     }
 
 ;augmented:
@@ -4005,7 +4005,7 @@ type    = "HP_Regen"
 value   = 50
 reqs    =
     { "type", "name", "range", "present"
-      "UnitClass", "Trireme", "Local", TRUE
+      "UnitClass", "Coaster", "Local", TRUE
       "Building", "Port Facility", "City", FALSE
       "Building", "Harbour", "City", TRUE
     }
@@ -4443,7 +4443,7 @@ value   = 2
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Port Facility", "City", TRUE
-      "UnitClass", "Trireme", "Local", TRUE
+      "UnitClass", "Coaster", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
@@ -4454,7 +4454,7 @@ value   = 100
 reqs    =
     { "type", "name", "range"
       "Building", "Port Facility", "City"
-      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Coaster", "Local"
     }
 
 ;augmented
@@ -5138,7 +5138,7 @@ reqs    =
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -5174,7 +5174,7 @@ reqs    =
 ;      "UnitClass", "Merchant", "Local", FALSE
 ;      "UnitClass", "Riverboat", "Local", FALSE
        "UnitClass", "Sea", "Local", FALSE
-       "UnitClass", "Trireme", "Local", FALSE
+       "UnitClass", "Coaster", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
 ;      "UnitClass", "Turrets", "Local", FALSE
@@ -5391,14 +5391,14 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Lighthouse", "Player", TRUE
-      "UnitClass", "Trireme", "Local", TRUE
-; No move bonus to Triremes starting their turn on rivers
+      "UnitClass", "Coaster", "Local", TRUE
+; No move bonus to Coasters starting their turn on rivers
 ; We also disable move bonus for city tiles in this clause...
       "Extra", "River", "Local", FALSE
       "CityTile", "Center", "Local", FALSE
     }
 
-; ...so that we can use this one to avoid penalising Triremes which start
+; ...so that we can use this one to avoid penalising Coasters which start
 ; in a perfectly legal coastal city which also happens to be on a river
 [effect_lighthouse_trireme_move_2]
 type    = "Move_Bonus"
@@ -5406,7 +5406,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Lighthouse", "Player"
-      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Coaster", "Local"
       "CityTile", "Center", "Local"
       "TerrainClass", "Oceanic", "Adjacent"
     }
@@ -5417,7 +5417,7 @@ value   = 2
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Lighthouse", "Player", TRUE
-      "UnitClass", "Trireme", "Local", TRUE
+      "UnitClass", "Coaster", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
       "Building", "Port Facility", "City", FALSE
@@ -6155,7 +6155,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Tech", "Recycling", "Player", TRUE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
     }
 
 ; "Sea" nreq is for Transports, which are only supposed to clean pollution
@@ -6168,7 +6168,7 @@ reqs    =
       "Tech", "Electricity", "Player", TRUE
       "TerrainClass", "Oceanic", "CAdjacent", TRUE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
     }
 
 [effect_irrigate_src_river]
@@ -6178,7 +6178,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Adjacent", TRUE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "Tech", "Agricultural Farming", "Player", TRUE
     }
 
@@ -6189,7 +6189,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Terrain", "Swamp", "Adjacent", TRUE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "Tech", "Agricultural Farming", "Player", TRUE
     }
 
@@ -6200,7 +6200,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Resource", "Oasis", "Local", TRUE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "Tech", "Agricultural Farming", "Player", TRUE
     }
 
@@ -6211,7 +6211,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Terrain", "Lake", "Adjacent", TRUE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "Tech", "Agricultural Farming", "Player", TRUE
     }
 
@@ -6222,7 +6222,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Extra", "Irrigation", "Adjacent", TRUE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "Tech", "Agricultural Farming", "Player", TRUE
     }
 
@@ -6288,7 +6288,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Tech", "Combustion", "Player", TRUE
       "UnitFlag", "Transform", "Local", TRUE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
     }
 
 [effect_transform_barge]
@@ -6298,7 +6298,7 @@ reqs    =
     { "type", "name", "range"
       "Tech", "Steam Engine", "Player"
       "UnitFlag", "Transform", "Local"
-      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Coaster", "Local"
     }
 
 [effect_pollution]
@@ -6460,7 +6460,7 @@ reqs    =
       "Building", "Mass Transit", "City", TRUE
       "Tech", "Combustion", "Player", TRUE
       "Building", "Eiffel Tower", "City", FALSE
-      "Building", "Airport", "City", FALSE
+;      "Building", "Airport", "City", FALSE
     }
 
 [effect_eiffel_tower_vision]
@@ -6512,9 +6512,21 @@ reqs	=
 
 
 ; Mobile X-ray HP regen (Land units)
-[effect_mobile_x-ray_hp_regen]
+[effect_mobile_x-ray_hp_regen_smallland]
 type    = "HP_Regen"
-value   = 25
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Mobile X-ray", "Player", TRUE
+      "UnitClass", "Small Land", "Local", TRUE
+      "Building", "Infantry Barracks I", "Local", FALSE
+      "Building", "Infantry Barracks II", "Local", FALSE
+    }
+
+; Mobile X-ray HP regen (Land units)
+[effect_mobile_x-ray_hp_regen_infantry]
+type    = "HP_Regen"
+value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Mobile X-ray", "Player", TRUE
@@ -7551,7 +7563,7 @@ reqs    =
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -8131,7 +8143,7 @@ reqs    =
 ;      "UnitClass", "Suicidal", "Local", FALSE
       "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
@@ -8271,7 +8283,7 @@ reqs    =
 ;      "UnitClass", "Suicidal", "Local", FALSE
 ;      "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
 ;      "UnitClass", "Missile", "Local", FALSE

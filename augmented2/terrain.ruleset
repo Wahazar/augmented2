@@ -268,7 +268,7 @@ warmer_wetter_result = "no"
 warmer_drier_result  = "Swamp"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "no"
-native_to            = "Sea", "Air", "Bomb", "Missile", "Helicopter", "Trireme", "Torpedos", "Riverboat"
+native_to            = "Sea", "Air", "Bomb", "Missile", "Helicopter", "Coaster", "Torpedos", "Riverboat"
 flags                = "NoCities", "NoBarbs", "NoPollution", "FreshWater", "NoZoc", "NoFortify"
 property_ocean_depth = 0
 color.r              = 46
@@ -311,7 +311,7 @@ warmer_wetter_result = "no"
 warmer_drier_result  = "no"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "no"
-native_to            = "Sea", "Air", "Bomb", "Missile", "Helicopter", "Trireme", "Torpedos"
+native_to            = "Sea", "Air", "Bomb", "Missile", "Helicopter", "Coaster", "Torpedos"
 flags                = "NoCities", "UnsafeCoast", "NoZoc", "NoFortify", "Sea"
 property_ocean_depth = 35
 color.r              = 0
@@ -363,7 +363,7 @@ color.g              = 33
 color.b              = 129
 helptext             = _("\
 Deep oceans cover much of the world away from coastlines, and only\
- seaworthy units (not including Triremes) can travel on them.\
+ seaworthy units (not Coasters) can travel on them.\
 ")
 
 [terrain_glacier]
@@ -1625,7 +1625,7 @@ rmact_gfx_alt  = "-"
 reqs           =
     { "type", "name", "range", "present", "quiet"
       "Extra", "Airstrip", "Local", TRUE, FALSE
-      "Tech", "Radio", "Player", TRUE, FALSE
+      "Tech", "Radar", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
       "Terrain", "Mountains", "Local", FALSE, FALSE
       "UnitFlag", "Airbase", "Local", TRUE, FALSE
@@ -1863,7 +1863,7 @@ act_gfx_alt2   = "-"
 rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 buildable      = FALSE
-native_to      = "Small Land", "Merchant", "Trireme", "Riverboat"
+native_to      = "Small Land", "Merchant", "Coaster", "Riverboat"
 defense_bonus  = 25
 flags          = "NativeTile"
 ; /* xgettext:no-c-format */
@@ -1873,14 +1873,14 @@ Any land terrain type may have a River on it. A River adds 1\
  tile's defense factor by 25%.\
 "), _("\
 Land units may move along rivers for faster travel (but not diagonally).\
- Triremes may also travel up rivers (although later boats cannot).\
+ Coasters may also travel up rivers.\
 "), _("\
 Roads and railroads can only be built on River tiles if your\
  civilization has learned Bridge Building technology. Fortresses and\
  Airbases cannot be built on River tiles.\
 "), _("\
 Cities built on or next to rivers incur a small risk of flooding,\
- which will destroy stored food.\
+ which will destroy stored food - this can be prevented by River Embankments.\
 ")
 
 [extra_water_lock]
@@ -1907,7 +1907,7 @@ reqs           =
 build_time     = 14
 removal_time   = 2
 conflicts      = "Airstrip", "Airbase", "Fort", "Mine", "Oil Well"
-native_to      = "Small Land", "Merchant", "Trireme", "Riverboat", "Sea"
+native_to      = "Small Land", "Merchant", "Coaster", "Riverboat", "Sea"
 flags          = "NativeTile"
 helptext       = _("\
 Allow ships to enter inland.\

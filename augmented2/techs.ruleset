@@ -282,7 +282,7 @@ flags    = ""
 graphic     = "a.carpentry"
 graphic_alt = "-"
 helptext = _("\
-Allows Settlers, Migrants, Workers and Engineers to build Forts.\
+Allows Settlers, Migrants, Slaves, Workers and Engineers to build Forts.\
 ")
 cost     = 15
 
@@ -426,7 +426,7 @@ flags    = ""
 graphic     = "a.construction"
 graphic_alt = "-"
 helptext = _("\
-Allows Settlers, Migrants, Workers and Engineers to build fortresses.\
+Allows Settlers, Migrants, Slaves, Workers and Engineers to build fortresses.\
 ")
 cost     = 60
 
@@ -910,7 +910,7 @@ cost     = 220
 [advance_map_making]
 name     = _("Map Making")
 req1     = "Alphabet"
-req2     = "Carpentry"
+req2     = "Sailing"
 flags    = ""
 graphic     = "a.map_making"
 graphic_alt = "-"
@@ -1320,6 +1320,15 @@ flags    = ""
 graphic     = "a.saddle_stirrup"
 graphic_alt = "-"
 cost     = 30
+
+[advance_sailing]
+name     = _("Sailing")
+req1     = "Forestry"
+req2     = "Leather Tanning"
+flags    = ""
+graphic     = "a.sailing"
+graphic_alt = "-"
+cost     = 12
 
 [advance_sanitation]
 name     = _("Sanitation")

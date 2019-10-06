@@ -48,6 +48,8 @@ INFO:
   Terrains and Governments), so better use the tables in this ReadMe as
   reference.
 
+- Help pages on freeciv wiki: https://freeciv.fandom.com/wiki/Augmented2_ruleset_modpack
+
 The following is a full list of changes compared to civ2/civ3 ruleset...
 
 
@@ -63,7 +65,7 @@ CORE CHANGES:
 
 - Unlimited movement on rails delayed to maglev (available with
   Superconductors). Movement bonus on Railroads apply only for Land and Small Land units. 
-  There is no movement bonus for Rivers, and Triremes are going non diagonal.
+  There is no movement bonus for Rivers, and Coasters are going non diagonal.
 
 - Some key techs require no holes in its tech roots. To acquire a tech you must know its
   prerequisites, and you cannot lose a tech that another depends on.
@@ -344,7 +346,7 @@ Stable Barracks: Recruits for Light Cavalry, Veteran for Heavy Cavalry.
 Workshop Barrack: Veteran for Wheeled Units, Big Land, Mech. Inf.
 
 Harbour:
-Deckhand level for Sea class (cumulative with Lighthouse), 25% faster HP regen for Sea and Trireme.
+Deckhand level for Sea class (cumulative with Lighthouse), 25% faster HP regen for Sea and Coaster.
 
 Supermarket: not required for farmland bonus/creation (second irrigation after Chemical Synthesis), 
 instead of, reduce distance food waste (and base food waste for Democracy or Federation).
@@ -519,7 +521,7 @@ Following military unit groups:
 * Big Land class - movement more restricted than for regular Land class, but less compared to Wheeled Units. Can't be loaded on some units.
 * Turrets - can't move by itself (can reside in cities/forts/airstrips), can be boarded on Sea units/armoured trains, can attack from and at non native tiles;
 * Sea class units: can go on Ocean tiles;
-* Trireme class units: can go on Coast Ocean, River and Lake tiles;
+* Coaster class units: can go on Coast Ocean, River and Lake tiles;
 * Air class units, Helicopters, Missiles: can go everywhere;
 * Bombs, Torpedos - can be loaded on Air units (and some Sea units).
 * Diplomatic actions and espionage: Messenger, Diplomat, Spy (and unique Corsair, Ninja, Navy Seals)
