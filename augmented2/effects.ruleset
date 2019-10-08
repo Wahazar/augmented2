@@ -380,7 +380,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitType", "Super Soldiers", "Local", FALSE
     }
@@ -418,7 +418,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
     }
 
@@ -454,7 +454,7 @@ reqs    =
 ;      "UnitClass", "Helicopter", "Local", FALSE
 ;      "UnitClass", "Air", "Local", FALSE
 ;      "UnitClass", "Bomb", "Local", FALSE
-;      "UnitClass", "Torpedos", "Local", FALSE
+;      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
     }
@@ -483,7 +483,7 @@ reqs    =
 ;      "UnitClass", "Helicopter", "Local", FALSE
 ;      "UnitClass", "Air", "Local", FALSE
 ;      "UnitClass", "Bomb", "Local", FALSE
-;      "UnitClass", "Torpedos", "Local", FALSE
+;      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
     }
@@ -509,7 +509,7 @@ reqs    =
 ;      "UnitClass", "Air", "Local", FALSE
 ;      "UnitClass", "Missile", "Local", FALSE
 ;      "UnitClass", "Bomb", "Local", FALSE
-;      "UnitClass", "Torpedos", "Local", FALSE
+;      "UnitClass", "Torpedeos", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
     }
 
@@ -596,7 +596,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
       "Extra", "Road", "Local", FALSE
     }
@@ -1412,7 +1412,7 @@ reqs   =
        "Gov", "Democracy", "Player", FALSE
       "Gov", "First Republic", "Player", FALSE
 ;      "Gov", "Direct Democracy", "Player", FALSE
-      "Gov", "Thalassocracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
 ;      "Gov", "Legalism", "Player", FALSE
     }
@@ -1434,7 +1434,7 @@ reqs   =
       "Gov", "Democracy", "Player", FALSE
 ;      "Gov", "First Republic", "Player", FALSE
       "Gov", "Direct Democracy", "Player", FALSE
-      "Gov", "Thalassocracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
       "Gov", "Legalism", "Player", FALSE
     }
@@ -3551,7 +3551,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "NonMil", "Local", FALSE
     }
@@ -3627,7 +3627,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
     }
 
@@ -3654,7 +3654,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
     }
 
@@ -3681,7 +3681,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "IgWall", "Local", FALSE
     }
@@ -5143,7 +5143,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "IgWall", "Local", FALSE
     }
@@ -5182,7 +5182,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
     }
 
@@ -5375,6 +5375,29 @@ reqs	=
     { "type", "name", "range"
       "Building", "Leonardo's Workshop", "City"
     }
+
+[effect_moai_trireme_move]
+type    = "Move_Bonus"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Moai Statues", "Player", TRUE
+      "UnitClass", "Coaster", "Local", TRUE
+      "Building", "Lighthouse", "Player", FALSE
+; No move bonus to Coasters starting their turn on rivers
+; We also disable move bonus for city tiles in this clause...
+      "Extra", "River", "Local", FALSE
+      "CityTile", "Center", "Local", FALSE
+    }
+
+[effect_moai_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Moai Statues", "City"
+    }
+
 
 [effect_lighthouse_move]
 type    = "Move_Bonus"
@@ -7568,7 +7591,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "IgWall", "Local", FALSE
     }
@@ -8148,7 +8171,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "IgWall", "Local", FALSE
     }
@@ -8288,7 +8311,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
 ;      "UnitClass", "Missile", "Local", FALSE
 ;      "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedos", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
     }
 
@@ -8478,3 +8501,20 @@ reqs    =
 ;    }
 
 
+[effect_sacred_cairn_content]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Sacred Cairn", "City"
+    }
+
+[effect_sacred_cairn_tundra]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Tundra", "Local", TRUE
+      "Building", "Sacred Cairn", "City", TRUE
+      "OutputType", "Food", "Local", TRUE
+    }

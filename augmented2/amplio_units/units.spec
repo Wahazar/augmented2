@@ -207,5 +207,6 @@ sprites =
 		"u.jetliner", "augmented2/amplio_units/jetliner_PikkaBird"
 		"u.brig", "augmented2/amplio_units/brig_a"
 		"u.pirates_brig", "augmented2/amplio_units/pirates_brig_a"
+		"u.kon-tiki_raft", "augmented2/amplio_units/kon-tiki_raft_a"
 	}
 

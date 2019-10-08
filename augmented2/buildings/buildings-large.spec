@@ -49,4 +49,5 @@ sprites =
 		"b.river_embankments", "augmented2/buildings/embankments"
 		"b.fire_station", "augmented2/buildings/fire_station_Zimlock"
 		"b.post_office", "augmented2/buildings/post_office_Zimlock"
+		"b.sacred_cairn", "augmented2/buildings/sacred_cairn_a"
 	}

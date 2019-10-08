@@ -8,6 +8,9 @@ and from early temple wonders to advanced far-east temple wonders
 Trireme class renamed to Coaster class.
 Thalassocracy martial law fixed
 upgraded sprites 
+New buildings: sacred Cairn, Moai Statues
+new unit: Kon-tiki raft
+new techs: Sailing, Shamanism
 
 2.6.25
 galley/monitor capacity 2

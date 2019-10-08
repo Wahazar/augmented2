@@ -1492,6 +1492,31 @@ Additionally, riverside boulevard make one unhappy citizen content \
 (except of unhappiness caused by militry units), if there is no pollution around city.\
 ")
 
+[building_sacred_cairn]
+name		= _("Sacred Cairn")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Shamanism", "Player", TRUE
+      "Terrain", "Tundra", "Local", TRUE
+    }
+graphic	= "b.sacred_cairn"
+graphic_alt	= "b.temple"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Temple", "City"
+      "Tech", "Monotheism", "Player"
+    }
+build_cost	= 15
+upkeep		= 0
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+Shamanistic rituals around Sacred Cairn encourage local society to live in harsh conditions. \
+Any Tundra tile will give additional food, and one unhappy citizens would become content.\
+")
+
 [building_sam_battery]
 name		= _("SAM Battery")
 genus		= "Improvement"
@@ -2541,6 +2566,33 @@ helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
 and thereafter 4 extra research points every turn to its city. \n\
 Increase science bonus from Research Lab. \n\
+")
+
+[building_moai_statues]
+name		= _("Moai Statues")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Stone Knapping", "Player", TRUE
+	 "MinCulture", "10", "Player", TRUE
+    }
+graphic	= "b.moai_statues"
+graphic_alt	= "b.oracle"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Overseas Trade", "Player"
+      "Tech", "Steam Engine", "World"
+    }
+build_cost	= 150
+upkeep	= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+These giant stone statues give your citizens courage to explore unknown lands. \
+They are able to build unique Kon-Tiki raft, the first vessel capable to to enter Deep Ocean.\n\
+Additionally, gives all your Coasters units 1 additional movement point \
+(except while moving on rivers, not cumulative with Lighthouse).\
 ")
 
 [building_monk_monastery]

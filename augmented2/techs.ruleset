@@ -288,12 +288,12 @@ cost     = 15
 
 [advance_ceremonial_burial]
 name     = _("Ceremonial Burial")
-req1     = "Fire Making"
-req2     = "Creative Art"
+req1     = "Shamanism"
+req2     = "Alphabet"
 flags    = ""
 graphic     = "a.ceremonial_burial"
 graphic_alt = "-"
-cost     = 10
+cost     = 15
 
 [advance_chemical_synthesis]
 name     = _("Chemical Synthesis")
@@ -578,11 +578,11 @@ cost     = 1150
 [advance_exploration]
 name     = _("Exploration")
 req1     = "Pastoralism"
-req2     = "Leather Tanning"
+req2     = "Sailing"
 flags    = ""
 graphic     = "a.exploration"
 graphic_alt = "-"
-cost     = 30
+cost     = 35
 
 [advance_explosives]
 name     = _("Explosives")
@@ -755,7 +755,7 @@ req2     = "Leather Tanning"
 flags    = ""
 graphic     = "a.horseback_riding"
 graphic_alt = "-"
-cost     = 12
+cost     = 14
 
 [advance_imperialism]
 name     = _("Imperialism")
@@ -1139,7 +1139,7 @@ req2     = "Pottery"
 flags    = ""
 graphic     = "a.pastoralism"
 graphic_alt = "-"
-cost     = 18
+cost     = 20
 
 [advance_philosophy]
 name     = _("Philosophy")
@@ -1319,7 +1319,7 @@ req2     = "Warrior Code"
 flags    = ""
 graphic     = "a.saddle_stirrup"
 graphic_alt = "-"
-cost     = 30
+cost     = 35
 
 [advance_sailing]
 name     = _("Sailing")
@@ -1367,7 +1367,17 @@ req2     = "Map Making"
 flags    = ""
 graphic     = "a.seafaring"
 graphic_alt = "-"
-cost     = 40
+cost     = 45
+
+
+[advance_shamanism]
+name     = _("Shamanism")
+req1     = "Fire Making"
+req2     = "Creative Art"
+flags    = ""
+graphic     = "a.shamanism"
+graphic_alt = "a.ceremonial_burial"
+cost     = 8
 
 [advance_shiism]
 name     = _("Shiism")
