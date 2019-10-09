@@ -776,7 +776,7 @@ sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 6
+build_cost    = 10
 pop_cost      = 0
 attack        = 1
 defense       = 1
@@ -808,7 +808,7 @@ sound_move    = "m_phalanx"
 sound_move_alt = "m_generic"
 sound_fight   = "f_phalanx"
 sound_fight_alt = "f_generic"
-build_cost    = 10
+build_cost    = 12
 pop_cost      = 0
 attack        = 1
 defense       = 2
@@ -896,7 +896,7 @@ helptext      = _("\
 This unit emerged from stone age and may be built almost from the start of the game.\
  It is a weak offensive unit, can throw ranged weapon, like javelins.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_archers]
 name          = _("Archers")
@@ -911,7 +911,7 @@ sound_fight   = "f_archers"
 sound_fight_alt = "f_generic"
 build_cost    = 15
 pop_cost      = 0
-attack        = 2
+attack        = 3
 defense       = 1
 hitpoints     = 6
 firepower     = 1
@@ -932,7 +932,7 @@ Due to indirect plunging fire, City Walls give no benefits to defenders.\
 "), _("\
 Direct Democracy grant additional veterancy level for the Archers.\
 ")
-bombard_rate = 3
+bombard_rate = 2
 
 [unit_marksman]
 name          = _("Marksman")
@@ -1534,7 +1534,7 @@ sound_move    = "m_phalanx"
 sound_move_alt = "m_generic"
 sound_fight   = "f_phalanx"
 sound_fight_alt = "f_generic"
-build_cost    = 12
+build_cost    = 15
 pop_cost      = 0
 attack        = 1
 defense       = 2
@@ -1568,7 +1568,7 @@ sound_move    = "m_pikemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_pikemen"
 sound_fight_alt = "f_generic"
-build_cost    = 15
+build_cost    = 18
 pop_cost      = 0
 attack        = 2
 defense       = 3
@@ -1748,7 +1748,7 @@ sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 10
+build_cost    = 12
 pop_cost      = 0
 attack        = 2
 defense       = 1
@@ -1779,7 +1779,7 @@ sound_move    = "m_legion"
 sound_move_alt = "m_generic"
 sound_fight   = "f_legion"
 sound_fight_alt = "f_generic"
-build_cost    = 18
+build_cost    = 20
 pop_cost      = 0
 attack        = 3
 defense       = 2
@@ -1792,7 +1792,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
-uk_gold       = 1
+uk_gold       = 2
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "BarbarianBuildTech", "BarbarianTech"
 helptext      = _("\
@@ -2105,6 +2105,37 @@ paratroopers_range = 10
 paratroopers_mr_req = 1
 paratroopers_mr_sub = 0
 
+[unit_janissaries]
+name          = _("Janissaries")
+class         = "Infantry"
+tech_req      = "Sunnism"
+gov_req       = "Fundamentalism"
+obsolete_by   = "Fanatics"
+graphic       = "u.janissaries"
+graphic_alt   = "u.musketeers"
+sound_move    = "m_fanatics"
+sound_move_alt = "m_generic"
+sound_fight   = "f_fanatics"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 4
+defense       = 4
+hitpoints     = 10
+firepower     = 2
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Light Shells"
+roles         = "AttackFastStartUnit", "BarbarianTech", "BarbarianSeaTech"
+helptext      = _("\
+Janissaries are elite infantry, well disciplined and loyal only for Fundamentalist government.\
+")
 
 [unit_fanatics]
 name          = _("Fanatics")
@@ -2142,40 +2173,6 @@ Fanatics are warriors extremely devoted to a higher cause.\
 Fundamentalist nations can maintain Fanatic units without\
  having to pay gold upkeep, but instead it can cause military unhappiness.\
 ")
-
-
-[unit_janissaries]
-name          = _("Janissaries")
-class         = "Infantry"
-tech_req      = "Sunnism"
-gov_req       = "Fundamentalism"
-obsolete_by   = "Fanatics"
-graphic       = "u.janissaries"
-graphic_alt   = "u.musketeers"
-sound_move    = "m_fanatics"
-sound_move_alt = "m_generic"
-sound_fight   = "f_fanatics"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 4
-defense       = 4
-hitpoints     = 10
-firepower     = 2
-move_rate     = 1
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 2
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer", "Light Shells"
-roles         = "AttackFastStartUnit", "BarbarianTech", "BarbarianSeaTech"
-helptext      = _("\
-Janissaries are elite infantry, well disciplined and loyal only for Fundamentalist government.\
-")
-
 
 
 ;todo: sikh
@@ -2356,7 +2353,7 @@ sound_move    = "m_horsemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_horsemen"
 sound_fight_alt = "f_generic"
-build_cost    = 12
+build_cost    = 15
 pop_cost      = 0
 attack        = 2
 defense       = 1
@@ -2660,397 +2657,6 @@ The Mechanized Infantry has the strongest inherent defensive strength\
 This unit cannot move across swamps, glaciers or mountains.\
 ")
 
-[unit_engineers]
-name          = _("Engineers")
-class         = "Big Land"
-tech_req      = "The Corporation"
-obsolete_by   = "None"
-graphic       = "u.engineers"
-graphic_alt   = "-"
-sound_move    = "m_engineers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_engineers"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 0
-defense       = 2
-hitpoints     = 20
-firepower     = 2
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 1
-cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 2
-uk_food       = 0
-uk_gold       = 1
-flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Transform"
-veteran_names = _("beginner"), _("seasoned"), _("senior"), _("expert")
-veteran_raise_chance      = 50, 33, 20, 0
-veteran_work_raise_chance = 3, 2, 1, 0
-veteran_power_fact        = 100, 125, 150, 175
-veteran_move_bonus        = 0, 0, 1, 1
-roles         = "Settlers", "WorkerStartUnit"
-helptext      = _("\
-Engineers are similar to Workers or Builders, but they work twice as fast,\
- move twice as fast, and may gain experience from work enabling\
- them to work even faster.\
-"), _("\
-With knowledge of Combustion, Engineers may also perform more \
-radical terrain transformations than Workers, Builders, Settlers or Migrants, \
-with the \"transform\" order. Examples include conversion of \
-Tundra into Plains, or even Ocean into Swamp in some circumstances \
-(when on board an ocean-going vessel, on a tile surrounded by \
-sufficient existing land). See the Terrain Alterations section \
-for more details.\
-"), 
-_("\
-Being the Big Land unit class, Engineers have restricted mobility \
-(rough terrain such mountains, swamp, jungle require roads which can be prepared by Workers or Builders), \
-but they can be also used as a landing/transport aid for other land units (excluding Big Land ones).\
-")
-
-[unit_armor]
-name          = _("Armor")
-class         = "Big Land"
-tech_req      = "Welding Technology"
-obsolete_by   = "Reactive Armor"
-graphic       = "u.armor"
-graphic_alt   = "-"
-sound_move    = "m_armor"
-sound_move_alt = "m_generic"
-sound_fight   = "f_armor"
-sound_fight_alt = "f_generic"
-build_cost    = 80
-pop_cost      = 0
-attack        = 10
-defense       = 5
-hitpoints     = 30
-firepower     = 3
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 4
-uk_food       = 0
-uk_gold       = 3
-flags         = "Armor", "BadWallAttacker"
-roles         = "DefendOkStartUnit", "Hunter"
-bonuses       =
-   { "flag", "type", "value"
-     "Light Shells", "DefenseMultiplier", 1
-   }
-helptext      = _("\
-Armors are motorized war wagons that are faster, stronger, and can take\
- more damage than any mounted unit. However, they are less adaptable to\
- very rough terrain (they cannot move into mountains, glaciers or swamps\
- without roads), and are unable to use less rough terrain to improve their\
- defense.\
-")
-
-[unit_reactive_armor]
-name          = _("Reactive Armor")
-class         = "Big Land"
-tech_req      = "Modern Warfare"
-obsolete_by   = "None"
-graphic       = "u.reactive_armor"
-graphic_alt   = "u.armor"
-sound_move    = "m_armor"
-sound_move_alt = "m_generic"
-sound_fight   = "f_armor"
-sound_fight_alt = "f_generic"
-build_cost    = 100
-pop_cost      = 0
-attack        = 11
-defense       = 5
-hitpoints     = 30
-firepower     = 3
-move_rate     = 3
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 4
-uk_food       = 0
-uk_gold       = 4
-flags         = "Armor", "BadWallAttacker"
-bonuses       =
-   { "flag", "type", "value"
-     "Light Shells", "DefenseMultiplier", 2
-   }
-roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
-helptext      = _("\
-Tanks with reactive armor are upgrade version of armor, they are faster and stronger than their predecessors,\
- and can easily sustain attack of most infantry or mounted units. However, they are less adaptable to\
- very rough terrain (they cannot move into mountains, glaciers or swamps\
- without roads), and unable to use less rough terrain to improve their\
- defense.\
-")
-
-[unit_autonomous_war_mech]
-name          = _("Aut. War Mech")
-class         = "Big Land"
-tech_req      = "Artificial Intelligence", "Antimatter Propulsion"
-obsolete_by   = "None"
-graphic       = "u.autonomous_war_mech"
-graphic_alt   = "b.sam_battery"
-sound_move    = "m_armor"
-sound_move_alt = "m_generic"
-sound_fight   = "f_mech_inf"
-sound_fight_alt = "f_generic"
-build_cost    = 130
-pop_cost      = 0
-attack        = 7
-defense       = 3
-hitpoints     = 20
-firepower     = 3
-move_rate     = 2
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 3
-uk_food       = 0
-uk_gold       = 4
-flags         = "BadWallAttacker"
-roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
-helptext      = _("\
-An antimatter powered Autonomous War Mech,\
- can spread Democracy without concern of peacefull citizens.\
-"), _("\
-Unfortunately A.I. cannot cope with difficult terrain such glaciers, swamp, jungle or mountains.\
-")
-
-[unit_self_propelled_howitzer]
-name          = _("Self-propelled Howitzer")
-class         = "Big Land"
-tech_req      = "Robotics"
-obsolete_by   = "None"
-graphic       = "u.self_propelled_howitzer"
-graphic_alt   = "u.howitzer"
-sound_move    = "m_howitzer"
-sound_move_alt = "m_generic"
-sound_fight   = "f_howitzer"
-sound_fight_alt = "f_generic"
-build_cost    = 90
-pop_cost      = 0
-attack        = 10
-defense       = 2
-hitpoints     = 25
-firepower     = 3
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 4
-uk_food       = 0
-uk_gold       = 4
-flags         = "Bombarder", "IgWall", "Armor"
-roles         = ""
-helptext      = _("\
-Self-propelled howitzers are upgraded artillery howitzers with improved defensive as well as\
- offensive capabilities.\
-"), _("\
-Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
-")
-bombard_rate = 3
-
-[unit_mobile_anti_aircraft_gun]
-name          = _("Mobile Anti-Aircraft Gun")
-class         = "Big Land"
-tech_req      = "Jet Propulsion"
-obsolete_by   = "None"
-graphic       = "u.anti_aircraft_gun"
-graphic_alt   = "u.mech_inf"
-sound_move    = "m_armor"
-sound_move_alt = "m_generic"
-sound_fight   = "f_mech_inf"
-sound_fight_alt = "f_generic"
-build_cost    = 80
-pop_cost      = 0
-attack        = 8
-defense       = 4
-hitpoints     = 20
-firepower     = 3
-move_rate     = 3
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 3
-uk_food       = 0
-uk_gold       = 3
-flags         = "Bombarder", "Light Shells"
-targets       = "Air", "Missile", "Helicopter"
-roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
-helptext      = _("\
-Anti-Aircraft Gun is a mobile unit equipped with radar and two autocannons,\
- can attack both land units or aircrafts. It cannot destroy a target\
- completely, but can weaken it enough for other units to exterminate it.\
-")
-bombard_rate = 4
-
-[unit_self_propelled_gun]
-name          = _("Self-propelled Gun")
-class         = "Big Land"
-tech_req      = "Robotics"
-obsolete_by   = "None"
-graphic       = "u.self_propelled_gun"
-graphic_alt   = "u.armor"
-sound_move    = "m_howitzer"
-sound_move_alt = "m_generic"
-sound_fight   = "f_howitzer"
-sound_fight_alt = "f_generic"
-build_cost    = 75
-pop_cost      = 0
-attack        = 12
-defense       = 4
-hitpoints     = 25
-firepower     = 3
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 4
-uk_food       = 0
-uk_gold       = 2
-flags         = "CityBuster", "Armor"
-roles         = "AttackStrongStartUnit"
-bonuses       =
-   { "flag", "type", "value"
-     "Armor", "DefenseMultiplier", 1
-     "Armor", "DefenseDivider", 1
-   }
-helptext      = _("\
-The self-propelled gun is an upgraded artillery. As with its predecessors, it is a\
- very strong attacker but equally weak defender and will need an escort\
- to be effective, and has limited mobility.\
-"), _("\
-Self-propelled Guns (so called Tank Destroyers) have increased defense and attack against armors and mechanized infantry.\
-")
-
-
-[unit_catapult]
-name          = _("Catapult")
-class         = "Wheeled Unit"
-tech_req      = "Mathematics"
-obsolete_by   = "Cannon"
-graphic       = "u.catapult"
-graphic_alt   = "-"
-sound_move    = "m_catapult"
-sound_move_alt = "m_generic"
-sound_fight   = "f_catapult"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 5
-defense       = 1
-hitpoints     = 5
-firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 2
-uk_food       = 0
-uk_gold       = 2
-flags         = "Bombarder", "IgWall"
-roles         = ""
-helptext      = _("\
-Catapults are large rock-throwing machines of war.\
- They are very strong attackers but equally weak\
- defenders and will need an escort to be effective.\
-"), _("\
-While powerful, Catapults (and their successors) are bulky and awkward;\
- they require roads to move, are difficult to defend, and are too big for early ships\
- (Triremes, Aaks and Caravels).\
-"), _("\
-Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
-")
-bombard_rate = 2
-
-[unit_cannon]
-name          = _("Cannon")
-class         = "Wheeled Unit"
-tech_req      = "Metallurgy"
-obsolete_by   = "Howitzer"
-graphic       = "u.plunging_cannon"
-graphic_alt   = "u.cannon"
-sound_move    = "m_cannon"
-sound_move_alt = "m_generic"
-sound_fight   = "f_cannon"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 6
-defense       = 1
-hitpoints     = 5
-firepower     = 2
-move_rate     = 1
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 3
-uk_food       = 0
-uk_gold       = 2
-flags         = "Bombarder", "IgWall"
-roles         = ""
-helptext      = _("\
-Cannons are large firearms that can fire heavy projectiles over long\
- distances. As with the catapults they replace, they are very strong\
- attackers but equally weak defenders and will need an escort to be\
- effective, and have limited mobility.\
-"), _("\
-This unit cannot move across swamps, glaciers, or mountains,\
- and cannot be transported by sea using early ships\
- (Triremes, Caravels and Aaks).\
-"), _("\
-Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
-")
-bombard_rate = 2
-
-[unit_howitzer]
-name          = _("Howitzer")
-class         = "Wheeled Unit"
-tech_req      = "Chemical Synthesis"
-obsolete_by   = "Self-propelled Howitzer"
-graphic       = "u.gun_howitzer"
-graphic_alt   = "u.artillery"
-sound_move    = "m_artillery"
-sound_move_alt = "m_generic"
-sound_fight   = "f_artillery"
-sound_fight_alt = "f_generic"
-build_cost    = 65
-pop_cost      = 0
-attack        = 8
-defense       = 1
-hitpoints     = 10
-firepower     = 2
-move_rate     = 1
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 3
-uk_food       = 0
-uk_gold       = 3
-flags         = "Bombarder", "IgWall", "Light Shells"
-roles         = ""
-helptext      = _("\
-Howitzers are upgraded cannons with improved fire power and\
- mobility, which limitations is now the same as artillery.\
-"), _("\
-Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
-")
-bombard_rate = 3
-
 [unit_chariot]
 name          = _("Chariot")
 class         = "Wheeled Unit"
@@ -3272,6 +2878,399 @@ Fundamentalist nations can maintain Technical units with\
  These units have no veterancy levels though.
 ")
 
+[unit_catapult]
+name          = _("Catapult")
+class         = "Wheeled Unit"
+tech_req      = "Mathematics"
+obsolete_by   = "Cannon"
+graphic       = "u.catapult"
+graphic_alt   = "-"
+sound_move    = "m_catapult"
+sound_move_alt = "m_generic"
+sound_fight   = "f_catapult"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 5
+defense       = 1
+hitpoints     = 5
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 2
+flags         = "Bombarder", "IgWall"
+roles         = ""
+helptext      = _("\
+Catapults are large rock-throwing machines of war.\
+ They are very strong attackers but equally weak\
+ defenders and will need an escort to be effective.\
+"), _("\
+While powerful, Catapults (and their successors) are bulky and awkward;\
+ they require roads to move, are difficult to defend, and are too big for early ships\
+ (Triremes, Aaks and Caravels).\
+"), _("\
+Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
+")
+bombard_rate = 2
+
+[unit_cannon]
+name          = _("Cannon")
+class         = "Wheeled Unit"
+tech_req      = "Metallurgy"
+obsolete_by   = "Howitzer"
+graphic       = "u.plunging_cannon"
+graphic_alt   = "u.cannon"
+sound_move    = "m_cannon"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cannon"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 6
+defense       = 1
+hitpoints     = 5
+firepower     = 2
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 3
+uk_food       = 0
+uk_gold       = 2
+flags         = "Bombarder", "IgWall"
+roles         = ""
+helptext      = _("\
+Cannons are large firearms that can fire heavy projectiles over long\
+ distances. As with the catapults they replace, they are very strong\
+ attackers but equally weak defenders and will need an escort to be\
+ effective, and have limited mobility.\
+"), _("\
+This unit cannot move across swamps, glaciers, or mountains,\
+ and cannot be transported by sea using early ships\
+ (Triremes, Caravels and Aaks).\
+"), _("\
+Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
+")
+bombard_rate = 2
+
+[unit_howitzer]
+name          = _("Howitzer")
+class         = "Wheeled Unit"
+tech_req      = "Chemical Synthesis"
+obsolete_by   = "Self-propelled Howitzer"
+graphic       = "u.gun_howitzer"
+graphic_alt   = "u.artillery"
+sound_move    = "m_artillery"
+sound_move_alt = "m_generic"
+sound_fight   = "f_artillery"
+sound_fight_alt = "f_generic"
+build_cost    = 65
+pop_cost      = 0
+attack        = 8
+defense       = 1
+hitpoints     = 10
+firepower     = 2
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 3
+uk_food       = 0
+uk_gold       = 3
+flags         = "Bombarder", "IgWall", "Light Shells"
+roles         = ""
+helptext      = _("\
+Howitzers are upgraded cannons with improved fire power and\
+ mobility, which limitations is now the same as artillery.\
+"), _("\
+Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
+")
+bombard_rate = 3
+
+
+[unit_engineers]
+name          = _("Engineers")
+class         = "Big Land"
+tech_req      = "The Corporation"
+obsolete_by   = "None"
+graphic       = "u.engineers"
+graphic_alt   = "-"
+sound_move    = "m_engineers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_engineers"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 0
+defense       = 2
+hitpoints     = 20
+firepower     = 2
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 1
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 1
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Transform"
+veteran_names = _("beginner"), _("seasoned"), _("senior"), _("expert")
+veteran_raise_chance      = 50, 33, 20, 0
+veteran_work_raise_chance = 3, 2, 1, 0
+veteran_power_fact        = 100, 125, 150, 175
+veteran_move_bonus        = 0, 0, 1, 1
+roles         = "Settlers", "WorkerStartUnit"
+helptext      = _("\
+Engineers are similar to Workers or Builders, but they work twice as fast,\
+ move twice as fast, and may gain experience from work enabling\
+ them to work even faster.\
+"), _("\
+With knowledge of Combustion, Engineers may also perform more \
+radical terrain transformations than Workers, Builders, Settlers or Migrants, \
+with the \"transform\" order. Examples include conversion of \
+Tundra into Plains, or even Ocean into Swamp in some circumstances \
+(when on board an ocean-going vessel, on a tile surrounded by \
+sufficient existing land). See the Terrain Alterations section \
+for more details.\
+"), 
+_("\
+Being the Big Land unit class, Engineers have restricted mobility \
+(rough terrain such mountains, swamp, jungle require roads which can be prepared by Workers or Builders), \
+but they can be also used as a landing/transport aid for other land units (excluding Big Land ones).\
+")
+
+[unit_armor]
+name          = _("Armor")
+class         = "Big Land"
+tech_req      = "Welding Technology"
+obsolete_by   = "Reactive Armor"
+graphic       = "u.armor"
+graphic_alt   = "-"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_armor"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 10
+defense       = 5
+hitpoints     = 30
+firepower     = 3
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 4
+uk_food       = 0
+uk_gold       = 3
+flags         = "Armor", "BadWallAttacker"
+roles         = "DefendOkStartUnit", "Hunter"
+bonuses       =
+   { "flag", "type", "value"
+     "Light Shells", "DefenseMultiplier", 1
+   }
+helptext      = _("\
+Armors are motorized war wagons that are faster, stronger, and can take\
+ more damage than any mounted unit. However, they are less adaptable to\
+ very rough terrain (they cannot move into mountains, glaciers or swamps\
+ without roads), and are unable to use less rough terrain to improve their\
+ defense.\
+")
+
+[unit_reactive_armor]
+name          = _("Reactive Armor")
+class         = "Big Land"
+tech_req      = "Modern Warfare"
+obsolete_by   = "None"
+graphic       = "u.reactive_armor"
+graphic_alt   = "u.armor"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_armor"
+sound_fight_alt = "f_generic"
+build_cost    = 100
+pop_cost      = 0
+attack        = 11
+defense       = 5
+hitpoints     = 30
+firepower     = 3
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 4
+uk_food       = 0
+uk_gold       = 4
+flags         = "Armor", "BadWallAttacker"
+bonuses       =
+   { "flag", "type", "value"
+     "Light Shells", "DefenseMultiplier", 2
+   }
+roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Tanks with reactive armor are upgrade version of armor, they are faster and stronger than their predecessors,\
+ and can easily sustain attack of most infantry or mounted units. However, they are less adaptable to\
+ very rough terrain (they cannot move into mountains, glaciers or swamps\
+ without roads), and unable to use less rough terrain to improve their\
+ defense.\
+")
+
+[unit_self_propelled_gun]
+name          = _("Self-propelled Gun")
+class         = "Big Land"
+tech_req      = "Robotics"
+obsolete_by   = "None"
+graphic       = "u.self_propelled_gun"
+graphic_alt   = "u.armor"
+sound_move    = "m_howitzer"
+sound_move_alt = "m_generic"
+sound_fight   = "f_howitzer"
+sound_fight_alt = "f_generic"
+build_cost    = 75
+pop_cost      = 0
+attack        = 12
+defense       = 4
+hitpoints     = 25
+firepower     = 3
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 4
+uk_food       = 0
+uk_gold       = 2
+flags         = "CityBuster", "Armor"
+roles         = "AttackStrongStartUnit"
+bonuses       =
+   { "flag", "type", "value"
+     "Armor", "DefenseMultiplier", 1
+     "Armor", "DefenseDivider", 1
+   }
+helptext      = _("\
+The self-propelled gun is an upgraded artillery. As with its predecessors, it is a\
+ very strong attacker but equally weak defender and will need an escort\
+ to be effective, and has limited mobility.\
+"), _("\
+Self-propelled Guns (so called Tank Destroyers) have increased defense and attack against armors and mechanized infantry.\
+")
+
+
+[unit_autonomous_war_mech]
+name          = _("Aut. War Mech")
+class         = "Big Land"
+tech_req      = "Artificial Intelligence", "Antimatter Propulsion"
+obsolete_by   = "None"
+graphic       = "u.autonomous_war_mech"
+graphic_alt   = "b.sam_battery"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_mech_inf"
+sound_fight_alt = "f_generic"
+build_cost    = 130
+pop_cost      = 0
+attack        = 7
+defense       = 3
+hitpoints     = 20
+firepower     = 3
+move_rate     = 2
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 3
+uk_food       = 0
+uk_gold       = 4
+flags         = "BadWallAttacker"
+roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+An antimatter powered Autonomous War Mech,\
+ can spread Democracy without concern of peacefull citizens.\
+"), _("\
+Unfortunately A.I. cannot cope with difficult terrain such glaciers, swamp, jungle or mountains.\
+")
+
+[unit_self_propelled_howitzer]
+name          = _("Self-propelled Howitzer")
+class         = "Big Land"
+tech_req      = "Robotics"
+obsolete_by   = "None"
+graphic       = "u.self_propelled_howitzer"
+graphic_alt   = "u.howitzer"
+sound_move    = "m_howitzer"
+sound_move_alt = "m_generic"
+sound_fight   = "f_howitzer"
+sound_fight_alt = "f_generic"
+build_cost    = 90
+pop_cost      = 0
+attack        = 10
+defense       = 2
+hitpoints     = 25
+firepower     = 3
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 4
+uk_food       = 0
+uk_gold       = 4
+flags         = "Bombarder", "IgWall", "Armor"
+roles         = ""
+helptext      = _("\
+Self-propelled howitzers are upgraded artillery howitzers with improved defensive as well as\
+ offensive capabilities.\
+"), _("\
+Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
+")
+bombard_rate = 3
+
+[unit_mobile_anti_aircraft_gun]
+name          = _("Mobile Anti-Aircraft Gun")
+class         = "Big Land"
+tech_req      = "Jet Propulsion"
+obsolete_by   = "None"
+graphic       = "u.anti_aircraft_gun"
+graphic_alt   = "u.mech_inf"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_mech_inf"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 8
+defense       = 4
+hitpoints     = 20
+firepower     = 3
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 3
+uk_food       = 0
+uk_gold       = 3
+flags         = "Bombarder", "Light Shells"
+targets       = "Air", "Missile", "Helicopter"
+roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Anti-Aircraft Gun is a mobile unit equipped with radar and two autocannons,\
+ can attack both land units or aircrafts. It cannot destroy a target\
+ completely, but can weaken it enough for other units to exterminate it.\
+")
+bombard_rate = 4
+
+
 
 [unit_ballista]
 name          = _("Ballista")
@@ -3411,43 +3410,6 @@ Such unit can be mounted on a ship or reside in a fortress, but can't move by it
 ")
 
 
-[unit_airplane]
-name          = _("Airplane")
-class         = "Air"
-tech_req      = "Flight"
-obsolete_by   = "Fighter"
-graphic       = "u.airplane"
-graphic_alt   = "u.fighter"
-sound_move    = "m_fighter"
-sound_move_alt = "m_generic"
-sound_fight   = "f_fighter"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 4
-defense       = 4
-hitpoints     = 10
-firepower     = 2
-move_rate     = 6
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 2
-uk_happy      = 0
-uk_shield     = 2
-uk_food       = 0
-uk_gold       = 2
-targets       = "Air", "Helicopter"
-flags         = "AirAttacker", "OneAttack", "Light Shells", "HasNoZOC"
-roles         = "DefendOkStartUnit"
-helptext      = _("\
-Air bi-planes are your very first airborne units. They can\
- move anywhere and attack any unit, but are relatively slow and weak.\
-"), _("\
-All aircraft are subject to refueling and must return to a city, airstrip,\
- airbase, or a Carrier before MP's are exhausted or the aircraft will\
- run out of fuel and be destroyed.\
-")
-
 [unit_zeppelin]
 name          = _("Zeppelin")
 class         = "Helicopter"
@@ -3494,6 +3456,88 @@ base, or Carrier to refuel after a set number of turns; however, care \
 must be exercised, due to the health they lose every turn.\
 ")
 bombard_rate = 1
+
+[unit_helicopter]
+name          = _("Helicopter")
+class         = "Helicopter"
+tech_req      = "Combined Arms"
+obsolete_by   = "None"
+graphic       = "u.helicopter"
+graphic_alt   = "-"
+sound_move    = "m_helicopter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_helicopter"
+sound_fight_alt = "f_generic"
+build_cost    = 75
+pop_cost      = 0
+attack        = 5
+defense       = 3
+hitpoints     = 20
+firepower     = 3
+move_rate     = 6
+; range 5*20/2=50
+vision_radius_sq = 8
+transport_cap = 1
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 3
+uk_food       = 0
+uk_gold       = 3
+cargo         = "Infantry", "Small Land", "Light Cavalry"
+flags         = "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+A Helicopter's attack against units on land is a bombard attack; against\
+ units on water it is a regular attack.\
+"), _("\
+Helicopters can also transport one light military land unit; while most troops \
+must load or unload in a city, airstrip, or airbase (and not in the field \
+or onboard a Carrier), units specializing in mobility (Paratroopers, \
+Alpine Troops, Marines, Snipers, ATV Infantry, Partisans, and Fanatics) can embark or disembark \
+at any time.\
+"), _("\
+Unlike other aircraft, Helicopters are not required to return to a city,\
+ base, or Carrier to refuel after a set number of turns; however, care\
+ must be exercised, due to the health they lose every turn.\
+")
+bombard_rate = 2
+
+[unit_airplane]
+name          = _("Airplane")
+class         = "Air"
+tech_req      = "Flight"
+obsolete_by   = "Fighter"
+graphic       = "u.airplane"
+graphic_alt   = "u.fighter"
+sound_move    = "m_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 4
+defense       = 4
+hitpoints     = 10
+firepower     = 2
+move_rate     = 6
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 2
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 2
+targets       = "Air", "Helicopter"
+flags         = "AirAttacker", "OneAttack", "Light Shells", "HasNoZOC"
+roles         = "DefendOkStartUnit"
+helptext      = _("\
+Air bi-planes are your very first airborne units. They can\
+ move anywhere and attack any unit, but are relatively slow and weak.\
+"), _("\
+All aircraft are subject to refueling and must return to a city, airstrip,\
+ airbase, or a Carrier before MP's are exhausted or the aircraft will\
+ run out of fuel and be destroyed.\
+")
 
 [unit_fighter]
 name          = _("Fighter")
@@ -3584,51 +3628,6 @@ All aircraft are subject to refueling and must return to a city, airstrip,\
  run out of fuel and be destroyed.\
 ")
 bombard_rate = 3
-
-[unit_helicopter]
-name          = _("Helicopter")
-class         = "Helicopter"
-tech_req      = "Combined Arms"
-obsolete_by   = "None"
-graphic       = "u.helicopter"
-graphic_alt   = "-"
-sound_move    = "m_helicopter"
-sound_move_alt = "m_generic"
-sound_fight   = "f_helicopter"
-sound_fight_alt = "f_generic"
-build_cost    = 75
-pop_cost      = 0
-attack        = 5
-defense       = 3
-hitpoints     = 20
-firepower     = 3
-move_rate     = 6
-; range 5*20/2=50
-vision_radius_sq = 8
-transport_cap = 1
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 3
-uk_food       = 0
-uk_gold       = 3
-cargo         = "Infantry", "Small Land", "Light Cavalry"
-flags         = "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
-roles         = ""
-helptext      = _("\
-A Helicopter's attack against units on land is a bombard attack; against\
- units on water it is a regular attack.\
-"), _("\
-Helicopters can also transport one light military land unit; while most troops \
-must load or unload in a city, airstrip, or airbase (and not in the field \
-or onboard a Carrier), units specializing in mobility (Paratroopers, \
-Alpine Troops, Marines, Snipers, ATV Infantry, Partisans, and Fanatics) can embark or disembark \
-at any time.\
-"), _("\
-Unlike other aircraft, Helicopters are not required to return to a city,\
- base, or Carrier to refuel after a set number of turns; however, care\
- must be exercised, due to the health they lose every turn.\
-")
-bombard_rate = 2
 
 [unit_strike_aircraft]
 name          = _("Strike Aircraft")
@@ -3913,6 +3912,38 @@ Attack against units on land is a bombard attack; against\
 ")
 bombard_rate = 6
 
+[unit_drone]
+name          = _("Drone")
+class         = "Air"
+tech_req      = "Nanotechnology"
+obsolete_by   = "None"
+graphic       = "u.drone"
+graphic_alt   = "u.cruise_missile"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 4
+defense       = 2
+hitpoints     = 10
+firepower     = 3
+move_rate     = 12
+vision_radius_sq = 8
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 1
+flags         = "AirAttacker", "Partial_Invis", "Light Shells"
+roles         = "Explorer"
+helptext      = _("\
+Unmanned light drone are useful for patrol duty,\
+ they need no refueling, and citizens are not upset when drone is used abroad.\
+")
+
 
 [unit_balloon]
 name          = _("Balloon")
@@ -3983,37 +4014,6 @@ All aircraft are subject to refueling and must return to a city, airstrip,\
  run out of fuel and be destroyed.\
 ")
 
-[unit_drone]
-name          = _("Drone")
-class         = "Air"
-tech_req      = "Nanotechnology"
-obsolete_by   = "None"
-graphic       = "u.drone"
-graphic_alt   = "u.cruise_missile"
-sound_move    = "m_cruise_missile"
-sound_move_alt = "m_generic"
-sound_fight   = "f_cruise_missile"
-sound_fight_alt = "f_generic"
-build_cost    = 70
-pop_cost      = 0
-attack        = 4
-defense       = 2
-hitpoints     = 10
-firepower     = 3
-move_rate     = 12
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 2
-uk_food       = 0
-uk_gold       = 1
-flags         = "AirAttacker", "Partial_Invis", "Light Shells"
-roles         = "Explorer"
-helptext      = _("\
-Unmanned light drone are useful for patrol duty,\
- they need no refueling, and citizens are not upset when drone is used abroad.\
-")
 
 [unit_jetliner]
 name          = _("Jetliner")
@@ -4061,40 +4061,6 @@ All aircraft are subject to refueling and must return to a city, airstrip,\
  run out of fuel and be destroyed.\
 ")
 
-[unit_canoes]
-name          = _("Canoes")
-class         = "Coaster"
-tech_req      = "Fire Making"
-obsolete_by   = "Aak"
-graphic       = "u.canoes"
-graphic_alt   = "unit.fortress"
-sound_move    = "m_trireme"
-sound_move_alt = "m_generic"
-sound_fight   = "f_trireme"
-sound_fight_alt = "f_generic"
-build_cost    = 15
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 1
-cargo         = "Small Land"
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "NonMil", "NoVeteran", "HasNoZOC", "Unique", "Unbribable", "Trireme"
-roles         = "Ferryboat", "FerryStartUnit"
-helptext      = _("\
-Canoe made from hollowed trunk is a stone age form of\
- transport, allow you to spread your Tribe onto nearby islands.\
- Canoe can go along rivers or coast, not able to go far into Ocean.\
-")
-
 [unit_raft]
 name          = _("Raft")
 class         = "Riverboat"
@@ -4130,44 +4096,38 @@ Raft is a rudimentary form of transport, limited to the rivers, lakes and fortre
 TIP: Raft can be used as a temporary bridge (fortify it for anchor), but can be destroyed easily if not guarded.\
 ")
 
-[unit_trireme]
-name          = _("Trireme")
+[unit_canoes]
+name          = _("Canoes")
 class         = "Coaster"
-tech_req      = "Map Making"
-obsolete_by   = "Galley"
-graphic       = "u.trireme"
-graphic_alt   = "-"
+tech_req      = "Fire Making"
+obsolete_by   = "Aak"
+graphic       = "u.canoes"
+graphic_alt   = "unit.fortress"
 sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 15
 pop_cost      = 0
-attack        = 1
+attack        = 0
 defense       = 1
-hitpoints     = 15
+hitpoints     = 10
 firepower     = 1
-move_rate     = 3
+move_rate     = 2
 vision_radius_sq = 2
-transport_cap = 2
+transport_cap = 1
+cargo         = "Small Land"
 fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 2
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
 uk_gold       = 1
-cargo         = "Infantry", "Small Land"
-flags         = "BadCityDefender", "Trireme"
+flags         = "NonMil", "NoVeteran", "HasNoZOC", "Unique", "Unbribable", "Trireme"
 roles         = "Ferryboat", "FerryStartUnit"
-veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
-veteran_raise_chance      = 50, 33, 20, 10, 0
-veteran_work_raise_chance = 0, 0, 0, 0, 0
-veteran_power_fact        = 100, 125, 150, 175, 200
-veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-The Trireme is your first boat unit. It can act\
- as a transport ship and has rudimentary offensive\
- capabilities, and can travel on\
- rivers and along the coastline, but it may not enter into far ocean tiles.\
+Canoe made from hollowed trunk is a stone age form of\
+ transport, allow you to spread your Tribe onto nearby islands.\
+ Canoe can go along rivers or coast, not able to go far into Ocean.\
 ")
 
 [unit_aak]
@@ -4288,6 +4248,46 @@ Diesel barge can transport land units, also big ones, along or across rivers or 
  use transport ship instead.
 "), _("\
 Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
+")
+
+[unit_trireme]
+name          = _("Trireme")
+class         = "Coaster"
+tech_req      = "Map Making"
+obsolete_by   = "Galley"
+graphic       = "u.trireme"
+graphic_alt   = "-"
+sound_move    = "m_trireme"
+sound_move_alt = "m_generic"
+sound_fight   = "f_trireme"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 15
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 2
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 2
+uk_gold       = 1
+cargo         = "Infantry", "Small Land"
+flags         = "BadCityDefender", "Trireme"
+roles         = "Ferryboat", "FerryStartUnit"
+veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 0, 1, 1, 2
+helptext      = _("\
+The Trireme is your first boat unit. It can act\
+ as a transport ship and has rudimentary offensive\
+ capabilities, and can travel on\
+ rivers and along the coastline, but it may not enter into far ocean tiles.\
 ")
 
 [unit_galley]
