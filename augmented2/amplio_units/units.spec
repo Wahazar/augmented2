@@ -33,6 +33,7 @@ artists = "
     J. W. Bjerk / Eleazar <www.jwbjerk.com>
     qwm
     FiftyNine
+	XYZ
 	Alex Mor
 	acelanceloet (Devian Art)
 	Link293 (turbosquid.com)
@@ -47,6 +48,8 @@ artists = "
 	dunnoob
 	Wyrmshadow 
 	Mouse
+	PikkaBird
+	andythenorth
 "
 
 [file]
