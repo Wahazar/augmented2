@@ -140,8 +140,9 @@ files =
   "augmented2/misc/governments.spec",
   "augmented2/terrain/terrain.spec",
   "augmented2/terrain/roads-hwy.spec",
-  "augmented2/terrain/waterlock.spec",
+  "augmented2/terrain/waterlocks.spec",
   "augmented2/terrain/road_bridge.spec",
+  "augmented2/terrain/volcano.spec",
   "augmented2/misc/techs.spec"
 
 ; Include color definitions
@@ -279,6 +280,15 @@ blend_layer = 1
 num_layers = 2
 layer0_match_type = "lake"
 layer1_match_type = "land"
+
+[tile_volcano]
+tag = "volcano"
+blend_layer = 1
+num_layers = 3
+layer0_match_type = "lake"
+layer1_match_type = "land"
+layer2_match_type = "hills"
+layer2_match_with = "hills"
 
 [extras]
 styles =

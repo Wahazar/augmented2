@@ -240,6 +240,14 @@ blend_layer = 1
 num_layers = 1
 layer0_match_type = "land"
 
+[tile_volcano]
+tag = "volcano"
+blend_layer = 1
+num_layers = 3
+layer0_match_type = "land"
+layer1_match_type = "mountains"
+layer1_match_with = "mountains"
+
 [extras]
 styles =
     { "name",          "style"

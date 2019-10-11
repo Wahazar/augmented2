@@ -8,6 +8,8 @@ options = "+Freeciv-2.6-spec"
 artists = "
 		Wahazar
 		VladimirSlavik
+                GriffonSpade
+                XYZ
 "
 ; Augmented2 modpack
 

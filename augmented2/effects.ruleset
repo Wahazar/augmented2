@@ -321,20 +321,43 @@ reqs    =
 
 [effect_scientist]
 type    = "Specialist_Output"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range"
       "Specialist", "Scientist", "Local"
       "OutputType", "Science", "Local"
     }
 
+;total output =2 only for reliable governments
+[effect_scientist_1]
+type    = "Specialist_Output"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Specialist", "Scientist", "Local", TRUE
+      "OutputType", "Science", "Local", TRUE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+    }
+
 [effect_taxman]
 type    = "Specialist_Output"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range"
       "Specialist", "Taxman", "Local"
       "OutputType", "Gold", "Local"
+    }
+
+;total output =2 not during Anarchy
+[effect_taxman_1]
+type    = "Specialist_Output"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Specialist", "Taxman", "Local", TRUE
+      "OutputType", "Gold", "Local", TRUE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 ;augmented: if occupied
@@ -7409,10 +7432,12 @@ reqs    =
 type    = "Specialist_Output"
 value   = 1
 reqs    =
-    { "type", "name", "range", "survives"
+    { "type", "name", "range", "present"
       "Building", "Large Hadron Collider", "World", TRUE
-      "Specialist", "Scientist", "Local"
-      "OutputType", "Science", "Local"
+      "Specialist", "Scientist", "Local", TRUE
+      "OutputType", "Science", "Local", TRUE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
     }
 
 [effect_stonehenge]

@@ -679,10 +679,10 @@ clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "no"
-warmer_drier_result  = "no"
+warmer_drier_result  = "volcano"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
-native_to            = "Small Land", "Merchant", "Air", "Bomb", "Missile", "Helicopter"
+native_to            = "Small Land", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "NoCities", "CanHaveRiver"
 property_mountainous = 70
 color.r              = 129
@@ -696,6 +696,49 @@ Reconnaissance (Small Land) units that move into mountains can see an extra spac
  fast land unit ending its turn in mountains without a road will start\
  its next turn with one fewer movement point. Land units (except small ones, including Alpine Troops) may not\
  move into mountains without a road.\
+")
+
+[terrain_volcano]
+name                 = _("Volcano")
+graphic              = "volcano"
+graphic_alt          = "mountains"
+identifier           = "v"
+class                = "Land"
+movement_cost        = 6
+defense_bonus        = 100
+food                 = 0
+shield               = 2
+trade                = 0
+resources            = "Saltpeter"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 0
+base_time            = 10
+road_time            = 12
+irrigation_result    = "no"
+irrigation_food_incr = 0
+irrigation_time      = 0
+mining_result        = "yes"
+mining_shield_incr   = 0
+mining_time          = 10
+transform_result     = "no"
+transform_time       = 36
+pillage_time         = 3
+clean_pollution_time = 6
+clean_fallout_time   = 6
+animal               = "None"
+warmer_wetter_result = "no"
+warmer_drier_result  = "no"
+cooler_wetter_result = "no"
+cooler_drier_result  = "Mountains"
+native_to            = "Small Land", "Air", "Bomb", "Missile"
+flags                = "NoBarbs", "NoCities", "NotGenerated", "NoFortify"
+property_mountainous = 100
+color.r              = 229
+color.g              = 140
+color.b              = 110
+helptext             = _("\
+Active volcano is rather not suitable to live here.\
 ")
 
 [terrain_plains]

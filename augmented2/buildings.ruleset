@@ -1498,14 +1498,16 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Shamanism", "Player", TRUE
-      "Terrain", "Tundra", "Local", TRUE
+;      "Terrain", "Tundra", "Local", TRUE
     }
 graphic	= "b.sacred_cairn"
 graphic_alt	= "b.temple"
 obsolete_by	=
     { "type", "name", "range"
       "Building", "Temple", "City"
-      "Tech", "Monotheism", "Player"
+      "Building", "Church", "City"
+      "Building", "Mosque", "City"
+      "Tech", "Theology", "Player"
     }
 build_cost	= 15
 upkeep		= 0
@@ -3457,7 +3459,8 @@ helptext	= _("\
  Large Hadron Collider reveal two new advances, when finished.\
  It is the best way to gain Great Unification Theory.\n\
 Upon completion of this wonder, scientist specialists' research output \
-increases to 3 permanently for every nation.\n\
+increases to 3 permanently for every nation \
+(except those ruled by Anarchy or Fundamental government).\n\
 Each player's city with Research Center would gain 1 culture point.
 ")
 

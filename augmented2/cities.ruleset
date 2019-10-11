@@ -66,7 +66,8 @@ reqs		=
     }
 helptext        = _("\
 Each scientist adds two points to your empire's research output \
-per turn, increasing to three once any player has built Darwin's \
+per turn (except of Anarchy or Fundamental government, which yield only one point), \
+increasing to three once any player has built Darwin's \
 Voyage or Large Hadron Collider.\
 ")
 
@@ -80,7 +81,8 @@ reqs		=
     }
 helptext        = _("\
 Each tax collector produces two extra gold for your treasury \
-per turn, increasing to three once any player has built \
+per turn (except of Anarchy, which yield only one point), \
+increasing to three once any player has built \
 A.Smith's Trading Co.\
 ")
 

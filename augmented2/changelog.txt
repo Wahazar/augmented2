@@ -2,6 +2,13 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.27
+Scientist produce only 1 bulb in casie of Anarchy or Fundamental gov.
+Taxman produce only 1 gold in case of Anarchy.
+Rare tile Volcano added (by Lua script or global warming)
+Sacred Cairn can be founded enywhere.
+Waterlocks for amplio imported from ampliohexbig
+
 2.6.26
 Smooth transition from Temple to Church or Mosque
 and from early temple wonders to advanced far-east temple wonders
