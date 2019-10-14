@@ -926,7 +926,7 @@ set =
       "tinyisles", "DISABLED"
       "temperature", 60
       "flatpoles", 0
-      "startunits", "ccccx"
+      "startunits", "ccccc"
       "citymindist", 3
       "techlevel", 0
       "borders", "ENABLED"

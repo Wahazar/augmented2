@@ -508,11 +508,11 @@ sound_move    = "m_worker"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 25
 pop_cost      = 1
 attack        = 1
 defense       = 1
-hitpoints     = 12
+hitpoints     = 15
 firepower     = 1
 move_rate     = 1
 vision_radius_sq = 2
@@ -5892,7 +5892,7 @@ name          = _("Pirates")
 class         = "Infantry"
 tech_req      = "Overseas Trade"
 obsolete_by   = "Little Green Men"
-graphic       = "u.corsairs"
+graphic       = "u.pirates"
 graphic_alt   = "u.musketeers"
 sound_move    = "m_musketeers"
 sound_move_alt = "m_generic"
@@ -5916,7 +5916,7 @@ flags         = "Capturer", "Marines", "BarbarianOnly"
 roles         = "Hunter", "BarbarianSeaTech", "BarbarianBuild"
 helptext      = _("\
 Pirates can attack other ships from aboard ship,\
- or making raids on coastal cities.\
+ or make raids on coastal cities.\
 ")
 
 [unit_little_green_men]

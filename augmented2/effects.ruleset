@@ -8543,3 +8543,46 @@ reqs    =
       "Building", "Sacred Cairn", "City", TRUE
       "OutputType", "Food", "Local", TRUE
     }
+
+[effect_forest_road]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Road", "Local"
+      "Terrain", "Forest", "Local"
+      "OutputType", "Shield", "Local"
+      "Tech", "Forestry", "Player"
+    }
+
+[effect_hills_road]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Road", "Local"
+      "Terrain", "Hills", "Local"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_mountains_road]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Road", "Local"
+      "Terrain", "Mountains", "Local"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_jungle_road]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Road", "Local"
+      "Terrain", "Jungle", "Local"
+      "OutputType", "Shield", "Local"
+      "Tech", "Forestry", "Player"
+    }
+

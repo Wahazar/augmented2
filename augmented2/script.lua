@@ -167,7 +167,6 @@ function place_map_labels()
   -- Place the included labels at the location determined above.
   for place in whole_map_iterate() do
     local terr = place.terrain
-    local til = place.Tile
     local tname = terr:rule_name()
 
     if place:has_extra("River") then
@@ -246,7 +245,7 @@ function place_map_labels()
       selected_tundra = selected_tundra - 1
       if selected_tundra == 0 then
           place:set_label(_("Geothermal Area"))
-          til:change_terrain("Volcano")
+          --place:change_terrain(find.terrain_type("Volcano"))
       end
     elseif tname == "Desert" then
       selected_desert = selected_desert - 1
@@ -268,7 +267,7 @@ function place_map_labels()
           place:set_label(_("Long Beach"))
         elseif random(1, 100) <= 50 then
           place:set_label(_("Mud Volcanoes"))
-          til:change_terrain("Volcano")
+        --  place:change_terrain(find.terrain_type("Volcano"))
         else
           place:set_label(_("Rock Pillars"))
         end
@@ -319,7 +318,7 @@ function place_map_labels()
           place:set_label(_("Karst Landscape"))
         else
           place:set_label(_("Valley of Geysers"))
-          til:change_terrain("Volcano")
+          --place:change_terrain(find.terrain_type("Volcano"))
         end
       end
     elseif tname == "Mountains" then
@@ -331,9 +330,9 @@ function place_map_labels()
           place:set_label(_("Sacred Mount"))
         elseif adjacent_to(place, "Ocean") then
           place:set_label(_("Cliff Coast"))
-        elseif random(1, 100) <= 50 then
+        elseif random(1, 100) <= 90 then
           place:set_label(_("Active Volcano"))
-          til:change_terrain("Volcano")
+          --place:change_terrain(find.terrain_type("Volcano"))
         else
           place:set_label(_("High Summit"))
         end
