@@ -9,7 +9,9 @@ Rare tile Volcano added (by Lua script or global warming) - roll back, Lua tile 
 Sacred Cairn can be founded enywhere.
 Waterlocks for amplio imported from ampliohexbig
 Tribe more expensive, more hp, to survive killunhomed
-Hills and forest give (additional) shields with road.
+Hills and forest give (additional) shields with road or river.
+New tile: Taiga +gfx for both tilesets
+Improved jungle gfx for augmentedis
 
 2.6.26
 Smooth transition from Temple to Church or Mosque

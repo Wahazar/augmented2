@@ -127,6 +127,7 @@ files =
   "augmented2/terrain_small/roads-hwys.spec",
   "augmented2/terrain_small/waterlocks.spec",
   "augmented2/terrain_small/road_bridges.spec",
+  "augmented2/terrain_small/forest2.spec",
   "augmented2/misc/techs.spec"
 
 ; Include color definitions
@@ -208,11 +209,28 @@ layer0_match_type = "land"
 layer1_match_type = "hills"
 layer1_match_with = "hills"
 
+;ugly and misleading swamp-like img
+;[tile_jungle]
+;tag = "jungle"
+;blend_layer = 1
+;num_layers = 1
+;layer0_match_type = "land"
+
 [tile_jungle]
 tag = "jungle"
 blend_layer = 1
-num_layers = 1
+num_layers = 2
 layer0_match_type = "land"
+layer1_match_type = "forest"
+layer1_match_with = "forest"
+
+[tile_taiga]
+tag = "taiga"
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "forest"
+layer1_match_with = "forest"
 
 [tile_mountains]
 tag = "mountains"

@@ -8544,6 +8544,7 @@ reqs    =
       "OutputType", "Food", "Local", TRUE
     }
 
+;road req. for full shield prod.
 [effect_forest_road]
 type    = "Output_Inc_Tile"
 value   = 1
@@ -8553,6 +8554,19 @@ reqs    =
       "Terrain", "Forest", "Local"
       "OutputType", "Shield", "Local"
       "Tech", "Forestry", "Player"
+    }
+
+;or river
+[effect_forest_river]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Extra", "River", "Local", TRUE
+      "Extra", "Road", "Local", FALSE
+      "Terrain", "Forest", "Local", TRUE
+      "OutputType", "Shield", "Local", TRUE
+      "Tech", "Forestry", "Player", TRUE
     }
 
 [effect_hills_road]
@@ -8565,6 +8579,17 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
+[effect_hills_river]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Extra", "River", "Local", TRUE
+      "Extra", "Road", "Local", FALSE
+      "Terrain", "Hills", "Local", TRUE
+      "OutputType", "Shield", "Local", TRUE
+    }
+
 [effect_mountains_road]
 type    = "Output_Add_Tile"
 value   = 1
@@ -8573,6 +8598,17 @@ reqs    =
       "Extra", "Road", "Local"
       "Terrain", "Mountains", "Local"
       "OutputType", "Shield", "Local"
+    }
+
+[effect_mountains_river]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Extra", "River", "Local", TRUE
+      "Extra", "Road", "Local", FALSE
+      "Terrain", "Mountains", "Local", TRUE
+      "OutputType", "Shield", "Local", TRUE
     }
 
 [effect_jungle_road]
@@ -8584,5 +8620,40 @@ reqs    =
       "Terrain", "Jungle", "Local"
       "OutputType", "Shield", "Local"
       "Tech", "Forestry", "Player"
+    }
+
+[effect_jungle_river]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Extra", "River", "Local", TRUE
+      "Extra", "Road", "Local", FALSE
+      "Terrain", "Jungle", "Local", TRUE
+      "OutputType", "Shield", "Local", TRUE
+      "Tech", "Forestry", "Player", TRUE
+    }
+
+[effect_taiga_road]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Road", "Local"
+      "Terrain", "Jungle", "Local"
+      "OutputType", "Shield", "Local"
+      "Tech", "Forestry", "Player"
+    }
+
+[effect_taiga_river]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Extra", "River", "Local", TRUE
+      "Extra", "Road", "Local", FALSE
+      "Terrain", "Jungle", "Local", TRUE
+      "OutputType", "Shield", "Local", TRUE
+      "Tech", "Forestry", "Player", TRUE
     }
 

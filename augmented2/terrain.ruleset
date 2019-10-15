@@ -476,7 +476,7 @@ shield               = 1 ;+1 with road
 trade                = 0
 resources            = "Forest Game", "Silk", "Pheasant"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 100
+road_shield_incr_pct = 0; 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -495,21 +495,67 @@ animal               = "None"
 warmer_wetter_result = "Jungle"
 warmer_drier_result  = "Plains"
 cooler_wetter_result = "no"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "Taiga"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
-property_cold        = 20
+;property_cold        = 10
 property_wet         = 20
 property_foliage     = 50
 property_temperate   = 50
-color.r              = 43
+color.r              = 93
 color.g              = 107
-color.b              = 19
+color.b              = 39
 helptext             = _("\
 Forests are densely wooded, making agriculture somewhat\
  problematic.\
 "), _("\
-Road is required to get additional shield production.\
+Road or river and Forestry advance required to get additional production.\
+")
+
+[terrain_taiga]
+name                 = _("Taiga")
+graphic              = "taiga"
+graphic_alt          = "jungle"
+identifier           = "y"
+class                = "Land"
+movement_cost        = 2
+defense_bonus        = 25
+food                 = 1
+shield               = 1 ;+1 with road
+trade                = 0
+resources            = "Forest Game", "Game", "Furs"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0; 100
+road_trade_incr_pct  = 0
+base_time            = 1
+road_time            = 4
+irrigation_result    = "Tundra"
+irrigation_food_incr = 0
+irrigation_time      = 20
+mining_result        = "no"
+mining_shield_incr   = 0
+mining_time          = 15
+transform_result     = "Forest"
+transform_time       = 28
+pillage_time         = 1
+clean_pollution_time = 3
+clean_fallout_time   = 3
+animal               = "None"
+warmer_wetter_result = "swamp"
+warmer_drier_result  = "Forest"
+cooler_wetter_result = "no"
+cooler_drier_result  = "Tundra"
+native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Air", "Bomb", "Missile", "Helicopter"
+flags                = "Starter", "CanHaveRiver"
+property_cold        = 50
+property_temperate   = 10
+color.r              = 43
+color.g              = 107
+color.b              = 19
+helptext             = _("\
+Taiga are boreal forests with poor soil.\
+"), _("\
+Road or river and Forestry advance required to get additional production.\
 ")
 
 [terrain_grassland]
@@ -569,7 +615,7 @@ shield               = 0 ;+1 with road
 trade                = 0
 resources            = "Coal", "Wine", "Saltpeter"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 100
+road_shield_incr_pct = 0; 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -603,7 +649,7 @@ In addition to being amenable to agriculture, Hills are frequently\
 Cities built on hills are at risk of earthquakes, which can interrupt\
  a city's current project.\
 "), _("\
-Road is required to get additional shield production.\
+Road or river required to get additional production.\
 ")
 
 [terrain_jungle]
@@ -619,7 +665,7 @@ shield               = 0 ;+1 with road
 trade                = 0
 resources            = "Gems", "Fruit"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 100
+road_shield_incr_pct = 0; 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -639,7 +685,7 @@ warmer_wetter_result = "no"
 warmer_drier_result  = "no"
 cooler_wetter_result = "Forest"
 cooler_drier_result  = "Tundra"
-native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Air", "Bomb", "Missile", "Helicopter"
+native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
 property_foliage     = 50
 property_tropical    = 50
@@ -652,7 +698,7 @@ Jungles are densely overgrown, making agriculture somewhat\
  problematic. Wheeled Units may not move into jungle without\
  a road.\
 "), _("\
-Road is required to get shield production.\
+Road or river and Forestry advance required to get additional production.\
 ")
 
 [terrain_mountains]
@@ -668,7 +714,7 @@ shield               = 0 ;+1 with road
 trade                = 0
 resources            = "Gold", "Iron", "Uranium"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 100
+road_shield_incr_pct = 0; 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 6
@@ -828,7 +874,7 @@ warmer_wetter_result = "no"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "no"
 cooler_drier_result  = "Tundra"
-native_to            = "Infantry", "Light Cavalry", "Small Land", "Merchant", "Air", "Bomb", "Missile", "Helicopter"
+native_to            = "Infantry", "Light Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
 property_wet         = 100
 property_tropical    = 10
@@ -886,6 +932,55 @@ helptext             = _("\
 Tundra are broad, cold regions, fit for some agriculture and little\
  else.\
 ")
+
+
+;[terrain_wooded_hills]
+;name                 = _("Wooded Hills")
+;graphic              = "wooded_hills"
+;graphic_alt          = "hills"
+;identifier           = "w"
+;class                = "Land"
+;movement_cost        = 3
+;defense_bonus        = 75
+;food                 = 1
+;shield               = 2 ;+1 with road
+;trade                = 0
+;resources            = "Forest Game", "Furs"
+;road_food_incr_pct   = 0
+;road_shield_incr_pct = 0; 100
+;road_trade_incr_pct  = 0
+;base_time            = 1
+;road_time            = 4
+;irrigation_result    = "Hills"
+;irrigation_food_incr = 0
+;irrigation_time      = 12
+;mining_result        = "no"
+;mining_shield_incr   = 0
+;mining_time          = 10
+;transform_result     = "Plains"
+;transform_time       = 48
+;pillage_time         = 2
+;clean_pollution_time = 6
+;clean_fallout_time   = 6
+;animal               = "None"
+;warmer_wetter_result = "no"
+;warmer_drier_result  = "no"
+;cooler_wetter_result = "no"
+;cooler_drier_result  = "Hills"
+;native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter"
+;flags                = "Starter", "CanHaveRiver"
+;property_foliage       = 40
+;property_mountainous = 30
+;property_temperate   = 30
+;color.r              = 54
+;color.g              = 110
+;color.b              = 15
+;helptext             = _("\
+;Wooded hills are good initial shield source.\
+;"), _("\
+;Road or river required to get additional production.\
+;")
+
 
 ; The individual resource types, one per section.
 ; Roughly sorted by identifier.
@@ -1571,7 +1666,7 @@ reqs           =
     }
 build_time     = 2
 removal_time   = 0
-native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Suicidal", "Turrets"
+native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land"
 conflicts      = "Airstrip", "Airbase", "Water Lock"
 hidden_by      = "Fortress"
 flags          = "NativeTile"
