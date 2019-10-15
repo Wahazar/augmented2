@@ -2576,6 +2576,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Stone Knapping", "Player", TRUE
+      "TerrainFlag", "Sea", "Adjacent", TRUE
 	 "MinCulture", "10", "Player", TRUE
     }
 graphic	= "b.moai_statues"

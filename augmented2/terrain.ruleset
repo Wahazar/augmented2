@@ -649,7 +649,7 @@ In addition to being amenable to agriculture, Hills are frequently\
 Cities built on hills are at risk of earthquakes, which can interrupt\
  a city's current project.\
 "), _("\
-Road or river required to get additional production.\
+Road or river required to get shield production.\
 ")
 
 [terrain_jungle]
@@ -698,7 +698,8 @@ Jungles are densely overgrown, making agriculture somewhat\
  problematic. Wheeled Units may not move into jungle without\
  a road.\
 "), _("\
-Road or river and Forestry advance required to get additional production.\
+Road or river and Forestry advance required to get shield production, \
+Railroad and Railway Station for additional production.\
 ")
 
 [terrain_mountains]

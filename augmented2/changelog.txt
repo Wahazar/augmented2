@@ -2,6 +2,16 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.28
+Arbalest is now Small Land bombard unit
+All recon units can shoot aboard ,except of hunters.
+Higher communism waste/corruption
+Stables barracks only for horses.
+Fixed early ship stats.
+Moai statues only on coast
+Jungle bonus from RR+RS
+Forestry not req for forest road shield bonus (ambigous hoover txt)
+
 2.6.27
 Scientist produce only 1 bulb in case of Anarchy or Fundamental gov.
 Taxman produce only 1 gold in case of Anarchy.
@@ -27,7 +37,7 @@ new techs: Sailing, Shamanism
 galley/monitor capacity 2
 terrain transform tweaked
 thalassocracy and federation luxury changed
-all spaceship partreq. Space Lift
+all spaceship parts req. Space Lift
 pyramids tweaked.
 units transport description corrected.
 

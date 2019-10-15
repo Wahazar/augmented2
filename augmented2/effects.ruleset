@@ -956,7 +956,7 @@ reqs    =
 
 [effect_corruption_communism]
 type    = "Output_Waste"
-value   = 30
+value   = 40
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Communism", "Player", TRUE
@@ -1240,7 +1240,7 @@ reqs    =
 
 [effect_waste_communism]
 type    = "Output_Waste"
-value   = 20
+value   = 30
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Communism", "Player", TRUE
@@ -3469,7 +3469,7 @@ reqs    =
 
 [effect_stables_barracks_lc]
 type    = "Veteran_Build"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Stables Barracks", "City", TRUE
@@ -3487,6 +3487,8 @@ reqs    =
       "UnitClass", "Heavy Cavalry", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
+      "UnitType", "Mech. Inf.", "Local", FALSE
+      "UnitType", "Elephants", "Local", FALSE
     }
 
 [effect_stables_barracks_hp_lc]
@@ -3546,11 +3548,9 @@ reqs    =
 type    = "Veteran_Build"
 value   = 1
 reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Workshop Barracks", "City", TRUE
-      "UnitType", "Mech. Inf.", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
+    { "type", "name", "range"
+      "Building", "Workshop Barracks", "City"
+      "UnitType", "Mech. Inf.", "Local"
     }
 
 [effect_workshop_barracks_hp]
@@ -7085,16 +7085,16 @@ reqs    =
     }
 
 ;improved jungle output
-;[effect_railroad_jungle]
-;type    = "Output_Inc_Tile"
-;value   = 1
-;reqs    =
-;    { "type", "name", "range"
-;      "Terrain", "Jungle", "Local"
-;      "Building", "Railway Station", "City"
-;      "Extra", "RailRoad", "Local"
-;      "OutputType", "Shield", "Local"
-;    }
+[effect_railroad_jungle]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Terrain", "Jungle", "Local"
+      "Building", "Railway Station", "City"
+      "Extra", "RailRoad", "Local"
+      "OutputType", "Shield", "Local"
+    }
 
 
 ; Railway Station HP regen (Every Train units)
@@ -7206,6 +7206,16 @@ reqs    =
     { "type", "name", "range"
       "Building", "Textille Mill", "City"
       "Terrain", "Forest", "Local"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_textille_mill_production_taiga]
+type    = "Output_Per_Tile"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Building", "Textille Mill", "City"
+      "Terrain", "Taiga", "Local"
       "OutputType", "Shield", "Local"
     }
 
@@ -8553,7 +8563,7 @@ reqs    =
       "Extra", "Road", "Local"
       "Terrain", "Forest", "Local"
       "OutputType", "Shield", "Local"
-      "Tech", "Forestry", "Player"
+;      "Tech", "Forestry", "Player"
     }
 
 ;or river
@@ -8566,7 +8576,7 @@ reqs    =
       "Extra", "Road", "Local", FALSE
       "Terrain", "Forest", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Tech", "Forestry", "Player", TRUE
+;      "Tech", "Forestry", "Player", TRUE
     }
 
 [effect_hills_road]
@@ -8619,7 +8629,7 @@ reqs    =
       "Extra", "Road", "Local"
       "Terrain", "Jungle", "Local"
       "OutputType", "Shield", "Local"
-      "Tech", "Forestry", "Player"
+;      "Tech", "Forestry", "Player"
     }
 
 [effect_jungle_river]
@@ -8631,29 +8641,29 @@ reqs    =
       "Extra", "Road", "Local", FALSE
       "Terrain", "Jungle", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Tech", "Forestry", "Player", TRUE
+;      "Tech", "Forestry", "Player", TRUE
     }
 
 [effect_taiga_road]
-type    = "Output_Add_Tile"
+type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
       "Extra", "Road", "Local"
-      "Terrain", "Jungle", "Local"
+      "Terrain", "Taiga", "Local"
       "OutputType", "Shield", "Local"
-      "Tech", "Forestry", "Player"
+;      "Tech", "Forestry", "Player"
     }
 
 [effect_taiga_river]
-type    = "Output_Add_Tile"
+type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
       "Extra", "Road", "Local", FALSE
-      "Terrain", "Jungle", "Local", TRUE
+      "Terrain", "Taiga", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Tech", "Forestry", "Player", TRUE
+;      "Tech", "Forestry", "Player", TRUE
     }
 
