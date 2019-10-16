@@ -2709,16 +2709,18 @@ reqs    =
 type    = "Revolution_Unhappiness"
 value   = 3
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Tribal", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "Tribal", "Player", TRUE
+      "Building", "United Nations", "World", FALSE
     }
 
 [effect_revolution_direct_democracy]
 type    = "Revolution_Unhappiness"
 value   = 3
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Direct Democracy", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "Direct Democracy", "Player", TRUE
+      "Building", "United Nations", "World", FALSE
     }
 
 [effect_revolution_republic]
@@ -2741,8 +2743,9 @@ reqs    =
 type    = "Revolution_Unhappiness"
 value   = 3
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Legalism", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "Legalism", "Player", TRUE
+      "Building", "United Nations", "World", FALSE
     }
 
 [effect_senate]
