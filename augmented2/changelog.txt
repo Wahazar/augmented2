@@ -2,6 +2,10 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt1
+longurn branch
+
+
 2.6.28
 Arbalest is now Small Land bombard unit
 All recon units can shoot aboard ,except of hunters.
