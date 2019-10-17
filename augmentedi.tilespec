@@ -114,7 +114,7 @@ files =
 ; it is in augmented-  "amplio2/units.spec",
   "amplio2/nuke.spec",
   "amplio2/explosions.spec",
-  "hexemplio/activities.spec",
+;it is in augmented-  "hexemplio/activities.spec",
   "hexemplio/bases.spec",
   "hexemplio/cities.spec",
   "hexemplio/grid.spec",
@@ -145,6 +145,7 @@ files =
 ;  "augmented2/terrain/volcano.spec",
 ;  "augmented2/terrain/wooded_hills.spec",
   "augmented2/terrain/taiga.spec",
+  "augmented2/terrain/activities.spec"
   "augmented2/misc/techs.spec"
 
 ; Include color definitions
