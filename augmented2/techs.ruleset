@@ -695,7 +695,7 @@ req2     = "Trade"
 flags    = ""
 graphic     = "a.glass_working"
 graphic_alt = "a.espionage"
-helptext = _("Increases units' vision when in fortresses.")
+helptext = _("Increases fortress vision and Sea units vision radius.")
 cost     = 100
 
 [advance_great_unification_theory]
@@ -1217,6 +1217,7 @@ root_req = "Electronics"
 flags    = ""
 graphic     = "a.radar"
 graphic_alt = "-"
+helptext = _("Increases vision radius of Sea and Air units.")
 cost     = 1670
 
 [advance_radio]
@@ -1347,7 +1348,7 @@ flags    = ""
 graphic     = "a.satellite_system"
 graphic_alt = "-"
 helptext = _("\
-Increases unit vision radius.\
+Increases unit vision radius, except of Air and Sea units.\
 ")
 cost     = 3770
 

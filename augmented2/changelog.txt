@@ -2,6 +2,12 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt2
+Vision from Glass Working, Radar
+Mountain vision for Small Land, Infantry, Cavalry
+Unit vision radius fixed according to units.xls chart
+Partisant generation removed.
+
 2.6.lt1
 longurn branch
 

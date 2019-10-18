@@ -596,6 +596,46 @@ reqs    =
       "Terrain", "Mountains", "Local"
       "UnitType", "Explorer", "Local"
     }
+;for infantry
+[effect_mountains_vision_infantry]
+type    = "Unit_Vision_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Mountains", "Local", TRUE
+      "UnitClass", "Infantry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+    }
+;for light cavalry
+[effect_mountains_vision_lc]
+type    = "Unit_Vision_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Mountains", "Local", TRUE
+      "UnitClass", "Light Cavalry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+    }
+;for heavy cavalry
+[effect_mountains_vision_hc]
+type    = "Unit_Vision_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Mountains", "Local", TRUE
+      "UnitClass", "Heavy Cavalry", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+    }
+
+
+[effect_glassworking_vision_sea]
+type    = "Unit_Vision_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Glass Working", "Player"
+      "UnitClass", "Small Land", "Local"
+    }
 
 ; Movement penalty if ended turn at mountains (for every land unit except Trains)
 [effect_mountains_movement]
@@ -6479,6 +6519,7 @@ value   = 7
 reqs    =
     { "type", "name", "range", "present"
       "Building", "City Walls", "City", TRUE
+      "Building", "Watchtower", "City", FALSE
       "MaxUnitsOnTile", "0", "Local", FALSE
     }
 
@@ -6524,10 +6565,41 @@ reqs    =
 ; Vision benefit from Satellite System
 [effect_gps_vision]
 type    = "Unit_Vision_Radius_Sq"
-value   = 8
+value   = 7
+reqs    =
+    { "type", "name", "range", "present"
+      "Tech", "Satellite System", "Player", TRUE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+    }
+
+; Vision benefit from Glass Working
+[effect_glass_working_sea_vision]
+type    = "Unit_Vision_Radius_Sq"
+value   = 5
 reqs    =
     { "type", "name", "range"
-      "Tech", "Satellite System", "Player"
+      "Tech", "Glass Working", "Player"
+      "UnitClass", "Sea", "Local"
+    }
+
+; Vision benefit from Radar
+[effect_radar_sea_vision]
+type    = "Unit_Vision_Radius_Sq"
+value   = 9
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Radar", "Player"
+      "UnitClass", "Sea", "Local"
+    }
+
+[effect_radar_air_vision]
+type    = "Unit_Vision_Radius_Sq"
+value   = 9
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Radar", "Player"
+      "UnitClass", "Air", "Local"
     }
 
 ; ruins bonus for light infantry
