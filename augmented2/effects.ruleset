@@ -10,7 +10,7 @@
 ; than minor changes.
 
 [datafile]
-description="Civ2Civ3 effects data for Freeciv"
+description="augmented2 effects data for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 ; /* <-- avoid gettext warnings
