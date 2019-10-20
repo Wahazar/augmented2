@@ -2,6 +2,12 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt3
+unit movement points extended ~x2
+Pasteur institute is Great Wonder - global 20% plaque reduction for each Hospital.
+Give Immediate Tech effect only for Great Wonders: Great Library, Isaac Newton's College, Darwin's Voyage, Pasteur Institute, Internet, LHC.
+no Inspire_Partisans effect
+
 2.6.lt2
 Vision from Glass Working, Radar
 Mountain vision for Small Land, Infantry, Cavalry

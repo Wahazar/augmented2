@@ -920,7 +920,7 @@ set =
     { "name", "value"
       "aifill", 10
       "generator", "FRACTAL"
-      "topology", "WRAPX|WRAPY|HEX|ISO"
+      "topology", "WRAPX|HEX|ISO"
       "mapsize", "PLAYER"
       "tilesperplayer", 200
       "tinyisles", "DISABLED"

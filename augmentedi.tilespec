@@ -145,7 +145,7 @@ files =
 ;  "augmented2/terrain/volcano.spec",
 ;  "augmented2/terrain/wooded_hills.spec",
   "augmented2/terrain/taiga.spec",
-  "augmented2/terrain/activities.spec"
+  "augmented2/terrain/activities.spec",
   "augmented2/misc/techs.spec"
 
 ; Include color definitions

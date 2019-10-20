@@ -10,7 +10,7 @@
 ; than minor changes.
 
 [datafile]
-description="Civ2Civ3 effects data for Freeciv"
+description="Augmented2 longturn - effects data for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 ; /* <-- avoid gettext warnings
@@ -2959,29 +2959,30 @@ reqs    =
       "UnitType", "Paratroopers", "Local"
     }
 
-[effect_partisan_communism]
-type    = "Inspire_Partisans"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Gov", "Communism", "Player", TRUE
-      "Tech", "Communism", "Player", TRUE
-      "Tech", "Gunpowder", "Player", TRUE
-      "Tech", "Guerilla Warfare", "World", TRUE
-      "NationGroup", "Barbarian", "Player", FALSE
-    }
+;[effect_partisan_communism]
+;type    = "Inspire_Partisans"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Gov", "Communism", "Player", TRUE
+;      "Tech", "Communism", "Player", TRUE
+;      "Tech", "Gunpowder", "Player", TRUE
+;      "Tech", "Guerilla Warfare", "World", TRUE
+;      "NationGroup", "Barbarian", "Player", FALSE
+;    }
 
-[effect_partisan_democracy]
-type    = "Inspire_Partisans"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Gov", "Democracy", "Player", TRUE
-      "Tech", "Communism", "Player", TRUE
-      "Tech", "Gunpowder", "Player", TRUE
-      "Tech", "Guerilla Warfare", "World", TRUE
-      "NationGroup", "Barbarian", "Player", FALSE
-    }
+;[effect_partisan_democracy]
+;type    = "Inspire_Partisans"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Gov", "Democracy", "Player", TRUE
+;      "Tech", "Communism", "Player", TRUE
+;      "Tech", "Gunpowder", "Player", TRUE
+;      "Tech", "Guerilla Warfare", "World", TRUE
+;      "NationGroup", "Barbarian", "Player", FALSE
+;    }
+
 
 [effect_lux_federation]
 type    = "Output_Add_Tile"
@@ -4585,7 +4586,7 @@ reqs    =
 
 [effect_research_lab]
 type    = "Output_Bonus"
-value   = 50
+value   = 75
 reqs    =
     { "type", "name", "range"
       "Building", "Research Lab", "City"
@@ -5108,6 +5109,14 @@ reqs    =
       "OutputType", "Science", "Local"
     }
 
+[effect_darwins_voyage_advance]
+type    = "Give_Imm_Tech"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Darwin's Voyage", "Player"
+    }
+
 [effect_darwins_voyage_culture]
 type    = "History"
 value	= 5
@@ -5116,14 +5125,14 @@ reqs	=
       "Building", "Darwin's Voyage", "City"
     }
 
-[effect_eiffel_tower]
-type    = "Gain_AI_Love"
-value   = 10
-reqs    =
-    { "type", "name", "range", "present", "survives"
-      "Building", "Eiffel Tower", "Player", TRUE, FALSE
-      "Building", "Apollo Program", "World", FALSE, TRUE
-    }
+;[effect_eiffel_tower]
+;type    = "Gain_AI_Love"
+;value   = 10
+;reqs    =
+;    { "type", "name", "range", "present", "survives"
+;      "Building", "Eiffel Tower", "Player", TRUE, FALSE
+;      "Building", "Apollo Program", "World", FALSE, TRUE
+;    }
 
 ;[effect_eiffel_tower_1]
 ;type    = "Pollu_Pop_Pct"
@@ -5707,8 +5716,9 @@ type    = "Output_Bonus"
 value   = 75
 reqs    =
     { "type", "name", "range", "survives"
-      "Building", "Internet", "Alliance", TRUE
+      "Building", "Internet", "World", TRUE
       "Building", "Research Lab", "City"
+      "Tech", "Computers", "Player"
       "OutputType", "Science", "Local"
     }
 
@@ -5720,13 +5730,13 @@ reqs    =
       "Building", "Internet", "Player"
     }
 
-;[effect_internet_2]
-;type    = "Give_Imm_Tech"
-;value   = 1
-;reqs    =
-;    { "type", "name", "range"
-;      "Building", "Internet", "Player"
-;    }
+[effect_internet_2]
+type    = "Give_Imm_Tech"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Internet", "Player"
+    }
 
 ;[effect_internet_3]
 ;type    = "Output_Bonus"
@@ -5750,10 +5760,10 @@ reqs    =
 
 [effect_internet_culture]
 type    = "History"
-value	= 1
+value	= 4
 reqs	=
     { "type", "name", "range"
-      "Building", "Internet", "World"
+      "Building", "Internet", "City"
       "Tech", "Computers", "Player"
     }
 
@@ -5901,14 +5911,14 @@ reqs    =
       "Gov", "Republic", "Player", FALSE
     }
 
-[effect_united_nations_2]
-type    = "Gain_AI_Love"
-value   = 10
-reqs    =
-    { "type", "name", "range", "present", "survives"
-      "Building", "United Nations", "Player", TRUE, FALSE
-      "Building", "Apollo Program", "World", FALSE, TRUE
-    }
+;[effect_united_nations_2]
+;type    = "Gain_AI_Love"
+;value   = 10
+;reqs    =
+;    { "type", "name", "range", "present", "survives"
+;      "Building", "United Nations", "Player", TRUE, FALSE
+;      "Building", "Apollo Program", "World", FALSE, TRUE
+;    }
 
 [effect_united_nations_culture]
 type    = "History"
@@ -7468,13 +7478,13 @@ reqs    =
       "OutputType", "Science", "Local"
     }
 
-[effect_massachusetts_institute_of_technology_2]
-type    = "Give_Imm_Tech"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Massachusetts Institute of Technology", "Player"
-    }
+;[effect_massachusetts_institute_of_technology_2]
+;type    = "Give_Imm_Tech"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Massachusetts Institute of Technology", "Player"
+;    }
 
 [effect_massachusetts_institute_of_technology_3]
 type    = "Output_Bonus"
@@ -7500,7 +7510,7 @@ value   = 20
 reqs    =
     { "type", "name", "range"
       "Tech", "Medicine", "Player"
-      "Building", "Pasteur Institute", "Player"
+      "Building", "Pasteur Institute", "World"
       "Building", "Hospital", "City"
     }
 

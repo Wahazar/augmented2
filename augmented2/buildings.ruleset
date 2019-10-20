@@ -1453,7 +1453,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the science output in a city by an additional 75%,\
  or by 150% once the Internet great wonder has been built by\
- any player.\
+ any player and Computers advance is known by player.\
 "), _("\
 The total bonus is 225% if a Library, a University and a Research\
  Lab are all present in the same city, increasing to 400% once the\
@@ -2025,10 +2025,6 @@ helptext	= _("\
 Increases the science output in a city by an additional 75%, or \
 by 150% once Isaac Newton's College has been built by any player.\
 "), _("\
-The total bonus is 150% if a Library and a University are present \
-together in the same city, increasing to 300% once the Great Library or Internet and \
-Isaac Newton's College have both been built.\
-"), _("\
 Notice: under Fundamentalism government, University output is dimnished to 25% (or 100% with Isaac Newton College).\
 ")
 
@@ -2207,14 +2203,13 @@ sabotage	= 0
 sound		= "w_eiffel_tower"
 sound_alt	= "w_generic"
 helptext	= _("\
-AI nations are more inclined to be friendly and forgiving toward the \
-owner of this wonder (until the Apollo Program is completed). \n\
-It also increase radius of your city influence, if this building is located together with Railway Station.\
-"),
-_("\
 Each tile around the city where this wonder is built that is already\
  generating some trade produces one extra trade resource.\
+"), _("\
+It also increase radius of your city influence and vision, \
+if this building is located together with Railway Station (not cumulative with Mass Transit or Port Facility).\
 ")
+
 
 [building_forbidden_city]
 name		= _("Forbidden City")
@@ -2565,9 +2560,8 @@ sabotage	= 0
 sound		= "w_copernicus_observatory"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives an immediate technology advance to the player that builds it, \
-and thereafter 4 extra research points every turn to its city. \n\
-Increase science bonus from Research Lab. \n\
+Gives 4 extra research points every turn to its city. \n\
+Increase science bonus from Research Lab by 25% \
 ")
 
 [building_moai_statues]
@@ -2649,31 +2643,6 @@ sound		= "w_cure_for_cancer"
 sound_alt	= "w_generic"
 helptext	= _("\
 Increase healing of small land or infantry units by 50%, including those not fortified.\
-")
-
-[building_b_pasteur_institute]
-name		= _("Pasteur Institute")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Biology", "Player"
-      "Building", "University", "City"
-	 "MinCulture", "4300", "Player"
-    }
-graphic	= "b.pasteur_institute"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-    }
-build_cost	= 400
-upkeep		= 0
-sabotage	= 0
-sound		= "w_copernicus_observatory"
-sound_alt	= "w_generic"
-helptext	= _("\
-Pasteur Institute reduce risk of plaque in all your cities with Hospital by additional 20%. \n\
-It would also reveal one new advance, once completed.\n\
-On each turn, 1 culture point is added to each player's city, instead of just this city.\
 ")
 
 [building_pyramids]
@@ -3087,11 +3056,6 @@ Apollo Program allows all players to \
 start building spaceship parts (assuming they have researched the \
 necessary technologies and have Space Lift small wonder finished).\n\
 Existing of Apollo Program is also necessary to build Global Positioning System.\
-"), _("\
-Completion of the Apollo Program also allows nuclear-armed powers to \
-declare war without provocation, regardless of the existence of the \
-United Nations, and AI players will no longer be friendly towards the \
-owner of the United Nations or the Eiffel Tower.\
 ")
 
 [building_asmiths_trading_co]
@@ -3186,7 +3150,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 650
+build_cost	= 950
 upkeep		= 0
 sabotage	= 0
 sound		= "w_darwins_voyage"
@@ -3194,7 +3158,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Charles Darwin's voyage sparked the discovery of the evolution \
 of the species, which inspired greater confidence in science. \
-All your cities generate 1 extra science bulb.\
+All your cities generate 1 extra science bulb and immediate technology advance is achieved.\
 "), _("\
 Upon completion of this wonder, scientist specialists' research output \
 increases to 3 permanently for every nation.\
@@ -3336,8 +3300,7 @@ owner despite fog-of-war.\
 _("\
 Upon completion of this wonder, for each nation which know Computers advance,
 entertainer specialists' luxury output increases to 3,
- for every nation which know Computers advance,\
-and each city would gain 1 culture point.\
+ for every nation which know Computers advance.\
 "),
 _("\
 Completion of this wonder permanently doubles the effect of \
@@ -3358,7 +3321,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 900
+build_cost	= 1200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_isaac_newtons_college"
@@ -3650,6 +3613,31 @@ Osaka Castle will also make content two citizens unhappy due to aggression
 in the city where is founded.\
 ")
 
+[building_b_pasteur_institute]
+name		= _("Pasteur Institute")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Biology", "Player"
+      "Building", "University", "City"
+	 "MinCulture", "4300", "Player"
+    }
+graphic	= "b.pasteur_institute"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+Pasteur Institute reduce risk of plaque in all player's cities with Hospital by additional 20%. \n\
+It would also reveal one new advance, once completed.\n\
+On each turn, 1 culture point is added to each player's city, instead of just this city.\
+")
+
 [building_shakespeares_theatre]
 name		= _("Shakespeare's Theater")
 rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
@@ -3787,19 +3775,13 @@ sabotage	= 0
 sound		= "w_united_nations"
 sound_alt	= "w_generic"
 helptext	= _("\
-Creates a world senate that prevents unprovoked declaration of war by \
-any nuclear-capable nation (that is, any nation with knowledge of \
-Nuclear Fission, once the Manhattan Project has been built). \
-AI players are more inclined to be friendly and forgiving toward the \
-owner of this wonder. These effects last until the Apollo Program \
-is completed.\
+Creates a world senate.\
+United Nations quadruple cost of inciting revolt in any cities belonging to that player, \
+or for any player's cities ruled by a communistic system.\
 "), _("\
 Also, for all players, if any city is in disorder for more than two turns in \
 a row, that player's government falls (even for governments other than \
 Republic and Democracy).\
-"), _("\
-United Nations quadruple cost of inciting revolt in any cities belonging to that player, \
-or for any player's cities ruled by a communistic system.\
 ")
 
 [building_5_years_plan]

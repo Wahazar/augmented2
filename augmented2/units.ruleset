@@ -1534,7 +1534,7 @@ uk_gold       = 0
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Light Shells", "Only_Native_Attack"
-roles         = "DefendGood", "DefendGoodStartUnit", "BarbarianTech", "HutTech";, "Partisan"
+roles         = "DefendGood", "DefendGoodStartUnit", "BarbarianTech", "HutTech"; , "Partisan"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
  at using the terrain to their advantage.\
