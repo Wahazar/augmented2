@@ -567,7 +567,7 @@ migration_pml = 50
 
 [calendar]
 ; Year in the beginning of the game
-start_year = -4000
+start_year = -6000
 
 ; Year 1 instead of 0.
 skip_year_0 = TRUE
@@ -942,4 +942,5 @@ set =
       "revolen", 2
       "revolentype", "RANDQUICK"
       "killunhomed", 1
+      "dispersion", 5
     }

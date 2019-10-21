@@ -2,11 +2,19 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt4
+Janissaries and Fanatics obsolete fixed
+Gov. empire step size aprox :2
+Tribe unbribable
+Civil war chance :4 with UN for Federation, Republic, Democracy
+City Walls upkeep 1, Bunkers 2.
+
 2.6.lt3
 unit movement points extended ~x2
 Pasteur institute is Great Wonder - global 20% plaque reduction for each Hospital.
 Give Immediate Tech effect only for Great Wonders: Great Library, Isaac Newton's College, Darwin's Voyage, Pasteur Institute, Internet, LHC.
 no Inspire_Partisans effect
+terrain work time x2
 
 2.6.lt2
 Vision from Glass Working, Radar

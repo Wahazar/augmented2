@@ -415,7 +415,7 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 80
-upkeep		= 1
+upkeep		= 2
 sabotage	= 50
 sound		= "b_city_walls"
 sound_alt	= "b_generic"
@@ -565,7 +565,7 @@ obsolete_by	=
       "Building", "Bunkers", "City"
     }
 build_cost	= 60
-upkeep		= 0
+upkeep		= 1
 sabotage	= 50
 sound		= "b_city_walls"
 sound_alt	= "b_generic"
@@ -3781,7 +3781,8 @@ or for any player's cities ruled by a communistic system.\
 "), _("\
 Also, for all players, if any city is in disorder for more than two turns in \
 a row, that player's government falls (even for governments other than \
-Republic and Democracy).\
+Republic and Democracy). On the other hand, chance of Civil War is 4x less \
+in case of Republic, Democracy or Federation. \
 ")
 
 [building_5_years_plan]
