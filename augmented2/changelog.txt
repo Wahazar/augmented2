@@ -2,6 +2,11 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt5
+SAM battery protect population against Air raids.
+Population protection by City Walls and Bunkers fixed.
+Tactical ABM unit.
+
 2.6.lt4
 Janissaries and Fanatics obsolete fixed
 Gov. empire step size aprox :2
@@ -15,6 +20,7 @@ Pasteur institute is Great Wonder - global 20% plaque reduction for each Hospita
 Give Immediate Tech effect only for Great Wonders: Great Library, Isaac Newton's College, Darwin's Voyage, Pasteur Institute, Internet, LHC.
 no Inspire_Partisans effect
 terrain work time x2
+removed AI-love effects
 
 2.6.lt2
 Vision from Glass Working, Radar

@@ -3800,8 +3800,9 @@ value   = 1
 reqs    =
     { "type", "name", "range", "Present"
       "Building", "City Walls", "City", TRUE
-;      "UnitFlag", "IgWall", "Local", FALSE
+      "UnitFlag", "IgWall", "Local", FALSE
       "UnitFlag", "AirAttacker", "Local", FALSE
+      "UnitFlag", "OneAttack", "Local", FALSE
     }
 
 [effect_city_walls_visible]
@@ -4649,15 +4650,28 @@ reqs    =
       "UnitClass", "Helicopter", "Local"
     }
 
+[effect_sam_battery_2]
+type    = "Unit_No_Lose_Pop"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "SAM Battery", "City", TRUE
+      "UnitClass", "Missile", "Local", FALSE
+      "UnitClass", "Bomb", "Local", FALSE
+      "UnitFlag", "AirAttacker", "Local", TRUE
+    }
+
 [effect_sdi_defense]
 type    = "Nuke_Proof"
-value   = 75
+value   = 100
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense", "City", TRUE
+;      "UnitType", "Tactical ABM", "Adjacent", TRUE
       "DiplRel", "Is foreign", "Local", TRUE
       "DiplRel", "Team", "Local", FALSE
     }
+
 
 [effect_sdi_defense_1]
 type    = "Defend_Bonus"

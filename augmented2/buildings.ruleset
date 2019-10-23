@@ -424,7 +424,8 @@ The Bunkers fortification makes it easier to defend a city. They add a 100%\
  bonus to the intrinsic defense strength of units within the city against\
  bombs, missiles and land units (including plunging fire artillery), but are ineffective against\
  airborne and sea units. Bunkers also prevent the loss of population which\
- occurs when a defending unit is defeated. Unlike City Walls, bunkers do\
+ occurs when a defending unit is defeated, except of attack performed by Air units or direct shooting Artillery.\
+ Unlike City Walls, bunkers do\
  not restrict city growth.\
 ")
 
@@ -576,7 +577,7 @@ City Walls make it easier to defend a city. They add a 100% bonus to\
  increase for cities larger than size 8), but are ineffective against\
  airborne, sea units or plunging fire artillery. City Walls also prevent\
  the loss of population which occurs when a defending unit is defeated,\
- or if it is bombarded when population is below 9.
+ except of attacks performed by Air units or any artillery.
 "), _("\
 City Walls need to be dismantled to allow city growth beyond size of 48.\
  For larger cities use Bunkers.\
@@ -1539,6 +1540,9 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Doubles the intrinsic defense strength of units within a city\
  when defending against aircraft (including helicopters).\
+"), _("\
+Also protect against the loss of population which occurs \
+when a defending unit is defeated by an airborne unit (except of Missiles)
 ")
 
 [building_sdi_defense]

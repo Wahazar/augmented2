@@ -28,7 +28,7 @@ flags =
   { "name", "helptxt"
     _("Airbase")
     _("Transform")
-    _("AirAttacker"), _("Very bad at attacking AEGIS.")
+    _("AirAttacker"), _("Very bad at attacking AEGIS or Tactical ABM.")
     _("Submarine"), _("Attack value halved when attacking Destroyer.")
     _("Unbribable")
     _("TradeRoute"), _("Can establish trade routes (must travel to target city).")
@@ -2715,7 +2715,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
-flags         = "CityBuster", "Only_Native_Attack", "OneAttack"
+flags         = "CityBuster", "Only_Native_Attack"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Battering ram is an excellent unit for besieging cities, even those with city walls (but cannot occupy city itself).\
@@ -3403,6 +3403,42 @@ Anti-aircraft Turret Gun can be mounted in a fortress or on a ship, it has less 
 Such unit can be mounted on a ship or reside in a fortress, but can't move by itself beyond city/fortress.\
 ")
 
+[unit_tactical_abm]
+name          = _("Tactical ABM")
+class         = "Turrets"
+tech_req      = "Advanced Rocketry"
+obsolete_by   = "None"
+graphic       = "u.tactical_abm"
+graphic_alt   = "b.sam_battery"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 10
+defense       = 5
+hitpoints     = 15
+firepower     = 4
+move_rate     = 1
+vision_radius_sq = 14
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 3
+uk_food       = 0
+uk_gold       = 3
+targets       = "Air", "Helicopter", "Missile", "Bomb"
+flags         = "NoVeteran"; , "Light Shells", "Unique", "Unbribable"
+roles         = ""
+bonuses       =
+   { "flag", "type", "value"
+     "AirAttacker", "DefenseMultiplier", 4
+   }
+helptext      = _("\
+Tactical Anti-ballistic Missile system can be mounted in a fortress or on a ship, can attack any airborne units \
+including Missiles and have increased intrinsic defense against airborne units.\
+")
 
 [unit_zeppelin]
 name          = _("Zeppelin")
