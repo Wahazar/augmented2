@@ -2431,6 +2431,14 @@ reqs    =
       "Gov", "Anarchy", "Player", TRUE
     }
 
+[effect_martial_law_each_tribal]
+type    = "Martial_Law_Each"
+value   = 1
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Tribal", "Player", TRUE
+    }
+
 [effect_martial_law_each_despotism]
 type    = "Martial_Law_Each"
 value   = 1
@@ -2536,6 +2544,42 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "First Republic", "Player"
+    }
+
+[effect_martial_law_max_tribal_easy] 
+type    = "Martial_Law_Max"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+      "AI", "Easy", "Player"
+    }
+
+[effect_martial_law_max_tribal_normal] 
+type    = "Martial_Law_Max"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+      "AI", "Normal", "Player"
+    }
+
+[effect_martial_law_max_tribal_hard] 
+type    = "Martial_Law_Max"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+      "AI", "Hard", "Player"
+    }
+
+[effect_martial_law_max_tribal_cheating] 
+type    = "Martial_Law_Max"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+      "AI", "Cheating", "Player"
     }
 
 ; Railroad because makes Pyramids obsolete
@@ -2733,11 +2777,30 @@ reqs	=
       "Building", "Khajuraho Temple", "City", TRUE
     }
 
-[effect_content_tribal]
+[effect_content_tribal_ai_normal]
 type    = "Make_Content"
 value   = 1
 reqs    =
     { "type", "name", "range", "quiet"
+      "AI", "Normal", "Player", TRUE
+      "Gov", "Tribal", "Player", TRUE
+    }
+
+[effect_content_tribal_ai_hard]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "quiet"
+      "AI", "Hard", "Player", TRUE
+      "Gov", "Tribal", "Player", TRUE
+    }
+
+[effect_content_tribal_ai_cheating]
+type    = "Make_Content"
+value   = 2
+reqs    =
+    { "type", "name", "range", "quiet"
+      "AI", "Cheating", "Player", TRUE
       "Gov", "Tribal", "Player", TRUE
     }
 

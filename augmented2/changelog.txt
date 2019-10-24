@@ -2,6 +2,9 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt6
+Tribal cheats for AI
+
 2.6.lt5
 SAM battery protect population against Air raids.
 Population protection by City Walls and Bunkers fixed.
