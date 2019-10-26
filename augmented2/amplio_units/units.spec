@@ -212,5 +212,6 @@ sprites =
 		"u.pirates_brig", "augmented2/amplio_units/pirates_brig_a"
 		"u.kon-tiki_raft", "augmented2/amplio_units/kon-tiki_raft_a"
 		"u.pirates", "augmented2/amplio_units/pirates_a"
+		"u.tactical_abm", "augmented2/amplio_units/freeciv-sam-patriot-3b"
 	}
 

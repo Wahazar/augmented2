@@ -77,12 +77,17 @@ CORE CHANGES:
 FOODBOX:
 --------
 
-not changed yet
+not changed yet, see civ2civ3 ruleset
 
 TERRAIN:
 --------
 
 - Transforming terrain from forest/to forest possible with Forestry tech.
+
+- New terrain type: Taiga, appear in cold biome, similar to Forest but deforestration turn it to the Tundra.
+
+- Mountains, Hills, Forests and Jungles are low-accesibility areas, thus require road to gain
+  standard shield production (without road -1, for example Forest with road 2 shields, without 1)
 
 - Jungles receive +1 Shield (2/1/0) with Railroad on its tile and Railway Station in city. 
   Swamps can be irrigated for +1 Food (to 2/0/0), next irrigation convert them to grassland. 
@@ -312,8 +317,10 @@ New techs:
 * radar 
 * radioactivity 
 * saddle_stirrup 
+* sailing
 * satellite_system 
 * screw_propeller 
+* shamanism
 * shiism
 * shinto 
 * shogunate 

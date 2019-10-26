@@ -415,7 +415,7 @@ obsolete_by	=
     { "type", "name", "range"
     }
 build_cost	= 80
-upkeep		= 1
+upkeep		= 2
 sabotage	= 50
 sound		= "b_city_walls"
 sound_alt	= "b_generic"
@@ -424,8 +424,8 @@ The Bunkers fortification makes it easier to defend a city. They add a 100%\
  bonus to the intrinsic defense strength of units within the city against\
  bombs, missiles and land units (including plunging fire artillery), but are ineffective against\
  airborne and sea units. Bunkers also prevent the loss of population which\
- occurs when a defending unit is defeated. Unlike City Walls, bunkers do\
- not restrict city growth.\
+ occurs when a defending unit is defeated.\
+ Unlike City Walls, bunkers do not restrict city growth.\
 ")
 
 [building_cathedral]
@@ -565,7 +565,7 @@ obsolete_by	=
       "Building", "Bunkers", "City"
     }
 build_cost	= 60
-upkeep		= 0
+upkeep		= 1
 sabotage	= 50
 sound		= "b_city_walls"
 sound_alt	= "b_generic"
@@ -576,7 +576,7 @@ City Walls make it easier to defend a city. They add a 100% bonus to\
  increase for cities larger than size 8), but are ineffective against\
  airborne, sea units or plunging fire artillery. City Walls also prevent\
  the loss of population which occurs when a defending unit is defeated,\
- or if it is bombarded when population is below 9.
+ except of attacks performed by Air units or any artillery.\
 "), _("\
 City Walls need to be dismantled to allow city growth beyond size of 48.\
  For larger cities use Bunkers.\
@@ -1453,7 +1453,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the science output in a city by an additional 75%,\
  or by 150% once the Internet great wonder has been built by\
- any player.\
+ any player and Computers advance is known by player.\
 "), _("\
 The total bonus is 225% if a Library, a University and a Research\
  Lab are all present in the same city, increasing to 400% once the\
@@ -1539,6 +1539,9 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Doubles the intrinsic defense strength of units within a city\
  when defending against aircraft (including helicopters).\
+"), _("\
+Also protect against the loss of population which occurs \
+when a defending unit is defeated by an airborne unit (except of Missiles)
 ")
 
 [building_sdi_defense]
@@ -2024,10 +2027,6 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the science output in a city by an additional 75%, or \
 by 150% once Isaac Newton's College has been built by any player.\
-"), _("\
-The total bonus is 150% if a Library and a University are present \
-together in the same city, increasing to 300% once the Great Library or Internet and \
-Isaac Newton's College have both been built.\
 "), _("\
 Notice: under Fundamentalism government, University output is dimnished to 25% (or 100% with Isaac Newton College).\
 ")

@@ -2361,6 +2361,14 @@ reqs    =
       "Gov", "Anarchy", "Player", TRUE
     }
 
+[effect_martial_law_each_tribal]
+type    = "Martial_Law_Each"
+value   = 1
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Tribal", "Player", TRUE
+    }
+
 [effect_martial_law_each_despotism]
 type    = "Martial_Law_Each"
 value   = 1
@@ -2466,6 +2474,14 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "First Republic", "Player"
+    }
+
+[effect_martial_law_max_1_tribal] 
+type    = "Martial_Law_Max"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
     }
 
 ; Railroad because makes Pyramids obsolete
@@ -2663,13 +2679,33 @@ reqs	=
       "Building", "Khajuraho Temple", "City", TRUE
     }
 
-[effect_content_tribal]
+[effect_content_tribal_ai_normal]
 type    = "Make_Content"
 value   = 1
 reqs    =
     { "type", "name", "range", "quiet"
+      "AI", "Normal", "Player", TRUE
       "Gov", "Tribal", "Player", TRUE
     }
+
+[effect_content_tribal_ai_hard]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range", "quiet"
+      "AI", "Hard", "Player", TRUE
+      "Gov", "Tribal", "Player", TRUE
+    }
+
+[effect_content_tribal_ai_cheating]
+type    = "Make_Content"
+value   = 2
+reqs    =
+    { "type", "name", "range", "quiet"
+      "AI", "Cheating", "Player", TRUE
+      "Gov", "Tribal", "Player", TRUE
+    }
+
 
 [effect_combat_tribal_sl]
 type    = "Veteran_Combat"
@@ -3729,8 +3765,9 @@ value   = 1
 reqs    =
     { "type", "name", "range", "Present"
       "Building", "City Walls", "City", TRUE
-;      "UnitFlag", "IgWall", "Local", FALSE
+      "UnitFlag", "IgWall", "Local", FALSE
       "UnitFlag", "AirAttacker", "Local", FALSE
+      "UnitFlag", "OneAttack", "Local", FALSE
     }
 
 [effect_city_walls_visible]
@@ -4578,6 +4615,17 @@ reqs    =
       "UnitClass", "Helicopter", "Local"
     }
 
+[effect_sam_battery_2]
+type    = "Unit_No_Lose_Pop"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "SAM Battery", "City", TRUE
+      "UnitClass", "Missile", "Local", FALSE
+      "UnitClass", "Bomb", "Local", FALSE
+      "UnitFlag", "AirAttacker", "Local", TRUE
+    }
+
 [effect_sdi_defense]
 type    = "Nuke_Proof"
 value   = 75
@@ -4588,6 +4636,7 @@ reqs    =
       "DiplRel", "Team", "Local", FALSE
     }
 
+
 [effect_sdi_defense_1]
 type    = "Defend_Bonus"
 value   = 100
@@ -4596,7 +4645,6 @@ reqs    =
       "Building", "SDI Defense", "City"
       "UnitClass", "Missile", "Local"
     }
-
 [effect_sdi_defense_2]
 type    = "Defend_Bonus"
 value   = 50
@@ -5667,8 +5715,9 @@ type    = "Output_Bonus"
 value   = 75
 reqs    =
     { "type", "name", "range", "survives"
-      "Building", "Internet", "Alliance", TRUE
+      "Building", "Internet", "World", TRUE
       "Building", "Research Lab", "City"
+      "Tech", "Computers", "Player"
       "OutputType", "Science", "Local"
     }
 
