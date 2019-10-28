@@ -11,7 +11,7 @@
 ; than minor changes.
 
 [datafile]
-description="Augmented2 buildings data for Freeciv"
+description="Augmented2 longturn - buildings data for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 ; /* <-- avoid gettext warnings
@@ -425,8 +425,7 @@ The Bunkers fortification makes it easier to defend a city. They add a 100%\
  bombs, missiles and land units (including plunging fire artillery), but are ineffective against\
  airborne and sea units. Bunkers also prevent the loss of population which\
  occurs when a defending unit is defeated, except of attack performed by Air units or direct shooting Artillery.\
- Unlike City Walls, bunkers do\
- not restrict city growth.\
+ Unlike City Walls, Bunkers do not restrict city growth.\
 ")
 
 [building_cathedral]
@@ -577,7 +576,7 @@ City Walls make it easier to defend a city. They add a 100% bonus to\
  increase for cities larger than size 8), but are ineffective against\
  airborne, sea units or plunging fire artillery. City Walls also prevent\
  the loss of population which occurs when a defending unit is defeated,\
- except of attacks performed by Air units or any artillery.
+ except of attacks performed by Air units or any artillery.\
 "), _("\
 City Walls need to be dismantled to allow city growth beyond size of 48.\
  For larger cities use Bunkers.\

@@ -942,6 +942,7 @@ req2     = "Bronze Working"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
+helptext = _("TIP: allow to make regular Roads.")
 cost     = 30
 
 [advance_mass_entertainment]

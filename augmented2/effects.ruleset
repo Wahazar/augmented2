@@ -1442,7 +1442,7 @@ reqs    =
 ; exclusive with above
 [effect_unit_unhappiness_thalassocracy]
 type    = "Unhappy_Factor"
-value   = 3
+value   = 1
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Thalassocracy", "Player", TRUE
@@ -1497,7 +1497,7 @@ reqs   =
       "Gov", "Democracy", "Player", FALSE
 ;      "Gov", "First Republic", "Player", FALSE
       "Gov", "Direct Democracy", "Player", FALSE
-;      "Gov", "Thalassocracy", "Player", FALSE
+      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
       "Gov", "Legalism", "Player", FALSE
     }
@@ -2538,7 +2538,7 @@ reqs    =
 ;      "Gov", "Legalism", "Player", FALSE
     }
 
-[effect_martial_law_max_1] 
+[effect_martial_law_max_1_first_republic] 
 type    = "Martial_Law_Max"
 value   = 1
 reqs    =
@@ -2546,40 +2546,12 @@ reqs    =
       "Gov", "First Republic", "Player"
     }
 
-[effect_martial_law_max_tribal_easy] 
+[effect_martial_law_max_1_tribal] 
 type    = "Martial_Law_Max"
 value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
-      "AI", "Easy", "Player"
-    }
-
-[effect_martial_law_max_tribal_normal] 
-type    = "Martial_Law_Max"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Tribal", "Player"
-      "AI", "Normal", "Player"
-    }
-
-[effect_martial_law_max_tribal_hard] 
-type    = "Martial_Law_Max"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Tribal", "Player"
-      "AI", "Hard", "Player"
-    }
-
-[effect_martial_law_max_tribal_cheating] 
-type    = "Martial_Law_Max"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Tribal", "Player"
-      "AI", "Cheating", "Player"
     }
 
 ; Railroad because makes Pyramids obsolete
@@ -4726,7 +4698,7 @@ reqs    =
 
 [effect_sdi_defense]
 type    = "Nuke_Proof"
-value   = 100
+value   = 75
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense", "City", TRUE

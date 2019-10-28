@@ -2,6 +2,8 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+Unpawed roads
+
 2.6.lt6
 Tribal cheats for AI
 

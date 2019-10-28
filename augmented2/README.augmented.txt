@@ -312,8 +312,10 @@ New techs:
 * radar 
 * radioactivity 
 * saddle_stirrup 
+* sailing
 * satellite_system 
 * screw_propeller 
+* shamanism
 * shiism
 * shinto 
 * shogunate 
