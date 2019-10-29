@@ -3365,7 +3365,7 @@ sound		= "w_temple"
 sound_alt	= "w_generic"
 helptext	= _("\
 This sacred site is a focal point of the pilgrimages.\n\
-Each tile with road around the city produce additional trade point.\n\
+Each tile with (paved) road around the city produce additional trade point.\n\
 Additionally, each Mosque which belongs to any allied player, neutralizes unhappiness caused by one military unit.\
 ")
 

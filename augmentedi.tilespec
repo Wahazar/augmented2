@@ -139,7 +139,7 @@ files =
   "augmented2/amplio_units/units.spec",
   "augmented2/misc/governments.spec",
   "augmented2/terrain/terrain.spec",
-  "augmented2/terrain/roads_unpawed.spec",
+  "augmented2/terrain/roads_unpaved.spec",
   "augmented2/terrain/roads.spec",
   "augmented2/terrain/roads-hwy.spec",
   "augmented2/terrain/waterlocks.spec",
@@ -316,7 +316,7 @@ layer2_match_with = "hills"
 [extras]
 styles =
     { "name",          "style"
-      "road.road_unpawed",     "RoadAllSeparate"
+      "road.road_unpaved",     "RoadAllSeparate"
       "road.road",     "RoadAllCombined"
       "road.rail",     "RoadAllCombined"
       "road.maglev",   "RoadAllCombined"

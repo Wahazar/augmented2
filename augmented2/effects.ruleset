@@ -661,7 +661,7 @@ reqs    =
       "UnitClass", "Bomb", "Local", FALSE
       "UnitClass", "Torpedeos", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
-      "Extra", "Road", "Local", FALSE
+      "Extra", "Unpaved Road", "Local", FALSE
     }
 
 ; Nuclear power gives +1 moves to sea units
@@ -8719,16 +8719,15 @@ reqs    =
     }
 
 ;road req. for full shield prod.
-[effect_forest_road]
-type    = "Output_Inc_Tile"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Extra", "Road", "Local"
-      "Terrain", "Forest", "Local"
-      "OutputType", "Shield", "Local"
-;      "Tech", "Forestry", "Player"
-    }
+;[effect_forest_road]
+;type    = "Output_Inc_Tile"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Extra", "Road", "Local"
+;      "Terrain", "Forest", "Local"
+;      "OutputType", "Shield", "Local"
+;    }
 
 ;or river
 [effect_forest_river]
@@ -8737,21 +8736,20 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Road", "Local", FALSE
+      "Extra", "Unpaved Road", "Local", FALSE
       "Terrain", "Forest", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
-;      "Tech", "Forestry", "Player", TRUE
     }
 
-[effect_hills_road]
-type    = "Output_Add_Tile"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Extra", "Road", "Local"
-      "Terrain", "Hills", "Local"
-      "OutputType", "Shield", "Local"
-    }
+;[effect_hills_road]
+;type    = "Output_Add_Tile"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Extra", "Road", "Local"
+;      "Terrain", "Hills", "Local"
+;      "OutputType", "Shield", "Local"
+;    }
 
 [effect_hills_river]
 type    = "Output_Add_Tile"
@@ -8759,20 +8757,20 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Road", "Local", FALSE
+      "Extra", "Unpaved Road", "Local", FALSE
       "Terrain", "Hills", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
     }
 
-[effect_mountains_road]
-type    = "Output_Add_Tile"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Extra", "Road", "Local"
-      "Terrain", "Mountains", "Local"
-      "OutputType", "Shield", "Local"
-    }
+;[effect_mountains_road]
+;type    = "Output_Add_Tile"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Extra", "Road", "Local"
+;      "Terrain", "Mountains", "Local"
+;      "OutputType", "Shield", "Local"
+;    }
 
 [effect_mountains_river]
 type    = "Output_Add_Tile"
@@ -8780,21 +8778,21 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Road", "Local", FALSE
+      "Extra", "Unpaved Road", "Local", FALSE
       "Terrain", "Mountains", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
     }
 
-[effect_jungle_road]
-type    = "Output_Add_Tile"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Extra", "Road", "Local"
-      "Terrain", "Jungle", "Local"
-      "OutputType", "Shield", "Local"
+;[effect_jungle_road]
+;type    = "Output_Add_Tile"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Extra", "Road", "Local"
+;      "Terrain", "Jungle", "Local"
+;      "OutputType", "Shield", "Local"
 ;      "Tech", "Forestry", "Player"
-    }
+;    }
 
 [effect_jungle_river]
 type    = "Output_Add_Tile"
@@ -8802,22 +8800,21 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Road", "Local", FALSE
+      "Extra", "Unpaved Road", "Local", FALSE
       "Terrain", "Jungle", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
-;      "Tech", "Forestry", "Player", TRUE
     }
 
-[effect_taiga_road]
-type    = "Output_Inc_Tile"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Extra", "Road", "Local"
-      "Terrain", "Taiga", "Local"
-      "OutputType", "Shield", "Local"
+;[effect_taiga_road]
+;type    = "Output_Inc_Tile"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Extra", "Road", "Local"
+;      "Terrain", "Taiga", "Local"
+;      "OutputType", "Shield", "Local"
 ;      "Tech", "Forestry", "Player"
-    }
+;    }
 
 [effect_taiga_river]
 type    = "Output_Inc_Tile"
@@ -8825,9 +8822,8 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Road", "Local", FALSE
+      "Extra", "Unpaved Road", "Local", FALSE
       "Terrain", "Taiga", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
-;      "Tech", "Forestry", "Player", TRUE
     }
 

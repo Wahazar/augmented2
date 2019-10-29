@@ -2,6 +2,7 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt7
 Unpawed roads
 
 2.6.lt6
