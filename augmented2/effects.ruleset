@@ -988,7 +988,6 @@ reqs    =
 [effect_corruption_monarchy]
 type    = "Output_Waste"
 value   = 10
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Monarchy", "Player", TRUE
@@ -1007,7 +1006,6 @@ reqs    =
 [effect_corruption_fundamentalism]
 type    = "Output_Waste"
 value   = 15
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Fundamentalism", "Player", TRUE
@@ -1017,7 +1015,6 @@ reqs    =
 [effect_corruption_republic]
 type    = "Output_Waste"
 value   = 20
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Republic", "Player", TRUE
@@ -1027,7 +1024,6 @@ reqs    =
 [effect_corruption_democracy]
 type    = "Output_Waste"
 value   = 5
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Democracy", "Player", TRUE
@@ -1037,7 +1033,6 @@ reqs    =
 [effect_corruption_federation]
 type    = "Output_Waste"
 value   = 5
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Federation", "Player", TRUE
@@ -1047,7 +1042,6 @@ reqs    =
 [effect_corruption_thalassocracy]
 type    = "Output_Waste"
 value   = 10
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Thalassocracy", "Player", TRUE
@@ -1057,7 +1051,6 @@ reqs    =
 [effect_corruption_first_republic]
 type    = "Output_Waste"
 value   = 20
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "First Republic", "Player", TRUE
@@ -1067,7 +1060,6 @@ reqs    =
 [effect_corruption_direct_democracy]
 type    = "Output_Waste"
 value   = 10
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Direct Democracy", "Player", TRUE
@@ -1086,7 +1078,6 @@ reqs    =
 [effect_corruption_legalism]
 type    = "Output_Waste"
 value   = 20
-multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Legalism", "Player", TRUE
@@ -1298,8 +1289,7 @@ reqs    =
 
 [effect_waste_communism]
 type    = "Output_Waste"
-multiplier = "Collective Economy"
-value   = 25
+value   = 20
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Communism", "Player", TRUE
@@ -4052,7 +4042,6 @@ reqs    =
 [effect_courthouse_incite]
 type    = "Incite_Cost_Pct"
 value	= 300
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Courthouse", "City", TRUE
@@ -6853,7 +6842,6 @@ reqs    =
 [effect_base_enemy_unhappiness]
 type    = "Enemy_Citizen_Unhappy_Pct"
 value   = 100
-multiplier = "National Pride"
 
 [effect_enemy_unhappiness_communism]
 type    = "Enemy_Citizen_Unhappy_Pct"
@@ -6914,7 +6902,6 @@ reqs	=
 [effect_enemy_unhappiness_fascism]
 type    = "Enemy_Citizen_Unhappy_Pct"
 value   = 50
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Fascism", "Player"
@@ -7064,7 +7051,6 @@ reqs	=
 [effect_incite_cost_tribe]
 type = "Incite_Cost_Pct"
 value = 100
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -7073,7 +7059,6 @@ reqs	=
 [effect_incite_cost_republic]
 type = "Incite_Cost_Pct"
 value = 100
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Republic", "Player"
@@ -7082,7 +7067,6 @@ reqs	=
 [effect_incite_cost_direct_democracy]
 type = "Incite_Cost_Pct"
 value = 200
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Direct Democracy", "Player"
@@ -7091,7 +7075,6 @@ reqs	=
 [effect_incite_cost_democracy]
 type = "Incite_Cost_Pct"
 value = 200
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Slavery Abolition", "Player", FALSE
@@ -7101,7 +7084,6 @@ reqs	=
 [effect_incite_cost_democracy_noslaves]
 type = "Incite_Cost_Pct"
 value = 1000
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Building", "Slavery Abolition", "Player"
@@ -7111,7 +7093,6 @@ reqs	=
 [effect_incite_cost_communism]
 type = "Incite_Cost_Pct"
 value = 400
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Communism", "Player"
@@ -7121,7 +7102,6 @@ reqs	=
 [effect_incite_cost_un]
 type = "Incite_Cost_Pct"
 value = 400
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range", "present"
       "Building", "United Nations", "Player", TRUE
@@ -7131,7 +7111,6 @@ reqs	=
 [effect_incite_cost_fundamentalism]
 type = "Incite_Cost_Pct"
 value = 1000
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
@@ -7140,7 +7119,6 @@ reqs	=
 [effect_incite_cost_federation]
 type = "Incite_Cost_Pct"
 value = 200
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Federation", "Player"
@@ -7149,7 +7127,6 @@ reqs	=
 [effect_incite_cost_fascism]
 type = "Incite_Cost_Pct"
 value = 200
-multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Fascism", "Player"
@@ -7167,7 +7144,6 @@ reqs    =
 [effect_bribe_cost_monarchy]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 100
-multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
@@ -7176,7 +7152,6 @@ reqs    =
 [effect_bribe_cost_first_republic]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 100
-multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "First Republic", "Player"
@@ -7185,7 +7160,6 @@ reqs    =
 [effect_bribe_cost_republic]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 200
-multiplier = "National Pride"
 reqs    =
     { "type", "name", "range", "present"
       "Gov", "Republic", "Player", TRUE
@@ -7195,7 +7169,6 @@ reqs    =
 [effect_bribe_cost_republic_noslaves]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 1000
-multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Republic", "Player"
@@ -7205,7 +7178,6 @@ reqs    =
 [effect_bribe_cost_first_democracy]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 500
-multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
@@ -7214,7 +7186,6 @@ reqs    =
 [effect_bribe_cost_fundamentalism]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 500
-multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
@@ -7223,7 +7194,6 @@ reqs    =
 [effect_bribe_cost_federation]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 300
-multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
@@ -7232,7 +7202,6 @@ reqs    =
 [effect_bribe_cost_fascism]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 400
-multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Fascism", "Player"
@@ -8971,7 +8940,7 @@ reqs    =
 
 ;gov. policy multiplier
 
-[effect_traderoute_liberal_multiplier]
+[effect_traderoute_liberal_traderoute_multiplier]
 type    = "Traderoute_Pct"
 value   = 30
 multiplier = "Liberal Economy"
@@ -8979,6 +8948,19 @@ reqs    =
     { "type", "name", "range", "present"
 ;      "DiplRel", "War", "Local", FALSE
 ;      "Protectionist Economy", "Player", 0
+      "Gov", "Communism", "Anarchy", FALSE
+      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Fascism", "Player", FALSE
+    }
+
+[traderoute_liberal_corruption_multiplier]
+type    = "Output_Waste"
+value   = 20
+multiplier = "Liberal Economy"
+reqs    =
+    { "type", "name", "range", "present"
+      "OutputType", "Trade", "Local", TRUE
       "Gov", "Communism", "Anarchy", FALSE
       "Gov", "Despotism", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -9013,6 +8995,16 @@ reqs    =
       "OutputType", "Shield", "Local", TRUE, TRUE
       "Gov", "Communism", "Player", TRUE, FALSE
       "Building", "5 Years Plan", "City", TRUE, FALSE
+    }
+
+[effect_communism_collectivism_waste_multiplier]
+type    = "Output_Waste"
+multiplier = "Collective Economy"
+value   = 10
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Communism", "Player", TRUE
+      "OutputType", "Food", "Local", FALSE
     }
 
 [effect_communism_collectivism_pollution_multiplier]
@@ -9116,6 +9108,21 @@ reqs    =
       "Gov", "Communism", "Player", FALSE
       "OutputType", "Science", "Local", TRUE
     }
+
+[effect_national_incite_cost_multiplier]
+type = "Incite_Cost_Pct"
+value = 100
+multiplier = "National Pride"
+
+[effect_national_bribe_cost_multiplier]
+type    = "Unit_Bribe_Cost_Pct"
+value   = 100
+multiplier = "National Pride"
+
+[effect_national_enemy_unhappiness_multiplier]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = 50
+multiplier = "National Pride"
 
 [effect_national_luxury_multiplier]
 type    = "Output_Bonus"
