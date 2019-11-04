@@ -115,6 +115,7 @@ cost     = 12
 name     = _("Alchemy")
 req1     = "Craft Guilds"
 req2     = "Astrology"
+root_req = "Mysticism"
 flags    = ""
 graphic     = "a.alchemy"
 graphic_alt = "-"

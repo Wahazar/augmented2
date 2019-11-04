@@ -64,8 +64,8 @@ reqs	=
     { "type", "name", "range", "present"
       "Building", "City Hall", "City", FALSE
     }
-graphic	= "tx.village"
-graphic_alt	= "-"
+graphic	= "b.tribe_hut"
+graphic_alt	= "tx.village"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "Bronze Working", "Player"
@@ -783,8 +783,8 @@ sabotage	= 100
 sound		= "b_courthouse"
 sound_alt	= "b_generic"
 helptext	= _("\
-A Hospital reduces the chance of plaque in the city by 20%. The effect\
- increases an additional 20% if Pasteur Institute (small wonder) exists.\
+A Hospital reduces the chance of plaque in the city by 30%. The effect\
+ increases an additional 10-20% (depend on Welfare Policy) if Pasteur Institute (small wonder) exists.\
 ")
 
 [building_hydro_plant]
@@ -1033,7 +1033,8 @@ sound		= "b_temple"
 sound_alt	= "b_generic"
 helptext	= _("\
 A Mosque makes 2 unhappy citizen content (3 with Madrasa and allied Taj Mahal wonder). \
-Together with allied Kaaba, Mosque makes also content one citizen unhappy due to aggression.\
+Together with allied Kaaba, Mosque makes also content 0...2 citizen unhappy due to aggression, \
+depending on Religious Orthodoxy policy settings.\
 ")
 
 [building_nuclear_plant]
@@ -1590,7 +1591,7 @@ sound		= "b_sewer_system"
 sound_alt	= "b_generic"
 helptext	= _("\
 Together with an Aqueduct, allows a city to grow larger than size 16,\
- and further reduces the chance of a plague (by 30% of the base chance).\
+ and further reduces the chance of a plague (by 20% of the base chance).\
 ")
 
 [building_shrine_torii]
@@ -1618,7 +1619,8 @@ helptext	= _("\
 Temple improvement: make additional 1 unhappy citizen content. Not \
 cumulative with Temple of Artemis (small wonder) or Temple of City \
 God (small wonder), but cumulative with Golden Temple (great wonder). \
-If allied player founded Kyoto Fushimi Inari (great wonder), two additional citizens are content.\
+If allied player founded Kyoto Fushimi Inari (great wonder), up to two additional content citizens are happy, \
+depending on Religious Orthodoxy policy settings.\
 ")
 
 [building_solar_plant]
@@ -2364,7 +2366,8 @@ sabotage	= 0
 sound		= "w_js_bachs_cathedral"
 sound_alt	= "w_generic"
 helptext	= _("\
-Makes one content citizen happy for every player's Church \
+Makes 0...2 (depending on Religious Othodoxy policy setting) additional \
+content citizen happy for every player's Church \
 and 2 extra luxury points per city with Cathedral (not under Communism gov.) \
 ")
 
@@ -2859,8 +2862,9 @@ sabotage	= 0
 sound		= "w_oracle"
 sound_alt	= "w_generic"
 helptext	= _("\
-Makes 2 additional unhappy citizens content in every city with \
-a Temple. Does not affect citizens made unhappy by aggression.\
+Makes 0...2 additional unhappy citizens content in every city with \
+a Temple, depending on Religious Othodoxy policy setting, and additionally one content citizen in city where is located. \
+Does not affect citizens made unhappy by aggression.\
 ")
 
 [building_temple_of_city_god]
@@ -2884,7 +2888,7 @@ sabotage	= 0
 sound		= "w_oracle"
 sound_alt	= "w_generic"
 helptext	= _("\
-Makes additional unhappy citizen content in every city with \
+Makes 0..2 (depending on Religious Othodoxy policy setting) unhappy citizens content in every city with \
 a Temple without Shrine Torii. Does not affect citizens made unhappy by aggression.\n\
 In a city with this building, tax collector specialists' gold output \
 increases to 3.\
@@ -3136,7 +3140,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 This stunning technological achievement makes one content citizen \
 happy in each of cities of any player who knows Genetic Engineering (2 extra luxury per city).\n\
-Together with an Aqueduct, a Sewer System, Hospital and Pasteur Institute, \
+Together with an Aqueduct, a Sewer System, Hospital, Pasteur Institute and maximum of Welfare Policy, \
 it entirely eliminates the risk of plague.\
 ")
 
@@ -3366,7 +3370,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 This sacred site is a focal point of the pilgrimages.\n\
 Each tile with (paved) road around the city produce additional trade point.\n\
-Additionally, each Mosque which belongs to any allied player, neutralizes unhappiness caused by one military unit.\
+Additionally, each Mosque which belongs to any allied player, neutralizes unhappiness caused by 0...2 military units \
+(depending on Religious Orthodoxy policy settings). \
 ")
 
 [building_kyoto_fushimi_inari]
@@ -3399,7 +3404,8 @@ sabotage	= 0
 sound		= "b_temple"
 sound_alt	= "w_generic"
 helptext	= _("\
-Pilgrimages to this giant Shrine makes additional content citizen happy for every allied player's Temple with Shrine Torii \
+Pilgrimages to this giant Shrine makes additional 0..2 (depending on Religious Orthodoxy policy settings) \
+content citizens happy for every allied player's Temple with Shrine Torii \
 and 4 extra luxury points for city with Fushimi Inari wonder.\n\
 Each player's city with Shrine Torii and Temple gain 1 culture point.
 ")
@@ -3636,7 +3642,8 @@ sabotage	= 0
 sound		= "w_copernicus_observatory"
 sound_alt	= "w_generic"
 helptext	= _("\
-Pasteur Institute reduce risk of plaque in all player's cities with Hospital by additional 20%. \n\
+Pasteur Institute reduce risk of plaque in all player's cities with Hospital by additional 10%-20% \
+depending on Welfare Policy settings. \n\
 It would also reveal one new advance, once completed.\n\
 On each turn, 1 culture point is added to each player's city, instead of just this city.\
 ")
@@ -3840,7 +3847,7 @@ sound		= "b_university"
 sound_alt	= "b_generic"
 helptext	= _("\
 Workers syndicate for collective bargaining better wages and working conditions. \
-Makes 2 unhappy citizens content in a city. \
+Luxury is increased with Welfare Policy settings. \
 "),_("\
 Additionally this improvement halves down city luxury penalty in case of Communism government,
 on the expense of lack of buildings free upkeep.

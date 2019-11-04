@@ -2278,8 +2278,8 @@ flags          = "RequiresBridge"
 extra          = "Road"
 move_cost      = 2
 food_incr      = 0
-shield_incr    = 0
-trade_incr     = 0
+shield_incr    = 1
+trade_incr     = 1
 food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
@@ -2311,7 +2311,7 @@ flags          = "RequiresBridge"
 
 [road_railroad]
 extra          = "Railroad"
-move_cost      = 1
+move_cost      = 0
 food_incr      = 0
 shield_incr    = 0
 trade_incr     = 0

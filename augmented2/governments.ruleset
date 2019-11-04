@@ -380,7 +380,7 @@ _("\
  capital (half as fast with knowledge of Trade).\n\
 * Legions or Swordsmen gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
 * Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
-* Gold and luxury outcome is increased.\
+* Luxury outcome is increased.\
 ")
 
 ;------------------------------------------------------------------------
@@ -452,7 +452,7 @@ _("\
 * Each city can support up to 1 gold and 4 shield unit payments for free; \n\
 * Martial law is limited to 1 unit.\n\
 * Each city tolerates up to 1 peacemaker unit outside of state boundaries;\
-  each further unit causes 3 unhappy citizens (2 with Hollywood).\n\
+  each further unit causes 2 unhappy citizens (1 with Hollywood).\n\
 * There is 10% base level of corruption, not affected by distance to the capital.\n\
 * Base production waste is 20%, \
   and is not affected by distance to the capital.\n\
@@ -575,6 +575,7 @@ _("\
   Additionally 3 shield payments are free.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 1 unhappy citizens.\n\
+* Old units far from city center have 10% chance to be retired.\n\
 * Base corruption is 5%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 25%. This increases slightly with distance from the\
@@ -605,7 +606,7 @@ Fascism is an authoritarian goverment based on totalitarian one-party state \
  controlling industry and commerce. Fascism allow private property but suppress it by state interventionist policies. \
  However socialism was a root of this goverment system, Fascism is focused on militarism and nationalism. 
  Due to pervasive power of the secret police, opposition usually have no chance to incite revolt. 
- Beside of the regular army, fascist regime support veteran paratroopers.\
+ Beside of the additional veteran levels of Small Land units, fascist regime support veteran paratroopers.\
 "), _("\
 Fascism is a government suitable for maximizing shield production and military power,\
  but rather for medium size empires.\
@@ -655,4 +656,123 @@ _("\
 ;
 ; */ <-- avoid gettext warnings
 
+[multiplier_liberal]
+name      = _("Liberal Economy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Economy", "Player"
+;         "Building", "Slavery Abolition", "Player"
+;       }
+start     = 1
+stop      = 3
+step      = 1
+default   = 1
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of Liberal Economy increase traderoute bonus by 30%, \
+but also increase base corruption level twice. \
+Available for any government except of Anarchy, Tribal, Despotism, Communism and Fascism.\
+")
+
+;[multiplier_protectionist]
+;name      = _("Protectionist Economy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Economy", "Player"
+;       }
+;start     = 0
+;stop      = 2
+;step      = 1
+;default   = 0
+; /* xgettext:no-c-format */
+;helptext  = _("\
+;Each step of Protectionist Economy increase gold income by 10%, \
+;but also decrease traderoute bonus by 20% \
+;Available for any government except of Anarchy, if Liberal Economy policy is set to its minimal value.\
+;")
+
+[multiplier_collectivism]
+name      = _("Collective Economy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Communism", "Player"
+;       }
+start     = 1
+stop      = 3
+step      = 1
+default   = 1
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of Collective Economy increase shield production by 10% for each city, \
+where 5 Years Plan is founded, but also increase industrial pollution and base waste level. \
+Available only for Communism.\
+")
+
+[multiplier_welfare]
+name      = _("Welfare Policy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Socialism", "Player"
+;       }
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step (above 0) of Welfare Policy increase luxury by 10% for cities with Trade Union \
+(and decrease shield production by 10% in any city, once Socialism is invented by player), \
+and decrease risk of plague in cities with Hospital, if Pasteur Institute exist \
+(and decrease gold income by 10%). \
+Available for any government except of Anarchy.\
+")
+
+[multiplier_enlightening]
+name      = _("Enlightening Policy")
+;reqs = { "type", "name", "range"
+;         "Tech", "University", "Player"
+;       }
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of Enlightening Policy allow your citizens yields a 10% \
+increase in science output, but makes an additional citizen unhappy \
+for every aggressively deployed military unit. \
+Any University gain additional Culture Point for each Enlightening Policy step.\
+Aditionally each step add 5% chance of retirement any military units which are far from a city center. \
+Available for Republic, Thalassocracy and Federation (Democracy already have maximal effort of this policy included).\
+")
+
+[multiplier_orthodoxy]
+name      = _("Religious Orthodoxy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Mysticism", "Player"
+;       }
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of Religious Orthodoxy increase content/happy citizen for: \
+any Temple with Temple of Artemis, or Temple with Temple of City God, or Mosque with Kaaba, \
+or Shrine Torii with Fushimi Inari, or Church with J.S. Bach's Cathedral.\
+On the other hand, science output is decreased by 20%. \
+Available for any government except of Anarchy and Communism.\
+")
+
+[multiplier_national]
+name      = _("National Pride")
+;reqs = { "type", "name", "range"
+;         "Tech", "Feudalism", "Player"
+;       }
+start     = 1
+stop      = 3
+step      = 1
+default   = 1
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of National Pride increase bribe cost and incite revolt cost twice, \
+but also increase unhapiness caused by mixed nationality and decrease luxury output as well. \
+Available for any government, in case of Fascism any Small Land militry unit gain additional veterancy level.\
+")
 

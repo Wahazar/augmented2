@@ -901,7 +901,7 @@ reqs    =
 
 [effect_gold_corruption_distance_democracy_1]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
@@ -911,7 +911,7 @@ reqs    =
 
 [effect_gold_corruption_distance_legalism_1]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
@@ -988,6 +988,7 @@ reqs    =
 [effect_corruption_monarchy]
 type    = "Output_Waste"
 value   = 10
+multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Monarchy", "Player", TRUE
@@ -1006,6 +1007,7 @@ reqs    =
 [effect_corruption_fundamentalism]
 type    = "Output_Waste"
 value   = 15
+multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Fundamentalism", "Player", TRUE
@@ -1014,7 +1016,8 @@ reqs    =
 
 [effect_corruption_republic]
 type    = "Output_Waste"
-value   = 25
+value   = 20
+multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Republic", "Player", TRUE
@@ -1024,15 +1027,27 @@ reqs    =
 [effect_corruption_democracy]
 type    = "Output_Waste"
 value   = 5
+multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Democracy", "Player", TRUE
       "OutputType", "Trade", "Local", FALSE
     }
 
+[effect_corruption_federation]
+type    = "Output_Waste"
+value   = 5
+multiplier = "Liberal Economy"
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Federation", "Player", TRUE
+      "OutputType", "Trade", "Local", FALSE
+    }
+
 [effect_corruption_thalassocracy]
 type    = "Output_Waste"
 value   = 10
+multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Thalassocracy", "Player", TRUE
@@ -1042,6 +1057,7 @@ reqs    =
 [effect_corruption_first_republic]
 type    = "Output_Waste"
 value   = 20
+multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "First Republic", "Player", TRUE
@@ -1051,6 +1067,7 @@ reqs    =
 [effect_corruption_direct_democracy]
 type    = "Output_Waste"
 value   = 10
+multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Direct Democracy", "Player", TRUE
@@ -1069,6 +1086,7 @@ reqs    =
 [effect_corruption_legalism]
 type    = "Output_Waste"
 value   = 20
+multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Legalism", "Player", TRUE
@@ -1280,7 +1298,8 @@ reqs    =
 
 [effect_waste_communism]
 type    = "Output_Waste"
-value   = 30
+multiplier = "Collective Economy"
+value   = 25
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Communism", "Player", TRUE
@@ -1417,7 +1436,6 @@ reqs   =
       "Gov", "Thalassocracy", "Player", FALSE
 ;      "Gov", "Fascism", "Player", FALSE
 ;      "Gov", "Legalism", "Player", FALSE
-
     }
 
 ; exclusive with above
@@ -1439,10 +1457,9 @@ reqs    =
       "Gov", "Democracy", "Player"
     }
 
-; exclusive with above
 [effect_unit_unhappiness_thalassocracy]
 type    = "Unhappy_Factor"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Thalassocracy", "Player", TRUE
@@ -1456,6 +1473,40 @@ reqs    =
     { "type", "name", "range"
       "Building", "Hollywood", "Player"
       "Gov", "Thalassocracy", "Player"
+    }
+
+;negative effect of science boost
+[effect_enlightening_unit_unhappiness]
+type    = "Unhappy_Factor"
+value   = 1
+multiplier = "Enlightening Policy"
+reqs   =
+    { "type", "name", "range", "present"
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Monarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+;      "Gov", "Federation", "Player", FALSE
+;      "Gov", "Republic", "Player", FALSE
+      "Gov", "First Republic", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Direct Democracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
+      "Gov", "Fascism", "Player", FALSE
+      "Gov", "Legalism", "Player", FALSE
+    }
+
+[effect_democracy_disappear]
+type    = "Retire_Pct"
+value   = 10
+multiplier = "Enlightening Policy"
+reqs    =
+    { "type", "name", "range", "present"
+      "Age", "10", "Local", TRUE
+      "CityTile", "Center", "Local", FALSE
+      "Gov", "Democracy", "Player", TRUE
     }
 
 ; Govs with 1 free unit
@@ -1475,7 +1526,7 @@ reqs   =
        "Gov", "Democracy", "Player", FALSE
       "Gov", "First Republic", "Player", FALSE
 ;      "Gov", "Direct Democracy", "Player", FALSE
-;      "Gov", "Thalassocracy", "Player", FALSE
+      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
 ;      "Gov", "Legalism", "Player", FALSE
     }
@@ -1497,7 +1548,7 @@ reqs   =
       "Gov", "Democracy", "Player", FALSE
 ;      "Gov", "First Republic", "Player", FALSE
       "Gov", "Direct Democracy", "Player", FALSE
-      "Gov", "Thalassocracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
       "Gov", "Legalism", "Player", FALSE
     }
@@ -3024,6 +3075,18 @@ reqs    =
       "UnitType", "Paratroopers", "Local"
     }
 
+[effect_veteran_fascism_2]
+type    = "Veteran_Build"
+value   = 1
+multiplier = "National Pride"
+reqs    =
+    { "type", "name", "range", "present"
+      "Gov", "Fascism", "Player", TRUE
+      "UnitClass", "Small Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
 ;[effect_partisan_communism]
 ;type    = "Inspire_Partisans"
 ;value   = 1
@@ -3107,8 +3170,26 @@ reqs    =
       "Building", "Trade Union", "City", TRUE, FALSE
     }
 
+[effect_good_lux_first_republic]
+type    = "Output_Bonus_2"
+value   = 25
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "First Republic", "Player", TRUE
+      "OutputType", "Luxury", "Local", FALSE
+    }
+
+[effect_good_lux_republic]
+type    = "Output_Bonus_2"
+value   = 25
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Republic", "Player", TRUE
+      "OutputType", "Luxury", "Local", FALSE
+    }
+
 [effect_good_lux_democracy]
-type    = "Output_Bonus"
+type    = "Output_Bonus_2"
 value   = 25
 reqs    =
     { "type", "name", "range", "quiet"
@@ -3117,7 +3198,7 @@ reqs    =
     }
 
 ;[effect_good_lux_thalassocracy]
-;type    = "Output_Bonus"
+;type    = "Output_Bonus_2"
 ;value   = 25
 ;reqs    =
 ;    { "type", "name", "range", "quiet"
@@ -3152,32 +3233,32 @@ reqs    =
       "OutputType", "Gold", "Local", FALSE
     }
 
-[effect_good_gold_first_republic]
-type    = "Output_Bonus"
-value   = 25
-reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "First Republic", "Player", TRUE
-      "OutputType", "Gold", "Local", FALSE
-    }
+;[effect_good_gold_first_republic]
+;type    = "Output_Bonus"
+;value   = 25
+;reqs    =
+;    { "type", "name", "range", "quiet"
+;      "Gov", "First Republic", "Player", TRUE
+;      "OutputType", "Gold", "Local", FALSE
+;    }
 
 [effect_good_gold_republic]
 type    = "Output_Bonus"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Republic", "Player", TRUE
       "OutputType", "Gold", "Local", FALSE
     }
 
-[effect_good_gold_democracy]
-type    = "Output_Bonus"
-value   = 25
-reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Democracy", "Player", TRUE
-      "OutputType", "Gold", "Local", FALSE
-    }
+;[effect_good_gold_democracy]
+;type    = "Output_Bonus"
+;value   = 25
+;reqs    =
+;    { "type", "name", "range", "quiet"
+;      "Gov", "Democracy", "Player", TRUE
+;      "OutputType", "Gold", "Local", FALSE
+;    }
 
 [effect_good_gold_federation]
 type    = "Output_Bonus"
@@ -3238,17 +3319,28 @@ reqs    =
     }
 
 [effect_good_sci_republic]
-type    = "Output_Bonus"
-value   = 25
+type    = "Output_Bonus_2"
+value   = 10
+multiplier = "Enlightening Policy"
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Republic", "Player", TRUE
       "OutputType", "Science", "Local", FALSE
     }
 
+[effect_good_sci_federation]
+type    = "Output_Bonus_2"
+value   = 10
+multiplier = "Enlightening Policy"
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Federation", "Player", TRUE
+      "OutputType", "Science", "Local", FALSE
+    }
+
 [effect_good_sci_direct_democracy]
-type    = "Output_Bonus"
-value   = 25
+type    = "Output_Bonus_2"
+value   = 20
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Direct Democracy", "Player", TRUE
@@ -3256,8 +3348,8 @@ reqs    =
     }
 
 [effect_good_sci_Democracy]
-type    = "Output_Bonus"
-value   = 50
+type    = "Output_Bonus_2"
+value   = 30
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Democracy", "Player", TRUE
@@ -3960,6 +4052,7 @@ reqs    =
 [effect_courthouse_incite]
 type    = "Incite_Cost_Pct"
 value	= 300
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Courthouse", "City", TRUE
@@ -4756,7 +4849,7 @@ reqs    =
 
 [effect_sewer_system_health]
 type    = "Health_Pct"
-value   = 30
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Building", "Sewer System", "City"
@@ -5757,11 +5850,23 @@ reqs	=
 
 [effect_temple_of_artemis]
 type    = "Make_Content"
-value   = 2
+value   = 1
+multiplier = "Religious Orthodoxy"
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Temple", "City", TRUE
+      "Building", "Temple of Artemis", "Player", TRUE
+      "Building", "Temple of City God", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+    }
+
+[effect_temple_of_artemis_1]
+type    = "Make_Content"
+value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Temple", "City"
-      "Building", "Temple of Artemis", "Player"
+      "Building", "Temple of Artemis", "City"
     }
 
 [effect_temple_of_artemis_culture]
@@ -6748,6 +6853,7 @@ reqs    =
 [effect_base_enemy_unhappiness]
 type    = "Enemy_Citizen_Unhappy_Pct"
 value   = 100
+multiplier = "National Pride"
 
 [effect_enemy_unhappiness_communism]
 type    = "Enemy_Citizen_Unhappy_Pct"
@@ -6808,6 +6914,7 @@ reqs	=
 [effect_enemy_unhappiness_fascism]
 type    = "Enemy_Citizen_Unhappy_Pct"
 value   = 50
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Fascism", "Player"
@@ -6957,6 +7064,7 @@ reqs	=
 [effect_incite_cost_tribe]
 type = "Incite_Cost_Pct"
 value = 100
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -6965,6 +7073,7 @@ reqs	=
 [effect_incite_cost_republic]
 type = "Incite_Cost_Pct"
 value = 100
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Republic", "Player"
@@ -6973,6 +7082,7 @@ reqs	=
 [effect_incite_cost_direct_democracy]
 type = "Incite_Cost_Pct"
 value = 200
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Direct Democracy", "Player"
@@ -6981,6 +7091,7 @@ reqs	=
 [effect_incite_cost_democracy]
 type = "Incite_Cost_Pct"
 value = 200
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Slavery Abolition", "Player", FALSE
@@ -6990,6 +7101,7 @@ reqs	=
 [effect_incite_cost_democracy_noslaves]
 type = "Incite_Cost_Pct"
 value = 1000
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Building", "Slavery Abolition", "Player"
@@ -6999,6 +7111,7 @@ reqs	=
 [effect_incite_cost_communism]
 type = "Incite_Cost_Pct"
 value = 400
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Communism", "Player"
@@ -7008,6 +7121,7 @@ reqs	=
 [effect_incite_cost_un]
 type = "Incite_Cost_Pct"
 value = 400
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range", "present"
       "Building", "United Nations", "Player", TRUE
@@ -7017,6 +7131,7 @@ reqs	=
 [effect_incite_cost_fundamentalism]
 type = "Incite_Cost_Pct"
 value = 1000
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
@@ -7025,6 +7140,7 @@ reqs	=
 [effect_incite_cost_federation]
 type = "Incite_Cost_Pct"
 value = 200
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Federation", "Player"
@@ -7033,6 +7149,7 @@ reqs	=
 [effect_incite_cost_fascism]
 type = "Incite_Cost_Pct"
 value = 200
+multiplier = "National Pride"
 reqs	=
     { "type", "name", "range"
       "Gov", "Fascism", "Player"
@@ -7050,6 +7167,7 @@ reqs    =
 [effect_bribe_cost_monarchy]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 100
+multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
@@ -7058,6 +7176,7 @@ reqs    =
 [effect_bribe_cost_first_republic]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 100
+multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "First Republic", "Player"
@@ -7066,6 +7185,7 @@ reqs    =
 [effect_bribe_cost_republic]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 200
+multiplier = "National Pride"
 reqs    =
     { "type", "name", "range", "present"
       "Gov", "Republic", "Player", TRUE
@@ -7075,6 +7195,7 @@ reqs    =
 [effect_bribe_cost_republic_noslaves]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 1000
+multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Republic", "Player"
@@ -7084,6 +7205,7 @@ reqs    =
 [effect_bribe_cost_first_democracy]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 500
+multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
@@ -7092,6 +7214,7 @@ reqs    =
 [effect_bribe_cost_fundamentalism]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 500
+multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
@@ -7100,6 +7223,7 @@ reqs    =
 [effect_bribe_cost_federation]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 300
+multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
@@ -7108,6 +7232,7 @@ reqs    =
 [effect_bribe_cost_fascism]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 400
+multiplier = "National Pride"
 reqs    =
     { "type", "name", "range"
       "Gov", "Fascism", "Player"
@@ -7585,12 +7710,14 @@ reqs    =
 
 [effect_pasteur_institute_plague]
 type    = "Health_Pct"
-value   = 20
+value   = 10
+multiplier = "Welfare Policy"
 reqs    =
-    { "type", "name", "range"
-      "Tech", "Medicine", "Player"
-      "Building", "Pasteur Institute", "World"
-      "Building", "Hospital", "City"
+    { "type", "name", "range", "present"
+      "Tech", "Medicine", "Player", TRUE
+      "Building", "Pasteur Institute", "World", TRUE
+      "Building", "Hospital", "City", TRUE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_large_hardon_collider]
@@ -7729,10 +7856,15 @@ reqs    =
 [effect_kaaba_free_mil]
 type    = "Make_Content_Mil"
 value   = 1
+multiplier = "Religious Orthodoxy"
 reqs    =
-    { "type", "name", "range"
-      "Building", "Mosque", "City"
-      "Building", "Kaaba", "Alliance"
+    { "type", "name", "range", "present"
+      "Building", "Mosque", "City", TRUE
+      "Building", "Kaaba", "Alliance", TRUE
+      "Building", "Temple of City God", "Player", FALSE
+      "Building", "J.S. Bach's Cathedral", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
     }
 
 [effect_kaaba_culture]
@@ -8192,10 +8324,12 @@ reqs    =
 [effect_js_bachs_cathedral]
 type    = "Make_Content"
 value   = 1
+multiplier = "Religious Orthodoxy"
 reqs    =
     { "type", "name", "range", "present"
       "Building", "J.S. Bach's Cathedral", "Player", TRUE
       "Building", "Church", "City", TRUE
+      "Gov", "Anarchy", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
     }
 
@@ -8460,12 +8594,15 @@ reqs	=
 [effect_temple_of_city_god]
 type    = "Make_Content"
 value   = 1
+multiplier = "Religious Orthodoxy"
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Temple", "City", TRUE
       "Building", "Temple of City God", "Player", TRUE
-      "Building", "Temple of Artemis", "Player", FALSE
+;      "Building", "Temple of Artemis", "Player", FALSE
       "Building", "Shrine Torii", "City", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
     }
 
 [effect_temple_of_city_god_1]
@@ -8604,14 +8741,18 @@ reqs	=
     }
 
 [effect_kyoto_fushimi_inari]
-type    = "Make_Content"
+type    = "Make_Happy"
 value   = 1
+multiplier = "Religious Orthodoxy"
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Kyoto Fushimi Inari", "Alliance", TRUE
       "Building", "Shrine Torii", "City", True
-      "Building", "J.S. Bach's Cathedral", "Alliance", FALSE
+      "Building", "J.S. Bach's Cathedral", "Player", FALSE
+      "Building", "Michelangelo's Chapel", "Alliance", FALSE
       "Building", "Temple of City God", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
     }
 
 [effect_kyoto_fushimi_inari_culture]
@@ -8682,13 +8823,13 @@ reqs	=
       "Building", "Jousting Tiltyard", "City"
     }
 
-[effect_trade_union]
-type    = "Make_Content"
-value   = 2
-reqs    =
-    { "type", "name", "range"
-      "Building", "Trade Union", "City"
-    }
+;[effect_trade_union]
+;type    = "Make_Content"
+;value   = 2
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Trade Union", "City"
+;    }
 
 ;[effect_trade_union_waste_corruption_distance]
 ;type    = "Output_Waste_Pct"
@@ -8825,5 +8966,164 @@ reqs    =
       "Extra", "Unpaved Road", "Local", FALSE
       "Terrain", "Taiga", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
+    }
+
+
+;gov. policy multiplier
+
+[effect_traderoute_liberal_multiplier]
+type    = "Traderoute_Pct"
+value   = 30
+multiplier = "Liberal Economy"
+reqs    =
+    { "type", "name", "range", "present"
+;      "DiplRel", "War", "Local", FALSE
+;      "Protectionist Economy", "Player", 0
+      "Gov", "Communism", "Anarchy", FALSE
+      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Fascism", "Player", FALSE
+    }
+
+;[effect_gold_protectionist_multiplier]
+;type    = "Output_Bonus"
+;value   = 10
+;multiplier = "Protectionist Economy"
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Liberal Economy", "Player", 1
+;      "OutputType", "Gold", "Local"
+;    }
+
+;[effect_traderoute_protectionist_multiplier]
+;type    = "Traderoute_Pct"
+;value   = -20
+;multiplier = "Protectionist Economy"
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Liberal Economy", "Player", 1
+;    }
+
+[effect_communism_collectivism_production_multiplier]
+type    = "Output_Bonus"
+value   = 10
+multiplier = "Collective Economy"
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "OutputType", "Shield", "Local", TRUE, TRUE
+      "Gov", "Communism", "Player", TRUE, FALSE
+      "Building", "5 Years Plan", "City", TRUE, FALSE
+    }
+
+[effect_communism_collectivism_pollution_multiplier]
+type    = "Pollu_Prod_Pct"
+value   = 10
+multiplier = "Collective Economy"
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Communism", "Player", TRUE, FALSE
+    }
+
+[effect_welfare_luxury_multiplier]
+type    = "Output_Bonus"
+value   = 10
+multiplier = "Welfare Policy"
+reqs    =
+    { "type", "name", "range", "present"
+      "OutputType", "Luxury", "Local", TRUE
+      "Tech", "Socialism", "Player", TRUE
+      "Building", "Trade Union", "City", TRUE
+      "Gov", "Anarchy", "Player", FALSE
+    }
+
+[effect_welfare_production_multiplier]
+type    = "Output_Bonus"
+value   = -10
+multiplier = "Welfare Policy"
+reqs    =
+    { "type", "name", "range", "present"
+      "OutputType", "Shield", "Local", TRUE
+      "Tech", "Socialism", "Player", TRUE
+      "Gov", "Anarchy", "Player", FALSE
+    }
+
+[effect_welfare_gold_multiplier]
+type    = "Output_Bonus"
+value   = -10
+multiplier = "Welfare Policy"
+reqs    =
+    { "type", "name", "range", "present"
+      "OutputType", "Gold", "Local", TRUE
+      "Building", "Pasteur Institute", "World", TRUE
+      "Gov", "Anarchy", "Player", FALSE
+    }
+
+[effect_enlightening_science_multiplier]
+type    = "Output_Bonus_2"
+value   = 10
+multiplier = "Enlightening Policy"
+reqs    =
+    { "type", "name", "range", "present"
+      "OutputType", "Science", "Local", TRUE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Monarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+;      "Gov", "Federation", "Player", FALSE
+;      "Gov", "Republic", "Player", FALSE
+      "Gov", "First Republic", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Direct Democracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
+      "Gov", "Fascism", "Player", FALSE
+      "Gov", "Legalism", "Player", FALSE
+    }
+
+[effect_enlightening_disappear_multiplier]
+type    = "Retire_Pct"
+value   = 5
+multiplier = "Enlightening Policy"
+reqs    =
+    { "type", "name", "range", "present"
+      "Age", "10", "Local", TRUE
+      "CityTile", "Center", "Local", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Monarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+;      "Gov", "Federation", "Player", FALSE
+;      "Gov", "Republic", "Player", FALSE
+      "Gov", "First Republic", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Direct Democracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
+      "Gov", "Fascism", "Player", FALSE
+      "Gov", "Legalism", "Player", FALSE
+    }
+
+[effect_orthodoxy_science_multiplier]
+type    = "Output_Bonus"
+value   = -20
+multiplier = "Religious Orthodoxy"
+reqs    =
+    { "type", "name", "range", "present"
+      "Tech", "Mysticism", "Player", TRUE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "OutputType", "Science", "Local", TRUE
+    }
+
+[effect_national_luxury_multiplier]
+type    = "Output_Bonus"
+value   = -20
+multiplier = "National Pride"
+reqs    =
+    { "type", "name", "range", "present"
+      "Tech", "Feudalism", "Player", TRUE
+      "OutputType", "Luxury", "Local", TRUE
     }
 

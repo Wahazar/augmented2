@@ -2,8 +2,13 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt8
+
+Tribe hut and Monitor new gfx
+Policy multipliers: Liberal Economy, Collective Economy, Welfare Policy, Enlightening Policy, Religious Orthodoxy, National Pride
+
 2.6.lt7
-Unpawed roads
+Unpaved roads
 
 2.6.lt6
 Tribal cheats for AI
