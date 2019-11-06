@@ -2,6 +2,11 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt9
+Railroads sprite shifted, highways/road sprites centered, for augmentedi tileset.
+Railroads are parallel to roads, they do not hide roads.
+Fixed Train movement cost.
+
 2.6.lt8
 
 Tribe hut and Monitor new gfx

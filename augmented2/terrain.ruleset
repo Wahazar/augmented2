@@ -1906,7 +1906,7 @@ reqs           =
 build_time     = 0
 removal_time   = 0
 native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
-hidden_by      = "Railroad"
+hidden_by      = "HighWay"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
 Once you learn knowledge of Masonry, you can to upgrade Unpaved Roads to regular Roads.\ 
@@ -1979,7 +1979,7 @@ reqs           =
     }
 build_time     = 8
 removal_time   = 0
-native_to      = "Infantry", "Light Cavalry", "Small Land", "Merchant", "Train"
+native_to      = "Small Land", "Merchant", "Train"
 flags          = "NativeTile", "AutoOnCityCenter"
 ;hidden_by      = "Maglev"
 helptext       = _("\
@@ -2311,7 +2311,7 @@ flags          = "RequiresBridge"
 
 [road_railroad]
 extra          = "Railroad"
-move_cost      = 0
+move_cost      = 1
 food_incr      = 0
 shield_incr    = 0
 trade_incr     = 0
