@@ -123,8 +123,8 @@ files =
   "hexemplio/hills.spec",
   "hexemplio/mountains.spec",
   "hexemplio/rivers.spec",
-  "hexemplio/roads.spec",
-  "hexemplio/roads-rails.spec",
+;  "hexemplio/roads.spec",
+;  "hexemplio/roads-rails.spec",
   "hexemplio/roads-maglevs.spec",
   "hexemplio/select.spec",
   "hexemplio/terrain.spec",
@@ -139,7 +139,10 @@ files =
   "augmented2/amplio_units/units.spec",
   "augmented2/misc/governments.spec",
   "augmented2/terrain/terrain.spec",
-  "augmented2/terrain/roads-hwy.spec",
+  "augmented2/terrain/roads_unpaved.spec",
+  "augmented2/terrain/roads.spec",
+  "augmented2/terrain/roads-rails.spec",
+  "augmented2/terrain/roads-highways.spec",
   "augmented2/terrain/waterlocks.spec",
   "augmented2/terrain/road_bridge.spec",
 ;  "augmented2/terrain/volcano.spec",
@@ -314,7 +317,8 @@ layer2_match_with = "hills"
 [extras]
 styles =
     { "name",          "style"
-      "road.road",     "RoadAllSeparate"
+      "road.road_unpaved",     "RoadAllSeparate"
+      "road.road",     "RoadAllCombined"
       "road.rail",     "RoadAllCombined"
       "road.maglev",   "RoadAllCombined"
       "road.pave",     "RoadAllSeparate"

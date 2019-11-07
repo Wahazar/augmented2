@@ -163,17 +163,17 @@ tiles = { "row", "column","tag"
   3,    4, "ts.elephant"
   3,    5, "ts.rubber"
 
-; Roads
+; Roads: separate file for pawed and unpawed roads
 
-  6,    0, "road.road_isolated"
-  6,    1, "road.road_n"
-  6,    2, "road.road_ne"
-  6,    3, "road.road_e"
-  6,    4, "road.road_se"
-  6,    5, "road.road_s"
-  6,    6, "road.road_sw"
-  6,    7, "road.road_w"
-  6,    8, "road.road_nw"
+;  6,    0, "road.road_isolated"
+;  6,    1, "road.road_n"
+;  6,    2, "road.road_ne"
+;  6,    3, "road.road_e"
+;  6,    4, "road.road_se"
+;  6,    5, "road.road_s"
+;  6,    6, "road.road_sw"
+;  6,    7, "road.road_w"
+;  6,    8, "road.road_nw"
 
 ; Rails
 

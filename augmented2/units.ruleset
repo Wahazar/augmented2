@@ -260,7 +260,7 @@ flags         = "DamageSlows", "CanFortify", "DoesntOccupyTile"
 name          = _("?unitclass:Train")
 min_speed     = 3
 hp_loss_pct   = 0
-flags         = "BuildAnywhere", "DoesntOccupyTile", "CanPillage", "DamageSlows"
+flags         = "TerrainSpeed", "BuildAnywhere", "DoesntOccupyTile", "CanPillage", "DamageSlows"
 
 [unitclass_torpedeos]
 ; /* TRANS: Unit class: used adjectivally */
@@ -5741,7 +5741,7 @@ attack        = 0
 defense       = 1
 hitpoints     = 20
 firepower     = 1
-move_rate     = 12
+move_rate     = 3
 vision_radius_sq = 2
 transport_cap = 10
 fuel          = 0
@@ -5786,7 +5786,7 @@ attack        = 6
 defense       = 8
 hitpoints     = 30
 firepower     = 3
-move_rate     = 10
+move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 3
 fuel          = 0

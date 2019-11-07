@@ -475,7 +475,7 @@ shield               = 1 ;+1 with road
 trade                = 0
 resources            = "Forest Game", "Silk", "Pheasant"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 0; 100
+road_shield_incr_pct = 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -524,7 +524,7 @@ shield               = 1 ;+1 with road
 trade                = 0
 resources            = "Forest Game", "Game", "Furs"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 0; 100
+road_shield_incr_pct = 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -614,7 +614,7 @@ shield               = 0 ;+1 with road
 trade                = 0
 resources            = "Coal", "Wine", "Saltpeter"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 0; 100
+road_shield_incr_pct = 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -664,7 +664,7 @@ shield               = 0 ;+1 with road
 trade                = 0
 resources            = "Gems", "Fruit"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 0; 100
+road_shield_incr_pct = 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
@@ -714,7 +714,7 @@ shield               = 0 ;+1 with road
 trade                = 0
 resources            = "Gold", "Iron", "Uranium"
 road_food_incr_pct   = 0
-road_shield_incr_pct = 0; 100
+road_shield_incr_pct = 100
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 6
@@ -947,7 +947,7 @@ Tundra are broad, cold regions, fit for some agriculture and little\
 ;trade                = 0
 ;resources            = "Forest Game", "Furs"
 ;road_food_incr_pct   = 0
-;road_shield_incr_pct = 0; 100
+;road_shield_incr_pct = 100
 ;road_trade_incr_pct  = 0
 ;base_time            = 1
 ;road_time            = 4
@@ -1849,13 +1849,13 @@ Ruins mark the former site of a city that was destroyed or abandoned.\
  They have no effect on gameplay.\
 ")
 
-[extra_road]
-name           = _("Road")
+[extra_dirt_road]
+name           = _("Dirt Road")
 category       = "Infra"
 causes         = "Road"
 rmcauses       = "Pillage"
-graphic        = "road.road"
-graphic_alt    = "-"
+graphic        = "road.road_unpaved"
+graphic_alt    = "road.road"
 activity_gfx   = "unit.road"
 act_gfx_alt    = "-"
 act_gfx_alt2   = "-"
@@ -1869,15 +1869,50 @@ reqs           =
     }
 build_time     = 0
 removal_time   = 0
-native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
-hidden_by      = "Railroad"
+native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant"
+hidden_by      = "Paved Road"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
+Unpaved Roads allow accesibility of your infantry or cavalry units to move into mountains or swamps,\
+ but travel speed is only slightly increased (for full cunctionality, they need to be upgraded to paved Roads).\
+"), _("\
+On some terrains, roads also provide a trade bonus.\
+"), _("\
+Building roads on river tiles requires knowledge of Bridge Building.\
+ City center tiles automatically get roads (even on a river tile, if Bridge Building is know).\
+")
+
+[extra_paved_road]
+name           = _("Paved Road")
+category       = "Infra"
+causes         = "Road"
+rmcauses       = "Pillage"
+graphic        = "road.road"
+graphic_alt    = "-"
+activity_gfx   = "unit.road_paved"
+act_gfx_alt    = "unit.road"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+reqs           =
+    { "type", "name", "range", "present", "quiet"
+      "UnitFlag", "Settlers", "Local", TRUE, FALSE
+      "UnitClass", "Sea", "Local", FALSE, TRUE
+      "TerrainClass", "Land", "Local", TRUE, FALSE
+      "Extra", "Dirt Road", "Local", TRUE, FALSE
+      "Tech", "Masonry", "Player", TRUE, TRUE
+    }
+build_time     = 0
+removal_time   = 0
+native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
+hidden_by      = "HighWay"
+flags          = "NativeTile", "AlwaysOnCityCenter"
+helptext       = _("\
+Once you learn knowledge of Masonry, you can to upgrade Dirt Roads to regular Paved Roads.\ 
+"), _("\
 Roads allow your land units to move more quickly, and allow\
  regular Land units to travel through\
  otherwise difficult terrain (Mountains, Glacier, Swamp etc).\
-"), _("\
-On some terrains, roads also provide a trade bonus.\
 "), _("\
 Building roads on river tiles requires knowledge of Bridge Building.\
  City center tiles automatically get roads (even on a river tile, if Bridge Building is know).\
@@ -1899,11 +1934,49 @@ reqs           =
     { "type", "name", "range", "present", "quiet"
       "Tech", "Automobile", "Player", TRUE, FALSE
       "UnitFlag", "Transform", "Local", TRUE, FALSE
-      "Extra", "Road", "Local", TRUE, FALSE
+      "Extra", "Paved Road", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
     }
-build_time     = 4
+build_time     = 10
+removal_time   = 0
+removal_time_factor = 2
+native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
+; hidden_by      = "Maglev"
+flags          = "NativeTile", "AutoOnCityCenter"
+helptext       = _("\
+Once you learn the Automobile technology, you may use Engineers to build highways,\
+ paralell to roads or railroads. \
+ All land units travel considerably faster along highways than along roads.\
+"), _("\
+A highway also increases shield resources produced by a tile by 25%\
+ (together with paralell railroad, 50%).\
+"), _("\
+City center tiles with roads are automatically upgraded to highways\
+ when you learn the Automobile technology.\
+")
+
+[extra_hwy]
+name           = _("HighWay")
+category       = "Infra"
+causes         = "Road"
+rmcauses       = "Pillage"
+graphic        = "road.hwy"
+graphic_alt    = "road.maglev"
+activity_gfx   = "unit.highway"
+act_gfx_alt    = "unit.road"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+reqs           =
+    { "type", "name", "range", "present", "quiet"
+      "Tech", "Automobile", "Player", TRUE, FALSE
+      "UnitFlag", "Transform", "Local", TRUE, FALSE
+      "Extra", "Paved Road", "Local", TRUE, FALSE
+      "UnitClass", "Sea", "Local", FALSE, TRUE
+      "TerrainClass", "Land", "Local", TRUE, FALSE
+    }
+build_time     = 6
 removal_time   = 0
 removal_time_factor = 2
 native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
@@ -1936,14 +2009,14 @@ rmact_gfx_alt  = "-"
 reqs           =
     { "type", "name", "range", "present", "quiet"
       "Tech", "Railroad", "Player", TRUE, FALSE
-      "Extra", "Road", "Local", TRUE, FALSE
+      "Extra", "Dirt Road", "Local", TRUE, FALSE
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
     }
-build_time     = 3
+build_time     = 4
 removal_time   = 0
-native_to      = "Infantry", "Light Cavalry", "Small Land", "Merchant", "Train"
+native_to      = "Small Land", "Merchant", "Train"
 flags          = "NativeTile", "AutoOnCityCenter"
 ;hidden_by      = "Maglev"
 helptext       = _("\
@@ -2226,16 +2299,28 @@ gui_type       = "Fortress"
 ;
 ; */ <-- avoid gettext warnings
 
-[road_road]
-extra          = "Road"
-move_cost      = 2
+[road_road_unpaved]
+extra          = "Dirt Road"
+move_cost      = 3
 food_incr      = 0
-shield_incr    = 0
+shield_incr    = 1
 trade_incr     = 1
 food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
 compat_special = "Road"
+flags          = "RequiresBridge"
+
+[road_road]
+extra          = "Paved Road"
+move_cost      = 2
+food_incr      = 0
+shield_incr    = 0
+trade_incr     = 0
+food_bonus     = 0
+shield_bonus   = 0
+trade_bonus    = 0
+;compat_special = "Road"
 flags          = "RequiresBridge"
 
 [road_hwy]
@@ -2247,6 +2332,7 @@ trade_incr     = 0
 food_bonus     = 0
 shield_bonus   = 25
 trade_bonus    = 0
+;compat_special = "Road"
 flags          = "RequiresBridge"
 
 ;[road_road_bridge]
@@ -2290,3 +2376,4 @@ move_mode      = "Cardinal"
 trade_incr_const = 1
 compat_special = "River"
 flags          = "River", "PreventsOtherRoads"
+
