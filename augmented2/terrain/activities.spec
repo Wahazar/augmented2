@@ -13,7 +13,7 @@ artists = "
 "
 
 [file]
-gfx = "hexemplio/activities"
+gfx = "augmented2/terrain/activities"
 
 [grid_main]
 
@@ -48,11 +48,14 @@ tiles = { "row", "column", "tag"
 
 ; Unit Activities: roads
 
-  2, 0, "unit.road"                     ;[GS]
+  2, 0, "unit.road_unpaved"                     ;[GS]
+  2, 0, "unit.road"                     ; for compatibility
   2, 1, "unit.rail"                     ;[GS]
   2, 2, "unit.highway"                  ;[GS]
   2, 3, "unit.maglev"                   ;[GS]
   2, 3, "unit.waterlock"                   ;[GS]
+  3, 6, "unit.road_paved"                   ;[Wh]
+
 
 ; Unit activities: bases
 

@@ -661,7 +661,9 @@ reqs    =
       "UnitClass", "Bomb", "Local", FALSE
       "UnitClass", "Torpedeos", "Local", FALSE
       "UnitClass", "Train", "Local", FALSE
-      "Extra", "Unpaved Road", "Local", FALSE
+      "Extra", "Dirt Road", "Local", FALSE
+      "Extra", "Paved Road", "Local", FALSE
+      "Extra", "HighWay", "Local", FALSE
     }
 
 ; Nuclear power gives +1 moves to sea units
@@ -3888,6 +3890,7 @@ reqs    =
 ;      "UnitClass", "Merchant", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
+;      "UnitClass", "Hovercraft", "Local", FALSE
       "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Coaster", "Local", FALSE
@@ -4973,7 +4976,7 @@ type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "Extra", "Road", "Local", TRUE
+      "Extra", "Paved Road", "Local", TRUE
       "Building", "Super Highways", "City", TRUE
       "OutputType", "Trade", "Local", TRUE
       "CityTile", "Center", "Local", TRUE
@@ -7817,7 +7820,7 @@ type    = "Output_Add_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Extra", "Road", "Local"
+      "Extra", "Paved Road", "Local"
       "OutputType", "Gold", "Local"
       "Building", "Kaaba", "City"
     }
@@ -8466,6 +8469,7 @@ reqs    =
 ;      "UnitClass", "Merchant", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
+;      "UnitClass", "Hovercraft", "Local", FALSE
       "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Coaster", "Local", FALSE
@@ -8610,6 +8614,7 @@ reqs    =
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
 ;      "UnitClass", "Turrets", "Local", FALSE
+;      "UnitClass", "Hovercraft", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
@@ -8846,7 +8851,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Unpaved Road", "Local", FALSE
+      "Extra", "Dirt Road", "Local", FALSE
       "Terrain", "Forest", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
     }
@@ -8867,7 +8872,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Unpaved Road", "Local", FALSE
+      "Extra", "Dirt Road", "Local", FALSE
       "Terrain", "Hills", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
     }
@@ -8888,7 +8893,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Unpaved Road", "Local", FALSE
+      "Extra", "Dirt Road", "Local", FALSE
       "Terrain", "Mountains", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
     }
@@ -8910,7 +8915,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Unpaved Road", "Local", FALSE
+      "Extra", "Dirt Road", "Local", FALSE
       "Terrain", "Jungle", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
     }
@@ -8932,7 +8937,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "River", "Local", TRUE
-      "Extra", "Unpaved Road", "Local", FALSE
+      "Extra", "Dirt Road", "Local", FALSE
       "Terrain", "Taiga", "Local", TRUE
       "OutputType", "Shield", "Local", TRUE
     }

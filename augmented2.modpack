@@ -3,7 +3,7 @@ options = "+Freeciv-2.6-modpack"
 baseURL = "http://149.156.194.203/~mczapkie/fc/augmented/"
 name = "augmented2"
 type = "Modpack"
-version = "2.6.29"
+version = "2.6.lt9"
 
 [files]
 list =
@@ -307,7 +307,7 @@ list =
   "augmented2/terrain/waterlocks.png"
   "augmented2/terrain/wind_turbines_hex.png"
   "augmented2/terrain/taiga.spec"
-  "augmented2/terrain/forest2.png"
+  "augmented2/terrain/forests2.png"
   "augmented2/terrain/tundra_base.png"
   "augmented2/terrain_small/farmland_s.png"
   "augmented2/terrain_small/hwroads_s.png"

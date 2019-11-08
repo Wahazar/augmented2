@@ -213,5 +213,7 @@ sprites =
 		"u.kon-tiki_raft", "augmented2/amplio_units/kon-tiki_raft_a"
 		"u.pirates", "augmented2/amplio_units/pirates_a"
 		"u.tactical_abm", "augmented2/amplio_units/freeciv-sam-patriot-3b"
+		"u.streltsy", "augmented2/amplio_units/streltsy_a"
+		"u.hovercraft", "augmented2/amplio_units/hovercraft_a"
 	}
 

@@ -6,6 +6,8 @@ Augmented2 Ruleset for Freeciv v2.6
 Railroads sprite shifted, highways/road sprites centered, for augmentedi tileset.
 Railroads are parallel to roads, they do not hide roads.
 Fixed Train movement cost.
+New units: Streltsy, Hovercraft. Crusaders and Streltsy exclusive for Monarchy.
+Enginners are no longer units carriers.
 
 2.6.lt8
 
