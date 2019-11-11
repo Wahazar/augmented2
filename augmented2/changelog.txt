@@ -2,6 +2,8 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.31 backport of new units and Hovercraft class from longturn branch
+
 2.6.30
 backport of road types from longturn branch
 

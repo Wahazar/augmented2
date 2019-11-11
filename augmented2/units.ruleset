@@ -200,6 +200,13 @@ min_speed     = 2
 hp_loss_pct   = 0
 flags         = "ZOC", "DamageSlows", "AttFromNonNative"
 
+[unitclass_hovercraft]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Hovercraft")
+min_speed     = 2
+hp_loss_pct   = 0
+flags         = "ZOC", "DamageSlows", "AttFromNonNative"
+
 [unitclass_heli]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Helicopter")
@@ -2138,6 +2145,44 @@ helptext      = _("\
 Janissaries are elite infantry, well disciplined and loyal only for Fundamentalist government.\
 ")
 
+[unit_streltsy]
+name          = _("Streltsy")
+class         = "Infantry"
+tech_req      = "Leadership"
+gov_req       = "Monarchy"
+obsolete_by   = "Riflemen"
+graphic       = "u.streltsy"
+graphic_alt   = "u.musketeers"
+sound_move    = "m_musketeers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_musketeers"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 1
+attack        = 3
+defense       = 3
+hitpoints     = 10
+firepower     = 2
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Fanatic", "Capturer", "Only_Native_Attack"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+bonuses       =
+   { "flag", "type", "value"
+     "Horse", "DefenseMultiplier", 1
+   }
+helptext      = _("\
+Streltsy are guardian units equipped with firearms and pollaxes, effective especially against mounted units. \
+They are supported and recruited from townfolks and therefore cost city population, but have low upkeep. \
+Streltsy are available only in case of Monarchy government.\
+")
+
 [unit_fanatics]
 name          = _("Fanatics")
 class         = "Infantry"
@@ -2421,6 +2466,7 @@ This unit cannot move across swamps, glaciers, or mountains,\
 name          = _("Crusaders")
 class         = "Heavy Cavalry"
 tech_req      = "Fundamentalism"
+gov_req       = "Monarchy"
 obsolete_by   = "Dragoons"
 graphic       = "u.crusaders_horse"
 graphic_alt   = "u.crusaders"
@@ -3016,8 +3062,8 @@ hitpoints     = 20
 firepower     = 2
 move_rate     = 2
 vision_radius_sq = 2
-transport_cap = 1
-cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
+transport_cap = 0
+; cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 2
@@ -3045,8 +3091,7 @@ for more details.\
 "), 
 _("\
 Being the Big Land unit class, Engineers have restricted mobility \
-(rough terrain such mountains, swamp, jungle require roads which can be prepared by Workers or Builders), \
-but they can be also used as a landing/transport aid for other land units (excluding Big Land ones).\
+(rough terrain such mountains, swamp, jungle require roads which can be prepared by Workers or Builders). \
 ")
 
 [unit_armor]
@@ -4097,6 +4142,44 @@ Jetliner is a huge passenger or cargo airplane.\
 All aircraft are subject to refueling and must return to a city, airstrip,\
  airbase, or a Carrier before MP's are exhausted or the aircraft will\
  run out of fuel and be destroyed.\
+")
+
+[unit_hovercraft]
+name          = _("Hovercraft")
+class         = "Hovercraft"
+tech_req      = "Amphibious Warfare"
+obsolete_by   = "None"
+graphic       = "u.hovercraft"
+graphic_alt   = "u.transport"
+sound_move    = "m_stealth_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_engineers"
+sound_fight_alt = "f_generic"
+build_cost    = 45
+pop_cost      = 0
+attack        = 2
+defense       = 4
+hitpoints     = 20
+firepower     = 3
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 1
+cargo         = "Infantry", "Light Cavalry", "Small Land"
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 2
+flags         = "BadCityDefender", "Cant_Fortify" 
+veteran_names = _("beginner"), _("seasoned"), _("senior"), _("expert")
+veteran_raise_chance      = 50, 33, 20, 0
+veteran_work_raise_chance = 3, 2, 1, 0
+veteran_power_fact        = 100, 125, 150, 175
+veteran_move_bonus        = 0, 0, 1, 1
+roles         = "Ferryboat"
+helptext      = _("\
+Hovercraft can carry one Infantry or Light Cavalry unit and are capable to go both on flat land or water areas. \
+They can be transported by ship, thus can be used as landing aid.\
 ")
 
 [unit_raft]

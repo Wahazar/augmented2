@@ -2819,14 +2819,25 @@ reqs    =
 
 ;bonuses for gov. veterancy levels:
 
-[effect_veteran_despotism]
+[effect_veteran_despotism_chariot]
 type    = "Veteran_Build"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"
       "UnitType", "Chariot", "Local"
       "Building", "Stables Barracks", "City"
+    }
+
+[effect_veteran_despotism_wheeled]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Gov", "Despotism", "Player", TRUE
+      "UnitClass", "Wheeled Unit", "Local", TRUE
+      "Building", "Leonardo's Workshop", "Player", FALSE
+      "Building", "Ecole Speciale Militaire", "Player", FALSE
     }
 
 [effect_veteran_direct_democracy_phalanx]
