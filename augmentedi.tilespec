@@ -145,9 +145,10 @@ files =
   "augmented2/terrain/roads-highways.spec",
   "augmented2/terrain/waterlocks.spec",
   "augmented2/terrain/road_bridge.spec",
-;  "augmented2/terrain/volcano.spec",
+  "augmented2/terrain/volcano.spec",
 ;  "augmented2/terrain/wooded_hills.spec",
   "augmented2/terrain/taiga.spec",
+;  "augmented2/terrain/mangrove.spec",
   "augmented2/terrain/activities.spec",
   "augmented2/misc/techs.spec"
 
@@ -240,6 +241,24 @@ layer0_match_type = "lake"
 layer1_match_type = "land"
 layer2_match_type = "foliage"
 layer2_match_with = "foliage"
+
+;[tile_mangrove]
+;tag = "mangrove"
+;blend_layer = 1
+;num_layers = 3
+;layer0_match_type = "lake"
+;layer1_match_type = "land"
+;layer2_match_type = "foliage"
+;layer2_match_with = "foliage"
+;not working, why?
+;[tile_mangrove]
+;tag = "mangrove"
+;blend_layer = 2
+;num_layers = 2
+;layer0_match_type = "coast"
+;layer1_match_type = "water"
+;layer1_match_with = "water"
+;layer1_sprite_type = "corner"
 
 [tile_grassland]
 tag = "grassland"

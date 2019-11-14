@@ -170,7 +170,8 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 10%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
-* Chariots gain Veteran level if built in city with Stable Barracks).\n\
+* Chariots gain Veteran level if built in city with Stable Barracks), all other Wheeled Units recruit level\
+ (not cumulaltive with Leonardo Workshop or Ecole Speciale Militaire). \n\
 * Science outcome is decreased twice.\
 ")
 

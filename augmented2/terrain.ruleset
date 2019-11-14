@@ -322,6 +322,50 @@ Shallow oceans are mostly found near coastlines, and are often rich\
  sources of food and other resources.\
 ")
 
+;[terrain_mangrove]
+;name                 = _("Mangrove")
+;graphic              = "mangrove"
+;graphic_alt          = "coast"
+;identifier           = "o"
+;class                = "Oceanic"
+;movement_cost        = 1
+;defense_bonus        = 0
+;food                 = 1
+;shield               = 0
+;trade                = 0
+;resources            = "Fish", "Oil"
+;road_food_incr_pct   = 0
+;road_shield_incr_pct = 0
+;road_trade_incr_pct  = 0
+;base_time            = 4
+;road_time            = 16
+;irrigation_result    = "no"
+;irrigation_food_incr = 0
+;irrigation_time      = 0
+;mining_result        = "yes"
+;mining_shield_incr   = 0
+;mining_time          = 0
+;transform_result     = "Swamp"
+;transform_time       = 48
+;pillage_time         = 2
+;clean_pollution_time = 6
+;clean_fallout_time   = 6
+;animal               = "None"
+;warmer_wetter_result = "Ocean"
+;warmer_drier_result  = "Jungle"
+;cooler_wetter_result = "Ocean"
+;cooler_drier_result  = "Swamp"
+;native_to            = "Air", "Bomb", "Missile", "Helicopter", "Coaster", "Riverboat", "Hovercraft"
+;flags                = "NoCities", "NoFortify", "Sea"
+;property_ocean_depth = 15
+;property_tropical    = 60
+;color.r              = 0
+;color.g              = 56
+;color.b              = 55
+;helptext             = _("\
+;Mangrove are small trees that grows in coastal saline, it is hard accessible area. \
+;")
+
 [terrain_deep_ocean]
 name                 = _("Deep Ocean")
 graphic              = "floor"
@@ -681,7 +725,7 @@ pillage_time         = 2
 clean_pollution_time = 6
 clean_fallout_time   = 6
 animal               = "None"
-warmer_wetter_result = "no"
+warmer_wetter_result = "Swamp" ;"Mangrove"
 warmer_drier_result  = "no"
 cooler_wetter_result = "Forest"
 cooler_drier_result  = "Tundra"
@@ -732,8 +776,8 @@ clean_pollution_time = 6
 clean_fallout_time   = 6
 animal               = "None"
 warmer_wetter_result = "no"
-warmer_drier_result  = "no"
-;warmer_drier_result  = "volcano"
+;warmer_drier_result  = "no"
+warmer_drier_result  = "volcano"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
 native_to            = "Small Land", "Air", "Bomb", "Missile", "Helicopter"
@@ -754,48 +798,48 @@ Reconnaissance (Small Land) units that move into mountains can see an extra spac
 Road is required to get shield production.\
 ")
 
-;[terrain_volcano]
-;name                 = _("Volcano")
-;graphic              = "volcano"
-;graphic_alt          = "mountains"
-;identifier           = "v"
-;class                = "Land"
-;movement_cost        = 6
-;defense_bonus        = 100
-;food                 = 0
-;shield               = 2
-;trade                = 0
-;resources            = "Saltpeter"
-;road_food_incr_pct   = 0
-;road_shield_incr_pct = 0
-;road_trade_incr_pct  = 0
-;base_time            = 10
-;road_time            = 12
-;irrigation_result    = "no"
-;irrigation_food_incr = 0
-;irrigation_time      = 0
-;mining_result        = "yes"
-;mining_shield_incr   = 0
-;mining_time          = 10
-;transform_result     = "no"
-;transform_time       = 36
-;pillage_time         = 3
-;clean_pollution_time = 6
-;clean_fallout_time   = 6
-;animal               = "None"
-;warmer_wetter_result = "no"
-;warmer_drier_result  = "no"
-;cooler_wetter_result = "no"
-;cooler_drier_result  = "Mountains"
-;native_to            = "Small Land", "Air", "Bomb", "Missile"
-;flags                = "NoBarbs", "NoCities", "NotGenerated", "NoFortify"
-;property_mountainous = 100
-;color.r              = 229
-;color.g              = 140
-;color.b              = 110
-;helptext             = _("\
-;Active volcano is rather not suitable to live here.\
-;")
+[terrain_volcano]
+name                 = _("Volcano")
+graphic              = "volcano"
+graphic_alt          = "mountains"
+identifier           = "v"
+class                = "Land"
+movement_cost        = 6
+defense_bonus        = 100
+food                 = 0
+shield               = 1
+trade                = 0
+resources            = "Saltpeter"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 0
+base_time            = 10
+road_time            = 12
+irrigation_result    = "no"
+irrigation_food_incr = 0
+irrigation_time      = 0
+mining_result        = "no"
+mining_shield_incr   = 0
+mining_time          = 10
+transform_result     = "no"
+transform_time       = 36
+pillage_time         = 3
+clean_pollution_time = 6
+clean_fallout_time   = 6
+animal               = "None"
+warmer_wetter_result = "no"
+warmer_drier_result  = "no"
+cooler_wetter_result = "no"
+cooler_drier_result  = "Mountains"
+native_to            = "Small Land", "Air", "Bomb", "Missile"
+flags                = "NoBarbs", "NoCities", "NotGenerated", "NoFortify"
+property_mountainous = 100
+color.r              = 229
+color.g              = 140
+color.b              = 110
+helptext             = _("\
+Active volcano is rather not suitable to live here.\
+")
 
 [terrain_plains]
 name                 = _("Plains")
@@ -1477,7 +1521,8 @@ rmact_gfx_alt  = "-"
 reqs           =
     { "type", "name", "range", "present"
       "Tech", "Offshore Exploration", "Player", TRUE
-      "Terrain", "Deep Ocean", "Local", TRUE
+      "TerrainClass", "Oceanic", "Local", TRUE
+      "Resource", "Fish", "Local", FALSE
     }
 build_time     = 0
 removal_time   = 0

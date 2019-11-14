@@ -177,15 +177,15 @@ tiles = { "row", "column","tag"
 
 ; Rails
 
-  7,    0, "road.rail_isolated"
-  7,    1, "road.rail_n"
-  7,    2, "road.rail_ne"
-  7,    3, "road.rail_e"
-  7,    4, "road.rail_se"
-  7,    5, "road.rail_s"
-  7,    6, "road.rail_sw"
-  7,    7, "road.rail_w"
-  7,    8, "road.rail_nw"
+;  7,    0, "road.rail_isolated"
+;  7,    1, "road.rail_n"
+;  7,    2, "road.rail_ne"
+;  7,    3, "road.rail_e"
+;  7,    4, "road.rail_se"
+;  7,    5, "road.rail_s"
+;  7,    6, "road.rail_sw"
+;  7,    7, "road.rail_w"
+;  7,    8, "road.rail_nw"
 
 ; Maglevs
 

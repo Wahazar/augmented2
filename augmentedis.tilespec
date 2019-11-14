@@ -126,6 +126,7 @@ files =
   "augmented2/terrain_small/terrain-small.spec",
   "augmented2/terrain_small/roads_unpaved.spec",
   "augmented2/terrain_small/roads.spec",
+  "augmented2/terrain_small/roads-rails.spec",
   "augmented2/terrain_small/roads-hwys.spec",
   "augmented2/terrain_small/waterlocks.spec",
   "augmented2/terrain_small/road_bridges.spec",
@@ -273,7 +274,7 @@ styles =
     { "name",          "style"
       "road.road_unpaved",     "RoadAllSeparate"
       "road.road",     "RoadAllSeparate"
-      "road.rail",     "RoadAllSeparate"
+      "road.rail",     "RoadAllCombined"
       "road.maglev",   "RoadAllSeparate"
       "road.hwy",      "RoadAllSeparate"
       "road.river",    "River"

@@ -445,6 +445,7 @@ target_reqs    =
 ;      "Gov", "Republic", "Player", FALSE
 ;      "Gov", "Democracy", "Player", FALSE
       "MaxUnitsOnTile", "1", "Local", TRUE
+      "UnitClassFlag", "Unreachable", "Local", FALSE
     }
 
 [actionenabler_sabotage_unit]
@@ -461,6 +462,7 @@ target_reqs    =
       "CityTile", "Center", "Local", FALSE
       "MinHitPoints", "2", "Local", TRUE
       "MaxUnitsOnTile", "1", "Local", TRUE
+      "UnitClassFlag", "Unreachable", "Local", FALSE
     }
 
 [actionenabler_traderoute]
@@ -735,7 +737,7 @@ effects        = "ReducePopulation", "Fallout"
 name           = _("Spaceship Launch")
 type           = "Spaceship"
 unique         = FALSE
-culture        = 10000
+culture        = 5000
 first_msg      = _("You're the first one to launch a spaceship towards Alpha Centauri!");
 cons_msg       = _("You have launched a spaceship towards Alpha Centauri!")
 
@@ -773,7 +775,7 @@ name           = _("Multicultural")
 type           = "Multicultural"
 unique         = FALSE
 value          = 2
-culture        = 20
+culture        = 2
 first_msg      = _("You're the first nation with a city containing 2 different nationalities!")
 cons_msg       = _("One of your cities has 2 different nationalities!")
 
@@ -807,7 +809,7 @@ cons_msg       = _("Your nation has achieved 20000 culture points!")
 [achievement_half_map_known]
 name           = _("All Your Hemisphere Mapped")
 type           = "Map_Known"
-unique         = FALSE
+unique         = TRUE
 value          = 50
 culture        = 200
 first_msg      = _("You're the first one to have mapped the half of entire world!")
