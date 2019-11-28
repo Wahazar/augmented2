@@ -51,4 +51,5 @@ sprites =
 		"b.post_office", "augmented2/buildings/post_office_Zimlock"
 		"b.sacred_cairn", "augmented2/buildings/sacred_cairn_a"
 		"b.tribe_hut", "augmented2/buildings/tribe_hut_a"
+		"b.mahout_barracks", "augmented2/buildings/mahout_barracks_a"
 	}

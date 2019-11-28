@@ -3,7 +3,7 @@ options = "+Freeciv-2.6-modpack"
 baseURL = "http://149.156.194.203/~mczapkie/fc/augmented/"
 name = "augmented2"
 type = "Modpack"
-version = "2.6.lt9"
+version = "2.6.lt11"
 
 [files]
 list =
@@ -114,6 +114,8 @@ list =
   "augmented2/amplio_units/pirates_brig_a.png"
   "augmented2/amplio_units/kon-tiki_raft_a.png"
   "augmented2/amplio_units/pirates_a.png"
+  "augmented2/amplio_units/hovercraft_a.png"
+  "augmented2/amplio_units/streltsy_a.png"
   "augmented2/buildings/5_years_plan.png"
   "augmented2/buildings/amphitheater.png"
   "augmented2/buildings/buildings-large.spec"
@@ -148,6 +150,7 @@ list =
   "augmented2/buildings/post_office_Zimlock.png"
   "augmented2/buildings/sacred_cairn_a.png"
   "augmented2/buildings/tribe_hut_a.png"
+  "augmented2/buildings/mahout_barracks_a.png"
   "augmented2/buildings_small/5_years_plans.png"
   "augmented2/buildings_small/amphitheaters.png"
   "augmented2/buildings_small/buildings-small.spec"
@@ -179,6 +182,7 @@ list =
   "augmented2/buildings_small/embankment_s.png"
   "augmented2/buildings_small/post_office_s.png"
   "augmented2/buildings_small/sacred_cairn_s.png"
+  "augmented2/buildings_small/mahout_barracks"
   "augmented2/misc/gov_direct_democracy.png"
   "augmented2/misc/gov_fascism_cc.png"
   "augmented2/misc/gov_first_republic.png"
@@ -280,6 +284,8 @@ list =
   "augmented2/small_units/pirates_brig_t.png"
   "augmented2/small_units/kon-tiki_raft_t.png"
   "augmented2/small_units/patriot-trident.png"
+  "augmented2/small_units/hovercraft_t.png"
+  "augmented2/small_units/streltsy_t.png"
   "augmented2/terrain/activities.png"
   "augmented2/terrain/activities.spec"
   "augmented2/terrain/blank.png"
@@ -396,5 +402,6 @@ list =
   "doc/govs.xls",          "augmented2/doc/govs.xls"
   "doc/units_lowcost.xls", "augmented2/doc/units_lowcost.xls"
 }
+
 
 

@@ -41,23 +41,23 @@ flags =
 
 [veteran_system]
 ; What are the names of the levels?
-veteran_names = _("green"),_("recruit"),_("veteran"), _("hardened"), _("elite"), _("veteran elite")
+veteran_names = _("green"),_("recruit"),_("veteran"), _("hardened"), _("elite"), _("hardened elite"), _("veteran elite"), _("hardened veteran elite")
 
 ; The percentage chance of increasing level through combat
-veteran_raise_chance = 50, 33, 20, 10, 5, 0
+veteran_raise_chance = 50, 33, 20, 10, 5, 2, 1, 0
 
 ; The percentage chance of a settler/engineer increasing level through
 ; performing useful work (per turn)
-veteran_work_raise_chance = 3, 2, 1, 1, 1, 0
+veteran_work_raise_chance = 3, 2, 1, 1, 1, 1, 1, 0
 
 ; Power factors are as a percentage.
 ; +50% is represented by 150
-veteran_power_fact = 100, 125, 150, 175, 200, 225
+veteran_power_fact = 100, 125, 150, 175, 200, 225, 250, 300
 
 ; The additional number of movement points granted for different veteran
 ; levels. These are fractional move points as defined by move_fragments in
 ; terrain.ruleset.
-veteran_move_bonus = 0, 0, 0, 0, 1, 1
+veteran_move_bonus = 0, 0, 0, 0, 1, 1, 1, 1
 
 ; /* <-- avoid gettext warnings
 ;
@@ -939,7 +939,7 @@ Due to indirect plunging fire, City Walls give no benefits to defenders.\
 "), _("\
 Direct Democracy grant additional veterancy level for the Archers.\
 ")
-bombard_rate = 3
+bombard_rate = 2
 
 [unit_arbalest]
 name          = _("Arbalest")
@@ -973,7 +973,7 @@ The Arbalest equipped with powerful crosbows can be used to the range attack on 
 "), _("\
 Monarchy grant additional veterancy level for the Arbalest.\
 ")
-bombard_rate = 2
+bombard_rate = 1
 
 [unit_marksman]
 name          = _("Marksman")
@@ -1000,12 +1000,12 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-flags         = "Capturer", "IgTer", "Bombarder", "Light Shells", "Marines"
+flags         = "Capturer", "IgTer", "Bombarder", "Light Shells", "Marines", "IgZOC", "HasNoZOC"
 roles         = "DefendOkStartUnit", "BarbarianTech"
 helptext      = _("\
 Marksmen squads skilled in precision shooting, can be used to wound enemy units or for reconnaissance.\
 ")
-bombard_rate = 3
+bombard_rate = 2
 
 [unit_sniper]
 name          = _("Sniper")
@@ -1034,7 +1034,7 @@ uk_food       = 1
 uk_gold       = 3
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Capturer", "Partial_Invis", "IgTer", "Bombarder", "Light Shells", "HasNoZOC", "Marines"
+flags         = "Capturer", "Partial_Invis", "IgTer", "Bombarder", "Light Shells", "IgZOC", "HasNoZOC", "Marines"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 Sniper sharpshooter squads can be used to wound enemy units or for reconnaissance.\
@@ -1400,7 +1400,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
-flags         = "Capturer", "Unique", "Unbribable", "Marines", "Diplomat"
+flags         = "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "IgZOC"
 roles         = "Hunter"
 helptext      = _("\
 Corsairs are privateers hired by a government to perform special\
@@ -1434,7 +1434,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 3
-flags         = "Partial_Invis", "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
+flags         = "Partial_Invis", "IgTer", "IgZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
 roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
 Ninjas are a supreme unit, skilled in all special operations,\
@@ -1471,7 +1471,7 @@ uk_food       = 1
 uk_gold       = 3
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Partial_Invis", "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy", "Paratroopers"
+flags         = "Partial_Invis", "IgTer", "IgZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy", "Paratroopers"
 roles         = "Hunter"
 helptext      = _("\
 Navy Seals are special units of scuba divers, capable to attack other ships from land or from aboard ship.\
@@ -1605,7 +1605,7 @@ build_cost    = 18
 pop_cost      = 0
 attack        = 2
 defense       = 3
-hitpoints     = 15
+hitpoints     = 14
 firepower     = 1
 move_rate     = 1
 vision_radius_sq = 2
@@ -2936,7 +2936,7 @@ sound_fight   = "f_catapult"
 sound_fight_alt = "f_generic"
 build_cost    = 40
 pop_cost      = 0
-attack        = 5
+attack        = 6
 defense       = 1
 hitpoints     = 5
 firepower     = 1
@@ -2961,7 +2961,7 @@ While powerful, Catapults (and their successors) are bulky and awkward;\
 "), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_cannon]
 name          = _("Cannon")
@@ -2976,7 +2976,7 @@ sound_fight   = "f_cannon"
 sound_fight_alt = "f_generic"
 build_cost    = 50
 pop_cost      = 0
-attack        = 6
+attack        = 7
 defense       = 1
 hitpoints     = 5
 firepower     = 2
@@ -3002,7 +3002,7 @@ This unit cannot move across swamps, glaciers, or mountains,\
 "), _("\
 Thanks to the indirect plunging fire, city bombardment is not affected by City Walls.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_howitzer]
 name          = _("Howitzer")
@@ -4276,7 +4276,7 @@ uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 cargo         = "Infantry", "Light Cavalry", "Small Land", "Merchant"
-flags         = "BadCityDefender", "NonMil", "HasNoZOC";, "Capturable"
+flags         = "BadCityDefender", "NonMil", "HasNoZOC", "Trireme";, "Capturable"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4316,7 +4316,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
-flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC"
+flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC", "Trireme"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4324,8 +4324,8 @@ veteran_work_raise_chance = 2, 1, 1, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-Steam barge can transport land units along or across rivers or shallow sea, but it may not enter deep ocean tiles.\
- Use steam paddler or transport ship instead.\
+Steam barge can transport land units along or across rivers or coastal waters, but it may not enter deep ocean tiles - \
+use steam paddler or transport ship instead.\
 "), _("\
 Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
 ")
@@ -4356,7 +4356,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Suicidal", "Wheeled Unit", "Riverboat"
-flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC"
+flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC", "Trireme"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4364,7 +4364,7 @@ veteran_work_raise_chance = 2, 1, 1, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-Diesel barge can transport land units, also big ones, along or across rivers or shallow sea, but it may not enter deep ocean tiles -\
+Diesel barge can transport land units, also big ones, along or across rivers or coastal waters, but it may not enter deep ocean tiles -\
  use transport ship instead.
 "), _("\
 Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
@@ -4374,7 +4374,7 @@ Barges can also clean pollution and fallout on water tiles, or transform tiles w
 name          = _("Trireme")
 class         = "Coaster"
 tech_req      = "Map Making"
-obsolete_by   = "Galley"
+obsolete_by   = "Aak"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -4395,7 +4395,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-cargo         = "Infantry", "Small Land"
+cargo         = "Infantry", "Small Land", "Merchant"
 flags         = "BadCityDefender", "Trireme"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
@@ -4404,7 +4404,7 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-The Trireme is your first boat unit. It can act\
+The Trireme is your first regular boat unit. It can act\
  as a transport ship and has rudimentary offensive\
  capabilities, and can travel on\
  rivers and along the coastline, but it may not enter into far ocean tiles.\
@@ -4429,13 +4429,13 @@ hitpoints     = 20
 firepower     = 1
 move_rate     = 6
 vision_radius_sq = 6
-transport_cap = 2
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 2
-cargo         = "Turrets", "Infantry", "Small Land"
+cargo         = "Turrets", "Small Land"
 flags         = "BadCityDefender"
 roles         = "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -4445,7 +4445,7 @@ veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
 Galley, thanks to rowing, can operate both on shallow sea waters or inland rivers as well,\
- as a troops transport or battle ship, especially if equipped with ballistas or bombards.\
+ as a small troops transport or battle ship, especially if equipped with ballistas or bombards.\
  Galley cannot enter deep ocean tiles.\
 ")
 
@@ -4468,13 +4468,13 @@ hitpoints     = 20
 firepower     = 2
 move_rate     = 8
 vision_radius_sq = 6
-transport_cap = 2
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-cargo         = "Turrets", "Infantry", "Small Land"
+cargo         = "Turrets", "Small Land"
 flags         = "BadCityDefender", "Bombarder"
 roles         = ""
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
@@ -4483,7 +4483,8 @@ veteran_work_raise_chance = 0, 0, 0, 0, 0
 veteran_power_fact        = 100, 125, 150, 175, 200
 veteran_move_bonus        = 0, 0, 1, 1, 2
 helptext      = _("\
-Monitors are small warships, which can be equipped with powerful turret gun. They are designed for operation on shallow coastal waters or rivers\
+Monitors are small warships, which can be equipped with powerful turret gun.\
+ They are designed for operation on shallow coastal waters or rivers\
  and connect enter deep ocean tiles.\
 "), _("\
 Bombard or cannon turret can be installed aboard, for increase attack strength.\
@@ -4491,7 +4492,7 @@ Bombard or cannon turret can be installed aboard, for increase attack strength.\
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 1
+bombard_rate = 2
 
 [unit_patrol_boat]
 name          = _("Patrol Boat")
@@ -4512,7 +4513,7 @@ hitpoints     = 20
 firepower     = 3
 move_rate     = 10
 vision_radius_sq = 6
-transport_cap = 2
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 3
@@ -4532,7 +4533,7 @@ Patrol boats are small but fast units, can be equipped with turret gun or torped
 Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 2
+bombard_rate = 3
 
 [unit_kon-tiki_raft]
 name          = _("Kon-Tiki Raft")

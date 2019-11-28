@@ -2,8 +2,24 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
-2.6.lt10
+2.6.lt11
+Pikemen tweaked
+All barges have Trireme flag (only safe coast)
+Land bombarders tweaked
+Unit_No_Lose_Pop fixed
+Barrack HP regen fixed
+Veteran system: 7 lvls.
+Galley etc coaasters: 1 cap.
+Trireme successor: Aak.
+Mahout barracks - vv for elephants.
+Elephant resource (+1 trade for Mahout b.)
+Mining forest make Taiga
+Enlightement and Liberal policy fixed
 
+2.6.lt10
+No SavePalace
+IgZOC with own ZOC for Corsairs, Ninja, Navy Seals.
+IgTer x2 instead of x3
 Improved road/rail graphics for augmentedis.
 No bribing/sabotaging unrechable units.
 

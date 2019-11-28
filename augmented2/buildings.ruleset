@@ -332,7 +332,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 With an Infantry Barracks II, each new Infantry unit built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%. Damaged infantry units\
+ defense strengths are increased by 50%. Damaged infantry and recon. units\
  which stay in town for one full turn without moving are completely restored.\
 "), _("\
 New reconnaissance (small land) units will have Recruit status, which gives\
@@ -340,7 +340,7 @@ New reconnaissance (small land) units will have Recruit status, which gives\
 "), _("\
 If the Saltpeter strategic resource is located within range of the city's\
  vision radius, the construction of Infantry Barracks II gives an additional\
- 2 gold income negating the upkeep cost.\
+ 2 trade income.\
 ")
 
 [building_stables_barracks]
@@ -369,8 +369,8 @@ With a Stables Barracks, each new cavalry (horse based) unit built in a\
  stay in town for one full turn without moving are completely restored.\
 "), _("\
 If the Horse strategic resource is located within range of the city's\
- vision radius, the construction of Stables Barracks gives an additional\
- 2 gold income negating the upkeep cost.\
+ working radius, the construction of Stables Barracks gives an additional\
+ 2 trade income.\
 "), _("\
 In case of Absolutism, also Chariots built in Stables Barracks would gain Veteran status.\
 ")
@@ -397,7 +397,39 @@ helptext	= _("\
 With a Workshop Barracks, each new motorized/wheeled unit built in a\
  city will automatically have Recruit status, which means that its attack\
  and defense strengths are increased by 25% (this effect is cumulative with Ecole Speciale Militaire or DARPA bonus)\
- Damaged wheeled units which stay in town for one full turn without moving are completely restored.\
+ Damaged Cavalry, Wheeled or Big Land units which stay in town for one full turn without moving are completely restored.\
+")
+
+[building_mahout_barracks]
+name		= _("Mahout Barracks")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Jainism", "Player"
+      "Terrain", "Jungle", "City"
+    }
+graphic	= "b.mahout_barracks"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Tactics", "Player"
+      "Building", "Workshop Barracks", "City"
+    }
+build_cost	= 30
+upkeep		= 2
+sabotage	= 100
+sound		= "b_barracks_ii"
+sound_alt	= "b_generic"
+helptext	= _("\
+With this improvement, mahouts (kornaks) can train elephants to be more efficient in combat.\
+ Each new Elephant unit built in a city with Mahout Barracks and at least one Jungle tile around,\
+ will automatically have Veteran status, which means that its attack\
+ and defense strengths are increased by 50%. Damaged Elephant units which\
+ stay in town for one full turn without moving are completely restored.\
+"), _("\
+If the Elephant strategic resource is located within range of the city's\
+ work radius, the construction of Mahout Barracks gives an additional\
+ 2 trade points from this tile.\
 ")
 
 [building_bunkers]
@@ -424,7 +456,7 @@ The Bunkers fortification makes it easier to defend a city. They add a 100%\
  bonus to the intrinsic defense strength of units within the city against\
  bombs, missiles and land units (including plunging fire artillery), but are ineffective against\
  airborne and sea units. Bunkers also prevent the loss of population which\
- occurs when a defending unit is defeated, except of attack performed by Air units or direct shooting Artillery.\
+ occurs when a defending unit is defeated, except of attack performed by Air units.\
  Unlike City Walls, Bunkers do not restrict city growth.\
 ")
 
@@ -576,7 +608,7 @@ City Walls make it easier to defend a city. They add a 100% bonus to\
  increase for cities larger than size 8), but are ineffective against\
  airborne, sea units or plunging fire artillery. City Walls also prevent\
  the loss of population which occurs when a defending unit is defeated,\
- except of attacks performed by Air units or any artillery.\
+ except of attacks performed by Air units or plunging fire artillery.\
 "), _("\
 City Walls need to be dismantled to allow city growth beyond size of 48.\
  For larger cities use Bunkers.\
@@ -604,7 +636,7 @@ sound		= "b_coastal_defense"
 sound_alt	= "b_generic"
 helptext	= _("\
 Coastal Defense gives a 100% bonus to the intrinsic defense strength\
- of units within a city when defending against enemy ships. For small\
+ of units within a city when defending against enemy ships or turrets. For small\
  cities the defense strength is doubled by this improvement and for\
  cities larger than size 8 it is increased by two-thirds.\
 ")
@@ -1137,7 +1169,7 @@ There is a small additional risk of pollution.\
 [building_palace]
 name		= _("Palace")
 genus		= "SmallWonder"
-flags		= "SaveSmallWonder"
+;flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Carpentry", "Player"

@@ -1116,7 +1116,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-; 1 + 1 => -2% each tile without Banking or advanced govs
+; 1 + 1 => -2% each tile without Banking or advanced/decentralised govs
 [effect_waste_distance_ancient]
 type    = "Output_Waste_By_Distance"
 value   = 1
@@ -1124,6 +1124,8 @@ reqs    =
     { "type", "name", "range", "present"
       "OutputType", "Shield", "Local", TRUE
       "Tech", "Banking", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Republic", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
       "Gov", "Federation", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
@@ -1490,10 +1492,33 @@ reqs   =
       "Gov", "Legalism", "Player", FALSE
     }
 
-[effect_democracy_disappear]
+[effect_enlightening_unit_disappear]
+type    = "Retire_Pct"
+value   = 5
+multiplier = "Enlightening Policy"
+reqs    =
+    { "type", "name", "range", "present"
+      "Age", "10", "Local", TRUE
+      "CityTile", "Center", "Local", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Monarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+;      "Gov", "Federation", "Player", FALSE
+;      "Gov", "Republic", "Player", FALSE
+      "Gov", "First Republic", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Direct Democracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
+      "Gov", "Fascism", "Player", FALSE
+      "Gov", "Legalism", "Player", FALSE
+    }
+
+[effect_democracy_unit_disappear]
 type    = "Retire_Pct"
 value   = 10
-multiplier = "Enlightening Policy"
 reqs    =
     { "type", "name", "range", "present"
       "Age", "10", "Local", TRUE
@@ -3331,6 +3356,16 @@ reqs    =
       "OutputType", "Science", "Local", FALSE
     }
 
+[effect_good_sci_thalassocracy]
+type    = "Output_Bonus_2"
+value   = 10
+multiplier = "Enlightening Policy"
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Thalassocracy", "Player", TRUE
+      "OutputType", "Science", "Local", FALSE
+    }
+
 [effect_good_sci_federation]
 type    = "Output_Bonus_2"
 value   = 10
@@ -3671,6 +3706,16 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
     }
 
+[effect_infantry_barracks2_hp_sl]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Infantry Barracks II", "City", TRUE
+      "UnitClass", "Small Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+    }
+
 [effect_stables_barracks_lc]
 type    = "Veteran_Build"
 value   = 2
@@ -3703,6 +3748,25 @@ reqs    =
       "Building", "Stables Barracks", "City", TRUE
       "UnitClass", "Light Cavalry", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
+    }
+
+[effect_mahout_barracks]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Mahout Barracks", "City"
+      "UnitType", "Elephants", "Local"
+      "Terrain", "Jungle", "City"
+    }
+
+[effect_mahout_barracks_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Mahout Barracks", "City"
+      "UnitType", "Elephants", "Local"
     }
 
 [effect_stables_barracks_hp_hc]
@@ -3763,8 +3827,8 @@ value   = 100
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Workshop Barracks", "City", TRUE
-;      "UnitClass", "Infantry", "Local", FALSE
-;      "UnitClass", "Small Land", "Local", FALSE
+      "UnitClass", "Infantry", "Local", FALSE
+      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
@@ -3812,6 +3876,16 @@ reqs    =
     { "type", "name", "range"
       "Resource", "Horses", "Local"
       "Building", "Stables Barracks", "City"
+      "OutputType", "Trade", "Local"
+    }
+
+[effect_elephants_mahout_barracks]
+type    = "Output_Add_Tile"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Resource", "Elephants", "Local"
+      "Building", "Mahout Barracks", "City"
       "OutputType", "Trade", "Local"
     }
 
@@ -3881,7 +3955,7 @@ reqs    =
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedeos", "Local", FALSE
+;      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
     }
 
@@ -3902,14 +3976,14 @@ reqs    =
 ;      "UnitClass", "Wheeled Unit", "Local", FALSE
 ;      "UnitClass", "Suicidal", "Local", FALSE
 ;      "UnitClass", "Hovercraft", "Local", FALSE
-      "UnitClass", "Turrets", "Local", FALSE
+;      "UnitClass", "Turrets", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Coaster", "Local", FALSE
       "UnitClass", "Helicopter", "Local", FALSE
       "UnitClass", "Air", "Local", FALSE
       "UnitClass", "Missile", "Local", FALSE
       "UnitClass", "Bomb", "Local", FALSE
-      "UnitClass", "Torpedeos", "Local", FALSE
+;      "UnitClass", "Torpedeos", "Local", FALSE
 ;      "UnitClass", "Train", "Local", FALSE
       "UnitFlag", "IgWall", "Local", FALSE
     }
@@ -3962,14 +4036,16 @@ reqs    =
       "UnitClass", "Coaster", "Local"
     }
 
-;augmented:
+;augmented: not cumulative with City Walls/Bunkers
 [effect_coastal_defense_turrets]
 type    = "Defend_Bonus"
 value   = 100
 reqs    =
-    { "type", "name", "range"
-      "Building", "Coastal Defense", "City"
-      "UnitClass", "Turrets", "Local"
+    { "type", "name", "range", "present"
+      "Building", "Coastal Defense", "City", TRUE
+      "UnitClass", "Turrets", "Local", TRUE
+      "Building", "Bunkers", "City", FALSE
+      "Building", "City Walls", "City", FALSE
     }
 
 ;augmented: lux, no content
@@ -5406,6 +5482,8 @@ reqs    =
       "Building", "Great Wall", "Alliance", TRUE
       "UnitFlag", "AirAttacker", "Local", FALSE
       "UnitFlag", "OneAttack", "Local", FALSE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Coaster", "Local", FALSE
     }
 
 ; Cumulative with fortress
@@ -7701,6 +7779,7 @@ reqs    =
       "Building", "Pasteur Institute", "World", TRUE
       "Building", "Hospital", "City", TRUE
       "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
     }
 
 [effect_large_hardon_collider]
@@ -8964,10 +9043,12 @@ reqs    =
     { "type", "name", "range", "present"
 ;      "DiplRel", "War", "Local", FALSE
 ;      "Protectionist Economy", "Player", 0
-      "Gov", "Communism", "Anarchy", FALSE
+      "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [traderoute_liberal_corruption_multiplier]
@@ -8977,10 +9058,12 @@ multiplier = "Liberal Economy"
 reqs    =
     { "type", "name", "range", "present"
       "OutputType", "Trade", "Local", TRUE
-      "Gov", "Communism", "Anarchy", FALSE
+      "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 ;[effect_gold_protectionist_multiplier]
@@ -9042,6 +9125,7 @@ reqs    =
       "Tech", "Socialism", "Player", TRUE
       "Building", "Trade Union", "City", TRUE
       "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
     }
 
 [effect_welfare_production_multiplier]
@@ -9053,6 +9137,7 @@ reqs    =
       "OutputType", "Shield", "Local", TRUE
       "Tech", "Socialism", "Player", TRUE
       "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
     }
 
 [effect_welfare_gold_multiplier]
@@ -9064,6 +9149,7 @@ reqs    =
       "OutputType", "Gold", "Local", TRUE
       "Building", "Pasteur Institute", "World", TRUE
       "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
     }
 
 [effect_enlightening_science_multiplier]
@@ -9077,7 +9163,7 @@ reqs    =
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
-      "Gov", "Monarchy", "Player", FALSE
+;      "Gov", "Monarchy", "Player", FALSE
       "Gov", "Fundamentalism", "Player", FALSE
 ;      "Gov", "Federation", "Player", FALSE
 ;      "Gov", "Republic", "Player", FALSE
