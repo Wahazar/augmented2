@@ -920,16 +920,21 @@ colorlist =
 ;
 set =
     { "name", "value"
-      "aifill", 10
-      "generator", "FRACTAL"
+      "aifill", 12
+      "generator", "RANDOM"
       "topology", "WRAPX|HEX|ISO"
       "mapsize", "PLAYER"
-      "tilesperplayer", 200
+      "tilesperplayer", 250
+      "killunhomed", 1
+      "dispersion", 5
+;      "startpos", "2or3"
+      "landmass", 40
+      "specials", 400
       "tinyisles", "DISABLED"
-      "temperature", 60
+      "temperature", 70
       "flatpoles", 0
-      "startunits", "ccccc"
-      "citymindist", 3
+      "startunits", "cccccf"
+      "citymindist", 2
       "techlevel", 0
       "borders", "ENABLED"
       "foggedborders", "ENABLED"
@@ -938,11 +943,11 @@ set =
       "onsetbarbs", 120
       "occupychance", 100
       "razechance", 10
+      "savepalace", FALSE
       "techlossforgiveness", 10
       "techlossrestore", 10
       "sciencebox", 160
       "revolen", 2
       "revolentype", "RANDQUICK"
-      "killunhomed", 1
-      "dispersion", 5
+      "scorelog", "ENABLED"
     }

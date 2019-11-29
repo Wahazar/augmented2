@@ -898,7 +898,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack", "Bombarder"
-roles         = "ExplorerStartUnit", "DefendOkStartUnit", "Hunter", "Hut", "Barbarian"
+roles         = "ExplorerStartUnit", "DefendOkStartUnit", "Hunter", "Hut", "Barbarian", "FirstBuild"
 helptext      = _("\
 This unit emerged from stone age and may be built almost from the start of the game.\
  It is a weak offensive unit, can throw ranged weapon, like javelins.\
@@ -4208,7 +4208,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "NonMil", "NoVeteran", "HasNoZOC"
-roles         = "Ferryboat", "FerryStartUnit"
+roles         = "Ferryboat"
 helptext      = _("\
 Raft is a rudimentary form of transport, limited to the rivers, lakes and fortresses only,\
  however it can be used to relatively fast transport of any land units, including these, which cannot move on some terrains without roads.\
