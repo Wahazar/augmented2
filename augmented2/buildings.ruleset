@@ -375,6 +375,39 @@ If the Horse strategic resource is located within range of the city's\
 In case of Absolutism, also Chariots built in Stables Barracks would gain Veteran status.\
 ")
 
+
+[building_mahout_barracks]
+name		= _("Mahout Barracks")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Jainism", "Player"
+      "Terrain", "Jungle", "City"
+    }
+graphic	= "b.mahout_barracks"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Tactics", "Player"
+      "Building", "Workshop Barracks", "City"
+    }
+build_cost	= 30
+upkeep		= 2
+sabotage	= 100
+sound		= "b_barracks_ii"
+sound_alt	= "b_generic"
+helptext	= _("\
+With this improvement, mahouts (kornaks) can train elephants to be more efficient in combat.\
+ Each new Elephant unit built in a city with Mahout Barracks and at least one Jungle tile around,\
+ will automatically have Veteran status, which means that its attack\
+ and defense strengths are increased by 50%. Damaged Elephant units which\
+ stay in town for one full turn without moving are completely restored.\
+"), _("\
+If the Elephant strategic resource is located within range of the city's\
+ work radius, the construction of Mahout Barracks gives an additional\
+ 2 trade points from this tile.\
+")
+
 [building_workshop_barracks]
 name		= _("Workshop Barracks")
 genus		= "Improvement"

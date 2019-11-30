@@ -1084,6 +1084,8 @@ reqs    =
     { "type", "name", "range", "present"
       "OutputType", "Shield", "Local", TRUE
       "Tech", "Banking", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Republic", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
       "Gov", "Federation", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
@@ -3570,6 +3572,25 @@ reqs    =
       "Building", "Stables Barracks", "City", TRUE
       "UnitClass", "Heavy Cavalry", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
+    }
+
+[effect_mahout_barracks]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Mahout Barracks", "City"
+      "UnitType", "Elephants", "Local"
+      "Terrain", "Jungle", "City"
+    }
+
+[effect_mahout_barracks_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Mahout Barracks", "City"
+      "UnitType", "Elephants", "Local"
     }
 
 [effect_workshop_barracks_wu]

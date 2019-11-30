@@ -662,7 +662,7 @@ defense_bonus        = 25
 food                 = 1
 shield               = 0 ;+1 with road
 trade                = 0
-resources            = "Gems", "Fruit"
+resources            = "Gems", "Fruit", "Elephants"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 100
 road_trade_incr_pct  = 0
@@ -1067,6 +1067,15 @@ graphic     = "ts.gems"
 graphic_alt = "-"
 identifier  = "g"
 trade       = 4
+# jungle.
+
+[resource_elephant]
+name        = _("Elephants")
+graphic     = "ts.elephant"
+graphic_alt = "ts.buffalo"
+identifier  = "@"
+trade       = 1
+shield       = 1
 # jungle.
 
 ; "h" reserved for strategic horses
