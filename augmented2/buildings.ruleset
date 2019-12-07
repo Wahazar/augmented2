@@ -112,7 +112,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Drama", "Player"
-      "MinCulture", "200", "Player"
+      "MinCulture", "500", "Player"
     }
 graphic	= "b.amphitheater"
 graphic_alt	= "b.colosseum"
@@ -2141,8 +2141,8 @@ sound		= "b_colosseum"
 sound_alt	= "b_generic"
 helptext	= _("\
 Increase luxury output of a city by 50%, \
-additionally neutralises unhappiness caused by one military \
-unit in its city.\
+additionally in case of First Republic, \
+add one veteran level to  any Legion or Swordsmen unit.\
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")
@@ -2425,7 +2425,7 @@ sabotage	= 100
 sound		= "b_colosseum"
 sound_alt	= "b_generic"
 helptext	= _("\
-Add 2 luxury points to your capital. \
+Add 2 luxury points to your capital and allow building Crusaders here. \
 Additionally in case of Monarchy, increase luxury output of a capital city by 50% \
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
@@ -2637,7 +2637,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Vedism", "Player", TRUE
       "Building", "Temple", "City", TRUE
-	 "MinCulture", "1900", "Player", TRUE
+	 "MinCulture", "1800", "Player", TRUE
       "Building", "Church", "City", FALSE
 	 "Building", "Mosque", "City", FALSE
     }
@@ -2977,9 +2977,11 @@ You can still upgrade units manually with cost of gold.\
 name		= _("Western Wall")
 genus		= "SmallWonder"
 reqs	=
-    { "type", "name", "range"
-      "Tech", "Monotheism", "Player"
-      "Building", "City Walls", "City"
+    { "type", "name", "range", "present"
+      "Tech", "Monotheism", "Player", TRUE
+      "Building", "City Walls", "City", TRUE
+      "Building", "Colossus", "City", FALSE
+      "Building", "Kaaba", "City", FALSE
     }
 graphic	= "b.western_wall"
 graphic_alt	= "-"
@@ -3388,6 +3390,8 @@ reqs	=
 	 "Building", "King Richard's Crusade", "Player", FALSE
 	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
 ;	 "Building", "Statue of Zeus", "Player", FALSE
+	 "Building", "Colossus", "City", FALSE
+	 "Building", "Western Wall", "City", FALSE
     }
 graphic	= "b.kaaba"
 graphic_alt	= "-"
@@ -3706,6 +3710,8 @@ where it is located.\
 "), _("\
 Upon completion of this wonder, entertainer specialists' luxury \
 output increases to 3 for every nation.\
+"), _("\
+Any city with Amphitheater gain additional Culture Point.\
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
 ")

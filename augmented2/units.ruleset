@@ -2462,7 +2462,7 @@ This unit cannot move across swamps, glaciers, or mountains,\
 name          = _("Crusaders")
 class         = "Heavy Cavalry"
 tech_req      = "Fundamentalism"
-gov_req       = "Monarchy"
+impr_req       = "Jousting Tiltyard"
 obsolete_by   = "Dragoons"
 graphic       = "u.crusaders_horse"
 graphic_alt   = "u.crusaders"
@@ -2493,7 +2493,7 @@ Crusaders are highly disciplined mounted\
 This unit cannot move across swamps, glaciers, or mountains, \
 and cannot be transported by sea using early ships \
 (Triremes, Caravels and Aaks). \
-Crusaders are available only for nations ruled by Monarchy. \
+Crusaders are available for capital city with Jousting Tiltyard small wonder. \
 ")
 
 [unit_knights]

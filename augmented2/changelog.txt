@@ -2,6 +2,12 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt12
+Tribal description and veterancy fixed
+Legions and Swordsmen in Firt Republic get +v if Colosseum was built.
+Crusaders req. Jousting Tiltyard.
+Terrain transform pattern improved.
+
 2.6.lt11
 Pikemen tweaked
 All barges have Trireme flag (only safe coast)

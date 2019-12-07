@@ -2866,13 +2866,13 @@ reqs    =
       "UnitFlag", "NoVeteran", "Local", FALSE, FALSE
     }
 
-[effect_combat_tribal_lc]
+[effect_combat_tribal_horse]
 type    = "Veteran_Combat"
 value   = 50
 reqs    =
     { "type", "name", "range", "present", "quiet"
       "Gov", "Tribal", "Player", TRUE, TRUE
-      "UnitClass", "Light Cavalry", "Local", TRUE, FALSE
+      "UnitFlag", "Horse", "Local", TRUE, FALSE
       "UnitFlag", "NonMil", "Local", FALSE, FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE, FALSE
     }
@@ -2990,6 +2990,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "First Republic", "Player"
+      "Building", "Colosseum", "Player"
       "UnitType", "Legion", "Local"
     }
 
@@ -2999,6 +3000,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "First Republic", "Player"
+      "Building", "Colosseum", "Player"
       "UnitType", "Swordsmen", "Local"
     }
 
@@ -4058,13 +4060,15 @@ reqs    =
       "OutputType", "Luxury", "Local"
     }
 
-[effect_colosseum_free_mil]
-type    = "Make_Content_Mil"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Colosseum", "City"
-    }
+;[effect_colosseum_free_mil]
+;type    = "Make_Content_Mil"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Colosseum", "City"
+;    }
+
+
 
 [effect_colosseum_culture]
 type    = "History"
@@ -6073,6 +6077,7 @@ value	= 1
 reqs	=
     { "type", "name", "range"
       "Building", "Shakespeare's Theatre", "World"
+      "Building", "Amphitheater", "City"
       "Tech", "Drama", "Player"
     }
 
@@ -6653,6 +6658,7 @@ reqs    =
       "Tech", "Combustion", "Player", TRUE
       "UnitFlag", "Transform", "Local", TRUE
       "UnitClass", "Coaster", "Local", FALSE
+      "Extra", "Water Lock", "Local", TRUE
     }
 
 [effect_transform_barge]
