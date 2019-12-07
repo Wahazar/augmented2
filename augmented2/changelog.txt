@@ -2,6 +2,8 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+Terrain transform locked if Wind Turbine or Waterlock present
+
 2.6.lt12
 Tribal description and veterancy fixed
 Legions and Swordsmen in Firt Republic get +v if Colosseum was built.

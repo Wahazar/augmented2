@@ -694,6 +694,8 @@ Cities built on hills are at risk of earthquakes, which can interrupt\
  a city's current project.\
 "), _("\
 Road or river required to get shield production.\
+"), _("\
+Saltpeter add extra 2 trade points to Infantry Barracks II.\
 ")
 
 [terrain_jungle]
@@ -703,7 +705,7 @@ graphic_alt          = "-"
 identifier           = "j"
 class                = "Land"
 movement_cost        = 2
-defense_bonus        = 25
+defense_bonus        = 50
 food                 = 1
 shield               = 0 ;+1 with road
 trade                = 0
@@ -715,11 +717,11 @@ base_time            = 3
 road_time            = 8
 irrigation_result    = "Grassland"
 irrigation_food_incr = 0
-irrigation_time      = 20
-mining_result        = "Swamp"
+irrigation_time      = 32
+mining_result        = "Forest"
 mining_shield_incr   = 0
-mining_time          = 30
-transform_result     = "Forest"
+mining_time          = 48
+transform_result     = "Swamp"
 transform_time       = 48
 pillage_time         = 2
 clean_pollution_time = 6
@@ -744,6 +746,8 @@ Jungles are densely overgrown, making agriculture somewhat\
 "), _("\
 Road or river and Forestry advance required to get shield production, \
 Railroad and Railway Station for additional production.\
+"), _("\
+Elephants add extra 2 trade points to Mahout Barracks.\
 ")
 
 [terrain_mountains]
@@ -796,6 +800,8 @@ Reconnaissance (Small Land) units that move into mountains can see an extra spac
  move into mountains without a road.\
 "), _("\
 Road is required to get shield production.\
+"), _("\
+Uranium is required for Manhattan Project and add extra 2 trade points to Nuclear Plant.\
 ")
 
 [terrain_volcano]
@@ -882,8 +888,10 @@ color.r              = 122
 color.g              = 156
 color.b              = 46
 helptext             = _("\
-Plains are very broad, sparse regions, which makes trade slightly\
+Plains are very broad, sparse regions, which makes agriculture farming slightly\
  inconvenient.\
+"), _("\
+Horses add extra 2 trade points to Stables Barracks.\
 ")
 
 [terrain_swamp]
@@ -905,10 +913,10 @@ base_time            = 3
 road_time            = 8
 irrigation_result    = "Lake"
 irrigation_food_incr = 1
-irrigation_time      = 32
+irrigation_time      = 48
 mining_result        = "Jungle"
 mining_shield_incr   = 0
-mining_time          = 25
+mining_time          = 32
 transform_result     = "Grassland"
 transform_time       = 72
 pillage_time         = 2

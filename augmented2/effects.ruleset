@@ -6658,7 +6658,8 @@ reqs    =
       "Tech", "Combustion", "Player", TRUE
       "UnitFlag", "Transform", "Local", TRUE
       "UnitClass", "Coaster", "Local", FALSE
-      "Extra", "Water Lock", "Local", TRUE
+      "Extra", "Water Lock", "Local", FALSE
+      "Extra", "Wind Turbine", "Local", FALSE
     }
 
 [effect_transform_barge]
@@ -6669,6 +6670,8 @@ reqs    =
       "Tech", "Steam Engine", "Player"
       "UnitFlag", "Transform", "Local"
       "UnitClass", "Coaster", "Local"
+      "Extra", "Water Lock", "Local", FALSE
+      "Extra", "Wind Turbine", "Local", FALSE
     }
 
 [effect_pollution]
