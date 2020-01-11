@@ -2,7 +2,14 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt14
 Terrain transform locked if Wind Turbine or Waterlock present
+Capturable civilian transport ships/barges
+Conversion of pop-cost units to migrants
+Spacerace+Allied+Cultural victory criteria, 50000 culture points required
+Helicopters can target helicopters
+Fusion Plant wonder
+Fixed marine diplo actions
 
 2.6.lt12
 Tribal description and veterancy fixed

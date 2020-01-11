@@ -563,6 +563,8 @@ reqs	=
 	  "MinCulture", "1000", "Player", TRUE
 ;obsolete      "Building", "Temple", "City", FALSE
 	  "Building", "Mosque", "City", FALSE
+	  "Building", "Monk Monastery", "City", FALSE
+	  "Building", "Temple of City God", "City", FALSE
     }
 graphic	= "b.church"
 graphic_alt	= "b.cathedral"
@@ -1052,6 +1054,8 @@ reqs	=
 	 "MinCulture", "1600", "Player", TRUE
 ;obsolete	 "Building", "Temple", "City", FALSE
 	 "Building", "Church", "City", FALSE
+	  "Building", "Monk Monastery", "City", FALSE
+	  "Building", "Temple of City God", "City", FALSE
     }
 graphic	= "b.mosque"
 graphic_alt	= "-"
@@ -2654,7 +2658,7 @@ sabotage	= 0
 sound		= "w_copernicus_observatory"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives 4 extra research points every turn to its city. \n\
+Gives 4 extra research points every turn to its city if there is no University. \n\
 If Leshan Buddha Statue was built on same continent, \
 additional one unhappy citizen become content \
 (does not affect citizens made unhappy by aggression)\
@@ -3205,6 +3209,30 @@ Upon completion of this wonder, scientist specialists' research output \
 increases to 3 permanently for every nation.\
 ")
 
+[building_fusion_plant]
+name		= _("Fusion Plant")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Fusion Power", "Player"
+      "Building", "Research Lab", "City"
+    }
+graphic	= "b.fusion_plant"
+graphic_alt	= "a.fusion_power"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 4000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hoover_dam"
+sound_alt	= "w_generic"
+helptext	= _("\
+Increase city production by 25% (50% with Mfg Plant), and reduces \
+pollution from shield production or population by a further 25% in all cities \
+with Solar Plant or Recycling Center accordingly, on same continent.\
+")
+
 [building_golden_temple]
 name		= _("Golden Temple")
 genus		= "GreatWonder"
@@ -3303,7 +3331,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 4000
+build_cost	= 2000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_hoover_dam"

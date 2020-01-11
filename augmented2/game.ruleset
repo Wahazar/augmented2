@@ -313,6 +313,7 @@ actor_reqs    =
     { "type",   "name", "range"
       "UnitType", "Explorer", "Local"
       "MinMoveFrags", "1", "Local"
+      "UnitState", "OnLivableTile", "Local"
     }
 target_reqs  =
     { "type",   "name", "range", "present"
@@ -332,6 +333,7 @@ action       = "Investigate City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitType", "Explorer", "Local"
+      "UnitState", "OnLivableTile", "Local", TRUE
       "MinMoveFrags", "1", "Local"
     }
 
@@ -356,6 +358,20 @@ actor_reqs    =
       "UnitFlag", "Spy", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
+    }
+target_reqs  =
+    { "type",   "name", "range", "present"
+      "NationGroup", "Barbarian", "Player", FALSE
+    }
+
+[actionenabler_steal_tech_random_marine]
+action = "Steal Tech"
+actor_reqs    =
+    { "type",   "name", "range",  "present"
+      "UnitFlag", "Spy", "Local", TRUE
+      "UnitFlag", "Marines", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local", FALSE
+      "MinMoveFrags", "1", "Local", TRUE
     }
 target_reqs  =
     { "type",   "name", "range", "present"
@@ -448,6 +464,26 @@ target_reqs    =
       "UnitClassFlag", "Unreachable", "Local", FALSE
     }
 
+[actionenabler_bribe_unit_marine]
+action = "Bribe Unit"
+actor_reqs    =
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Diplomat", "Local", TRUE
+      "DiplRel", "Alliance", "Local", FALSE
+      "DiplRel", "Team", "Local", FALSE
+      "UnitFlag", "Marines", "Local", TRUE
+      "MinMoveFrags", "1", "Local", TRUE
+    }
+target_reqs    =
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Unbribable", "Local", FALSE
+      "CityTile", "Center", "Local", FALSE
+;      "Gov", "Republic", "Player", FALSE
+;      "Gov", "Democracy", "Player", FALSE
+      "MaxUnitsOnTile", "1", "Local", TRUE
+      "UnitClassFlag", "Unreachable", "Local", FALSE
+    }
+
 [actionenabler_sabotage_unit]
 action = "Sabotage Unit"
 actor_reqs    =
@@ -455,6 +491,23 @@ actor_reqs    =
       "UnitFlag", "Spy", "Local"
       "DiplRel", "War", "Local"
       "UnitState", "OnLivableTile", "Local"
+      "MinMoveFrags", "1", "Local"
+    }
+target_reqs    =
+    { "type",   "name", "range", "present"
+      "CityTile", "Center", "Local", FALSE
+      "MinHitPoints", "2", "Local", TRUE
+      "MaxUnitsOnTile", "1", "Local", TRUE
+      "UnitClassFlag", "Unreachable", "Local", FALSE
+    }
+
+[actionenabler_sabotage_unit_marine]
+action = "Sabotage Unit"
+actor_reqs    =
+    { "type",   "name", "range"
+      "UnitFlag", "Spy", "Local"
+      "DiplRel", "War", "Local"
+      "UnitFlag", "Marines", "Local"
       "MinMoveFrags", "1", "Local"
     }
 target_reqs    =
@@ -557,10 +610,10 @@ free_tech_method = "Goal"
 
 [culture]
 ; Minimum culture points for cultural domination victory
-victory_min_points = 10000
+victory_min_points = 50000
 
 ; How big lead relative to second best player is needed for victory
-victory_lead_pct   = 200
+victory_lead_pct   = 1000
 
 ; How much each culture point affects the migration
 ; from/to the city. Each culture point count as this many permilles
@@ -950,4 +1003,5 @@ set =
       "revolen", 2
       "revolentype", "RANDQUICK"
       "scorelog", "ENABLED"
+      "victories", "SPACERACE|ALLIED|CULTURE"
     }

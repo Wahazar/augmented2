@@ -930,7 +930,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Bombarder", "Marines"
+flags         = "Capturer", "Bombarder"
 roles         = "DefendOkStartUnit", "HutTech"
 helptext      = _("\
 Archers use bows to fire several rounds of arrows, thus can be used to wound enemy units.\
@@ -1404,9 +1404,9 @@ flags         = "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "IgZO
 roles         = "Hunter"
 helptext      = _("\
 Corsairs are privateers hired by a government to perform special\
- operations: attacking other ships from aboard ship or capturing them,\
+ operations: attacking other ships or land units from aboard ship or capturing/bribing them,\
  or making raids on enemy territory and provide covert-ops like Diplomat\
- (except of establishing embassy). They cannot occupy city though.\
+ (except of establishing embassy). They cannot occupy or incity city though.\
 ")
 
 [unit_ninja]
@@ -1434,14 +1434,17 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 3
+embarks       = "Helicopter"
+disembarks    = "Helicopter"
 flags         = "Partial_Invis", "IgTer", "IgZOC", "Capturer", "Unique", "Unbribable", "Marines", "Diplomat", "Spy"
 roles         = "Hunter", "BarbarianSeaTech"
 helptext      = _("\
 Ninjas are a supreme unit, skilled in all special operations,\
  such as espionage, sabotage, infiltration, assassination,\
  guerrilla warfare, etc. They can even walk on water (using\
- special shoes), thus can attack other units from aboard ship\
- (or provide covert-ops like Spies, except of establishing embassies).\
+ special shoes), thus can attack other units from aboard ship or Helicopter\
+ (or provide covert-ops like Spies, except of establishing embassies, \
+ actions from aboard limited to bribing, sabotaging and stealing tech).\
 ")
 
 [unit_navy_seals]
@@ -1475,7 +1478,7 @@ flags         = "Partial_Invis", "IgTer", "IgZOC", "Capturer", "Unique", "Unbrib
 roles         = "Hunter"
 helptext      = _("\
 Navy Seals are special units of scuba divers, capable to attack other ships from land or from aboard ship.\
- They can also provide covert-ops like Spies (except of establishing embassies).\
+ They can also provide covert-ops like Spies (except of establishing embassies) and sabotage or bribe units from aboard.\
 ")
 
 [unit_alpine_troops]
@@ -1518,6 +1521,8 @@ name          = _("Partisan")
 class         = "Small Land"
 tech_req      = "Guerilla Warfare"
 obsolete_by   = "None"
+convert_to    = "Migrants"
+convert_time  = 2
 graphic       = "u.partisan"
 graphic_alt   = "-"
 sound_move    = "m_partisan"
@@ -1925,7 +1930,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Only_Native_Attack"
+flags         = "Capturer", "Light Shells", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "HutTech", "AttackStrongStartUnit",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
@@ -1958,7 +1963,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Only_Native_Attack"
+flags         = "Capturer", "Light Shells", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "AttackStrongStartUnit"
 helptext      = _("\
 Grenadiers are offensive infantry squads, equipped with rifles and grenades.\
@@ -1989,7 +1994,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-flags         = "Capturer", "Only_Native_Attack"
+flags         = "Capturer", "Light Shells", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "AttackStrongStartUnit"
 helptext      = _("\
 Stormtroopers are offensive infantry squads, equipped with light machine guns and grenades.\
@@ -2111,8 +2116,6 @@ class         = "Infantry"
 tech_req      = "Sunnism"
 gov_req       = "Fundamentalism"
 obsolete_by   = "Infantry"
-convert_to    = "Fanatics"
-convert_time  = 2
 graphic       = "u.janissaries"
 graphic_alt   = "u.musketeers"
 sound_move    = "m_fanatics"
@@ -2145,7 +2148,7 @@ class         = "Infantry"
 tech_req      = "Leadership"
 gov_req       = "Monarchy"
 obsolete_by   = "Riflemen"
-convert_to    = "Partisan"
+convert_to    = "Migrants"
 convert_time  = 2
 graphic       = "u.streltsy"
 graphic_alt   = "u.musketeers"
@@ -2167,7 +2170,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Fanatic", "Capturer", "Only_Native_Attack"
+flags         = "Fanatic", "Capturer", "Light Shells", "Only_Native_Attack"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 bonuses       =
    { "flag", "type", "value"
@@ -2461,7 +2464,7 @@ This unit cannot move across swamps, glaciers, or mountains,\
 [unit_crusaders]
 name          = _("Crusaders")
 class         = "Heavy Cavalry"
-tech_req      = "Fundamentalism"
+tech_req      = "Hastilude"
 impr_req       = "Jousting Tiltyard"
 obsolete_by   = "Dragoons"
 graphic       = "u.crusaders_horse"
@@ -2473,7 +2476,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 25
 pop_cost      = 0
 attack        = 5
-defense       = 1
+defense       = 2
 hitpoints     = 16
 firepower     = 1
 move_rate     = 3
@@ -2766,7 +2769,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
-flags         = "CityBuster", "Only_Native_Attack"
+flags         = "CityBuster", "Only_Native_Attack", "Capturable"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Battering ram is an excellent unit for besieging cities, even those with city walls (but cannot occupy city itself).\
@@ -2802,7 +2805,7 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
-flags         = "CityBuster", "OneAttack"
+flags         = "CityBuster", "OneAttack", "Capturable"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 The artillery is a very strong direct fire attacker but equally weak defender\
@@ -2837,7 +2840,7 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
-flags         = "CityBuster", "OneAttack"
+flags         = "CityBuster", "OneAttack", "Capturable"
 roles         = "AttackStrongStartUnit"
 bonuses       =
    { "flag", "type", "value"
@@ -2948,7 +2951,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 2
-flags         = "Bombarder", "IgWall"
+flags         = "Bombarder", "IgWall", "Capturable"
 roles         = ""
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -2988,7 +2991,7 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 2
-flags         = "Bombarder", "IgWall"
+flags         = "Bombarder", "IgWall", "Light Shells", "Capturable"
 roles         = ""
 helptext      = _("\
 Cannons are large firearms that can fire heavy projectiles over long\
@@ -3029,7 +3032,7 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
-flags         = "Bombarder", "IgWall", "Light Shells"
+flags         = "Bombarder", "IgWall", "Light Shells", "Capturable"
 roles         = ""
 helptext      = _("\
 Howitzers are upgraded cannons with improved fire power and\
@@ -3504,7 +3507,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 50
 pop_cost      = 0
 attack        = 4
-defense       = 2
+defense       = 3
 hitpoints     = 10
 firepower     = 2
 move_rate     = 8
@@ -3517,6 +3520,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
+targets       = "Helicopter"
 flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC", "IgWall"
 roles         = ""
 helptext      = _("\
@@ -3551,18 +3555,19 @@ sound_fight_alt = "f_generic"
 build_cost    = 75
 pop_cost      = 0
 attack        = 5
-defense       = 3
+defense       = 5
 hitpoints     = 20
 firepower     = 3
 move_rate     = 10
 ; range 100
 vision_radius_sq = 14
-transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
+targets       = "Helicopter"
+transport_cap = 1
 cargo         = "Infantry", "Small Land", "Light Cavalry"
 flags         = "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
@@ -4207,7 +4212,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "NonMil", "NoVeteran", "HasNoZOC"
+flags         = "NonMil", "NoVeteran", "HasNoZOC", "Capturable"
 roles         = "Ferryboat"
 helptext      = _("\
 Raft is a rudimentary form of transport, limited to the rivers, lakes and fortresses only,\
@@ -4250,6 +4255,46 @@ Canoe made from hollowed trunk is a stone age form of\
  Canoe can go along rivers or coast, not able to go far into Ocean.\
 ")
 
+[unit_trireme]
+name          = _("Trireme")
+class         = "Coaster"
+tech_req      = "Map Making"
+obsolete_by   = "Aak"
+graphic       = "u.trireme"
+graphic_alt   = "-"
+sound_move    = "m_trireme"
+sound_move_alt = "m_generic"
+sound_fight   = "f_trireme"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 2
+defense       = 2
+hitpoints     = 15
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 6
+transport_cap = 2
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 2
+uk_gold       = 1
+cargo         = "Infantry", "Small Land", "Merchant"
+flags         = "BadCityDefender", "Trireme"
+roles         = "Ferryboat", "FerryStartUnit"
+veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
+veteran_raise_chance      = 50, 33, 20, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0
+veteran_power_fact        = 100, 125, 150, 175, 200
+veteran_move_bonus        = 0, 0, 1, 1, 2
+helptext      = _("\
+The Trireme is your first regular boat unit. It can act\
+ as a transport ship and has rudimentary offensive\
+ capabilities, and can travel on\
+ rivers and along the coastline, but it may not enter into far ocean tiles.\
+")
+
 [unit_aak]
 name          = _("Aak")
 class         = "Coaster"
@@ -4276,7 +4321,7 @@ uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 cargo         = "Infantry", "Light Cavalry", "Small Land", "Merchant"
-flags         = "BadCityDefender", "NonMil", "HasNoZOC", "Trireme";, "Capturable"
+flags         = "BadCityDefender", "NonMil", "HasNoZOC", "Trireme", "Capturable"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4316,7 +4361,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
-flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC", "Trireme"
+flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC", "Trireme", "Capturable"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4356,7 +4401,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Suicidal", "Wheeled Unit", "Riverboat"
-flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC", "Trireme"
+flags         = "Settlers", "BadCityDefender", "Transform", "NonMil", "HasNoZOC", "Trireme", "Capturable"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4368,46 +4413,6 @@ Diesel barge can transport land units, also big ones, along or across rivers or 
  use transport ship instead.
 "), _("\
 Barges can also clean pollution and fallout on water tiles, or transform tiles with rivers.\
-")
-
-[unit_trireme]
-name          = _("Trireme")
-class         = "Coaster"
-tech_req      = "Map Making"
-obsolete_by   = "Aak"
-graphic       = "u.trireme"
-graphic_alt   = "-"
-sound_move    = "m_trireme"
-sound_move_alt = "m_generic"
-sound_fight   = "f_trireme"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 2
-defense       = 2
-hitpoints     = 15
-firepower     = 1
-move_rate     = 5
-vision_radius_sq = 6
-transport_cap = 2
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 2
-uk_gold       = 1
-cargo         = "Infantry", "Small Land", "Merchant"
-flags         = "BadCityDefender", "Trireme"
-roles         = "Ferryboat", "FerryStartUnit"
-veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("badger")
-veteran_raise_chance      = 50, 33, 20, 10, 0
-veteran_work_raise_chance = 0, 0, 0, 0, 0
-veteran_power_fact        = 100, 125, 150, 175, 200
-veteran_move_bonus        = 0, 0, 1, 1, 2
-helptext      = _("\
-The Trireme is your first regular boat unit. It can act\
- as a transport ship and has rudimentary offensive\
- capabilities, and can travel on\
- rivers and along the coastline, but it may not enter into far ocean tiles.\
 ")
 
 [unit_galley]
@@ -4681,7 +4686,7 @@ uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Wheeled Unit", "Merchant"
-flags         = "BadCityDefender", "HasNoZOC"
+flags         = "BadCityDefender", "HasNoZOC", "Capturable"
 roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4722,7 +4727,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Suicidal", "Wheeled Unit"
-flags         = "BadCityDefender", "NonMil", "HasNoZOC";, "Capturable"
+flags         = "BadCityDefender", "NonMil", "HasNoZOC", "Capturable"
 roles         = "Ferryboat", "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4761,7 +4766,7 @@ uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
 cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Suicidal", "Wheeled Unit", "Hovercraft"
-flags         = "Settlers", "BadCityDefender", "HasNoZOC"
+flags         = "Settlers", "BadCityDefender", "HasNoZOC", "Capturable"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
 veteran_work_raise_chance = 1, 0, 0, 0, 0

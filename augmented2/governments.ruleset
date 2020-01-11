@@ -679,6 +679,8 @@ name      = _("Liberal Economy")
 ;         "Tech", "Economy", "Player"
 ;         "Building", "Slavery Abolition", "Player"
 ;       }
+graphic     = "gov.republic"
+graphic_alt = "-"
 start     = 0
 stop      = 2
 step      = 1
@@ -711,6 +713,8 @@ name      = _("Collective Economy")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "Communism", "Player"
 ;       }
+graphic     = "gov.communism"
+graphic_alt = "-"
 start     = 0
 stop      = 2
 step      = 1
@@ -727,6 +731,8 @@ name      = _("Welfare Policy")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "Socialism", "Player"
 ;       }
+graphic     = "gov.democracy"
+graphic_alt = "-"
 start     = 0
 stop      = 2
 step      = 1
@@ -745,6 +751,8 @@ name      = _("Enlightening Policy")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "University", "Player"
 ;       }
+graphic     = "gov.federation"
+graphic_alt = "gov.democracy"
 start     = 0
 stop      = 2
 step      = 1
@@ -764,6 +772,8 @@ name      = _("Religious Orthodoxy")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "Mysticism", "Player"
 ;       }
+graphic     = "gov.fundamentalism"
+graphic_alt = "gov.despotism"
 start     = 0
 stop      = 2
 step      = 1
@@ -782,6 +792,8 @@ name      = _("National Pride")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "Feudalism", "Player"
 ;       }
+graphic     = "gov.despotism"
+graphic_alt = "-"
 start     = 0
 stop      = 2
 step      = 1
@@ -790,6 +802,6 @@ default   = 0
 helptext  = _("\
 Each step of National Pride increase bribe cost and incite revolt cost twice, \
 but also increase unhapiness caused by mixed nationality by 50% and decrease luxury output by 20%. \
-Available for any government, in case of Fascism any Small Land militry unit gain additional veterancy level.\
+Available for any government, in case of Fascism any Small Land military unit gain additional veterancy level.\
 ")
 
