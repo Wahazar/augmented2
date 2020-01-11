@@ -52,4 +52,5 @@ sprites =
 		"b.monk_monastery", "augmented2/wonders/monk_monastery_3dman_eu"
 		"b.moai_statues", "augmented2/wonders/moai_statues"
 		"b.colosseum_wonder", "augmented2/wonders/colosseum_wonder"
+		"b.fusion_plant", "augmented2/wonders/tokamak"
 	}

@@ -44,4 +44,5 @@ sprites =
 		"b.jousting_tiltyard", "augmented2/wonders_small/jousting_tiltyard_s"
 		"b.monk_monastery", "augmented2/wonders_small/monk_monastery_s"
 		"b.moai_statues", "augmented2/wonders_small/moai_statues_s"
+		"b.fusion_plant", "augmented2/wonders_small/tokamak_s"
 	}

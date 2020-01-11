@@ -3,7 +3,7 @@ options = "+Freeciv-2.6-modpack"
 baseURL = "http://149.156.194.203/~mczapkie/fc/augmented/"
 name = "augmented2"
 type = "Modpack"
-version = "2.6.lt11"
+version = "2.6.lt14"
 
 [files]
 list =
@@ -369,6 +369,7 @@ list =
   "augmented2/wonders/Fushimi_Inari.png"
   "augmented2/wonders/jousting_tiltyard.png"
   "augmented2/wonders/moai_statues.png"
+  "augmented2/wonders/tokamak.png"
   "augmented2/wonders/colosseum_wonder.png"
   "augmented2/wonders_small/Angkor_Wat_s.png"
   "augmented2/wonders_small/DARPA_s.png"
@@ -398,6 +399,7 @@ list =
   "augmented2/wonders_small/osaka_castle_s.png"
   "augmented2/wonders_small/fushimi_inari_s.png"
   "augmented2/wonders_small/moai_statues_s.png"
+  "augmented2/wonders_small/tokamak_s.png"
   "doc/culture.xls",       "augmented2/doc/culture.xls"
   "doc/govs.xls",          "augmented2/doc/govs.xls"
   "doc/units_lowcost.xls", "augmented2/doc/units_lowcost.xls"
