@@ -99,4 +99,5 @@ tiles = { "row", "column","tag"
   8, 1, "a.welding_technology"
   8, 2, "a.sailing"
   8, 3, "a.shamanism"
+  8, 3, "a.copper_working"
 }

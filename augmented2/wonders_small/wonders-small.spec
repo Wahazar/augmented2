@@ -45,4 +45,5 @@ sprites =
 		"b.monk_monastery", "augmented2/wonders_small/monk_monastery_s"
 		"b.moai_statues", "augmented2/wonders_small/moai_statues_s"
 		"b.fusion_plant", "augmented2/wonders_small/tokamak_s"
+		"b.geoglyph", "augmented2/wonders_small/geoglyph_s"
 	}

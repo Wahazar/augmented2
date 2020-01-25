@@ -1667,9 +1667,8 @@ removal_time   = 0
 conflicts      = "Mine", "Oil Well"
 ; /* xgettext:no-c-format */
 helptext       = _("\
-Once Refrigeration is known, irrigation systems can be upgraded to\
- farmland by irrigating them a second time; if the city working the tile\
- has a Supermarket, a farmland tile provides 50% more food.\
+Once Chemical Synthesis is known, irrigation systems can be upgraded to\
+ farmland by irrigating them a second time (except of Desert).\
 "), _("\
 Farmland on a tile prevents any trade bonus from Super Highways.\
 "), _("\

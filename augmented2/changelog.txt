@@ -3,6 +3,14 @@ Augmented2 Ruleset for Freeciv v2.6
 =================================
 
 2.6.lt14
+Tokamak wonder
+Geoglyph wonder
+Tech tree reworked, Copper Working added
+Warriors added, sprites changed
+Supermarket as granary bonus
+Custom max rates for AI
+
+2.6.lt14
 Terrain transform locked if Wind Turbine or Waterlock present
 Capturable civilian transport ships/barges
 Conversion of pop-cost units to migrants

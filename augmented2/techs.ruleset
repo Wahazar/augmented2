@@ -77,7 +77,7 @@ req2     = "Carpentry"
 flags    = ""
 graphic     = "a.absolutism"
 graphic_alt = "-"
-cost     = 20
+cost     = 22
  
 [advance_advanced_flight]
 name     = _("Advanced Flight")
@@ -109,7 +109,7 @@ graphic_alt = "-"
 helptext = _("\
 Allows irrigation if tile adjacent to fresh water (river, lake, swamp or other irrigation).\
 ")
-cost     = 12
+cost     = 15
 
 [advance_alchemy]
 name     = _("Alchemy")
@@ -175,7 +175,7 @@ req2     = "Mathematics"
 flags    = ""
 graphic     = "a.astrology"
 graphic_alt = "-"
-cost     = 90
+cost     = 110
 
 [advance_astronomy]
 name     = _("Astronomy")
@@ -184,7 +184,7 @@ req2     = "Glass Working"
 flags    = ""
 graphic     = "a.astronomy"
 graphic_alt = "-"
-cost     = 160
+cost     = 170
 
 [advance_atomic_theory]
 name     = _("Atomic Theory")
@@ -245,15 +245,15 @@ helptext = _("Allows roads to be built on river tiles.")
 
 [advance_bronze_working]
 name     = _("Bronze Working")
-req1     = "Forestry"
-req2     = "Agricultural Farming"
+req1     = "Copper Working"
+req2     = "Carpentry"
 flags    = ""
 graphic     = "a.bronze_working"
 graphic_alt = "-"
 helptext = _("\
 Allows making mines.\
 ")
-cost     = 18
+cost     = 28
 
 [advance_buddhism]
 name     = _("Buddhism")
@@ -421,7 +421,7 @@ cost     = 450
 
 [advance_construction]
 name     = _("Construction")
-req1     = "Masonry"
+req1     = "Writing"
 req2     = "Iron Working"
 flags    = ""
 graphic     = "a.construction"
@@ -430,6 +430,18 @@ helptext = _("\
 Allows Settlers, Migrants, Slaves, Workers and Engineers to build fortresses.\
 ")
 cost     = 60
+
+[advance_copper_working]
+name     = _("Copper Working")
+req1     = "Agricultural Farming"
+req2     = "Warrior Code"
+flags    = ""
+graphic     = "a.copper_working"
+graphic_alt = "a.bronze_working"
+helptext = _("\
+Allows making mines, obsoletes Tribe Hut.\
+")
+cost     = 20
 
 [advance_craft_guilds]
 name     = _("Craft Guilds")
@@ -442,7 +454,7 @@ cost     = 140
 
 [advance_currency]
 name     = _("Currency")
-req1     = "Bronze Working"
+req1     = "Copper Working"
 req2     = "Alphabet"
 flags    = ""
 graphic     = "a.currency"
@@ -790,11 +802,11 @@ cost     = 130
 [advance_iron_working]
 name     = _("Iron Working")
 req1     = "Bronze Working"
-req2     = "Warrior Code"
+req2     = "Masonry"
 flags    = ""
 graphic     = "a.iron_working"
 graphic_alt = "-"
-cost     = 30
+cost     = 40
 
 [advance_islam]
 name     = _("Islam")
@@ -813,7 +825,7 @@ req2     = "Astrology"
 flags    = ""
 graphic     = "a.jainism"
 graphic_alt = "-"
-cost     = 120
+cost     = 140
 
 [advance_jet_propulsion]
 name     = _("Jet Propulsion")
@@ -939,7 +951,7 @@ cost     = 80
 [advance_masonry]
 name     = _("Masonry")
 req1     = "Carpentry"
-req2     = "Bronze Working"
+req2     = "Copper Working"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
@@ -966,12 +978,12 @@ cost     = 1150
 
 [advance_mathematics]
 name     = _("Mathematics")
-req1     = "Masonry"
+req1     = "Construction"
 req2     = "Simple Machines"
 flags    = ""
 graphic     = "a.mathematics"
 graphic_alt = "-"
-cost     = 70
+cost     = 90
 
 [advance_medicine]
 name     = _("Medicine")
@@ -1186,12 +1198,12 @@ cost     = 30
 
 [advance_pottery]
 name     = _("Pottery")
-req1     = "Fire Making"
-req2     = "Creative Art"
+req1     = "Forestry"
+req2     = "None"
 flags    = ""
 graphic     = "a.pottery"
 graphic_alt = "-"
-cost     = 10
+cost     = 12
 
 [advance_printing_press]
 name     = _("Printing Press")
@@ -1318,11 +1330,11 @@ cost     = 2250
 [advance_saddle_stirrup]
 name     = _("Saddle Stirrup")
 req1     = "Pastoralism"
-req2     = "Warrior Code"
+req2     = "Copper Working"
 flags    = ""
 graphic     = "a.saddle_stirrup"
 graphic_alt = "-"
-cost     = 35
+cost     = 38
 
 [advance_sailing]
 name     = _("Sailing")
@@ -1427,7 +1439,7 @@ req2     = "Iron Working"
 flags    = ""
 graphic     = "a.simple_machines"
 graphic_alt = "-"
-cost     = 40
+cost     = 55
 
 [advance_slave_trade]
 name     = _("Slave Trade")

@@ -104,6 +104,8 @@ sound		= "b_colosseum"
 sound_alt	= "b_generic"
 helptext	= _("\
 Increase luxury output of a city by 50% \
+"), _("\
++1 Culture Point/turn.\
 ")
 
 [building_amphitheater]
@@ -127,6 +129,8 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Entertains the citizens of a city by adding 3 luxury points.\
  The discovery of Cinematography reduces the luxury bonus to 2 points.
+"), _("\
++1Culture Point/turn (additional one if Shakespeare's Theatre exists)\
 ")
 
 [building_airport]
@@ -489,6 +493,8 @@ A Cathedral makes 3 unhappy citizens content in a city. The addition of\
  citizens made unhappy by aggression.  The addition of J.S. Bach's Cathedral\
  (small wonder) brings additional entertainer specialist, except when in Communism\
  government.\
+"), _("\
++2 Culture Points/turn (additional one if Michelangelo's Chapel exists).\
 ")
 
 [building_cement_plant]
@@ -580,6 +586,8 @@ helptext	= _("\
 Makes 2 unhappy citizens content. Does not affect citizens made unhappy\
  by aggression. Knowledge of Theology increases the effect of a Church,\
  making an additional unhappy citizen content, except under Communism.
+"), _("\
++1 Culture Point/turn.\
 ")
 
 [building_city_walls]
@@ -764,6 +772,31 @@ TIP2: Granary is mandatory for Rapture growth under First Republic,\
  Direct Democracy or Legalism governments.\
 ")
 
+[building_geoglyph]
+name        = _("Geoglyph")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Creative Art", "Player"
+    }
+graphic	= "b.geoglyph"
+graphic_alt	= "a.alphabet"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Monotheism", "Player"
+      "Building", "City Hall", "City"
+    }
+build_cost	= 30
+upkeep		= 0
+sabotage	= 100
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+Giant geoglyph add 2 luxury points to the city where it is located.\
+"), _("\
++1 Culture Point/turn.\
+")
+
 [building_harbour]
 name        = _("Harbor")
 rule_name   = "Harbour"     ; en_GB spelling used originally
@@ -903,6 +936,8 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the science output in a city by 75%, or 150% once the\
  Great Library (great wonder) has been built by any player.\
+"), _("\
++1Culture Point/turn (additional one with player's Atlantic Telegraph Company).\
 ")
 
 [building_madrasa]
@@ -932,6 +967,8 @@ The total bonus is 100% if a Library is present.\
 "), _("\
 If Taj Mahal (great wonder) was build by allied player, each Madrasa makes one unhappy citizen content \
 (does not affect citizens made unhappy by aggression)\
+"), _("\
++1 Culture Point/turn.\
 ")
 
 [building_manufacture]
@@ -1071,7 +1108,10 @@ helptext	= _("\
 A Mosque makes 2 unhappy citizen content (3 with Madrasa and allied Taj Mahal wonder). \
 Together with allied Kaaba, Mosque makes also content 0...2 citizen unhappy due to aggression, \
 depending on Religious Orthodoxy policy settings.\
+"), _("\
++1 Culture Point/turn.\
 ")
+
 
 [building_nuclear_plant]
 name		= _("Nuclear Plant")
@@ -1223,7 +1263,10 @@ Palace is required for any centralized government! Start building it before\
 Capital city with a Palace gains an additional 4 luxury points (except for\
  Communism). There is no science penalty for city with Palace in case of\
  Tribal or Despotism governments.\
+"), _("\
++2 Culture Points/turn.\
 ")
+
 
 [building_ecclesiastical_palace]
 name		= _("Ecclesiastical Palace")
@@ -1265,6 +1308,8 @@ The city where this palace is located cannot be incited to revolt,\
 "), _("\
 Under Despotism the city containing the palace gains a +75% gold bonus,\
  and under Monarchy a +50% gold bonus.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_palisade]
@@ -1500,6 +1545,8 @@ The total bonus is 225% if a Library, a University and a Research\
 "), _("\
 Research Lab requires a clean environment and cannot be established\
  in a city, where Steel Mill or Cement Plant is working.\
+"), _("\
++2 Culture Points/turn (additional one with player's Large Hadron Collider).\
 ")
 
 [building_river_embankments]
@@ -1656,7 +1703,7 @@ Temple improvement: make additional 1 unhappy citizen content. Not \
 cumulative with Temple of Artemis (small wonder) or Temple of City \
 God (small wonder), but cumulative with Golden Temple (great wonder). \
 If allied player founded Kyoto Fushimi Inari (great wonder), up to two additional content citizens are happy, \
-depending on Religious Orthodoxy policy settings.\
+depending on Religious Orthodoxy policy settings, and 1 Culture Point is earned each turn.\
 ")
 
 [building_solar_plant]
@@ -1904,8 +1951,7 @@ sabotage	= 100
 sound		= "b_supermarket"
 sound_alt	= "b_generic"
 helptext	= _("\
-Decrease food waste from tiles with Farmland.\n\
-Farmland tiles are those which have been irrigated a second time (Chemical Synthesis required).\
+Together increase Granary effect for cities larger than size 7.\
 "),
 _("\
 Together with Railway Station or Port Facility, increases the tax output in a city by 25%.\
@@ -1942,6 +1988,8 @@ Communism). Does not affect citizens made unhappy by aggression.\
 _("\
 Shrine Torii, Temple of City God or Golden Temple also make additional unhappy citizen content, \
 but not cumulative with Temple of Artemis.\
+"), _("\
++1 Culture Point/turn.\
 ")
 
 [building_textille_mill]
@@ -1995,6 +2043,8 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Entertains the citizens of a city, adding 2 luxury points. \
  (4 after the discovery of Cinematography.) 
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_water_treatment]
@@ -2067,6 +2117,8 @@ Increases the science output in a city by an additional 75%, or \
 by 150% once Isaac Newton's College has been built by any player.\
 "), _("\
 Notice: under Fundamentalism government, University output is dimnished to 25% (or 100% with Isaac Newton College).\
+"), _("\
++2 Culture Points/turn (additional one with player's Pasteur Institute).\
 ")
 
 [building_yasir]
@@ -2120,7 +2172,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Player building it gets an embassy with all players.\
 "), _("\
-Any player's city with Library will gain additional culture point per turn.\
++1 Culture Point/turn, and any player's city with Library will gain additional culture point per turn.\
 ")
 
 [building_colosseum]
@@ -2149,6 +2201,8 @@ additionally in case of First Republic, \
 add one veteran level to  any Legion or Swordsmen unit.\
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_copernicus_observatory]
@@ -2173,6 +2227,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Each tile worked by the city where this wonder is built produces \
 one extra research point.\
+"), _("\
++4 Culture Points/turn.\
 ")
 
 [building_DARPA]
@@ -2199,6 +2255,8 @@ Defense Advanced Research Projects Agency upgrades additionally second obsolete 
  (Warfrare Museum prohibit any autoupgrades).\n\
 Big Land military units have Veteran level instead of Recruits, if builded in Workshop Barracks.\n\
 DARPA is also required to build Internet.\
+"), _("\
++5 Culture Points/turn.\
 ")
 
 [building_ecole_speciale_militaire]
@@ -2223,6 +2281,8 @@ helptext	= _("\
 Ecole speciale militaire de Saint-Cyr was founded by Napoleon Bonaparte, with given motto: 'study to win'.\n\
 All your new infantry, cavalry, reconnaissance or wheeled units start with an additional veteran level \
 (this is cumulative with any Barracks/Stables veteran effect).\
+"), _("\
++3 Culture Points/turn.\
 ")
 
 [building_eiffel_tower]
@@ -2249,6 +2309,8 @@ Each tile around the city where this wonder is built that is already\
 "), _("\
 It also increase radius of your city influence and vision, \
 if this building is located together with Railway Station (not cumulative with Mass Transit or Port Facility).\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 
@@ -2291,6 +2353,8 @@ entirely).\
 The city where this palace is located cannot be incited to revolt, \
 and enjoys a bonus when enemy agents try to evade your own agents \
 stationed in the city, or sabotage your buildings.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_global_positioning_system]
@@ -2315,6 +2379,8 @@ sound		= "w_apollo_program"
 sound_alt	= "w_generic"
 helptext	= _("\
 Reveal all map.\
+"), _("\
++6 Culture Points/turn.\
 ")
 
 [building_hanging_gardens]
@@ -2340,6 +2406,8 @@ Makes one unhappy citizen content in every city of the player that \
 owns it (not including citizens unhappy about aggression). This wonder \
 also makes two content citizens happy in the city where it is located \
 (4 extra luxury points).\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_hollywood]
@@ -2373,6 +2441,8 @@ With Television advance, entertainer specialists' luxury \
 output increases to 3 for player's nation.\
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
+"), _("\
++10 Culture Points/turn.\
 ")
 
 [building_js_bachs_cathedral]
@@ -2405,6 +2475,8 @@ helptext	= _("\
 Makes 0...2 (depending on Religious Othodoxy policy setting) additional \
 content citizen happy for every player's Church \
 and 2 extra luxury points per city with Cathedral (not under Communism gov.) \
+"), _("\
++6 Culture Points/turn.\
 ")
 
 [building_jousting_tiltyard]
@@ -2433,6 +2505,8 @@ Add 2 luxury points to your capital and allow building Crusaders here. \
 Additionally in case of Monarchy, increase luxury output of a capital city by 50% \
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
+"), _("\
++1 Culture Point/turn.\
 ")
 
 [building_khajuraho_temple]
@@ -2462,6 +2536,8 @@ helptext	= _("\
 This building keep effect of Rapture Growth in the city where it is founded\
  (together with Granary and Temple, under any government except of Democracy, Communism or Fascism),\n\
  even if Monotheism advance is already known to the player.\
+"), _("\
++3 Culture Points/turn.\
 ")
 
 [building_king_richards_crusade]
@@ -2498,6 +2574,8 @@ unhappiness caused by a single military unit (except under Democracy, \
 where a single unit makes two citizens unhappy). Under governments \
 where unit upkeep is paid in gold, it gives two free gold per city \
 towards upkeep every turn.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_leonardos_workshop]
@@ -2525,6 +2603,8 @@ Warfrare Museum prohibit any autoupgrades.
 "),
 _("\
 Additional veteran level for any Wheeled Unit.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_lighthouse]
@@ -2553,6 +2633,8 @@ your cities).\
 "), _("\
 In case of Thalassocracy goverment, Harbor food production in the city with Lighthouse \
 is increased also for Deep Ocean tiles (similar to Port Facility effect).
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_magellans_expedition]
@@ -2579,6 +2661,8 @@ helptext	= _("\
 Gives all your sea units 1 additional movement point. The chance\
  of a sea unit getting the next veteran level after a battle\
  increases by half.\
+"), _("\
++4 Culture Points/turn.\
 ")
 
 [building_massachusetts_institute_of_technology]
@@ -2604,6 +2688,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Gives 4 extra research points every turn to its city. \n\
 Increase science bonus from Research Lab by 25% \
+"), _("\
++6 Culture Points/turn.\
 ")
 
 [building_moai_statues]
@@ -2632,6 +2718,8 @@ These giant stone statues give your citizens courage to explore unknown lands. \
 They are able to build unique Kon-Tiki raft, the first vessel capable to to enter Deep Ocean.\n\
 Additionally, gives all your Coasters units 1 additional movement point \
 (except while moving on rivers, not cumulative with Lighthouse).\
+"), _("\
++1 Culture Point/turn.\
 ")
 
 [building_monk_monastery]
@@ -2662,6 +2750,8 @@ Gives 4 extra research points every turn to its city if there is no University. 
 If Leshan Buddha Statue was built on same continent, \
 additional one unhappy citizen become content \
 (does not affect citizens made unhappy by aggression)\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_mobile-x-ray]
@@ -2685,6 +2775,8 @@ sound		= "w_cure_for_cancer"
 sound_alt	= "w_generic"
 helptext	= _("\
 Increase healing of small land or infantry units by 50%, including those not fortified.\
+"), _("\
++4 Culture Points/turn.\
 ")
 
 [building_pyramids]
@@ -2714,6 +2806,8 @@ In above case, celebrating cities with Granary and size 3 or above will be subje
 (this effect is cancelled by Monotheism).\
 "), _("\
 Additionally, 1 extra luxury point is added to the city with Pyramids.\
+"), _("\
++3 Culture Points/turn.\
 ")
 
 [building_slavery_abolition]
@@ -2744,6 +2838,8 @@ Also inctite cost in case of Democracy and bribing cost in case of Republic is i
 Side effect: decreased gold income from gold and diamond mines. 
 "), _("\
 Note: Slavery Abolition is a prerequisite for Women's Suffrage.\
+"), _("\
++6 Culture Points/turn.\
 ")
 
 [building_space_lift]
@@ -2769,6 +2865,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Space lift allow to cheap transport of heavy components from Earth to geostationary orbit. \n\
 This facility is required to produce space ship structural components.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_sultan_palace]
@@ -2811,6 +2909,8 @@ and enjoys a bonus when enemy agents try to evade your own agents \
 stationed in the city, or sabotage your buildings.\
 "), _("\
 Sultan Palace is a prerequisite to get Fundamentalism effect of `tithes` (gold) from sacral buildings.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_statue_of_zeus]
@@ -2846,6 +2946,8 @@ units owned by the city by 1 -- in other words, it neutralizes the \
 unhappiness caused by a single military unit (except under Democracy, \
 where a single unit makes two citizens unhappy). Each city also avoids \
 one shield of upkeep for units.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_sun_tzus_war_academy]
@@ -2872,6 +2974,8 @@ helptext	= _("\
 All your new infantry, cavalry or reconnaissance units start with an additional veteran level \
 (this is cumulative with any Barracks building in a city; with both, units \
 are created as Hardened).\
+"), _("\
++3 Culture Points/turn.\
 ")
 
 [building_temple_of_artemis]
@@ -2901,6 +3005,8 @@ helptext	= _("\
 Makes 0...2 additional unhappy citizens content in every city with \
 a Temple, depending on Religious Othodoxy policy setting, and additionally one content citizen in city where is located. \
 Does not affect citizens made unhappy by aggression.\
+"), _("\
++3 Culture Points/turn.\
 ")
 
 [building_temple_of_city_god]
@@ -2928,6 +3034,8 @@ Makes 0..2 (depending on Religious Othodoxy policy setting) unhappy citizens con
 a Temple without Shrine Torii. Does not affect citizens made unhappy by aggression.\n\
 In a city with this building, tax collector specialists' gold output \
 increases to 3.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_thermal_bath]
@@ -2950,6 +3058,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Add 1 luxury point to the city where is located and each river tile within city radius.\n\
 Thermal Bath reduces chance of plaque in any player's city with Lazaretto improvement by additional 10%.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_warfare_museum]
@@ -2975,6 +3085,8 @@ helptext	= _("\
 This building prevent autoupgrade with cost of veteran level \
 - keep obsoleted units even if Leonardo Workshop or DARPA is builded. \n\
 You can still upgrade units manually with cost of gold.\
+"), _("\
++3 Culture Points/turn.\
 ")
 
 [building_western_wall]
@@ -3003,6 +3115,8 @@ Add 50% defense for city, where it is builded (cumulative with City Walls, not c
 against any Land unit (except those with indirect fire).\n\
 Additionally, prayers going to the sacred site would generate extra trade from each tile around the city that is already \
 generating some trade.\
+"), _("\
++2 Culture Points/turn.\
 ")
 
 [building_womens_suffrage]
@@ -3030,6 +3144,8 @@ With Women's Suffrage and Democracy, celebrating cities produce an extra trade p
  already producing trade.\n\
 Similar effect for shields production occurs in case of Republic.\n\
 Beside this, regardless of government type, Women's Suffrage make 1 unhappy citizens content in each player's city.\
+"), _("\
++8 Culture Points/turn.\
 ")
 
 ; great wonders:
@@ -3778,7 +3894,7 @@ name		= _("Stonehenge")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Creative Art", "Player"
+      "Tech", "Alphabet", "Player"
     }
 graphic	= "b.stonehenge"
 graphic_alt	= "-"

@@ -53,4 +53,5 @@ sprites =
 		"b.moai_statues", "augmented2/wonders/moai_statues"
 		"b.colosseum_wonder", "augmented2/wonders/colosseum_wonder"
 		"b.fusion_plant", "augmented2/wonders/tokamak"
+		"b.geoglyph", "augmented2/wonders/geoglyph"
 	}

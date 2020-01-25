@@ -908,7 +908,7 @@ bombard_rate = 1
 [unit_archers]
 name          = _("Archers")
 class         = "Small Land"
-tech_req      = "Warrior Code"
+tech_req      = "Copper Working"
 obsolete_by   = "Marksman"
 graphic       = "u.archers"
 graphic_alt   = "-"
@@ -1775,10 +1775,41 @@ Ranger infantry units, equipped with machine guns and rocket-propelled grenade l
 They can also shoot down helicopters.\
 ")
 
+[unit_warriors]
+name          = _("Warriors")
+class         = "Infantry"
+tech_req      = "Warrior Code"
+obsolete_by   = "Skirmishers"
+graphic       = "u.warriors"
+graphic_alt   = "-"
+sound_move    = "m_warriors"
+sound_move_alt = "m_generic"
+sound_fight   = "f_warriors"
+sound_fight_alt = "f_generic"
+build_cost    = 10
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Only_Native_Attack"
+roles         = "DefendOkStartUnit", "Barbarian"
+helptext      = _("\
+Warriors are weak universal units and first which can be used to conquer enemy cities.\
+")
+
 [unit_skirmishers]
 name          = _("Skirmishers")
 class         = "Infantry"
-tech_req      = "Warrior Code"
+tech_req      = "Copper Working"
 obsolete_by   = "Legion"
 graphic       = "u.skirmishers"
 graphic_alt   = "u.warriors"
@@ -1803,7 +1834,7 @@ uk_gold       = 1
 flags         = "Capturer", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "Barbarian"
 helptext      = _("\
-Skirmishers are first offensive units, they are relative weak but can be used to conquer enemy cities.\
+Skirmishers are first offensive infantry units, these can be used to conquer enemy cities.\
 ")
 
 [unit_legion]

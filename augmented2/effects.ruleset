@@ -830,7 +830,6 @@ reqs    =
       "OutputType", "Food", "Local", TRUE
     }
 
-;augmented: no base waste if supermarket
 [effect_food_waste_democracy]
 type    = "Output_Waste"
 value   = 20
@@ -838,7 +837,7 @@ reqs    =
     { "type", "name", "range", "present", "quiet"
       "Gov", "Democracy", "Player", TRUE, TRUE
       "OutputType", "Food", "Local", TRUE, FALSE
-      "Building", "Supermarket", "City", FALSE, FALSE
+;      "Building", "Supermarket", "City", FALSE, FALSE
     }
 
 [effect_food_waste_distance_communism]
@@ -859,7 +858,6 @@ reqs    =
       "OutputType", "Food", "Local", FALSE
     }
 
-;augmented: no base waste if supermarket
 [effect_food_waste_fascism]
 type    = "Output_Waste"
 value   = 10
@@ -867,10 +865,9 @@ reqs    =
     { "type", "name", "range", "quiet", "present"
       "Gov", "Fascism", "Player", TRUE, TRUE
       "OutputType", "Food", "Local", TRUE, FALSE
-      "Building", "Supermarket", "City", FALSE, FALSE
+;      "Building", "Supermarket", "City", FALSE, FALSE
     }
 
-;augmented: no base waste if supermarket
 [effect_food_waste_federation]
 type    = "Output_Waste"
 value   = 20
@@ -878,7 +875,7 @@ reqs    =
     { "type", "name", "range", "present", "quiet"
       "Gov", "Federation", "Player", TRUE, TRUE
       "OutputType", "Food", "Local", TRUE, FALSE
-      "Building", "Supermarket", "City", FALSE, FALSE
+;      "Building", "Supermarket", "City", FALSE, FALSE
     }
 
 ; 0% food waste distance with Tribal
@@ -2403,28 +2400,83 @@ reqs    =
       "Gov", "Tribal", "Player"
     }
 
+;to avoid 0% sci
+[effect_max_rates_ai_cheating]
+type    = "Max_Rates"
+value   = 70
+reqs    =
+    { "type", "name", "range", "present"
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Federation", "Player", FALSE
+      "Gov", "Republic", "Player", FALSE
+      "Gov", "Direct Democracy", "Player", FALSE
+      "Gov", "Legalism", "Player", FALSE
+      "AI", "Cheating", "Player", TRUE
+    }
+
+[effect_max_rates_ai_hard]
+type    = "Max_Rates"
+value   = 60
+reqs    =
+    { "type", "name", "range", "present"
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Federation", "Player", FALSE
+      "Gov", "Republic", "Player", FALSE
+      "Gov", "Direct Democracy", "Player", FALSE
+      "Gov", "Legalism", "Player", FALSE
+      "AI", "Hard", "Player", TRUE
+    }
+
+[effect_max_rates_ai_normal]
+type    = "Max_Rates"
+value   = 60
+reqs    =
+    { "type", "name", "range", "present"
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Federation", "Player", FALSE
+      "Gov", "Republic", "Player", FALSE
+      "Gov", "Direct Democracy", "Player", FALSE
+      "Gov", "Legalism", "Player", FALSE
+      "AI", "Normal", "Player", TRUE
+    }
+
 [effect_max_rates_despotism]
 type    = "Max_Rates"
 value   = 90
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Despotism", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "Despotism", "Player", TRUE
+      "AI", "Cheating", "Player", FALSE
+      "AI", "Hard", "Player", FALSE
+      "AI", "Normal", "Player", FALSE
     }
 
 [effect_max_rates_monarchy]
 type    = "Max_Rates"
 value   = 80
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Monarchy", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "Monarchy", "Player", TRUE
+      "AI", "Cheating", "Player", FALSE
+      "AI", "Hard", "Player", FALSE
+      "AI", "Normal", "Player", FALSE
     }
 
 [effect_max_rates_communism]
 type    = "Max_Rates"
 value   = 90
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Communism", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "Communism", "Player", TRUE
+      "AI", "Cheating", "Player", FALSE
+      "AI", "Hard", "Player", FALSE
+      "AI", "Normal", "Player", FALSE
     }
 
 [effect_max_rates_fundamentalism]
@@ -2463,8 +2515,11 @@ reqs    =
 type    = "Max_Rates"
 value   = 80
 reqs    =
-    { "type", "name", "range"
-      "Gov", "First Republic", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "First Republic", "Player", TRUE
+      "AI", "Cheating", "Player", FALSE
+      "AI", "Hard", "Player", FALSE
+      "AI", "Normal", "Player", FALSE
     }
 
 [effect_max_rates_direct_democracy]
@@ -2479,8 +2534,11 @@ reqs    =
 type    = "Max_Rates"
 value   = 80
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Fascism", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "Fascism", "Player", TRUE
+      "AI", "Cheating", "Player", FALSE
+      "AI", "Hard", "Player", FALSE
+      "AI", "Normal", "Player", FALSE
     }
 
 [effect_max_rates_legalism]
@@ -4244,8 +4302,19 @@ reqs    =
 type    = "Growth_Food"
 value   = 25
 reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Granary", "City", TRUE
+      "Building", "Supermarket", "City", FALSE
+      "MinSize", "7", "City", TRUE
+    }
+
+[effect_granary_supermarket]
+type    = "Growth_Food"
+value   = 34
+reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
+      "Building", "Supermarket", "City"
       "MinSize", "7", "City"
     }
 
@@ -5140,26 +5209,27 @@ reqs    =
       "CityTile", "Center", "Local", TRUE
       "Extra", "Farmland", "Local", FALSE
       "TerrainAlter", "CanIrrigate", "Local", TRUE
-      "Building", "Supermarket", "City", TRUE
+      "Tech", "Chemical Synthesis", "Player", TRUE
       "OutputType", "Food", "Local", TRUE
       "Extra", "Mine", "Local", FALSE
       "Extra", "Oil Well", "Local", FALSE
     }
 
 ;augmented: 0% food distance waste with Supermarket
-[effect_supermarket_distance_waste]
-type    = "Output_Waste_By_Distance"
-value   = -1
-reqs    =
-    { "type", "name", "range", "present"
-      "Extra", "Farmland", "Local", TRUE
-      "Building", "Supermarket", "City", TRUE
-      "OutputType", "Food", "Local", TRUE
-      "Gov", "Anarchy", "Player", FALSE
-      "Gov", "Communism", "Player", FALSE
-      "Gov", "Tribal", "Player", FALSE
-      "Gov", "Democracy", "Player", FALSE
-    }
+;[effect_supermarket_distance_waste]
+;type    = "Output_Waste_By_Distance"
+;value   = -1
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Extra", "Farmland", "Local", TRUE
+;      "Building", "Supermarket", "City", TRUE
+;      "OutputType", "Food", "Local", TRUE
+;      "Gov", "Anarchy", "Player", FALSE
+;      "Gov", "Communism", "Player", FALSE
+;      "Gov", "Tribal", "Player", FALSE
+;      "Gov", "Democracy", "Player", FALSE
+;      "Gov", "Federation", "Player", FALSE
+;    }
 
 ;augmented: gold bonus from supermarket+railway station
 [effect_supermarket_gold]
@@ -6929,7 +6999,7 @@ reqs    =
 
 [effect_DARPA_culture]
 type    = "History"
-value	= 6
+value	= 5
 reqs	=
     { "type", "name", "range"
       "Building", "DARPA", "City"
@@ -8580,6 +8650,24 @@ reqs	=
       "Building", "Theatre Stage", "City"
     }
 
+[effect_geoglyph]
+type    = "Output_Add_Tile"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Geoglyph", "City"
+      "OutputType", "Luxury", "Local"
+      "CityTile", "Center", "Local"
+    }
+
+[effect_geoglyph_culture]
+type    = "History"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Geoglyph", "City"
+    }
+
 ;augmented:
 ; Every Land except of IgWall flag
 [effect_palisade_0]
@@ -8685,7 +8773,7 @@ reqs    =
 
 [effect_ecole_speciale_militaire_culture]
 type    = "History"
-value	= 4
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Ecole Speciale Militaire", "City"
@@ -8713,6 +8801,14 @@ reqs    =
       "Building", "Temple of City God", "City"
       "Specialist", "Taxman", "Local"
       "OutputType", "Gold", "Local"
+    }
+
+[effect_temple_of_city_god_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Temple of City God", "City"
     }
 
 [effect_uranium_nuclearplant]

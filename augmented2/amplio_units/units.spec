@@ -83,7 +83,7 @@ tiles = { "row", "column", "tag"
   0, 15, "u.knights"		; [BB]
   0, 16, "u.legion"		; [GB]
   0, 17, "u.mech_inf"		; [GB]
-  0, 18, "u.warriors"		; [GB]
+;  0, 18, "u.warriors"		; [GB]
   0, 19, "u.musketeers"		; [Alex] & [CT]
   1,  0, "u.nuclear"		; [Nemo] & [CS]
   1,  1, "u.phalanx"		; [GB] & [CT]
@@ -215,5 +215,8 @@ sprites =
 		"u.tactical_abm", "augmented2/amplio_units/freeciv-sam-patriot-3b"
 		"u.streltsy", "augmented2/amplio_units/streltsy_a"
 		"u.hovercraft", "augmented2/amplio_units/hovercraft_a"
+		"u.skirmishers", "augmented2/amplio_units/skirmishers_a"
+; swapped standard graphics
+		"u.warriors", "augmented2/amplio_units/warriors_a"
 	}
 
