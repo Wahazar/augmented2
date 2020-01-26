@@ -298,6 +298,7 @@ actor_reqs    =
     { "type",   "name", "range", "present"
       "UnitFlag", "Diplomat", "Local", TRUE
       "MinMoveFrags", "1", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local", TRUE
       "UnitType", "Corsairs", "Local", FALSE
       "UnitType", "Ninja Warriors", "Local", FALSE
       "UnitType", "Navy Seals", "Local", FALSE
