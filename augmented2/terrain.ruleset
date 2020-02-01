@@ -329,7 +329,7 @@ Shallow oceans are mostly found near coastlines, and are often rich\
 ;identifier           = "o"
 ;class                = "Oceanic"
 ;movement_cost        = 1
-;defense_bonus        = 0
+;defense_bonus        = 25
 ;food                 = 1
 ;shield               = 0
 ;trade                = 0
@@ -454,7 +454,7 @@ Glaciers are found only in the most northerly or southerly\
  reaches of the world.  They are very cold, and hence difficult to\
  work with.\
 "), _("\
-Land units (except of small ones, including Alpine Troops) can't move on Glaciers without roads.
+Land units (except of small ones, including Alpine Troops) can't move on Glaciers without appropriate roads.
 ")
 
 [terrain_desert]
@@ -553,7 +553,8 @@ helptext             = _("\
 Forests are densely wooded, making agriculture somewhat\
  problematic.\
 "), _("\
-Road or river and Forestry advance required to get additional production.\
+Road or river required to get additional production. \
+Paved road required for Wheeled units to move. \
 ")
 
 [terrain_taiga]
@@ -599,7 +600,8 @@ color.b              = 19
 helptext             = _("\
 Taiga are boreal forests with poor soil.\
 "), _("\
-Road or river and Forestry advance required to get additional production.\
+Road or river and Forestry advance required to get additional production. \
+Paved road required for Wheeled units to move. \
 ")
 
 [terrain_grassland]
@@ -635,7 +637,7 @@ warmer_wetter_result = "Swamp"
 warmer_drier_result  = "Plains"
 cooler_wetter_result = "Swamp"
 cooler_drier_result  = "Tundra"
-native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Wheeled Unit", "Hovercraft"
+native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Wheeled Unit", "Suicidal", "Hovercraft"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
 property_temperate   = 50
@@ -693,7 +695,7 @@ In addition to being amenable to agriculture, Hills are frequently\
 Cities built on hills are at risk of earthquakes, which can interrupt\
  a city's current project.\
 "), _("\
-Road or river required to get shield production.\
+Road or river required to get shield production. Paved road required for Wheeled units to move.\
 "), _("\
 Saltpeter add extra 2 trade points to Infantry Barracks II.\
 ")
@@ -741,11 +743,12 @@ color.g              = 156
 color.b              = 38
 helptext             = _("\
 Jungles are densely overgrown, making agriculture somewhat\
- problematic. Wheeled Units may not move into jungle without\
- a road.\
+ problematic, but substantially increase defense strength.\
+ Big Land and Wheeled Units may not move into jungle without\
+ a paved road.\
 "), _("\
 Road or river and Forestry advance required to get shield production, \
-Railroad and Railway Station for additional production.\
+Railroad and Railway Station for additional shield production.\
 "), _("\
 Elephants add extra 2 trade points to Mahout Barracks.\
 ")
@@ -797,7 +800,7 @@ Mountains are regions of extreme altitude, making agriculture and\
 Reconnaissance (Small Land) units that move into mountains can see an extra space, but a\
  fast land unit ending its turn in mountains without a road will start\
  its next turn with one fewer movement point. Land units (except small ones, including Alpine Troops) may not\
- move into mountains without a road.\
+ move into mountains without a appropriate road.\
 "), _("\
 Road is required to get shield production.\
 "), _("\
@@ -880,7 +883,7 @@ warmer_wetter_result = "Grassland"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Desert"
-native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Wheeled Unit", "Hovercraft"
+native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Wheeled Unit", "Suicidal", "Hovercraft"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
 property_temperate   = 50
@@ -911,9 +914,9 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 3
 road_time            = 8
-irrigation_result    = "Grassland"
+irrigation_result    = "yes"
 irrigation_food_incr = 1
-irrigation_time      = 48
+irrigation_time      = 24
 mining_result        = "Jungle"
 mining_shield_incr   = 0
 mining_time          = 32
@@ -938,8 +941,11 @@ color.g              = 85
 color.b              = 97
 helptext             = _("\
 Swamps suffer from an over-abundance of water, making agriculture\
- somewhat problematic. Big Land and Heavy Cavalry units may not move in swamps without\
- a road.\
+ somewhat problematic, but can be irrigated even without adjacent water source\
+ and therefore allow to irrigate adjancent terrain.\
+ It is not possible to make Farmland on Swamp.\
+ Big Land and Wheeled units may not move in swamps without\
+ a paved road, Heavy Cavalry require at least dirt road.\
 ")
 
 [terrain_tundra]
@@ -975,7 +981,7 @@ warmer_wetter_result = "Swamp"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "no"
-native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Hovercraft"
+native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter", "Wheeled Unit", "Suicidal", "Hovercraft"
 flags                = "NoBarbs", "CanHaveRiver"
 property_cold        = 50
 color.r              = 188
@@ -1414,10 +1420,13 @@ Building an irrigation system on a suitable tile causes it to\
  from an oasis. Requires knowldge of Agricultural Farming.\
 "), _("\
 Without knowledge of Electricity, irrigation requires a nearby source\
- of water: an ocean, lake, or river tile, or another tile with an\
+ of fresh water: lake, river, or another tile with an already existing\
  irrigation system, must share an edge (not just a corner) with the\
  target tile. However, once irrigated, land remains so even if the\
- water source is removed. Once Electricity is known, any suitable\
+ water source is removed. \
+ Swamp and Oasis can be irrigated without any adjacent water source.\
+ Once Electricity is known, sea tiles can also be a water source.\
+ Once Recycling is known, any suitable\
  tile may be irrigated without a water source.\
 "), _("\
 Building irrigation on a tile with a mine or oil well will destroy it.\

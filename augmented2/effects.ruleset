@@ -5200,7 +5200,7 @@ reqs    =
       "OutputType", "Food", "Local"
     }
 
-; Automatic farmland on city center
+; Automatic farmland on city center (but not for swamp)
 [effect_supermarket_center]
 type    = "Output_Per_Tile"
 value   = 50
@@ -5209,6 +5209,7 @@ reqs    =
       "CityTile", "Center", "Local", TRUE
       "Extra", "Farmland", "Local", FALSE
       "TerrainAlter", "CanIrrigate", "Local", TRUE
+      "Terrain", "Swamp", "Local", FALSE
       "Tech", "Chemical Synthesis", "Player", TRUE
       "OutputType", "Food", "Local", TRUE
       "Extra", "Mine", "Local", FALSE
@@ -5912,13 +5913,13 @@ reqs    =
       "Building", "Manhattan Project", "World", TRUE
     }
 
-[effect_manhattan_project_culture]
-type    = "History"
-value	= 6
-reqs	=
-    { "type", "name", "range"
-      "Building", "Manhattan Project", "City"
-    }
+;[effect_manhattan_project_culture]
+;type    = "History"
+;value	= 6
+;reqs	=
+;    { "type", "name", "range"
+;      "Building", "Manhattan Project", "City"
+;    }
 
 [effect_marco_polos_embassy]
 type    = "Have_Embassies"
@@ -6646,7 +6647,7 @@ type    = "Irrig_Possible"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "Terrain", "Swamp", "Adjacent", TRUE
+      "Terrain", "Swamp", "Local", TRUE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Coaster", "Local", FALSE
       "Tech", "Agricultural Farming", "Player", TRUE
@@ -6701,6 +6702,16 @@ reqs    =
       "Extra", "Irrigation", "Local", TRUE
       "Resource", "Oasis", "Local", FALSE
       "Extra", "River", "Local", FALSE
+    }
+
+;no farmland on swamps (convert to grassland for farmland)
+[effect_no_swamp_farmland_2]
+type    = "Irrig_Possible"
+value   = -4
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Swamp", "Local", TRUE
+      "Extra", "Irrigation", "Local", TRUE
     }
 
 [effect_mining]

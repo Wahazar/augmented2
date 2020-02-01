@@ -10,6 +10,8 @@ Warriors added, sprites changed
 Supermarket as granary bonus
 Custom max rates for AI
 Ships are unreachable, load/unload of artillery/tanks only in cities
+building order fix
+swamp self irrigate
 
 2.6.lt14
 Terrain transform locked if Wind Turbine or Waterlock present

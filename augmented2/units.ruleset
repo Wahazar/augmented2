@@ -4213,7 +4213,6 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
 flags         = "NonMil", "Capturable", "HasNoZOC"
-roles         = "DefendOkStartUnit"
 helptext      = _("\
 Balloons are your first units, which can move anywhere.\
  Usable for observation, or for protecting your cities against air raids.\
@@ -4333,16 +4332,11 @@ uk_gold       = 2
 targets       = "Sea", "Coaster"
 embarks       = "Sea"
 disembarks    = "Sea"
-flags         = "BadCityDefender", "Cant_Fortify" 
-veteran_names = _("beginner"), _("seasoned"), _("senior"), _("expert")
-veteran_raise_chance      = 50, 33, 20, 0
-veteran_work_raise_chance = 3, 2, 1, 0
-veteran_power_fact        = 100, 125, 150, 175
-veteran_move_bonus        = 0, 0, 1, 1
+flags         = "BadCityDefender", "Cant_Fortify", "NoVeteran"
 roles         = "Ferryboat"
 helptext      = _("\
-Hovercraft can carry one Infantry or Light Cavalry unit and are capable to go both on flat land or water areas. \
-They can be transported by ship, thus can be used as landing aid.\
+Hovercrafts can carry one Infantry or Light Cavalry unit and are capable to go both on flat land or water areas. \
+They can be transported by Transport ship, thus can be used as landing aid.\
 ")
 
 [unit_raft]
@@ -4377,7 +4371,7 @@ helptext      = _("\
 Raft is a rudimentary form of transport, limited to the rivers, lakes and fortresses only,\
  however it can be used to relatively fast transport of any land units, including these, which cannot move on some terrains without roads.\
 "), _("\
-TIP: Raft can be used as a temporary bridge (fortify it for anchor), but can be destroyed easily if not guarded.\
+TIP: Raft can be used as a temporary bridge (fortify it for anchor), but can be destroyed or captured easily if not guarded.\
 ")
 
 [unit_canoes]
