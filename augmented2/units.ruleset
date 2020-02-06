@@ -1,4 +1,3 @@
-; Modifying this file:
 ; You should not modify this file except to make bugfixes or
 ; for other "maintenance".  If you want to make custom changes,
 ; you should create a new datadir subdirectory and copy this file
@@ -642,7 +641,7 @@ Migrants can be used to transfer population to other cities, but\
 [unit_worker]
 name          = _("?unit:Workers")
 class         = "Small Land"
-tech_req      = "Animal Husbandry"
+tech_req      = "Forestry"
 obsolete_by   = "Builders"
 graphic       = "u.worker"
 graphic_alt   = "u.engineers" ; for compatibility
@@ -1325,13 +1324,13 @@ Spies built under Federation government will start\
 
 ;spec-ops
 
-[unit_explorer]
-name          = _("Explorer")
+[unit_scout]
+name          = _("Scout")
 class         = "Small Land"
-tech_req      = "Exploration"
-obsolete_by   = "Partisan"
-graphic       = "u.explorer"
-graphic_alt   = "-"
+tech_req      = "Animal Husbandry"
+obsolete_by   = "Explorer"
+graphic       = "u.scout"
+graphic_alt   = "u.explorer"
 sound_move    = "m_explorer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_explorer"
@@ -1340,7 +1339,7 @@ build_cost    = 15
 pop_cost      = 0
 attack        = 0
 defense       = 1
-hitpoints     = 10
+hitpoints     = 2
 firepower     = 1
 move_rate     = 2
 vision_radius_sq = 6
@@ -1355,21 +1354,49 @@ disembarks    = "Sea", "Coaster"
 flags         = "IgTer", "IgZOC", "NonMil", "HasNoZOC", "Cant_Fortify"
 roles         = "Explorer", "ExplorerStartUnit"
 helptext      = _("\
+Scouts, with enhanced view radius, are useful for mapping unknown territory.\
+"), _("\
+Scoutss can also investigate another player's city, although\
+ the unit disappears after the action is complete.\
+")
+
+[unit_explorer]
+name          = _("Explorer")
+class         = "Small Land"
+tech_req      = "Exploration"
+obsolete_by   = "Partisan"
+graphic       = "u.explorer"
+graphic_alt   = "-"
+sound_move    = "m_explorer"
+sound_move_alt = "m_generic"
+sound_fight   = "f_explorer"
+sound_fight_alt = "f_generic"
+build_cost    = 25
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 5
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 6
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+embarks       = "Sea", "Coaster"
+disembarks    = "Sea", "Coaster"
+flags         = "IgTer", "IgZOC", "NonMil", "HasNoZOC", "Cant_Fortify", "Diplomat", "Spy"
+roles         = "Explorer", "ExplorerStartUnit"
+helptext      = _("\
 Explorers are brave individuals that are very useful for\
  mapping unknown territory.\
 "), _("\
-Explorers can also perform some actions in another player's city, although\
- the unit disappears after the action is complete.\
-"), _("\
- - \"Establish Embassy\": This action always succeeds, and gives\
- permanent contact with the city's owner, as well as intelligence\
- on their tax rates and technology. Each player you have an embassy\
- with that knows a technology reduces that technology's research\
- cost to you.\
-"), _("\
- - \"Investigate City\": Your unit attempts to report detailed\
- information about the city: its status, what buildings and units are\
- within, and what it is currently producing.\
+Explorers can also perform investigate another player's city, while being on the land,\
+ and report detailed information about the city: its status, what buildings and units are\
+ within, and what it is currently producing. After completing his mission Explorer have chance to escape\
+ to the nearest friendly city.\
 ")
 
 [unit_vikings]
@@ -1442,7 +1469,7 @@ helptext      = _("\
 Corsairs are privateers hired by a government to perform special\
  operations: attacking other ships or land units from aboard ship or capturing/bribing them,\
  or making raids on enemy territory and provide covert-ops like Diplomat\
- (except of establishing embassy). They cannot occupy or incity city though.\
+ (except of establishing embassy). They cannot occupy or incite city though.\
 ")
 
 [unit_ninja]
@@ -1584,11 +1611,12 @@ uk_gold       = 0
 targets       = "Coaster"
 embarks       = "Helicopter", "Sea", "Coaster"
 disembarks    = "Helicopter", "Sea", "Coaster"
-flags         = "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Light Shells", "Only_Native_Attack"
+flags         = "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Light Shells", "Diplomat", "Spy"; "Only_Native_Attack"
 roles         = "DefendGood", "DefendGoodStartUnit", "BarbarianTech", "HutTech"; , "Partisan"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
  at using the terrain to their advantage.\
+ They can also perform some covert operations (investigating or sabotaging cities, bribing units).\
 "), _("\
 Partisans are recruited from civilians, thus their cost is a city size.\
  Only shield upkeep is needed, food and gold upkeep is supported by citiziens.\
@@ -2161,11 +2189,11 @@ uk_gold       = 3
 targets       = "Sea", "Coaster"
 embarks       = "Helicopter", "Sea", "Coaster"
 disembarks    = "Helicopter", "Sea", "Coaster"
-flags         = "Marines", "Capturer", "Only_Native_Attack"
+flags         = "Marines", "Capturer";, "Only_Native_Attack"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 Super Soldiers are genetically modified Marines equipped with modern tactical tools.\
- Their wounds heal quickly in fortress and they have increased vision radius.\
+ Their wounds heal quickly in fortress and they have increased vision radius. They can also attack Ships or Helicopters.\
 ")
 
 [unit_paratroopers]
@@ -2674,7 +2702,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 2
-flags         = "Capturer", "Horse", "Only_Native_Attack"
+flags         = "Capturer", "Horse", "Only_Native_Attack", "BadWallAttacker"
 roles         = "DefendOkStartUnit", "AttackFastStartUnit", 
                 "HutTech","BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
@@ -2859,6 +2887,48 @@ This unit cannot move across swamps, glaciers, or mountains,\
  (Triremes, Caravels and Aaks).\
 "), _("\
 This unit can gain Veteran status if built in city with Stables Barracks, ruled by Despotism.\
+")
+
+[unit_wagenburg]
+name          = _("Wagenburg")
+class         = "Wheeled Unit"
+tech_req      = "Fundamentalism"
+gov_req       = "Fundamentalism"
+obsolete_by   = "Riflemen"
+convert_to    = "Migrants"
+convert_time  = 2
+graphic       = "u.wagenburg"
+graphic_alt   = "u.settlers"
+sound_move    = "m_settlers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_settlers"
+sound_fight_alt = "f_generic"
+build_cost    = 25
+pop_cost      = 1
+attack        = 1
+defense       = 4
+hitpoints     = 15
+firepower     = 2
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender", "Fanatic", "Capturer", "Only_Native_Attack"
+roles         = "DefendGood", "DefendGoodStartUnit"
+bonuses       =
+   { "flag", "type", "value"
+     "Horse", "DefenseMultiplier", 1
+   }
+helptext      = _("\
+Wagenburg is a mobile fort, most known for use by spontaneous Hussites troops, \
+consist of horse pulled wagons, whose crew was equipped both with projectile shooting weapons or pikes.\
+Such carts joined together present great defensive value on the battlefield, especially against mounted knights, \
+but their use inside city is not so much effective.\
+These troops are recruited from civilian and therefore cost city population.\
 ")
 
 [unit_battering_ram]
@@ -3322,7 +3392,7 @@ uk_shield     = 4
 uk_food       = 0
 uk_gold       = 2
 targets       = "Sea", "Coaster"
-flags         = "CityBuster", "Armor"
+flags         = "CityBuster", "Armor", "OneAttack"
 roles         = "AttackStrongStartUnit"
 bonuses       =
    { "flag", "type", "value"
@@ -4724,7 +4794,7 @@ uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Small Land", "Merchant"
-flags         = "BadCityDefender", "Unique", "Unbribable", "NonMil", "HasNoZOC"
+flags         = "Unique", "Unbribable", "NonMil", "HasNoZOC"
 roles         = "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -4765,7 +4835,7 @@ uk_shield     = 0
 uk_food       = 2
 uk_gold       = 1
 cargo         = "Small Land", "Infantry", "Merchant"
-flags         = "BadCityDefender", "Unique", "Unbribable", "NonMil", "HasNoZOC"
+flags         = "Unique", "Unbribable", "NonMil", "HasNoZOC"
 roles         = "FerryStartUnit"
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -5013,7 +5083,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-flags         = "Fanatic", "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
+flags         = "BadCityDefender", "Fanatic", "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
 roles         = ""
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -5052,7 +5122,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 2
-flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
+flags         = "BadCityDefender", "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
 roles         = ""
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0
@@ -5089,7 +5159,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
-flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
+flags         = "BadCityDefender", "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
 roles         = ""
 veteran_names = _("land rat"), _("deckhand"), _("veteran"), _("hardened"), _("sea wolf")
 veteran_raise_chance      = 50, 33, 20, 10, 0

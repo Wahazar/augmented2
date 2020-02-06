@@ -216,6 +216,8 @@ sprites =
 		"u.streltsy", "augmented2/amplio_units/streltsy_a"
 		"u.hovercraft", "augmented2/amplio_units/hovercraft_a"
 		"u.skirmishers", "augmented2/amplio_units/skirmishers_a"
+		"u.scout", "augmented2/amplio_units/scout_a"
+		"u.wagenburg", "augmented2/amplio_units/wagenburg_a"
 ; swapped standard graphics
 		"u.warriors", "augmented2/amplio_units/warriors_a"
 	}

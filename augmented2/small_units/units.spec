@@ -175,6 +175,8 @@ sprites =
 		"u.hovercraft", "augmented2/small_units/hovercraft_t"
 		"u.skirmishers", "augmented2/small_units/skirmishers_t"
 		"u.pirates", "augmented2/small_units/pirates_t"
+		"u.scout", "augmented2/small_units/scout_t"
+		"u.wagenburg", "augmented2/small_units/wagenburg_t"
 ; swapped standard graphics
 		"u.direct_artillery", "augmented2/small_units/direct_artillery_t"
 		"u.plunging_cannon", "augmented2/small_units/plunging_cannon_t"

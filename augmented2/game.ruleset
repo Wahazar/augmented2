@@ -279,19 +279,22 @@ actor_reqs    =
       "DiplRel", "War", "Local", TRUE
       "UnitState", "OnLivableTile", "Local", TRUE
       "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
     }
 
 [actionenabler_sabotage_city_target]
 action = "Targeted Sabotage City"
 actor_reqs    =
-    { "type",   "name", "range"
-      "DiplRel", "War", "Local"
-      "UnitFlag", "Spy", "Local"
-      "UnitState", "OnLivableTile", "Local"
-      "MinMoveFrags", "1", "Local"
+    { "type",   "name", "range", "present"
+      "DiplRel", "War", "Local", TRUE
+      "UnitFlag", "Spy", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local", TRUE      
+      "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
+      "UnitType", "Partisan", "Local", FALSE
     }
 
-;augmented: corsairs, ninja, navy seals only for assault diplomatic operations
+;augmented: corsairs, ninja, navy seals, partisans only for assault diplomatic operations
 [actionenabler_establish_embassy]
 action       = "Establish Embassy"
 actor_reqs    =
@@ -302,19 +305,8 @@ actor_reqs    =
       "UnitType", "Corsairs", "Local", FALSE
       "UnitType", "Ninja Warriors", "Local", FALSE
       "UnitType", "Navy Seals", "Local", FALSE
-    }
-target_reqs  =
-    { "type",   "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
-    }
-
-[actionenabler_establish_embassy_explorer]
-action       = "Establish Embassy"
-actor_reqs    =
-    { "type",   "name", "range"
-      "UnitType", "Explorer", "Local"
-      "MinMoveFrags", "1", "Local"
-      "UnitState", "OnLivableTile", "Local"
+      "UnitType", "Partisan", "Local", FALSE
+      "UnitType", "Explorer", "Local", FALSE
     }
 target_reqs  =
     { "type",   "name", "range", "present"
@@ -324,8 +316,18 @@ target_reqs  =
 [actionenabler_investigate_city]
 action       = "Investigate City"
 actor_reqs    =
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Diplomat", "Local", TRUE
+      "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
+    }
+
+[actionenabler_investigate_city_scout]
+action       = "Investigate City"
+actor_reqs    =
     { "type",   "name", "range"
-      "UnitFlag", "Diplomat", "Local"
+      "UnitType", "Scout", "Local"
+      "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
 
@@ -334,7 +336,7 @@ action       = "Investigate City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitType", "Explorer", "Local"
-      "UnitState", "OnLivableTile", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
 
@@ -346,6 +348,7 @@ actor_reqs    =
       "UnitType", "Messenger", "Local", FALSE
       "UnitState", "OnLivableTile", "Local", TRUE
       "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
     }
 target_reqs  =
     { "type",   "name", "range", "present"
@@ -355,10 +358,12 @@ target_reqs  =
 [actionenabler_steal_tech_target]
 action = "Targeted Steal Tech"
 actor_reqs    =
-    { "type",   "name", "range"
-      "UnitFlag", "Spy", "Local"
-      "UnitState", "OnLivableTile", "Local"
-      "MinMoveFrags", "1", "Local"
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Spy", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
+      "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Partisan", "Local", FALSE
     }
 target_reqs  =
     { "type",   "name", "range", "present"
@@ -382,11 +387,13 @@ target_reqs  =
 [actionenabler_poison_city]
 action = "Poison City"
 actor_reqs    =
-    { "type",   "name", "range"
-      "UnitFlag", "Spy", "Local"
-      "DiplRel", "War", "Local"
-      "UnitState", "OnLivableTile", "Local"
-      "MinMoveFrags", "1", "Local"
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Spy", "Local", TRUE
+      "DiplRel", "War", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local", TRUE
+      "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
+      "UnitType", "Partisan", "Local", FALSE
     }
 target_reqs    =
     { "type",   "name", "range"
@@ -399,6 +406,8 @@ actor_reqs    =
     { "type",   "name", "range", "present"
       "UnitFlag", "Diplomat", "Local", TRUE
       "UnitType", "Messenger", "Local", FALSE
+      "UnitType", "Explorer", "Local", FALSE
+      "UnitType", "Partisan", "Local", FALSE
       "DiplRel", "Alliance", "Local", FALSE
       "DiplRel", "Team", "Local", FALSE
       "UnitState", "OnLivableTile", "Local", TRUE
@@ -426,6 +435,8 @@ actor_reqs    =
     { "type",   "name", "range", "present"
       "UnitFlag", "Diplomat", "Local", TRUE
       "UnitType", "Messenger", "Local", FALSE
+      "UnitType", "Explorer", "Local", FALSE
+      "UnitType", "Partisan", "Local", FALSE
       "DiplRel", "Alliance", "Local", FALSE
       "DiplRel", "Team", "Local", FALSE
       "UnitState", "OnLivableTile", "Local", TRUE
@@ -454,6 +465,7 @@ actor_reqs    =
       "DiplRel", "Team", "Local", FALSE
       "UnitState", "OnLivableTile", "Local", TRUE
       "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
     }
 target_reqs    =
     { "type",   "name", "range", "present"
@@ -474,6 +486,8 @@ actor_reqs    =
       "DiplRel", "Team", "Local", FALSE
       "UnitFlag", "Marines", "Local", TRUE
       "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
+      "UnitType", "Partisan", "Local", FALSE
     }
 target_reqs    =
     { "type",   "name", "range", "present"
@@ -488,11 +502,12 @@ target_reqs    =
 [actionenabler_sabotage_unit]
 action = "Sabotage Unit"
 actor_reqs    =
-    { "type",   "name", "range"
-      "UnitFlag", "Spy", "Local"
-      "DiplRel", "War", "Local"
-      "UnitState", "OnLivableTile", "Local"
-      "MinMoveFrags", "1", "Local"
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Spy", "Local", TRUE
+      "DiplRel", "War", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local", TRUE
+      "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
     }
 target_reqs    =
     { "type",   "name", "range", "present"
@@ -505,18 +520,24 @@ target_reqs    =
 [actionenabler_sabotage_unit_marine]
 action = "Sabotage Unit"
 actor_reqs    =
-    { "type",   "name", "range"
-      "UnitFlag", "Spy", "Local"
-      "DiplRel", "War", "Local"
-      "UnitFlag", "Marines", "Local"
-      "MinMoveFrags", "1", "Local"
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Spy", "Local", TRUE
+      "DiplRel", "War", "Local", TRUE
+      "UnitFlag", "Marines", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local", FALSE
+      "MinMoveFrags", "1", "Local", TRUE
+      "UnitType", "Explorer", "Local", FALSE
+      "UnitType", "Partisan", "Local", FALSE
     }
 target_reqs    =
     { "type",   "name", "range", "present"
       "CityTile", "Center", "Local", FALSE
       "MinHitPoints", "2", "Local", TRUE
       "MaxUnitsOnTile", "1", "Local", TRUE
-      "UnitClassFlag", "Unreachable", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
+      "UnitClass", "Torpedeos", "Local", FALSE
+      "UnitClass", "Bomb", "Local", FALSE
     }
 
 [actionenabler_traderoute]

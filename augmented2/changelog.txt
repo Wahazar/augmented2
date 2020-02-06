@@ -2,6 +2,10 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt16
+new units: Wagenburg, Scout.
+diplomatic actions fixed.
+
 2.6.lt15
 Tokamak wonder
 Geoglyph wonder

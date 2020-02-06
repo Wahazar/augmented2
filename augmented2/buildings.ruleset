@@ -822,7 +822,7 @@ obsolete_by	=
 build_cost	= 90
 upkeep	= 2
 sabotage	= 100
-sound		= "b_courthouse"
+sound		= "b_bank"
 sound_alt	= "b_generic"
 helptext	= _("\
 A Hospital reduces the chance of plaque in the city by 30%. The effect\
@@ -874,7 +874,7 @@ reqs	=
       "Tech", "Medicine", "Player"
     }
 graphic	= "b.lazaretto"
-graphic_alt	= "b.aqueduct"
+graphic_alt	= "b.courthouse"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "Genetic Engineering", "Player"
@@ -926,7 +926,7 @@ reqs	=
 	 "MinCulture", "2400", "Player"
     }
 graphic	= "b.madrasa"
-graphic_alt	= "b.university"
+graphic_alt	= "b.library"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1070,7 +1070,7 @@ reqs	=
 	  "Building", "Temple of City God", "City", FALSE
     }
 graphic	= "b.mosque"
-graphic_alt	= "-"
+graphic_alt	= "b.temple"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1364,7 +1364,7 @@ reqs	=
       "Tech", "Railroad", "Player"
     }
 graphic	= "b.station"
-graphic_alt	= "a.railroad"
+graphic_alt	= "b.mass_transit"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -2115,7 +2115,7 @@ reqs	=
 	 "MinCulture", "8500", "Player"
     }
 graphic	= "b.DARPA"
-graphic_alt	= "-"
+graphic_alt	= "b.research_lab"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -2437,7 +2437,7 @@ reqs	=
 	 "MinCulture", "9500", "Player"
     }
 graphic	= "b.global_positioning_system"
-graphic_alt	= "-"
+graphic_alt	= "b.seti_program"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -2489,7 +2489,7 @@ reqs	=
 	 "MinCulture", "15500", "Player"
     }
 graphic	= "b.hollywood"
-graphic_alt	= "-"
+graphic_alt	= "a.radio"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -2745,7 +2745,7 @@ reqs	=
 	 "MinCulture", "6300", "Player"
     }
 graphic	= "b.massachusetts_institute_of_technology"
-graphic_alt	= "-"
+graphic_alt	= "b.university"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -2833,7 +2833,7 @@ reqs	=
 	 "MinCulture", "4200", "Player"
     }
 graphic	= "b.mobile-x-ray"
-graphic_alt	= "-"
+graphic_alt	= "b.barracks_iii"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -2922,7 +2922,7 @@ reqs	=
 	 "MinCulture", "18500", "Player"
     }
 graphic	= "b.space_lift"
-graphic_alt	= "-"
+graphic_alt	= "b.space_component"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -3071,7 +3071,7 @@ reqs	=
       "Tech", "Sunnism", "Player"
     }
 graphic	= "b.thermal_bath"
-graphic_alt	= "-"
+graphic_alt	= "b.aqueduct"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -3125,7 +3125,7 @@ reqs	=
       "Building", "Kaaba", "City", FALSE
     }
 graphic	= "b.western_wall"
-graphic_alt	= "-"
+graphic_alt	= "b.city_walls"
 obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Guerilla Warfare", "Player", FALSE
@@ -3551,7 +3551,7 @@ reqs	=
 	 "MinCulture", "25000", "Player"
     }
 graphic	= "b.large_hadron_collider"
-graphic_alt	= "-"
+graphic_alt	= "b.research_lab"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -3601,7 +3601,7 @@ reqs	=
 	 "MinCulture", "4300", "Player"
     }
 graphic	= "b.pasteur_institute"
-graphic_alt	= "-"
+graphic_alt	= "b.university"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -3732,7 +3732,7 @@ reqs	=
 	 "Building", "Western Wall", "City", FALSE
     }
 graphic	= "b.kaaba"
-graphic_alt	= "-"
+graphic_alt	= "b.oracle"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
@@ -3951,7 +3951,7 @@ reqs	=
 	 "MinCulture", "2200", "Player"
     }
 graphic	= "b.leshan_buddha_statue"
-graphic_alt	= "-"
+graphic_alt	= "b.colossus"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
