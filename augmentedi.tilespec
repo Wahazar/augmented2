@@ -139,6 +139,7 @@ files =
   "augmented2/amplio_units/units.spec",
   "augmented2/misc/governments.spec",
   "augmented2/terrain/terrain.spec",
+;  "augmented2/terrain/wooded_hills.spec",
   "augmented2/terrain/roads_unpaved.spec",
   "augmented2/terrain/roads.spec",
   "augmented2/terrain/roads-rails.spec",
@@ -146,7 +147,6 @@ files =
   "augmented2/terrain/waterlocks.spec",
   "augmented2/terrain/road_bridge.spec",
   "augmented2/terrain/volcano.spec",
-;  "augmented2/terrain/wooded_hills.spec",
   "augmented2/terrain/taiga.spec",
 ;  "augmented2/terrain/mangrove.spec",
   "augmented2/terrain/activities.spec",
@@ -250,6 +250,7 @@ layer2_match_with = "foliage"
 ;layer1_match_type = "land"
 ;layer2_match_type = "foliage"
 ;layer2_match_with = "foliage"
+
 ;not working, why?
 ;[tile_mangrove]
 ;tag = "mangrove"

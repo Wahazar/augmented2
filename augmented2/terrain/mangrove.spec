@@ -34,16 +34,6 @@ pixel_border = 1
 tiles = { "row", "column", "tag"
 ;mangroves as overlay
 
-; 2,  0, "t.l1.mangrove_cell_u000"
-; 2,  1, "t.l1.mangrove_cell_u100"
-; 2,  2, "t.l1.mangrove_cell_u010"
-; 2,  3, "t.l1.mangrove_cell_u110"
-
-; 2,  0, "t.l1.mangrove_cell_u001"
-; 2,  1, "t.l1.mangrove_cell_u101"
-; 2,  2, "t.l1.mangrove_cell_u011"
-; 2,  3, "t.l1.mangrove_cell_u111"
-
  2, 0,  "t.l1.mangrove_cell_u000"
  2, 1,  "t.l1.mangrove_cell_u100"
  2, 2,  "t.l1.mangrove_cell_u010"
@@ -68,7 +58,7 @@ pixel_border = 1
 
 tiles = { "row", "column","tag"
 
-; Floor cell sprites.  See doc/README.graphics
+; coast cell sprites.  See doc/README.graphics
  2, 0,  "t.l1.mangrove_cell_d000"
  2, 1,  "t.l1.mangrove_cell_d100"
  2, 2,  "t.l1.mangrove_cell_d010"
@@ -77,15 +67,6 @@ tiles = { "row", "column","tag"
  2, 5,  "t.l1.mangrove_cell_d101"
  2, 6,  "t.l1.mangrove_cell_d011"
  2, 7,  "t.l1.mangrove_cell_d111"
-
-; 2, 0,  "t.l1.mangrove_cell_u000"
-; 2, 1,  "t.l1.mangrove_cell_u100"
-; 2, 2,  "t.l1.mangrove_cell_u010"
-; 2, 3,  "t.l1.mangrove_cell_u110"
-; 2, 4,  "t.l1.mangrove_cell_u001"
-; 2, 5,  "t.l1.mangrove_cell_u101"
-; 2, 6,  "t.l1.mangrove_cell_u011"
-; 2, 7,  "t.l1.mangrove_cell_u111"
 
 
 }

@@ -1,6 +1,34 @@
-# Server commands to make Civ2Civ3 Freeciv rules
-#
 rulesetdir augmented2
 set techlevel=0
-set tinyisles=0
-set aifill=10
+
+set aifill=0
+cmdlevel info
+set allowtake=""
+set ec_chat=enabled
+set ec_info=enabled 
+set ec_max_size=5000
+set ec_turns=12
+set saveturns=1
+;set timeout=72000
+set timeout=0
+;set unitwaittime=7260
+set fixedlength 0
+
+set alltemperate=disabled
+set temperature=50
+set flatpoles 80
+set tilesperplayer=500
+
+set specials=300
+set huts=10
+
+#set barbarians=disabled 
+;set revealmap=START  #uncomment this for revealing the map for test games
+
+set minplayers 1
+set maxplayers 12
+set nationset all
+metamessage AUGMENTED2.6.lt ruleset, modpack installer http://149.156.194.203/~mczapkie/fc/augmented/augmented2.modpack discord:Wahazar#3898
+cmdlevel info
+
+
