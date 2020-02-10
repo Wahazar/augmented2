@@ -251,7 +251,7 @@ flags    = ""
 graphic     = "a.bronze_working"
 graphic_alt = "-"
 helptext = _("\
-Allows making mines.\
+Increased mine production.\
 ")
 cost     = 28
 

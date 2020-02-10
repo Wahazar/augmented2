@@ -6721,7 +6721,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Terrain", "Deep Ocean", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
-      "Tech", "Bronze Working", "Player", TRUE
+      "Tech", "Copper Working", "Player", TRUE
     }
 
 [effect_mining_ocean]
