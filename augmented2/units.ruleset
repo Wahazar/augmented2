@@ -1890,7 +1890,7 @@ Warriors are weak universal units and first which can be used to conquer enemy c
 [unit_skirmishers]
 name          = _("Skirmishers")
 class         = "Infantry"
-tech_req      = "Copper Working"
+tech_req      = "Bronze Working"
 obsolete_by   = "Legion"
 graphic       = "u.skirmishers"
 graphic_alt   = "u.warriors"
