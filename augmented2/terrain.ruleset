@@ -2241,7 +2241,7 @@ flags          = "DiplomatDefense"
 [base_fortress]
 extra          = "Fortress"
 gui_type       = "Fortress"
-border_sq      = -1
+border_sq      = 0
 flags          = "NoAggressive", "DiplomatDefense"
 
 [base_airstrip]
@@ -2253,7 +2253,7 @@ flags          = "ParadropFrom"
 [base_airbase]
 extra          = "Airbase"
 gui_type       = "Airbase"
-border_sq      = -1
+border_sq      = 0
 flags          = "NoAggressive", "ParadropFrom"
 
 [base_buoy]
@@ -2268,6 +2268,7 @@ gui_type       = "Other"
 [base_waterlock]
 extra          = "Water Lock"
 gui_type       = "Fortress"
+border_sq      = 0
 
 ;[base_road_bridge]
 ;extra          = "Road Bridge"

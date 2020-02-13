@@ -5,6 +5,8 @@ Augmented2 Ruleset for Freeciv v2.6
 2.6.lt16
 new units: Wagenburg, Scout.
 diplomatic actions fixed.
+no embarking for Bombs, Missiles etc
+Fortress, Airbase - claim tiles
 
 2.6.lt15
 Tokamak wonder
