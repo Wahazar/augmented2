@@ -2,6 +2,11 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+WIKI PAGE:
+----------
+
+https://freeciv.fandom.com/wiki/Augmented2_ruleset_modpack
+
 
 OBJECTIVES:
 -----------
@@ -84,6 +89,8 @@ TERRAIN:
 
 - Transforming terrain from forest/to forest possible with Forestry tech.
 
+- Dirt road or river is required to add shield to rough terrain such Hills, Forest, Jungle, Mountains or Taiga.
+
 - Jungles receive +1 Shield (2/1/0) with Railroad on its tile and Railway Station in city. 
   Swamps can be irrigated for +1 Food (to 2/0/0), next irrigation convert them to grassland. 
   Tundras can be mined for +1 Shield (instead of irrigated)
@@ -93,14 +100,14 @@ TERRAIN:
   unless they have an Oasis; this simulates a growth boost like Nile
   floods.
 
-- Irrigation possible with Agriculture Farming tech, and can be performed if River, Lake or Swamp is adjacent to tile, 
+- Irrigation possible with Agriculture Farming tech, and can be performed if River or Lake is adjacent to tile, 
   or another irrigated tile is cardinally adjacent. Electricity allow to irrigate if Sea is cardinally adjacent, 
   and Recycling allow to irrigate without any restrictions.
 
 - Mountains give extra vision range for small reconnaissance units. Cities can not be placed over
   Mountains. Regular military units can't go into unroaded mountains, except of spec-ops units.
 
-- The discovery of Bronze Working allow mining.
+- The discovery of Copper Mining allow mining, but without any effect, Bronze Working allow production of mines.
 
 - Mines+Railroads in mountains and deserts give extra Shield production, if Cement Plant and Railroad Station is builded in city. 
   Mines+Railroads on coal give extra trade point in above case. 
@@ -130,42 +137,8 @@ TERRAIN:
 - Tile transform is possible when Combustion tech is known (with some earlier exception for steam barge).
 
 - Terrain transformation pattern -
-transfOrm:
-Mountains -> Hills <-> Plains 
-Grassland -> Swamp <-> Lake
-Jungle -> Plains 
-Forest -> Tundra -> Desert -> Plains
-Glacier -> Lake
-Irrigate:
-Forest -> Grasslands
-Jungle -> Swamp
-Swamp -> Grassland
-Mining:
-Forest -> Plains
-Grassland -> Forest
-Jungle -> Forest
-Plains -> Desert
-Swamp -> Jungle
+see doc/terraintransform.png
 
-TILE      F/P/T  IRRIG(t)   MINE(t)    ROAD   MAX1   MAX2   TRANSFORM
-Deep      1/0/2  NO         NO         NO     2/0/2  2/1/2  No
-Ocean     1/0/2  NO         NO         NO     2/0/2  2/1/2 *Grass(36)
-Lake     *2/0/2  NO         NO         NO     2/0/2  2/1/2 *Grass(36)
-Swamp     1/0/0 *+1(5)     *NO         +0(4)  2/0/0  3/0/0 *Grass(24)
-Glacier   0/0/0  NO         +1(10)     +0(4)  0/1/0  0/3/0 *Lake(24)
-Tundra    1/0/0 *NO        *+1(5)     *+1(2)  1/1/1  1/1/1 *Plains(24)
-Desert    0/1/0  +1(5)      +1(5)      +1(2)  0/2/1  0/4/1  Plains(24)
-Plains    1/1/0  +1(5)      Forest(10) +1(2)  2/1/1  3/1/1 *Lake(36)
-Grassland 2/0/0  +1(5)      Forest(15) +1(2)  3/0/1  4/0/1 *Lake(36)
-Jungle   *1/1/0 *Swamp(10) *NO         +0(4)  1/1/0  1/1/0 *Forest(24)
-Forest    1/2/0  Plain(10) *Grass(15)  +0(4)  1/2/0  1/3/0 *Hills(24)
-Hills    *1/1/0  +1(10)    *+2(10)     +0(4)  1/3/0  1/4/0  Plains(24)
-Mountains 0/1/0  NO        *+2(10)     +0(6)  0/3/0  0/4/0  Hills(36)
-
-F/P/T = Food/Production/Trade; (t) = turns
-MAX1 = irrigated/mined/roaded/harbour; MAX2 = farmland/railroad/oil well.
-* = Changes compared to classic ruleset. Most affected are Jungles,
-    Swamps and Tundras.
 
 DEFENSE:
 --------
@@ -173,13 +146,13 @@ DEFENSE:
 - Halved the terrain defense bonuses, now more similar to civ3 values:
 
 TERRAIN                        
-Forest/Jungle/Swamp      +25%     
-Hills                    +50%     
+Forest, Swamp  	    	 +25%     
+Hills, Jungle            +50%     
 Mountains                +100%    
 
 RIVER                    +25%     
 
-VETERAN
+VETERAN:
 Recruit                  +25%     
 Veteran                  +50%     
 Hardened                 +75%     
@@ -274,6 +247,7 @@ New techs:
 * cinematography
 * concrete 
 * confucianism 
+* copper working
 * craft_guilds 
 * creative_art 
 * desert_code 
@@ -305,6 +279,7 @@ New techs:
 * modern_warfare 
 * nanotechnology 
 * offshore_exploration 
+* overseas_trade 
 * paper_making 
 * pastoralism 
 * printing_press 
@@ -345,16 +320,14 @@ Infantry Barracks -
 Tier I: Recruits for Small Land, Veteran for Infantry units.
 Tier II: Recruits for Small Land, Veteran for Infantry units (trade bonus if Saltpeter tile is workable in city)
 Stable Barracks: Recruits for Light Cavalry, Veteran for Heavy Cavalry.
-Workshop Barrack: Veteran for Wheeled Units, Big Land, Mech. Inf.
+Workshop Barrack: Veteran for Light Cavalry, Wheeled Units, Big Land, Mech. Inf.
 
 Harbour:
 Deckhand level for Sea class (cumulative with Lighthouse), 25% faster HP regen for Sea and Coaster.
 
 Supermarket: not required for farmland bonus/creation (second irrigation after Chemical Synthesis), 
-instead of, reduce distance food waste (and base food waste for Democracy or Federation).
-Add 25% gold city income if Railway Station is builded.
-
-Super Highways, Courthouse, City Walls, Airport, Mass Transit: see CITY SIZE
+instead of, increase granary size.
+Add 25% gold city income if Railway Station or Port Facility is builded.
 
 Colosseum: Small Wonder, increase luxury by 50% and make 1 military unhappy citizen content.
 Amphitheatre: add 3 luxury points (only 2 with Cinematography) 
@@ -365,7 +338,6 @@ Marketplace: overall Trade increase.
 
 Super Highways: 25% Trade increase with Stock Exchange.
 
-
 New buildings:
 
 Manufacture:
@@ -374,8 +346,8 @@ bonus trade points from coal mines, bonus shields points from desert mines,
 obsoleted by Corporation
 
 Textille Mill
-50% city production and pollution, 
-bonus shields points from forest, bonus trade points from silk, 
+50% city production, 25% pollution, 
+bonus shields points from forest and taiga, bonus trade points from silk, 
 require river, 
 obsoleted by Plastics
 
@@ -419,7 +391,7 @@ Note: Sacral building improvments, belonging to different faiths, doesn't mix
 CITY SIZE:
 --------
 
-Please note: recommended hexagon topology.
+Please note: required hexagon isometric topology.
 
 Initial city workable square radius 1. 
 Radius of workable area will grow with:
@@ -512,7 +484,7 @@ Increased unit vision benefit from Satellite System
 UNITS:
 ------
 
-Caravans and migrants are unique units. Freights and Slaves are not unique. 
+Caravans are unique units. Freights, Slaves and freight ships are not unique. 
 
 Following military unit groups:
 * Infantry units - defensive or assault infantry - can't move into mountains (some units can attack it).
@@ -528,187 +500,7 @@ Following military unit groups:
 * Bombs, Torpedos - can be loaded on Air units (and some Sea units).
 * Diplomatic actions and espionage: Messenger, Diplomat, Spy (and unique Corsair, Ninja, Navy Seals)
 
-Units reference table:
-
-upkeep -	prod.	sh.	fd.	gold	unh.	A	D	HP	FP	BR	MP  m.restr. fuel/pop cap.  comments
-															
-initial															
-tribe		15	0	1	0	0	1	1	5	1		1		1P		
-															
-civilian															
-settlers	24	1	2	1	0	0	1	20	1		1		2P		
-migrants	12	1	1	0	0	0	1	10	1		1		1P		unique
-workers		15	1	1	1	0	0	1	10	1			1			capturable
-engineers	30	2	0	1	0	0	2	20	1		2				
-slaves		15	0	1	0	0	0	1	5	1			1		1P	capturable	capturable
-															
-peacemakers															
-militia 	6	0	1	1	1	1	1	10	1		1				
-halberdier	10	1	1	1	1	2	2	12	1		1				
-riot police	15	2	1	1	1	2	3	15	2		1				
-															
-reconnaissance															
-hunters		10	1	1	1	1	2	1	5	1	1	1			AttNoNat.
-archers		15	2	1	1	1	2	1	6	1	3	1			IgWall, AttNoNat.
-marksman	25	2	1	2	1	6	2	10	2	1	1			IgTer, AttNoNat.
-sniper		35	2	1	3	1	9	4	10	2	1	1			IgTer, InVis, AttNoNat.
-															
-defending															
-phalanx		10	1	1	1	1	1	2	12	1		1	m,g			
-pikemen		15	1	1	1	1	2	3	15	1		1	m,g			Horse *2
-musketeers	20	2	1	1	1	2	4	10	2		1	m,g			
-riflemen	30	2	1	1	1	3	5	12	2		1	m,g			AttNoNat
-infantry	40	2	1	2	1	3	6	12	3		1	m,g			AttNoNat
-modern rangers	50	2	1	2	1	4	6	15	3		1	m,g			AttNoNat
-															
-assaulting															
-skirmishers 	10	1	1	1	1	2	1	10	1		1	m,g			
-legion		18	1	1	1	1	3	2	14	1		1	m,g			
-arbalest	20	2	1	1	1	5	1	10	1		1	m,g			AttNoNat
-swordsmen	25	1	1	1	1	4	2	15	1		1	m,g			
-samurai		30	1	1	1	1	5	4	15	1		1	m,g			
-arquebusiers	30	2	1	1	1	4	2	10	2		1	m,g			
-grenadier	40	2	1	1	1	6	3	10	2		1	m,g			
-stormtrooper	50	2	1	2	1	6	4	12	3		1	m,g			
-marines		60	2	1	2	1	8	4	15	3		1	m,g			Marines
-super soldiers	70	3	1	2	1	9	5	15	3		1	m,g			Marines
-															
-paratroopers	55	2	1	2	1	6	5	12	3		1	m,g			Paratroopers
-															
-spec-ops															
-vikings		15	0	1	1	1	1	1	5	1		1			Unique,Marines,AttNoNat
-corsairs	20	1	1	2	1	2	1	10	2		1			Unique,Marines,AttNoNat
-navy seals	40	2	1	3	1	8	2	12	3		1		Unique,Marines,AttNoNat,InVis
-ninja		60	1	1	3	1	5	2	12	1		1	Unique,Marines,AttNoNat,InVis,Spy,IgTer
-alpine troops	55	2	1	2	1	7	5	12	2		1				IgTer
-															
-other															
-partisan	15	1	0	0	1	5	3	10	3		1		1P		IgTer, IgZOC
-fanatics	20	1	1	0	1	4	5	10	3		1	m,g	1U		Fanatic
-janissary	30	2	1	1	1	4	4	12	2		1	m,g			AttNoNat
-technical	45	2	0	2	1	18	4	15	3		2	only r		1	Fanatic, Missile
-															
-															
-light cavalry															
-															
-mounted archery	18	1	2	1	1	3	1	10	1		2	m,g			AttNoNat
-dromedari	25	1	2	1	1	4	2	10	1		2	m,g			
-lancers		35	2	2	1	1	4	3	10	2		2	m,g			AttNoNat
-bicycle inf.	40	2	1	2	1	5	3	10	2		2	m,g			AttNoNat
-ATV troops	50	3	1	2	1	7	4	10	3		3	m,g			AttNoNat
-															
-															
-heavy cavalry															
-horsemen	12	1	2	1	1	2	1	12	1		2	m,g			BadWallAttacker
-chariot		20	1	2	1	1	4	1	10	1		2	only r			BadWallAttacker
-elephants	35	1	3	1	1	3	2	20	1		2	m,g,s			BadWallAttacker
-crusaders	25	1	2	2	1	5	1	16	1		2	m,g			Fanatic, BadWallAtt.
-knights		30	1	2	1	1	4	2	16	1		2	m,g			BadWallAttacker
-mounted samurai	35	1	2	1	1	5	3	15	1		1	m,g			BadWallAttacker
-cuirassier	40	2	2	1	1	4	3	14	2		2	m,g			BadWallAttacker
-dragoons	50	2	2	2	1	6	4	12	2		2	m,g			BadWallAttacker
-mounted. Inf.	60	2	2	3	1	6	5	12	3		3	m,g		AttNoNat, BadWallAtt
-mech. Inf.	75	3	1	3	1	6	6	20	3		3	m,g		AttNoNat, BadWallAtt
-															
-armoured															
-armoured train	90	3	0	2	1	6	8	30	3	2	10	only rr, turret+		3	BadWallAtt
-armor		80	4	0	3	1	10	5	30	3		2	m,g,s			Lights. *2, AttNoNat, BadWallAtt
-reactive armor	100	4	0	4	1	11	5	30	3		3	m,g,s			Lights. *3, AttNoNat, BadWallAtt
-aut. war mech	130	3	0	4	0	7	3	20	3		2	m,g,s			AttNoNat, BadWallAtt
-															
-plunging fire artillery															
-catapult	40	2	0	2	1	6	1	5	1	1	1	only r			IgWall, AttNoNat
-cannon		50	3	0	2	1	7	1	5	2	2	1	only r			IgWall, AttNoNat
-howitzer	65	3	0	3	1	9	1	10	3	2	1	only r			IgWall, AttNoNat
-s-pr. howitzer	90	4	0	4	1	10	2	25	3	3	2	m,g,s			IgWall, AttNoNat
-mob. a-a gun	80	3	0	3	1	8	4	20	3	4	3	m,g,s			AttNoNat
-															
-stationary artillery															
-ballista	20	2	0	1	0	7	1	5	1		1	only f		NoVeteran, AttNoNat
-bombard		30	3	0	1	0	8	1	5	2		1	only f		NoVeteran, AttNoNat
-turret cannon	50	4	0	2	0	11	2	15	4		1	only f		NoVeteran, AttNoNat
-turret aa gun	40	3	0	2	0	7	6	10	3		2	only f		NoVeteran, AttNoNat
-															
-siege artillery															
-battering ram	30	1	1	2	1	7	1	12	1		1	only r		CityBuster, AttNoNat
-artillery	45	3	0	2	1	10	2	10	2		1	only r		CityBuster, AttNoNat
-Anti-tank gun	60	3	0	3	1	10	3	12	3		2	only r		CityBuster, AttNoNat
-s-prop. gun	75	4	0	3	1	12	4	25	3		2	m,g,s	CityBuster, AttNoNat
-															
-planes															
-airplane	30	2	0	2	1	4	4	10	2		8		1		
-zeppelin	50	2	1	2	1	5	2	10	2	1	4		4		
-fighter		40	3	0	2	1	5	5	15	3		8		2		
-bomber		90	3	1	2	2	6	2	20	3	2	6	bomb+	4	2	
-helicopter	75	3	0	3	1	5	3	30	3	2	6				
-strike aircraft	60	3	0	2	1	4	3	15	3		7	bomb/t+	2	1	
-jet fighter	70	3	0	2	1	6	6	20	3		12		2		
-strike jet	90	4	0	2	1	7	4	25	3		10	bomb/t+	2	1	
-stealth fighter	110	4	0	3	1	8	8	25	3		14	bomb/t+	2	1	
-stealth bomber	200	4	1	3	2	9	5	40	3	4	10	bomb+	4	3	
-a.matt. fighter	170	4	0	4	1	9	9	20	3		16	bomb/t+	3	1	
-a.matt. bomber	280	4	1	4	2	10	6	30	3	6	12	bomb+	6	2	
-															
-river/coast boats															
-canoe		15	0	1	1	0	0	1	5	1		2			1	unique
-raft		10	1	0	0	0	0	1	5	1		2			1	
-trireme		20	1	2	1	1	1	1	15	1		3			2	
-aak		25	1	2	1	0	0	2	20	1		3			3	
-steam_barge	40	2	1	1	0	0	2	25	1		3			4	
-diesel_barge	50	2	1	2	0	0	3	25	1		4			5	
-															
-river/coast warships		0	0		0										
-galley	30	1	2	2	1	2	3	20	1		3	turret+		1	
-monitor	50	2	1	2	1	2	5	20	2		4	turret+		1	
-patrol boat	60	3	1	2	1	3	5	20	3		6	turret/t+		1	
-															
-sea boats															
-longboat	20	0	1	1	0	0	1	10	1		2			1	Unique
-cog	30	1	2	1	0	0	3	10	1		3			2	
-Junk	25	1	2	1	1	2	2	10	1		3			2	
-galleon	40	1	2	1	0	0	3	20	1		4			3	
-paddle steamer	50	2	1	2	0	0	4	25	1		4			6	
-transport	65	3	1	2	0	0	5	40	1		5			8	
-															
-sea warships															
-caravel		40	1	2	1	1	2	4	15	1		3			1	turret+
-frigate		50	1	2	2	1	3	4	20	1		4			1	turret+, AttNoNat
-flagship fr.	70	1	2	3	1	5	8	20	1		5			2	Unique, turret+, AttNoNat
-ironclad	60	2	1	2	1	4	5	20	2		4			1	turret+, AttNoNat
-destroyer	65	2	1	3	1	4	6	25	3		6			1	turret/t+, AttNoNat
-cruiser		85	3	1	4	1	5	10	30	3		5			2	turret+, AttNoNat
-battleship	100	4	2	4	2	6	11	40	4		4			3	turret+, AttNoNat
-aegis cruiser	120	4	1	4	2	6	12	40	4		5			3	turret/c+, AttNoNat
-railgun destr.	80	2	1	4	1	4	7	30	4		6			2	turret/t+, AttNoNat
-															
-other ships															
-submarine	90	3	1	3	1	4	5	20	2		5			4	torpedo+
-nucl.submarine	120	4	1	4	1	5	6	25	3		6			8	torpedo/m+
-carrier		110	3	1	4	1	0	9	40	2		5			8	
-															
-missiles															
-cruise missile	40	2	0	2	1	18	0	10	4		16		1		
-Abomb		150	2	0	3	3	99	0	10	3		2		1		
-nuclear		180	3	0	3	3	99	0	10	4		16		1		
-torpedo		20	2	0	1	0	10	0	5	3		2		1		
-GBU		15	1	0	1	0	8	0	5	3		1		1		
-															
-espionage															
-messenger	15	0	1	1	0	0	0	10	1		1				no incite
-diplomat	20	0	1	2	0	0	0	10	1		2				
-spy		30	1	1	3	0	0	0	10	1		3				
-															
-land transport															
-caravan		30	0	1	1	0	0	1	10	1		1				Unique
-freight		50	1	0	1	0	0	1	20	1		2				
-train		60	1	0	2	0										
-															
-exploration															
-explorer	15	0	1	1	0	0	1	5	1		1				IgTer
-leader		0	0	0	0	0	2	20	1		2				
-balloon		15	1	0	1	0										
-AWACS		120	3	0	3	0	0	1	30	3		16		3		
-drone		70	2	0	1	0	4	2	10	3		12				
+Units reference table: see doc/units.xls or refer to wiki page
 
 
 Author: Wahazar

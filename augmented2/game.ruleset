@@ -177,8 +177,8 @@ illness_pollution_factor = 70
 ;                    / ((distance to capital) * 100)
 ; See city_incite_cost() for more details
 base_incite_cost = 1000
-improvement_factor = 1
-unit_factor = 2
+improvement_factor = 2
+unit_factor = 4
 total_factor = 100
 
 [global_unit_options]

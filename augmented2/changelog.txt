@@ -7,6 +7,8 @@ new units: Wagenburg, Scout.
 diplomatic actions fixed.
 no embarking for Bombs, Missiles etc
 Fortress, Airbase - claim tiles
+Inciting factors for units and buildings x2 and x4 respectively
+Yugoslavia flag overriden
 
 2.6.lt15
 Tokamak wonder
