@@ -6,9 +6,11 @@ Augmented2 Ruleset for Freeciv v2.6
 new units: Wagenburg, Scout.
 diplomatic actions fixed.
 no embarking for Bombs, Missiles etc
+no veteran bombs :)
 Fortress, Airbase - claim tiles
 Inciting factors for units and buildings x2 and x4 respectively
 Yugoslavia flag overriden
+Partisan FP 2
 
 2.6.lt15
 Tokamak wonder
