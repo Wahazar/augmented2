@@ -20,16 +20,15 @@ options="+Freeciv-2.6-ruleset"
 ; Which file to read description in from.
 description_file = "augmented2/README.augmented.txt"
 
+[tileset]
+ preferred="augmentedi"
+
 [about]
 ; Ruleset name
 name = _("Augmented ruleset")
 
 ; There`s no separate versioning in rulesets part of main freeciv distribution
 ;version = ""
-
-[tileset]
- preferred="augmentedi"
-
 
 ; Summary of the ruleset
 ; /* TRANS: In the client, this is displayed alongside the contents of

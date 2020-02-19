@@ -2,6 +2,8 @@
 
 options = "+Freeciv-2.6-spec"
 
+[info]
+
 artists = "
     Tim F. Smith
     Daniel Speyer (mix)

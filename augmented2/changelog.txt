@@ -2,6 +2,11 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt17
+sanity check
+usuned entries fixed
+Yougoslavia custom flag removed due to warnings
+
 2.6.lt16
 new units: Wagenburg, Scout.
 diplomatic actions fixed.

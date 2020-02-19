@@ -502,15 +502,12 @@ name		= _("Cement Plant")
 genus		= "Improvement"
 flags		= "VisibleByOthers"
 reqs	=
-    { "type", "name", "range"
-      "Tech", "Concrete", "Player"
-      "Building", "Railway Station", "City"
-      "Building", "Factory", "City"
-      "Terrain", "Mountains", "City"
-    }
-nreqs	=
-    { "type", "name", "range"
-      "Building", "Research Lab", "City"
+    { "type", "name", "range", "present"
+      "Tech", "Concrete", "Player", TRUE
+      "Building", "Railway Station", "City", TRUE
+      "Building", "Factory", "City", TRUE
+      "Terrain", "Mountains", "City", TRUE
+      "Building", "Research Lab", "City", FALSE
     }
 graphic	= "b.cement_plant"
 graphic_alt	= "b.factory"
@@ -657,7 +654,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Code of Laws", "Player"
-	 "MinCulture", "200", "Player", TRUE
+	 "MinCulture", "200", "Player"
     }
 graphic	= "b.courthouse"
 graphic_alt	= "-"
@@ -1718,15 +1715,12 @@ name		= _("Steel Mill")
 genus		= "Improvement"
 flags		= "VisibleByOthers"
 reqs	=
-    { "type", "name", "range"
-      "Tech", "Steel", "Player"
-      "Building", "Railway Station", "City"
-      "Building", "Factory", "City"
-      "Resource", "Coal", "City"
-    }
-nreqs	=
-    { "type", "name", "range"
-      "Building", "Research Lab", "City"
+    { "type", "name", "range", "present"
+      "Tech", "Steel", "Player", TRUE
+      "Building", "Railway Station", "City", TRUE
+      "Building", "Factory", "City", TRUE
+      "Resource", "Coal", "City", TRUE
+      "Building", "Research Lab", "City", FALSE
     }
 graphic	= "b.steel_mill"
 graphic_alt	= "b.power_plant"
@@ -2562,7 +2556,7 @@ graphic_alt	= "b.colosseum"
 obsolete_by	=
     { "type", "name", "range"
       "Tech", "Communism", "Player"
-      "Building", "Internet", "World", FALSE
+      "Building", "Internet", "World"
     }
 build_cost	= 180
 upkeep		= 2

@@ -354,7 +354,7 @@ reqs    =
 type    = "Specialist_Output"
 value   = 1
 reqs    =
-    { "type", "name", "range"
+    { "type", "name", "range", "present"
       "Specialist", "Taxman", "Local", TRUE
       "OutputType", "Gold", "Local", TRUE
       "Gov", "Anarchy", "Player", FALSE
@@ -2984,15 +2984,15 @@ type    = "Has_Senate"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "Gov", "Anarchy", "Player", FALSE, FALSE
-      "Gov", "Tribal", "Player", FALSE, FALSE
-      "Gov", "Communism", "Player", FALSE, FALSE
-      "Gov", "Despotism", "Player", FALSE, FALSE
-      "Gov", "Monarchy", "Player", FALSE, FALSE
-      "Gov", "Fundamentalism", "Player", FALSE, FALSE
-;      "Gov", "Federation", "Player", FALSE, FALSE
-;      "Gov", "Republic", "Player", FALSE, FALSE
-;      "Gov", "Democracy", "Player", FALSE, FALSE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Monarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+;      "Gov", "Federation", "Player", FALSE
+;      "Gov", "Republic", "Player", FALSE
+;      "Gov", "Democracy", "Player", FALSE
 ;      "Gov", "First Republic", "Player", FALSE
 ;      "Gov", "Thalassocracy", "Player", FALSE
 ;      "Gov", "Direct Democracy", "Player", FALSE
@@ -4054,7 +4054,7 @@ reqs    =
 ;type    = "Unit_No_Lose_Pop"
 ;value   = 1
 ;reqs    =
-;    { "type", "name", "range", "Present"
+;    { "type", "name", "range", "present"
 ;      "Building", "City Walls", "City", TRUE
 ;      "UnitFlag", "IgWall", "Local", TRUE
 ;      "MinSize", "9", "City", FALSE
@@ -4065,7 +4065,7 @@ reqs    =
 type    = "Unit_No_Lose_Pop"
 value   = 1
 reqs    =
-    { "type", "name", "range", "Present"
+    { "type", "name", "range", "present"
       "Building", "City Walls", "City", TRUE
       "UnitFlag", "IgWall", "Local", FALSE
       "UnitFlag", "AirAttacker", "Local", FALSE
@@ -6561,7 +6561,7 @@ value   = 100
 reqs    =
     { "type", "name", "range"
       "Extra", "Irrigation", "Local"
-      "Tech", "Agricultural Farming", "Player", TRUE
+      "Tech", "Agricultural Farming", "Player"
     }
 
 ; Simulate presence of irrigation extra in unirrigated city centers
@@ -6767,10 +6767,10 @@ reqs    =
 type    = "Transform_Possible"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Tech", "Steam Engine", "Player"
-      "UnitFlag", "Transform", "Local"
-      "UnitClass", "Coaster", "Local"
+    { "type", "name", "range", "present"
+      "Tech", "Steam Engine", "Player", TRUE
+      "UnitFlag", "Transform", "Local", TRUE
+      "UnitClass", "Coaster", "Local", TRUE
       "Extra", "Water Lock", "Local", FALSE
       "Extra", "Wind Turbine", "Local", FALSE
     }
@@ -8291,15 +8291,15 @@ reqs	=
 type    = "Output_Add_Tile"
 value   = 4
 reqs    =
-    { "type", "name", "range"
-      "Building", "Forbidden City", "City"
-      "OutputType", "Luxury", "Local"
+    { "type", "name", "range", "present"
+      "Building", "Forbidden City", "City", TRUE
+      "OutputType", "Luxury", "Local", TRUE
       "Building", "Angkor Wat", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
       "Building", "Osaka Castle", "City", FALSE
       "Building", "Sultan Palace", "City", FALSE
-      "CityTile", "Center", "Local"
-      "Gov", "Legalism", "Player"
+      "CityTile", "Center", "Local", TRUE
+      "Gov", "Legalism", "Player", TRUE
     }
 
 [effect_sultan_palace]
@@ -8438,7 +8438,7 @@ type    = "Make_Content_Mil"
 value   = 2
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Osaka Castle", "City", TRUE, 
+      "Building", "Osaka Castle", "City", TRUE 
       "Building", "Temple", "City", TRUE
     }
 
@@ -8863,10 +8863,10 @@ reqs    =
 type    = "Unit_No_Lose_Pop"
 value   = 1
 reqs    =
-    { "type", "name", "range", "Present"
+    { "type", "name", "range", "present"
       "Building", "Bunkers", "City", TRUE
       "UnitFlag", "AirAttacker", "Local", FALSE
-      "UnitFlag", "OneAttack", "Local", FALSE
+;      "UnitFlag", "OneAttack", "Local", FALSE
     }
 
 [effect_bunkers_visible]
@@ -9244,7 +9244,7 @@ reqs    =
 
 ;gov. policy multiplier
 
-[effect_traderoute_liberal_traderoute_multiplier]
+[effect_traderoute_liberal_multiplier]
 type    = "Traderoute_Pct"
 value   = 30
 multiplier = "Liberal Economy"
@@ -9260,7 +9260,7 @@ reqs    =
       "Gov", "Anarchy", "Player", FALSE
     }
 
-[traderoute_liberal_corruption_multiplier]
+[effect_corruption_liberal_multiplier]
 type    = "Output_Waste"
 value   = 20
 multiplier = "Liberal Economy"
@@ -9269,7 +9269,6 @@ reqs    =
       "OutputType", "Trade", "Local", TRUE
       "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
-      "Gov", "Communism", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
       "Gov", "Fundamentalism", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE

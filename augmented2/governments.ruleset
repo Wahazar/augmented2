@@ -679,12 +679,13 @@ name      = _("Liberal Economy")
 ;         "Tech", "Economy", "Player"
 ;         "Building", "Slavery Abolition", "Player"
 ;       }
-graphic     = "gov.republic"
-graphic_alt = "-"
+;graphic     = "gov.republic"
+;graphic_alt = "-"
 start     = 0
 stop      = 2
 step      = 1
 default   = 0
+offset    = 1
 ; /* xgettext:no-c-format */
 helptext  = _("\
 Each step of Liberal Economy increase traderoute bonus by 30%, \
@@ -713,8 +714,8 @@ name      = _("Collective Economy")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "Communism", "Player"
 ;       }
-graphic     = "gov.communism"
-graphic_alt = "-"
+;graphic     = "gov.communism"
+;graphic_alt = "-"
 start     = 0
 stop      = 2
 step      = 1
@@ -731,8 +732,8 @@ name      = _("Welfare Policy")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "Socialism", "Player"
 ;       }
-graphic     = "gov.democracy"
-graphic_alt = "-"
+;graphic     = "gov.democracy"
+;graphic_alt = "-"
 start     = 0
 stop      = 2
 step      = 1
@@ -751,8 +752,8 @@ name      = _("Enlightening Policy")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "University", "Player"
 ;       }
-graphic     = "gov.federation"
-graphic_alt = "gov.democracy"
+;graphic     = "gov.federation"
+;graphic_alt = "gov.democracy"
 start     = 0
 stop      = 2
 step      = 1
@@ -772,8 +773,8 @@ name      = _("Religious Orthodoxy")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "Mysticism", "Player"
 ;       }
-graphic     = "gov.fundamentalism"
-graphic_alt = "gov.despotism"
+;graphic     = "gov.fundamentalism"
+;graphic_alt = "gov.despotism"
 start     = 0
 stop      = 2
 step      = 1
@@ -792,8 +793,8 @@ name      = _("National Pride")
 ;reqs = { "type", "name", "range"
 ;         "Tech", "Feudalism", "Player"
 ;       }
-graphic     = "gov.despotism"
-graphic_alt = "-"
+;graphic     = "gov.despotism"
+;graphic_alt = "-"
 start     = 0
 stop      = 2
 step      = 1

@@ -3411,7 +3411,7 @@ Self-propelled Guns (so called Tank Destroyers) have increased defense and attac
 [unit_autonomous_war_mech]
 name          = _("Aut. War Mech")
 class         = "Big Land"
-tech_req      = "Artificial Intelligence", "Antimatter Propulsion"
+tech_req      = "Artificial Intelligence"
 obsolete_by   = "None"
 graphic       = "u.autonomous_war_mech"
 graphic_alt   = "b.sam_battery"
@@ -4136,7 +4136,7 @@ bombard_rate = 4
 [unit_antimatter_fighter]
 name          = _("Antimatter Fighter")
 class         = "Air"
-tech_req      = "Antimatter Propulsion", "Stealth"
+tech_req      = "Antimatter Propulsion"
 obsolete_by   = "None"
 graphic       = "u.antimatter_fighter"
 graphic_alt   = "u.stealth_fighter"
@@ -4177,7 +4177,7 @@ All aircraft are subject to refueling and must return to a city, airstrip,\
 [unit_antimatter_bomber]
 name          = _("Antimatter Bomber")
 class         = "Air"
-tech_req      = "Antimatter Propulsion", "Stealth"
+tech_req      = "Antimatter Propulsion"
 obsolete_by   = "None"
 graphic       = "u.antimatter_bomber"
 graphic_alt   = "u.stealth_bomber"
@@ -5544,7 +5544,7 @@ bombard_rate = 4
 [unit_railgun_destroyer]
 name          = _("Railgun Destroyer")
 class         = "Sea"
-tech_req      = "Fusion Power", "Superconductors"
+tech_req      = "Fusion Power"
 obsolete_by   = "None"
 graphic       = "u.railgun_destroyer"
 graphic_alt   = "u.destroyer"
@@ -5866,7 +5866,7 @@ TIP:  You may be involved in a situation where you've invaded an\
 [unit_nuclear]
 name          = _("Nuclear")
 class         = "Missile"
-tech_req      = "Advanced Rocketry", "Nuclear Fission"
+tech_req      = "Advanced Rocketry"
 impr_req      = "Nuclear Plant"
 obsolete_by   = "None"
 graphic       = "u.nuclear"

@@ -109,7 +109,7 @@ files =
 ;  "trident/units.spec",
   "isotrident/unitextras.spec",
   "misc/flags.spec",
-  "augmented2/misc/flags.spec",
+;  "augmented2/misc/flags.spec",
   "misc/shields.spec",
   "augmented2/misc/shields.spec",
   "misc/cursors.spec",
