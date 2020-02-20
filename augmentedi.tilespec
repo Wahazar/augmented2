@@ -106,7 +106,7 @@ files =
   "misc/flags-large.spec",
 ;  "augmented2/misc/flags-large.spec",
   "misc/shields-large.spec",
-  "augmented2/misc/shields-large.spec",
+;  "augmented2/misc/shields-large.spec",
   "misc/cursors.spec",
   "misc/space.spec",
   "misc/techs.spec",

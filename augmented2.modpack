@@ -3,7 +3,7 @@ options = "+Freeciv-2.6-modpack"
 baseURL = "http://149.156.194.203/~mczapkie/fc/augmented/"
 name = "augmented2"
 type = "Modpack"
-version = "2.6.lt16"
+version = "2.6.lt17"
 
 [files]
 list =
@@ -195,14 +195,6 @@ list =
   "augmented2/misc/governments.spec"
   "augmented2/misc/techs.png"
   "augmented2/misc/techs.spec"
-  "augmented2/misc/flags.spec"
-  "augmented2/misc/flags-large.spec"
-  "augmented2/misc/yugoslavia.png"
-  "augmented2/misc/yugoslavia-large.png"
-  "augmented2/misc/shields.spec"
-  "augmented2/misc/shields-large.spec"
-  "augmented2/misc/yugoslavia-shield.png"
-  "augmented2/misc/yugoslavia-shield-large.png"
   "augmented2/small_units/AT-gun_t.png"
   "augmented2/small_units/ATV_infantry_t.png"
   "augmented2/small_units/Aak_t.png"

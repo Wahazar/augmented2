@@ -111,7 +111,7 @@ files =
   "misc/flags.spec",
 ;  "augmented2/misc/flags.spec",
   "misc/shields.spec",
-  "augmented2/misc/shields.spec",
+;  "augmented2/misc/shields.spec",
   "misc/cursors.spec",
   "misc/space.spec",
   "misc/techs.spec",

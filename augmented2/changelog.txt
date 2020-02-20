@@ -6,6 +6,7 @@ Augmented2 Ruleset for Freeciv v2.6
 sanity check
 usuned entries fixed
 Yougoslavia custom flag removed due to warnings
+Partisans can attack Helicopters.
 
 2.6.lt16
 new units: Wagenburg, Scout.

@@ -1608,7 +1608,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-targets       = "Coaster"
+targets       = "Coaster", "Helicopter"
 embarks       = "Helicopter", "Sea", "Coaster"
 disembarks    = "Helicopter", "Sea", "Coaster"
 flags         = "IgTer", "IgZOC", "HasNoZOC", "Capturer", "Light Shells", "Diplomat", "Spy"; "Only_Native_Attack"
@@ -1616,7 +1616,8 @@ roles         = "DefendGood", "DefendGoodStartUnit", "BarbarianTech", "HutTech";
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
  at using the terrain to their advantage.\
- They can also perform some covert operations (investigating or sabotaging cities, bribing units).\
+ They can also perform some covert operations (investigating or sabotaging cities, bribing units)\
+ and attack Helicopters, Drones or Barges.\
 "), _("\
 Partisans are recruited from civilians, thus their cost is a city size.\
  Only shield upkeep is needed, food and gold upkeep is supported by citiziens.\
@@ -1809,7 +1810,7 @@ helptext      = _("\
 Infantry are World War-era soldiers equipped with machine guns,\
  very good at defending your cities and fortifications.\
 "), _("\
-They can also shoot down helicopters or drones.\
+They can also shoot down helicopters or drones, and attack barges.\
 ")
 
 [unit_modern_rangers]
@@ -3433,7 +3434,7 @@ uk_happy      = 0
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 4
-targets       = "Sea", "Coaster"
+targets       = "Sea", "Coaster", "Helicopter"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "BadWallAttacker"
@@ -5947,7 +5948,7 @@ uk_food       = 0
 uk_gold       = 1
 embarks       = "Sea", "Coaster"
 disembarks    = "Air", "Sea", "Coaster"
-targets       = "Sea", "Coaster", "Coaster"
+targets       = "Sea", "Coaster"
 flags         = "OneAttack", "NoVeteran", "Capturable", "Partial_Invis", "Only_Native_Attack", "Submarine", "HasNoZOC"
 roles         = ""
 helptext      = _("\
