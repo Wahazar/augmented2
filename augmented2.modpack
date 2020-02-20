@@ -182,6 +182,7 @@ list =
   "augmented2/buildings_small/madrasa_s.png"
   "augmented2/buildings_small/yasir_s.png"
   "augmented2/buildings_small/amusement_park_s.png"
+  "augmented2/buildings_small/trade_union_s.png"
   "augmented2/buildings_small/fire_station_s.png"
   "augmented2/buildings_small/embankment_s.png"
   "augmented2/buildings_small/post_office_s.png"
@@ -329,7 +330,7 @@ list =
   "augmented2/terrain_small/roads.spec"
   "augmented2/terrain_small/roadss.png"
   "augmented2/terrain_small/roads_unpaved.spec"
-  "augmented2/terrain_small/roadss_unpaved.png"
+  "augmented2/terrain_small/roads_unpaved.png"
   "augmented2/terrain_small/roads-rails.spec"
   "augmented2/terrain_small/roads-rails.png"
   "augmented2/terrain_small/road_bridge_e.png"
@@ -408,12 +409,15 @@ list =
   "augmented2/wonders_small/osaka_castle_s.png"
   "augmented2/wonders_small/fushimi_inari_s.png"
   "augmented2/wonders_small/moai_statues_s.png"
+  "augmented2/wonders_small/jousting_tiltyard_s.png"
   "augmented2/wonders_small/tokamak_s.png"
   "augmented2/wonders_small/geoglyph_s.png"
   "doc/culture.xls",       "augmented2/doc/culture.xls"
   "doc/govs.xls",          "augmented2/doc/govs.xls"
-  "doc/units_lowcost.xls", "augmented2/doc/units_lowcost.xls"
+  "doc/units.xls", "augmented2/doc/units_lowcost.xls"
+  "doc/terraintransform.png", "augmented2/doc/terraintransform.png"
 }
+
 
 
 

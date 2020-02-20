@@ -36,15 +36,13 @@ name = _("Augmented ruleset")
 summary = _("\
 You are playing Freeciv with augmented rules:\
 \n\n\
-Ruleset base is civ2/civ3.\
-\n\n\
 New, better balanced technology tree.\n\
 New distinctive tiers of unit classes.\n\
 New buildings and wonders.\n\
 New governments.\n\
 \n\n\
-The differences from the classic or civ2/civ3 rulesets are listed in full in\
- freeciv forum thread or README.augmented.txt file.\
+The differences from the classic rulesets are listed in full in\
+ freeciv forum thread, freeciv augmented2 wiki or README.augmented.txt file.\
 ")
 
 ; Detailed description
