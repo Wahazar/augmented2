@@ -1320,7 +1320,7 @@ sabotage	= 10
 sound		= "b_police_station"
 sound_alt	= "b_generic"
 helptext	= _("\
-Post Office allow additional traderoute to this city, if Automobile advance is known to the player.\n\
+Post Office allow additional traderoute to this city, if Logistics advance is known to the player.\n\
 This improvement decrease waste by 20% by istelf, and together with Courthouse, \
 decrease trade corruption by 70%.\ 
 ")
@@ -1776,7 +1776,7 @@ genus		= "Improvement"
 flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Automobile", "Player"
+      "Tech", "Logistics", "Player"
     }
 graphic	= "b.super_highways"
 graphic_alt	= "-"

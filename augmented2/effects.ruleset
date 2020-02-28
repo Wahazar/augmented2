@@ -550,12 +550,12 @@ reqs    =
 type    = "Max_Trade_Routes"
 value   = 1
 
-;additional with automobile+post office
-[effect_trade_routes_automobile]
+;additional with logistics+post office
+[effect_trade_routes_logistics]
 type    = "Max_Trade_Routes"
 reqs    =
     { "type", "name", "range", "present"
-      "Tech", "Automobile", "Player", TRUE
+      "Tech", "Logistics", "Player", TRUE
       "Building", "Post Office", "City", TRUE
     }
 value   = 1

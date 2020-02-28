@@ -7,6 +7,11 @@ WIKI PAGE:
 
 https://freeciv.fandom.com/wiki/Augmented2_ruleset_modpack
 
+BUG TRACKING:
+https://github.com/Wahazar/augmented2/issues
+(please do not open tickets related with this modpack on freeciv bugtracker)
+
+----------
 
 OBJECTIVES:
 -----------

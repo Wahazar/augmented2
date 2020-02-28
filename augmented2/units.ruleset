@@ -2497,7 +2497,7 @@ Bicycle infantry are fast scouting units.\
 [unit_atv_infantry]
 name          = _("ATV Infantry")
 class         = "Light Cavalry"
-tech_req      = "Modern Warfare"
+tech_req      = "Command and Control"
 obsolete_by   = "None"
 graphic       = "u.atv_infantry"
 graphic_alt   = "u.mech_inf"
@@ -4377,7 +4377,7 @@ All aircraft are subject to refueling and must return to a city, airstrip,\
 [unit_hovercraft]
 name          = _("Hovercraft")
 class         = "Hovercraft"
-tech_req      = "Amphibious Warfare"
+tech_req      = "Modern Warfare"
 obsolete_by   = "None"
 graphic       = "u.hovercraft"
 graphic_alt   = "u.transport"
@@ -4394,7 +4394,7 @@ firepower     = 3
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 1
-cargo         = "Infantry", "Light Cavalry", "Small Land"
+cargo         = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land"
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 2
@@ -4406,7 +4406,7 @@ disembarks    = "Sea"
 flags         = "BadCityDefender", "Cant_Fortify", "NoVeteran"
 roles         = "Ferryboat"
 helptext      = _("\
-Hovercrafts can carry one Infantry or Light Cavalry unit and are capable to go both on flat land or water areas. \
+Hovercrafts can carry one Infantry or Cavalry unit and are capable to go both on flat land or water areas. \
 They can be transported by Transport ship, thus can be used as landing aid.\
 ")
 
@@ -4414,7 +4414,7 @@ They can be transported by Transport ship, thus can be used as landing aid.\
 name          = _("Raft")
 class         = "Riverboat"
 tech_req      = "Forestry"
-obsolete_by   = "Diesel Barge"
+obsolete_by   = "Floating Bridge"
 graphic       = "u.raft"
 graphic_alt   = "unit.fortress"
 sound_move    = "m_trireme"
@@ -4443,6 +4443,43 @@ Raft is a rudimentary form of transport, limited to the rivers, lakes and fortre
  however it can be used to relatively fast transport of any land units, including these, which cannot move on some terrains without roads.\
 "), _("\
 TIP: Raft can be used as a temporary bridge (fortify it for anchor), but can be destroyed or captured easily if not guarded.\
+")
+
+[unit_floating_bridge]
+name          = _("Floating Bridge")
+class         = "Riverboat"
+tech_req      = "Amphibious Warfare"
+obsolete_by   = "None"
+graphic       = "u.floating_bridge"
+graphic_alt   = "unit.fortress"
+sound_move    = "m_transport"
+sound_move_alt = "m_generic"
+sound_fight   = "f_transport"
+sound_fight_alt = "f_generic"
+build_cost    = 15
+pop_cost      = 0
+attack        = 0
+defense       = 2
+hitpoints     = 20
+firepower     = 2
+move_rate     = 4
+vision_radius_sq = 2
+transport_cap = 1
+cargo         = "Small Land", "Infantry", "Light Cavalry", "Heavy Cavalry", "Big Land", "Merchant", "Suicidal", "Wheeled Unit", "Turrets"
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 1
+embarks       = "Coaster"
+disembarks    = "Coaster"
+flags         = "NonMil", "NoVeteran", "HasNoZOC", "Capturable"
+roles         = "Ferryboat"
+helptext      = _("\
+Floating Bridge (pontoon bridge) usage is similar to Raft,\
+ it can be used to transport of any land units, including these, which cannot move on some terrains without roads.\
+"), _("\
+TIP: Floating Bridge can be transported by Barges and loaded/unloaded anywhere.\
 ")
 
 [unit_canoes]
@@ -6036,7 +6073,7 @@ A Caravan sent to one of your own cities that is building a wonder\
 [unit_freight]
 name          = _("Freight")
 class         = "Merchant"
-tech_req      = "The Corporation"
+tech_req      = "Logistics"
 obsolete_by   = "None"
 graphic       = "u.freight"
 graphic_alt   = "-"

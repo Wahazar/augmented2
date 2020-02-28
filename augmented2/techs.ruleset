@@ -137,7 +137,7 @@ req2     = "Offshore Exploration"
 flags    = ""
 graphic     = "a.amphibious_warfare"
 graphic_alt = "-"
-cost     = 1700
+cost     = 1750
 
 [advance_animal_husbandry]
 name     = _("Animal Husbandry")
@@ -202,7 +202,6 @@ req2     = "Machine Tools"
 flags    = ""
 graphic     = "a.automobile"
 graphic_alt = "-"
-helptext = _("TIP: Enables more trade routes with Post Office.")
 cost     = 790
 
 [advance_banking]
@@ -371,6 +370,15 @@ graphic_alt = "a.combustion"
 helptext = _("Makes it possible for Engineers to transform terrains.")
 cost     = 740
 
+[advance_command_and_control]
+name     = _("Command and Control")
+req1     = "Combined Arms"
+req2     = "Computers"
+flags    = ""
+graphic     = "a.command_and_control"
+graphic_alt = "a.computers"
+cost     = 3550
+
 [advance_communism]
 name     = _("Communism")
 req1     = "Guerilla Warfare"
@@ -379,7 +387,7 @@ flags    = ""
 graphic     = "a.communism_sov"
 graphic_alt = "a.communism"
 helptext = _("Reduces the effect of Cathedrals and Mysticism.")
-cost     = 890
+cost     = 990
 
 [advance_computers]
 name     = _("Computers")
@@ -552,12 +560,12 @@ cost     = 670
 
 [advance_electronics]
 name     = _("Electronics")
-req1     = "The Corporation"
+req1     = "Optics"
 req2     = "Radio"
 flags    = ""
 graphic     = "a.electronics"
 graphic_alt = "-"
-cost     = 890
+cost     = 1090
 
 [advance_engineering]
 name     = _("Engineering")
@@ -581,12 +589,12 @@ cost     = 2960
 [advance_espionage]
 name     = _("Espionage")
 req1     = "Communism"
-req2     = "Federation"
+req2     = "Radio"
 root_req = "Communism"
 flags    = ""
 graphic     = "a.espionage"
 graphic_alt = "-"
-cost     = 1150
+cost     = 1180
 
 [advance_exploration]
 name     = _("Exploration")
@@ -854,7 +862,7 @@ req2     = "Nuclear Power"
 flags    = ""
 graphic     = "a.laser"
 graphic_alt = "-"
-cost     = 2350
+cost     = 2950
 
 [advance_leadership]
 name     = _("Leadership")
@@ -892,6 +900,16 @@ flags    = ""
 graphic     = "a.literacy"
 graphic_alt = "-"
 cost     = 45
+
+[advance_logistics]
+name     = _("Logistics")
+req1     = "The Corporation"
+req2     = "Automobile"
+flags    = ""
+graphic     = "a.logistics"
+graphic_alt = "a.corporation"
+helptext = _("TIP: Enables second trade route with Post Office.")
+cost     = 1100
 
 [advance_machinery]
 name     = _("Machinery")
@@ -965,12 +983,12 @@ req2     = "The Corporation"
 flags    = ""
 graphic     = "a.mass_entertainment"
 graphic_alt = "-"
-cost     = 880
+cost     = 980
 
 [advance_mass_production]
 name     = _("Mass Production")
 req1     = "Welding Technology"
-req2     = "The Corporation"
+req2     = "Logistics"
 flags    = ""
 graphic     = "a.mass_production"
 graphic_alt = "-"
@@ -1021,7 +1039,7 @@ flags    = ""
 root_req = "Combustion"
 graphic     = "a.mobile_warfare"
 graphic_alt = "-"
-cost     = 1350
+cost     = 1450
 
 [advance_theatre]
 name     = _("Theatre")
@@ -1035,12 +1053,12 @@ cost     = 240
 
 [advance_modern_warfare]
 name     = _("Modern Warfare")
-req1     = "Combined Arms"
+req1     = "Command and Control"
 req2     = "Satellite System"
 flags    = ""
 graphic     = "a.modern_warfare"
 graphic_alt = "-"
-cost     = 4550
+cost     = 4650
 
 [advance_monarchy]
 name     = _("Monarchy")
@@ -1098,7 +1116,7 @@ root_req = "Theory of Relativity"
 flags    = ""
 graphic     = "a.nuclear_fission"
 graphic_alt = "-"
-cost     = 1540
+cost     = 2140
 
 [advance_nuclear_power]
 name     = _("Nuclear Power")
@@ -1108,7 +1126,7 @@ flags    = ""
 graphic     = "a.nuclear_power"
 graphic_alt = "-"
 helptext = _("Gives sea units one extra move.")
-cost     = 1990
+cost     = 2590
 
 [advance_offshore_exploration]
 name     = _("Offshore Exploration")
@@ -1123,6 +1141,15 @@ Allows embarked Settlers, Migrants, Workers, Engineers or Transports and Barges 
 oil platforms on Deep Ocean, required to get the bonus from \
 Offshore Platforms.\
 ") 
+
+[advance_optics]
+name     = _("Optics")
+req1     = "Engineering"
+req2     = "Physics"
+flags    = ""
+graphic     = "a.optics"
+graphic_alt = "-"
+cost     = 750
 
 [advance_overseas_trade]
 name     = _("Overseas Trade")
@@ -1217,7 +1244,7 @@ cost     = 160
 [advance_quantum_theory]
 name     = _("Quantum Theory")
 req1     = "Radioactivity"
-req2     = "Mass Production"
+req2     = "Miniaturization"
 flags    = ""
 graphic     = "a.quantum_theory"
 graphic_alt = "-"
@@ -1325,7 +1352,7 @@ flags    = ""
 graphic     = "a.rocketry"
 graphic_alt = "-"
 ;helptext = _("Doubles movement of nuclear units.")
-cost     = 2250
+cost     = 2350
 
 [advance_saddle_stirrup]
 name     = _("Saddle Stirrup")
@@ -1563,7 +1590,7 @@ flags    = ""
 graphic     = "a.television"
 graphic_alt = "-"
 helptext = _("TIP: Together with Hollywood wonder, 3 additional entertainer specialists for each city. ")
-cost     = 1100
+cost     = 1250
 
 [advance_taoism]
 name     = _("Taoism")
@@ -1586,7 +1613,7 @@ cost     = 150
 
 [advance_the_corporation]
 name     = _("The Corporation")
-req1     = "Economics"
+req1     = "Federation"
 req2     = "Refining"
 flags    = ""
 graphic     = "a.the_corporation"
@@ -1595,7 +1622,7 @@ helptext = _("\
 Halves the corruption of trade related to distance from the capital \
 (or eliminates it for Federation governments).\
 ")
-cost     = 780
+cost     = 880
 
 [advance_the_republic]
 name     = _("The Republic")
@@ -1637,12 +1664,12 @@ cost     = 320
 
 [advance_theory_of_relativity]
 name     = _("Theory of Relativity")
-req1     = "Engineering"
-req2     = "Electromagnetism"
+req1     = "Optics"
+req2     = "Radio"
 flags    = ""
 graphic     = "a.theory_of_relativity"
 graphic_alt = "-"
-cost     = 990
+cost     = 1190
 
 [advance_trade]
 name     = _("Trade")
@@ -1721,3 +1748,4 @@ graphic     = "a.zaibatsu"
 graphic_alt = "-"
 helptext = _("TIP: Increase factory production by 25% (this effect is cancelled by Labor Union).")
 cost     = 590
+

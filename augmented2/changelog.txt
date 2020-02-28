@@ -9,6 +9,9 @@ Yougoslavia custom flag removed due to warnings
 Partisans can attack Helicopters.
 Modpack index file corrected
 Engineers fp3
+Floating Bridge unit added
+Optics, Command and Control, Logistics tech added, costs adjusted
+Logistics req. for second traderoute
 
 2.6.lt16
 new units: Wagenburg, Scout.

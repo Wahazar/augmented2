@@ -120,6 +120,7 @@ list =
   "augmented2/amplio_units/skirmishers_a.png"
   "augmented2/amplio_units/wagenburg_a.png"
   "augmented2/amplio_units/scout_a.png"
+  "augmented2/amplio_units/floating_bridge_defensegovClintonWood.png"
   "augmented2/buildings/5_years_plan.png"
   "augmented2/buildings/amphitheater.png"
   "augmented2/buildings/buildings-large.spec"
@@ -295,6 +296,7 @@ list =
   "augmented2/small_units/pirates_t.png"
   "augmented2/small_units/wagenburg_t.png"
   "augmented2/small_units/scout_t.png"
+  "augmented2/small_units/floating_bridge_srb.png"
   "augmented2/terrain/activities.png"
   "augmented2/terrain/activities.spec"
   "augmented2/terrain/blank.png"
@@ -417,7 +419,3 @@ list =
   "doc/units.xls", "augmented2/doc/units_lowcost.xls"
   "doc/terraintransform.png", "augmented2/doc/terraintransform.png"
 }
-
-
-
-

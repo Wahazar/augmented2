@@ -100,4 +100,7 @@ tiles = { "row", "column","tag"
   8, 2, "a.sailing"
   8, 3, "a.shamanism"
   8, 4, "a.copper_working"
+  8, 5, "a.logistics"
+  8, 6, "a.command_and_control"
+  8, 7, "a.optics"
 }

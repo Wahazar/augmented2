@@ -50,6 +50,7 @@ artists = "
 	Mouse
 	PikkaBird
 	andythenorth
+	Clinton Wood
 "
 
 [file]
@@ -218,6 +219,7 @@ sprites =
 		"u.skirmishers", "augmented2/amplio_units/skirmishers_a"
 		"u.scout", "augmented2/amplio_units/scout_a"
 		"u.wagenburg", "augmented2/amplio_units/wagenburg_a"
+		"u.floating_bridge", "augmented2/amplio_units/floating_bridge_defensegovClintonWood"
 ; swapped standard graphics
 		"u.warriors", "augmented2/amplio_units/warriors_a"
 	}
