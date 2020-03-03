@@ -129,7 +129,7 @@ _("\
 * Base corruption and waste is 30% (the highest under any government)\
  (half of base corruption with knowledge of Trade).\n\
 * Tribe loyality make inciting revolt 2x more expensive than Despotism or Monarchy.\n\
-* Science and gold outcome is decreased.\
+* Science and gold outcome is decreased 25%\n\
 * Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -174,7 +174,7 @@ _("\
  capital (half as fast with knowledge of Trade).\n\
 * Chariots gain Veteran level if built in city with Stable Barracks), all other Wheeled Units recruit level\
  (not cumulaltive with Leonardo Workshop or Ecole Speciale Militaire). \n\
-* Science outcome is decreased twice.\
+* Science outcome is decreased twice.\n\
 * Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -215,7 +215,7 @@ _("\
 * Base production waste is 20%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
 * Pikemen and Arbalests gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
-* Science and luxury outcome are decreased.\
+* Science and luxury outcome are decreased by 25%\n\
 * Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -252,7 +252,7 @@ _("\
 * Base corruption is 20%. This increases slowly with distance from the capital\n\
 * Base production waste is 30%, regardless of distance from capital.\n\
 * Halberdiers gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
-* Science outcome is decreased.\
+* Science outcome is decreased 25%\n\
 * Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -297,8 +297,8 @@ _("\
 * Communism is relatively tolerant of cosmopolitan cities.\n\
 * Partisans gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
 * If United Nation wonder was built by any player, inciting communistic cities is 4x more expensive.\n\
-* Gold outcome is decreased, luxury outcome is substantially supressed by 60%\
- (except for cities with Trade Union improvement: 30%).\
+* Gold outcome is decreased twice, luxury outcome is substantially supressed by 60%\
+ (except for cities with Trade Union improvement: 30%).\n\
 * Policies settings, which are taken into account: Collective Economy, Welfare Policy, National Pride. \
 ")
 
@@ -347,7 +347,8 @@ _("\
 * Base production waste is 15%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
 * Due to high loyality of indoctrinated warriors, inciting revolt is very expensive.\n\
-* Science outcome is decreased.\
+* Science outcome is decreased twice.\n\
+* Universities outcome is is one third of normal yield, but Madrasa increase science by 25%\n\
 * Policies settings, which are taken into account: Religious Orthodoxy, National Pride. \
 ")
 
@@ -390,7 +391,7 @@ _("\
 * If Colosseum was build by player, Legions or Swordsmen gain additional veterancy level\
  (recruits without Barracks, hardened with Barracks).\n\
 * Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
-* Luxury outcome is increased.\
+* Luxury outcome is increased 25%\n\
 * Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -430,7 +431,7 @@ _("\
 * Direct Democracy is relatively tolerant of foreginers metics in cities.\
 * Phalanx and Archers gain additional veterancy level (cumulative with Barracks).\n\
 * Inciting revolt is 3x more expensive than Despotism or Monarchy.\n\
-* Science outcome is increased.\
+* Science outcome is increased 20%\n\
 * Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -473,8 +474,9 @@ _("\
 * Additional trade point from each Lake, Ocean or Deep Ocean tile for celebrating cities.\n\
 * City with the Lighthouse and Harbor harvest additional food from Deep Ocean tiles.\n\
 * Low chance of Civil War, however citizens are happy, when limited number of cities\
- participate within this sea-trade federation.\
-* Thalassocracy is very tolerant of mixed nationalities in your cities.\
+ participate within this sea-trade federation.\n\
+* Thalassocracy is very tolerant of mixed nationalities in your cities.\n\
+* Science outcome depend on Enlightening Policy.
 * Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -515,7 +517,7 @@ _("\
 * Federation is relatively tolerant of cosmopolitan cities.\n\
 * Diplomats and Spies gain additional veterancy level (secretary).\n\
 * Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
-* Luxury and gold outcome is increased.\
+* Gold outcome is increased 25%, science outcome increase depend on Enlightening Policy.\n\
 * Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -557,7 +559,7 @@ _("\
 * Builders and freight Trains gain additional veterancy level.\n\
 * Bribing units is possible, but with Slavery Abolition wonder, is very expensive.\n\
 * Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
-* Gold and science outcome is increased.\
+* Gold and luxury outcome are increased 25%, science outcome increase depend on Enlightening Policy.\n\
 * Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -599,7 +601,7 @@ _("\
 * Democracy is very tolerant of multicultural cities.\n\
 * Riflemen and Snipers gain additional veterancy level (cumulative with Barracks).\n\
 * Revolt inciting is possible, but with Slavery Abolition wonder, is very expensive.\n\
-* Science and gold outcome is increased.\
+* Science and luxury outcome are increased by 30% and 25% respectively.\n\
 * Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -642,7 +644,7 @@ _("\
  will each force 2 unhappy citizen to become content.\n\
 * It is not possible to incite revolt, if fascist ruled nation *doesn't* posses Statue of Liberty.\n\
 * Fascism is not tolerant of another nationality of citisens - they unlikely will be angry.\n\
-* Luxury and science outcome is decreased.\
+* Luxury and science outcome are decreased 25%\n\
 * Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 

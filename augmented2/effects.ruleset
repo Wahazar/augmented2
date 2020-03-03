@@ -3238,6 +3238,15 @@ reqs    =
       "OutputType", "Luxury", "Local", FALSE
     }
 
+[effect_bad_lux_fascism]
+type    = "Output_Bonus"
+value   = -25
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Fascism", "Player", TRUE
+      "OutputType", "Luxury", "Local", FALSE
+    }
+
 [effect_bad_lux_communism]
 type    = "Output_Bonus"
 value   = -60
