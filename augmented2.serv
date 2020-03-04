@@ -1,9 +1,9 @@
 rulesetdir augmented2
 set techlevel=0
 
-set aifill=0
+set aifill=12
 cmdlevel info
-set allowtake=""
+set allowtake="aA1"
 set ec_chat=enabled
 set ec_info=enabled 
 set ec_max_size=5000
@@ -28,7 +28,7 @@ set huts=10
 set minplayers 1
 set maxplayers 12
 set nationset all
-metamessage AUGMENTED2.6.lt ruleset, modpack installer http://149.156.194.203/~mczapkie/fc/augmented/augmented2.modpack discord:Wahazar#3898
-cmdlevel info
+metamessage AUGMENTED2.6.lt17 ruleset, modpack installer http://149.156.194.203/~mczapkie/fc/augmented/augmented2.modpack discord:Wahazar#3898
+cmdlevel hack  ;info
 
 

@@ -1839,7 +1839,7 @@ graphic	= "b.temple"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
-      "Building", "Church", "City"
+;      "Building", "Church", "City"
       "Building", "Mosque", "City"
     }
 build_cost	= 30
@@ -4020,7 +4020,7 @@ Each tile worked by the city where this wonder is built produces \
 one extra research point.\
 "), _("\
 Additionally, each city on the continent where Stonehenge is located is not affected by Tribal government science penalty, \
-if Tribe Hut is present.\
+if Palace is not present in such city.\
 "), _("\
 +2 Culture Points/turn.\
 ")

@@ -1005,7 +1005,7 @@ set =
       "landmass", 40
       "specials", 400
       "tinyisles", "DISABLED"
-      "temperature", 70
+;      "temperature", 70
       "flatpoles", 0
       "startunits", "cccccf"
       "citymindist", 2
@@ -1023,6 +1023,6 @@ set =
       "sciencebox", 160
       "revolen", 2
       "revolentype", "RANDQUICK"
-      "scorelog", "ENABLED"
+;      "scorelog", "ENABLED"
       "victories", "SPACERACE|ALLIED|CULTURE"
     }
