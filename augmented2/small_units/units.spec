@@ -178,6 +178,7 @@ sprites =
 		"u.scout", "augmented2/small_units/scout_t"
 		"u.wagenburg", "augmented2/small_units/wagenburg_t"
 		"u.floating_bridge", "augmented2/small_units/floating_bridge_srb"
+		"u.cart", "augmented2/small_units/cart_t"
 ; swapped standard graphics
 		"u.direct_artillery", "augmented2/small_units/direct_artillery_t"
 		"u.plunging_cannon", "augmented2/small_units/plunging_cannon_t"

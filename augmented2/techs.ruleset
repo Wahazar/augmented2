@@ -175,7 +175,7 @@ req2     = "Mathematics"
 flags    = ""
 graphic     = "a.astrology"
 graphic_alt = "-"
-cost     = 120
+cost     = 130
 
 [advance_astronomy]
 name     = _("Astronomy")
@@ -211,7 +211,7 @@ req2     = "First Republic"
 flags    = ""
 graphic     = "a.banking"
 graphic_alt = "-"
-cost     = 120
+cost     = 130
 
 [advance_biology]
 name     = _("Biology")
@@ -239,7 +239,7 @@ req2     = "Construction"
 flags    = "Bridge"
 graphic     = "a.bridge_building"
 graphic_alt = "-"
-cost     = 90
+cost     = 110
 helptext = _("Allows roads to be built on river tiles.")
 
 [advance_bronze_working]
@@ -429,7 +429,7 @@ cost     = 450
 
 [advance_construction]
 name     = _("Construction")
-req1     = "Writing"
+req1     = "The Harness"
 req2     = "Iron Working"
 flags    = ""
 graphic     = "a.construction"
@@ -437,7 +437,7 @@ graphic_alt = "-"
 helptext = _("\
 Allows Settlers, Migrants, Slaves, Workers and Engineers to build fortresses.\
 ")
-cost     = 65
+cost     = 75
 
 [advance_copper_working]
 name     = _("Copper Working")
@@ -534,7 +534,7 @@ root_req = "Theology"
 flags    = ""
 graphic     = "a.egalitarianism"
 graphic_alt = "-"
-cost     = 200
+cost     = 210
 
 [advance_electricity]
 name     = _("Electricity")
@@ -630,7 +630,7 @@ req2     = "Monarchy"
 flags    = ""
 graphic     = "a.feudalism"
 graphic_alt = "-"
-cost     = 80
+cost     = 85
 
 [advance_fire_making]
 name     = _("Fire Making")
@@ -805,7 +805,7 @@ flags    = ""
 graphic     = "a.invention"
 graphic_alt = "-"
 helptext = _("Halves the upgrade cost of your units.")
-cost     = 130
+cost     = 140
 
 [advance_iron_working]
 name     = _("Iron Working")
@@ -814,7 +814,7 @@ req2     = "Masonry"
 flags    = ""
 graphic     = "a.iron_working"
 graphic_alt = "-"
-cost     = 45
+cost     = 55
 
 [advance_islam]
 name     = _("Islam")
@@ -833,7 +833,7 @@ req2     = "Astrology"
 flags    = ""
 graphic     = "a.jainism"
 graphic_alt = "-"
-cost     = 150
+cost     = 160
 
 [advance_jet_propulsion]
 name     = _("Jet Propulsion")
@@ -964,7 +964,7 @@ req2     = "Construction"
 flags    = ""
 graphic     = "a.martial_games"
 graphic_alt = "-"
-cost     = 90
+cost     = 95
 
 [advance_masonry]
 name     = _("Masonry")
@@ -1001,7 +1001,7 @@ req2     = "Simple Machines"
 flags    = ""
 graphic     = "a.mathematics"
 graphic_alt = "-"
-cost     = 95
+cost     = 100
 
 [advance_medicine]
 name     = _("Medicine")
@@ -1239,7 +1239,7 @@ req2     = "Invention"
 flags    = ""
 graphic     = "a.printing_press"
 graphic_alt = "-"
-cost     = 160
+cost     = 170
 
 [advance_quantum_theory]
 name     = _("Quantum Theory")
@@ -1356,12 +1356,12 @@ cost     = 2350
 
 [advance_saddle_stirrup]
 name     = _("Saddle Stirrup")
-req1     = "Pastoralism"
+req1     = "The Harness"
 req2     = "Copper Working"
 flags    = ""
 graphic     = "a.saddle_stirrup"
 graphic_alt = "-"
-cost     = 40
+cost     = 45
 
 [advance_sailing]
 name     = _("Sailing")
@@ -1466,7 +1466,7 @@ req2     = "Iron Working"
 flags    = ""
 graphic     = "a.simple_machines"
 graphic_alt = "-"
-cost     = 60
+cost     = 65
 
 [advance_slave_trade]
 name     = _("Slave Trade")
@@ -1624,6 +1624,15 @@ Halves the corruption of trade related to distance from the capital \
 ")
 cost     = 880
 
+[advance_the_harness]
+name     = _("The Harness")
+req1     = "Horseback Riding"
+req2     = "The Wheel"
+flags    = ""
+graphic     = "a.harness"
+graphic_alt = "a.the_wheel"
+cost     = 32
+
 [advance_the_republic]
 name     = _("The Republic")
 req1     = "Banking"
@@ -1632,16 +1641,16 @@ root_req = "First Republic"
 flags    = ""
 graphic     = "a.the_republic"
 graphic_alt = "-"
-cost     = 260
+cost     = 280
 
 [advance_the_wheel]
 name     = _("The Wheel")
-req1     = "Horseback Riding"
+req1     = "Carpentry"
 req2     = "Pottery"
 flags    = ""
-graphic     = "a.the_wheel"
-graphic_alt = "-"
-cost     = 20
+graphic     = "a.wheel"
+graphic_alt = "a.the_wheel"
+cost     = 25
 
 [advance_theology]
 name     = _("Theology")

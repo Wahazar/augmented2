@@ -220,6 +220,7 @@ sprites =
 		"u.scout", "augmented2/amplio_units/scout_a"
 		"u.wagenburg", "augmented2/amplio_units/wagenburg_a"
 		"u.floating_bridge", "augmented2/amplio_units/floating_bridge_defensegovClintonWood"
+		"u.cart", "augmented2/amplio_units/cart_a"
 ; swapped standard graphics
 		"u.warriors", "augmented2/amplio_units/warriors_a"
 	}

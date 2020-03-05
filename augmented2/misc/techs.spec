@@ -103,4 +103,6 @@ tiles = { "row", "column","tag"
   8, 5, "a.logistics"
   8, 6, "a.command_and_control"
   8, 7, "a.optics"
+  8, 8, "a.wheel"
+  8, 9, "a.harness"
 }

@@ -45,6 +45,7 @@ sprites =
 		"b.sacred_cairn", "augmented2/buildings_small/sacred_cairn_s"
 		"b.mahout_barracks", "augmented2/buildings_small/mahout_barracks"
 		"b.post_office", "augmented2/buildings_small/post_office_s"
+		"b.watermill", "augmented2/buildings_small/watermill_s"
 	}
 
 [file]

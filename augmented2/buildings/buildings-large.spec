@@ -52,4 +52,5 @@ sprites =
 		"b.sacred_cairn", "augmented2/buildings/sacred_cairn_a"
 		"b.tribe_hut", "augmented2/buildings/tribe_hut_a"
 		"b.mahout_barracks", "augmented2/buildings/mahout_barracks_a"
+		"b.watermill", "augmented2/buildings/watermill_a"
 	}

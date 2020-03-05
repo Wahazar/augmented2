@@ -738,6 +738,8 @@ class         = "Small Land"
 tech_req      = "Slave Trade"
 impr_req      = "Yasir"
 obsolete_by   = "Builders"
+convert_to    = "Migrants"
+convert_time  = 2
 graphic       = "u.slave"
 graphic_alt   = "u.worker"
 sound_move    = "m_worker"
@@ -760,7 +762,7 @@ uk_food       = 1
 uk_gold       = 0
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
-flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "Capturable", "HelpWonder", "NoVeteran"
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Capturable", "HelpWonder", "NoVeteran"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -773,11 +775,8 @@ Slaves can perform some of the same\
  terrain alterations as Workers (but cannot build airstrips,\
  airbases, or buoys). Slaves have no veteran levels.\
 "), _("\
-They can be also used to transfer population to other cities, but\
- may not found new cities.\
-"), _("\
 A Slave sent to one of your own cities that is building a wonder\
- can add 10 shields towards its production.\
+ can add 20 shields towards its production.\
  Unlike Caravans, Slave can't establish trade route.\
 ")
 
@@ -2854,7 +2853,7 @@ This unit cannot move across swamps, glaciers or mountains.\
 [unit_chariot]
 name          = _("Chariot")
 class         = "Wheeled Unit"
-tech_req      = "The Wheel"
+tech_req      = "The Harness"
 obsolete_by   = "Knights"
 graphic       = "u.chariot"
 graphic_alt   = "-"
@@ -6026,6 +6025,39 @@ This huge GBU (Guided Bomb Unit), carried by bombers, can precisely strike enemy
  instead of spreading small bombs by bomber itself.\
 ")
 
+[unit_cart]
+name          = _("Cart")
+class         = "Merchant"
+tech_req      = "The Harness"
+obsolete_by   = "Freight"
+graphic       = "u.cart"
+graphic_alt   = "u.caravan"
+sound_move    = "m_caravan"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravan"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 5
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "HelpWonder", "NonMil", "HasNoZOC", "Unique", "Unbribable"
+roles         = ""
+helptext      = _("\
+Carts pulled by horses or oxes carries goods to help build wonders in your own cities.\
+"), _("\
+A Cart sent to one of your own cities that is building a wonder\
+ can add 20 shields towards its production. Carts can embark/disembark ships only in cities.\
+")
 
 [unit_caravan]
 name          = _("Caravan")
@@ -6052,8 +6084,8 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 1
-embarks       = "Sea"
-disembarks    = "Sea"
+embarks       = "Coaster", "Sea"
+disembarks    = "Coaster", "Sea"
 flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Unique", "Unbribable"
 roles         = ""
 helptext      = _("\
@@ -6095,8 +6127,8 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 1
-embarks       = "Sea"
-disembarks    = "Sea"
+embarks       = "Coaster", "Sea"
+disembarks    = "Coaster", "Sea"
 flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
 roles         = ""
 helptext      = _("\

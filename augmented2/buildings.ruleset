@@ -1819,7 +1819,8 @@ sabotage	= 100
 sound		= "b_supermarket"
 sound_alt	= "b_generic"
 helptext	= _("\
-Together increase Granary effect for cities larger than size 7.\
+Together increase Granary effect for cities larger than size 7 \
+and add 1 food and 1 shield to the city center.\
 "),
 _("\
 Together with Railway Station or Port Facility, increases the tax output in a city by 25%.\
@@ -1958,6 +1959,33 @@ sound		= "b_sewer_system"
 sound_alt	= "b_generic"
 helptext	= _("\
 Increase vision range of the city.\
+")
+
+[building_watermill]
+name		= _("Watermill")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "The Wheel", "Player"
+      "Extra", "River", "Adjacent"
+    }
+graphic	= "b.watermill"
+graphic_alt	= "b.factory"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Supermarket", "City"
+    }
+build_cost	= 20
+upkeep	= 1
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+Water wheel can drive machinery or millstones. Such improvement add 1 food and 1 shield \
+to the city center.\
+"), _("\
+Watermill use water power, therefore can't be built in a city \
+without access to a river. \
 ")
 
 [building_university]

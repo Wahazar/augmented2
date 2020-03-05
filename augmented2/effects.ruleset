@@ -5153,21 +5153,21 @@ reqs    =
       "Building", "Super Highways", "City", TRUE
       "OutputType", "Trade", "Local", TRUE
       "Extra", "Farmland", "Local", FALSE
-      "CityTile", "Center", "Local", FALSE
+;      "CityTile", "Center", "Local", FALSE
     }
 
 ; City center tiles do get the Super Highways + road trade bonus, even
 ; if they are already receiving a (possibly 'automatic') farmland bonus
-[effect_super_highways_city_center_1]
-type    = "Output_Inc_Tile"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Extra", "Paved Road", "Local", TRUE
-      "Building", "Super Highways", "City", TRUE
-      "OutputType", "Trade", "Local", TRUE
-      "CityTile", "Center", "Local", TRUE
-    }
+;[effect_super_highways_city_center_1]
+;type    = "Output_Inc_Tile"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "Extra", "Paved Road", "Local", TRUE
+;      "Building", "Super Highways", "City", TRUE
+;      "OutputType", "Trade", "Local", TRUE
+;      "CityTile", "Center", "Local", TRUE
+;    }
 
 [effect_super_highways_1]
 type    = "Output_Bonus"
@@ -5198,32 +5198,33 @@ reqs    =
       "Building", "Super Highways", "City"
     }
 
-;augmented: farmland separate from supermarket
+;augmented: farmland separate from supermarket and not possible on city center
 [effect_farmland]
 type    = "Output_Per_Tile"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Extra", "Farmland", "Local"
-;      "Building", "Supermarket", "City"
-      "OutputType", "Food", "Local"
+    { "type", "name", "range", "present"
+      "Extra", "Farmland", "Local", TRUE
+;      "Building", "Supermarket", "City", TRUE
+      "OutputType", "Food", "Local", TRUE
+      "CityTile", "Center", "Local", FALSE
     }
 
 ; Automatic farmland on city center (but not for swamp)
-[effect_supermarket_center]
-type    = "Output_Per_Tile"
-value   = 50
-reqs    =
-    { "type", "name", "range", "present"
-      "CityTile", "Center", "Local", TRUE
-      "Extra", "Farmland", "Local", FALSE
-      "TerrainAlter", "CanIrrigate", "Local", TRUE
-      "Terrain", "Swamp", "Local", FALSE
-      "Tech", "Chemical Synthesis", "Player", TRUE
-      "OutputType", "Food", "Local", TRUE
-      "Extra", "Mine", "Local", FALSE
-      "Extra", "Oil Well", "Local", FALSE
-    }
+;[effect_supermarket_center]
+;type    = "Output_Per_Tile"
+;value   = 50
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "CityTile", "Center", "Local", TRUE
+;      "Extra", "Farmland", "Local", FALSE
+;      "TerrainAlter", "CanIrrigate", "Local", TRUE
+;      "Terrain", "Swamp", "Local", FALSE
+;      "Tech", "Chemical Synthesis", "Player", TRUE
+;      "OutputType", "Food", "Local", TRUE
+;      "Extra", "Mine", "Local", FALSE
+;      "Extra", "Oil Well", "Local", FALSE
+;    }
 
 ;augmented: 0% food distance waste with Supermarket
 ;[effect_supermarket_distance_waste]
@@ -6720,6 +6721,18 @@ value   = -4
 reqs    =
     { "type", "name", "range", "present"
       "Terrain", "Swamp", "Local", TRUE
+      "Extra", "Irrigation", "Local", TRUE
+    }
+
+;no farmland in city center (supermarket add 1f instead)
+[effect_no_city_farmland_3]
+type    = "Irrig_Possible"
+value   = -4
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Swamp", "Local", FALSE
+      "Terrain", "Desert", "Local", FALSE
+      "CityTile", "Center", "Local", TRUE
       "Extra", "Irrigation", "Local", TRUE
     }
 
@@ -9139,6 +9152,46 @@ value	= 4
 reqs	=
     { "type", "name", "range"
       "Building", "Fusion Plant", "City"
+    }
+
+[effect_watermill_shield]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Watermill", "City"
+      "OutputType", "Shield", "Local"
+      "CityTile", "Center", "Local"
+    }
+
+[effect_watermill_food]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Watermill", "City"
+      "OutputType", "Food", "Local"
+      "CityTile", "Center", "Local"
+    }
+
+[effect_supermarket_shield]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Supermarket", "City"
+      "OutputType", "Shield", "Local"
+      "CityTile", "Center", "Local"
+    }
+
+[effect_supermarket_food]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Supermarket", "City"
+      "OutputType", "Food", "Local"
+      "CityTile", "Center", "Local"
     }
 
 ;road req. for full shield prod.

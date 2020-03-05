@@ -600,7 +600,7 @@ color.b              = 19
 helptext             = _("\
 Taiga are boreal forests with poor soil.\
 "), _("\
-Road or river and Forestry advance required to get additional production. \
+Road or river required to get additional production. \
 Paved road required for Wheeled units to move. \
 ")
 
@@ -747,7 +747,7 @@ Jungles are densely overgrown, making agriculture somewhat\
  Big Land and Wheeled Units may not move into jungle without\
  a paved road.\
 "), _("\
-Road or river and Forestry advance required to get shield production, \
+Road or river required to get shield production, \
 Railroad and Railway Station for additional shield production.\
 "), _("\
 Elephants add extra 2 trade points to Mahout Barracks.\
@@ -1462,9 +1462,9 @@ removal_time   = 0
 conflicts      = "Irrigation", "Farmland", "Water Lock"
 hidden_by      = "Oil Well"
 helptext       = _("\
-Mines can be built on some types of terrain, which increases the\
- number of production points produced by that tile. Hills and Mountains\
- get an extra 2 production points per tile; other terrains get 1 extra\
+Mines can be built on some types of terrain, once Copper Working advance is known by player.\
+ Mines increases the number of production points produced by that tile if Bronze Working is known.\
+ Hills and Mountains get an extra 2 production points per tile; other terrains get 1 extra\
  production point.\
 "), _("\
 You need to destroy the irrigation prior to building mine.\
@@ -1677,7 +1677,7 @@ conflicts      = "Mine", "Oil Well"
 ; /* xgettext:no-c-format */
 helptext       = _("\
 Once Chemical Synthesis is known, irrigation systems can be upgraded to\
- farmland by irrigating them a second time (except of Desert).\
+ farmland by irrigating them a second time (except of Desert, Swamp and city center).\
 "), _("\
 Farmland on a tile prevents any trade bonus from Super Highways.\
 "), _("\
