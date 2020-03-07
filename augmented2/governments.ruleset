@@ -110,7 +110,7 @@ Under a Tribal government, you are part ruler of your people. Your\
 "), _("\
 Compared to Despotism, a Tribal economy is more shield-oriented, without government centre. Its\
  bonuses to veterancy can be an advantage in wartime, but it lacks the\
- effective martial law of other early governments.\
+ martial law of other early governments.\
 "),
 ; /* xgettext:no-c-format */
 _("\
@@ -125,12 +125,143 @@ _("\
   shields per turn (more than 6, also food).\n\
 * Unlike later governments, military units do not cause unhappiness even\
  when deployed aggressively.\n\
-* Limited martial law: 1 military units inside a city will force 1 unhappy citizen to become content.\n\
 * Base corruption and waste is 30% (the highest under any government)\
  (half of base corruption with knowledge of Trade).\n\
 * Tribe loyality make inciting revolt 2x more expensive than Despotism or Monarchy.\n\
 * Science and gold outcome is decreased 25%\n\
 * Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_thalassocracy]
+
+name        = _("Thalassocracy")
+reqs = { "type", "name", "range"
+         "tech", "Thalassocracy", "Player"
+;         "Building", "Palace", "Player"
+       }
+graphic     = "gov.thalassocracy"
+graphic_alt = "s.tax_gold"
+ai_better   = "Federation"
+
+ruler_male_title = _("Council %s")
+ruler_female_title = _("?female:Council %s")
+
+helptext = _("\
+Thalassocracy is a system of 'empire at sea', which gain power\
+ from naval and sea trade supremacy. \n\
+ This decentralised state of selfdom cities have moderate corruption\
+ and increased money income from sea,\
+ albeit decreased inland productivity. \n\
+ Due to long traditions of its maritime supremacy, all new sea warships have already deckhand level \
+(veteran with Harbour). \
+"),
+; /* xgettext:no-c-format */
+_("\
+* Each city gets extra 2 luxury points.\n\
+* Each city can support up to 1 gold and 4 shield unit payments for free; \n\
+* Martial law is limited to 2 units.\n\
+* Each city tolerates up to 1 peacemaker unit outside of state boundaries;\
+  each further unit causes 1..3 unhappy citizens (depend on Enlightening Policy, decreased with Hollywood).\n\
+* There is 10% base level of corruption, not affected by distance to the capital.\n\
+* Base production waste is 20%, \
+  and is not affected by distance to the capital.\n\
+* Production penalty is applied for inland tiles, except \
+ if Marco Polo Embassy is on the same continent.\n\
+* Additional trade point from each Lake, Ocean or Deep Ocean tile for celebrating cities.\n\
+* City with the Lighthouse and Harbor harvest additional food from Deep Ocean tiles.\n\
+* Low chance of Civil War, however citizens are happy, when limited number of cities\
+ participate within this sea-trade federation.\n\
+* Thalassocracy is very tolerant of mixed nationalities in your cities.\n\
+* Science outcome depend on Enlightening Policy.
+* Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_federation]
+
+name        = _("Federation")
+reqs = { "type", "name", "range"
+         "tech", "Federation", "Player"
+       }
+graphic     = "gov.federation"
+graphic_alt = "s.tax_gold"
+
+ruler_male_title = _("Consul %s")
+ruler_female_title = _("?female:Consul %s")
+
+helptext = _("\
+Federalism is a system in which the power to govern is shared between\
+ national and provincial governments. \
+ This decentralization minimizes the corruption and waste caused by distance\
+ to capital, and avoids separatist movements.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Each city gets 2 extra luxury points.\n\
+* Cities which belong to the nation with Women Suffrage small wonder,\
+ produce one extra trade point for every tile which is\
+ already producing trade. (Cities below size 3 will not celebrate.)\n\
+* Each city can support up to 2 gold/shield unit payment for free; gold payment is doubled).\n\
+* Each city tolerates one aggressively deployed military unit;\
+ each further unit causes 1..3 unhappy citizens (depend on Enlightening Policy).\n\
+* There is no base level of corruption, but an increasing amount\
+ with distance from the capital (half as much as with most other\
+ governments). Knowledge of The Corporation eliminates this corruption.\n\
+* Base production waste is 30%, but is not affected by distance to the\
+ capital.\n\
+* Has a senate that may prevent declaration of war.\n\
+* Federation is relatively tolerant of cosmopolitan cities.\n\
+* Diplomats and Spies gain additional veterancy level (secretary).\n\
+* Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
+* Gold outcome is increased 25%, science outcome increase depend on Enlightening Policy.\n\
+* Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_communism]
+
+name        = _("Communism")
+reqs = { "type", "name", "range"
+         "tech", "Communism", "Player"
+       }
+graphic     = "gov.communism"
+graphic_alt = "-"
+
+ruler_male_title = _("Comrade %s")
+ruler_female_title = _("?female:Comrade %s")
+
+helptext = _("\
+A Communist government is based on the ideal that all people are\
+ equal.  All goods are owned by the state, rather than by private\
+ citizens.  Communism gives a balance between military and commercial\
+ styles of government.\
+"), _("\
+Communism is a good government for maximizing shield production, and\
+ for large empires.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities produce a further shield point for every worked tile\
+ (land or water) which is already producing shields. (Cities below size 3\
+ will not celebrate). 5 Year Plan required.\n\
+* City improvements which would normally have an upkeep of 1 gold are\
+ free of upkeep (except of cities with Trade Union).\n\
+* Each city can support up to 3 shield and 8 gold/food unit payments for free;\
+ food payment is doubled.\n\
+* Each city tolerates up to 3 aggressively deployed military units (cities size 8 or above support more of them);\
+ each further unit causes 1 unhappy citizen.\n\
+* Military units impose martial law. Up to 3 military units inside a city\
+ will each force 2 unhappy citizens to become content (the maximum\
+ possible).\n\
+* Base corruption is 30%, but is not affected by distance to the capital.\n\
+* There is small 10% production waste.\
+* Communism is relatively tolerant of cosmopolitan cities.\n\
+* Partisans gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
+* If United Nation wonder was built by any player, inciting communistic cities is 4x more expensive.\n\
+* Gold outcome is decreased twice, luxury outcome is substantially supressed by 60%\
+ (except for cities with Trade Union improvement: 30%).\n\
+* Policies settings, which are taken into account: Collective Economy, Welfare Policy, National Pride. \
 ")
 
 ;------------------------------------------------------------------------
@@ -257,52 +388,6 @@ _("\
 ")
 
 ;------------------------------------------------------------------------
-[government_communism]
-
-name        = _("Communism")
-reqs = { "type", "name", "range"
-         "tech", "Communism", "Player"
-       }
-graphic     = "gov.communism"
-graphic_alt = "-"
-
-ruler_male_title = _("Comrade %s")
-ruler_female_title = _("?female:Comrade %s")
-
-helptext = _("\
-A Communist government is based on the ideal that all people are\
- equal.  All goods are owned by the state, rather than by private\
- citizens.  Communism gives a balance between military and commercial\
- styles of government.\
-"), _("\
-Communism is a good government for maximizing shield production, and\
- for large empires.\
-"),
-; /* xgettext:no-c-format */
-_("\
-* Celebrating cities produce a further shield point for every worked tile\
- (land or water) which is already producing shields. (Cities below size 3\
- will not celebrate). 5 Year Plan required.\n\
-* City improvements which would normally have an upkeep of 1 gold are\
- free of upkeep (except of cities with Trade Union).\n\
-* Each city can support up to 3 shield and 8 gold/food unit payments for free;\
- food payment is doubled.\n\
-* Each city tolerates up to 3 aggressively deployed military units (cities size 8 or above support more of them);\
- each further unit causes 1 unhappy citizen.\n\
-* Military units impose martial law. Up to 3 military units inside a city\
- will each force 2 unhappy citizens to become content (the maximum\
- possible).\n\
-* Base corruption is 30%, but is not affected by distance to the capital.\n\
-* There is small 10% production waste.\
-* Communism is relatively tolerant of cosmopolitan cities.\n\
-* Partisans gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
-* If United Nation wonder was built by any player, inciting communistic cities is 4x more expensive.\n\
-* Gold outcome is decreased twice, luxury outcome is substantially supressed by 60%\
- (except for cities with Trade Union improvement: 30%).\n\
-* Policies settings, which are taken into account: Collective Economy, Welfare Policy, National Pride. \
-")
-
-;------------------------------------------------------------------------
 [government_fundamentalism]
 
 name        = _("Fundamentalism")
@@ -350,6 +435,49 @@ _("\
 * Science outcome is decreased twice.\n\
 * Universities outcome is is one third of normal yield, but Madrasa increase science by 25%\n\
 * Policies settings, which are taken into account: Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_fascism]
+
+name        = _("Fascism")
+reqs = { "type", "name", "range"
+         "tech", "Imperialism", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.fascism"
+graphic_alt = "f.shield.kuna_yala"
+
+ruler_male_title = _("Leader %s")
+ruler_female_title = _("?female:Leader %s")
+
+helptext = _("\
+Fascism is an authoritarian goverment based on totalitarian one-party state \
+ controlling industry and commerce. Fascism allow private property but suppress it by state interventionist policies. \
+ However socialism was a root of this goverment system, Fascism is focused on militarism and nationalism. 
+ Due to pervasive power of the secret police, opposition usually have no chance to incite revolt. 
+ Beside of the additional veteran levels of Small Land units, fascist regime support veteran paratroopers.\
+"), _("\
+Fascism is a government suitable for maximizing shield production and military power,\
+ but rather for medium size empires.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Each city can support up to 4 shield and 6 gold unit payment for free (shield payment are doubled);\
+ further units each cost 2 shields per turn (more than 6, also gold).\n\
+* Celebrating cities produce a further shield point for every worked tile\
+ (land or water) which is already producing shield. (Cities below size 3\
+ will not celebrate). Police Station required.\n\
+* Base corruption is 20%, this increases with distance from the capital.\n\
+* There is no base production waste, but this increase with distance from the capital.\n\
+* Each factory production is increased twice.\
+* Newly produced Paratroopers are already elite if Barracks tier 3 are present.\n\
+* Military units impose martial law. Up to 2 military units inside a city\
+ will each force 2 unhappy citizen to become content.\n\
+* It is not possible to incite revolt, if fascist ruled nation *doesn't* posses Statue of Liberty.\n\
+* Fascism is not tolerant of another nationality of citisens - they unlikely will be angry.\n\
+* Luxury and science outcome are decreased 25%\n\
+* Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
 ;------------------------------------------------------------------------
@@ -436,92 +564,6 @@ _("\
 ")
 
 ;------------------------------------------------------------------------
-[government_thalassocracy]
-
-name        = _("Thalassocracy")
-reqs = { "type", "name", "range"
-         "tech", "Thalassocracy", "Player"
-;         "Building", "Palace", "Player"
-       }
-graphic     = "gov.thalassocracy"
-graphic_alt = "s.tax_gold"
-ai_better   = "Federation"
-
-ruler_male_title = _("Council %s")
-ruler_female_title = _("?female:Council %s")
-
-helptext = _("\
-Thalassocracy is a system of 'empire at sea', which gain power\
- from naval and sea trade supremacy. \n\
- This decentralised state of selfdom cities have moderate corruption\
- and increased money income from sea,\
- albeit decreased inland productivity. \n\
- Due to long traditions of its maritime supremacy, all new warships have already deckhand level \
-(veteran with Harbour). \
-"),
-; /* xgettext:no-c-format */
-_("\
-* Each city gets extra 2 luxury points.\n\
-* Each city can support up to 1 gold and 4 shield unit payments for free; \n\
-* Martial law is limited to 1 unit.\n\
-* Each city tolerates up to 1 peacemaker unit outside of state boundaries;\
-  each further unit causes 2 unhappy citizens (1 with Hollywood).\n\
-* There is 10% base level of corruption, not affected by distance to the capital.\n\
-* Base production waste is 20%, \
-  and is not affected by distance to the capital.\n\
-* Production penalty is applied for inland tiles, except \
- if Marco Polo embassy is on the same continent.\n\
-* Additional trade point from each Lake, Ocean or Deep Ocean tile for celebrating cities.\n\
-* City with the Lighthouse and Harbor harvest additional food from Deep Ocean tiles.\n\
-* Low chance of Civil War, however citizens are happy, when limited number of cities\
- participate within this sea-trade federation.\n\
-* Thalassocracy is very tolerant of mixed nationalities in your cities.\n\
-* Science outcome depend on Enlightening Policy.
-* Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
-")
-
-;------------------------------------------------------------------------
-[government_federation]
-
-name        = _("Federation")
-reqs = { "type", "name", "range"
-         "tech", "Federation", "Player"
-       }
-graphic     = "gov.federation"
-graphic_alt = "s.tax_gold"
-
-ruler_male_title = _("Consul %s")
-ruler_female_title = _("?female:Consul %s")
-
-helptext = _("\
-Federalism is a system in which the power to govern is shared between\
- national and provincial governments. \
- This decentralization minimizes the corruption and waste caused by distance\
- to capital, and avoids separatist movements.\
-"),
-; /* xgettext:no-c-format */
-_("\
-* Each city gets 2 extra luxury points.\n\
-* Cities which belong to the nation with Women Suffrage small wonder,\
- produce one extra trade point for every tile which is\
- already producing trade. (Cities below size 3 will not celebrate.)\n\
-* Each city can support up to 2 gold/shield unit payment for free; gold payment is doubled).\n\
-* Each city tolerates one aggressively deployed military unit;\
- each further unit causes 1 unhappy citizen.\n\
-* There is no base level of corruption, but an increasing amount\
- with distance from the capital (half as much as with most other\
- governments). Knowledge of The Corporation eliminates this corruption.\n\
-* Base production waste is 30%, but is not affected by distance to the\
- capital.\n\
-* Has a senate that may prevent declaration of war.\n\
-* Federation is relatively tolerant of cosmopolitan cities.\n\
-* Diplomats and Spies gain additional veterancy level (secretary).\n\
-* Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
-* Gold outcome is increased 25%, science outcome increase depend on Enlightening Policy.\n\
-* Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
-")
-
-;------------------------------------------------------------------------
 [government_republic]
 
 name        = _("Republic")
@@ -549,8 +591,8 @@ _("\
  produce an extra shield point for every worked land tile that is\
  already producing shields (Cities below size 3 will not celebrate).\n\
 * Each city with size 8 and above can support one shield unit payment for free; additionally 6 gold unit payment are free.\n\
-* Each city tolerates a single aggressively deployed military unit;\
- each further unit causes 1 unhappy citizen.\n\
+* Each city tolerates one aggressively deployed military unit;\
+ each further unit causes 1..3 unhappy citizens (depend on Enlightening Policy).\n\
 * Base corruption is 25%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 5%. This increases slowly with distance from the\
@@ -605,48 +647,6 @@ _("\
 * Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
-;------------------------------------------------------------------------
-[government_fascism]
-
-name        = _("Fascism")
-reqs = { "type", "name", "range"
-         "tech", "Imperialism", "Player"
-         "Building", "Palace", "Player"
-       }
-graphic     = "gov.fascism"
-graphic_alt = "f.shield.kuna_yala"
-
-ruler_male_title = _("Leader %s")
-ruler_female_title = _("?female:Leader %s")
-
-helptext = _("\
-Fascism is an authoritarian goverment based on totalitarian one-party state \
- controlling industry and commerce. Fascism allow private property but suppress it by state interventionist policies. \
- However socialism was a root of this goverment system, Fascism is focused on militarism and nationalism. 
- Due to pervasive power of the secret police, opposition usually have no chance to incite revolt. 
- Beside of the additional veteran levels of Small Land units, fascist regime support veteran paratroopers.\
-"), _("\
-Fascism is a government suitable for maximizing shield production and military power,\
- but rather for medium size empires.\
-"),
-; /* xgettext:no-c-format */
-_("\
-* Each city can support up to 4 shield and 6 gold unit payment for free (shield payment are doubled);\
- further units each cost 2 shields per turn (more than 6, also gold).\n\
-* Celebrating cities produce a further shield point for every worked tile\
- (land or water) which is already producing shield. (Cities below size 3\
- will not celebrate). Police Station required.\n\
-* Base corruption is 20%, this increases with distance from the capital.\n\
-* There is no base production waste, but this increase with distance from the capital.\n\
-* Each factory production is increased twice.\
-* Newly produced Paratroopers are already elite if Barracks tier 3 are present.\n\
-* Military units impose martial law. Up to 2 military units inside a city\
- will each force 2 unhappy citizen to become content.\n\
-* It is not possible to incite revolt, if fascist ruled nation *doesn't* posses Statue of Liberty.\n\
-* Fascism is not tolerant of another nationality of citisens - they unlikely will be angry.\n\
-* Luxury and science outcome are decreased 25%\n\
-* Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
-")
 
 
 

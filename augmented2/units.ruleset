@@ -1851,7 +1851,7 @@ Ranger infantry units, equipped with machine guns and rocket-propelled grenade l
  very good at defending your cities and fortifications, especially against armoured tanks.\
  Thanks to the modern communication support and equipment, rangers have improved range of sight.\
 "), _("\
-They can also shoot down helicopters.\
+They can also shoot down helicopters, drones and attack barges.\
 ")
 
 [unit_warriors]

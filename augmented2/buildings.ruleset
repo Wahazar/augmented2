@@ -284,7 +284,6 @@ sound		= "b_bank"
 sound_alt	= "b_generic"
 helptext	= _("\
 A Bank increases the tax output in a city by an additional 50%.\
- With both a Bank and a Marketplace in a city, the total tax bonus is 100%.\
 ")
 
 [building_infantry_barracks1]
@@ -491,7 +490,7 @@ A Cathedral makes 3 unhappy citizens content in a city. The addition of\
  content citizens to 6 (e.g. doubles the effect of Cathedral). This makes\
  it easier to maintain order in that city, however it does not affect\
  citizens made unhappy by aggression.  The addition of J.S. Bach's Cathedral\
- (small wonder) brings additional entertainer specialist, except when in Communism\
+ (small wonder) brings 2 additional luxury points, except when in Communism\
  government.\
 "), _("\
 +2 Culture Points/turn (additional one if Michelangelo's Chapel exists).\
@@ -2522,14 +2521,12 @@ sound		= "b_colosseum"
 sound_alt	= "w_generic"
 helptext	= _("\
 Neutralizes the unhappiness caused by one aggressively \
-deployed military unit per city. Under Democracy, it additionally \
-halves the unhappiness caused by military units (reducing it to the \
-same level as a Republic).\n\
-Besides this, Hollywood gives additional 6 luxuries to the city \
-where it is located.\n\
+deployed military unit per city (not cummulative with Police Station). \
+Under Democracy or Thalassocracy, it additionally decrease the unhappiness caused by military units \
+(in case of Democracy, reducing it to the same level as a Republic).\n\
 "), _("\
 With Television advance, entertainer specialists' luxury \
-output increases to 3 for player's nation.\
+output increases by 1 for player's nation.\
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
 "), _("\
@@ -3080,7 +3077,7 @@ helptext	= _("\
 Makes 0..2 (depending on Religious Othodoxy policy setting) unhappy citizens content in every city with \
 a Temple without Shrine Torii. Does not affect citizens made unhappy by aggression.\n\
 In a city with this building, tax collector specialists' gold output \
-increases to 3.\
+increases by 1.\
 "), _("\
 +2 Culture Points/turn.\
 ")
@@ -3409,7 +3406,7 @@ governments inherently give this benefit, so there is no bonus under \
 Communism.)\
 "), _("\
 Upon completion of this wonder, tax collector specialists' gold output \
-increases to 3 permanently for every nation.\
+increases by 1 permanently for every nation.\
 "), _("\
 +2 Culture Points/turn.\
 ")
@@ -3466,7 +3463,7 @@ of the species, which inspired greater confidence in science. \
 All your cities generate 1 extra science bulb and immediate technology advance is achieved.\
 "), _("\
 Upon completion of this wonder, scientist specialists' research output \
-increases to 3 permanently for every nation.\
+increases by 1 permanently for every nation.\
 "), _("\
 +5 Culture Points/turn.\
 ")
@@ -3527,8 +3524,7 @@ owner despite fog-of-war.\
 "), 
 _("\
 Upon completion of this wonder, for each nation which know Computers advance,
-entertainer specialists' luxury output increases to 3,
- for every nation which know Computers advance.\
+entertainer specialists' luxury output increases by 1.\
 "),
 _("\
 Completion of this wonder permanently doubles the effect of \
@@ -3586,7 +3582,7 @@ helptext	= _("\
  Large Hadron Collider reveal two new advances, when finished.\
  It is the best way to gain Great Unification Theory.\n\
 Upon completion of this wonder, scientist specialists' research output \
-increases to 3 permanently for every nation \
+increases by 1 for every nation \
 (except those ruled by Anarchy or Fundamental government).\n\
 Each player's city with Research Center would gain 1 culture point.
 ")
@@ -3664,7 +3660,7 @@ Gives 1 additional luxury to every player's city, and 6 luxuries to the city \
 where it is located.\
 "), _("\
 Upon completion of this wonder, entertainer specialists' luxury \
-output increases to 3 for every nation.\
+output increases by 1 for every nation.\
 "), _("\
 Any city with Amphitheater gain additional Culture Point.\
 "), _("\
@@ -3931,7 +3927,8 @@ helptext	= _("\
 Each tile around the city where this wonder is built that is already\
  generating some trade produces one extra trade resource.\
 "), _("\
-Moreover, each city on the continent with Colossus gain 1 additional Taxman Specialist. \
+Moreover, tax collector specialists' gold output in cities on continent with Colossus \
+is increased by 1 for any nation. \
 "), _("\
 +2 Culture Points/turn.\
 ")

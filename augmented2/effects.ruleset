@@ -1424,7 +1424,7 @@ reqs   =
 ;      "Gov", "First Republic", "Player", FALSE
       "Gov", "Democracy", "Player", FALSE
 ;      "Gov", "Direct Democracy", "Player", FALSE
-      "Gov", "Thalassocracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
 ;      "Gov", "Fascism", "Player", FALSE
 ;      "Gov", "Legalism", "Player", FALSE
     }
@@ -1448,13 +1448,14 @@ reqs    =
       "Gov", "Democracy", "Player"
     }
 
-[effect_unit_unhappiness_thalassocracy]
-type    = "Unhappy_Factor"
-value   = 2
-reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Thalassocracy", "Player", TRUE
-    }
+;1, more with Enlightening Policy
+;[effect_unit_unhappiness_thalassocracy]
+;type    = "Unhappy_Factor"
+;value   = 2
+;reqs    =
+;    { "type", "name", "range", "quiet"
+;      "Gov", "Thalassocracy", "Player", TRUE
+;    }
 
 ; ...except Hollywood reduces it back to Democracy levels
 [effect_hollywood_reduce_thalassocracy]
@@ -1540,7 +1541,7 @@ reqs   =
        "Gov", "Democracy", "Player", FALSE
       "Gov", "First Republic", "Player", FALSE
 ;      "Gov", "Direct Democracy", "Player", FALSE
-      "Gov", "Thalassocracy", "Player", FALSE
+;      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
 ;      "Gov", "Legalism", "Player", FALSE
     }
@@ -1562,7 +1563,7 @@ reqs   =
       "Gov", "Democracy", "Player", FALSE
 ;      "Gov", "First Republic", "Player", FALSE
       "Gov", "Direct Democracy", "Player", FALSE
-;      "Gov", "Thalassocracy", "Player", FALSE
+      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Fascism", "Player", FALSE
       "Gov", "Legalism", "Player", FALSE
     }
@@ -2557,13 +2558,13 @@ reqs    =
       "Gov", "Anarchy", "Player", TRUE
     }
 
-[effect_martial_law_each_tribal]
-type    = "Martial_Law_Each"
-value   = 1
-reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Tribal", "Player", TRUE
-    }
+;[effect_martial_law_each_tribal]
+;type    = "Martial_Law_Each"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range", "quiet"
+;      "Gov", "Tribal", "Player", TRUE
+;    }
 
 [effect_martial_law_each_despotism]
 type    = "Martial_Law_Each"
@@ -2661,7 +2662,15 @@ reqs    =
 ;      "Gov", "Thalassocracy", "Player", FALSE
       "Gov", "Direct Democracy", "Player", FALSE
 ;      "Gov", "Fascism", "Player", FALSE
-;      "Gov", "Legalism", "Player", FALSE
+      "Gov", "Legalism", "Player", FALSE
+    }
+
+[effect_martial_law_max_1_legalism] 
+type    = "Martial_Law_Max"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Legalism", "Player"
     }
 
 [effect_martial_law_max_1_first_republic] 
@@ -2672,13 +2681,13 @@ reqs    =
       "Gov", "First Republic", "Player"
     }
 
-[effect_martial_law_max_1_tribal] 
-type    = "Martial_Law_Max"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Tribal", "Player"
-    }
+;[effect_martial_law_max_1_tribal] 
+;type    = "Martial_Law_Max"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Gov", "Tribal", "Player"
+;    }
 
 ; Railroad because makes Pyramids obsolete
 [effect_gov_tile_penalty_anarchy]
@@ -5385,7 +5394,6 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Colossus", "Continent"
-      "CityTile", "Center", "Local"
       "Specialist", "Taxman", "Local"
       "OutputType", "Gold", "Local"
     }
@@ -5740,11 +5748,12 @@ reqs	=
 type    = "Output_Add_Tile"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "Building", "J.S. Bach's Cathedral", "Player"
-      "CityTile", "Center", "Local"
-      "Building", "Cathedral", "City"
-      "OutputType", "Luxury", "Local"
+    { "type", "name", "range", "present"
+      "Building", "J.S. Bach's Cathedral", "Player", TRUE
+      "CityTile", "Center", "Local", TRUE
+      "Building", "Cathedral", "City", TRUE
+      "OutputType", "Luxury", "Local", TRUE
+      "Gov", "Communism", "Player", FALSE
     }
 
 [effect_js_bachs_cathedral_culture]
@@ -6165,10 +6174,10 @@ reqs    =
 type    = "Specialist_Output"
 value   = 1
 reqs    =
-    { "type", "name", "range", "survives"
+    { "type", "name", "range", "present"
       "Building", "Shakespeare's Theatre", "World", TRUE
-      "Specialist", "Elvis", "Local"
-      "OutputType", "Luxury", "Local"
+      "Specialist", "Elvis", "Local", TRUE
+      "OutputType", "Luxury", "Local", TRUE
       "Tech", "Television", "Player", FALSE
     }
 
@@ -7131,14 +7140,25 @@ reqs	=
       "Gov", "Fascism", "Player"
     }
 
-[effect_hollywood_6happy]
-type    = "Output_Add_Tile"
-value   = 6
+;[effect_hollywood_6happy]
+;type    = "Output_Add_Tile"
+;value   = 6
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Hollywood", "City"
+;      "CityTile", "Center", "Local"
+;      "OutputType", "Luxury", "Local"
+;    }
+
+[effect_television_elvis]
+type    = "Specialist_Output"
+value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Hollywood", "City"
-      "CityTile", "Center", "Local"
+      "Building", "Hollywood", "Player"
+      "Specialist", "Elvis", "Local"
       "OutputType", "Luxury", "Local"
+      "Tech", "Television", "Player"
     }
 
 ;2 + 1 = 3
@@ -7187,13 +7207,13 @@ reqs    =
       "Gov", "Thalassocracy", "Player"
     }
 
-[effect_martial_law_max_thalassocracy]
-type    = "Martial_Law_Max"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Thalassocracy", "Player"
-    }
+;[effect_martial_law_max_thalassocracy]
+;type    = "Martial_Law_Max"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Gov", "Thalassocracy", "Player"
+;    }
 
 ;[effect_gov_tile_bonus_thalassocracy_sea]
 ;type    = "Output_Inc_Tile"
