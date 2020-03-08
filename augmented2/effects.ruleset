@@ -4630,7 +4630,7 @@ reqs    =
 
 [effect_palace]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range"
       "Building", "Palace", "City"
@@ -5510,6 +5510,7 @@ value   = 1
 reqs	=
     { "type", "name", "range"
       "Building", "Eiffel Tower", "City"
+      "Extra", "Railroad", "Local"
       "OutputType", "Trade", "Local"
     }
 
@@ -5592,7 +5593,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Great Wall", "Alliance", TRUE
       "UnitFlag", "AirAttacker", "Local", FALSE
-      "UnitFlag", "OneAttack", "Local", FALSE
+      "UnitClassFlag", "Missile", "Local", FALSE
       "UnitClass", "Sea", "Local", FALSE
       "UnitClass", "Coaster", "Local", FALSE
     }
@@ -5605,6 +5606,7 @@ value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "Fortress", "Local", TRUE
+      "Building", "Great Wall", "Alliance", TRUE
 ;      "UnitClass", "Infantry", "Local", FALSE
 ;      "UnitClass", "Light Cavalry", "Local", FALSE
 ;      "UnitClass", "Heavy Cavalry", "Local", FALSE
@@ -6346,13 +6348,14 @@ type    = "Trade_Revenue_Bonus"
 value   = -1000
 
 ;Total = 25%
-[effect_railroad_trade_revenue_reduce]
-type    = "Trade_Revenue_Bonus"
-value   = -1000
-reqs    =
-    { "type", "name", "range"
-      "Tech", "Railroad", "Player"
-    }
+;augmented: no single bonus
+;[effect_railroad_trade_revenue_reduce]
+;type    = "Trade_Revenue_Bonus"
+;value   = -1000
+;reqs    =
+;    { "type", "name", "range"
+;      "Tech", "Railroad", "Player"
+;    }
 
 [effect_calendar_base]
 type    = "Turn_Years"

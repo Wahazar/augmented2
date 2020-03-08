@@ -1,4 +1,3 @@
-
 ; Modifying this file:
 ; You should not modify this file except to make bugfixes or
 ; for other "maintenance".  If you want to make custom changes,
@@ -454,7 +453,7 @@ Glaciers are found only in the most northerly or southerly\
  reaches of the world.  They are very cold, and hence difficult to\
  work with.\
 "), _("\
-Land units (except of small ones, including Alpine Troops) can't move on Glaciers without appropriate roads.
+Land units (except of small ones, including Alpine Troops) can't move on Glaciers without an appropriate roads.
 ")
 
 [terrain_desert]
@@ -797,14 +796,14 @@ helptext             = _("\
 Mountains are regions of extreme altitude, making agriculture and\
  trade very difficult.\
 "), _("\
-Reconnaissance (Small Land) units that move into mountains can see an extra space, but a\
+Reconnaissance (military Small Land) units that move into mountains can see an extra space, but a\
  fast land unit ending its turn in mountains without a road will start\
  its next turn with one fewer movement point. Land units (except small ones, including Alpine Troops) may not\
- move into mountains without a appropriate road.\
+ move into mountains without an appropriate road.\
 "), _("\
 Road is required to get shield production.\
 "), _("\
-Uranium is required for Manhattan Project and add extra 2 trade points to Nuclear Plant.\
+Uranium is required for Manhattan Project and add extra 2 trade points to the Nuclear Plant.\
 ")
 
 [terrain_volcano]
@@ -1944,12 +1943,12 @@ native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Me
 hidden_by      = "Paved Road"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
-Unpaved Roads allow accesibility of your infantry or cavalry units to move into mountains or swamps,\
- but travel speed is only slightly increased (for full cunctionality, they need to be upgraded to paved Roads).\
+Dirt Roads allow accesibility of your infantry or cavalry units to move into mountains or swamps,\
+ but travel speed is only slightly increased (for full cunctionality, they need to be upgraded to the Paved Roads).\
 "), _("\
-On some terrains, roads also provide a trade bonus.\
+On some terrains, Dirt Roads also provide a trade bonus.\
 "), _("\
-Building roads on river tiles requires knowledge of Bridge Building.\
+Building any roads on river tiles requires knowledge of Bridge Building.\
  City center tiles automatically get roads (even on a river tile, if Bridge Building is know).\
 ")
 
@@ -2161,7 +2160,7 @@ reqs           =
 build_time     = 24
 removal_time   = 4
 conflicts      = "Airstrip", "Airbase", "Fort", "Mine", "Oil Well"
-native_to      = "Small Land", "Merchant", "Coaster", "Riverboat", "Sea"
+native_to      = "Small Land", "Merchant", "Coaster", "Riverboat", "Sea", "Hovercraft"
 flags          = "NativeTile"
 helptext       = _("\
 Allow ships to enter inland.\

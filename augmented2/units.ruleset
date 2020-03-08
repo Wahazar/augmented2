@@ -25,7 +25,7 @@ options="+Freeciv-2.6-ruleset"
 ; helptxt       = displayed in the help for units with this flag (optional)
 flags =
   { "name", "helptxt"
-    _("Airbase")
+    _("Airbase"), _("Able to build Air Bases, Buoys.")
     _("Transform")
     _("AirAttacker"), _("Very bad at attacking AEGIS or Tactical ABM.")
     _("Submarine"), _("Attack value halved when attacking Destroyer.")

@@ -202,6 +202,7 @@ req2     = "Machine Tools"
 flags    = ""
 graphic     = "a.automobile"
 graphic_alt = "-"
+helptext = _("TIP: Allow Engineers and Trains to upgrade Paved Road to Highway.")
 cost     = 790
 
 [advance_banking]
@@ -973,7 +974,7 @@ req2     = "Copper Working"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
-helptext = _("TIP: allow to make regular Roads.")
+helptext = _("TIP: allow to upgrade Dirt Roads to Paved Roads.")
 cost     = 36
 
 [advance_mass_entertainment]
@@ -1288,10 +1289,8 @@ flags    = ""
 graphic     = "a.railroad"
 graphic_alt = "-"
 helptext = _("\
-Allows Settlers, Migrants, Workers and Engineers to upgrade roads to \
-railroads.\
-"), _("\
-Halves one-time revenue from new trade routes.\
+Allows Engineers, Builders and other Worker-type units to upgrade roads to \
+Railroads.\
 "), _("\
 For Despotism or Tribal governments, cancels the penalty to worked \
 tiles with output greater than 2 (as if all your cities were always \
@@ -1320,7 +1319,7 @@ graphic     = "a.refining_oil"
 graphic_alt = "a.refining"
 cost     = 700
 helptext = _("\
-Allows Settlers, Migrants, Workers and Engineers to upgrade \
+Allows any Worker-type units to upgrade \
 mines to oil wells on Desert and Glacier tiles, for an extra production \
 point.\
 ") 
