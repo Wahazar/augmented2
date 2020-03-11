@@ -3,12 +3,13 @@ Augmented2 Ruleset for Freeciv v2.6
 =================================
 
 2.6.lt18
-Watermill building added
+Watermill and Windmill building added
 Cart unit added
 The Harness tech added.
 doc cleanup.
 bugs fixed
 No martial law for Tribal
+Food waste reduced by Watermill, Windmill, Supermarket and Granary (and Courthouse in case of Despotism)
 
 2.6.lt17
 sanity check

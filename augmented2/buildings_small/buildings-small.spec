@@ -46,6 +46,7 @@ sprites =
 		"b.mahout_barracks", "augmented2/buildings_small/mahout_barracks"
 		"b.post_office", "augmented2/buildings_small/post_office_s"
 		"b.watermill", "augmented2/buildings_small/watermill_s"
+		"b.windmill", "augmented2/buildings_small/windmill_s"
 	}
 
 [file]

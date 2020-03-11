@@ -666,18 +666,19 @@ sabotage	= 100
 sound		= "b_courthouse"
 sound_alt	= "b_generic"
 helptext	= _("\
-The Courthouse halves all kinds of waste in a city (corruption,\
- production waste, and food waste). In your capital, corruption\
- is eliminated. A Granary together with a\
- Courthouse in a city will decrease food waste.\
+The Courthouse halves corruption and production waste\
+ in a city. In your capital or second capital, together with\
+ Post Office, corruption and waste is eliminated.\
 "), _("\
 Courthouse makes one unhappy citizen content (unless that citizen\
  is unhappy about military activity), and makes the revolt cost\
  of the city 4 times larger.\
-"),
-_("\
+"),_("\
 Additional unhappy citizen content with Slavery Abolition for city\
  ruled by Republic, Federation or Democracy.\
+"),_("\
+Food waste is halved in city ruled by Despotism (and eliminated entirely with\
+ Granary and Windmill/Watermill/Supermarket).\
 ")
 
 [building_factory]
@@ -751,7 +752,7 @@ sabotage	= 100
 sound		= "b_granary"
 sound_alt	= "b_generic"
 helptext	= _("\
-The Granary eliminates food waste in the city as it grows. When any\
+The Granary decreases food waste in the city as it grows. When any\
  small city grows or shrinks, 10 food points are saved instead of wasted.\
  This helps cities to grow faster and more easily withstand famine. With\
  a Granary this benefit is extended to cities of size 4 and above. Ten\
@@ -759,7 +760,8 @@ The Granary eliminates food waste in the city as it grows. When any\
  are needed for later growth steps.\
 "), _("\
 A Granary also halves the food wasted in cities far from your capital.\
- Together with a Courthouse it eliminates food waste.\
+ Together with a Windmill/Watermill/Supermarket it eliminates food waste,\
+ except of Despotism where Courthouse is also required.\
 "), _("\
 TIP1: To maximize the speed with which a city grows, you should build\
  a Granary before it grows larger than size 4.\
@@ -1322,8 +1324,8 @@ sound		= "b_police_station"
 sound_alt	= "b_generic"
 helptext	= _("\
 Post Office allow additional traderoute to this city, if Logistics advance is known to the player.\n\
-This improvement decrease waste by 20% by istelf, and together with Courthouse, \
-decrease trade corruption by 70%.\ 
+This improvement decrease production waste by 20% by istelf, and together with Courthouse, \
+decrease both trade corruption and waste by 70%.\ 
 ")
 
 [building_recycling_center]
@@ -1824,11 +1826,12 @@ sabotage	= 100
 sound		= "b_supermarket"
 sound_alt	= "b_generic"
 helptext	= _("\
-Together increase Granary effect for cities larger than size 7 \
-and add 1 food and 1 shield to the city center.\
+Halves food waste in the city and add \
+1 food and 1 shield to the city center.\
 "),
 _("\
-Together with Railway Station or Port Facility, increases the tax output in a city by 25%.\
+Together with Railway Station or Port Facility, \
+increases the tax output in a city by 25%.\
 ")
 
 [building_temple]
@@ -1970,9 +1973,10 @@ Increase vision range of the city.\
 name		= _("Watermill")
 genus		= "Improvement"
 reqs	=
-    { "type", "name", "range"
-      "Tech", "The Wheel", "Player"
-      "Extra", "River", "Adjacent"
+    { "type", "name", "range", "present"
+      "Tech", "The Wheel", "Player", TRUE
+      "Extra", "River", "Adjacent", TRUE
+      "Building", "Windmill", "City", FALSE
     }
 graphic	= "b.watermill"
 graphic_alt	= "b.factory"
@@ -1987,10 +1991,34 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 helptext	= _("\
 Water wheel can drive machinery or millstones. Such improvement add 1 food and 1 shield \
-to the city center.\
+to the city center and halves food waste.\
 "), _("\
 Watermill use water power, therefore can't be built in a city \
 without access to a river. \
+")
+
+[building_windmill]
+name		= _("Windmill")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "The Wheel", "Player", TRUE
+      "Building", "Watermill", "City", FALSE
+    }
+graphic	= "b.windmill"
+graphic_alt	= "a.environmentalism"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Supermarket", "City"
+    }
+build_cost	= 15
+upkeep	= 1
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+Windmill uses power of wind to grind grains. Such improvement halves food waste \
+(entirely eliminates food waste together with Granary).\
 ")
 
 [building_university]
@@ -2185,7 +2213,7 @@ Construction of a Palace makes a city the capital and the center of\
  your government. Waste in other cities (corruption, production waste,\
  and food waste) is often related to how far away from the capital they\
  are. On top of this, corruption and production waste in your capital is\
- half of what it would otherwise be. A Courthouse will eliminate it\
+ 30% of what it would otherwise be. A Courthouse with Post Office will eliminate it\
  entirely.\
 "), _("\
 The cost to enemy Diplomats and Spies of inciting a revolt in a city\
@@ -2248,8 +2276,8 @@ Makes a city the ecclesiastical capital, that acts as a second center\
 "), _("\
 Waste in other cities (corruption, production waste, and food waste) is\
  often related to how far away from the capital they are. On top of this,\
- corruption and production waste in your capital is half of what it would\
- otherwise be. A Courthouse will eliminate it entirely.\
+ corruption and production waste in your capital is 30% of what it would\
+ otherwise be.\
 "), _("\
 The city where this palace is located cannot be incited to revolt,\
  and enjoys a bonus when enemy agents try to evade your own agents\
@@ -2293,8 +2321,8 @@ Additionally, under Legalism government, extra 4 luxury points are generated in 
 "), _("\
 Waste in other cities (corruption, production waste, and food waste) \
 is related to how far away from the nearest capital they are. On top of \
-this, corruption and production waste in the capital itself is half \
-of what it would otherwise be (and a Courthouse will eliminate it \
+this, corruption and production waste in the capital itself is 30% \
+of what it would otherwise be (and a Courthouse with Post Office will eliminate it \
 entirely).\
 "), _("\
 The city where this palace is located cannot be incited to revolt, \
@@ -2335,8 +2363,8 @@ Additionally, it produces extra 4 luxury points in this city.\
 "), _("\
 Waste in other cities (corruption, production waste, and food waste) \
 is related to how far away from the nearest capital they are. On top of \
-this, corruption and production waste in the capital itself is half \
-of what it would otherwise be (and a Courthouse will eliminate it \
+this, corruption and production waste in the capital itself is 30% \
+of what it would otherwise be (and a Courthouse with Post Office will eliminate it \
 entirely).\
 "), _("\
 The city where this palace is located cannot be incited to revolt, \
@@ -3232,9 +3260,8 @@ Additionally, produces extra 4 luxury points in this city.\
 "), _("\
 Waste in other cities (corruption, production waste, and food waste) \
 is related to how far away from the nearest capital they are. On top of \
-this, corruption and production waste in the capital itself is half \
-of what it would otherwise be (and a Courthouse will eliminate it \
-entirely).\
+this, corruption and production waste in the capital itself 30% \
+of what it would otherwise be.\
 "), _("\
 The city where this palace is located cannot be incited to revolt, \
 and enjoys a bonus when enemy agents try to evade your own agents \
@@ -3278,9 +3305,8 @@ Additionally, produces extra 4 luxury points in this city.\
 "), _("\
 Waste in other cities (corruption, production waste, and food waste) \
 is related to how far away from the nearest capital they are. On top of \
-this, corruption and production waste in the capital itself is half \
-of what it would otherwise be (and a Courthouse will eliminate it \
-entirely).\
+this, corruption and production waste in the capital itself is 30% \
+of what it would otherwise be.\
 "), _("\
 The city where this palace is located cannot be incited to revolt, \
 and enjoys a bonus when enemy agents try to evade your own agents \

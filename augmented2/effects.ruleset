@@ -1182,7 +1182,7 @@ reqs    =
 
 [effect_waste_anarchy]
 type    = "Output_Waste"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Anarchy", "Player", TRUE
@@ -4193,15 +4193,18 @@ reqs    =
       "OutputType", "Shield", "local"
     }
 
-; effect always has value>=50, so this halves food waste
-[effect_courthouse_2]
+
+; halves food waste for Despotism
+[effect_courthouse_2_Despotism]
 type    = "Output_Waste_Pct"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Courthouse", "City"
-      "OutputType", "Food", "local"
+      "OutputType", "Food", "Local"
+      "Gov", "Despotism", "Player"
     }
+
 
 [effect_courthouse_3]
 type    = "Make_Content"
@@ -4274,14 +4277,42 @@ reqs    =
       "OutputType", "Shield", "Local", TRUE
     }
 
-; effect always has value>=50, so this halves food waste
+; halves food waste except of Despotism
 [effect_granary]
 type    = "Output_Waste_Pct"
 value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
-      "OutputType", "Food", "local"
+      "OutputType", "Food", "Local"
+    }
+
+; halves food waste except of Despotism
+[effect_windmill]
+type    = "Output_Waste_Pct"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Windmill", "City"
+      "OutputType", "Food", "Local"
+    }
+
+[effect_watermill]
+type    = "Output_Waste_Pct"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Watermill", "City"
+      "OutputType", "Food", "Local"
+    }
+
+[effect_supermarket]
+type    = "Output_Waste_Pct"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Supermarket", "City"
+      "OutputType", "Food", "Local"
     }
 
 ; Free Granary effect in small cities
@@ -4322,19 +4353,19 @@ value   = 25
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Granary", "City", TRUE
-      "Building", "Supermarket", "City", FALSE
+;      "Building", "Supermarket", "City", FALSE
       "MinSize", "7", "City", TRUE
     }
 
-[effect_granary_supermarket]
-type    = "Growth_Food"
-value   = 34
-reqs    =
-    { "type", "name", "range"
-      "Building", "Granary", "City"
-      "Building", "Supermarket", "City"
-      "MinSize", "7", "City"
-    }
+;[effect_granary_supermarket]
+;type    = "Growth_Food"
+;value   = 34
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Granary", "City"
+;      "Building", "Supermarket", "City"
+;      "MinSize", "7", "City"
+;    }
 
 [effect_harbour]
 type    = "Output_Add_Tile"
@@ -4639,7 +4670,7 @@ reqs    =
 
 [effect_palace_1]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range"
       "Building", "Palace", "City"
@@ -4700,7 +4731,7 @@ reqs	=
 
 [effect_ecclesiastical_palace]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Ecclesiastical Palace", "City", TRUE
@@ -4710,7 +4741,7 @@ reqs    =
 
 [effect_ecclesiastical_palace_1]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Ecclesiastical Palace", "City", TRUE
@@ -8162,7 +8193,7 @@ reqs    =
 
 [effect_angkor_wat]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Angkor Wat", "City", TRUE
@@ -8176,7 +8207,7 @@ reqs    =
 
 [effect_angkor_wat_1]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Angkor Wat", "City", TRUE
@@ -8267,7 +8298,7 @@ reqs    =
 
 [effect_forbidden_city]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Forbidden City", "City", TRUE
@@ -8281,7 +8312,7 @@ reqs    =
 
 [effect_forbidden_city_1]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Forbidden City", "City", TRUE
@@ -8349,7 +8380,7 @@ reqs    =
 
 [effect_sultan_palace]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Sultan Palace", "City", TRUE
@@ -8363,7 +8394,7 @@ reqs    =
 
 [effect_sultan_palace_1]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Sultan Palace", "City", TRUE
@@ -8426,7 +8457,7 @@ reqs    =
 
 [effect_osaka_castle]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Osaka Castle", "City", TRUE
@@ -8440,7 +8471,7 @@ reqs    =
 
 [effect_osaka_castle_1]
 type    = "Output_Waste_Pct"
-value   = 50
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Osaka Castle", "City", TRUE

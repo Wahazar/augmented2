@@ -84,10 +84,7 @@ _("\
 * You have no control over tax rates. Half of the trade income is\
  simply lost to your economy (less if you have luxury-promoting buildings),\
  and the remainder all goes to luxuries.\
- Conventional corruption increases with distance from the capital\
- (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 30%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\n\
+* Base production and food waste is 30%.\n\
 * Beside of base waste, shield and science outcome are additionally decreased.\
 * The only Policy setting, which is taken into account is National Pride. \
 ")

@@ -53,4 +53,5 @@ sprites =
 		"b.tribe_hut", "augmented2/buildings/tribe_hut_a"
 		"b.mahout_barracks", "augmented2/buildings/mahout_barracks_a"
 		"b.watermill", "augmented2/buildings/watermill_a"
+		"b.windmill", "augmented2/buildings/windmill_a"
 	}
