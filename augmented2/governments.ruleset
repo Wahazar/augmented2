@@ -85,7 +85,8 @@ _("\
  simply lost to your economy (less if you have luxury-promoting buildings),\
  and the remainder all goes to luxuries.\
 * Base production and food waste is 30%.\n\
-* Beside of base waste, shield and science outcome are additionally decreased.\
+* Luxury science outcome are halved, tax and science specialists'\
+ output is halved.\
 * The only Policy setting, which is taken into account is National Pride. \
 ")
 
@@ -111,7 +112,7 @@ Compared to Despotism, a Tribal economy is more shield-oriented, without governm
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Increases by half the chance of small land, infantry and light cavalry units getting the next veteran level\
+* Increases by half the chance of small land, infantry and cavalry units getting the next veteran level\
  after a battle.\n\
 * Without Pyramids, each worked tile that gives more than 2 Food, Shield, or Trade will\
  suffer a -1 penalty, unless the city working it is celebrating or Tribe Hut exist.\
@@ -124,8 +125,9 @@ _("\
  when deployed aggressively.\n\
 * Base corruption and waste is 30% (the highest under any government)\
  (half of base corruption with knowledge of Trade).\n\
+* Base food waste is 10% for all cities.\n\
 * Tribe loyality make inciting revolt 2x more expensive than Despotism or Monarchy.\n\
-* Science and gold outcome is decreased 25%\n\
+* Science and gold outcome is decreased 25%, tax specialists' output is halved\n\
 * Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
 ")
 
@@ -207,6 +209,7 @@ _("\
  governments). Knowledge of The Corporation eliminates this corruption.\n\
 * Base production waste is 30%, but is not affected by distance to the\
  capital.\n\
+* Base food waste is 30% for all cities.\n\
 * Has a senate that may prevent declaration of war.\n\
 * Federation is relatively tolerant of cosmopolitan cities.\n\
 * Diplomats and Spies gain additional veterancy level (secretary).\n\
@@ -253,6 +256,7 @@ _("\
  possible).\n\
 * Base corruption is 30%, but is not affected by distance to the capital.\n\
 * There is small 10% production waste.\
+* Base food waste is 20% for all cities and increase with Collective Economy policy settings.\n\
 * Communism is relatively tolerant of cosmopolitan cities.\n\
 * Partisans gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
 * If United Nation wonder was built by any player, inciting communistic cities is 4x more expensive.\n\
@@ -379,6 +383,7 @@ _("\
  will force 2 unhappy citizen to become content.\n\
 * Base corruption is 20%. This increases slowly with distance from the capital\n\
 * Base production waste is 30%, regardless of distance from capital.\n\
+* Base food waste is 20% for all cities.\n\
 * Halberdiers gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
 * Science outcome is decreased 25%\n\
 * Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
@@ -552,6 +557,7 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 20%. This increases with distance from the\
  capital.\n\
+* Base food waste is 10% and increase slowly with the distance to the capital.\n\
 * Has a senate that may prevent declaration of war.\
 * Direct Democracy is relatively tolerant of foreginers metics in cities.\
 * Phalanx and Archers gain additional veterancy level (cumulative with Barracks).\n\
@@ -636,6 +642,7 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 25%. This increases slightly with distance from the\
  capital.\n\
+* Base food waste is 20% for all cities.\n\
 * Has a senate that may prevent declaration of war.\n\
 * Democracy is very tolerant of multicultural cities.\n\
 * Riflemen and Snipers gain additional veterancy level (cumulative with Barracks).\n\
