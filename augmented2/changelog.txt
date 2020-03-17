@@ -10,6 +10,7 @@ doc cleanup.
 bugs fixed
 No martial law for Tribal
 Food waste reduced by Watermill, Windmill, Supermarket and Granary (and Courthouse in case of Despotism)
+Scout vision fixed
 
 2.6.lt17
 sanity check

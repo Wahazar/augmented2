@@ -587,7 +587,15 @@ reqs    =
       "UnitClass", "Small Land", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
     }
-;also for nonmil explorer
+;also for nonmil scout
+[effect_mountains_vision_scout]
+type    = "Unit_Vision_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Terrain", "Mountains", "Local"
+      "UnitType", "Scout", "Local"
+    }
 [effect_mountains_vision_explorer]
 type    = "Unit_Vision_Radius_Sq"
 value   = 5
@@ -2611,13 +2619,23 @@ reqs    =
       "Gov", "Anarchy", "Player", TRUE
     }
 
-;[effect_martial_law_each_tribal]
-;type    = "Martial_Law_Each"
-;value   = 1
-;reqs    =
-;    { "type", "name", "range", "quiet"
-;      "Gov", "Tribal", "Player", TRUE
-;    }
+[effect_martial_law_each_tribal_cheating]
+type    = "Martial_Law_Each"
+value   = 2
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Tribal", "Player", TRUE
+      "AI", "Cheating", "Player", TRUE
+    }
+
+[effect_martial_law_each_tribal_hardg]
+type    = "Martial_Law_Each"
+value   = 1
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Tribal", "Player", TRUE
+      "AI", "Hard", "Player", TRUE
+    }
 
 [effect_martial_law_each_despotism]
 type    = "Martial_Law_Each"
@@ -2734,13 +2752,23 @@ reqs    =
       "Gov", "First Republic", "Player"
     }
 
-;[effect_martial_law_max_1_tribal] 
-;type    = "Martial_Law_Max"
-;value   = 1
-;reqs    =
-;    { "type", "name", "range"
-;      "Gov", "Tribal", "Player"
-;    }
+[effect_martial_law_max_2_tribal_cheating] 
+type    = "Martial_Law_Max"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+      "AI", "Cheating", "Player"
+    }
+
+[effect_martial_law_max_1_tribal_hardg] 
+type    = "Martial_Law_Max"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+      "AI", "Hard", "Player"
+    }
 
 ; Railroad because makes Pyramids obsolete
 [effect_gov_tile_penalty_anarchy]
@@ -7135,7 +7163,7 @@ reqs	=
     }
 
 
-; Mobile X-ray HP regen (Land units)
+; Mobile X-ray HP regen (Small Land units)
 [effect_mobile_x-ray_hp_regen_smallland]
 type    = "HP_Regen"
 value   = 50
@@ -7154,6 +7182,30 @@ value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Mobile X-ray", "Player", TRUE
+      "UnitClass", "Infantry", "Local", TRUE
+      "Building", "Infantry Barracks I", "Local", FALSE
+      "Building", "Infantry Barracks II", "Local", FALSE
+    }
+
+; Hospital HP regen (Small Land units)
+[effect_hospital_hp_regen_smallland]
+type    = "HP_Regen"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Hospital", "City", TRUE
+      "UnitClass", "Small Land", "Local", TRUE
+      "Building", "Infantry Barracks I", "Local", FALSE
+      "Building", "Infantry Barracks II", "Local", FALSE
+    }
+
+; Hospital HP regen (Land units)
+[effect_hospital_hp_regen_infantry]
+type    = "HP_Regen"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Hospital", "City", TRUE
       "UnitClass", "Infantry", "Local", TRUE
       "Building", "Infantry Barracks I", "Local", FALSE
       "Building", "Infantry Barracks II", "Local", FALSE

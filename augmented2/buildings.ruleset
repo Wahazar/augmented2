@@ -824,7 +824,8 @@ sound		= "b_bank"
 sound_alt	= "b_generic"
 helptext	= _("\
 A Hospital reduces the chance of plaque in the city by 30%. The effect\
- increases an additional 10-20% (depend on Welfare Policy) if Pasteur Institute (small wonder) exists.\
+ increases an additional 10-20% (depend on Welfare Policy) if Pasteur Institute (small wonder) exists.\n\
+Damaged Infantry and Small Land units recover 50% faster (not cumulative with Barracks).\
 ")
 
 [building_hydro_plant]
@@ -2841,7 +2842,7 @@ They are able to build unique Kon-Tiki raft, the first vessel capable to to ente
 Additionally, gives all your Coasters units 1 additional movement point \
 (except while moving on rivers, not cumulative with Lighthouse).\
 "), _("\
-+1 Culture Point/turn.\
++2 Culture Points/turn.\
 ")
 
 [building_monk_monastery]

@@ -1188,8 +1188,8 @@ name        = _("Peat")
 graphic     = "ts.peat"
 graphic_alt = "-"
 identifier  = "a"
-shield      = 4
-# swamp (petroleum => peat => petroleum).
+shield      = 3
+# swamp (decreased 4->3 because +1f irrig).
 
 [resource_pheasant]
 name        = _("Pheasant")

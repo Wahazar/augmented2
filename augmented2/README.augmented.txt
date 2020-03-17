@@ -16,6 +16,12 @@ https://github.com/Wahazar/augmented2/issues
 OBJECTIVES:
 -----------
 
+- Larger time span, from neolithic up to future techs.
+
+- Iso-hex topology, initial city radius 1 (6+1 workable tiles) expandable to 2 (Agriculture Farming) and later to 3
+
+- Relatively fast expansion at the beginning (cheap Tribes) and less exponential growth later (progressive upkeep)
+
 - Better balanced and more sophisticated technology tree, 62 new techs.
   Facultative advance paths based on Asiatic culture (Arab, Hindu, Chinese, Japonese) 
   - not required for mainstream technology path, but granting some extra units/buildings/wonders.
@@ -50,17 +56,11 @@ OBJECTIVES:
 INFO:
 -----
 
-- Ruleset base is civ2/civ3, but with profound changes.
-
-- Help texts have been updated (mainly Buildings and Wonders), so the
-  info showed ingame already takes into account the changed rules. Note
-  that some graphical tables from the Manual will not match (mainly
-  Terrains and Governments), so better use the tables in this ReadMe as
-  reference.
+- Help texts have been updated, so the info showed ingame already takes into account the changed rules. 
+  Note that some graphical tables from the Manual will not match (mainly Terrains and Governments), 
+  so better use graphics from augmented2 wiki or the spreadsheet tables in /doc dir as reference.
 
 - Help pages on freeciv wiki: https://freeciv.fandom.com/wiki/Augmented2_ruleset_modpack
-
-The following is a full list of changes compared to civ2/civ3 ruleset...
 
 
 CORE CHANGES:
@@ -71,17 +71,16 @@ CORE CHANGES:
   There is no abrupt change of upkeep system after revolution, each goverment pays all 3 upkeep prices, 
   however free upkeep threshold for shield and gold depend on government. Food upkeep is scalable with city size as usual.
 
-- Units lose one Veteran level when auto-upgraded by Leonardo Workshop or DARPA wonders.
+- Units lose one Veteran level when auto-upgraded by Metallurgy tech, Leonardo Workshop or DARPA wonders.
 
-- Unlimited movement on rails delayed to maglev (available with
-  Superconductors). Movement bonus on Railroads apply only for Land and Small Land units. 
-  There is no movement bonus for Rivers, and Coasters are going non diagonal.
+- Movement bonus on Railroads apply only for Train, Merchant and Small Land units. 
+  There is no movement bonus for Rivers except of Small Land and Merchant.
 
 - Some key techs require no holes in its tech roots. To acquire a tech you must know its
-  prerequisites, and you cannot lose a tech that another depends on.
+  prerequisites, and you cannot lose a tech that another depends on (see colour of tech).
 
 - Enabled risk of Plague at cities with population greater than 4. Chances
-  reduced by the buildings Aqueduct, Sewer System, Lazaretto/Hospital
+  reduced by the buildings Aqueduct/Water Treatment, Sewer System, Lazaretto/Hospital
   and the wonders: Pasteur Institute and Cure for Cancer.
 
 FOODBOX:
@@ -112,7 +111,7 @@ TERRAIN:
 - Mountains give extra vision range for small reconnaissance units. Cities can not be placed over
   Mountains. Regular military units can't go into unroaded mountains, except of spec-ops units.
 
-- The discovery of Copper Mining allow mining, but without any effect, Bronze Working allow production of mines.
+- The discovery of Copper Mining allow mining, but without any effect on hills, Bronze Working allow production of mines.
 
 - Mines+Railroads in mountains and deserts give extra Shield production, if Cement Plant and Railroad Station is builded in city. 
   Mines+Railroads on coal give extra trade point in above case. 
@@ -489,7 +488,7 @@ Increased unit vision benefit from Satellite System
 UNITS:
 ------
 
-Caravans are unique units. Freights, Slaves and freight ships are not unique. 
+Caravans and Carts are unique units. Freights, Slaves and freight ships are not unique. 
 
 Following military unit groups:
 * Infantry units - defensive or assault infantry - can't move into mountains (some units can attack it).
@@ -503,7 +502,7 @@ Following military unit groups:
 * Coaster class units: can go on Coast Ocean, River and Lake tiles;
 * Air class units, Helicopters, Missiles: can go everywhere;
 * Bombs, Torpedos - can be loaded on Air units (and some Sea units).
-* Diplomatic actions and espionage: Messenger, Diplomat, Spy (and unique Corsair, Ninja, Navy Seals)
+* Diplomatic actions and espionage: Messenger, Diplomat, Spy (and unique Corsair, Ninja, Navy Seals), also Explorers and Partisans (limited)
 
 Units reference table: see doc/units.xls or refer to wiki page
 

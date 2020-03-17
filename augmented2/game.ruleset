@@ -41,14 +41,17 @@ New distinctive tiers of unit classes.\n\
 New buildings and wonders.\n\
 New governments.\n\
 \n\n\
-The differences from the classic rulesets are listed in full in\
- freeciv forum thread, freeciv augmented2 wiki or README.augmented.txt file.\
+The differences from the classic rulesets are listed in full in freeciv forum thread, \n\
+freeciv augmented2 wiki https://freeciv.fandom.com/wiki/Augmented2_ruleset_modpack \n\
+or README.augmented.txt file.\
 \n\n\
 Bug tracking: https://github.com/Wahazar/augmented2/issues \
 ")
 
 ; Detailed description
-; When updating this, update also desciption_file in [ruledit] section to match description = *augmented/README.augmented.txt*
+; When updating this, update also desciption_file in [ruledit] section to match 
+
+description = *augmented2/README.augmented.txt*
 
 [options]
 global_init_techs=""

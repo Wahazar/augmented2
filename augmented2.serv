@@ -33,5 +33,5 @@ set minplayers 1
 set maxplayers 12
 set nationset all
 metamessage AUGMENTED2.6.lt18 ruleset, modpack installer http://149.156.194.203/~mczapkie/fc/augmented/augmented2.modpack discord:Wahazar#3898 
-
+;connectmsg This server has augmented2 ruleset with additional graphics, which can be automatically installed by Modpack Installer,\n URL for Installer - http://149.156.194.203/~mczapkie/fc/augmented/augmented2.modpack
 
