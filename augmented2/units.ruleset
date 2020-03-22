@@ -545,7 +545,7 @@ Tribes are the first and universal unit type.\
 "), _("\
 Tribes can be assigned to work, if technology required to given work is available.\
 "), _("\
-Work, combat or barracks training doesn't improve their ability.\
+Work, combat or barracks training doesn't improve their work or combat abilities.\
 ")
 
 ;civilian units
@@ -886,7 +886,7 @@ helptext      = _("\
 Riot Police is relatively weak but cheap unit suitable for enforcing martial law.\
 ")
 
-;reccons
+;recons
 
 [unit_hunters]
 name          = _("Hunters")
@@ -1394,8 +1394,7 @@ Explorers are brave individuals that are very useful for\
 "), _("\
 Explorers can also perform investigate another player's city, while being on the land,\
  and report detailed information about the city: its status, what buildings and units are\
- within, and what it is currently producing. After completing his mission Explorer have chance to escape\
- to the nearest friendly city.\
+ within, and what it is currently producing.\
 ")
 
 [unit_vikings]
@@ -2240,6 +2239,8 @@ paratroopers_range = 10
 paratroopers_mr_req = 1
 paratroopers_mr_sub = 0
 
+;exclusive units
+
 [unit_janissaries]
 name          = _("Janissaries")
 class         = "Infantry"
@@ -2351,6 +2352,44 @@ Fanatics are warriors extremely devoted to a higher cause.\
 "), _("\
 Fundamentalist nations can maintain Fanatic units without\
  having to pay gold upkeep, but instead it can cause military unhappiness.\
+")
+
+[unit_technical]
+name          = _("Technical")
+class         = "Suicidal"
+tech_req      = "Mobile Warfare"
+gov_req       = "Fundamentalism"
+obsolete_by   = "None"
+graphic       = "u.technical"
+graphic_alt   = "u.freight"
+sound_move    = "m_fanatics"
+sound_move_alt = "m_generic"
+sound_fight   = "f_fanatics"
+sound_fight_alt = "f_generic"
+build_cost    = 45
+pop_cost      = 0
+attack        = 18
+defense       = 4
+hitpoints     = 15
+firepower     = 3
+move_rate     = 5
+vision_radius_sq = 2
+transport_cap = 1
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 1
+cargo         = "Small Land"
+flags         = "Fanatic", "CityBuster", "NoVeteran", "Only_Native_Attack", "FieldUnit"
+roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianBuildTech", "HutTech"
+helptext      = _("\
+Improvised vehicle driven by fanatics, ready to sacrifice their lives for a higher cause.\
+ Huge amount of explosive materials would end their life and maybe life of attacked infidels.\
+"), _("\
+Fundamentalist nations can maintain Technical units with\
+ having to pay only little shield/gold upkeep, but may cause military unhappiness.\
+ These units have no veterancy levels though.
 ")
 
 
@@ -2563,7 +2602,7 @@ Horsemen are mounted warriors and an early\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes, Caravels and Aaks).\
+ (Triremes and Aaks).\
 ")
 
 [unit_elephants]
@@ -2600,7 +2639,7 @@ Unfortunately, elephants are not easy to tame, and Stables Barrack can't be used
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes, Caravels and Aaks).\
+ (Triremes and Aaks).\
 ")
 
 [unit_crusaders]
@@ -2637,7 +2676,7 @@ Crusaders are highly disciplined mounted\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains, \
 and cannot be transported by sea using early ships \
-(Triremes, Caravels and Aaks). \
+(Triremes and Aaks). \
 Crusaders are available for capital city with Jousting Tiltyard small wonder. \
 ")
 
@@ -2673,7 +2712,7 @@ Knights are mounted and heavily armored warriors.\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes, Caravels and Aaks).\
+ (Triremes and Aaks).\
 ")
 
 
@@ -2711,7 +2750,7 @@ Samurai horsemen, thanks to the Bushido code and supreme\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes, Caravels and Aaks).\
+ (Triremes and Aaks).\
 ")
 
 [unit_cuirassiers]
@@ -2850,6 +2889,9 @@ The Mechanized Infantry has the strongest inherent defensive strength\
 This unit cannot move across swamps, glaciers or mountains.\
 ")
 
+;wheeled units
+;assault units
+
 [unit_chariot]
 name          = _("Chariot")
 class         = "Wheeled Unit"
@@ -2884,7 +2926,7 @@ Chariots are horse-pulled war wagons. They have a stronger attack than\
 "), _("\
 This unit cannot move across swamps, glaciers, or mountains,\
  and cannot be transported by sea using early ships\
- (Triremes, Caravels and Aaks).\
+ (Triremes and Aaks).\
 "), _("\
 This unit can gain Veteran status if built in city with Stables Barracks, ruled by Despotism.\
 ")
@@ -3077,43 +3119,7 @@ The Armored Car is a very fast, but relatively weak unit.\
 This unit can move only along roads and flat terrain.\
 ")
 
-[unit_technical]
-name          = _("Technical")
-class         = "Suicidal"
-tech_req      = "Mobile Warfare"
-gov_req       = "Fundamentalism"
-obsolete_by   = "None"
-graphic       = "u.technical"
-graphic_alt   = "u.freight"
-sound_move    = "m_fanatics"
-sound_move_alt = "m_generic"
-sound_fight   = "f_fanatics"
-sound_fight_alt = "f_generic"
-build_cost    = 45
-pop_cost      = 0
-attack        = 18
-defense       = 4
-hitpoints     = 15
-firepower     = 3
-move_rate     = 5
-vision_radius_sq = 2
-transport_cap = 1
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 2
-uk_food       = 0
-uk_gold       = 1
-cargo         = "Small Land"
-flags         = "Fanatic", "CityBuster", "NoVeteran", "Only_Native_Attack", "FieldUnit"
-roles         = "DefendOkStartUnit", "AttackStrongStartUnit", "BarbarianBuildTech", "HutTech"
-helptext      = _("\
-Improvised vehicle driven by fanatics, ready to sacrifice their lives for a higher cause.\
- Huge amount of explosive materials would end their life and maybe life of attacked infidels.\
-"), _("\
-Fundamentalist nations can maintain Technical units with\
- having to pay only little shield/gold upkeep, but may cause military unhappiness.\
- These units have no veterancy levels though.
-")
+;bombarders
 
 [unit_catapult]
 name          = _("Catapult")
@@ -3234,6 +3240,7 @@ Thanks to the indirect plunging fire, city bombardment is not affected by City W
 ")
 bombard_rate = 3
 
+;big land (caterpillar)
 
 [unit_engineers]
 name          = _("Engineers")
@@ -3285,6 +3292,8 @@ _("\
 Being the Big Land unit class, Engineers have restricted mobility \
 (rough terrain such mountains, swamp, jungle require roads which can be prepared by Workers or Builders). \
 ")
+
+;direct fire
 
 [unit_armor]
 name          = _("Armor")
@@ -3407,7 +3416,6 @@ The self-propelled gun is an upgraded artillery. As with its predecessors, it is
 Self-propelled Guns (so called Tank Destroyers) have increased defense and attack against armors and mechanized infantry.\
 ")
 
-
 [unit_autonomous_war_mech]
 name          = _("Aut. War Mech")
 class         = "Big Land"
@@ -3444,6 +3452,8 @@ An antimatter powered Autonomous War Mech,\
 "), _("\
 Unfortunately A.I. cannot cope with difficult terrain such glaciers, swamp, jungle or mountains.\
 ")
+
+;bombarders
 
 [unit_self_propelled_howitzer]
 name          = _("Self-propelled Howitzer")
@@ -3516,7 +3526,7 @@ Anti-Aircraft Gun is a mobile unit equipped with radar and two autocannons,\
 ")
 bombard_rate = 4
 
-
+;turrets
 
 [unit_ballista]
 name          = _("Ballista")
@@ -3695,6 +3705,121 @@ Tactical Anti-ballistic Missile system can be mounted in a fortress or on a ship
 including Missiles and have increased intrinsic defense against airborne units.\
 ")
 
+;land merchants
+
+[unit_cart]
+name          = _("Cart")
+class         = "Merchant"
+tech_req      = "The Harness"
+obsolete_by   = "Freight"
+graphic       = "u.cart"
+graphic_alt   = "u.caravan"
+sound_move    = "m_caravan"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravan"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 5
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "HelpWonder", "NonMil", "HasNoZOC", "Unique", "Unbribable"
+roles         = ""
+helptext      = _("\
+Carts pulled by horses or oxes carries goods to help build wonders in your own cities.\
+"), _("\
+A Cart sent to one of your own cities that is building a wonder\
+ can add 20 shields towards its production. Carts can embark/disembark ships only in cities.\
+")
+
+[unit_caravan]
+name          = _("Caravan")
+class         = "Merchant"
+tech_req      = "Trade"
+obsolete_by   = "Freight"
+graphic       = "u.caravan"
+graphic_alt   = "-"
+sound_move    = "m_caravan"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravan"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+embarks       = "Coaster", "Sea"
+disembarks    = "Coaster", "Sea"
+flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Unique", "Unbribable"
+roles         = ""
+helptext      = _("\
+A Caravan carries goods or material for trading with other nations,\
+ or to help build wonders in your own cities.\
+"), _("\
+A Caravan sent to a foreign city (one not owned by an enemy) can\
+ establish a trade route. The route's ongoing revenue is doubled\
+ if the two cities involved are on different continents. Each city\
+ can support a maximum of two trade routes (one without Post Office and Automobile).\
+"), _("\
+A Caravan sent to one of your own cities that is building a wonder\
+ can add 30 shields towards its production. If your city is not\
+ building a wonder, the Caravan can take no special action.\
+")
+
+[unit_freight]
+name          = _("Freight")
+class         = "Merchant"
+tech_req      = "Logistics"
+obsolete_by   = "None"
+graphic       = "u.freight"
+graphic_alt   = "-"
+sound_move    = "m_freight"
+sound_move_alt = "m_generic"
+sound_fight   = "f_freight"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 20
+firepower     = 1
+move_rate     = 4
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 1
+embarks       = "Coaster", "Sea"
+disembarks    = "Coaster", "Sea"
+flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
+roles         = ""
+helptext      = _("\
+The Freight unit replaces the Caravan, and moves at twice the speed.\
+ It has the same behavior and movement restrictions as Caravan.\
+")
+
+;airborne
+
 [unit_zeppelin]
 name          = _("Zeppelin")
 class         = "Helicopter"
@@ -3788,6 +3913,41 @@ Unlike other aircraft, Helicopters are not required to return to a city,\
  must be exercised, due to the health they lose every turn.\
 ")
 bombard_rate = 2
+
+[unit_drone]
+name          = _("Drone")
+class         = "Helicopter"
+tech_req      = "Nanotechnology"
+obsolete_by   = "None"
+graphic       = "u.drone"
+graphic_alt   = "u.cruise_missile"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 4
+defense       = 2
+hitpoints     = 10
+firepower     = 3
+move_rate     = 16
+vision_radius_sq = 14
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 0
+uk_gold       = 1
+embarks       = "Sea"
+disembarks    = "Sea"
+targets       = "Sea", "Coaster"
+flags         = "AirAttacker", "Partial_Invis", "Light Shells"
+roles         = "Explorer"
+helptext      = _("\
+Unmanned light drone are useful for patrol duty,\
+ they need no refueling, and citizens are not upset when drone is used abroad.\
+")
 
 [unit_airplane]
 name          = _("Airplane")
@@ -4220,41 +4380,6 @@ Attack against units on land is a bombard attack; against\
 ")
 bombard_rate = 6
 
-[unit_drone]
-name          = _("Drone")
-class         = "Helicopter"
-tech_req      = "Nanotechnology"
-obsolete_by   = "None"
-graphic       = "u.drone"
-graphic_alt   = "u.cruise_missile"
-sound_move    = "m_cruise_missile"
-sound_move_alt = "m_generic"
-sound_fight   = "f_cruise_missile"
-sound_fight_alt = "f_generic"
-build_cost    = 70
-pop_cost      = 0
-attack        = 4
-defense       = 2
-hitpoints     = 10
-firepower     = 3
-move_rate     = 16
-vision_radius_sq = 14
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 2
-uk_food       = 0
-uk_gold       = 1
-embarks       = "Sea"
-disembarks    = "Sea"
-targets       = "Sea", "Coaster"
-flags         = "AirAttacker", "Partial_Invis", "Light Shells"
-roles         = "Explorer"
-helptext      = _("\
-Unmanned light drone are useful for patrol duty,\
- they need no refueling, and citizens are not upset when drone is used abroad.\
-")
-
 
 [unit_balloon]
 name          = _("Balloon")
@@ -4373,6 +4498,8 @@ All aircraft are subject to refueling and must return to a city, airstrip,\
  run out of fuel and be destroyed.\
 ")
 
+;hovercraft
+
 [unit_hovercraft]
 name          = _("Hovercraft")
 class         = "Hovercraft"
@@ -4423,7 +4550,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
 attack        = 0
-defense       = 0
+defense       = 1
 hitpoints     = 5
 firepower     = 1
 move_rate     = 3
@@ -4480,6 +4607,8 @@ Floating Bridge (pontoon bridge) usage is similar to Raft,\
 "), _("\
 TIP: Floating Bridge can be transported by Barges and loaded/unloaded anywhere.\
 ")
+
+;coasters
 
 [unit_canoes]
 name          = _("Canoes")
@@ -4803,6 +4932,8 @@ Attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
 bombard_rate = 3
+
+;sea ships
 
 [unit_kon-tiki_raft]
 name          = _("Kon-Tiki Raft")
@@ -6025,116 +6156,6 @@ This huge GBU (Guided Bomb Unit), carried by bombers, can precisely strike enemy
  instead of spreading small bombs by bomber itself.\
 ")
 
-[unit_cart]
-name          = _("Cart")
-class         = "Merchant"
-tech_req      = "The Harness"
-obsolete_by   = "Freight"
-graphic       = "u.cart"
-graphic_alt   = "u.caravan"
-sound_move    = "m_caravan"
-sound_move_alt = "m_generic"
-sound_fight   = "f_caravan"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 5
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "HelpWonder", "NonMil", "HasNoZOC", "Unique", "Unbribable"
-roles         = ""
-helptext      = _("\
-Carts pulled by horses or oxes carries goods to help build wonders in your own cities.\
-"), _("\
-A Cart sent to one of your own cities that is building a wonder\
- can add 20 shields towards its production. Carts can embark/disembark ships only in cities.\
-")
-
-[unit_caravan]
-name          = _("Caravan")
-class         = "Merchant"
-tech_req      = "Trade"
-obsolete_by   = "Freight"
-graphic       = "u.caravan"
-graphic_alt   = "-"
-sound_move    = "m_caravan"
-sound_move_alt = "m_generic"
-sound_fight   = "f_caravan"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-embarks       = "Coaster", "Sea"
-disembarks    = "Coaster", "Sea"
-flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Unique", "Unbribable"
-roles         = ""
-helptext      = _("\
-A Caravan carries goods or material for trading with other nations,\
- or to help build wonders in your own cities.\
-"), _("\
-A Caravan sent to a foreign city (one not owned by an enemy) can\
- establish a trade route. The route's ongoing revenue is doubled\
- if the two cities involved are on different continents. Each city\
- can support a maximum of two trade routes (one without Post Office and Automobile).\
-"), _("\
-A Caravan sent to one of your own cities that is building a wonder\
- can add 30 shields towards its production. If your city is not\
- building a wonder, the Caravan can take no special action.\
-")
-
-[unit_freight]
-name          = _("Freight")
-class         = "Merchant"
-tech_req      = "Logistics"
-obsolete_by   = "None"
-graphic       = "u.freight"
-graphic_alt   = "-"
-sound_move    = "m_freight"
-sound_move_alt = "m_generic"
-sound_fight   = "f_freight"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 20
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 2
-uk_food       = 0
-uk_gold       = 1
-embarks       = "Coaster", "Sea"
-disembarks    = "Coaster", "Sea"
-flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
-roles         = ""
-helptext      = _("\
-The Freight unit replaces the Caravan, and moves at twice the speed.\
- It has the same behavior and movement restrictions as Caravan.\
-")
 
 [unit_train]
 name          = _("Train")
