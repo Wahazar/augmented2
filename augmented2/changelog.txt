@@ -2,6 +2,9 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt19
+New terrain tiles: Mangrove and Wooded Hills, Road Bridge extra
+
 2.6.lt18
 Watermill and Windmill building added
 Cart unit added

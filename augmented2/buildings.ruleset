@@ -1094,6 +1094,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Power", "Player"
       "Building", "Factory", "City"
+      "MinCulture", "13000", "Player"
     }
 graphic	= "b.nuclear_plant"
 graphic_alt	= "-"
@@ -1395,7 +1396,7 @@ reqs	=
       "Building", "University", "City", TRUE
       "Building", "Steel Mill", "City", FALSE
       "Building", "Cement Plant", "City", FALSE
-	 "MinCulture", "5500", "Player", TRUE
+	 "MinCulture", "6500", "Player", TRUE
     }
 graphic	= "b.research_lab"
 graphic_alt	= "-"
@@ -2168,7 +2169,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Computers", "Player"
       "Building", "Research Lab", "City"
-	 "MinCulture", "8500", "Player"
+	 "MinCulture", "14500", "Player"
     }
 graphic	= "b.DARPA"
 graphic_alt	= "b.research_lab"
@@ -2383,7 +2384,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Tactics", "Player"
-	 "MinCulture", "5800", "Player"
+	 "MinCulture", "6800", "Player"
     }
 graphic	= "b.ecole_speciale_militaire"
 graphic_alt	= "b.university"
@@ -2409,7 +2410,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Industrialization", "Player"
-	 "MinCulture", "4500", "Player"
+	 "MinCulture", "5500", "Player"
     }
 graphic	= "b.eiffel_tower"
 graphic_alt	= "-"
@@ -2490,7 +2491,7 @@ reqs	=
       "Tech", "Satellite System", "Player"
       "Building", "Apollo Program", "World"
       "Building", "Research Lab", "City"
-	 "MinCulture", "9500", "Player"
+	 "MinCulture", "16500", "Player"
     }
 graphic	= "b.global_positioning_system"
 graphic_alt	= "b.seti_program"
@@ -2707,7 +2708,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Invention", "Player"
-	 "MinCulture", "2800", "Player"
+	 "MinCulture", "3000", "Player"
     }
 graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
@@ -2796,7 +2797,7 @@ reqs	=
       "Tech", "Electronics", "Player"
       "Building", "Factory", "City"
       "Building", "Library", "City"
-	 "MinCulture", "6300", "Player"
+	 "MinCulture", "8300", "Player"
     }
 graphic	= "b.massachusetts_institute_of_technology"
 graphic_alt	= "b.university"
@@ -2884,7 +2885,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Radioactivity", "Player"
       "Building", "Hospital", "City"
-	 "MinCulture", "4200", "Player"
+	 "MinCulture", "6200", "Player"
     }
 graphic	= "b.mobile-x-ray"
 graphic_alt	= "b.barracks_iii"
@@ -3205,7 +3206,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Conscription", "Player"
       "Building", "Slavery Abolition", "Player"
-	 "MinCulture", "7400", "Player"
+	 "MinCulture", "8400", "Player"
     }
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
@@ -3282,7 +3283,7 @@ reqs	=
       "Tech", "Shogunate", "Player", TRUE
       "Building", "Temple", "City", TRUE
       "Building", "Shrine Torii", "City", TRUE
-      "MinCulture", "2800", "Player", TRUE
+      "MinCulture", "2900", "Player", TRUE
       "Building", "Ecclesiastical Palace", "Player", FALSE
       "Building", "Angkor Wat", "Player", FALSE
       "Building", "Forbidden City", "Player", FALSE
@@ -3327,14 +3328,14 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Democracy", "Player"
-	 "MinCulture", "7800", "Player"
+	 "MinCulture", "9800", "Player"
     }
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 2200
+build_cost	= 1500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_statue_of_liberty"
@@ -3420,7 +3421,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Economics", "Player"
       "Building", "Stock Exchange", "City"
-	 "MinCulture", "4500", "Player"
+	 "MinCulture", "5000", "Player"
     }
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
@@ -3478,7 +3479,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Steam Engine", "Player"
-	 "MinCulture", "4500", "Player"
+	 "MinCulture", "7800", "Player"
     }
 graphic	= "b.darwins_voyage"
 graphic_alt	= "-"
@@ -3508,7 +3509,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Paper Making", "Player"
       "Building", "Library", "City"
-	 "MinCulture", "1550", "Player"
+	 "MinCulture", "2500", "Player"
     }
 graphic	= "b.great_library"
 graphic_alt	= "-"
@@ -3539,7 +3540,7 @@ reqs	=
       "Tech", "Robotics", "Player"
       "Building", "Research Lab", "City"
       "Building", "DARPA", "Player"
-	 "MinCulture", "10500", "Player"
+	 "MinCulture", "13500", "Player"
     }
 graphic		= "b.internet"
 graphic_alt	= "b.seti_program"
@@ -3573,7 +3574,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Theory of Gravity", "Player"
       "Building", "University", "City"
-	 "MinCulture", "5700", "Player"
+	 "MinCulture", "6700", "Player"
     }
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
@@ -3626,7 +3627,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
-	 "MinCulture", "9800", "Player"
+	 "MinCulture", "11800", "Player"
       "Resource", "Uranium", "City"
     }
 graphic	= "b.manhattan_project"
@@ -3649,7 +3650,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Biology", "Player"
       "Building", "University", "City"
-	 "MinCulture", "4300", "Player"
+	 "MinCulture", "5300", "Player"
     }
 graphic	= "b.pasteur_institute"
 graphic_alt	= "b.university"
@@ -3675,7 +3676,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Theatre", "Player"
-	 "MinCulture", "4900", "Player"
+	 "MinCulture", "7500", "Player"
     }
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"

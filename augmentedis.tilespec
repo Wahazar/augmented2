@@ -133,6 +133,7 @@ files =
   "augmented2/terrain_small/waterlocks.spec",
   "augmented2/terrain_small/road_bridges.spec",
   "augmented2/terrain_small/forest2.spec",
+  "augmented2/terrain_small/wooded_hills_s.spec",
   "augmented2/misc/techs.spec"
 
 ; Include color definitions
@@ -214,6 +215,14 @@ layer0_match_type = "land"
 layer1_match_type = "hills"
 layer1_match_with = "hills"
 
+[tile_wooded_hills]
+tag = "wooded_hills"
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "hills"
+layer1_match_with = "hills"
+
 ;ugly and misleading swamp-like img
 ;[tile_jungle]
 ;tag = "jungle"
@@ -221,8 +230,17 @@ layer1_match_with = "hills"
 ;num_layers = 1
 ;layer0_match_type = "land"
 
+;improved jungle with trees
 [tile_jungle]
 tag = "jungle"
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "forest"
+layer1_match_with = "forest"
+
+[tile_mangrove]
+tag = "mangrove"
 blend_layer = 1
 num_layers = 2
 layer0_match_type = "land"

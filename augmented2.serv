@@ -16,6 +16,7 @@ set saveturns=1
 ;set timeout=72000
 set timeout=0
 ;set unitwaittime=7260
+set unitwaittime=0
 set fixedlength 0
 
 set alltemperate=disabled
@@ -29,7 +30,7 @@ set huts=10
 ;keep barbarians enabled in multiplayer game to tamper culture points farmers
 set barbarians=enabled
 
-;set revealmap=START  #uncomment this for revealing the map for test games
+set revealmap=START  #uncomment this for revealing the map for test games
 
 set minplayers 1
 set maxplayers 12
