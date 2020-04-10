@@ -3272,7 +3272,7 @@ stationed in the city, or sabotage your buildings.\
 Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 [building_osaka_castle]
@@ -3317,7 +3317,7 @@ stationed in the city, or sabotage your buildings.\
 Osaka Castle will also make content two citizens unhappy due to aggression
 in the city where is founded.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 ;only for owner
@@ -3350,7 +3350,7 @@ government or by the United Nations.\
 _("\
 The side effect of this wonder is, that inciting revolts is possible under Fascism.\
 "), _("\
-+4 Culture Points/turn.\
++4 National Culture Points/turn.\
 ")
 
 [building_united_nations]
@@ -3381,7 +3381,7 @@ a row, that player's government falls (even for governments other than \
 Republic and Democracy). On the other hand, chance of Civil War is 4x less \
 in case of Republic, Democracy or Federation. \
 "), _("\
-+8 Culture Points/turn.\
++8 National Culture Points/turn.\
 ")
 
 ; for all nations
@@ -3411,7 +3411,7 @@ start building spaceship parts (assuming they have researched the \
 necessary technologies and have Space Lift small wonder finished).\n\
 Existing of Apollo Program is also necessary to build Global Positioning System.\
 "), _("\
-+5 Culture Points/turn.\
++5 National Culture Points/turn.\
 ")
 
 [building_asmiths_trading_co]
@@ -3442,7 +3442,7 @@ Communism.)\
 Upon completion of this wonder, tax collector specialists' gold output \
 increases by 1 permanently for every nation.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 
@@ -3470,7 +3470,7 @@ happy in each of cities of any player who knows Genetic Engineering (2 extra lux
 Together with an Aqueduct, a Sewer System, Hospital, Pasteur Institute and maximum of Welfare Policy, \
 it entirely eliminates the risk of plague.\
 "), _("\
-+4 Culture Points/turn.\
++4 National Culture Points/turn.\
 ")
 
 [building_darwins_voyage]
@@ -3499,7 +3499,7 @@ All your cities generate 1 extra science bulb and immediate technology advance i
 Upon completion of this wonder, scientist specialists' research output \
 increases by 1 permanently for every nation.\
 "), _("\
-+5 Culture Points/turn.\
++5 National Culture Points/turn.\
 ")
 
 [building_great_library]
@@ -3529,7 +3529,7 @@ and thereafter 4 extra research points every turn to its city.\
 Completion of this wonder doubles the effect of Libraries \
 for every player.\
 "), _("\
-+4 Culture Points/turn.\
++4 National Culture Points/turn.\
 ")
 
 [building_internet]
@@ -3564,7 +3564,7 @@ _("\
 Completion of this wonder permanently doubles the effect of \
 Universities for allied players.\
 "), _("\
-+4 Culture Points/turn if Computers tech is known.\
++1 National Culture Points/turn/city if Computers tech is known.\
 ")
 
 [building_isaac_newtons_college]
@@ -3729,7 +3729,7 @@ Thanks to the ecumenic spirit of Golden Temple, any city with Temple, Church or 
 which belong to the players allied with owner of this building,\
 would additionaly make 1 unhappy citizens content.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 [building_great_wall]
@@ -3761,7 +3761,7 @@ when a defending unit is defeated by a land unit.\
 _("\
 Great Wall increases also defense of any allied land units in Fortress (but not in Fort) by 50%.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 [building_kaaba]
@@ -3799,7 +3799,7 @@ Each tile with (paved) road around the city produce additional trade point.\n\
 Additionally, each Mosque which belongs to any allied player, neutralizes unhappiness caused by 0...2 military units \
 (depending on Religious Orthodoxy policy settings). \
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 [building_kyoto_fushimi_inari]
@@ -3866,7 +3866,7 @@ If allied player posses this wonder, City Walls and Courthouses each make one un
 citizen content in their city, unless that citizen is unhappy about \
 aggression. Also, city where Mausoleum of Mausolos is founded can't be incited to revolt.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 [building_michelangelos_chapel]
@@ -3933,7 +3933,7 @@ will make one unhappy citizen content in any city which belong to allied players
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 
@@ -3964,7 +3964,7 @@ Each tile around the city where this wonder is built that is already\
 Moreover, tax collector specialists' gold output in cities on continent with Colossus \
 is increased by 1 for any nation. \
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 [building_hoover_dam]
@@ -3991,7 +3991,7 @@ Acts as a Hydro Plant in the city where it is built, and reduces \
 pollution from shield production by a further 25% in all cities \
 with Hydro Plants on same continent, making them equivalent to Solar Plants.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 [building_leshan_buddha_statue]
@@ -4019,7 +4019,7 @@ City with this Wonder would gain additional food from each river tile.\n\
 Additionally, thanks to the Buddha The Wise ideas, any Monk Monastery \
 would make 1 unhappy citizen content, for any city on same continent.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 [building_marco_polos_embassy]
@@ -4051,7 +4051,7 @@ _("\
 In case of Thalassocracy government system, celebration would give boost of shield production, \
 if Marco Polo Embassy exist on the same continent.\
 "), _("\
-+6 Culture Points/turn.\
++6 National Culture Points/turn.\
 ")
 
 [building_stonehenge]
@@ -4081,7 +4081,7 @@ one extra research point.\
 Additionally, each city on the continent where Stonehenge is located is not affected by Tribal government science penalty, \
 if Palace is not present in such city.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 ;special improvements
