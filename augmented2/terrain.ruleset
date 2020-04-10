@@ -753,8 +753,7 @@ color.b              = 55
 helptext             = _("\
 Mangrove are small trees that grows partially submerged by water, it is hard accessible area,\
  only Small Land units, Hovercraft or some ships (Coasters, Riverboats) can pass trough Mangrove.\n\
- It is not possible to build any road on Mangrove, but Steel advance allow Barges and Engineers on Barge \
- to construct Road Bridge base, which is passable to any land units and trains.\
+ It is not possible to build advanced roads on Mangrove, only Dirt Road or Railway is available.\
 ")
 
 [terrain_mountains]
@@ -931,8 +930,8 @@ clean_pollution_time = 6
 clean_fallout_time   = 6
 animal               = "None"
 warmer_wetter_result = "Ocean"
-warmer_drier_result  = "Plains"
-cooler_wetter_result = "no"
+warmer_drier_result  = "Grassland"
+cooler_wetter_result = "Glacier"
 cooler_drier_result  = "Tundra"
 native_to            = "Infantry", "Light Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter", "Hovercraft"
 flags                = "CanHaveRiver"
@@ -1948,7 +1947,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
-      "Terrain", "Mangrove", "Local", FALSE, FALSE
+;      "Terrain", "Mangrove", "Local", FALSE, FALSE
     }
 build_time     = 0
 removal_time   = 0
@@ -2060,7 +2059,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
-      "Terrain", "Mangrove", "Local", FALSE, FALSE
+;      "Terrain", "Mangrove", "Local", FALSE, FALSE
     }
 build_time     = 8
 removal_time   = 0
@@ -2187,38 +2186,38 @@ Building Water Lock requires ocean tile adjacent to this facility.\
 ")
 
 
-[extra_road_bridge]
-name           = _("Road Bridge")
-category       = "Infra"
-causes         = "Road"
-rmcauses       = "Pillage"
-graphic        = "road.road_bridge"
-graphic_alt    = "road.road"
-activity_gfx   = "unit.buoy"
-act_gfx_alt    = "unit.road"
-act_gfx_alt2   = "-"
-rmact_gfx      = "None"
-rmact_gfx_alt  = "-"
-reqs           =
-    { "type", "name", "range", "present", "quiet"
-      "UnitFlag", "Transform", "Local", TRUE, FALSE
-      "Terrain", "Mangrove", "Local", TRUE, FALSE
+;[extra_bridge]
+;name           = _("Bridge")
+;category       = "Infra"
+;causes         = "Road"
+;rmcauses       = "Pillage"
+;graphic        = "road.road_bridge"
+;graphic_alt    = "road.road"
+;activity_gfx   = "unit.buoy"
+;act_gfx_alt    = "unit.road"
+;act_gfx_alt2   = "-"
+;rmact_gfx      = "None"
+;rmact_gfx_alt  = "-"
+;reqs           =
+;    { "type", "name", "range", "present", "quiet"
+;      "UnitFlag", "Transform", "Local", TRUE, FALSE
+;      "Terrain", "Mangrove", "Local", TRUE, FALSE
 ;      "TerrainClass", "Land", "Local", TRUE, FALSE
-      "TerrainClass", "Land", "CAdjacent", TRUE, FALSE
-      "Tech", "Steel", "Player", TRUE, FALSE
-      "CityTile", "Center", "Local", FALSE, TRUE
+;      "TerrainClass", "Land", "CAdjacent", TRUE, FALSE
+;      "Tech", "Steel", "Player", TRUE, FALSE
+;      "CityTile", "Center", "Local", FALSE, TRUE
 ;      "Terrain", "Deep Ocean", "Local", FALSE, FALSE
-    }
-build_time     = 8
-removal_time   = 2
+;    }
+;build_time     = 8
+;removal_time   = 2
 ;conflicts      = "Oil Platform", "Buoy"
-native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal", "Train"
-flags          = "NativeTile";, "ConnectLand"
-helptext       = _("\
-Allow land units to pass Mangrove tiles.\
-"), _("\
-Engineers or/and Barge unit is required to build Road Bridge, another land tile need to be adjacent to this facility.\
-")
+;native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal", "Train"
+;flags          = "NativeTile";, "ConnectLand"
+;helptext       = _("\
+;Allow land units to pass Mangrove tiles.\
+;"), _("\
+;Engineers or/and Barge unit is required to build Road Bridge, another land tile need to be adjacent to this facility.\
+;")
 
 
 ; /* <-- avoid gettext warnings
@@ -2388,16 +2387,16 @@ trade_bonus    = 0
 ;compat_special = "Road"
 flags          = "RequiresBridge"
 
-[road_road_bridge]
-extra          = "Road Bridge"
-move_cost      = 1
-food_incr      = 0
-shield_incr    = 0
-trade_incr     = 0
-food_bonus     = 0
-shield_bonus   = 0
-trade_bonus    = 0
-flags          = "RequiresBridge"
+;[road_bridge]
+;extra          = "Bridge"
+;move_cost      = 1
+;food_incr      = 0
+;shield_incr    = 0
+;trade_incr     = 1
+;food_bonus     = 0
+;shield_bonus   = 0
+;trade_bonus    = 0
+;flags          = "RequiresBridge"
 
 [road_railroad]
 extra          = "Railroad"
