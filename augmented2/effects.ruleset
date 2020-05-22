@@ -8172,7 +8172,7 @@ reqs    =
       "Gov", "Fundamentalism", "Player", FALSE
     }
 
-[effect_large_hardon_collider]
+[effect_large_hadron_collider]
 type    = "Give_Imm_Tech"
 value   = 2
 reqs    =
