@@ -807,7 +807,7 @@ step      = 1
 default   = 0
 ; /* xgettext:no-c-format */
 helptext  = _("\
-Each step of National Pride increase bribe cost and incite revolt cost twice, \
+Each step of National Pride increase bribe cost and incite revolt cost twice, if Feudalism is know to Player nation, \
 but also increase unhapiness caused by mixed nationality by 50% and decrease luxury output by 20%. \
 Available for any government, in case of Fascism any Small Land military unit gain additional veterancy level.\
 ")
